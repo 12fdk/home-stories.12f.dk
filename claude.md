@@ -101,12 +101,28 @@ Main configuration in `src/utils/config.ts` - customize:
 - Always run all local tests using Docker
 - Use agent-browser to test the website after making changes
 
-## Tasks / Roadmap
+### Task Management via GitHub Issues
 
-- [x] Set up base template
-- [x] Configure Docker development environment
-- [x] Implement App Store data fetching
-- [x] Customize theme and branding
-- [x] Add app screenshots to hero section
-- [ ] Configure GitHub Pages deployment
-- [ ] Set up GitHub Actions for automatic builds
+All tasks are managed as GitHub Issues. When working on this project:
+
+**Creating Tasks:**
+- Create new tasks as GitHub issues: `gh issue create --title "Title" --body "Description"`
+- Add appropriate labels if needed: `gh issue edit <number> --add-label "enhancement"`
+
+**Working on Tasks:**
+- List open issues: `gh issue list`
+- View issue details: `gh issue view <number>`
+- When starting work, mention the issue in commits
+
+**Closing Tasks:**
+- Close issues when completed: `gh issue close <number>`
+- Or use commit messages: `git commit -m "Fix something (closes #123)"`
+
+**Viewing Tasks:**
+- Open issues in browser: `gh issue list --web`
+- Repository issues: https://github.com/12fdk/home-stories.12f.dk/issues
+
+## Current Open Issues
+
+Run `gh issue list` to see current tasks, or visit:
+https://github.com/12fdk/home-stories.12f.dk/issues
