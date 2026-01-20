@@ -133,25 +133,25 @@ const templateConfig: TemplateConfig = {
           title: "Budget Tracking",
           subtitle:
             "Track costs vs. estimates with visual charts showing spent, potential, and remaining budget. Stay on top of your renovation finances.",
-          icon: "/3D/wallet-front-color.webp",
+          icon: "/icons/budget-tracking.png",
         },
         {
           title: "Photo Timeline",
           subtitle:
             "Document your renovation progress with photos organized by date. Create a visual record of your home's transformation.",
-          icon: "/3D/camera-front-color.webp",
+          icon: "/icons/photo-timeline.png",
         },
         {
           title: "Task Management",
           subtitle:
             "Organize work into tasks, track completion status, and keep your renovation project moving forward efficiently.",
-          icon: "/3D/bookmark-front-color.webp",
+          icon: "/icons/task-management.png",
         },
         {
           title: "PDF Export",
           subtitle:
             "Generate professional project reports to share with contractors, insurance, or keep for your records.",
-          icon: "/3D/file-front-color.webp",
+          icon: "/icons/pdf-export.png",
         },
       ],
     },
