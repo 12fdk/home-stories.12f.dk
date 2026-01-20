@@ -1,0 +1,204 @@
+/* Self-hosted Inter font for better performance */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Keep CabinSketch for decorative elements if needed */
+@font-face {
+  font-family: "CabinSketch";
+  src: url("/fonts/CabinSketch.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Clean, modern body styling */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.backgroundGrid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -9;
+  background-size: 50px 50px;
+  background-image: linear-gradient(
+      rgba(200, 200, 200, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+}
+[data-theme="dark"] .backgroundGrid {
+  background-image: linear-gradient(
+      rgba(200, 200, 200, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to right, rgba(200, 200, 200, 0.03) 1px, transparent 1px);
+}
+
+/* iPhone 16 Pro CSS Frame */
+.iphone-frame {
+  --iphone-width: 280px;
+  --iphone-height: calc(var(--iphone-width) * 2.17);
+  --iphone-bezel: 10px;
+  --iphone-radius: 44px;
+  --iphone-screen-radius: 38px;
+  --iphone-color: #1a1a1a;
+  --iphone-border-color: #2a2a2a;
+
+  display: inline-block;
+  width: var(--iphone-width);
+  height: var(--iphone-height);
+}
+
+.iphone-device {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--iphone-color) 0%, #0a0a0a 100%);
+  border-radius: var(--iphone-radius);
+  box-shadow:
+    0 0 0 2px var(--iphone-border-color),
+    0 0 0 4px #3a3a3a,
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 2px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Dynamic Island */
+.iphone-dynamic-island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 28px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 20;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Screen area */
+.iphone-screen {
+  position: absolute;
+  top: var(--iphone-bezel);
+  left: var(--iphone-bezel);
+  right: var(--iphone-bezel);
+  bottom: var(--iphone-bezel);
+  background: #000;
+  border-radius: var(--iphone-screen-radius);
+  overflow: hidden;
+  /* Ensure crisp rendering of images inside */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.iphone-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Side buttons - left side */
+.iphone-button-left {
+  position: absolute;
+  left: -3px;
+  width: 3px;
+  background: linear-gradient(90deg, #2a2a2a, #1a1a1a);
+  border-radius: 2px 0 0 2px;
+}
+
+.iphone-button-silent {
+  top: 100px;
+  height: 24px;
+}
+
+.iphone-button-volume-up {
+  top: 140px;
+  height: 44px;
+}
+
+.iphone-button-volume-down {
+  top: 195px;
+  height: 44px;
+}
+
+/* Side button - right side */
+.iphone-button-right {
+  position: absolute;
+  right: -3px;
+  width: 3px;
+  background: linear-gradient(270deg, #2a2a2a, #1a1a1a);
+  border-radius: 0 2px 2px 0;
+}
+
+.iphone-button-power {
+  top: 150px;
+  height: 70px;
+}
+
+/* Responsive sizing */
+@media (min-width: 640px) {
+  .iphone-frame {
+    --iphone-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .iphone-frame {
+    --iphone-width: 280px;
+  }
+}
+
+/* Optional larger variant */
+.iphone-frame-lg {
+  --iphone-width: 360px;
+}
+
+/* Titanium color variants */
+.iphone-frame-titanium {
+  --iphone-color: #4a4a4a;
+  --iphone-border-color: #5a5a5a;
+}

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx degit:*)",
+      "Skill(agent-browser)",
+      "Skill(agent-browser:*)",
+      "WebFetch(domain:itunes.apple.com)",
+      "Bash(cwebp:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker-compose exec:*)",
+      "Bash(agent-browser open:*)",
+      "Bash(agent-browser screenshot:*)",
+      "Bash(agent-browser scroll:*)",
+      "Bash(agent-browser snapshot:*)",
+      "Bash(agent-browser click:*)"
+    ]
+  }
+}

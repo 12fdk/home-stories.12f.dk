@@ -1,0 +1,166 @@
+---
+import "@styles/styles.scss";
+import type { TemplateConfig } from "utils/configType";
+
+const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name } =
+  Astro.props as TemplateConfig;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en" data-theme={theme}>
+  <head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {logo.startsWith("http") && <link rel="apple-touch-icon" href={logo} />}
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Preload critical above-fold image (first screenshot) - responsive -->
+    <link rel="preload" href="/screenshots/projects-list-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)" />
+    <link rel="preload" href="/screenshots/projects-list.webp" as="image" type="image/webp" media="(min-width: 769px)" />
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://umami.robert-jensen.dk" />
+    <link rel="dns-prefetch" href="https://apps.apple.com" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{seo.title}</title>
+    <meta name="title" content={seo.title} />
+    <meta name="description" content={seo.description} />
+    <meta name="keywords" content="home renovation app, renovation tracker, home improvement app, project management, budget tracking, renovation budget, home project planner, renovation photos, before after renovation, iOS renovation app, iPhone home app, renovation journal, home remodel tracker, renovation progress, DIY project tracker, home renovation planner, renovation cost tracker, home improvement tracker, renovation organizer, free renovation app" />
+    <meta name="author" content="Robert Jensen" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Apple App Store Smart Banner -->
+    <meta name="apple-itunes-app" content="app-id=6754754960" />
+    <meta name="apple-mobile-web-app-title" content="Home Stories" />
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="qIt43wKbCVGfZYBrH1zV-3NRdMEtU0fo9qT-7NBC4n8" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={name} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data - Software Application -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Home Stories: Renovation App",
+      "operatingSystem": "iOS",
+      "applicationCategory": "LifestyleApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      },
+      "description": seo.description,
+      "url": canonicalURL.href,
+      "downloadUrl": appStoreLink,
+      "screenshot": new URL("/screenshots/projects-list.webp", Astro.site).href,
+      "author": {
+        "@type": "Person",
+        "name": "Robert Jensen"
+      }
+    })} />
+
+    <!-- Structured Data - FAQ -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Home Stories free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, it's free! We also offer a Premium Lifetime upgrade with more advanced features for serious renovators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the app work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Home Stories is designed to work fully offline so you can access your projects, budgets, and photos even without internet access - perfect for job sites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share projects with others?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! With iCloud sync your projects stay up to date across your devices. You can also export professional PDF reports to share with contractors, family, or keep for records."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I export reports?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simply open your project, tap the export button, and choose PDF. Home Stories generates a professional report with your budget summary, task progress, photos, and notes."
+          }
+        }
+      ]
+    })} />
+
+    <!-- Structured Data - Website -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": name,
+      "url": Astro.site?.href
+    })} />
+
+    <script is:inline define:vars={{ forceTheme }}>
+      function getPreferredColorScheme() {
+        if (!window.matchMedia) {
+          return;
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+      }
+      const theme = localStorage.getItem("theme") ?? getPreferredColorScheme();
+      if (theme === "dark" && !forceTheme)
+        document.documentElement.setAttribute("data-theme", theme);
+    </script>
+
+    <!-- Umami Analytics -->
+    <script defer src="https://umami.robert-jensen.dk/script.js" data-website-id="330ddb96-95c9-43cd-b9fe-485c0d114b33"></script>
+  </head>
+  <body class="relative">
+    {backgroundGrid && <div class="backgroundGrid" />}
+    <slot />
+  </body>
+</html>

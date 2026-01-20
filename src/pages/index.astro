@@ -1,0 +1,24 @@
+---
+import HomePage from "@modules/home"
+import Layout from "Layout.astro"
+import defaultTemplateConfig from "utils/config"
+import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata } from "utils/appStoreData"
+import type { TemplateConfig } from "utils/configType"
+
+// Fetch App Store data at build time
+const appStoreData = await fetchAppStoreData() ?? fallbackAppStoreData;
+
+// Merge App Store data with default config
+const config: TemplateConfig = {
+  ...defaultTemplateConfig,
+  // Override logo with App Store icon (if available and not fallback)
+  logo: appStoreData.artworkUrl512.startsWith("http")
+    ? appStoreData.artworkUrl512
+    : defaultTemplateConfig.logo,
+  appStore: toAppStoreMetadata(appStoreData),
+};
+---
+
+<Layout {...config}>
+  <HomePage client:load config={config} />
+</Layout>
