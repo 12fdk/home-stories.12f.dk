@@ -6,6 +6,7 @@ import SingleScreenshot from "./singleScreenshot";
 import SVGWave from "./svg/wave";
 import SVGBlob from "./svg/blob";
 import IphoneFrame from "../../../../components/iphoneFrame";
+import AppStoreRating from "../../../../components/appStoreRating";
 
 function Header() {
   const {
@@ -118,6 +119,7 @@ function Header() {
                   </li>
                 )}
               </motion.ul>
+              <AppStoreRating className="mt-2" size="md" showReviewCount={false} />
               {header.usersDescription && (
                 <div className="not-prose flex items-center gap-2 my-1">
                   <ul className="avatar-group -space-x-4">
