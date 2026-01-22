@@ -9,6 +9,7 @@ import Partners from "./_components/partners";
 import Faq from "./_components/faq";
 import HowItWorks from "./_components/howItWorks";
 import Testimonials from "./_components/testimonials";
+import VideoDemo from "./_components/videoDemo";
 
 interface Props {
   config: TemplateConfig;
@@ -22,6 +23,7 @@ function Home({ config }: Props) {
         <Header />
         <Partners />
         <Features />
+        <VideoDemo />
         <HowItWorks />
         <Testimonials />
         <Faq />
