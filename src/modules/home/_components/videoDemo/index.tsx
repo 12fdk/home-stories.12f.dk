@@ -64,36 +64,24 @@ function VideoDemo() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col items-center"
         >
-          {/* iPhone Frame */}
-          <div
-            className="iphone-frame"
-            style={{
-              "--iphone-width": "280px",
-            } as React.CSSProperties}
-          >
-            <div className="iphone-device">
-              <div className="iphone-dynamic-island" />
-              <div className="iphone-screen relative overflow-hidden">
-                {videos.map((video, index) => (
-                  <video
-                    key={video.src}
-                    ref={(el) => { videoRefs.current[index] = el; }}
-                    src={withBase(video.src)}
-                    poster={withBase(video.poster)}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-                      index === currentIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                    muted
-                    playsInline
-                    preload={index === 0 ? "auto" : "none"}
-                    onEnded={handleVideoEnd}
-                  />
-                ))}
-              </div>
-              <div className="iphone-button-left iphone-button-silent" />
-              <div className="iphone-button-left iphone-button-volume-up" />
-              <div className="iphone-button-left iphone-button-volume-down" />
-              <div className="iphone-button-right iphone-button-power" />
+          {/* Video Container */}
+          <div className="relative w-full max-w-sm mx-auto">
+            <div className="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl bg-base-300">
+              {videos.map((video, index) => (
+                <video
+                  key={video.src}
+                  ref={(el) => { videoRefs.current[index] = el; }}
+                  src={withBase(video.src)}
+                  poster={withBase(video.poster)}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                    index === currentIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                  muted
+                  playsInline
+                  preload={index === 0 ? "auto" : "none"}
+                  onEnded={handleVideoEnd}
+                />
+              ))}
             </div>
           </div>
 
