@@ -10,6 +10,8 @@ import Faq from "./_components/faq";
 import HowItWorks from "./_components/howItWorks";
 import Testimonials from "./_components/testimonials";
 import VideoDemo from "./_components/videoDemo";
+import StickyDownload from "../../components/stickyDownload";
+import SectionCta from "../../components/sectionCta";
 
 interface Props {
   config: TemplateConfig;
@@ -23,12 +25,15 @@ function Home({ config }: Props) {
         <Header />
         <Partners />
         <Features />
+        <SectionCta text="Ready to organize your renovation?" variant="minimal" />
         <VideoDemo />
         <HowItWorks />
+        <SectionCta text="Join thousands of homeowners" variant="minimal" />
         <Testimonials />
         <Faq />
         <AppBanner />
         <Footer />
+        <StickyDownload />
       </main>
     </ConfigContext.Provider>
   );
