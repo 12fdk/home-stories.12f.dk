@@ -3,9 +3,9 @@ import type { TemplateConfig } from "./configType";
 const templateConfig: TemplateConfig = {
   name: "Home Stories",
   seo: {
-    title: "Home Stories: Renovation App for iPhone | Track Projects, Budget & Progress",
+    title: "Home Stories - Free Home Renovation Tracker for iPhone",
     description:
-      "Home Stories is a free iPhone app for managing home renovation projects. Track budgets, organize tasks, document progress with photos, and export professional PDF reports. Download on the App Store.",
+      "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
   },
   // Draws grid behind main container
   backgroundGrid: false,
@@ -55,9 +55,9 @@ const templateConfig: TemplateConfig = {
   },
   home: {
     seo: {
-      title: "Home Stories: Renovation App for iPhone | Track Projects, Budget & Progress",
+      title: "Home Stories - Free Home Renovation Tracker for iPhone",
       description:
-        "Home Stories is a free iPhone app for managing home renovation projects. Track budgets, organize tasks, document progress with photos, and export professional PDF reports. Download on the App Store.",
+        "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
     },
     testimonials: {
       id: "testimonials",
