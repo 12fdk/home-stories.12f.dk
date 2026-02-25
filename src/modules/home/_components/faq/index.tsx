@@ -52,8 +52,9 @@ function Faq() {
                   )
                 }
                 className="text-start collapse-title text-lg font-medium"
+                aria-expanded={activeIndex === index}
               >
-                {qa.question}
+                <h3 className="text-lg font-medium m-0">{qa.question}</h3>
               </button>
               <div
                 className={clsx(

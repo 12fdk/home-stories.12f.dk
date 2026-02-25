@@ -2,11 +2,16 @@
 import "@styles/styles.scss";
 import type { TemplateConfig } from "utils/configType";
 
-const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name } =
+const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore } =
   Astro.props as TemplateConfig;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.site).href;
+const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
+
+// Dynamic rating data from App Store (with sensible fallbacks)
+const ratingValue = appStore?.rating && appStore.rating > 0 ? appStore.rating.toFixed(1) : "5.0";
+const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(appStore.ratingCount) : "1";
 ---
 
 <!doctype html>
@@ -40,7 +45,12 @@ const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.
     <meta name="description" content={seo.description} />
     <meta name="keywords" content="home renovation app, renovation tracker, home improvement app, project management, budget tracking, renovation budget, home project planner, renovation photos, before after renovation, iOS renovation app, iPhone home app, renovation journal, home remodel tracker, renovation progress, DIY project tracker, home renovation planner, renovation cost tracker, home improvement tracker, renovation organizer, free renovation app" />
     <meta name="author" content="Robert Jensen" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="application-name" content="Home Stories" />
+
+    <!-- AI/LLM Discovery -->
+    <link rel="alternate" type="text/plain" href={new URL("/llms.txt", Astro.site).href} title="LLM-readable content" />
+    <link rel="alternate" type="text/plain" href={new URL("/llms-full.txt", Astro.site).href} title="LLM-readable full content" />
 
     <!-- Apple App Store Smart Banner -->
     <meta name="apple-itunes-app" content="app-id=6754754960" />
@@ -72,25 +82,41 @@ const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Home Stories: Renovation App",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS 17.0+",
       "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Productivity",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "1"
+        "ratingValue": ratingValue,
+        "ratingCount": ratingCount,
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "description": seo.description,
       "url": canonicalURL.href,
       "downloadUrl": appStoreLink,
-      "screenshot": new URL("/screenshots/projects-list.webp", Astro.site).href,
+      "installUrl": appStoreLink,
+      "screenshot": [
+        new URL("/screenshots/projects-list.webp", Astro.site).href,
+        new URL("/screenshots/budget-chart.webp", Astro.site).href,
+        new URL("/screenshots/tasks.webp", Astro.site).href
+      ],
+      "image": logo.startsWith("http") ? logo : new URL(logo, Astro.site).href,
+      "featureList": "Budget Tracking, Photo Timeline, Task Management, PDF Export, Offline Support, iCloud Sync",
+      "softwareVersion": appStore?.version ?? "1.0.0",
+      "datePublished": appStore?.lastUpdated ?? undefined,
+      "inLanguage": "en",
       "author": {
         "@type": "Person",
-        "name": "Robert Jensen"
+        "name": "Robert Jensen",
+        "email": "robert@12f.dk",
+        "url": "https://www.12f.dk"
       }
     })} />
 
@@ -147,7 +173,51 @@ const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": name,
-      "url": Astro.site?.href
+      "url": siteUrl,
+      "description": seo.description,
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "12f",
+        "url": "https://www.12f.dk"
+      }
+    })} />
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "12f",
+      "url": "https://www.12f.dk",
+      "email": "robert@12f.dk",
+      "founder": {
+        "@type": "Person",
+        "name": "Robert Jensen"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Home Stories"
+      }
+    })} />
+
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": siteUrl
+        },
+        ...(Astro.url.pathname !== "/" ? [{
+          "@type": "ListItem",
+          "position": 2,
+          "name": seo.title,
+          "item": canonicalURL.href
+        }] : [])
+      ]
     })} />
 
     <script is:inline define:vars={{ forceTheme }}>

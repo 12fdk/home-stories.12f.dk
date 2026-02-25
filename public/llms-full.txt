@@ -1,0 +1,101 @@
+# Home Stories: Renovation App
+
+> Home Stories is a free iPhone app for managing home renovation projects. Track budgets, organize tasks, document progress with photos, and export professional PDF reports.
+
+## About
+
+Home Stories is your complete project management tool for home renovations. Whether you're renovating a kitchen, bathroom, or your entire house, Home Stories helps you stay organized and on budget. The app is designed to work fully offline, making it perfect for job sites where internet access may be limited.
+
+## App Details
+
+- Name: Home Stories: Renovation App
+- Platform: iOS (iPhone)
+- Minimum OS: iOS 17.0+
+- Price: Free (Premium Lifetime upgrade available for advanced features)
+- Developer: Robert Jensen
+- Publisher: 12f
+- Category: Productivity, Lifestyle
+- App Store URL: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+- Website: https://home-stories.12f.dk
+- Contact Email: robert@12f.dk
+- Privacy Policy: https://www.12f.dk/home-stories/privacy-policy/
+
+## Features in Detail
+
+### Budget Tracking
+Track costs vs. estimates with visual charts showing spent, potential, and remaining budget. Stay on top of your renovation finances with clear breakdowns of where every dollar or krone goes. See at a glance what's spent, what's remaining, and potential costs without needing spreadsheets.
+
+### Photo Timeline
+Document your renovation progress with photos organized by date. Create a visual record of your home's transformation from start to finish. The photo timeline becomes a fantastic record of your renovation journey.
+
+### Task Management
+Organize work into tasks, track completion status, and keep your renovation project moving forward efficiently. Break down large renovations into manageable phases and track materials, fixtures, and items needed for each phase.
+
+### PDF Export
+Generate professional project reports to share with contractors, insurance companies, or keep for your records. Reports include your budget summary, task progress, photos, and notes all in one document.
+
+### Offline Support
+Home Stories is designed to work fully offline so you can access your projects, budgets, and photos even without internet access. Perfect for construction job sites.
+
+### iCloud Sync
+With iCloud sync, your projects stay up to date across all your Apple devices automatically.
+
+## How It Works
+
+### Step 1: Create Your Project
+Set up a renovation project with your budget and timeline to get started tracking your home improvement. Give your project a name, set your total budget, and define your timeline.
+
+### Step 2: Add Tasks & Items
+Break down the work into manageable tasks and track materials, fixtures, and items needed for each phase of your renovation.
+
+### Step 3: Track Your Budget
+Monitor spending with visual charts showing spent, potential, and remaining budget at a glance. The charts make it easy to see if you're staying on budget.
+
+### Step 4: Document Progress
+Capture photos throughout your renovation to create a visual timeline of your home's transformation. Photos are automatically organized by date.
+
+### Step 5: Export & Share
+Generate professional PDF reports to share with contractors, keep for records, or show off your progress to family and friends.
+
+## Frequently Asked Questions
+
+### Is Home Stories free to use?
+Yes, it's free! We also offer a Premium Lifetime upgrade with more advanced features for serious renovators.
+
+### Does the app work offline?
+Absolutely! Home Stories is designed to work fully offline so you can access your projects, budgets, and photos even without internet access - perfect for job sites.
+
+### Can I share projects with others?
+Yes! With iCloud sync your projects stay up to date across your devices. You can also export professional PDF reports to share with contractors, family, or keep for records.
+
+### How do I export reports?
+Simply open your project, tap the export button, and choose PDF. Home Stories generates a professional report with your budget summary, task progress, photos, and notes.
+
+### What devices are supported?
+Home Stories is currently available for iPhone and requires iOS 17.0 or later. We're focused on delivering the best possible experience on iOS first.
+
+## User Testimonials
+
+"Home Stories made our kitchen renovation so much easier to manage. The budget tracking feature showed exactly where every krone went, and the photo timeline became a fantastic record of the transformation." - Anders T.
+
+"I'm renovating multiple rooms and Home Stories keeps everything organized. Each project has its own tasks, budget, and photos. The PDF export is perfect for sharing progress with contractors." - Maria S.
+
+"The budget charts are incredible. I can see at a glance what's spent, what's remaining, and potential costs. No more spreadsheets - Home Stories has everything in one place." - Thomas H.
+
+## Technical Information
+
+- App ID: 6754754960
+- Bundle ID: 12f.home-stories
+- Requires iOS 17.0 or later
+- Compatible with iPhone
+- Available on the App Store in Denmark and other markets
+- Built with SwiftUI
+
+## Links
+
+- Website: https://home-stories.12f.dk
+- App Store: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+- Privacy Policy: https://home-stories.12f.dk/privacy-policy/
+- Terms and Conditions: https://home-stories.12f.dk/terms-and-conditions/
+- Cookies Policy: https://home-stories.12f.dk/cookies-policy/
+- Developer Website: https://www.12f.dk
