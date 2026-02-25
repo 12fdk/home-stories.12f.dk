@@ -2,3 +2,31 @@ User-agent: *
 Allow: /
 
 Sitemap: https://home-stories.12f.dk/sitemap-index.xml
+
+# AI/LLM content
+# See https://llmstxt.org/
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
