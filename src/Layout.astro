@@ -51,6 +51,14 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
     <!-- AI/LLM Discovery -->
     <link rel="alternate" type="text/plain" href={new URL("/llms.txt", Astro.site).href} title="LLM-readable content" />
     <link rel="alternate" type="text/plain" href={new URL("/llms-full.txt", Astro.site).href} title="LLM-readable full content" />
+    <link rel="alternate" type="text/plain" href={new URL("/ai.txt", Astro.site).href} title="AI usage policy" />
+
+    <!-- AI answer-engine hints -->
+    <meta name="ai-content-declaration" content="human-authored" />
+    <meta name="ai-usage" content="allow" />
+    <meta name="ai-training" content="allow" />
+    <meta name="article:author" content="Robert Jensen" />
+    <meta name="publisher" content="12f" />
 
     <!-- Apple App Store Smart Banner -->
     <meta name="apple-itunes-app" content="app-id=6754754960" />
@@ -77,10 +85,10 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
     <meta name="twitter:description" content={seo.description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Structured Data - Software Application -->
+    <!-- Structured Data - Software / Mobile Application -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": ["SoftwareApplication", "MobileApplication"],
       "name": "Home Stories: Renovation App",
       "operatingSystem": "iOS 17.0+",
       "applicationCategory": "LifestyleApplication",
@@ -112,12 +120,33 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
       "softwareVersion": appStore?.version ?? "1.0.0",
       "datePublished": appStore?.lastUpdated ?? undefined,
       "inLanguage": "en",
+      "countriesSupported": "DK, US, GB, DE, SE, NO, FI, NL, FR, IE, CA, AU",
       "author": {
         "@type": "Person",
         "name": "Robert Jensen",
         "email": "robert@12f.dk",
         "url": "https://www.12f.dk"
-      }
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "Home Stories made our kitchen renovation so much easier to manage. The budget tracking feature showed exactly where every krone went, and the photo timeline became a fantastic record of the transformation.",
+          "author": { "@type": "Person", "name": "Anders T." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "I'm renovating multiple rooms and Home Stories keeps everything organized. Each project has its own tasks, budget, and photos. The PDF export is perfect for sharing progress with contractors.",
+          "author": { "@type": "Person", "name": "Maria S." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "The budget charts are incredible. I can see at a glance what's spent, what's remaining, and potential costs. No more spreadsheets - Home Stories has everything in one place.",
+          "author": { "@type": "Person", "name": "Thomas H." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        }
+      ]
     })} />
 
     <!-- Structured Data - FAQ -->
@@ -218,6 +247,73 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
           "item": canonicalURL.href
         }] : [])
       ]
+    })} />
+
+    <!-- Structured Data - HowTo (for AI answer engines) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to manage a home renovation with Home Stories",
+      "description": "Plan, track, and document a home renovation end-to-end using the Home Stories iPhone app.",
+      "totalTime": "PT10M",
+      "supply": [
+        { "@type": "HowToSupply", "name": "iPhone running iOS 17.0 or later" },
+        { "@type": "HowToSupply", "name": "Home Stories app (free on the App Store)" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Home Stories: Renovation App" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Create your project",
+          "text": "Open Home Stories, create a new project, give it a name, set your total budget, and optionally add a timeline.",
+          "url": canonicalURL.href + "#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Add tasks and items",
+          "text": "Break the work into phases and tasks. List materials, fixtures, and labour items you expect to buy.",
+          "url": canonicalURL.href + "#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Track your budget",
+          "text": "Log costs as they happen. The visual chart shows spent, potential, and remaining at a glance.",
+          "url": canonicalURL.href + "#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Document progress with photos",
+          "text": "Capture photos from inside the app. They are automatically dated and attached to your project to build a visual timeline.",
+          "url": canonicalURL.href + "#how-it-works"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Export and share a PDF report",
+          "text": "Tap export and choose PDF. Home Stories generates a professional report with budget, tasks, photos, and notes you can share with a contractor or keep for records.",
+          "url": canonicalURL.href + "#how-it-works"
+        }
+      ]
+    })} />
+
+    <!-- Structured Data - SpeakableSpecification (voice answer engines) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": canonicalURL.href,
+      "name": seo.title,
+      "description": seo.description,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".faq-answer", "[data-speakable]"],
+        "xpath": ["/html/head/title", "/html/head/meta[@name='description']/@content"]
+      }
     })} />
 
     <script is:inline define:vars={{ forceTheme }}>

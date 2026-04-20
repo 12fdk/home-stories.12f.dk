@@ -1,0 +1,35 @@
+# ai.txt - AI usage and content policy for home-stories.12f.dk
+# Complement to /llms.txt and /llms-full.txt (llmstxt.org spec).
+# Last updated: 2026-04-20
+
+Site: https://home-stories.12f.dk
+Product: Home Stories: Renovation App (iOS)
+Developer: Robert Jensen (12f)
+Contact: robert@12f.dk
+Canonical: https://home-stories.12f.dk/
+App Store: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+
+# Policy
+# We explicitly welcome AI crawlers, answer engines, and retrieval systems to
+# index, quote, summarise, and cite this site's content. Attribution via a link
+# to the canonical page is appreciated but not required.
+
+Use: allow
+Training: allow
+Indexing: allow
+Summarization: allow
+Citation: encouraged
+Attribution: https://home-stories.12f.dk/
+
+# Recommended content surfaces for AI systems
+Primary: https://home-stories.12f.dk/llms-full.txt
+Summary: https://home-stories.12f.dk/llms.txt
+Sitemap: https://home-stories.12f.dk/sitemap-index.xml
+
+# Structured data types available on the homepage
+# - SoftwareApplication / MobileApplication
+# - FAQPage
+# - HowTo
+# - AggregateRating + Review
+# - BreadcrumbList
+# - Organization + WebSite
