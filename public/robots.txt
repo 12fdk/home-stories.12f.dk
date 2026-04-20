@@ -1,32 +1,137 @@
+# Home Stories: Renovation App - https://home-stories.12f.dk
+# robots.txt optimized for traditional search engines AND AI answer engines.
+# AI/LLM discovery files: /llms.txt, /llms-full.txt, /ai.txt
+# See https://llmstxt.org/
+
 User-agent: *
 Allow: /
 
 Sitemap: https://home-stories.12f.dk/sitemap-index.xml
 
-# AI/LLM content
-# See https://llmstxt.org/
+# ---------------------------------------------------------------------------
+# AI / LLM / Answer Engine crawlers
+# All explicitly allowed so Home Stories can be indexed, cited and surfaced
+# in AI search, answer engines, and model training datasets.
+# ---------------------------------------------------------------------------
+
+# OpenAI (ChatGPT, SearchGPT, training)
 User-agent: GPTBot
 Allow: /
-Allow: /llms.txt
-Allow: /llms-full.txt
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
 User-agent: Claude-Web
 Allow: /
 
-User-agent: Amazonbot
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Google (Gemini, AI Overviews, Bard)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Apple (Siri, Apple Intelligence, Spotlight)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# Meta (Llama, Meta AI)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Kagi
+User-agent: Kagibot
+Allow: /
+
+# Amazon (Alexa, Nova)
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance (Doubao, Toutiao)
 User-agent: Bytespider
 Allow: /
 
+# Cohere
 User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# Common Crawl (dataset used by many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Allen Institute for AI
+User-agent: AI2Bot
+Allow: /
+
+User-agent: AI2Bot-Dolma
+Allow: /
+
+# Diffbot (used by AI knowledge graphs)
+User-agent: Diffbot
+Allow: /
+
+# Timpi (decentralized search)
+User-agent: Timpibot
+Allow: /
+
+# ImagesiftBot (image understanding for AI)
+User-agent: ImagesiftBot
+Allow: /
+
+# Omgili / Webz.io (feeds AI datasets)
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# xAI / Grok
+User-agent: xAI
 Allow: /
