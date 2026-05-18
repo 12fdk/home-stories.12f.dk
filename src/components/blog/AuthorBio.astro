@@ -1,0 +1,32 @@
+---
+interface Props {
+  name?: string;
+  bio?: string;
+  avatarUrl?: string;
+}
+
+const {
+  name = "Robert Jensen",
+  bio = "Robert is the developer of Home Stories and has lived through several renovation projects of his own — kitchen, bathroom, and a full attic conversion. He built the app because nothing he tried (spreadsheets, Notion, generic project apps) stayed useful past week two.",
+  avatarUrl = "/avatars/robert.webp",
+} = Astro.props;
+---
+
+<aside class="not-prose my-12 flex flex-col items-start gap-4 rounded-2xl border border-base-300 bg-base-200 p-6 sm:flex-row sm:items-center sm:p-8">
+  <img
+    src={avatarUrl}
+    alt={`${name}, author`}
+    width="72"
+    height="72"
+    loading="lazy"
+    class="h-18 w-18 flex-shrink-0 rounded-full object-cover ring-2 ring-base-300"
+    onerror="this.style.display='none'"
+  />
+  <div>
+    <p class="mb-1 text-sm font-semibold uppercase tracking-wide text-base-content/60">
+      Written by
+    </p>
+    <p class="text-lg font-bold">{name}</p>
+    <p class="mt-1 text-sm text-base-content/80">{bio}</p>
+  </div>
+</aside>

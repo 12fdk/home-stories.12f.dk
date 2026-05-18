@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props;
+---
+
+{
+  posts.length > 0 && (
+    <section class="not-prose my-12 border-t border-base-300 pt-10">
+      <h2 class="mb-6 text-2xl font-bold sm:text-3xl">Keep reading</h2>
+      <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => (
+          <li class="rounded-xl border border-base-300 bg-base-100 p-5 transition hover:border-primary">
+            <a href={`/blog/${post.slug}/`} class="block">
+              <h3 class="mb-2 text-lg font-semibold text-base-content">
+                {post.data.title}
+              </h3>
+              <p class="text-sm text-base-content/70">{post.data.description}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
