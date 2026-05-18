@@ -1,0 +1,31 @@
+---
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <aside
+      class="not-prose my-8 rounded-2xl border-l-4 border-primary bg-base-200 p-5 sm:p-6"
+      data-speakable
+      aria-label="Article summary"
+    >
+      <p class="mb-3 text-sm font-bold uppercase tracking-wide text-primary">
+        TL;DR
+      </p>
+      <ul class="space-y-2 text-base-content">
+        {items.map((item) => (
+          <li class="flex gap-2">
+            <span class="text-primary" aria-hidden="true">
+              ▸
+            </span>
+            <span set:html={item} />
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )
+}

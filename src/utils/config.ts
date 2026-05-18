@@ -28,6 +28,7 @@ const templateConfig: TemplateConfig = {
     links: [
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
+      { href: "/blog/", title: "Blog" },
       { href: "/#faq", title: "FAQ" },
     ],
   },
@@ -39,6 +40,7 @@ const templateConfig: TemplateConfig = {
     links: [
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
+      { href: "/blog/", title: "Blog" },
       { href: "/#faq", title: "FAQ" },
     ],
   },

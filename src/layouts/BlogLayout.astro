@@ -1,0 +1,180 @@
+---
+import "@styles/styles.scss";
+import {
+  BlogNavbar,
+  BlogFooter,
+  BlogAppBanner,
+  BlogStickyDownload,
+} from "@components/blog/BlogChrome";
+import defaultTemplateConfig from "utils/config";
+import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata } from "utils/appStoreData";
+import type { TemplateConfig } from "utils/configType";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalPath?: string;
+  articleSchema?: Record<string, unknown>;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  tags?: string[];
+  bodyClass?: string;
+  hideAppBanner?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage,
+  canonicalPath,
+  articleSchema,
+  publishedTime,
+  modifiedTime,
+  author,
+  tags = [],
+  bodyClass = "",
+  hideAppBanner = false,
+} = Astro.props;
+
+const appStoreData = await fetchAppStoreData() ?? fallbackAppStoreData;
+const config: TemplateConfig = {
+  ...defaultTemplateConfig,
+  logo: appStoreData.artworkUrl512.startsWith("http")
+    ? appStoreData.artworkUrl512
+    : defaultTemplateConfig.logo,
+  appStore: toAppStoreMetadata(appStoreData),
+};
+
+const canonicalURL = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
+const resolvedOgImage = ogImage
+  ? new URL(ogImage, Astro.site).href
+  : new URL("/og-image.png", Astro.site).href;
+const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: config.name,
+  url: siteUrl,
+  description: config.seo.description,
+  inLanguage: "en",
+  publisher: {
+    "@type": "Organization",
+    name: "12f",
+    url: "https://www.12f.dk",
+  },
+};
+
+const breadcrumbItems = [
+  {
+    "@type": "ListItem",
+    position: 1,
+    name: "Home",
+    item: siteUrl,
+  },
+  {
+    "@type": "ListItem",
+    position: 2,
+    name: "Blog",
+    item: new URL("/blog/", Astro.site).href,
+  },
+];
+if (Astro.url.pathname !== "/blog/" && Astro.url.pathname !== "/blog") {
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    position: 3,
+    name: title,
+    item: canonicalURL.href,
+  });
+}
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbItems,
+};
+---
+
+<!doctype html>
+<html lang="en" data-theme={config.theme}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {config.logo.startsWith("http") && <link rel="apple-touch-icon" href={config.logo} />}
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://umami.robert-jensen.dk" />
+    <link rel="dns-prefetch" href="https://apps.apple.com" />
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" type="application/rss+xml" title={`${config.name} Blog RSS`} href={new URL("/rss.xml", Astro.site).href} />
+
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author ?? "Robert Jensen"} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="application-name" content="Home Stories" />
+
+    <link rel="alternate" type="text/plain" href={new URL("/llms.txt", Astro.site).href} title="LLM-readable content" />
+    <link rel="alternate" type="text/plain" href={new URL("/llms-full.txt", Astro.site).href} title="LLM-readable full content" />
+
+    <meta name="ai-content-declaration" content="human-authored" />
+    <meta name="ai-usage" content="allow" />
+    <meta name="ai-training" content="allow" />
+    <meta name="article:author" content={author ?? "Robert Jensen"} />
+    <meta name="publisher" content="12f" />
+
+    <meta name="apple-itunes-app" content="app-id=6754754960" />
+    <meta name="apple-mobile-web-app-title" content="Home Stories" />
+
+    <meta name="google-site-verification" content="qIt43wKbCVGfZYBrH1zV-3NRdMEtU0fo9qT-7NBC4n8" />
+
+    <meta property="og:type" content={articleSchema ? "article" : "website"} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={config.name} />
+    <meta property="og:locale" content="en_US" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {author && <meta property="article:author" content={author} />}
+    {tags.map((tag) => <meta property="article:tag" content={tag} />)}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+
+    <script is:inline define:vars={{ forceTheme: config.forceTheme }}>
+      function getPreferredColorScheme() {
+        if (!window.matchMedia) return;
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+      }
+      const theme = localStorage.getItem("theme") ?? getPreferredColorScheme();
+      if (theme === "dark" && !forceTheme)
+        document.documentElement.setAttribute("data-theme", theme);
+    </script>
+
+    <script defer src="https://umami.robert-jensen.dk/script.js" data-website-id="330ddb96-95c9-43cd-b9fe-485c0d114b33"></script>
+  </head>
+  <body class={`relative ${bodyClass}`}>
+    <BlogNavbar client:load config={config} />
+    <slot />
+    {!hideAppBanner && <BlogAppBanner client:visible config={config} />}
+    <BlogFooter client:visible config={config} />
+    <BlogStickyDownload client:visible config={config} />
+  </body>
+</html>

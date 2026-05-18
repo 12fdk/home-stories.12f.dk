@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { readingTime } from "../../utils/readingTime";
+
+const allPosts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
+);
+
+const postsWithMeta = await Promise.all(
+  allPosts.map(async (post) => ({
+    post,
+    minutes: readingTime(post.body).minutes,
+  })),
+);
+
+const formatDate = (d: Date) =>
+  d.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+---
+
+<BlogLayout
+  title="Home Renovation Blog — Budgeting, Planning & Project Tips | Home Stories"
+  description="Practical, no-fluff guides on planning, budgeting, and tracking home renovations. Written by a developer who's lived it."
+  canonicalPath="/blog/"
+  hideAppBanner={true}
+>
+  <main class="max-w-screen-lg mx-auto px-4 py-12 md:py-20">
+    <header class="mb-12 max-w-3xl">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-primary">
+        Home Stories Blog
+      </p>
+      <h1 class="mb-4 text-4xl font-bold leading-tight md:text-5xl">
+        Plan, budget, and survive your renovation.
+      </h1>
+      <p class="text-lg text-base-content/80 md:text-xl">
+        Practical guides for homeowners who'd rather track a renovation in
+        something better than a spreadsheet. Real numbers, real templates, no
+        fluff.
+      </p>
+    </header>
+
+    {
+      postsWithMeta.length === 0 ? (
+        <p class="text-base-content/60">No posts yet — coming soon.</p>
+      ) : (
+        <ul class="grid gap-8 md:grid-cols-2">
+          {postsWithMeta.map(({ post, minutes }) => (
+            <li class="group rounded-2xl border border-base-300 bg-base-100 p-6 transition hover:border-primary hover:shadow-lg sm:p-8">
+              <a href={`/blog/${post.slug}/`} class="block">
+                <div class="mb-3 flex flex-wrap items-center gap-2 text-xs text-base-content/60">
+                  <time datetime={post.data.publishDate.toISOString()}>
+                    {formatDate(post.data.publishDate)}
+                  </time>
+                  <span aria-hidden="true">•</span>
+                  <span>{minutes} min read</span>
+                  {post.data.tags.slice(0, 2).map((tag) => (
+                    <>
+                      <span aria-hidden="true">•</span>
+                      <span class="rounded-full bg-base-200 px-2 py-0.5">
+                        {tag}
+                      </span>
+                    </>
+                  ))}
+                </div>
+                <h2 class="mb-3 text-xl font-bold leading-snug text-base-content group-hover:text-primary sm:text-2xl">
+                  {post.data.title}
+                </h2>
+                <p class="text-base text-base-content/80">{post.data.description}</p>
+                <p class="mt-4 text-sm font-semibold text-primary">
+                  Read more →
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </main>
+</BlogLayout>
