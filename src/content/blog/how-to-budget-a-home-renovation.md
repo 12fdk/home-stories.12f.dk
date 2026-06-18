@@ -26,6 +26,7 @@ faq:
   - question: "How often should I update my renovation budget?"
     answer: "Weekly at minimum, ideally at the moment each cost is committed. The danger isn't a single big surprise — it's small drift you don't notice because you're updating the budget a fortnight late. Logging each receipt and change as it happens is the single habit that keeps a renovation on budget."
 relatedSlugs:
+  - "renovation-contingency-budget"
   - "renovation-budget-template"
   - "renovation-spreadsheet-alternative"
 ---
@@ -106,7 +107,7 @@ Two things make contingency actually work:
 1. **Ring-fence it.** Keep it as its own line, mentally and on paper. The failure mode is spending it on upgrades in week three ("the contingency's there, let's get the nicer worktop") and then having nothing left when the real surprise arrives in week eight.
 2. **Draw it down visibly.** Each time you dip in, log what for. A contingency that quietly empties teaches you nothing; one you track tells you exactly how accurate your original estimates were.
 
-There's a deeper dive on this coming in a dedicated contingency post, but the headline is simple: budget the surprise *before* it happens, and protect it once you have.
+There's a deeper dive in the dedicated guide to [how much renovation contingency to set aside](/blog/renovation-contingency-budget/), but the headline is simple: budget the surprise *before* it happens, and protect it once you have.
 
 ## Step 5: Track actual vs. estimated — per line item
 
