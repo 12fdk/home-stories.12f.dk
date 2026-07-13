@@ -74,6 +74,18 @@ Estimates below are *educated guesses* — confirm with a real tool before sched
 | 22 | homezada vs houzz pro | 100–300 | 10–20 | Comparison | ☐ |
 | 23 | notion for home renovation | 100–400 | 10–20 | Comparison | ☐ |
 
+### Tier D — Execution phase (added for posts 16–25)
+
+The first 15 posts cluster around *planning* — the weeks before work starts. These target the months **during** the build, where the money actually leaks and where the app's job (capture as it happens) is the only real answer. Low competition, high intent match.
+
+| # | Keyword | Est. vol/mo | Est. KD | Intent | V |
+|---|---|---|---|---|---|
+| 24 | renovation scope creep | 100–300 | 10–20 | Informational | ☐ |
+| 25 | how to compare contractor quotes | 200–500 | 15–25 | Informational | ☐ |
+| 26 | contractor payment schedule | 200–600 | 15–30 | Informational + link bait | ☐ |
+| 27 | renovation progress photos | 50–200 | 5–15 | Informational | ☐ |
+| 28 | renovation punch list / snag list | 100–400 | 10–20 | Checklist | ☐ |
+
 ---
 
 ## 4. Content calendar — first 15 posts (≈ 4 months at 1/week)
@@ -103,6 +115,35 @@ Each post links to 2–3 others (internal linking), includes a contextual CTA to
 - Posts 2, 8, 10, 13 = comparison content with highest commercial intent (drive installs).
 - Posts 6, 15 = original/personal content nobody else has (Reddit + Pinterest fuel).
 - Posts 12, 14 = pillars to internally link from all others.
+
+---
+
+## 4b. Content calendar — posts 16–25 (second batch)
+
+**Why this batch exists.** Two gaps showed up once the first batch was underway:
+
+1. **Five Tier A keywords were never assigned a post** (#2, #4, #6, #7, #8). Tier A is the bottom-of-funnel, commercial-intent set — the highest install conversion we have — and the first 15 posts skewed heavily toward Tier B informational content. Posts 16–20 close that gap.
+2. **Nothing covered the execution phase.** The first 15 posts almost all address the weeks *before* work starts. Posts 21–25 (Tier D) target the months during the build, which is both where renovations actually fail and where the app is the only sensible answer — the strongest possible context for a CTA.
+
+| Week | Type | Working title | Primary keyword | Format | Word target |
+|---|---|---|---|---|---|
+| 16 | Comparison | Looking for a HomeZada Alternative? Start Here | alternative to homezada | Comparison | 1,800 |
+| 17 | Commercial | Renovation Tracking Apps: What Actually Matters (and What's Marketing) | home renovation tracking app | Buyer's guide | 2,000 |
+| 18 | Listicle | The Best Free Renovation Apps — No Trial, No Subscription | free home renovation app | Round-up | 2,000 |
+| 19 | ★ Pillar | The Kitchen Renovation Budget, Line by Line | kitchen renovation app | Pillar + real numbers | 2,400 |
+| 20 | Commercial | A Bathroom Renovation Tracker That Isn't a Spreadsheet | bathroom renovation tracker | Guide + template | 1,600 |
+| 21 | How-to | Renovation Scope Creep: How Small Decisions Become a Big Overrun | renovation scope creep | Problem/solution | 1,800 |
+| 22 | How-to | How to Compare Contractor Quotes Apples-to-Apples | how to compare contractor quotes | Practical guide | 2,000 |
+| 23 | How-to | Never Pay 50% Upfront: Renovation Payment Schedules Explained | contractor payment schedule | Guide + link bait | 1,800 |
+| 24 | Narrative | Photograph Every Wall Before It's Closed Up | renovation progress photos | Short narrative | 1,200 |
+| 25 | Checklist | The Snag List: How to Run a Final Walkthrough | renovation punch list | Checklist | 1,500 |
+
+**Priority order (if writing fewer than all ten):**
+- **Post 16 first.** Research for post 10 confirmed HomeZada's iOS app has shipped no update since **May 2022** and averages **2.9★** — an evidenced hook no competing article has bothered to check, aimed at a keyword typed by people already looking to switch. Highest conversion intent on the list.
+- **Posts 21 and 24** are the most on-strategy: both describe a problem whose only real fix is capturing things as they happen, which is precisely the app's job.
+- **Post 23** is the best link-magnet candidate — payment-schedule guidance gets cited and shared.
+
+**Caveat:** as with the first batch, all volume/KD figures above are unvalidated estimates. Run them through Keyword Planner / Ahrefs before locking the schedule (see §2).
 
 ---
 
