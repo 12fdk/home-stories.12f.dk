@@ -99,7 +99,7 @@ Each post links to 2–3 others (internal linking), includes a contextual CTA to
 | 3 | How-to | How to Budget a Home Renovation Without Going Over (2026 Guide) | how to budget a home renovation | Step-by-step | 2,200 |
 | 4 | Listicle | The 7 Phases of a Home Renovation (and What to Track in Each) | home renovation phases | Phased guide | 1,800 |
 | 5 | ★ Pillar / freebie | Printable Renovation Checklist: Every Task by Room (Free PDF) | renovation checklist printable | Checklist + freebie | 2,000 |
-| 6 | Data | We Analyzed 200 Renovation Projects: Average Cost Overrun is X% | renovation cost overrun statistics | Data study | 1,800 |
+| [x] | ★ 6 | Data | We Analyzed 200 Renovation Projects: Average Cost Overrun is X% | renovation cost overrun statistics | Data study | 1,800 |
 | 7 | How-to | The 20% Rule: How Much Contingency Should You Budget? | renovation contingency budget percentage | Short focused guide | 1,200 |
 | 8 | Comparison | Notion vs Home Stories for Renovation Planning | notion for home renovation | Honest comparison | 1,800 |
 | 9 | How-to | How to Organize Renovation Receipts for Tax & Insurance | how to organize renovation receipts | Practical guide | 1,500 |
