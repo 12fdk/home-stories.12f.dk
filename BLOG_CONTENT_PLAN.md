@@ -105,7 +105,7 @@ Each post links to 2–3 others (internal linking), includes a contextual CTA to
 | 9 | How-to | How to Organize Renovation Receipts for Tax & Insurance | how to organize renovation receipts | Practical guide | 1,500 |
 | 10 | Listicle | 6 Best Home Improvement Apps for iPhone in 2026 | best home improvement apps 2026 | Round-up (include competitors honestly) | 2,500 |
 | [x] | [x] 11 | How-to | How to Track Home Improvement Expenses (4 Methods Compared) | how to track home improvement expenses | Methods + verdict | 1,800 |
-| 12 | ★ Pillar | A Realistic Kitchen Renovation Timeline (Week-by-Week) | renovation project timeline example | Timeline + photos | 2,200 |
+| [x] | ★ 12 | How-to | A Realistic Kitchen Renovation Timeline (Week-by-Week) | renovation project timeline example | Timeline + photos | 2,200 |
 | 13 | Comparison | HomeZada vs Houzz Pro vs Home Stories: Honest 2026 Review | homezada vs houzz pro | Comparison | 2,000 |
 | 14 | How-to | How to Plan a Home Renovation Step-by-Step (First-Timer Guide) | how to plan a home renovation step by step | Beginner guide | 2,500 |
 | 15 | Listicle | 11 Things I Wish I'd Tracked Before Starting My Renovation | (long-tail / share-bait) | Personal narrative | 1,500 |
