@@ -3,7 +3,7 @@ title: "How to Plan a Home Renovation Step by Step (2026 Guide)"
 description: "Step-by-step guide to planning a home renovation in 2026 — from the first decision to the final walkthrough. Real numbers, real timelines."
 lede: "Planning a home renovation doesn't have to mean spreadsheets, anxiety, and surprises that blow your budget. The right approach breaks the entire process into discrete, manageable steps — each with a clear start, a clear deliverable, and a clear next step. This guide walks you through every phase of a home renovation, from the very first decision to the final walkthrough, with realistic timelines and costs so you know exactly what comes next."
 keyword: "how to plan a home renovation step by step"
-publishDate: 2026-08-17
+publishDate: 2026-07-14
 author: "Robert Jensen"
 tags: ["planning", "step-by-step", "first-timer", "guide"]
 tldr:
