@@ -80,7 +80,22 @@ export type TemplateConfig = {
             screenshots: string[];
             rewards?: string[] | undefined;
             usersDescription?: string | undefined;
+            /** Figures for the hero budget rail. Must match the sample project
+             *  shown in the screenshots — the rail is the app, not a claim. */
+            sample?: {
+                project: string;
+                currency: string;
+                budget: number;
+                spent: number;
+                /** Committed but not yet paid — the app calls this "potential". */
+                potential: number;
+            } | undefined;
         };
+        /** Short, checkable facts. One line, mono, no marketing. */
+        facts?: {
+            label: string;
+            value: string;
+        }[] | undefined;
         testimonials?: {
             id?: string | undefined;
             title: string;
@@ -89,11 +104,6 @@ export type TemplateConfig = {
                 name: string;
                 comment: string;
             }[];
-        } | undefined;
-        partners?: {
-            id?: string | undefined;
-            title: string;
-            logos: string[];
         } | undefined;
         faq?: {
             id?: string | undefined;
@@ -119,21 +129,16 @@ export type TemplateConfig = {
             subtitle?: string | undefined;
             cards: {
                 icon: string;
+                /** Real app screenshot — shown instead of the icon where present. */
+                screenshot?: string | undefined;
+                /** Slide the screenshot up inside the card so the part that
+                 *  matches the card's claim is the part on show, e.g. "-22%". */
+                crop?: string | undefined;
+                /** Mono label above the card title, e.g. "Budget". */
+                label?: string | undefined;
                 title: string;
                 subtitle: string;
             }[];
-        } | undefined;
-        pricing?: {
-            id?: string | undefined;
-            title: string;
-            actionText?: string | undefined;
-            subtitle?: string | undefined;
-            plans?: {
-                featured?: boolean | undefined;
-                title: string;
-                price: string;
-                rows: string[];
-            }[] | undefined;
         } | undefined;
     };
 }

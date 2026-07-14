@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { withBase } from "../../../../utils/basePath";
+import SectionHeading from "../../../../components/sectionHeading";
 
 const videos = [
-  { src: "/videos/demo-1.mp4", poster: "/videos/poster-1.webp" },
-  { src: "/videos/demo-2.mp4", poster: "/videos/poster-2.webp" },
-  { src: "/videos/demo-3.mp4", poster: "/videos/poster-3.webp" },
+  { src: "/videos/demo-1.mp4", poster: "/videos/poster-1.webp", label: "Projects" },
+  { src: "/videos/demo-2.mp4", poster: "/videos/poster-2.webp", label: "Budget" },
+  { src: "/videos/demo-3.mp4", poster: "/videos/poster-3.webp", label: "Photos" },
 ];
 
 function VideoDemo() {
@@ -13,12 +14,10 @@ function VideoDemo() {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  // Auto-advance to next video when current one ends
   const handleVideoEnd = () => {
     setCurrentIndex((prev) => (prev + 1) % videos.length);
   };
 
-  // Play video when it becomes active
   useEffect(() => {
     const currentVideo = videoRefs.current[currentIndex];
     if (currentVideo && isPlaying) {
@@ -27,76 +26,89 @@ function VideoDemo() {
     }
   }, [currentIndex, isPlaying]);
 
-  // Start playing when component is in view
   const handleInView = () => {
     if (!isPlaying) {
       setIsPlaying(true);
-      const currentVideo = videoRefs.current[currentIndex];
-      if (currentVideo) {
-        currentVideo.play().catch(() => {});
-      }
+      videoRefs.current[currentIndex]?.play().catch(() => {});
     }
   };
 
   return (
-    <section id="demo" className="py-16 md:py-24 bg-base-200/50">
-      <div className="max-w-screen-lg mx-auto px-4">
+    <section
+      id="demo"
+      className="border-t border-base-300 bg-neutral py-20 text-neutral-content md:py-28"
+    >
+      <div className="mx-auto grid max-w-screen-lg items-center gap-12 px-4 md:grid-cols-2 md:gap-16">
+        <div>
+          <SectionHeading
+            inverted
+            label="Demo"
+            title="Watch it run"
+            subtitle="Three screens, recorded from the app on an iPhone. No mockups, no narration."
+          />
+
+          {/* Chapter list doubles as the control */}
+          <ul className="mt-10 list-none space-y-px p-0">
+            {videos.map((video, index) => {
+              const isActive = index === currentIndex;
+              return (
+                <li key={video.src} className="m-0 p-0">
+                  <button
+                    onClick={() => {
+                      setCurrentIndex(index);
+                      setIsPlaying(true);
+                    }}
+                    aria-current={isActive}
+                    className={`flex w-full items-center gap-4 border-t border-neutral-content/15 py-4 text-left transition-colors ${
+                      isActive
+                        ? "text-neutral-content"
+                        : "text-neutral-content/50 hover:text-neutral-content/80"
+                    }`}
+                  >
+                    <span className="tick-label w-6 shrink-0">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-display text-lg font-bold tracking-tight">
+                      {video.label}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className={`ml-auto h-1.5 w-1.5 rounded-full transition-colors ${
+                        isActive ? "bg-accent" : "bg-transparent"
+                      }`}
+                    />
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            See It In Action
-          </h2>
-          <p className="text-base-content/70 max-w-2xl mx-auto">
-            Watch how Home Stories helps you manage your renovation projects
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
           onViewportEnter={handleInView}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-col items-center"
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex justify-center md:justify-end"
         >
-          {/* Video Container */}
-          <div className="relative w-full max-w-sm mx-auto">
-            <div className="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl bg-base-300">
-              {videos.map((video, index) => (
-                <video
-                  key={video.src}
-                  ref={(el) => { videoRefs.current[index] = el; }}
-                  src={withBase(video.src)}
-                  poster={withBase(video.poster)}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-                    index === currentIndex ? "opacity-100" : "opacity-0"
-                  }`}
-                  muted
-                  playsInline
-                  preload={index === 0 ? "auto" : "none"}
-                  onEnded={handleVideoEnd}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex gap-2 mt-6">
-            {videos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  index === currentIndex
-                    ? "bg-primary w-6"
-                    : "bg-base-content/30 hover:bg-base-content/50"
+          {/* The recordings already frame themselves — no second phone around them */}
+          <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-box border border-neutral-content/15 bg-base-100 shadow-2xl">
+            {videos.map((video, index) => (
+              <video
+                key={video.src}
+                ref={(el) => {
+                  videoRefs.current[index] = el;
+                }}
+                src={withBase(video.src)}
+                poster={withBase(video.poster)}
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                  index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}
-                aria-label={`Go to video ${index + 1}`}
+                muted
+                playsInline
+                preload={index === 0 ? "auto" : "none"}
+                onEnded={handleVideoEnd}
               />
             ))}
           </div>
