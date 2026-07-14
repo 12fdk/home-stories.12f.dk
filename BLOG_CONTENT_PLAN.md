@@ -138,6 +138,7 @@ Each post links to 2–3 others (internal linking), includes a contextual CTA to
 | 24 | Narrative | Photograph Every Wall Before It's Closed Up | renovation progress photos | Short narrative | 1,200 |
 || 25 | Checklist | The Snag List: How to Run a Final Walkthrough | renovation punch list | Checklist | 1,500 |
 || 26 | How-to | How to Read and Compare Contractor Quotes (Line by Line) | how to compare contractor quotes line by line | Practical guide | 2,000 |
+|| 27 | Checklist | The Renovation Move-Out Checklist: What to Pack and What to Leave | renovation move out checklist | Checklist + guide | 1,200 |
 
 **Priority order (if writing fewer than all ten):**
 - **Post 16 first.** Research for post 10 confirmed HomeZada's iOS app has shipped no update since **May 2022** and averages **2.9★** — an evidenced hook no competing article has bothered to check, aimed at a keyword typed by people already looking to switch. Highest conversion intent on the list.
@@ -262,4 +263,4 @@ Tied to existing issues: #13 (blog section), #17 (OG images), #16 (sitemap).
 
 ---
 
-*Last updated: 2026-07-14*
+*Last updated: 2026-08-17*

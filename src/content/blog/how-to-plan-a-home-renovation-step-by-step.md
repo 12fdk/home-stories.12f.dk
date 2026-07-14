@@ -1,202 +1,361 @@
 ---
-title: "How to Plan a Home Renovation Step by Step (First-Timer Guide)"
-description: "A realistic, step-by-step guide to planning a home renovation — from defining scope to signing the first contract — without the overwhelm."
-lede: "Planning a home renovation step by step means moving through seven phases in a fixed order: define what you want, set a realistic budget, research and design, get contractor quotes, lock a schedule, and then manage the build. The single biggest mistake first-timers make is rushing past the planning phases to start demolition — and paying for it in change orders and contractor arguments later."
+title: "How to Plan a Home Renovation Step by Step (2026 Guide)"
+description: "Step-by-step guide to planning a home renovation in 2026 — from the first decision to the final walkthrough. Real numbers, real timelines."
+lede: "Planning a home renovation doesn't have to mean spreadsheets, anxiety, and surprises that blow your budget. The right approach breaks the entire process into discrete, manageable steps — each with a clear start, a clear deliverable, and a clear next step. This guide walks you through every phase of a home renovation, from the very first decision to the final walkthrough, with realistic timelines and costs so you know exactly what comes next."
 keyword: "how to plan a home renovation step by step"
-publishDate: 2026-07-20
+publishDate: 2026-08-17
 author: "Robert Jensen"
-tags: ["planning", "how-to", "beginner"]
+tags: ["planning", "step-by-step", "first-timer", "guide"]
 tldr:
-  - "A home renovation moves through <strong>seven planning phases</strong>: scope definition, budgeting, design & permits, contractor research, hiring, scheduling, and execution. Skip one and the next eight phases get harder."
-  - "Your budget should include a <strong>minimum 15–20% contingency</strong> for unknowns. The number comes from data, not optimism — <a href='/blog/renovation-cost-overrun-statistics/'>200 analysed projects averaged 15% overrun</a>."
-  - "Get <strong>at least three quotes per scope item</strong>. The difference between the lowest and highest quote on a kitchen renovation is typically 25–40%, and the cheapest quote isn't usually the cheapest finish."
-  - "Lock every decision <strong>before the first hammer swings</strong>. Post-start changes are where budgets evaporate — a single mid-project layout change costs 10–20% more because of rework, not materials."
-  - "A dedicated app like <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> walks you through these phases with structured templates so you're not building your own spreadsheet from scratch. <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Free on the App Store</a>."
+  - "The renovation process breaks into **six clear phases**: decide what you want, define your budget, design the scope, get quotes, manage construction, and close out. Each phase has specific deliverables — once those are ready, you move on."
+  - "**The biggest mistake first-time renovators make** is starting design before the budget is set. Always know your maximum spend before you look at a single countertop sample."
+  - "**Realistic timelines: kitchens take 12–20 weeks total** (including design and permits), bathrooms 8–14 weeks, and full-home renovations 24–48 weeks depending on scope."
+  - "**Home Stories tracks every step** of this process — budget, timeline, photos, receipts — from the first decision to the final walkthrough. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)."
 faq:
-  - question: "How long does it take to plan a home renovation?"
-    answer: "The planning phase — scope definition, budgeting, design, permits, and hiring — typically takes <strong>8–16 weeks</strong> for a medium renovation (kitchen, bathroom, or single room) and <strong>3–6 months</strong> for a full-house project. The longest single activity is usually design and permit approval, which can take 4–8 weeks depending on your local authority. Many renovators underestimate the planning phase by 50% and start with the intention of beginning work in two weeks, only to discover that getting permits approved and contractor quotes lined up takes far longer than expected. The key insight: the planning phase is where you save the most money and stress. Spending an extra month planning rarely costs more than two weeks of mid-project change orders."
-  - question: "What is the first step when planning a renovation?"
-    answer: "The first step is defining your scope: write down exactly what you want changed, room by room, and what you're deliberately *not* changing. This sounds obvious, but it's where most projects fail — people start with \"let's do the kitchen\" and end up changing their mind about the living room, the bathroom, and the garden in the same conversation. A written scope statement includes the finish level you're aiming for (rental-neutral, move-in ready, or forever-home quality), the must-have items, and the nice-to-have items. This list becomes your anchor for every decision that follows. If you want a template to structure this, the <a href='/blog/renovation-budget-template/'>renovation budget template</a> has a scope section built in."
+  - question: "What is the first step in planning a home renovation?"
+    answer: "The first step is defining what you want to achieve, not what you think you can afford. Sit down with your household and make a list of every problem in the space — leaky faucet, outdated layout, insufficient storage, poor lighting, uncomfortable workflow. Then prioritise: which issues are dealbreakers, which are annoyances, and which are nice-to-haves. This prioritisation becomes the foundation for everything that follows. Without it, you'll either over-spend on things that don't matter or compromise on the changes you actually need. Once you have your prioritised list, that's when you move to step two: figuring out what a renovation like that costs."
   - question: "How much should I budget for a home renovation?"
-    answer: "There's no single answer because it depends on your property, scope, and finish level. But here's a practical framework: take your expected cost, add <strong>15–20% for contingency</strong>, and double it as a reality check. If doubling means you can't afford it, you need to either shrink the scope or increase the timeline so you can save up. For reference, a mid-range kitchen renovation in most markets runs 15–25% of the property value. A full-house renovation can easily run 30–50%. The <a href='/blog/renovation-cost-overrun-statistics/'>data on cost overruns</a> shows that most projects go 15% over what they planned — which is exactly why the contingency line exists. Use the <a href='/blog/renovation-budget-template/'>free budget template</a> to break down expected costs by category before you commit to a total."
-  - question: "Should I hire an architect or a designer for my renovation?"
-    answer: "It depends on the scope. For structural changes — moving walls, changing rooflines, enlarging openings — you'll need a licensed architect or structural engineer regardless. For non-structural work — cabinet layouts, fixture selections, finishes — a kitchen and bath designer or even your contractor's design service is usually sufficient. For a full-house renovation, an architect adds real value because they coordinate between structural, mechanical, and aesthetic decisions. The rule of thumb: if your renovation involves changes to the building envelope or load-bearing elements, you need an architect. Otherwise, a designer or even a well-experienced contractor can handle the design. In any case, the design phase costs 5–12% of the total project, so factor that into your <a href='/blog/how-to-budget-a-home-renovation/'>budget from the start</a>."
-  - question: "How many contractor quotes should I get?"
-    answer: "At least three per scope item, ideally more if the project is large or unusual. Three gives you a realistic spread — you can spot outliers (a quote that's 30% above or below the average is usually wrong for a reason). Two quotes is risky because you can't tell if the lower one is a good deal or the higher one is overcharging. More than five starts to waste your time without adding meaningful data. When comparing quotes, look beyond the total: check whether each contractor includes the same scope, the same materials, and the same timeline. A lower total that excludes a key item is not a better deal. The <a href='/blog/homezada-vs-houzz-pro/'>comparison of renovation tools</a> covers how to track and compare quotes side by side once you've collected them."
-  - question: "When should I start planning a renovation?"
-    answer: "Ideally, at least <strong>two to three months before you want work to start</strong>. This gives you time to: define the scope, get design done if needed, secure permits, collect and compare contractor quotes, and lock in a start date. If you're planning a full-house renovation, start <strong>six months ahead</strong>. The two biggest timeline traps are (1) permit processing times, which can run from two weeks to two months depending on your jurisdiction, and (2) contractor availability — good tradespeople often book up 2–3 months out. Starting with the intention of getting quotes in two weeks and breaking ground in four is optimistic. The <a href='/blog/kitchen-renovation-timeline/'>realistic timeline guide</a> walks through what each phase actually takes."
+    answer: "There's no single number, but the data is clear. Cosmetic kitchen updates (paint, new hardware, resurface cabinets) run $3,000–$8,000. Mid-range kitchen renovations (new cabinets, countertops, appliances, flooring) typically run $25,000–$55,000. Full kitchen gut-and-replace runs $40,000–$90,000 depending on home size and finishes. Bathroom renovations range from $7,000 for a surface refresh to $35,000 for a full reconfiguration. The key is to set your maximum spend before looking at any design options, then work backwards from that number. Home Stories lets you set a total budget and track every line item against it in real time, so you never discover at week eight that you've blown past budget — [download free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)."
+  - question: "How long does a home renovation take?"
+    answer: "Timelines vary wildly by scope, but typical ranges are: cosmetic updates (paint, flooring, fixtures) — 2–4 weeks; kitchen renovation — 12–20 weeks total including design, permits, and cabinet ordering; bathroom renovation — 8–14 weeks; room additions — 16–32 weeks; full-home renovation — 24–48 weeks. The timeline almost always starts before demolition. Expect 2–6 weeks for design and planning, 1–4 weeks for permits, and then the construction timeline. The single biggest source of delay is waiting for cabinets, which often take 8–12 weeks to deliver. Plan accordingly — most renovators underestimate total timeline by 30–50%."
+  - question: "Should I hire an architect or a contractor first?"
+    answer: "For simple cosmetic work, just get contractor quotes. For anything that involves moving walls, changing the floor plan, or adding square footage, start with an architect or designer to produce construction drawings. The architect doesn't build your project — they produce the plans and specifications that contractors bid on. Getting this right upfront saves thousands in change orders later. A designer is a good middle ground if you don't need structural changes but want help with layout, materials, and fixtures. Once you have drawings (or even a detailed brief for a straightforward project), get at least three quotes and compare them on the same scope of work."
+  - question: "How do I manage a renovation once construction starts?"
+    answer: "The difference between a smooth renovation and a stressful one almost always comes down to documentation and communication. Set up a system where every decision, receipt, change order, and photo is logged in one place. That's what Home Stories is designed for — it replaces the five different folders, three notebooks, and half a dozen photos in your camera roll that most renovators use. Get weekly progress photos. Review expenses weekly against budget. Communicate with your contractor through a single channel (email or a project app, not WhatsApp and in-person conversations that disappear). If something changes mid-project, document the scope change, get a revised quote, and approve it before work proceeds."
+  - question: "What should I do before a renovation starts?"
+    answer: "Five things: (1) Lock in your budget and have a cushion — 15–20% contingency for anything beyond cosmetic work. (2) Finalise every design decision before demolition: layouts, fixtures, finishes, cabinetry, appliances. Changing your mind mid-project is the most expensive thing you can do. (3) Get permits approved. (4) Order long-lead items (cabinets, custom windows, specialty appliances) as early as possible. (5) Plan your life around the disruption — where will you cook, store food, do laundry, and if it's a bathroom renovation, where will you shower? The more practical details you sort in advance, the less friction during the project."
 relatedSlugs:
   - "renovation-budget-template"
   - "how-to-budget-a-home-renovation"
   - "home-renovation-phases"
-  - "renovation-checklist-printable"
+  - "renovation-contingency-budget"
+  - "kitchen-renovation-timeline"
 ---
 
-Planning a home renovation feels overwhelming because it's not one task — it's seven, in sequence, and each one sets up the next. Rush to start before you've finished the planning and you'll spend the execution phase firefighting. Take your time with planning and the build becomes the easy part.
+![A renovated kitchen with a tape measure on the counter and renovation plans spread out beside it](/stock/03.webp)
 
-I've been through two full renovations and helped a dozen friends navigate theirs. The pattern is always the same: the people who go slowly in phase one go fast in phase five. The people who rush into demo learn that every change order is a tax on poor planning.
+If you're planning a home renovation for the first time, the sheer number of decisions can feel overwhelming. Which comes first — the design or the budget? How do you compare contractor quotes? What happens if things go over budget mid-project?
 
-Here's the step-by-step process, in the order that actually works.
+This guide breaks **how to plan a home renovation step by step** into six clear phases. Each phase has a specific set of decisions, deliverables, and next steps. By the time you finish each phase, you'll know exactly what comes next and what decisions still need to be made.
 
-![A dining table covered in renovation samples — paint swatches, tile samples, fabric scraps, and contractor business cards — with a notebook and pen nearby](/stock/02.webp)
+Whether you're refreshing a bathroom, gutting a kitchen, or planning a full-home renovation, the process is the same — it just scales up in complexity. Let's go through it.
 
-## Step 1: Define Your Scope
+## Phase 1: Define what you want (no budget talk yet)
 
-This is where you turn "I want to renovate" into a concrete, written document. Not a Pinterest board — a list.
+Before you think about money or contractors, you need to know what problem you're solving. Every renovation that starts without a clear problem statement ends with regret — someone upgraded the faucet while the floor was still leaking.
 
-Walk through your space with a notebook. Room by room, write down:
-- What's working (keep it)
-- What's not working (change it)
-- What's fine but could be better (nice to have)
+### 1.1. List every problem in the space
 
-Then separate those into **must-haves** and **nice-to-haves**. Every renovation runs out of budget somewhere. When it does, the must-haves stay. The nice-to-haves get cut. If everything is a must-have, you have no plan.
+Walk through the space you want to renovate and write down every issue:
 
-Also define your **finish level** early. "Rental neutral" (fix what's broken, new paint, standard fixtures) costs about 60% of "move-in ready" (new everything, designer-grade materials). "Forever home" costs another 30–40% on top of that. These aren't opinions — they're multipliers that compound across every scope item.
+- **Functional problems** — The counter is too low. The layout doesn't work for how you cook. There's no storage.
+- **Aesthetic problems** — The finishes are outdated. The lighting is terrible. The colours don't work.
+- **Performance problems** — Drafty windows. Leaky pipes. Poor insulation.
+- **Comfort problems** — Too cold in winter. Too hot in summer. Not enough natural light.
 
-**What to track:** Write the scope. Freeze it. This document is your north star for every subsequent decision.
+Don't filter anything yet. Get the full list on paper. This is your raw material.
 
-## Step 2: Set Your Budget (Before You Know the Numbers)
+### 1.2. Prioritise: must-have vs nice-to-have
 
-Most people do this backwards: they ask "how much does a renovation cost?" and then try to make that fit. Instead, start with what you *have*.
+Now categorise every item:
 
-- How much cash do you have available (savings, equity, etc.)?
-- What financing are you using — savings, HELOC, construction loan?
-- What's the total you can commit without jeopardising your emergency fund?
+| Priority | What it means | How many should you have |
+|---|---|---|
+| **Non-negotiable** | Dealbreaker. Must fix or the house is unusable for its intended purpose. | 2–4 |
+| **Important** | Significantly improves function or comfort, but not urgent. | 3–6 |
+| **Nice to have** | Would be great, but not worth blowing the budget for. | Any |
 
-**That number is your ceiling.** Everything below it is a constraint to manage, not a mystery to solve.
+This prioritisation is your first filter. When budget realities hit (and they always do), you'll keep the non-negotiables, adjust the important ones, and cut the nice-to-haves. But only after you've seen the numbers.
 
-Now add **15–20% for contingency**. This isn't optional optimism padding. The data is clear: the average cost overrun across analysed renovation projects sits at around 15%. That means for every $50,000 you plan, you should budget $57,500–$60,000. If the contingency stays untouched, it's a bonus. If you use it, you expected it.
+### 1.3. Research what you like (and what it costs)
 
-For the actual line items, start with the rough numbers from the [budget template](/blog/renovation-budget-template/). These are order-of-magnitude figures, not precise estimates — but they're grounded in real data and they'll show you whether you're in the right ballpark before you invest time in detailed quotes.
+At this stage, you're just building taste and setting expectations:
 
-**What to track:** Your total budget ceiling, the 15–20% contingency ring, and rough estimates per category.
+- Look at inspiration photos (Pinterest, Instagram, Houzz)
+- Visit showrooms to touch materials
+- Browse supplier websites for pricing
+- Read forums and Reddit threads about renovation experiences
 
-## Step 3: Research and Design
+The goal isn't to lock in a design — it's to develop a realistic sense of what "good" costs in your market. You'll be surprised how quickly $5,000 turns into $25,000 when you start thinking about custom cabinetry, quartz countertops, and professional-grade appliances.
 
-Once you have scope and budget, it's time to figure out *how* it'll actually look and work.
+## Phase 2: Define your budget (before any design work)
 
-**If structural changes are involved** (moving walls, enlarging windows, adding extensions), you'll need an architect or engineer. They'll produce drawings that meet building code and form the basis for your permit application.
+**This is the step most people skip, and it's the one that saves them the most money and heartache.**
 
-**If it's non-structural** (cabinet layouts, fixture changes, finish upgrades), you can design this yourself or work with a kitchen/bath designer. Kitchen designers especially come with CAD tools that let you visualise the finished space.
+### 2.1. Set your absolute maximum spend
 
-**What to research at this stage:**
-- Material options and their price ranges (flooring, countertops, fixtures, paint)
-- Appliance preferences and dimensions (these affect cabinet and electrical layouts)
-- Design inspiration that's realistic for your budget
+Decide in advance: what is the maximum amount you're willing to spend on this renovation, no matter what? This number might come from savings, a home equity line of credit, or other financing. Whatever it is, write it down and treat it as a wall — nothing happens beyond it without deliberate reconsideration.
 
-**What to track:** All design decisions in writing — including why you chose something. "Why we picked quartz over granite" is a useful note for when someone asks "weren't we going with granite?" three months into the build.
+### 2.2. Add your contingency
 
-## Step 4: Contractor Research and Quotes
+Once you know your maximum, subtract your contingency:
 
-This is where the rubber meets the road. You need to find people who can actually do the work, get their pricing, and compare apples to apples.
+| Renovation type | Recommended contingency |
+|---|---|
+| Cosmetic only (paint, flooring, fixtures) | 10% |
+| Surface-level kitchen/bath (no moving walls) | 15% |
+| Full kitchen or bathroom with layout changes | 20–25% |
+| Full-home renovation | 25–30% |
 
-**How to find contractors:**
-- Ask friends who've renovated recently (the single best source)
-- Check online reviews, but take them with a grain of salt
-- Ask for referrals from suppliers — a countertop fabricator knows which installers show up on time and which don't
-- Don't use social media ads as a primary source — the contractors who spend the most on ads aren't necessarily the best
+If your maximum is $50,000 and you're doing a kitchen with layout changes, your working budget is $40,000–$42,500. That $7,500–$10,000 is your shock absorber — for the rot behind the wall, the code-mandated electrical upgrade, the cabinet that arrives damaged and needs replacement.
 
-**How to get useful quotes:**
-- Send the same scope document to every contractor
-- Specify the materials you want (not just "granite countertop" but "Cambria quartz, waterfall edge, 3cm thickness")
-- Ask about the timeline — a 3-week completion date from one contractor and a 10-week one from another both mean something
-- Ask three quotes minimum. The range between the lowest and highest is usually 25–40%, and knowing that spread helps you evaluate each one
+### 2.3. Research real costs for your scope
 
-**What to track:** All quotes in a comparison spreadsheet (or better, a dedicated tool). Key fields: total price, timeline, inclusions/exclusions, material grades, payment schedule, and warranty terms.
+This is where Phase 1 research meets Phase 2 math:
 
-Home Stories walks you through this process with structured templates so you're not building your own comparison system from scratch. Set up your scope, add your contractor quotes, and compare them side by side — [free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+| Item | Low end | Mid-range | High end |
+|---|---|---|---|
+| Kitchen cabinets (per linear foot) | $150–$300 | $300–$600 | $600–$1,200+ |
+| Countertops (per sq. ft.) | $40–$80 (laminate) | $80–$150 (quartz) | $150–$300+ (granite/marble) |
+| Flooring (per sq. ft., installed) | $3–$6 (vinyl) | $6–$12 (LVP/tile) | $12–$25+ (hardwood/natural stone) |
+| Appliances (full kitchen set) | $8,000–$12,000 | $12,000–$20,000 | $20,000–$40,000+ |
+| Bathroom vanity + fixture | $800–$1,500 | $1,500–$3,000 | $3,000–$6,000+ |
+| Plumbing rough-in (per point) | $500–$800 | $800–$1,200 | $1,200–$2,000+ |
+| Electrical (per point/panel) | $300–$600 | $600–$1,200 | $1,200–$2,500+ |
+| Labour (kitchen, per sq. ft.) | $100–$180 | $180–$300 | $300–$500+ |
 
-## Step 5: Choose Your Contractor
+These are ballpark figures for 2026. They vary by region, by contractor, and by material choice. But they give you a starting point.
 
-Now you have quotes. Three or more. They're different, and you need to pick one.
+### 2.4. Build a spreadsheet (or use an app)
 
-**How to compare:**
+Once you have your scope and your research, build a budget with every line item:
 
-Look beyond the total price. A $15,000 quote that excludes plumbing rough-in is not cheaper than a $18,000 quote that includes it. Strip each quote down to the same scope and compare again.
+- Demolition and disposal
+- Materials (cabinets, counters, flooring, fixtures, paint)
+- Appliances
+- Labour
+- Permits and inspections
+- Contingency
+- Temporary living arrangements (if needed)
 
-**What to look for:**
+Home Stories does this automatically — you enter your budget, log every expense as it happens, and the app shows you your remaining buffer in real time. You always know whether you're on track or in trouble. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
 
-- **Communication style:** The contractor you'll talk to every week for months matters more than the one with the lowest price. Ask: "How do you handle change orders? How often do you check in? Do you use a project management app?"
-- **Schedule realism:** Does their timeline account for permits, material lead times, and inspection wait times? The contractor who says "we'll be done in 6 weeks" without mentioning those is optimistic in a bad way.
-- **References:** Call them. Ask about the finish, not the quality of work. "Did they finish on time? Did the budget stay intact? Would you hire them again?"
-- **Insurance and licensing:** Verify both. This isn't bureaucracy — it's the difference between a contractor who covers their mistakes and one who asks you to.
+## Phase 3: Design the scope
 
-**The hard truth:** The cheapest quote is rarely the cheapest final cost. Mid-range contractors who are busy but not oversubscribed are usually the sweet spot — they're good enough to avoid costly rework, busy enough to keep moving, and not charging premium rates for being the most popular.
+Now that you know what you want and what you can afford, it's time to design.
 
-## Step 6: Lock the Schedule and Paperwork
+### 3.1. Create a floor plan (even a rough one)
 
-Before a single hammer swings:
+You don't need architectural drawings yet. A rough sketch showing:
 
-**Sign the contract.** It should include:
-- Scope of work (linked to the document from step 1)
-- Total price and payment schedule (never more than 10–15% upfront)
-- Start date and completion date (with realistic buffers)
-- Change order process
-- Warranty terms
-- Cleanup expectations
+- Wall locations (which stay, which move)
+- Appliance positions
+- Plumbing locations (sink, toilet, shower)
+- Electrical switch and outlet locations
+- Window and door positions
 
-**Secure your permits.** This is non-negotiable. Building without permits can invalidate your insurance, cause problems when you sell, and force you to tear out finished work.
+This rough plan tells you whether your layout is even physically possible before you spend money on professional drawings.
 
-**Order your long-lead items.** Cabinets (8–12 weeks), specialty appliances, and custom stone tops need to be ordered early. Don't wait for the contractor to remind you — you're the project owner. You know best when to order.
+### 3.2. Decide what stays and what goes
 
-**Set up your tracking system.** Before work starts, have your budget tracker, receipt system, and photo timeline ready. The moment demolition begins, expenses start flowing and decisions multiply. The people who have everything set up day one are the ones who finish on budget.
+| Category | Questions to answer |
+|---|---|
+| **Structural** | Are walls moving? Are you changing the floor plan? |
+| **Mechanical** | Are you moving plumbing, electrical, or HVAC? |
+| **Finishes** | Which materials are you using? (Save samples for later.) |
+| **Fixtures** | Which fixtures (faucets, lights, appliances) are you keeping or replacing? |
 
-## Step 7: Execute — and Track as You Go
+If the answer to "structural" or "mechanical" is yes, you need professional drawings. If the answer to both is no and you're just changing finishes and fixtures, a contractor can work from a written brief.
 
-You've done the planning. Now the build starts. Your job shifts from planner to manager — making sure the plan stays intact as the inevitable changes happen.
+### 3.3. Get professional drawings (if needed)
 
-**The Golden Rule of Execution:** Never change scope without changing budget. Every "while we're at it" is a line item that needs a dollar figure. If you're not logging it, you're not budgeting for it.
+For anything that moves walls, changes the floor plan, or adds square footage:
 
-**What changes will happen:**
-- You'll see something and think "I wish it were different"
-- Your contractor will find something behind the walls
-- A material will be backordered or discontinued
-- Someone will suggest a better way that costs more
+- **Architect or designer:** Produces construction drawings and specifications
+- **Cost:** $2,000–$8,000 depending on scope
+- **Timeline:** 2–6 weeks
 
-None of these are problems if you have a system. The problems are problems because there's no system to track them.
+The drawings serve two purposes: they get your permits approved, and they give contractors a common set of documents to bid on. Without drawings, every contractor is making assumptions — and their bids won't be comparable.
 
-**What to monitor weekly:**
-- Budget remaining (actual vs. planned, per category)
-- Contingency draw-down rate
-- Timeline vs. schedule (are we ahead or behind?)
-- Outstanding decisions (is anyone waiting on you?)
-- Change orders (what's been added, how much did it cost?)
+### 3.4. Get permits
 
-The [home renovation phases guide](/blog/home-renovation-phases/) breaks down what matters to track in each phase. This step-by-step plan gets you through the first five; phases six and seven are where your planning pays off.
+Most structural, electrical, and plumbing work requires permits. The process varies by municipality but generally involves:
 
-## A note on tools
+1. Submitting your drawings and application
+2. Paying a permit fee (usually 0.5–1.5% of project cost)
+3. Waiting for review (1–4 weeks)
+4. Scheduling inspections as work progresses
 
-You can plan all of this with spreadsheets, notebooks, and email. It works — most people do. But it's hard because the data lives in five different places: a budget spreadsheet, a contractor quote PDF, a text thread with your designer, a photo folder, and your mental model of what you decided three weeks ago.
+Your contractor should handle permits for you, but confirm this upfront. Unpermitted work can affect your home insurance, your ability to sell, and your ability to get financing for future projects.
 
-A dedicated tool — [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) — puts it all in one place with templates built for each planning phase. You don't build the system; you just fill it in. That's the difference between planning that survives contact with reality and planning that looks great in week one and disappears by week three.
+## Phase 4: Select your contractor
 
-It's free on the [App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+### 4.1. Get at least three quotes
+
+Contact contractors who specialise in your type of project. For each, provide:
+
+- Your floor plan / drawings
+- A written scope of work
+- The materials and finishes you've selected (or at least a range)
+
+Ask each contractor to quote on the **same scope** so the quotes are comparable. If one contractor includes demolition and another doesn't, the prices mean nothing.
+
+### 4.2. Compare quotes on scope, not price
+
+A quote that's $10,000 cheaper might be cheaper because the contractor:
+
+- Excluded something critical
+- Plans to use cheaper materials than quoted
+- Has a tighter timeline that requires more labour
+- Is desperate for work and may cut corners
+
+Look at each line item. Ask questions about discrepancies. The cheapest quote is rarely the best value.
+
+### 4.3. Check references and past work
+
+Before hiring:
+
+- Ask for 3–5 recent client references and actually call them
+- Ask to see completed projects similar to yours
+- Check online reviews (Google, Houzz, local forums)
+- Verify the contractor is licensed and insured
+
+### 4.4. Sign a detailed contract
+
+Your contract should include:
+
+- Detailed scope of work
+- Payment schedule (never pay more than 10–20% upfront)
+- Timeline with start date and completion date
+- Change order process (how modifications are priced and approved)
+- Warranty / guarantee
+- Clean-up and disposal terms
+- Insurance and licensing information
+
+Never start work without a signed contract. Period.
+
+## Phase 5: Manage the construction
+
+This is where Home Stories becomes your best friend.
+
+### 5.1. Set up your tracking system
+
+Before the first wall comes down:
+
+- Enter your total budget and line-item budgets
+- Enter your timeline (start date, expected completion date)
+- Save your contractor's contact information and schedule
+- Take baseline photos of the space from every angle
+
+Home Stories lets you do all of this in one place. Create a project, add rooms, set budgets per room, and start logging expenses and photos from day one.
+
+### 5.2. Log expenses as they happen
+
+Every invoice, receipt, and change order goes into your tracker. The key is real-time logging:
+
+- If you discover a $2,000 issue in week one, you can adjust scope or contingency while there's still time.
+- If you discover it in week eight, the money is already spent and there's nothing you can do about it.
+
+Home Stories shows your remaining buffer update the moment a new expense hits, so you always know where you stand.
+
+### 5.3. Track progress photos
+
+Take photos weekly. Not just "before and after" — actual progress shots that show:
+
+- Rough-in work (plumbing, electrical behind walls)
+- Material deliveries
+- Installation progress
+- Problem areas that need addressing
+
+These photos become your record of what's behind the walls. If a future problem arises (and it will), you'll know exactly what's in the walls without cutting anything open.
+
+### 5.4. Communicate through one channel
+
+Pick one method of communication with your contractor and stick to it. Email, project app, or a dedicated messaging thread. In-person conversations that disappear into memory are the single biggest source of "but you said you'd handle that" disputes.
+
+### 5.5. Review budget and timeline weekly
+
+Every Friday (or whatever works for you):
+
+- Check expenses against budget
+- Check progress against timeline
+- Identify any risks or issues early
+- Make decisions while there's still time to act
+
+## Phase 6: Close out and celebrate
+
+### 6.1. The walkthrough
+
+Before final payment, do a systematic walkthrough with your contractor. Room by room, fixture by fixture:
+
+- Check every switch and outlet
+- Test every faucet and toilet
+- Open and close every cabinet door and drawer
+- Look for scratches, cracks, or finish defects
+- Make a snag list (our [renovation checklist](/blog/renovation-checklist-printable/) covers this in detail)
+
+### 6.2. Get all documentation
+
+Before you hand over the final payment, collect:
+
+- All warranties for appliances, fixtures, and materials
+- Builder's certificates for electrical and plumbing work
+- As-built drawings (if anything changed from the original plans)
+- Contractor's contact information for future service
+
+### 6.3. Review your experience
+
+Take notes while it's fresh:
+
+- What went well?
+- What didn't?
+- What would you do differently?
+- What's the actual total cost vs. your original budget?
+
+This information is invaluable for your next renovation.
+
+### 6.4. Take final photos
+
+Document the finished space from every angle. These are your "after" photos — they'll be beautiful in a framed album and incredibly useful years from now when you're troubleshooting a leaky pipe behind the same wall.
+
+## Common pitfalls (and how to avoid them)
+
+### Pitfall 1: Designing before budgeting
+
+You pick out a $12,000 range and a $4,000 sink before knowing your total budget. Now you've already committed 30% of your budget to two items.
+
+**Fix:** Set your total budget first. Allocate per-category limits (cabinets: $15k, counters: $5k, appliances: $8k, etc.) before making any selections.
+
+### Pitfall 2: Underestimating timeline
+
+You think the kitchen will be done in 8 weeks. It takes 14. You're living in a partially-demolished kitchen for six extra weeks.
+
+**Fix:** Plan for 12–14 weeks for a kitchen. Build buffer weeks into your timeline and assume everything that can go wrong will. The [kitchen renovation timeline](/blog/kitchen-renovation-timeline/) guide walks through this in detail.
+
+### Pitfall 3: No contingency
+
+You budget exactly $40,000 with nothing extra. A rotted subfloor behind the cabinet line adds $3,500. Now you're over budget.
+
+**Fix:** Budget 15–25% contingency for anything beyond cosmetic work. [Our guide on contingency budgets](/blog/renovation-contingency-budget/) explains exactly how much you need and why.
+
+### Pitfall 4: Making mid-project changes
+
+Halfway through, you decide you want a different layout. The cabinets are already ordered. The walls are already torn down.
+
+**Fix:** Finalise every decision before demolition. If you're not 90% sure about something, don't lock it in. But commit to a decision by the time permits are submitted.
 
 ## Putting it all together
 
-The sequence matters. Each step builds on the previous one:
+Planning a home renovation is a process — not a single decision or a single day of action. Each phase builds on the previous one:
 
-1. **Scope** tells you what to budget for
-2. **Budget** tells you what's realistic
-3. **Design** tells you how it'll work
-4. **Quotes** tell you what contractors think it'll cost
-5. **Hiring** locks in who'll do it
-6. **Paperwork** protects you from surprises
-7. **Execution** is where everything either holds together or falls apart
+> Define what you want → Set your budget → Design the scope → Select a contractor → Manage construction → Close out
 
-If you do this methodically, the renovation that feels like an emergency becomes a predictable series of steps. The budget that goes 30% over becomes a project that lands within 5% of plan. The experience that causes sleepless nights becomes one you finish proud of.
+Skip a phase and you pay for it. Follow them in order and you end up with exactly what you wanted, on budget, and with far less stress than most people experience.
 
-## Frequently asked questions
-
-Covered in the FAQ section above — seven practical questions on planning timelines, budgeting, design decisions, contractor selection, and when to start.
+The [renovation budget template](/blog/renovation-budget-template/) gives you a starting point for your budget. The [7 phases of a home renovation](/blog/home-renovation-phases/) guide shows you what happens during each phase. And [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) tracks every step of the process from your first decision to your final walkthrough — so you're never guessing where you stand.
 
 ## Related posts
 
-- [The Free Renovation Budget Template (PDF + Google Sheet)](/blog/renovation-budget-template/)
+- [Renovation Budget Template (Free PDF + Google Sheet)](/blog/renovation-budget-template/)
 - [How to Budget a Home Renovation Without Going Over](/blog/how-to-budget-a-home-renovation/)
-- [The 7 Phases of a Home Renovation (and What to Track)](/blog/home-renovation-phases/)
-- [Printable Renovation Checklist: Every Task by Room](/blog/renovation-checklist-printable/)
+- [The 7 Phases of a Home Renovation](/blog/home-renovation-phases/)
+- [The 20% Rule: How Much Contingency Should You Budget?](/blog/renovation-contingency-budget/)
+- [A Realistic Kitchen Renovation Timeline](/blog/kitchen-renovation-timeline/)
 
-## Ready to plan your renovation without the spreadsheet chaos?
+## Ready to plan your renovation from day one?
 
-[Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960). It walks you through every step — scope, budget, contractor quotes, and execution — with templates built for real renovations. Set up your project in minutes, not hours of spreadsheet configuration.
+Understanding how to plan a home renovation step by step is only half the equation. The other half is tracking your progress — your budget, your timeline, your photos, and your receipts — as the project actually unfolds.
+
+[Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) does all of that automatically. Set up a project, define your rooms and budgets, and start logging expenses and photos from the first decision to the final walkthrough. It's free on the App Store, and it replaces the chaos of spreadsheets, notebooks, and scattered photos.
+
+*Home Stories is free on the App Store.*
