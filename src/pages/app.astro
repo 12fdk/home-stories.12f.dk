@@ -2,8 +2,16 @@
 import AppRedirectionPage from "@modules/app"
 import Layout from "Layout.astro";
 import defaultTemplateConfig from "utils/config";
+
+// A redirect stub, not a page: it bounces to the App Store and has no content
+// of its own. Left indexable it reads to Google as a soft 404, and its title
+// duplicated the homepage's. Noindexed here, and excluded from the sitemap.
+const seo = {
+  title: "Opening Home Stories in the App Store",
+  description: "Redirecting you to Home Stories on the App Store.",
+};
 ---
 
-<Layout {...defaultTemplateConfig}>
+<Layout {...defaultTemplateConfig} seo={seo} noindex>
   <AppRedirectionPage client:load config={defaultTemplateConfig} />
 </Layout>
