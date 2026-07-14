@@ -107,8 +107,8 @@ Each post links to 2–3 others (internal linking), includes a contextual CTA to
 | [x] | [x] 11 | How-to | How to Track Home Improvement Expenses (4 Methods Compared) | how to track home improvement expenses | Methods + verdict | 1,800 |
 | [x] | ★ 12 | How-to | A Realistic Kitchen Renovation Timeline (Week-by-Week) | renovation project timeline example | Timeline + photos | 2,200 |
 | [x] | 13 | Comparison | HomeZada vs Houzz Pro vs Home Stories: Honest 2026 Review | homezada vs houzz pro | Comparison | 2,000 |
-| 14 | How-to | How to Plan a Home Renovation Step-by-Step (First-Timer Guide) | how to plan a home renovation step by step | Beginner guide | 2,500 |
-| 15 | Listicle | 11 Things I Wish I'd Tracked Before Starting My Renovation | (long-tail / share-bait) | Personal narrative | 1,500 |
+|| [x] | 14 | How-to | How to Plan a Home Renovation Step-by-Step (First-Timer Guide) | how to plan a home renovation step by step | Beginner guide | 2,500 |
+|| 15 | Listicle | 11 Things I Wish I'd Tracked Before Starting My Renovation | (long-tail / share-bait) | Personal narrative | 1,500 |
 
 **Why this order:**
 - Posts 1, 5 = link magnets early (freebies attract backlinks → boost domain authority for later posts).
@@ -136,7 +136,8 @@ Each post links to 2–3 others (internal linking), includes a contextual CTA to
 | 22 | How-to | How to Compare Contractor Quotes Apples-to-Apples | how to compare contractor quotes | Practical guide | 2,000 |
 | 23 | How-to | Never Pay 50% Upfront: Renovation Payment Schedules Explained | contractor payment schedule | Guide + link bait | 1,800 |
 | 24 | Narrative | Photograph Every Wall Before It's Closed Up | renovation progress photos | Short narrative | 1,200 |
-| 25 | Checklist | The Snag List: How to Run a Final Walkthrough | renovation punch list | Checklist | 1,500 |
+|| 25 | Checklist | The Snag List: How to Run a Final Walkthrough | renovation punch list | Checklist | 1,500 |
+|| 26 | How-to | How to Read and Compare Contractor Quotes (Line by Line) | how to compare contractor quotes line by line | Practical guide | 2,000 |
 
 **Priority order (if writing fewer than all ten):**
 - **Post 16 first.** Research for post 10 confirmed HomeZada's iOS app has shipped no update since **May 2022** and averages **2.9★** — an evidenced hook no competing article has bothered to check, aimed at a keyword typed by people already looking to switch. Highest conversion intent on the list.
@@ -261,4 +262,4 @@ Tied to existing issues: #13 (blog section), #17 (OG images), #16 (sitemap).
 
 ---
 
-*Last updated: 2026-05-18*
+*Last updated: 2026-07-14*
