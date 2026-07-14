@@ -2,8 +2,8 @@
 import "@styles/styles.scss";
 import type { TemplateConfig } from "utils/configType";
 
-const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore } =
-  Astro.props as TemplateConfig;
+const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore, noindex } =
+  Astro.props as TemplateConfig & { noindex?: boolean };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.site).href;
@@ -44,7 +44,12 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
     <meta name="description" content={seo.description} />
     <meta name="keywords" content="home renovation app, renovation tracker, home improvement app, project management, budget tracking, renovation budget, home project planner, renovation photos, before after renovation, iOS renovation app, iPhone home app, renovation journal, home remodel tracker, renovation progress, DIY project tracker, home renovation planner, renovation cost tracker, home improvement tracker, renovation organizer, free renovation app" />
     <meta name="author" content="Robert Jensen" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content={noindex
+        ? "noindex, follow"
+        : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+    />
     <meta name="application-name" content="Home Stories" />
 
     <!-- AI/LLM Discovery -->
