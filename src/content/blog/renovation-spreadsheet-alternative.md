@@ -3,6 +3,8 @@ title: "Why a Spreadsheet Stops Working Halfway Through Your Renovation"
 description: "Spreadsheets are great for planning a renovation and terrible for surviving one. Here's exactly where they fail — and what to replace them with."
 lede: "Every renovator starts with a spreadsheet. Most abandon it by week three. The reasons are predictable, repeatable, and not about the spreadsheet — they're about renovation reality."
 keyword: "renovation spreadsheet alternative"
+cover: "/stock/04.webp"
+coverAlt: "A man photographing a half-painted wall with his phone to document the progress"
 publishDate: 2026-05-25
 author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]

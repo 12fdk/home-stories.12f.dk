@@ -3,6 +3,8 @@ title: "Renovation Budget Template (Free PDF + Google Sheet)"
 description: "A simple renovation budget template that actually works — line-item, contingency-aware, and proven on real projects. Free PDF and Google Sheet."
 lede: "Most renovation budgets fail in the same three ways: missing line items, no contingency, and a spreadsheet that nobody opens after week two. This template fixes all three — and it's free."
 keyword: "renovation budget template"
+cover: "/stock/01.webp"
+coverAlt: "A couple standing in a stripped room, looking at a tablet together, paint swatches taped to the wall"
 publishDate: 2026-05-18
 author: "Robert Jensen"
 tags: ["budgeting", "templates", "planning"]

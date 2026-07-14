@@ -3,6 +3,8 @@ title: "Notion vs Home Stories for Renovation Planning"
 description: "Notion is a brilliant renovation planning tool and a frustrating on-site one. Here's exactly where each fits — and why most people end up needing both."
 lede: "Notion is genuinely excellent for the planning half of a renovation: research, mood boards, contractor notes, a flexible database you can shape however you think. It's just as genuinely frustrating for the execution half — logging a receipt one-handed in a dusty kitchen — because it was never built for a phone on a building site. This is an honest map of where each tool wins."
 keyword: "notion for home renovation"
+cover: "/stock/12.png"
+coverAlt: "Power tools, tape measures and a hammer laid out across a worn workbench"
 publishDate: 2026-06-29
 author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]

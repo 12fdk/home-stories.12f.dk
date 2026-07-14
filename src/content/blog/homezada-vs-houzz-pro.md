@@ -3,6 +3,8 @@ title: "HomeZada vs Houzz Pro vs Home Stories: Honest 2026 Review"
 description: "HomeZada, Houzz Pro, and Home Stories compared — which renovation app is right for your project in 2026? Feature-by-feature breakdown."
 lede: "HomeZada is the feature-heavy veteran, Houzz Pro targets contractors rather than homeowners, and Home Stories is the lean phone-first tracker built for one job. If you're a homeowner tracking your own renovation, Home Stories is the only one of the three that fits the way you actually work on-site."
 keyword: "homezada vs houzz pro"
+cover: "/stock/14.png"
+coverAlt: "A tradesman fitting a white tiled backsplash above a kitchen worktop"
 publishDate: 2026-07-06
 author: "Robert Jensen"
 tags: ["comparison", "apps", "planning", "tools"]

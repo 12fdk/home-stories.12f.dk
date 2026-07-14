@@ -12,14 +12,29 @@ const { posts } = Astro.props;
   posts.length > 0 && (
     <section class="not-prose my-12 border-t border-base-300 pt-10">
       <h2 class="mb-6 text-2xl font-bold sm:text-3xl">Keep reading</h2>
-      <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
-          <li class="rounded-xl border border-base-300 bg-base-100 p-5 transition hover:border-primary">
-            <a href={`/blog/${post.slug}/`} class="block">
-              <h3 class="mb-2 text-lg font-semibold text-base-content">
-                {post.data.title}
-              </h3>
-              <p class="text-sm text-base-content/70">{post.data.description}</p>
+          <li class="group m-0 overflow-hidden rounded-box border border-base-300 bg-base-100 p-0 transition-colors hover:border-base-content/30">
+            <a href={`/blog/${post.slug}/`} class="flex h-full flex-col">
+              {post.data.cover && (
+                <img
+                  src={post.data.cover}
+                  alt={post.data.coverAlt ?? ""}
+                  width={400}
+                  height={225}
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[16/9] w-full border-b border-base-300 object-cover"
+                />
+              )}
+              <div class="p-5">
+                <h3 class="mb-2 font-display text-lg font-bold tracking-tight text-base-content transition-colors group-hover:text-primary">
+                  {post.data.title}
+                </h3>
+                <p class="text-sm leading-relaxed text-base-content/70">
+                  {post.data.description}
+                </p>
+              </div>
             </a>
           </li>
         ))}
