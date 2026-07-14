@@ -58,7 +58,8 @@ Before the first hammer swings, you need:
 
 **What's happening now:** You're still living in your house, still using your kitchen. This is the last peaceful phase. It's also where the real decisions happen — the ones that determine whether your renovation finishes on time or gets stretched by mid-project change orders.
 
-![A kitchen mid-demo: walls torn down, old cabinets removed, exposed studs and subfloor](/stock/04.webp)
+![A bright modern kitchen mid-renovation, cabinets partially installed, granite countertops being fitted, sunlight streaming through the doorway, realistic candid moment of renovation in progress](/stock/06.png)
+
 
 ## Week 1: Demo and tear-out
 

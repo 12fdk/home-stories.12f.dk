@@ -35,7 +35,7 @@ Most renovations don't blow the budget because prices rose 40% overnight. They b
 
 This is the method I've used across my own projects and watched work for friends: build the number from the ground up, protect it with the right contingency, and keep it alive while the work happens. It takes a couple of hours to set up and about five minutes a week to maintain.
 
-![A homeowner sitting at a kitchen table in a half-renovated kitchen, reviewing an invoice with a spread of paper receipts and a phone in front of him](/stock/03.webp)
+![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.png)
 
 ## Step 1: Define the scope before you touch a number
 

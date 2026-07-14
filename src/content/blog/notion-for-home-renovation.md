@@ -33,7 +33,7 @@ If you spend any time in renovation forums, you'll find two camps that talk past
 
 Both camps are right. They're just describing different halves of a renovation. Notion is a genuinely excellent tool for one half and a genuinely frustrating one for the other, and the line between them is sharp enough to be worth drawing carefully. This isn't a hit piece on Notion — I like Notion, and there's a specific phase where it beats almost everything. It's a map of where it wins, where it doesn't, and why "where" turns out to matter more than "features."
 
-![A renovator sitting on the floor of a half-finished room reviewing plans and samples on a tablet and phone](/stock/05.webp)
+![A collection of professional renovation tools laid out on a workbench — drill, level, tape measure, stud finder, and other equipment, realistic photo of renovation equipment](/stock/12.png)
 
 ## The two halves of a renovation
 

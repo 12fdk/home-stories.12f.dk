@@ -35,7 +35,7 @@ The shoebox represents thousands of dollars in evidence that no longer works. An
 
 Getting this right isn't about being tidy. It's about the fact that a renovation receipt is a financial instrument with a very long fuse.
 
-![A homeowner sitting at a kitchen table in a half-renovated kitchen, reviewing an invoice with a spread of paper receipts and a phone in front of him](/stock/03.webp)
+![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.png)
 
 ## Why renovation receipts are worth real money
 

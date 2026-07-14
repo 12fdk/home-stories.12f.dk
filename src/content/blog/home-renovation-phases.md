@@ -33,7 +33,7 @@ Ask ten homeowners how a renovation works and you'll get ten different stories. 
 
 Knowing those phases does two things. It tells you what's coming next, so you're never blindsided. And it tells you the one or two things actually worth tracking at each stage — because the metric that matters in week one (have I defined the scope?) is not the one that matters in week ten (am I drawing down contingency too fast?). Track the wrong thing at the wrong time and the project drifts while your spreadsheet looks fine.
 
-![A couple standing in an empty, stripped-back room holding a tablet, with paint and material swatches taped to the bare plaster wall behind them](/stock/01.webp)
+![Open floor renovation in progress, structural beams exposed, walls removed to merge two rooms into one open space](/stock/08.png)
 
 Here are the seven phases, in order, and what to keep your eye on in each.
 

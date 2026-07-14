@@ -30,7 +30,7 @@ relatedSlugs:
   - "kitchen-renovation-timeline"
 ---
 
-![A half-demolished kitchen with exposed framing, a tape measure on the floor, and scattered renovation estimates spread across a workbench](/stock/02.webp)
+![A finished renovated kitchen with modern white cabinets, marble countertops, and stainless steel appliances — the result of a project that went 20% over budget](/stock/15.png)
 
 If you've ever been in a renovation, you've heard the sentence: \"It's only 5% over budget.\" The 5% over budget was the third time someone said it. By the end of the project, the number was 28%.
 

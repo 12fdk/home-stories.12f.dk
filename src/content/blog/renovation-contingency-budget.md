@@ -35,7 +35,7 @@ Almost every renovation that goes over budget had a contingency — on paper. Th
 
 This post is the dedicated deep-dive promised in [how to budget a home renovation](/blog/how-to-budget-a-home-renovation/): how much contingency to set aside, what it's genuinely for, when it's fair to dip in, and how to keep it honest while the dust is flying.
 
-![A renovator sitting on the bare concrete floor of a half-finished room, surrounded by flooring and tile samples, checking figures on his phone](/stock/02.webp)
+![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.png)
 
 ## What a contingency actually is (and isn't)
 

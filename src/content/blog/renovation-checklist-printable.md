@@ -32,7 +32,7 @@ A renovation looks like one decision — "we're doing the kitchen" — but it's 
 
 A checklist is the cheapest insurance you can buy against that. Below is a complete, printable renovation checklist — organised the way the work actually happens — that you can copy, print, or rebuild in any app. Print it for the wall, or [keep the same list on your phone](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) so it's with you when it matters.
 
-![A renovation checklist printed and taped to a bare plaster wall next to paint swatches and a tape measure](/stock/04.webp)
+![Interior painting in progress — fresh white paint on bare walls, paint rollers and trays on a drop cloth, painter's tape along the edges, realistic scene of a room being painted during renovation](/stock/11.png)
 
 ## How to use this checklist
 

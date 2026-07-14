@@ -38,7 +38,7 @@ The question isn't which method has the most features. It's which method will yo
 
 Here's an honest comparison of the four methods I've actually used (or seen fail) for tracking home improvement expenses.
 
-![A kitchen countertop covered in contractor invoices, receipts, and a calculator, with a smartphone nearby](/stock/03.webp)
+![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.png)
 
 ## Method 1: Spreadsheet
 

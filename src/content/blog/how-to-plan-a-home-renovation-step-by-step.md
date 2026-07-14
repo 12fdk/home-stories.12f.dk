@@ -32,7 +32,7 @@ relatedSlugs:
   - "kitchen-renovation-timeline"
 ---
 
-![A renovated kitchen with a tape measure on the counter and renovation plans spread out beside it](/stock/03.webp)
+![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.png)
 
 If you're planning a home renovation for the first time, the sheer number of decisions can feel overwhelming. Which comes first — the design or the budget? How do you compare contractor quotes? What happens if things go over budget mid-project?
 

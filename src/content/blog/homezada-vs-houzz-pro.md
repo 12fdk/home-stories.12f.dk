@@ -68,7 +68,7 @@ The bigger problem is the workflow. HomeZada's strength is comprehensive data en
 
 **Bottom line:** HomeZada is a great home-management system for planning and record-keeping from a desk. It's a poor renovation companion once work starts on-site.
 
-![A homeowner standing in a partially demolished room, holding a phone and looking frustrated](/stock/05.webp)
+![Kitchen backsplash tile installation in progress, white subway tiles being laid, a trowel and grout visible, realistic photo of backsplash work](/stock/14.png)
 
 ## Houzz Pro: built for professionals, not homeowners
 

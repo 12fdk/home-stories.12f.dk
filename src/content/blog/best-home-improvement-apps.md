@@ -37,7 +37,7 @@ Here's how you can tell: **HomeZada appears on nearly every one of those lists.*
 
 So this list is built differently. Every app below was checked against the App Store in July 2026 — rating, review count, and last update date. And it's organised by *job*, because that's the thing the round-ups get most wrong. A renovation isn't one task. It's four, they happen in sequence, and no app is good at all of them.
 
-![A homeowner standing in a partly renovated room, holding an iPhone up to scan and measure the space](/stock/02.webp)
+![Hardwood floor installation in progress, worker placing engineered planks, tools visible nearby](/stock/10.png)
 
 ## The four jobs, and why one app can't do them all
 
