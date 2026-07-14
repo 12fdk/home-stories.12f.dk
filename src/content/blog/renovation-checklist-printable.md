@@ -3,6 +3,8 @@ title: "Printable Renovation Checklist: Every Task by Room"
 description: "A free printable renovation checklist organised room by room — every task from planning to handover, so nothing slips through the cracks."
 lede: "A renovation isn't one big job; it's a few hundred small ones, and the ones that get forgotten are always the cheap, boring tasks that turn expensive later. This printable checklist lists every task, grouped by room and by phase, so you can tick your way through a renovation without anything slipping through the cracks."
 keyword: "renovation checklist printable"
+cover: "/stock/11.png"
+coverAlt: "An empty room freshly painted white, with a paint tray and roller left on the floor"
 publishDate: 2026-06-15
 author: "Robert Jensen"
 tags: ["planning", "checklists", "templates"]

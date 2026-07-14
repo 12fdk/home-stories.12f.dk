@@ -7,6 +7,10 @@ const blog = defineCollection({
     description: z.string().max(160),
     lede: z.string(),
     keyword: z.string(),
+    // Card image for the blog overview. alt describes the photograph itself —
+    // it is content, not decoration, so it gets read out.
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default("Robert Jensen"),

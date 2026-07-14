@@ -3,6 +3,8 @@ title: "The 7 Phases of a Home Renovation (and What to Track)"
 description: "The 7 phases of a home renovation, in order — and exactly what to track in each one so the project lands on time, on budget, and on plan."
 lede: "Every home renovation moves through the same seven phases, whether it's a single bathroom or a whole house. Knowing the sequence — and the one or two things that actually matter to track in each phase — is what separates a project that stays on plan from one that drifts."
 keyword: "home renovation phases"
+cover: "/stock/08.png"
+coverAlt: "A room stripped back to timber studs and ceiling joists, with wiring run and windows unfinished"
 publishDate: 2026-06-08
 author: "Robert Jensen"
 tags: ["planning", "phases", "how-to"]
