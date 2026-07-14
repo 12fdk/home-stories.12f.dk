@@ -1,13 +1,13 @@
-import AnimatedText from "../../../../components/animatedText";
-import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import { withBase } from "../../../../utils/basePath";
-import SwirlArrowBottomLeft from "./svg/swirlArrowBottomLeft";
-import SwirlArrowBottomRight from "./svg/swirlArrowBottomRight";
-import SwirlArrowBottom from "./svg/swirlArrowBottom";
+import SectionHeading from "../../../../components/sectionHeading";
 
+/**
+ * The steps run down a single measured rail. The numbers earn their place here:
+ * a renovation is a sequence, and doing step 4 before step 2 costs money.
+ */
 function HowItWorks() {
   const {
     home: { howItWorks },
@@ -18,103 +18,62 @@ function HowItWorks() {
   return (
     <section
       id={howItWorks.id}
-      className="overflow-hidden max-w-screen-lg mx-auto px-4 py-12"
+      className="border-y border-base-300 bg-base-200 py-20 md:py-28"
     >
-      <div className="mb-12 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h2 className="mb-3">
-          <AnimatedText text={howItWorks.title} />
-        </h2>
-        {howItWorks.subtitle && (
-          <motion.p
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: "0%", opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-md max-w-lg text-base-content"
-          >
-            {howItWorks.subtitle}
-          </motion.p>
-        )}
-      </div>
-      <div className="flex flex-col gap-52">
-        {howItWorks.steps.map((step, index) => (
-          <motion.div
-            key={index}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            className={clsx(
-              "text-primary relative flex flex-col rounded-md md:flex-row",
-              {
-                "md:flex-row-reverse": index % 2 === 0,
-              }
-            )}
-          >
-            {index < howItWorks!.steps.length - 1 && (
-              <>
-                <motion.div
-                  variants={{
-                    hidden: {
-                      scale: 0,
-                      translateX: "-50%",
-                    },
-                    visible: { scale: 1, translateX: "-50%" },
-                  }}
-                  transition={{ stiffness: 150, type: "spring" }}
-                  className="hidden w-48 absolute -bottom-44 left-1/2 md:block"
-                >
-                  {index % 2 === 0 ? (
-                    <SwirlArrowBottomLeft />
-                  ) : (
-                    <SwirlArrowBottomRight />
-                  )}
-                </motion.div>
-                <motion.div
-                  variants={{
-                    hidden: {
-                      scale: 0,
-                      translateX: "-50%",
-                    },
-                    visible: { scale: 1, translateX: "-50%" },
-                  }}
-                  transition={{ stiffness: 150, type: "spring" }}
-                  className="w-16 absolute -bottom-48 left-1/2 md:hidden md:-bottom-36"
-                >
-                  <SwirlArrowBottom />
-                </motion.div>
-              </>
-            )}
-            <motion.div
-              variants={{
-                hidden: { x: index % 2 === 0 ? "100%" : "-100%", opacity: 0 },
-                visible: { x: "0%", opacity: 1 },
-              }}
-              className="mb-8 flex flex-col text-center justify-center prose flex-1"
+      <div className="mx-auto max-w-screen-lg px-4">
+        <SectionHeading
+          label="How it works"
+          title={howItWorks.title}
+          subtitle={howItWorks.subtitle}
+        />
+
+        <ol className="relative mt-16 list-none space-y-16 pl-0 md:space-y-20">
+          {/* The rail itself */}
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-[11px] top-2 w-px bg-base-300 md:left-[15px]"
+          />
+
+          {howItWorks.steps.map((step, index) => (
+            <motion.li
+              key={step.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              className="relative grid gap-6 pl-10 md:grid-cols-2 md:items-center md:gap-12 md:pl-16"
             >
-              <div className="pb-0 font-sketch text-8xl text-primary">
-                {index < 10 && 0}
-                {index + 1}
+              {/* Tick on the rail */}
+              <span
+                aria-hidden="true"
+                className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full border border-base-300 bg-base-100 md:h-8 md:w-8"
+              >
+                <span className="h-2 w-2 rounded-full bg-accent" />
+              </span>
+
+              <div>
+                <p className="tick-label m-0 text-base-content/40">
+                  Step {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-base-content md:text-[1.75rem]">
+                  {step.title}
+                </h3>
+                <p className="mt-3 max-w-md text-base-content/70">
+                  {step.subtitle}
+                </p>
               </div>
-              <h3 className="mt-0 text-2xl font-bold">{step.title}</h3>
-              <p className="mx-auto max-w-sm text-base-content">{step.subtitle}</p>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: { x: index % 2 === 1 ? "100%" : "-100%", opacity: 0 },
-                visible: { x: "0%", opacity: 1 },
-              }}
-              className="flex-1 flex justify-center"
-            >
+
               <img
-                className="rounded-3xl lg:w-[75%]"
+                className="w-full rounded-box border border-base-300 object-cover shadow-sm md:aspect-[4/3]"
                 src={withBase(step.image)}
-                alt={step.title}
+                alt=""
                 loading="lazy"
-                width={400}
-                height={300}
+                width={480}
+                height={360}
               />
-            </motion.div>
-          </motion.div>
-        ))}
+            </motion.li>
+          ))}
+        </ol>
       </div>
     </section>
   );

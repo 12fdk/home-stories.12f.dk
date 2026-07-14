@@ -46,9 +46,9 @@ const templateConfig: TemplateConfig = {
   },
   appBanner: {
     id: "app-banner",
-    title: "Download Home Stories Today!",
+    title: "Measure the next one.",
     subtitle:
-      "Your complete project management tool for home renovations. Track budgets, organize tasks, and document your progress. Available on the App Store.",
+      "Free on the App Store. Works offline, needs no account, and syncs with iCloud when you want it to. Requires iPhone with iOS 17 or later.",
     screenshots: [
       "/screenshots/projects-list.webp",
       "/screenshots/budget-chart.webp",
@@ -61,10 +61,17 @@ const templateConfig: TemplateConfig = {
       description:
         "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
     },
+    facts: [
+      { label: "Price", value: "Free" },
+      { label: "Offline", value: "Fully" },
+      { label: "Account", value: "None" },
+      { label: "Sync", value: "iCloud" },
+      { label: "Requires", value: "iOS 17" },
+    ],
     testimonials: {
       id: "testimonials",
-      title: "What Homeowners Say",
-      subtitle: "Hear from renovators using Home Stories",
+      title: "What homeowners say",
+      subtitle: "From people mid-renovation",
       cards: [
         {
           name: "Anders T.",
@@ -83,83 +90,89 @@ const templateConfig: TemplateConfig = {
         },
       ],
     },
-    partners: {
-      title: "",
-      logos: [],
-    },
     howItWorks: {
       id: "how-it-works",
-      title: "How it works",
+      title: "Five steps, start to handover",
       subtitle:
-        "Manage your renovation project from start to finish with Home Stories",
+        "The order the app expects, and the order a renovation actually runs in.",
       steps: [
         {
-          title: "Create Your Project",
+          title: "Set the budget",
           subtitle:
-            "Set up a renovation project with your budget and timeline to get started tracking your home improvement.",
+            "Name the project, put a number on it, and give it a deadline. That number is what everything else is measured against.",
           image: "/stock/01.webp",
         },
         {
-          title: "Add Tasks & Items",
+          title: "List the work",
           subtitle:
-            "Break down the work into manageable tasks and track materials, fixtures, and items needed for each phase.",
+            "Break the job into tasks, then add the materials, fixtures, and quotes each one needs. Estimates now, receipts later.",
           image: "/stock/02.webp",
         },
         {
-          title: "Track Your Budget",
+          title: "Log what you spend",
           subtitle:
-            "Monitor spending with visual charts showing spent, potential, and remaining budget at a glance.",
+            "Enter costs as they land. The chart splits spent, committed, and remaining, so an overrun shows up while you can still act on it.",
           image: "/stock/03.webp",
         },
         {
-          title: "Document Progress",
+          title: "Photograph the progress",
           subtitle:
-            "Capture photos throughout your renovation to create a visual timeline of your home's transformation.",
+            "Shoot from inside the app. Photos are dated and pinned to the project, which is how you settle what the wall looked like in March.",
           image: "/stock/04.webp",
         },
         {
-          title: "Export & Share",
+          title: "Export the report",
           subtitle:
-            "Generate professional PDF reports to share with contractors, keep for records, or show off your progress.",
+            "One tap turns budget, tasks, photos, and notes into a PDF. Send it to the contractor, the insurer, or the folder you'll want next year.",
           image: "/stock/05.webp",
         },
       ],
     },
     features: {
       id: "features",
-      title: "Everything You Need for Your Renovation",
+      title: "Four screens do the work",
       subtitle:
-        "Plan, track, and document your home improvement projects with powerful features",
+        "No spreadsheet, no shoebox of receipts, no photo roll you can't search.",
       cards: [
         {
-          title: "Budget Tracking",
+          label: "Budget",
+          title: "See the overrun coming",
           subtitle:
-            "Track costs vs. estimates with visual charts showing spent, potential, and remaining budget. Stay on top of your renovation finances.",
+            "Spent, committed, and remaining on one chart. You find out you're over while there's still something you can do about it.",
           icon: "/icons/budget-tracking.png",
+          screenshot: "/screenshots/budget-chart.webp",
+          // Skip past the project photo to the budget donut itself.
+          crop: "-27%",
         },
         {
-          title: "Photo Timeline",
+          label: "Tasks",
+          title: "Keep the order straight",
           subtitle:
-            "Document your renovation progress with photos organized by date. Create a visual record of your home's transformation.",
-          icon: "/icons/photo-timeline.png",
-        },
-        {
-          title: "Task Management",
-          subtitle:
-            "Organize work into tasks, track completion status, and keep your renovation project moving forward efficiently.",
+            "Group the work into tasks and items per phase, and mark them off. Electrician before plasterer, every time.",
           icon: "/icons/task-management.png",
+          screenshot: "/screenshots/tasks.webp",
         },
         {
-          title: "PDF Export",
+          label: "Photos",
+          title: "Prove what was there",
           subtitle:
-            "Generate professional project reports to share with contractors, insurance, or keep for your records.",
+            "Dated photos pinned to the project build a timeline you can scroll — before, during, and behind the wall.",
+          icon: "/icons/photo-timeline.png",
+          screenshot: "/screenshots/photo-timeline.webp",
+        },
+        {
+          label: "Export",
+          title: "Hand over a PDF",
+          subtitle:
+            "Budget, tasks, photos, and notes in one report your contractor, insurer, or future buyer can actually read.",
           icon: "/icons/pdf-export.png",
+          screenshot: "/screenshots/export-pdf.webp",
         },
       ],
     },
     faq: {
       id: "faq",
-      title: "Frequently Asked Questions",
+      title: "Questions, answered",
       qa: [
         {
           question: "Is Home Stories free to use?",
@@ -189,17 +202,25 @@ const templateConfig: TemplateConfig = {
       ],
     },
     header: {
-      headline: "Manage Your Home Renovation",
+      headline: "Your home renovation, measured.",
       subtitle:
-        "Home Stories is your complete project management tool for home renovations. Track budgets, organize tasks, document progress with photos, and export professional reports.",
+        "Home Stories is a renovation tracker for iPhone. Budgets that stay honest, tasks in the right order, photos that prove what happened — exported as a PDF your contractor can read.",
       screenshots: [
-        "/screenshots/tasks.webp",
-        "/screenshots/budget-chart.webp",
         "/screenshots/projects-list.webp",
+        "/screenshots/budget-chart.webp",
+        "/screenshots/tasks.webp",
       ],
       rewards: [],
-      usersDescription: "Join homeowners managing their renovations",
-      headlineMark: [2, 3],
+      usersDescription: "Built by a homeowner mid-renovation, for homeowners mid-renovation",
+      headlineMark: [3, 4],
+      // The kitchen project in the screenshot beside it, figure for figure.
+      sample: {
+        project: "Kitchen renovation",
+        currency: "$",
+        budget: 25000,
+        spent: 12950,
+        potential: 1430,
+      },
     },
   },
   privacyPolicy: {

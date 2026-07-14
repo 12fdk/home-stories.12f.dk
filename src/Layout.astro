@@ -24,13 +24,12 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
     {logo.startsWith("http") && <link rel="apple-touch-icon" href={logo} />}
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Preload critical fonts -->
+    <!-- Preload critical fonts: display face is above the fold in the h1 -->
+    <link rel="preload" href="/fonts/Archivo-var.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- Preload critical above-fold image (first screenshot) - responsive -->
-    <link rel="preload" href="/screenshots/projects-list-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)" />
-    <link rel="preload" href="/screenshots/projects-list.webp" as="image" type="image/webp" media="(min-width: 769px)" />
+    <!-- Preload the hero screenshot -->
+    <link rel="preload" href="/screenshots/projects-list.webp" as="image" type="image/webp" />
 
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://umami.robert-jensen.dk" />
@@ -316,18 +315,18 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
       }
     })} />
 
-    <script is:inline define:vars={{ forceTheme }}>
+    <script is:inline define:vars={{ forceTheme, theme }}>
+      const darkTheme = `${theme}-dark`;
       function getPreferredColorScheme() {
-        if (!window.matchMedia) {
-          return;
-        }
+        if (!window.matchMedia) return;
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          return "dark";
+          return darkTheme;
         }
       }
-      const theme = localStorage.getItem("theme") ?? getPreferredColorScheme();
-      if (theme === "dark" && !forceTheme)
-        document.documentElement.setAttribute("data-theme", theme);
+      const stored = localStorage.getItem("theme") ?? getPreferredColorScheme();
+      if (stored === darkTheme && !forceTheme) {
+        document.documentElement.setAttribute("data-theme", darkTheme);
+      }
     </script>
 
     <!-- Umami Analytics -->

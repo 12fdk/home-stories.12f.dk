@@ -15,5 +15,8 @@
       "Bash(agent-browser snapshot:*)",
       "Bash(agent-browser click:*)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true
   }
 }

@@ -12,97 +12,88 @@ export default {
     },
     extend: {
       fontFamily: {
-        sketch: ["CabinSketch", ...defaultTheme.fontFamily.mono],
-        // Use clean, modern system fonts that match iOS aesthetic
-        sans: ["Inter", "SF Pro Display", ...defaultTheme.fontFamily.sans],
+        // Archivo: industrial grotesque, used for display sizes only
+        display: ["Archivo", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", "SF Pro Text", ...defaultTheme.fontFamily.sans],
+        // IBM Plex Mono: labels, figures, dimension annotations
+        mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
-      animation: {
-        "meteor-effect": "meteor 5s linear infinite",
+      letterSpacing: {
+        tightest: "-0.035em",
+        label: "0.12em",
+      },
+      colors: {
+        // The one signature colour: tape-measure yellow
+        tape: "#FFC300",
       },
       keyframes: {
-        meteor: {
-          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-          "70%": { opacity: "1" },
-          "100%": {
-            transform: "rotate(215deg) translateX(-500px)",
-            opacity: "0",
-          },
+        "rail-fill": {
+          from: { transform: "scaleX(0)" },
+          to: { transform: "scaleX(1)" },
         },
       },
-      // App-matching color palette
-      colors: {
-        home: {
-          blue: "#007AFF",      // iOS blue - primary accent
-          green: "#34C759",     // iOS green - progress/success
-          orange: "#FF9500",    // iOS orange - warnings
-          red: "#FF3B30",       // iOS red - errors
-          gray: "#8E8E93",      // iOS gray - secondary text
-          light: "#F2F2F7",     // iOS light background
-        },
+      animation: {
+        "rail-fill": "rail-fill 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both",
       },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
     themes: [
-      // Clean, modern iOS-inspired theme matching the app
+      // "Measured" — drafting ink on paper, App Store blue for actions,
+      // tape yellow reserved for the dimension rail.
       {
         home: {
-          "primary": "#007AFF",           // iOS blue
-          "primary-content": "#FFFFFF",   // White text on blue
-          "secondary": "#34C759",         // iOS green for progress
-          "secondary-content": "#FFFFFF", // White text on green
-          "accent": "#FF9500",            // iOS orange
-          "accent-content": "#FFFFFF",    // White text on orange
-          "neutral": "#1C1C1E",           // iOS dark gray
-          "neutral-content": "#FFFFFF",   // White text
-          "base-100": "#FFFFFF",          // Pure white background
-          "base-200": "#F2F2F7",          // iOS light gray background
-          "base-300": "#E5E5EA",          // iOS separator gray
-          "base-content": "#1C1C1E",      // Dark text
-          "info": "#5AC8FA",              // iOS light blue
-          "success": "#34C759",           // iOS green
-          "warning": "#FF9500",           // iOS orange
-          "error": "#FF3B30",             // iOS red
-          "--rounded-box": "1rem",
-          "--rounded-btn": "0.75rem",
-          "--rounded-badge": "1.5rem",
+          primary: "#0A6CF1",
+          "primary-content": "#FFFFFF",
+          secondary: "#1F7A5C",
+          "secondary-content": "#FFFFFF",
+          accent: "#FFC300",
+          "accent-content": "#14181C",
+          neutral: "#14181C",
+          "neutral-content": "#FBFBF9",
+          "base-100": "#FBFBF9",
+          "base-200": "#F2F2EF",
+          "base-300": "#E3E3DE",
+          "base-content": "#14181C",
+          info: "#0A6CF1",
+          success: "#1F7A5C",
+          warning: "#E08600",
+          error: "#D9342B",
+          "--rounded-box": "0.75rem",
+          "--rounded-btn": "0.5rem",
+          "--rounded-badge": "0.375rem",
           "--animation-btn": "0.2s",
           "--animation-input": "0.2s",
           "--btn-focus-scale": "0.98",
           "--border-btn": "0px",
-          "--tab-border": "1px",
-          "--tab-radius": "0.5rem",
         },
       },
-      // Dark mode matching iOS dark appearance
       {
         "home-dark": {
-          "primary": "#0A84FF",           // iOS blue (dark mode)
-          "primary-content": "#FFFFFF",   // White text
-          "secondary": "#30D158",         // iOS green (dark mode)
-          "secondary-content": "#FFFFFF", // White text
-          "accent": "#FF9F0A",            // iOS orange (dark mode)
-          "accent-content": "#000000",    // Black text on orange
-          "neutral": "#F2F2F7",           // Light for contrast
-          "neutral-content": "#1C1C1E",   // Dark text
-          "base-100": "#000000",          // Pure black background
-          "base-200": "#1C1C1E",          // iOS dark gray
-          "base-300": "#2C2C2E",          // iOS elevated dark
-          "base-content": "#FFFFFF",      // White text
-          "info": "#64D2FF",              // iOS light blue (dark)
-          "success": "#30D158",           // iOS green (dark)
-          "warning": "#FF9F0A",           // iOS orange (dark)
-          "error": "#FF453A",             // iOS red (dark)
-          "--rounded-box": "1rem",
-          "--rounded-btn": "0.75rem",
-          "--rounded-badge": "1.5rem",
+          primary: "#4C93FF",
+          "primary-content": "#08111F",
+          secondary: "#3FBF8F",
+          "secondary-content": "#08150F",
+          accent: "#FFC300",
+          "accent-content": "#14181C",
+          neutral: "#1A1F24",
+          "neutral-content": "#F0F0EC",
+          "base-100": "#0F1215",
+          "base-200": "#171B1F",
+          "base-300": "#252B31",
+          "base-content": "#F0F0EC",
+          info: "#4C93FF",
+          success: "#3FBF8F",
+          warning: "#FFA92E",
+          error: "#FF6B60",
+          "--rounded-box": "0.75rem",
+          "--rounded-btn": "0.5rem",
+          "--rounded-badge": "0.375rem",
           "--animation-btn": "0.2s",
           "--animation-input": "0.2s",
           "--btn-focus-scale": "0.98",
           "--border-btn": "0px",
-          "--tab-border": "1px",
-          "--tab-radius": "0.5rem",
         },
       },
     ],

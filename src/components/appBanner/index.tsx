@@ -1,135 +1,105 @@
 import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import { withBase } from "../../utils/basePath";
-import Spill from "./svgs/spill";
-import IphoneFrame from "../../components/iphoneFrame";
 import { motion } from "framer-motion";
-import clsx from "clsx";
+import AppStoreRating from "../appStoreRating";
 
+/** The closing ask. Ink section, one action, no second thought to have. */
 function AppBanner() {
   const { googlePlayLink, appStoreLink, appBanner } =
     useContext(ConfigContext)!;
 
   if (!appBanner) return null;
+
   return (
-    <motion.section
+    <section
       id={appBanner.id}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
-      className="relative max-w-screen-lg mx-auto px-4 -mb-6 z-10 md:-mb-10 lg:-mb-14"
+      className="relative overflow-hidden border-t border-base-300 bg-neutral text-neutral-content"
     >
-      <motion.div
-        variants={{
-          hidden: {
-            opacity: 0,
-            scale: 0.9,
-          },
-          visible: {
-            opacity: 1,
-            scale: 1,
-          },
-        }}
-        transition={{
-          mass: 0.4,
-          type: "spring",
-          duration: 0.2,
-        }}
-      >
-        <div className="p-4 bg-primary text-primary-content rounded-t-[var(--rounded-box)] flex flex-col items-center md:flex-row">
-          <div className="flex-1 flex flex-col items-center justify-center min-h-full">
-            <motion.h2
-              initial={{ opacity: 0, y: "-100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-0 mb-4 text-4xl md:text-6xl"
-            >
-              {appBanner.title}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-primary-content/90 whitespace-pre-wrap text-left m-0 mt-1 md:text-lg"
-            >
-              {appBanner.subtitle}
-            </motion.p>
-            <motion.ul
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="list-none flex gap-4 my-6 p-0 w-full"
-            >
-              {googlePlayLink && (
-                <li className="m-0 p-0">
-                  <a href={googlePlayLink}>
-                    <img
-                      className="h-14"
-                      alt="Download on Google Play"
-                      src={withBase("/stores/google-play.svg")}
-                      width={168}
-                      height={56}
-                    />
-                  </a>
-                </li>
-              )}
-              {appStoreLink && (
-                <li className="m-0 p-0">
-                  <a href={appStoreLink}>
-                    <img
-                      className="h-14"
-                      alt="Download on App Store"
-                      src={withBase("/stores/app-store.svg")}
-                      width={168}
-                      height={56}
-                    />
-                  </a>
-                </li>
-              )}
-            </motion.ul>
-          </div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            className="relative flex-1 flex justify-center"
-          >
-            {appBanner.screenshots.map((src, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: {
-                    scale: index > 0 ? 0.9 : 1,
-                    opacity: 0,
-                    rotate: 0,
-                  },
-                  visible: {
-                    scale: index > 0 ? 0.9 : 1,
-                    opacity: 1,
-                    rotate: index === 0 ? 0 : index === 1 ? "-30deg" : "30deg",
-                  },
-                }}
-                transition={{
-                  stiffness: 150,
-                  mass: 0.5,
-                  type: "spring",
-                  delay: index > 0 ? 0.8 : 0.5,
-                }}
-                className={clsx(
-                  "h-[30rem]",
-                  index === 0 && "relative z-20 block",
-                  index === 1 && "absolute origin-bottom-left hidden xl:block",
-                  index === 2 && "absolute origin-bottom-right hidden xl:block"
-                )}
+      {/* Tape edge across the top: the one place the accent runs full width */}
+      <div aria-hidden="true" className="h-1 w-full bg-accent" />
+      <div
+        aria-hidden="true"
+        className="ticks absolute inset-x-0 top-1 text-neutral-content"
+      />
+
+      <div className="mx-auto grid max-w-screen-lg items-center gap-10 px-4 py-20 md:grid-cols-2 md:gap-8 md:py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <h2 className="m-0 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-[3.25rem]">
+            {appBanner.title}
+          </h2>
+          <p className="mt-5 max-w-md leading-relaxed text-neutral-content/70">
+            {appBanner.subtitle}
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-5">
+            {appStoreLink && (
+              <a
+                href={appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex"
               >
-                <IphoneFrame src={withBase(src)} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-        <Spill className="-translate-y-1"/>
-      </motion.div>
-    </motion.section>
+                <img
+                  className="h-[52px]"
+                  alt="Download Home Stories on the App Store"
+                  src={withBase("/stores/app-store.svg")}
+                  width={156}
+                  height={52}
+                  loading="lazy"
+                />
+              </a>
+            )}
+            {googlePlayLink && (
+              <a href={googlePlayLink} className="inline-flex">
+                <img
+                  className="h-[52px]"
+                  alt="Get Home Stories on Google Play"
+                  src={withBase("/stores/google-play.svg")}
+                  width={156}
+                  height={52}
+                  loading="lazy"
+                />
+              </a>
+            )}
+            <AppStoreRating size="md" showReviewCount={false} />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="flex justify-center md:justify-end"
+        >
+          <div className="iphone-frame">
+            <div className="iphone-device">
+              <div className="iphone-dynamic-island" />
+              <div className="iphone-screen">
+                <img
+                  className="iphone-screenshot"
+                  src={withBase(appBanner.screenshots[0])}
+                  alt="Home Stories project list on iPhone"
+                  loading="lazy"
+                  width={288}
+                  height={625}
+                />
+              </div>
+              <div className="iphone-button-left iphone-button-silent" />
+              <div className="iphone-button-left iphone-button-volume-up" />
+              <div className="iphone-button-left iphone-button-volume-down" />
+              <div className="iphone-button-right iphone-button-power" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 

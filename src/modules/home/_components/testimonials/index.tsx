@@ -1,11 +1,7 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-
-import AnimatedText from "../../../../components/animatedText";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
-import { Autoplay } from "swiper/modules";
+import SectionHeading from "../../../../components/sectionHeading";
 
 function Testimonials() {
   const {
@@ -14,58 +10,54 @@ function Testimonials() {
   if (!testimonials) return null;
 
   return (
-    <section className="max-w-screen-lg mx-auto px-4 py-12">
-      <div className="mb-6 max-w-none flex flex-col items-center prose prose-lg text-center">
-        <h2 className="mb-0">
-          <AnimatedText text={testimonials.title} />
-        </h2>
-        <motion.p
-          initial={{ y: "100%", opacity: 0 }}
-          whileInView={{ y: "0%", opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-xl max-w-lg text-base-content"
-        >
-          {testimonials.subtitle}
-        </motion.p>
+    <section
+      id={testimonials.id}
+      className="mx-auto max-w-screen-lg px-4 py-20 md:py-28"
+    >
+      <SectionHeading
+        label="Reviews"
+        title={testimonials.title}
+        subtitle={testimonials.subtitle}
+      />
+
+      <div className="mt-14 grid gap-6 md:grid-cols-3">
+        {testimonials.cards.map(({ name, comment }, index) => (
+          <motion.figure
+            key={name}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.08,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="m-0 flex flex-col rounded-box border border-base-300 bg-base-100 p-6"
+          >
+            <div className="flex gap-0.5 text-accent" aria-label="Rated 5 out of 5">
+              {Array.from({ length: 5 }).map((_, star) => (
+                <svg
+                  key={star}
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8L12 2.5z" />
+                </svg>
+              ))}
+            </div>
+
+            <blockquote className="mt-4 flex-1 text-base leading-relaxed text-base-content/80">
+              {comment}
+            </blockquote>
+
+            <figcaption className="mt-6 border-t border-base-300 pt-4">
+              <span className="tick-label text-base-content/50">{name}</span>
+            </figcaption>
+          </motion.figure>
+        ))}
       </div>
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        <Swiper
-          loop
-          autoplay
-          modules={[Autoplay]}
-          spaceBetween={32}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          slidesPerView={1}
-        >
-          {testimonials.cards.map(({ name, comment }, index) => (
-            <SwiperSlide className="!h-[22rem] my-2" key={index}>
-              <div className="h-full card shadow bg-primary">
-                <div className="p-6 card-body">
-                  <div className="flex mb-4">
-                    {Array(5)
-                      .fill(0)
-                      .map((_, index) => (
-                        <div
-                          key={index}
-                          className="h-6 w-6 mask mask-star-2 bg-primary-content"
-                        />
-                      ))}
-                  </div>
-                  <p className="text-primary-content">{comment}</p>
-                  <h3 className="card-title text-primary-content">{name}</h3>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </motion.div>
     </section>
   );
 }

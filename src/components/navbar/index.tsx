@@ -1,7 +1,7 @@
 import AnimatedList from "../../components/animatedList";
 import MenuToggle from "../../components/menuToggle";
 import clsx from "clsx";
-import { easeIn, motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useContext, useState } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import { withBase } from "../../utils/basePath";
@@ -18,61 +18,52 @@ function Navbar() {
   } = useContext(ConfigContext)!;
 
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1 / 3], [0, 12], {
-    ease: easeIn,
-  });
-  const width = useTransform(scrollYProgress, [0, 1 / 3], ["100%", "80%"], {
-    ease: easeIn,
-  });
-  const opacity = useTransform(scrollYProgress, [0, 1 / 3], [0, 1], {
-    ease: easeIn,
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 24);
   });
 
+  const isSolid = isScrolled || isMobileNavVisible;
+
   return (
-    <motion.nav
-      className="opacity-0 max-w-screen-lg mx-auto sticky top-0 z-50"
-      animate={{ opacity: 1 }}
+    <nav
+      className={clsx(
+        "sticky top-0 z-50 transition-colors duration-300",
+        isSolid
+          ? "border-b border-base-300 bg-base-100/90 backdrop-blur-md"
+          : "border-b border-transparent"
+      )}
     >
-      <motion.div
-        style={{
-          width:
-            isMobileNavVisible || topNavbar.disableWidthAnimation
-              ? "100%"
-              : width,
-          translateY: isMobileNavVisible ? 0 : y,
-        }}
-        className="will-change-[width,transform] transition-all mx-auto navbar relative px-4 max-md:!w-full"
-      >
-        <motion.div
-          style={{ opacity: isMobileNavVisible ? 1 : opacity }}
-          className={clsx(
-            "will-change-[border-radius,opacity] transition-all z-[-1] rounded-full absolute left-0 right-0 top-0 bottom-0 bg-base-100 shadow-xl",
-            {
-              "rounded-none": isMobileNavVisible,
-            }
-          )}
-        />
-        <div className="navbar-start">
-          <a href="/" className="flex items-center">
-            <img className="h-12 rounded-[22%]" src={withBase(logo)} alt={`${name} logo`} width={48} height={48} />
-            <span className="font-bold mx-1 md:text-lg">{name}</span>
-          </a>
-        </div>
-        <div className="navbar-end md:hidden">
+      <div className="mx-auto flex h-16 max-w-screen-lg items-center px-4 md:h-[4.5rem]">
+        <a href="/" className="flex items-center gap-2">
+          <img
+            className="h-9 rounded-[22%] md:h-10"
+            src={withBase(logo)}
+            alt=""
+            width={40}
+            height={40}
+          />
+          <span className="font-display text-base font-bold tracking-tight md:text-lg">
+            {name}
+          </span>
+        </a>
+
+        <div className="ml-auto flex items-center gap-1 md:hidden">
           {showThemeSwitch && <ThemeSwitcher />}
           <MenuToggle
             toggle={() => setIsMobileNavVisible((current) => !current)}
             isOpen={isMobileNavVisible}
           />
         </div>
-        <div className="navbar-end hidden font-semibold md:flex">
-          <ul className="flex gap-4 px-1 items-center">
-            {showThemeSwitch && <li><ThemeSwitcher /></li>}
-            {topNavbar.links.map(({ title, href }, index) => (
-              <li key={index}>
+
+        <div className="ml-auto hidden items-center gap-6 md:flex">
+          <ul className="flex list-none items-center gap-6 p-0">
+            {topNavbar.links.map(({ title, href }) => (
+              <li key={href} className="m-0 p-0">
                 <a
-                  className="text-sm whitespace-nowrap link link-hover"
+                  className="whitespace-nowrap text-sm font-medium text-base-content/70 transition-colors hover:text-base-content"
                   href={href}
                 >
                   {title}
@@ -80,26 +71,34 @@ function Navbar() {
               </li>
             ))}
           </ul>
+          {showThemeSwitch && <ThemeSwitcher />}
           {topNavbar.cta && appStoreLink && (
-            <a href={appStoreLink} target="_blank" rel="noopener noreferrer" className="ml-3 btn py-4 bg-[#0066CC] hover:bg-[#0055AA] text-white border-none">
+            <a
+              href={appStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-sm h-10 min-h-0 px-5 text-sm font-semibold normal-case"
+            >
               {topNavbar.cta}
             </a>
           )}
         </div>
-      </motion.div>
+      </div>
+
       <AnimatedList
         listKey="mobile-navbar"
-        listClassName="absolute bg-base-100 top-20 shadow-lg rounded-b-lg w-full px-4 flex flex-col gap-2 md:hidden"
+        listClassName="absolute top-16 w-full border-b border-base-300 bg-base-100 px-4 pb-4 flex flex-col gap-1 md:hidden"
         isVisible={isMobileNavVisible}
       >
-        {topNavbar.links.map(({ title, href }, index) => (
+        {topNavbar.links.map(({ title, href }) => (
           <motion.a
-            key={index}
-            className="btn btn-ghost w-full"
+            key={href}
+            className="w-full border-b border-base-300 py-3 text-base font-medium"
             href={href}
+            onClick={() => setIsMobileNavVisible(false)}
             variants={{
-              show: { x: 0 },
-              hidden: { x: "-100%" },
+              show: { x: 0, opacity: 1 },
+              hidden: { x: -12, opacity: 0 },
             }}
           >
             {title}
@@ -108,27 +107,39 @@ function Navbar() {
         <motion.ul
           variants={{
             show: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: "100%" },
+            hidden: { opacity: 0, y: 8 },
           }}
-          className="menu menu-horizontal justify-center py-0 px-1"
+          className="mt-3 flex list-none gap-3 p-0"
         >
-          {googlePlayLink && (
-            <li className="mb-2">
-              <a href={googlePlayLink} target="_blank" rel="noopener noreferrer">
-                <img className="h-12" src={withBase("/stores/google-play.svg")} alt="Download on Google Play" width={144} height={48} />
+          {appStoreLink && (
+            <li>
+              <a href={appStoreLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  className="h-12"
+                  src={withBase("/stores/app-store.svg")}
+                  alt="Download on the App Store"
+                  width={144}
+                  height={48}
+                />
               </a>
             </li>
           )}
-          {appStoreLink && (
-            <li className="mb-2">
-              <a href={appStoreLink} target="_blank" rel="noopener noreferrer">
-                <img className="h-12" src={withBase("/stores/app-store.svg")} alt="Download on App Store" width={144} height={48} />
+          {googlePlayLink && (
+            <li>
+              <a href={googlePlayLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  className="h-12"
+                  src={withBase("/stores/google-play.svg")}
+                  alt="Get it on Google Play"
+                  width={144}
+                  height={48}
+                />
               </a>
             </li>
           )}
         </motion.ul>
       </AnimatedList>
-    </motion.nav>
+    </nav>
   );
 }
 

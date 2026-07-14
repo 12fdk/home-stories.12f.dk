@@ -1,138 +1,139 @@
 import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
+import { withBase } from "../../utils/basePath";
 import InstagramLogo from "./svgs/instagram";
 import FacebookLogo from "./svgs/facebook";
 import TwitterLogo from "./svgs/twitter";
-import { motion } from "framer-motion";
 
 function Footer() {
   const {
+    name,
+    logo,
     footer: { links, legalLinks, socials },
   } = useContext(ConfigContext)!;
 
+  const legal = [
+    legalLinks.termsAndConditions && {
+      href: "/terms-and-conditions",
+      title: "Terms & conditions",
+    },
+    legalLinks.privacyPolicy && {
+      href: "/privacy-policy",
+      title: "Privacy policy",
+    },
+    legalLinks.cookiesPolicy && {
+      href: "/cookies-policy",
+      title: "Cookies policy",
+    },
+  ].filter(Boolean) as { href: string; title: string }[];
+
   return (
-    <footer className="relative bg-neutral text-neutral-content px-4 pt-0 pb-12">
-      <div className="absolute rounded-t-[50%] -top-12 left-0 bg-neutral w-full h-12" />
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        className="max-w-screen-lg mx-auto mt-12"
-      >
-        <nav className="flex flex-col items-start gap-4">
-          {links.map(({ title, href }, index) => (
-            <motion.a
-              key={index}
-              variants={{
-                hidden: { opacity: 0, x: "-100%" },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={{ delay: index * 0.25 }}
-              className="text-xl font-bold block uppercase whitespace-nowrap link no-underline text-primary hover:text-primary/50 md:text-4xl"
-              href={href}
-            >
-              {title}
-            </motion.a>
-          ))}
-        </nav>
-        <aside className="flex flex-col items-center justify-between mt-4 w-full overflow-hidden md:flex-row lg:overflow-visible">
-          <div className="flex items-center gap-3 w-full text-primary">
-            {socials?.facebook && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, x: "-100%" },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                transition={{ delay: 0.25 }}
-                className="w-8 h-8 hover:text-primary/50"
-                target="_blank"
-                href={socials.facebook}
-              >
-                <FacebookLogo />
-              </motion.a>
-            )}
-            {socials?.instagram && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, x: "-100%" },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                transition={{ delay: 0.5 }}
-                className="w-8 h-8 hover:text-primary/50"
-                target="_blank"
-                href={socials.instagram}
-              >
-                <InstagramLogo />
-              </motion.a>
-            )}
-            {socials?.twitter && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, x: "-100%" },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                transition={{ delay: 0.75 }}
-                className="w-8 h-8 hover:text-primary/50"
-                target="_blank"
-                href={socials.twitter}
-              >
-                <TwitterLogo />
-              </motion.a>
-            )}
+    <footer className="border-t border-base-300 bg-base-100 px-4 pb-24 pt-16 md:pb-16">
+      <div className="mx-auto flex max-w-screen-lg flex-col gap-10 md:flex-row md:justify-between">
+        <div>
+          <a href="/" className="flex items-center gap-2">
+            <img
+              className="h-10 rounded-[22%]"
+              src={withBase(logo)}
+              alt=""
+              width={40}
+              height={40}
+            />
+            <span className="font-display text-lg font-bold tracking-tight">
+              {name}
+            </span>
+          </a>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-base-content/60">
+            A renovation tracker for iPhone. Made in Denmark by Robert Jensen.
+          </p>
+          {(socials?.facebook || socials?.instagram || socials?.twitter) && (
+            <div className="mt-5 flex items-center gap-4 text-base-content/60">
+              {socials?.facebook && (
+                <a
+                  className="h-5 w-5 hover:text-base-content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={socials.facebook}
+                  aria-label="Home Stories on Facebook"
+                >
+                  <FacebookLogo />
+                </a>
+              )}
+              {socials?.instagram && (
+                <a
+                  className="h-5 w-5 hover:text-base-content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={socials.instagram}
+                  aria-label="Home Stories on Instagram"
+                >
+                  <InstagramLogo />
+                </a>
+              )}
+              {socials?.twitter && (
+                <a
+                  className="h-5 w-5 hover:text-base-content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={socials.twitter}
+                  aria-label="Home Stories on X"
+                >
+                  <TwitterLogo />
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div className="grid grid-cols-2 gap-10 md:gap-16">
+          <nav aria-label="Site">
+            <p className="tick-label m-0 text-base-content/40">Site</p>
+            <ul className="mt-4 list-none space-y-3 p-0">
+              {links.map(({ title, href }) => (
+                <li key={href} className="m-0 p-0">
+                  <a
+                    className="text-sm text-base-content/70 hover:text-base-content"
+                    href={href}
+                  >
+                    {title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div>
+            <p className="tick-label m-0 text-base-content/40">Contact</p>
+            <ul className="mt-4 list-none space-y-3 p-0">
+              <li className="m-0 p-0">
+                <a
+                  className="text-sm text-base-content/70 hover:text-base-content"
+                  href="mailto:robert@12f.dk"
+                >
+                  robert@12f.dk
+                </a>
+              </li>
+              {legal.map(({ title, href }) => (
+                <li key={href} className="m-0 p-0">
+                  <a
+                    className="text-sm text-base-content/70 hover:text-base-content"
+                    href={href}
+                  >
+                    {title}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="flex gap-4 mt-8 mb-4 md:m-0">
-            {legalLinks.termsAndConditions && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, scale: 0.4 },
-                  visible: { opacity: 1, scale: 1 },
-                }}
-                transition={{ delay: 0.25 }}
-                className="font-bold text-primary hover:text-primary/50 lg:whitespace-nowrap"
-                href="/terms-and-conditions"
-              >
-                Terms & conditions
-              </motion.a>
-            )}
-            {legalLinks.privacyPolicy && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, scale: 0.4 },
-                  visible: { opacity: 1, scale: 1 },
-                }}
-                transition={{ delay: 0.5 }}
-                className="font-bold text-primary hover:text-primary/50 lg:whitespace-nowrap"
-                href="/privacy-policy"
-              >
-                Privacy policy
-              </motion.a>
-            )}
-            {legalLinks.cookiesPolicy && (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, scale: 0.4 },
-                  visible: { opacity: 1, scale: 1 },
-                }}
-                transition={{ delay: 0.75 }}
-                className="font-bold text-primary hover:text-primary/50 lg:whitespace-nowrap"
-                href="/cookies-policy"
-              >
-                Cookies policy
-              </motion.a>
-            )}
-          </div>
-          <motion.p
-            variants={{
-              hidden: { opacity: 0, scale: 0.4 },
-              visible: { opacity: 1, scale: 1 },
-            }}
-            transition={{ delay: 1 }}
-            className="mt-0.5 md:ml-4 md:whitespace-nowrap"
-          >
-            All rights reserved © {new Date().getFullYear()}
-          </motion.p>
-        </aside>
-      </motion.div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-12 flex max-w-screen-lg items-center justify-between border-t border-base-300 pt-6">
+        <span className="tick-label text-base-content/40">
+          © {new Date().getFullYear()} 12f
+        </span>
+        <span className="tick-label text-base-content/40">iOS 17+</span>
+      </div>
     </footer>
   );
 }
