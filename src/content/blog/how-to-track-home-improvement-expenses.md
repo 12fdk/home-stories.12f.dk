@@ -3,7 +3,7 @@ title: "How to Track Home Improvement Expenses (4 Methods Compared)"
 description: "Four methods to track home improvement expenses — spreadsheet, Notion, a dedicated app, and receipts-in-a-jar — compared on what actually works on-site."
 lede: "Tracking home improvement expenses only matters if you're doing it on-site, where the money actually leaks. This post compares four methods on the single metric that matters: will you still be logging after three weeks of dust, decision fatigue, and contractor delays?"
 keyword: "how to track home improvement expenses"
-publishDate: 2026-07-13
+publishDate: 2026-07-27
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:

@@ -3,7 +3,7 @@ title: "A Realistic Kitchen Renovation Timeline (Week-by-Week)"
 description: "A realistic kitchen renovation timeline — week by week, from design to the final walkthrough — with real durations and hidden steps."
 lede: "Most kitchen renovation timelines are optimistic by 30–40%. They assume everything arrives on time, inspections pass first try, and your contractor has no other jobs bleeding into yours. This timeline shows what actually happens on a real kitchen renovation in 2026 — the weeks you plan for and the ones you don't."
 keyword: "renovation project timeline example"
-publishDate: 2026-07-14
+publishDate: 2026-08-03
 author: "Robert Jensen"
 tags: ["kitchen", "planning", "timeline", "how-to"]
 tldr:

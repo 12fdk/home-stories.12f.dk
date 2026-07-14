@@ -3,7 +3,7 @@ title: "Renovation Cost Overrun Statistics: What the Data Actually Says"
 description: "We analyzed 200 renovation projects: average cost overrun is 15–30%. Here's the data on why it happens and how to protect your budget."
 lede: "Renovations regularly go 15–30% over budget, and the data shows it's not a bug — it's a structural feature of how renovations are planned. The overrun isn't randomness; it's the gap between optimistic pre-project estimates and the inevitable surprises that surface once the walls open. Size your contingency to the evidence, not the folklore."
 keyword: "renovation cost overrun statistics"
-publishDate: 2026-07-14
+publishDate: 2026-08-10
 author: "Robert Jensen"
 tags: ["budgeting", "statistics", "planning"]
 tldr:

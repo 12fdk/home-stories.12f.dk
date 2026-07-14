@@ -3,7 +3,7 @@ title: "How to Budget a Home Renovation Without Going Over (2026)"
 description: "How to budget a home renovation without going over: a step-by-step 2026 method using real quotes, the right contingency, and tracking that survives the build."
 lede: "To budget a home renovation without going over, build it from itemised quotes (not a single lump sum), add a 15–25% contingency, and track actual vs. estimated per line item from day one. The overrun almost always comes from costs nobody listed, not from prices that rose."
 keyword: "how to budget a home renovation"
-publishDate: 2026-05-29
+publishDate: 2026-06-01
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:

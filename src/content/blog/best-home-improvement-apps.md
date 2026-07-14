@@ -3,7 +3,7 @@ title: "6 Best Home Improvement Apps for iPhone in 2026"
 description: "Most round-ups still recommend an app abandoned in 2022. Here are six iPhone apps that are actually maintained — and the job each one really does."
 lede: "There is no single best home improvement app, because a renovation isn't a single job. Finding a contractor, measuring a room, designing a layout, and keeping the budget honest while the dust flies are four different problems, and the apps that are brilliant at one are usually hopeless at the others. Here are six iPhone apps worth your home screen in 2026 — checked against the App Store, not copied from other lists."
 keyword: "best home improvement apps 2026"
-publishDate: 2026-07-13
+publishDate: 2026-07-20
 author: "Robert Jensen"
 tags: ["apps", "tools", "planning", "reviews"]
 tldr:

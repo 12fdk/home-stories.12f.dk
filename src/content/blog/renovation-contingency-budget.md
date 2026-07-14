@@ -3,7 +3,7 @@ title: "Renovation Contingency Budget: How Much to Set Aside"
 description: "How big a renovation contingency budget you really need, what it's for, when to dip in, and how to track it so surprises don't sink the project."
 lede: "A renovation contingency budget isn't padding or pessimism — it's a funded line item for the surprises you can't see yet. Size it to the home (15–25%, not the builder's-folklore 10%), ring-fence it so it isn't spent on upgrades by week three, and draw it down visibly so you always know how much runway is left."
 keyword: "renovation contingency budget"
-publishDate: 2026-06-15
+publishDate: 2026-06-22
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:

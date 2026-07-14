@@ -3,7 +3,7 @@ title: "How to Organize Renovation Receipts for Tax & Insurance"
 description: "A shoebox of faded receipts costs you money at tax time and at claim time. Here's a capture-once system that keeps every renovation cost provable for years."
 lede: "Your renovation receipts are worth real money — but only if you can still find them, read them, and prove what they were for, years after the dust settles. Capital improvements can reduce the tax you owe when you sell, and an insurance claim is only ever as good as the evidence behind it. This is a practical, capture-once system for keeping every cost provable long after the project ends."
 keyword: "how to organize renovation receipts"
-publishDate: 2026-07-11
+publishDate: 2026-07-13
 author: "Robert Jensen"
 tags: ["budgeting", "organization", "tax", "insurance"]
 tldr:
