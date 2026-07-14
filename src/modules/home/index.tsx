@@ -11,13 +11,15 @@ import Faq from "./_components/faq";
 import HowItWorks from "./_components/howItWorks";
 import Testimonials from "./_components/testimonials";
 import VideoDemo from "./_components/videoDemo";
+import FromTheBlog, { type BlogTeaser } from "./_components/fromTheBlog";
 import StickyDownload from "../../components/stickyDownload";
 
 interface Props {
   config: TemplateConfig;
+  posts?: BlogTeaser[];
 }
 
-function Home({ config }: Props) {
+function Home({ config, posts = [] }: Props) {
   return (
     <ConfigContext.Provider value={config}>
       <MotionConfig reducedMotion="user">
@@ -29,6 +31,7 @@ function Home({ config }: Props) {
           <VideoDemo />
           <HowItWorks />
           <Testimonials />
+          <FromTheBlog posts={posts} />
           <Faq />
           <AppBanner />
         </main>
