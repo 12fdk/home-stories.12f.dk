@@ -6,12 +6,24 @@ const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appSto
   Astro.props as TemplateConfig & { noindex?: boolean };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImage = logo.startsWith("http") ? logo : new URL("/og-image.png", Astro.site).href;
+// Always a real 1200x630 image (generated in src/pages/og-image.png.ts) so social
+// shares are not the square App Store icon cropped into a landscape frame.
+const ogImage = new URL("/og-image.png", Astro.site).href;
 const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
 
-// Dynamic rating data from App Store (with sensible fallbacks)
-const ratingValue = appStore?.rating && appStore.rating > 0 ? appStore.rating.toFixed(1) : "5.0";
-const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(appStore.ratingCount) : "1";
+// Only expose rating markup when the App Store actually reports real ratings.
+// A fabricated aggregateRating (e.g. 5.0 / count 1) is self-serving review markup
+// and can trigger a Google structured-data manual action.
+const hasRealRatings = !!(appStore?.ratingCount && appStore.ratingCount > 0 && appStore?.rating && appStore.rating > 0);
+const aggregateRating = hasRealRatings
+  ? {
+      "@type": "AggregateRating",
+      "ratingValue": appStore!.rating.toFixed(1),
+      "ratingCount": String(appStore!.ratingCount),
+      "bestRating": "5",
+      "worstRating": "1",
+    }
+  : undefined;
 ---
 
 <!doctype html>
@@ -103,13 +115,7 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": ratingValue,
-        "ratingCount": ratingCount,
-        "bestRating": "5",
-        "worstRating": "1"
-      },
+      ...(aggregateRating ? { "aggregateRating": aggregateRating } : {}),
       "description": seo.description,
       "url": canonicalURL.href,
       "downloadUrl": appStoreLink,
@@ -130,27 +136,7 @@ const ratingCount = appStore?.ratingCount && appStore.ratingCount > 0 ? String(a
         "name": "Robert Jensen",
         "email": "robert@12f.dk",
         "url": "https://www.12f.dk"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewBody": "Home Stories made our kitchen renovation so much easier to manage. The budget tracking feature showed exactly where every krone went, and the photo timeline became a fantastic record of the transformation.",
-          "author": { "@type": "Person", "name": "Anders T." },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-        },
-        {
-          "@type": "Review",
-          "reviewBody": "I'm renovating multiple rooms and Home Stories keeps everything organized. Each project has its own tasks, budget, and photos. The PDF export is perfect for sharing progress with contractors.",
-          "author": { "@type": "Person", "name": "Maria S." },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-        },
-        {
-          "@type": "Review",
-          "reviewBody": "The budget charts are incredible. I can see at a glance what's spent, what's remaining, and potential costs. No more spreadsheets - Home Stories has everything in one place.",
-          "author": { "@type": "Person", "name": "Thomas H." },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-        }
-      ]
+      }
     })} />
 
     <!-- Structured Data - FAQ -->
