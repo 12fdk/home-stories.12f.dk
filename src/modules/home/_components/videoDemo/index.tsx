@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import { withBase } from "../../../../utils/basePath";
+import { ConfigContext } from "../../../../utils/configContext";
 import SectionHeading from "../../../../components/sectionHeading";
 
-const videos = [
-  { src: "/videos/demo-1.mp4", poster: "/videos/poster-1.webp", label: "Projects" },
-  { src: "/videos/demo-2.mp4", poster: "/videos/poster-2.webp", label: "Budget" },
-  { src: "/videos/demo-3.mp4", poster: "/videos/poster-3.webp", label: "Photos" },
+const videoAssets = [
+  { src: "/videos/demo-1.mp4", poster: "/videos/poster-1.webp" },
+  { src: "/videos/demo-2.mp4", poster: "/videos/poster-2.webp" },
+  { src: "/videos/demo-3.mp4", poster: "/videos/poster-3.webp" },
 ];
 
 function VideoDemo() {
+  const { ui } = useContext(ConfigContext)!;
+  const videos = videoAssets.map((v, i) => ({ ...v, label: ui.videoDemo.tabs[i] }));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -42,9 +45,9 @@ function VideoDemo() {
         <div>
           <SectionHeading
             inverted
-            label="Demo"
-            title="Watch it run"
-            subtitle="Three screens, recorded from the app on an iPhone. No mockups, no narration."
+            label={ui.sectionLabels.demo}
+            title={ui.videoDemo.title}
+            subtitle={ui.videoDemo.subtitle}
           />
 
           {/* Chapter list doubles as the control */}

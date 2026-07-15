@@ -1,9 +1,22 @@
 ---
 import "@styles/styles.scss";
 import type { TemplateConfig } from "utils/configType";
+import { getLocale, DEFAULT_LOCALE } from "./i18n/locales";
 
-const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore, noindex } =
+const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore, noindex, locale, localeAlternates, home } =
   Astro.props as TemplateConfig & { noindex?: boolean };
+
+// Language of the rendered page. English is the default; localized homepages
+// pass their code and a full set of hreflang alternates.
+const localeCode = locale ?? DEFAULT_LOCALE;
+const htmlLang = getLocale(localeCode)?.hreflang ?? "en";
+// og:locale wants ll_CC; map the ones we ship, fall back to the language tag.
+const OG_LOCALES: Record<string, string> = {
+  en: "en_US", da: "da_DK", de: "de_DE", fr: "fr_FR", es: "es_ES", it: "it_IT",
+  nl: "nl_NL", pt: "pt_PT", sv: "sv_SE", ja: "ja_JP", zh: "zh_CN", ko: "ko_KR",
+  pl: "pl_PL", tr: "tr_TR", ru: "ru_RU", nb: "nb_NO",
+};
+const ogLocale = OG_LOCALES[localeCode] ?? htmlLang.replace("-", "_");
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Always a real 1200x630 image (generated in src/pages/og-image.png.ts) so social
@@ -27,7 +40,7 @@ const aggregateRating = hasRealRatings
 ---
 
 <!doctype html>
-<html lang="en" data-theme={theme}>
+<html lang={htmlLang} data-theme={theme}>
   <head>
     <!-- Global Metadata -->
     <meta charset="utf-8" />
@@ -49,6 +62,11 @@ const aggregateRating = hasRealRatings
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- hreflang alternates (homepage only — the localized surface) -->
+    {localeAlternates?.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
 
     <!-- Primary Meta Tags -->
     <title>{seo.title}</title>
@@ -92,7 +110,7 @@ const aggregateRating = hasRealRatings
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content={name} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={ogLocale} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -129,7 +147,7 @@ const aggregateRating = hasRealRatings
       "featureList": "Budget Tracking, Photo Timeline, Task Management, PDF Export, Offline Support, iCloud Sync, Real-time Project Sharing, Home Screen & Lock Screen Widgets, Live Activities, Time Tracking, Notes & Document Storage, Item & Shopping List Tracking, Search & Share Extension, Project Priorities, 51 Languages, VoiceOver Accessibility",
       "softwareVersion": appStore?.version ?? "1.0.0",
       "datePublished": appStore?.lastUpdated ?? undefined,
-      "inLanguage": "en",
+      "inLanguage": htmlLang,
       "countriesSupported": "DK, US, GB, DE, SE, NO, FI, NL, FR, IE, CA, AU",
       "author": {
         "@type": "Person",
@@ -139,77 +157,19 @@ const aggregateRating = hasRealRatings
       }
     })} />
 
-    <!-- Structured Data - FAQ -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
+    <!-- Structured Data - FAQ (built from the page's own, localized, FAQ copy) -->
+    {home?.faq?.qa?.length && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": htmlLang,
+        "mainEntity": home.faq.qa.map((item) => ({
           "@type": "Question",
-          "name": "Is Home Stories free to use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, it's free! We also offer a Premium Lifetime upgrade with more advanced features for serious renovators."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the app work offline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely! Home Stories is designed to work fully offline so you can access your projects, budgets, and photos even without internet access - perfect for job sites."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I share projects with others?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! With iCloud sync your projects stay up to date across your devices. You can also export professional PDF reports to share with contractors, family, or keep for records."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I export reports?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Simply open your project, tap the export button, and choose PDF. Home Stories generates a professional report with your budget summary, task progress, photos, and notes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What devices are supported?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Home Stories is currently available for iPhone and requires iOS 17.0 or later. We're focused on delivering the best possible experience on iOS first."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Home Stories have widgets?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Add a budget progress ring and upcoming tasks to your Home Screen and Lock Screen, and use Live Activities with Dynamic Island to keep a project timer in view while you work — all without opening the app."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I collaborate with a partner or contractor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Share a project over iCloud and it stays in sync in real time across everyone's devices, so a partner, family member, or contractor can follow the budget, tasks, and photos as they change."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What languages is Home Stories available in?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Home Stories is fully translated into 51 languages, including English, German, French, Spanish, Italian, Danish, Dutch, Portuguese, Japanese, Chinese, Korean, and many more, with full VoiceOver and Dynamic Type accessibility support."
-          }
-        }
-      ]
-    })} />
+          "name": item.question,
+          "acceptedAnswer": { "@type": "Answer", "text": item.answer },
+        })),
+      })} />
+    )}
 
     <!-- Structured Data - Website -->
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -218,7 +178,7 @@ const aggregateRating = hasRealRatings
       "name": name,
       "url": siteUrl,
       "description": seo.description,
-      "inLanguage": "en",
+      "inLanguage": htmlLang,
       "publisher": {
         "@type": "Organization",
         "name": "12f",
