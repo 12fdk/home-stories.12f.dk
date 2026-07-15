@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { ConfigContext } from "../../../../utils/configContext";
 import SectionHeading from "../../../../components/sectionHeading";
 
 export interface BlogTeaser {
@@ -19,6 +21,7 @@ interface Props {
  * crawlers.
  */
 function FromTheBlog({ posts }: Props) {
+  const { ui } = useContext(ConfigContext)!;
   if (!posts.length) return null;
 
   return (
@@ -28,15 +31,15 @@ function FromTheBlog({ posts }: Props) {
     >
       <div className="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
-          label="Writing"
-          title="What we've learned about budgets"
-          subtitle="Notes from renovations that went over, and the ones that didn't."
+          label={ui.sectionLabels.writing}
+          title={ui.blog.title}
+          subtitle={ui.blog.subtitle}
         />
         <a
           href="/blog/"
           className="tick-label shrink-0 border-b-2 border-accent pb-1 text-base-content transition-colors hover:text-primary"
         >
-          All posts
+          {ui.blog.allPosts}
         </a>
       </div>
 

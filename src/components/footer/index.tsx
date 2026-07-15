@@ -9,6 +9,8 @@ function Footer() {
   const {
     name,
     logo,
+    ui,
+    homeHref = "/",
     footer: { links, legalLinks, socials },
   } = useContext(ConfigContext)!;
 
@@ -31,7 +33,7 @@ function Footer() {
     <footer className="border-t border-base-300 bg-base-100 px-4 pb-24 pt-16 md:pb-16">
       <div className="mx-auto flex max-w-screen-lg flex-col gap-10 md:flex-row md:justify-between">
         <div>
-          <a href="/" className="flex items-center gap-2">
+          <a href={homeHref} className="flex items-center gap-2">
             <img
               className="h-10 rounded-[22%]"
               src={withBase(logo)}
@@ -44,7 +46,7 @@ function Footer() {
             </span>
           </a>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-base-content/60">
-            A renovation tracker for iPhone. Made in Denmark by Robert Jensen.
+            {ui.footer.tagline}
           </p>
           {(socials?.facebook || socials?.instagram || socials?.twitter) && (
             <div className="mt-5 flex items-center gap-4 text-base-content/60">
@@ -86,8 +88,8 @@ function Footer() {
         </div>
 
         <div className="grid grid-cols-2 gap-10 md:gap-16">
-          <nav aria-label="Site">
-            <p className="tick-label m-0 text-base-content/40">Site</p>
+          <nav aria-label={ui.footer.site}>
+            <p className="tick-label m-0 text-base-content/40">{ui.footer.site}</p>
             <ul className="mt-4 list-none space-y-3 p-0">
               {links.map(({ title, href }) => (
                 <li key={href} className="m-0 p-0">
@@ -103,7 +105,7 @@ function Footer() {
           </nav>
 
           <div>
-            <p className="tick-label m-0 text-base-content/40">Contact</p>
+            <p className="tick-label m-0 text-base-content/40">{ui.footer.contact}</p>
             <ul className="mt-4 list-none space-y-3 p-0">
               <li className="m-0 p-0">
                 <a

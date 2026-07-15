@@ -6,6 +6,7 @@ import SectionHeading from "../../../../components/sectionHeading";
 
 function Features() {
   const {
+    ui,
     home: { features },
   } = useContext(ConfigContext)!;
   if (!features) return null;
@@ -16,7 +17,7 @@ function Features() {
       className="mx-auto max-w-screen-lg px-4 py-20 md:py-28"
     >
       <SectionHeading
-        label="Features"
+        label={ui.sectionLabels.features}
         title={features.title}
         subtitle={features.subtitle}
       />
