@@ -140,5 +140,17 @@ export type TemplateConfig = {
                 subtitle: string;
             }[];
         } | undefined;
+        /** Secondary grid of everything the flagship four screens don't cover.
+         *  Icon is a key into the inline SVG set in the capabilities component. */
+        capabilities?: {
+            id?: string | undefined;
+            title: string;
+            subtitle?: string | undefined;
+            cards: {
+                icon: string;
+                title: string;
+                subtitle: string;
+            }[];
+        } | undefined;
     };
 }
