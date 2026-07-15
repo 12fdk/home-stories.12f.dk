@@ -61,6 +61,7 @@ const icons: Record<string, ReactNode> = {
 
 function Capabilities() {
   const {
+    ui,
     home: { capabilities },
   } = useContext(ConfigContext)!;
   if (!capabilities) return null;
@@ -71,7 +72,7 @@ function Capabilities() {
       className="mx-auto max-w-screen-lg px-4 pb-20 md:pb-28"
     >
       <SectionHeading
-        label="More"
+        label={ui.sectionLabels.more}
         title={capabilities.title}
         subtitle={capabilities.subtitle}
       />

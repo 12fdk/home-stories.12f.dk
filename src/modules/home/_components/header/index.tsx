@@ -17,12 +17,14 @@ function BudgetRail({
   budget,
   spent,
   potential,
+  labels,
 }: {
   project: string;
   currency: string;
   budget: number;
   spent: number;
   potential: number;
+  labels: { committedSuffix: string; spent: string; committed: string; left: string };
 }) {
   const spentRatio = Math.min(spent / budget, 1);
   const potentialRatio = Math.min(potential / budget, 1 - spentRatio);
@@ -33,7 +35,7 @@ function BudgetRail({
       <div className="flex items-baseline justify-between text-base-content/60">
         <span className="tick-label">{project}</span>
         <span className="tick-label">
-          {Math.round((spentRatio + potentialRatio) * 100)}% committed
+          {Math.round((spentRatio + potentialRatio) * 100)}% {labels.committedSuffix}
         </span>
       </div>
 
@@ -65,9 +67,9 @@ function BudgetRail({
       {/* The dimension callouts */}
       <div className="mt-5 grid grid-cols-3 gap-4 font-mono">
         {[
-          { k: "Spent", v: format(spent) },
-          { k: "Committed", v: format(potential) },
-          { k: "Left", v: format(budget - spent - potential) },
+          { k: labels.spent, v: format(spent) },
+          { k: labels.committed, v: format(potential) },
+          { k: labels.left, v: format(budget - spent - potential) },
         ].map(({ k, v }, index) => (
           <motion.div
             key={k}
@@ -94,6 +96,7 @@ function Header() {
   const {
     googlePlayLink,
     appStoreLink,
+    ui,
     home: { header },
   } = useContext(ConfigContext)!;
 
@@ -131,7 +134,7 @@ function Header() {
             className="tick-label not-prose m-0 flex items-center gap-3 text-base-content/50"
           >
             <span className="inline-block h-0.5 w-8 bg-accent" />
-            Renovation tracker for iPhone
+            {ui.header.eyebrow}
           </motion.p>
 
           <h1 className="mb-0 mt-4 text-[2.5rem] font-extrabold leading-[1.04] tracking-tightest md:text-[3.5rem]">
@@ -220,7 +223,17 @@ function Header() {
             <AppStoreRating size="md" showReviewCount={false} />
           </motion.div>
 
-          {header.sample && <BudgetRail {...header.sample} />}
+          {header.sample && (
+            <BudgetRail
+              {...header.sample}
+              labels={{
+                committedSuffix: ui.header.committedSuffix,
+                spent: ui.header.spent,
+                committed: ui.header.committed,
+                left: ui.header.left,
+              }}
+            />
+          )}
         </div>
 
         {/* The real thing */}

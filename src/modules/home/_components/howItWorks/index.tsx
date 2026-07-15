@@ -10,6 +10,7 @@ import SectionHeading from "../../../../components/sectionHeading";
  */
 function HowItWorks() {
   const {
+    ui,
     home: { howItWorks },
   } = useContext(ConfigContext)!;
 
@@ -22,7 +23,7 @@ function HowItWorks() {
     >
       <div className="mx-auto max-w-screen-lg px-4">
         <SectionHeading
-          label="How it works"
+          label={ui.sectionLabels.howItWorks}
           title={howItWorks.title}
           subtitle={howItWorks.subtitle}
         />

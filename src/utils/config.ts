@@ -7,6 +7,48 @@ const templateConfig: TemplateConfig = {
     description:
       "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
   },
+  locale: "en",
+  // English micro-copy. Other locales override this via src/i18n/translations.
+  ui: {
+    nav: {
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
+      toggleTheme: "Toggle dark mode",
+      language: "Language",
+    },
+    header: {
+      eyebrow: "Renovation tracker for iPhone",
+      committedSuffix: "committed",
+      spent: "Spent",
+      committed: "Committed",
+      left: "Left",
+    },
+    sectionLabels: {
+      features: "Features",
+      more: "More",
+      demo: "Demo",
+      reviews: "Reviews",
+      howItWorks: "How it works",
+      writing: "Writing",
+      atAGlance: "At a glance",
+    },
+    videoDemo: {
+      title: "Watch it run",
+      subtitle:
+        "Three screens, recorded from the app on an iPhone. No mockups, no narration.",
+      tabs: ["Projects", "Budget", "Photos"],
+    },
+    blog: {
+      title: "What we've learned about budgets",
+      subtitle: "Notes from renovations that went over, and the ones that didn't.",
+      allPosts: "All posts",
+    },
+    footer: {
+      site: "Site",
+      contact: "Contact",
+      tagline: "A renovation tracker for iPhone. Made in Denmark by Robert Jensen.",
+    },
+  },
   // Draws grid behind main container
   backgroundGrid: false,
   logo: "/logo.png",
