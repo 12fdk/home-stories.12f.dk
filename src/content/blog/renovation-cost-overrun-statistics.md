@@ -1,6 +1,8 @@
 ---
-title: "Renovation Cost Overrun Statistics: What the Data Actually Says"
-description: "We analyzed 200 renovation projects: average cost overrun is 15–30%. Here's the data on why it happens and how to protect your budget."
+title: "Renovation Cost Overrun Statistics: What Homeowners Should Know"
+
+description: "Renovation cost overrun statistics — why 70%+ of renovations exceed budget, what causes the biggest overruns, and how to avoid them."
+
 lede: "Renovations regularly go 15–30% over budget, and the data shows it's not a bug — it's a structural feature of how renovations are planned. The overrun isn't randomness; it's the gap between optimistic pre-project estimates and the inevitable surprises that surface once the walls open. Size your contingency to the evidence, not the folklore."
 keyword: "renovation cost overrun statistics"
 cover: "/stock/10.png"
@@ -26,10 +28,9 @@ faq:
   - question: "How can you reduce renovation cost overruns?"
     answer: "You can't eliminate them — surprises are structural to any renovation that opens walls. But the data shows a clear hierarchy of reduction. First, invest in a thorough pre-purchase inspection and, if budget allows, a diagnostic opening (a small exploratory cut into a wall or ceiling to look behind before committing to a quote). Second, set your contingency at the higher end for the project type (25% for older homes, 15–20% for post-1990 with wall work, 10% for surface-only cosmetic work). Third, lock in your fixture and finish selections before demolition starts — scope creep during the project is the most controllable variable. Fourth, log every cost in real time and watch the contingency trend. Home Stories does this automatically, so you see your remaining buffer update the moment a surprise cost hits, giving you time to adjust scope early rather than discovering the overbudget situation at the worst possible moment. [Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)."
 relatedSlugs:
-  - "renovation-budget-template"
-  - "how-to-budget-a-home-renovation"
   - "renovation-contingency-budget"
-  - "kitchen-renovation-timeline"
+  - "how-to-budget-a-home-renovation"
+  - "renovation-spreadsheet-alternative"
 ---
 
 ![A finished renovated kitchen with modern white cabinets, marble countertops, and stainless steel appliances — the result of a project that went 20% over budget](/stock/15.png)

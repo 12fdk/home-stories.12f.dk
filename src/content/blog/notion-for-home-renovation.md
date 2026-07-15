@@ -1,6 +1,8 @@
 ---
-title: "Notion vs Home Stories for Renovation Planning"
-description: "Notion is a brilliant renovation planning tool and a frustrating on-site one. Here's exactly where each fits — and why most people end up needing both."
+title: "Notion for Home Renovation: When It Works and When It Doesn't"
+
+description: "Notion for home renovation — when Notion works as a renovation tracker, when it doesn't, and what to use instead on-site."
+
 lede: "Notion is genuinely excellent for the planning half of a renovation: research, mood boards, contractor notes, a flexible database you can shape however you think. It's just as genuinely frustrating for the execution half — logging a receipt one-handed in a dusty kitchen — because it was never built for a phone on a building site. This is an honest map of where each tool wins."
 keyword: "notion for home renovation"
 cover: "/stock/12.png"
@@ -26,9 +28,9 @@ faq:
   - question: "Is Home Stories free?"
     answer: "Yes — Home Stories is free on the App Store for iPhone, with an optional one-time Premium Lifetime upgrade. It's built specifically for renovations rather than being a general productivity tool, with budget tracking, a photo timeline, task management, and PDF export. It requires iOS 17 or later."
 relatedSlugs:
+  - "how-to-track-home-improvement-expenses"
   - "renovation-spreadsheet-alternative"
-  - "how-to-budget-a-home-renovation"
-  - "renovation-budget-template"
+  - "best-home-improvement-apps"
 ---
 
 If you spend any time in renovation forums, you'll find two camps that talk past each other. One swears Notion is the only tool you need — they'll share a screenshot of a beautiful renovation hub with linked databases and a mood board that looks like a magazine spread. The other gave up on Notion three weeks into their actual build and can't quite explain why, only that it "stopped working."

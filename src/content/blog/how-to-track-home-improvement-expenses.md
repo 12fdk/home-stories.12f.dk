@@ -1,6 +1,8 @@
 ---
-title: "How to Track Home Improvement Expenses (4 Methods Compared)"
-description: "Four methods to track home improvement expenses — spreadsheet, Notion, a dedicated app, and receipts-in-a-jar — compared on what actually works on-site."
+title: "How to Track Home Improvement Expenses: Apps vs Spreadsheets"
+
+description: "How to track home improvement expenses — comparing apps vs spreadsheets, with practical advice for keeping your renovation on budget."
+
 lede: "Tracking home improvement expenses only matters if you're doing it on-site, where the money actually leaks. This post compares four methods on the single metric that matters: will you still be logging after three weeks of dust, decision fatigue, and contractor delays?"
 keyword: "how to track home improvement expenses"
 cover: "/stock/05.webp"
@@ -25,9 +27,9 @@ faq:
   - question: "What about tracking expenses after a renovation is done?"
     answer: "Post-project tracking is for records, warranty claims, and tax filings. At this stage, a spreadsheet or PDF export is fine because the urgency is gone. But getting here with clean data depends entirely on how well you tracked during the build. The most common regret I hear is 'I kept the receipts in a folder and never entered them' — which means the final numbers are guesswork and the records are scattered. The single habit that prevents this: log every expense on the day it happens, even if it's just a quick note in a phone app that you tidy up later."
 relatedSlugs:
+  - "how-to-organize-renovation-receipts"
   - "renovation-budget-template"
-  - "how-to-budget-a-home-renovation"
-  - "renovation-contingency-budget"
+  - "notion-for-home-renovation"
 ---
 
 I tracked my last renovation expenses in a spreadsheet for six weeks. Then I stopped.

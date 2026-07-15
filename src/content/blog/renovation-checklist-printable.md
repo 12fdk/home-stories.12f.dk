@@ -1,6 +1,8 @@
 ---
-title: "Printable Renovation Checklist: Every Task by Room"
-description: "A free printable renovation checklist organised room by room — every task from planning to handover, so nothing slips through the cracks."
+title: "Renovation Checklist Printable: Your Complete Step-by-Step Guide"
+
+description: "Renovation checklist printable — a complete step-by-step renovation checklist you can use to plan and track every phase."
+
 lede: "A renovation isn't one big job; it's a few hundred small ones, and the ones that get forgotten are always the cheap, boring tasks that turn expensive later. This printable checklist lists every task, grouped by room and by phase, so you can tick your way through a renovation without anything slipping through the cracks."
 keyword: "renovation checklist printable"
 cover: "/stock/11.png"
@@ -25,9 +27,9 @@ faq:
   - question: "Should I use a paper checklist or an app for my renovation?"
     answer: "Paper is great on the wall for the whole-project view and crossing things off feels good. But a renovation checklist needs to be with you at the merchant, on the scaffold, and in the dust — which is where paper gets lost and a phone doesn't. The practical answer is both: print the master list for the wall, and keep the working version on your phone where you can also attach the receipt and photo to each task as you complete it."
 relatedSlugs:
-  - "home-renovation-phases"
   - "renovation-budget-template"
-  - "how-to-budget-a-home-renovation"
+  - "renovation-contingency-budget"
+  - "how-to-plan-a-home-renovation-step-by-step"
 ---
 
 A renovation looks like one decision — "we're doing the kitchen" — but it's really a few hundred small tasks stacked on top of each other. The big ones (knock down the wall, fit the kitchen) take care of themselves because they're impossible to forget. It's the small, boring, cheap tasks that get missed: ordering the made-to-measure window six weeks before you need it, photographing the pipe runs before the plasterboard goes on, confirming the permit is approved before the trades turn up. Each one is trivial on its own. Each one, forgotten, costs days or money.

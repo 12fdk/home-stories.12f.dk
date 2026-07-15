@@ -1,6 +1,8 @@
 ---
-title: "Why a Spreadsheet Stops Working Halfway Through Your Renovation"
-description: "Spreadsheets are great for planning a renovation and terrible for surviving one. Here's exactly where they fail — and what to replace them with."
+title: "Renovation Spreadsheet Alternative: Why Apps Beat Spreadsheets"
+
+description: "Renovation spreadsheet alternative — why apps beat spreadsheets for tracking renovation costs, receipts, and decisions on-site."
+
 lede: "Every renovator starts with a spreadsheet. Most abandon it by week three. The reasons are predictable, repeatable, and not about the spreadsheet — they're about renovation reality."
 keyword: "renovation spreadsheet alternative"
 cover: "/stock/04.webp"
@@ -26,6 +28,8 @@ faq:
     answer: "When you've stopped logging for three days in a row. That's the signal. The information you're losing in those three days is more valuable than the cost of switching tools."
 relatedSlugs:
   - "renovation-budget-template"
+  - "how-to-track-home-improvement-expenses"
+  - "renovation-checklist-printable"
 ---
 
 There's a quiet pattern in every renovation project. It goes like this.

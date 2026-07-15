@@ -1,6 +1,8 @@
 ---
-title: "Renovation Budget Template (Free PDF + Google Sheet)"
-description: "A simple renovation budget template that actually works — line-item, contingency-aware, and proven on real projects. Free PDF and Google Sheet."
+title: "Renovation Budget Template: Free Spreadsheet for Every Phase"
+
+description: "Renovation budget template — a free spreadsheet breakdown for every renovation phase, with contingency tracking built in."
+
 lede: "Most renovation budgets fail in the same three ways: missing line items, no contingency, and a spreadsheet that nobody opens after week two. This template fixes all three — and it's free."
 keyword: "renovation budget template"
 cover: "/stock/01.webp"
@@ -25,6 +27,8 @@ faq:
   - question: "Do I need to track VAT separately in my renovation budget?"
     answer: "Yes if you might claim it back (rental properties in many jurisdictions) or if you're comparing quotes — some contractors quote ex-VAT, others incl. Build VAT as its own column in the template so you can toggle the view. The included sheet has this column."
 relatedSlugs:
+  - "renovation-checklist-printable"
+  - "how-to-budget-a-home-renovation"
   - "renovation-spreadsheet-alternative"
 ---
 

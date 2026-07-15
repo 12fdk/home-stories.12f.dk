@@ -1,6 +1,8 @@
 ---
-title: "How to Organize Renovation Receipts for Tax & Insurance"
-description: "A shoebox of faded receipts costs you money at tax time and at claim time. Here's a capture-once system that keeps every renovation cost provable for years."
+title: "How to Organize Renovation Receipts: Photo Tracking That Actually Works"
+
+description: "How to organize renovation receipts — a photo-first system that keeps every receipt, invoice, and contract in one place."
+
 lede: "Your renovation receipts are worth real money — but only if you can still find them, read them, and prove what they were for, years after the dust settles. Capital improvements can reduce the tax you owe when you sell, and an insurance claim is only ever as good as the evidence behind it. This is a practical, capture-once system for keeping every cost provable long after the project ends."
 keyword: "how to organize renovation receipts"
 cover: "/stock/03.webp"
@@ -26,9 +28,9 @@ faq:
   - question: "What's the best way to organize renovation receipts?"
     answer: "Capture digitally at the point of sale, tag each receipt with the room and whether it's an improvement or a repair, and keep everything in one place that survives the project. A physical shoebox fails on all three counts — it needs a second filing step you'll skip, the paper fades, and it doesn't survive a fire or a flood. A phone-first renovation app like Home Stories logs the photo, the cost, and the room in one action while you're standing at the till, then exports the whole record as a PDF when you need it."
 relatedSlugs:
-  - "how-to-budget-a-home-renovation"
+  - "how-to-track-home-improvement-expenses"
   - "renovation-budget-template"
-  - "home-renovation-phases"
+  - "renovation-spreadsheet-alternative"
 ---
 
 There's a shoebox in a lot of houses. It sits on top of a wardrobe, and it contains the entire paper history of a renovation: crumpled builders' merchant slips, a folded contractor invoice, a till receipt for tiles that has faded to a blank grey rectangle, and — somewhere near the bottom — a warranty certificate for a boiler that stopped working last winter.
