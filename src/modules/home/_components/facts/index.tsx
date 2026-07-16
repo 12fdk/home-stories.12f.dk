@@ -7,13 +7,14 @@ import { ConfigContext } from "../../../../utils/configContext";
  */
 function Facts() {
   const {
+    ui,
     home: { facts },
   } = useContext(ConfigContext)!;
 
   if (!facts?.length) return null;
 
   return (
-    <section aria-label="At a glance" className="border-b border-base-300 bg-base-200">
+    <section aria-label={ui.sectionLabels.atAGlance} className="border-b border-base-300 bg-base-200">
       <dl className="mx-auto grid max-w-screen-lg grid-cols-2 divide-x divide-y divide-base-300 border-x border-base-300 sm:grid-cols-3 md:grid-cols-5 md:divide-y-0">
         {facts.map(({ label, value }) => (
           <div key={label} className="px-4 py-5 md:px-6">

@@ -5,6 +5,7 @@ import Layout from "Layout.astro"
 import defaultTemplateConfig from "utils/config"
 import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata } from "utils/appStoreData"
 import { readingTime } from "utils/readingTime"
+import { getLocalizedConfig } from "../i18n/getConfig"
 import type { TemplateConfig } from "utils/configType"
 
 // Fetch App Store data at build time
@@ -26,8 +27,9 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
     minutes: readingTime(post.body).minutes,
   }));
 
-// Merge App Store data with default config
-const config: TemplateConfig = {
+// Merge App Store data with default config, then attach English locale metadata
+// (locale + homeHref + the hreflang alternate set shared with every /<lang>/).
+const baseConfig: TemplateConfig = {
   ...defaultTemplateConfig,
   // Override logo with App Store icon (if available and not fallback)
   logo: appStoreData.artworkUrl512.startsWith("http")
@@ -35,6 +37,7 @@ const config: TemplateConfig = {
     : defaultTemplateConfig.logo,
   appStore: toAppStoreMetadata(appStoreData),
 };
+const config = getLocalizedConfig(baseConfig, "en");
 ---
 
 <Layout {...config}>

@@ -1,7 +1,58 @@
 import type { AppStoreMetadata } from "./appStoreData";
 
+/** Micro-copy that lives in components rather than content config. Kept here so
+ *  every visible string is translatable in one place. English values equal the
+ *  literals the components used before i18n, so the English page is unchanged. */
+export interface UiStrings {
+    nav: {
+        openMenu: string;
+        closeMenu: string;
+        toggleTheme: string;
+        language: string;
+    };
+    header: {
+        eyebrow: string;
+        /** Suffix in the rail's "42% committed" readout. */
+        committedSuffix: string;
+        spent: string;
+        committed: string;
+        left: string;
+    };
+    sectionLabels: {
+        features: string;
+        more: string;
+        demo: string;
+        reviews: string;
+        howItWorks: string;
+        writing: string;
+        atAGlance: string;
+    };
+    videoDemo: {
+        title: string;
+        subtitle: string;
+        tabs: [string, string, string];
+    };
+    blog: {
+        title: string;
+        subtitle: string;
+        allPosts: string;
+    };
+    footer: {
+        site: string;
+        contact: string;
+        tagline: string;
+    };
+}
+
 export type TemplateConfig = {
     appStore?: AppStoreMetadata;
+    /** BCP-47 code of the rendered locale, e.g. "en", "de". */
+    locale?: string;
+    /** hreflang alternates for the homepage across every locale. */
+    localeAlternates?: { hreflang: string; href: string }[];
+    /** Root of the current locale — "/" for English, "/<code>/" otherwise. */
+    homeHref?: string;
+    ui: UiStrings;
     name: string;
     seo: {
         title: string;
@@ -136,6 +187,18 @@ export type TemplateConfig = {
                 crop?: string | undefined;
                 /** Mono label above the card title, e.g. "Budget". */
                 label?: string | undefined;
+                title: string;
+                subtitle: string;
+            }[];
+        } | undefined;
+        /** Secondary grid of everything the flagship four screens don't cover.
+         *  Icon is a key into the inline SVG set in the capabilities component. */
+        capabilities?: {
+            id?: string | undefined;
+            title: string;
+            subtitle?: string | undefined;
+            cards: {
+                icon: string;
                 title: string;
                 subtitle: string;
             }[];

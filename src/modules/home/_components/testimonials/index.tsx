@@ -5,6 +5,7 @@ import SectionHeading from "../../../../components/sectionHeading";
 
 function Testimonials() {
   const {
+    ui,
     home: { testimonials },
   } = useContext(ConfigContext)!;
   if (!testimonials) return null;
@@ -15,7 +16,7 @@ function Testimonials() {
       className="mx-auto max-w-screen-lg px-4 py-20 md:py-28"
     >
       <SectionHeading
-        label="Reviews"
+        label={ui.sectionLabels.reviews}
         title={testimonials.title}
         subtitle={testimonials.subtitle}
       />

@@ -73,6 +73,16 @@ export default defineConfig({
     sitemap({
       changefreq: "weekly",
       priority: 0.7,
+      // Emit xhtml:link hreflang alternates. Only the homepage exists in every
+      // locale; blog and legal pages are English-only and stay self-referential.
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en", da: "da", de: "de", fr: "fr", es: "es", it: "it",
+          nl: "nl", pt: "pt", sv: "sv", ja: "ja", zh: "zh-Hans", ko: "ko",
+          pl: "pl", tr: "tr", ru: "ru", nb: "nb",
+        },
+      },
       // A sitemap is a list of pages we want indexed. /app is a redirect stub
       // (noindexed), and llms.txt / llms-full.txt are plain-text files for AI
       // crawlers — Google parks those at "crawled, currently not indexed"

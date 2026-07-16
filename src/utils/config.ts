@@ -7,6 +7,48 @@ const templateConfig: TemplateConfig = {
     description:
       "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
   },
+  locale: "en",
+  // English micro-copy. Other locales override this via src/i18n/translations.
+  ui: {
+    nav: {
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
+      toggleTheme: "Toggle dark mode",
+      language: "Language",
+    },
+    header: {
+      eyebrow: "Renovation tracker for iPhone",
+      committedSuffix: "committed",
+      spent: "Spent",
+      committed: "Committed",
+      left: "Left",
+    },
+    sectionLabels: {
+      features: "Features",
+      more: "More",
+      demo: "Demo",
+      reviews: "Reviews",
+      howItWorks: "How it works",
+      writing: "Writing",
+      atAGlance: "At a glance",
+    },
+    videoDemo: {
+      title: "Watch it run",
+      subtitle:
+        "Three screens, recorded from the app on an iPhone. No mockups, no narration.",
+      tabs: ["Projects", "Budget", "Photos"],
+    },
+    blog: {
+      title: "What we've learned about budgets",
+      subtitle: "Notes from renovations that went over, and the ones that didn't.",
+      allPosts: "All posts",
+    },
+    footer: {
+      site: "Site",
+      contact: "Contact",
+      tagline: "A renovation tracker for iPhone. Made in Denmark by Robert Jensen.",
+    },
+  },
   // Draws grid behind main container
   backgroundGrid: false,
   logo: "/logo.png",
@@ -170,6 +212,62 @@ const templateConfig: TemplateConfig = {
         },
       ],
     },
+    capabilities: {
+      id: "more",
+      title: "And everything around the edges",
+      subtitle:
+        "The four screens do the heavy lifting. These are the parts that keep the rest of a renovation from slipping through the cracks.",
+      cards: [
+        {
+          icon: "widget",
+          title: "Widgets & Live Activities",
+          subtitle:
+            "A budget ring on your Lock Screen, the next tasks at a glance, and a Dynamic Island timer while you work — without opening the app.",
+        },
+        {
+          icon: "clock",
+          title: "Time tracking",
+          subtitle:
+            "Log hours against a project and see where the days actually went, broken down visually alongside the money.",
+        },
+        {
+          icon: "note",
+          title: "Notes & documents",
+          subtitle:
+            "Keep contracts, receipts, and tagged notes with photos attached to the project they belong to — not in a drawer.",
+        },
+        {
+          icon: "tag",
+          title: "Items & shopping lists",
+          subtitle:
+            "Save purchases with prices and store details, organised by phase, so actual cost lands next to what you estimated.",
+        },
+        {
+          icon: "search",
+          title: "Search & Share extension",
+          subtitle:
+            "Search across every project instantly, and save a product straight from Safari, IKEA, or Amazon into the right one.",
+        },
+        {
+          icon: "users",
+          title: "Real-time collaboration",
+          subtitle:
+            "Share a project over iCloud and keep it in sync with a partner, family, or the contractor doing the work.",
+        },
+        {
+          icon: "flag",
+          title: "Project priorities",
+          subtitle:
+            "Flag each project Low, Medium, or High and sort your list — by priority, date, or name — so the next job is on top.",
+        },
+        {
+          icon: "globe",
+          title: "51 languages, accessible",
+          subtitle:
+            "Fully translated into 51 languages, with VoiceOver and Dynamic Type support throughout. Works 100% offline.",
+        },
+      ],
+    },
     faq: {
       id: "faq",
       title: "Questions, answered",
@@ -198,6 +296,21 @@ const templateConfig: TemplateConfig = {
           question: "What devices are supported?",
           answer:
             "Home Stories is currently available for iPhone and requires iOS 17.0 or later. We're focused on delivering the best possible experience on iOS first.",
+        },
+        {
+          question: "Does Home Stories have widgets?",
+          answer:
+            "Yes. Add a budget progress ring and upcoming tasks to your Home Screen and Lock Screen, and use Live Activities with Dynamic Island to keep a project timer in view while you work — all without opening the app.",
+        },
+        {
+          question: "Can I collaborate with a partner or contractor?",
+          answer:
+            "Yes. Share a project over iCloud and it stays in sync in real time across everyone's devices, so a partner, family member, or contractor can follow the budget, tasks, and photos as they change.",
+        },
+        {
+          question: "What languages is Home Stories available in?",
+          answer:
+            "Home Stories is fully translated into 51 languages, including English, German, French, Spanish, Italian, Danish, Dutch, Portuguese, Japanese, Chinese, Korean, and many more, with full VoiceOver and Dynamic Type accessibility support.",
         },
       ],
     },
