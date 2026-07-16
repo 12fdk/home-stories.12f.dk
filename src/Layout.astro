@@ -17,6 +17,11 @@ const OG_LOCALES: Record<string, string> = {
   pl: "pl_PL", tr: "tr_TR", ru: "ru_RU", nb: "nb_NO",
 };
 const ogLocale = OG_LOCALES[localeCode] ?? htmlLang.replace("-", "_");
+// Pages with hreflang alternates (the localized homepage surface) also
+// advertise their og:locale alternates for social/AI preview pickers.
+const ogLocaleAlternates = localeAlternates?.length
+  ? Object.values(OG_LOCALES).filter((l) => l !== ogLocale)
+  : [];
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Always a real 1200x630 image (generated in src/pages/og-image.png.ts) so social
@@ -76,7 +81,6 @@ const aggregateRating = hasRealRatings
     <title>{seo.title}</title>
     <meta name="title" content={seo.title} />
     <meta name="description" content={seo.description} />
-    <meta name="keywords" content="home renovation app, renovation tracker, home improvement app, project management, budget tracking, renovation budget, home project planner, renovation photos, before after renovation, iOS renovation app, iPhone home app, renovation journal, home remodel tracker, renovation progress, DIY project tracker, home renovation planner, renovation cost tracker, home improvement tracker, renovation organizer, free renovation app, renovation budget widget, renovation lock screen widget, renovation time tracking, renovation shopping list, renovation receipts app, iCloud renovation sync, share renovation project, renovation collaboration app, renovation notes app, renovation project priorities" />
     <meta name="author" content="Robert Jensen" />
     <meta
       name="robots"
@@ -115,6 +119,9 @@ const aggregateRating = hasRealRatings
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content={name} />
     <meta property="og:locale" content={ogLocale} />
+    {ogLocaleAlternates.map((alt) => (
+      <meta property="og:locale:alternate" content={alt} />
+    ))}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -134,7 +141,9 @@ const aggregateRating = hasRealRatings
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD",
+        // The canonical storefront link is the Danish App Store, whose
+        // currency is DKK — keep the declared currency consistent with it.
+        "priceCurrency": "DKK",
         "availability": "https://schema.org/InStock"
       },
       ...(aggregateRating ? { "aggregateRating": aggregateRating } : {}),
