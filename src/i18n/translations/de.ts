@@ -240,6 +240,21 @@ const de: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Gegen die Tabelle",
+    "title": "Warum nicht einfach eine Tabelle?",
+    "subtitle": "Sie funktioniert — bis etwa Woche drei. Der ehrliche Vergleich.",
+    "columns": { "them": "Eine Tabelle", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Fotos", "them": "In der Fotomediathek oder einem Ordner, unbeschriftet", "us": "Datiert und an die Projekt-Timeline geheftet" },
+      { "aspect": "Summen", "them": "Formeln, die du selbst schreibst und pflegst", "us": "Ausgegeben, gebunden und verbleibend — automatisch" },
+      { "aspect": "Auf der Baustelle", "them": "Zellen-Zoomen auf dem Handy", "us": "Für iPhone gebaut, funktioniert komplett offline" },
+      { "aspect": "Teilen", "them": "budget_v7_final_FINAL.xlsx per E-Mail", "us": "Live-iCloud-Freigabe oder ein PDF, das jeder lesen kann" },
+      { "aspect": "Belege", "them": "Ein Schuhkarton und gute Vorsätze", "us": "Fotografiert und beim Projekt gespeichert" },
+      { "aspect": "Wenn es bricht", "them": "Eine gelöschte Formel scheitert lautlos", "us": "Nichts zu pflegen — die Struktur ist eingebaut" }
+    ],
+    "cta": "Warum Tabellen irgendwann nicht mehr reichen"
+  },
   "appBanner": {
     "title": "Messen Sie die nächste.",
     "subtitle": "Kostenlos im App Store. Funktioniert offline, braucht kein Konto und synchronisiert mit iCloud, wenn Sie es möchten. Erfordert ein iPhone mit iOS 17 oder neuer."

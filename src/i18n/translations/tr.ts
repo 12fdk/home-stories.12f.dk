@@ -240,6 +240,21 @@ const tr: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Tabloya karşı",
+    "title": "Neden sadece bir tablo değil?",
+    "subtitle": "İşe yarıyor — aşağı yukarı üçüncü haftaya kadar. Dürüst karşılaştırma.",
+    "columns": { "them": "Bir tablo", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Fotoğraflar", "them": "Kamera rulosunda ya da bir klasörde, etiketsiz", "us": "Tarihli ve projenin zaman çizelgesine sabitlenmiş" },
+      { "aspect": "Toplamlar", "them": "Kendi yazıp koruduğun formüller", "us": "Harcanan, taahhüt edilen ve kalan — otomatik" },
+      { "aspect": "Şantiyede", "them": "Telefonda hücreleri yakınlaştırmak", "us": "iPhone için yapıldı, tamamen çevrimdışı çalışır" },
+      { "aspect": "Paylaşım", "them": "budget_v7_final_FINAL.xlsx dosyasını e-postayla göndermek", "us": "iCloud ile canlı paylaşım ya da herkesin okuyabildiği bir PDF" },
+      { "aspect": "Fişler", "them": "Bir ayakkabı kutusu ve iyi niyet", "us": "Fotoğraflanır ve projeyle birlikte saklanır" },
+      { "aspect": "Bozulduğunda", "them": "Silinen formül sessizce yanlış hesaplar", "us": "Bakım gerektirmez — yapı içinde hazır gelir" }
+    ],
+    "cta": "Tabloların neden tıkandığını okuyun"
+  },
   "appBanner": {
     "title": "Sıradakini ölçün.",
     "subtitle": "App Store'da ücretsiz. Çevrimdışı çalışır, hesap gerektirmez ve istediğinizde iCloud ile eşitlenir. iOS 17 veya sonrasına sahip bir iPhone gerektirir."

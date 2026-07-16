@@ -240,6 +240,21 @@ const fr: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Face au tableur",
+    "title": "Pourquoi pas simplement un tableur ?",
+    "subtitle": "Ça marche — jusqu'à la troisième semaine environ. La comparaison honnête.",
+    "columns": { "them": "Un tableur", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Photos", "them": "Dans la pellicule ou un dossier, sans légende", "us": "Datées et épinglées à la chronologie du projet" },
+      { "aspect": "Totaux", "them": "Des formules à écrire et entretenir soi-même", "us": "Dépensé, engagé et restant — automatique" },
+      { "aspect": "Sur le chantier", "them": "Zoomer sur des cellules depuis son téléphone", "us": "Conçu pour iPhone, fonctionne entièrement hors ligne" },
+      { "aspect": "Partage", "them": "Envoyer budget_v7_final_FINAL.xlsx par e-mail", "us": "Partage iCloud en direct, ou un PDF lisible par tous" },
+      { "aspect": "Reçus", "them": "Une boîte à chaussures et de bonnes intentions", "us": "Photographiés et rangés avec le projet" },
+      { "aspect": "Quand ça casse", "them": "Une formule supprimée échoue en silence", "us": "Rien à entretenir — la structure est intégrée" }
+    ],
+    "cta": "Pourquoi les tableurs finissent par lâcher"
+  },
   "appBanner": {
     "title": "Chiffrez la prochaine.",
     "subtitle": "Gratuit sur l'App Store. Fonctionne hors ligne, sans compte, et se synchronise avec iCloud quand vous le souhaitez. Nécessite un iPhone avec iOS 17 ou une version ultérieure."

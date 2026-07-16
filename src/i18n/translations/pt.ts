@@ -240,6 +240,21 @@ const pt: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Contra a folha de cálculo",
+    "title": "Porquê não simplesmente uma folha de cálculo?",
+    "subtitle": "Funciona — até cerca da terceira semana. A comparação honesta.",
+    "columns": { "them": "Uma folha de cálculo", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Fotos", "them": "No rolo da câmara ou numa pasta, sem etiqueta", "us": "Datadas e fixadas na cronologia do projeto" },
+      { "aspect": "Totais", "them": "Fórmulas que escreve e mantém sozinho", "us": "Gasto, comprometido e restante — automático" },
+      { "aspect": "Na obra", "them": "Ampliar células no telemóvel", "us": "Feito para iPhone, funciona totalmente offline" },
+      { "aspect": "Partilha", "them": "Enviar budget_v7_final_FINAL.xlsx por e-mail", "us": "Partilha iCloud em direto, ou um PDF que todos leem" },
+      { "aspect": "Recibos", "them": "Uma caixa de sapatos e boas intenções", "us": "Fotografados e guardados com o projeto" },
+      { "aspect": "Quando falha", "them": "Uma fórmula apagada falha em silêncio", "us": "Nada para manter — a estrutura vem integrada" }
+    ],
+    "cta": "Porque é que as folhas de cálculo deixam de funcionar"
+  },
   "appBanner": {
     "title": "Meça a próxima.",
     "subtitle": "Grátis na App Store. Funciona offline, não precisa de conta e sincroniza com o iCloud quando quiser. Requer um iPhone com iOS 17 ou posterior."

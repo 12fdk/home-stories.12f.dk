@@ -240,6 +240,21 @@ const es: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Contra la hoja de cálculo",
+    "title": "¿Por qué no simplemente una hoja de cálculo?",
+    "subtitle": "Funciona — hasta la tercera semana, más o menos. La comparación honesta.",
+    "columns": { "them": "Una hoja de cálculo", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Fotos", "them": "En el carrete o una carpeta, sin etiquetar", "us": "Fechadas y ancladas a la cronología del proyecto" },
+      { "aspect": "Totales", "them": "Fórmulas que escribes y mantienes tú", "us": "Gastado, comprometido y restante — automático" },
+      { "aspect": "En la obra", "them": "Haciendo zoom en celdas desde el móvil", "us": "Hecho para iPhone, funciona totalmente sin conexión" },
+      { "aspect": "Compartir", "them": "Enviar budget_v7_final_FINAL.xlsx por correo", "us": "Compartir por iCloud en directo, o un PDF que cualquiera lee" },
+      { "aspect": "Recibos", "them": "Una caja de zapatos y buenas intenciones", "us": "Fotografiados y guardados con el proyecto" },
+      { "aspect": "Cuando falla", "them": "Una fórmula borrada falla en silencio", "us": "Nada que mantener — la estructura viene integrada" }
+    ],
+    "cta": "Por qué las hojas de cálculo dejan de funcionar"
+  },
   "appBanner": {
     "title": "Mide la próxima.",
     "subtitle": "Gratis en la App Store. Funciona sin conexión, no necesita cuenta y se sincroniza con iCloud cuando tú quieras. Requiere iPhone con iOS 17 o posterior."

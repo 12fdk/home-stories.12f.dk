@@ -240,6 +240,21 @@ const pl: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Kontra arkusz",
+    "title": "Dlaczego nie zwykły arkusz kalkulacyjny?",
+    "subtitle": "Działa — mniej więcej do trzeciego tygodnia. Uczciwe porównanie.",
+    "columns": { "them": "Arkusz kalkulacyjny", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Zdjęcia", "them": "W rolce aparatu albo folderze, bez opisów", "us": "Z datą, przypięte do osi czasu projektu" },
+      { "aspect": "Sumy", "them": "Formuły, które sam piszesz i utrzymujesz", "us": "Wydane, zadeklarowane i pozostałe — automatycznie" },
+      { "aspect": "Na budowie", "them": "Powiększanie komórek na telefonie", "us": "Stworzone dla iPhone'a, działa całkowicie offline" },
+      { "aspect": "Udostępnianie", "them": "Mailowanie budget_v7_final_FINAL.xlsx", "us": "Udostępnianie na żywo przez iCloud albo czytelny PDF" },
+      { "aspect": "Paragony", "them": "Pudełko po butach i dobre chęci", "us": "Sfotografowane i przechowywane razem z projektem" },
+      { "aspect": "Gdy coś pęka", "them": "Usunięta formuła zawodzi po cichu", "us": "Nie ma czego utrzymywać — struktura jest wbudowana" }
+    ],
+    "cta": "Przeczytaj, dlaczego arkusze przestają działać"
+  },
   "appBanner": {
     "title": "Zmierz następny.",
     "subtitle": "Bezpłatnie w App Store. Działa offline, nie wymaga konta i synchronizuje się z iCloud, kiedy chcesz. Wymaga iPhone'a z systemem iOS 17 lub nowszym."

@@ -240,6 +240,21 @@ const sv: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Mot kalkylarket",
+    "title": "Varför inte bara ett kalkylark?",
+    "subtitle": "Det funkar — till ungefär vecka tre. Den ärliga jämförelsen.",
+    "columns": { "them": "Ett kalkylark", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Foton", "them": "I kamerarullen eller en mapp, omärkta", "us": "Daterade och fästa på projektets tidslinje" },
+      { "aspect": "Summor", "them": "Formler du skriver och underhåller själv", "us": "Spenderat, bundet och kvar — automatiskt" },
+      { "aspect": "På bygget", "them": "Nyp-zooma celler i telefonen", "us": "Byggt för iPhone, fungerar helt offline" },
+      { "aspect": "Delning", "them": "Mejla budget_v7_final_FINAL.xlsx", "us": "Live-delning via iCloud, eller en PDF alla kan läsa" },
+      { "aspect": "Kvitton", "them": "En skokartong och goda intentioner", "us": "Fotograferade och sparade med projektet" },
+      { "aspect": "När det går sönder", "them": "En raderad formel felar i tysthet", "us": "Inget att underhålla — strukturen är inbyggd" }
+    ],
+    "cta": "Läs varför kalkylark slutar fungera"
+  },
   "appBanner": {
     "title": "Mät nästa projekt.",
     "subtitle": "Gratis på App Store. Fungerar offline, kräver inget konto och synkar med iCloud när du vill. Kräver iPhone med iOS 17 eller senare."

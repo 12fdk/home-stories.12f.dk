@@ -240,6 +240,21 @@ const nl: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Versus de spreadsheet",
+    "title": "Waarom niet gewoon een spreadsheet?",
+    "subtitle": "Het werkt — tot ongeveer week drie. De eerlijke vergelijking.",
+    "columns": { "them": "Een spreadsheet", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Foto's", "them": "In de filmrol of een map, zonder label", "us": "Gedateerd en vastgezet op de projecttijdlijn" },
+      { "aspect": "Totalen", "them": "Formules die je zelf schrijft en onderhoudt", "us": "Besteed, toegezegd en resterend — automatisch" },
+      { "aspect": "Op de bouwplaats", "them": "Cellen knijp-zoomen op je telefoon", "us": "Gemaakt voor iPhone, werkt volledig offline" },
+      { "aspect": "Delen", "them": "budget_v7_final_FINAL.xlsx mailen", "us": "Live delen via iCloud, of een PDF die iedereen kan lezen" },
+      { "aspect": "Bonnetjes", "them": "Een schoenendoos en goede voornemens", "us": "Gefotografeerd en bewaard bij het project" },
+      { "aspect": "Als het breekt", "them": "Een gewiste formule faalt geruisloos", "us": "Niets te onderhouden — de structuur zit ingebouwd" }
+    ],
+    "cta": "Waarom spreadsheets ophouden te werken"
+  },
   "appBanner": {
     "title": "Meet de volgende.",
     "subtitle": "Gratis in de App Store. Werkt offline, vereist geen account en synchroniseert met iCloud wanneer jij dat wilt. Vereist een iPhone met iOS 17 of nieuwer."

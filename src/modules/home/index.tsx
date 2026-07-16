@@ -8,6 +8,7 @@ import Header from "./_components/header";
 import Facts from "./_components/facts";
 import Features from "./_components/features";
 import Capabilities from "./_components/capabilities";
+import Comparison from "./_components/comparison";
 import Faq from "./_components/faq";
 import HowItWorks from "./_components/howItWorks";
 import Testimonials from "./_components/testimonials";
@@ -32,6 +33,7 @@ function Home({ config, posts = [] }: Props) {
           <Capabilities />
           <VideoDemo />
           <HowItWorks />
+          <Comparison />
           <Testimonials />
           <FromTheBlog posts={posts} />
           <Faq />

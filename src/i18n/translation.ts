@@ -38,6 +38,15 @@ export interface Translation {
   };
   testimonials: { title: string; subtitle: string; comments: string[] };
   faq: { title: string; qa: { question: string; answer: string }[] };
+  /** Optional so older translation files fall back to English wholesale. */
+  comparison?: {
+    label: string;
+    title: string;
+    subtitle: string;
+    columns: { them: string; us: string };
+    rows: { aspect: string; them: string; us: string }[];
+    cta: string;
+  };
   appBanner: { title: string; subtitle: string };
 }
 
@@ -87,6 +96,16 @@ export function extractEnglish(base: TemplateConfig): Translation {
       title: h.faq!.title,
       qa: h.faq!.qa.map((q) => ({ question: q.question, answer: q.answer })),
     },
+    comparison: h.comparison
+      ? {
+          label: h.comparison.label,
+          title: h.comparison.title,
+          subtitle: h.comparison.subtitle ?? "",
+          columns: { ...h.comparison.columns },
+          rows: h.comparison.rows.map((r) => ({ ...r })),
+          cta: h.comparison.cta?.text ?? "",
+        }
+      : undefined,
     appBanner: {
       title: base.appBanner!.title,
       subtitle: base.appBanner!.subtitle,
@@ -214,6 +233,23 @@ export function applyTranslation(
             })),
           }
         : h.faq,
+      comparison: h.comparison
+        ? {
+            ...h.comparison,
+            label: t.comparison?.label ?? h.comparison.label,
+            title: t.comparison?.title ?? h.comparison.title,
+            subtitle: t.comparison?.subtitle ?? h.comparison.subtitle,
+            columns: t.comparison?.columns ?? h.comparison.columns,
+            rows: byIndex(h.comparison.rows, t.comparison?.rows, (r, o) => ({
+              aspect: o?.aspect ?? r.aspect,
+              them: o?.them ?? r.them,
+              us: o?.us ?? r.us,
+            })),
+            cta: h.comparison.cta
+              ? { ...h.comparison.cta, text: t.comparison?.cta || h.comparison.cta.text }
+              : h.comparison.cta,
+          }
+        : h.comparison,
     },
   };
 }

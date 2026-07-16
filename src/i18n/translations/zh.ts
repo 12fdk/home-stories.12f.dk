@@ -240,6 +240,21 @@ const zh: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "对比电子表格",
+    "title": "为什么不用电子表格就好？",
+    "subtitle": "它确实能用 — 大约撑到第三周。这是一份诚实的对比。",
+    "columns": { "them": "电子表格", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "照片", "them": "散落在相册或文件夹里，没有标注", "us": "带日期，固定在项目时间线上" },
+      { "aspect": "汇总", "them": "公式要自己写、自己维护", "us": "已花费、已承诺、剩余 — 自动计算" },
+      { "aspect": "在工地", "them": "在手机上捏合缩放单元格", "us": "为 iPhone 打造，完全离线可用" },
+      { "aspect": "共享", "them": "邮件发送 budget_v7_final_FINAL.xlsx", "us": "iCloud 实时共享，或导出人人能读的 PDF" },
+      { "aspect": "收据", "them": "一个鞋盒加良好的愿望", "us": "拍照存档，和项目放在一起" },
+      { "aspect": "出错时", "them": "被删的公式悄无声息地失效", "us": "无需维护 — 结构是内置的" }
+    ],
+    "cta": "了解电子表格为何撑不到最后"
+  },
   "appBanner": {
     "title": "量化你的下一个项目。",
     "subtitle": "在 App Store 免费下载。离线可用，无需账户，需要时还能通过 iCloud 同步。需要搭载 iOS 17 或更高版本的 iPhone。"
