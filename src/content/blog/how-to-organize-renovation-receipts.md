@@ -1,5 +1,5 @@
 ---
-title: "How to Organize Renovation Receipts: Photo Tracking That Actually Works"
+title: "How to Organize Renovation Receipts: A Photo-First System"
 
 description: "How to organize renovation receipts — a photo-first system that keeps every receipt, invoice, and contract in one place."
 
