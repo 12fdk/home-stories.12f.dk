@@ -167,7 +167,13 @@ const aggregateRating = hasRealRatings
         "@type": "Person",
         "name": "Robert Jensen",
         "email": "robert@12f.dk",
-        "url": "https://www.12f.dk"
+        "url": "https://www.12f.dk",
+        // Verified profiles only — strengthens the entity graph for AI/Knowledge
+        // Graph disambiguation. #77
+        "sameAs": [
+          "https://apps.apple.com/dk/developer/robert-jensen/id1786807724",
+          "https://www.robert-jensen.dk"
+        ]
       }
     })} />
 
@@ -207,9 +213,17 @@ const aggregateRating = hasRealRatings
       "name": "12f",
       "url": "https://www.12f.dk",
       "email": "robert@12f.dk",
+      "sameAs": [
+        "https://github.com/12fdk",
+        "https://apps.apple.com/dk/developer/robert-jensen/id1786807724"
+      ],
       "founder": {
         "@type": "Person",
-        "name": "Robert Jensen"
+        "name": "Robert Jensen",
+        "sameAs": [
+          "https://apps.apple.com/dk/developer/robert-jensen/id1786807724",
+          "https://www.robert-jensen.dk"
+        ]
       },
       "brand": {
         "@type": "Brand",
