@@ -70,13 +70,9 @@ function BudgetRail({
           { k: labels.spent, v: format(spent) },
           { k: labels.committed, v: format(potential) },
           { k: labels.left, v: format(budget - spent - potential) },
-        ].map(({ k, v }, index) => (
-          <motion.div
-            key={k}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 + index * 0.1 }}
-          >
+        ].map(({ k, v }) => (
+          // Static: hero text must be visible in the SSR paint (LCP). #23
+          <div key={k}>
             <div
               aria-hidden="true"
               className="rail text-base-content"
@@ -85,7 +81,7 @@ function BudgetRail({
               {v}
             </div>
             <div className="tick-label text-base-content/50">{k}</div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
@@ -128,31 +124,19 @@ function Header() {
 
       <div className="mx-auto grid max-w-screen-lg gap-12 px-4 pb-16 pt-8 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-8 md:pb-20 md:pt-10">
         <div className="prose max-w-none">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="tick-label not-prose m-0 flex items-center gap-3 text-base-content/50"
-          >
+          {/* Hero text is static: SSR must paint it immediately — entrance
+              animations here hid the LCP element until hydration (#23). */}
+          <p className="tick-label not-prose m-0 flex items-center gap-3 text-base-content/50">
             <span className="inline-block h-0.5 w-8 bg-accent" />
             {ui.header.eyebrow}
-          </motion.p>
+          </p>
 
           <h1 className="mb-0 mt-4 text-[2.5rem] font-extrabold leading-[1.04] tracking-tightest md:text-[3.5rem]">
             {words.map((word, wordIndex) => {
               const highlighted =
                 mark && wordIndex >= mark[0] && wordIndex < mark[1];
               return (
-                <motion.span
-                  key={wordIndex}
-                  initial={{ opacity: 0, y: "0.4em" }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: 0.08 * wordIndex,
-                    duration: 0.5,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                  className="inline-block"
-                >
+                <span key={wordIndex} className="inline-block">
                   <span
                     className={
                       highlighted
@@ -173,26 +157,16 @@ function Header() {
                     )}
                   </span>
                   {wordIndex < words.length - 1 && " "}
-                </motion.span>
+                </span>
               );
             })}
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.45 }}
-            className="mb-0 mt-5 max-w-lg text-base leading-relaxed text-base-content/70 md:text-lg"
-          >
+          <p className="mb-0 mt-5 max-w-lg text-base leading-relaxed text-base-content/70 md:text-lg">
             {header.subtitle}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="not-prose mt-7 flex flex-wrap items-center gap-x-5 gap-y-4"
-          >
+          <div className="not-prose mt-7 flex flex-wrap items-center gap-x-5 gap-y-4">
             {appStoreLink && (
               <a
                 href={appStoreLink}
@@ -221,7 +195,7 @@ function Header() {
               </a>
             )}
             <AppStoreRating size="md" showReviewCount={false} />
-          </motion.div>
+          </div>
 
           {header.sample && (
             <BudgetRail
@@ -238,12 +212,9 @@ function Header() {
 
         {/* The real thing */}
         <div className="flex justify-center md:justify-end">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="iphone-frame"
-          >
+          {/* Static: the phone screenshot is the desktop LCP candidate — it
+              must be visible in the SSR paint, not gated on hydration. #23 */}
+          <div className="iphone-frame">
             <div className="iphone-device">
               <div className="iphone-dynamic-island" />
               <div className="iphone-screen">
@@ -251,6 +222,10 @@ function Header() {
                   <img
                     key={src}
                     src={withBase(src)}
+                    // The frame renders at 280px; the source files are 1206px.
+                    // Right-sized variants keep the LCP image small (#23).
+                    srcSet={`${withBase(src.replace(".webp", "-560.webp"))} 560w, ${withBase(src.replace(".webp", "-840.webp"))} 840w, ${withBase(src)} 1206w`}
+                    sizes="280px"
                     alt={`Home Stories on iPhone, screen ${shotIndex + 1}`}
                     className="iphone-screenshot absolute inset-0 transition-opacity duration-700"
                     style={{ opacity: shotIndex === index ? 1 : 0 }}
@@ -266,7 +241,7 @@ function Header() {
               <div className="iphone-button-left iphone-button-volume-down" />
               <div className="iphone-button-right iphone-button-power" />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
