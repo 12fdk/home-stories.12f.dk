@@ -93,7 +93,9 @@ export function toAppStoreMetadata(data: AppStoreData): AppStoreMetadata {
     price: data.formattedPrice,
     minimumOsVersion: data.minimumOsVersion,
     lastUpdated: data.currentVersionReleaseDate,
-    appIconUrl: data.artworkUrl512,
+    // Self-hosted build-time copy (src/pages/app-icon-512.jpg.ts) — nothing
+    // shipped to the client should reference Apple's CDN. #74
+    appIconUrl: "/app-icon-512.jpg",
     description: data.description,
   };
 }

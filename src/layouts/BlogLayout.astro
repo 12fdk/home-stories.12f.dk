@@ -41,9 +41,8 @@ const {
 const appStoreData = await fetchAppStoreData() ?? fallbackAppStoreData;
 const config: TemplateConfig = {
   ...defaultTemplateConfig,
-  logo: appStoreData.artworkUrl512.startsWith("http")
-    ? appStoreData.artworkUrl512
-    : defaultTemplateConfig.logo,
+  // Self-hosted build-time copy of the App Store icon (see app-icon-512.jpg.ts). #74
+  logo: "/app-icon-512.jpg",
   appStore: toAppStoreMetadata(appStoreData),
 };
 
@@ -102,7 +101,8 @@ const breadcrumbSchema = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    {config.logo.startsWith("http") && <link rel="apple-touch-icon" href={config.logo} />}
+    <link rel="apple-touch-icon" href={config.logo} />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
 
     <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />

@@ -55,7 +55,8 @@ const aggregateRating = hasRealRatings
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    {logo.startsWith("http") && <link rel="apple-touch-icon" href={logo} />}
+    <link rel="apple-touch-icon" href={logo} />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Preload critical fonts: display face is above the fold in the h1 -->
