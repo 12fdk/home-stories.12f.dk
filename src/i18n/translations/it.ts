@@ -240,6 +240,21 @@ const it: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Contro il foglio di calcolo",
+    "title": "Perché non un semplice foglio di calcolo?",
+    "subtitle": "Funziona — fino alla terza settimana, più o meno. Il confronto onesto.",
+    "columns": { "them": "Un foglio di calcolo", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Foto", "them": "Nel rullino o in una cartella, senza etichette", "us": "Datate e fissate alla timeline del progetto" },
+      { "aspect": "Totali", "them": "Formule che scrivi e mantieni da solo", "us": "Speso, impegnato e rimanente — automatico" },
+      { "aspect": "In cantiere", "them": "Zoom sulle celle dal telefono", "us": "Fatto per iPhone, funziona completamente offline" },
+      { "aspect": "Condivisione", "them": "Inviare budget_v7_final_FINAL.xlsx via mail", "us": "Condivisione iCloud in tempo reale, o un PDF leggibile da tutti" },
+      { "aspect": "Scontrini", "them": "Una scatola di scarpe e buone intenzioni", "us": "Fotografati e conservati con il progetto" },
+      { "aspect": "Quando si rompe", "them": "Una formula cancellata fallisce in silenzio", "us": "Niente da mantenere — la struttura è integrata" }
+    ],
+    "cta": "Perché i fogli di calcolo smettono di funzionare"
+  },
   "appBanner": {
     "title": "Misura la prossima.",
     "subtitle": "Gratis sull'App Store. Funziona offline, non richiede alcun account e si sincronizza con iCloud quando vuoi. Richiede iPhone con iOS 17 o successivo."

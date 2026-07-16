@@ -240,6 +240,21 @@ const nb: Translation = {
       }
     ]
   },
+  "comparison": {
+    "label": "Mot regnearket",
+    "title": "Hvorfor ikke bare et regneark?",
+    "subtitle": "Det funker — til omtrent uke tre. Den ærlige sammenligningen.",
+    "columns": { "them": "Et regneark", "us": "Home Stories" },
+    "rows": [
+      { "aspect": "Bilder", "them": "I kamerarullen eller en mappe, umerket", "us": "Datert og festet til prosjektets tidslinje" },
+      { "aspect": "Summer", "them": "Formler du skriver og vedlikeholder selv", "us": "Brukt, bundet og gjenstående — automatisk" },
+      { "aspect": "På byggeplassen", "them": "Knip-zoome celler på telefonen", "us": "Bygget for iPhone, fungerer helt offline" },
+      { "aspect": "Deling", "them": "Å e-poste budget_v7_final_FINAL.xlsx", "us": "Live iCloud-deling, eller en PDF alle kan lese" },
+      { "aspect": "Kvitteringer", "them": "En skoeske og gode intensjoner", "us": "Fotografert og lagret sammen med prosjektet" },
+      { "aspect": "Når det ryker", "them": "En slettet formel feiler i stillhet", "us": "Ingenting å vedlikeholde — strukturen er innebygd" }
+    ],
+    "cta": "Les hvorfor regneark slutter å virke"
+  },
   "appBanner": {
     "title": "Mål den neste.",
     "subtitle": "Gratis i App Store. Fungerer offline, trenger ingen konto, og synkroniserer med iCloud når du vil. Krever iPhone med iOS 17 eller nyere."

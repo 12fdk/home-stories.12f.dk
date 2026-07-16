@@ -203,5 +203,15 @@ export type TemplateConfig = {
                 subtitle: string;
             }[];
         } | undefined;
+        /** Spreadsheet-vs-app comparison table. Rows are aspect / them / us. */
+        comparison?: {
+            id?: string | undefined;
+            label: string;
+            title: string;
+            subtitle?: string | undefined;
+            columns: { them: string; us: string };
+            rows: { aspect: string; them: string; us: string }[];
+            cta?: { text: string; href: string } | undefined;
+        } | undefined;
     };
 }

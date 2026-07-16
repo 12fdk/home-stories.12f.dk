@@ -132,6 +132,49 @@ const templateConfig: TemplateConfig = {
         },
       ],
     },
+    comparison: {
+      id: "vs-spreadsheets",
+      label: "Vs the spreadsheet",
+      title: "Why not just a spreadsheet?",
+      subtitle: "It works — until about week three. The honest comparison.",
+      columns: { them: "A spreadsheet", us: "Home Stories" },
+      rows: [
+        {
+          aspect: "Photos",
+          them: "In a camera roll or folder, unlabeled",
+          us: "Dated and pinned to the project timeline",
+        },
+        {
+          aspect: "Totals",
+          them: "Formulas you write and maintain yourself",
+          us: "Spent, committed, and remaining — automatic",
+        },
+        {
+          aspect: "On site",
+          them: "Pinch-zooming cells on your phone",
+          us: "Built for iPhone, works fully offline",
+        },
+        {
+          aspect: "Sharing",
+          them: "Emailing budget_v7_final_FINAL.xlsx",
+          us: "Live iCloud sharing, or a PDF anyone can read",
+        },
+        {
+          aspect: "Receipts",
+          them: "A shoebox and good intentions",
+          us: "Photographed and stored with the project",
+        },
+        {
+          aspect: "When it breaks",
+          them: "A deleted formula fails silently",
+          us: "Nothing to maintain — the structure is built in",
+        },
+      ],
+      cta: {
+        text: "Read why spreadsheets stop working",
+        href: "/blog/renovation-spreadsheet-alternative/",
+      },
+    },
     howItWorks: {
       id: "how-it-works",
       title: "Five steps, start to handover",
