@@ -24,10 +24,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("/og-image.png", Astro.site).href;
 const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
 
-// Only expose rating markup when the App Store actually reports real ratings.
-// A fabricated aggregateRating (e.g. 5.0 / count 1) is self-serving review markup
-// and can trigger a Google structured-data manual action.
-const hasRealRatings = !!(appStore?.ratingCount && appStore.ratingCount > 0 && appStore?.rating && appStore.rating > 0);
+// Only expose rating markup once the App Store reports a *credible sample* of
+// real ratings. The data is genuine, but a single 5.0 rating (count 1) is thin,
+// self-serving-looking review markup: Google won't grant a review rich result on
+// so few ratings and can treat it as a structured-data manual-action risk. Gate
+// on a minimum count so the markup appears automatically once the app has a
+// meaningful number of ratings, straight from the live App Store lookup. See #75.
+const MIN_RATING_COUNT = 5;
+const hasRealRatings = !!(appStore?.ratingCount && appStore.ratingCount >= MIN_RATING_COUNT && appStore?.rating && appStore.rating > 0);
 const aggregateRating = hasRealRatings
   ? {
       "@type": "AggregateRating",
