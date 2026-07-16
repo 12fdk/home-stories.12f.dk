@@ -64,7 +64,9 @@ const aggregateRating = hasRealRatings
     <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Preload the hero screenshot -->
-    <link rel="preload" href="/screenshots/projects-list.webp" as="image" type="image/webp" />
+    <link rel="preload" as="image" type="image/webp"
+      imagesrcset="/screenshots/projects-list-560.webp 560w, /screenshots/projects-list-840.webp 840w, /screenshots/projects-list.webp 1206w"
+      imagesizes="280px" />
 
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://umami.robert-jensen.dk" />
