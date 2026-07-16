@@ -1,6 +1,8 @@
 ---
-title: "How to Budget a Home Renovation Without Going Over (2026)"
-description: "How to budget a home renovation without going over: a step-by-step 2026 method using real quotes, the right contingency, and tracking that survives the build."
+title: "How to Budget a Home Renovation: 7 Steps to an Honest Budget"
+
+description: "How to budget a home renovation — 7 steps to build an honest budget that covers scope, contingency, and every hidden cost."
+
 lede: "To budget a home renovation without going over, build it from itemised quotes (not a single lump sum), add a 15–25% contingency, and track actual vs. estimated per line item from day one. The overrun almost always comes from costs nobody listed, not from prices that rose."
 keyword: "how to budget a home renovation"
 cover: "/stock/09.png"
@@ -28,8 +30,8 @@ faq:
   - question: "How often should I update my renovation budget?"
     answer: "Weekly at minimum, ideally at the moment each cost is committed. The danger isn't a single big surprise — it's small drift you don't notice because you're updating the budget a fortnight late. Logging each receipt and change as it happens is the single habit that keeps a renovation on budget."
 relatedSlugs:
-  - "renovation-contingency-budget"
   - "renovation-budget-template"
+  - "renovation-contingency-budget"
   - "renovation-spreadsheet-alternative"
 ---
 

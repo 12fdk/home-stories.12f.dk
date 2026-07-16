@@ -1,6 +1,8 @@
 ---
-title: "How to Plan a Home Renovation Step by Step (2026 Guide)"
-description: "Step-by-step guide to planning a home renovation in 2026 — from the first decision to the final walkthrough. Real numbers, real timelines."
+title: "How to Plan a Home Renovation: 6 Phases from Idea to Handover"
+
+description: "How to plan a home renovation — 6 phases from inspiration to handover, with what to track and watch for at each stage."
+
 lede: "Planning a home renovation doesn't have to mean spreadsheets, anxiety, and surprises that blow your budget. The right approach breaks the entire process into discrete, manageable steps — each with a clear start, a clear deliverable, and a clear next step. This guide walks you through every phase of a home renovation, from the very first decision to the final walkthrough, with realistic timelines and costs so you know exactly what comes next."
 keyword: "how to plan a home renovation step by step"
 cover: "/stock/13.png"
@@ -27,11 +29,9 @@ faq:
   - question: "What should I do before a renovation starts?"
     answer: "Five things: (1) Lock in your budget and have a cushion — 15–20% contingency for anything beyond cosmetic work. (2) Finalise every design decision before demolition: layouts, fixtures, finishes, cabinetry, appliances. Changing your mind mid-project is the most expensive thing you can do. (3) Get permits approved. (4) Order long-lead items (cabinets, custom windows, specialty appliances) as early as possible. (5) Plan your life around the disruption — where will you cook, store food, do laundry, and if it's a bathroom renovation, where will you shower? The more practical details you sort in advance, the less friction during the project."
 relatedSlugs:
-  - "renovation-budget-template"
-  - "how-to-budget-a-home-renovation"
-  - "home-renovation-phases"
-  - "renovation-contingency-budget"
   - "kitchen-renovation-timeline"
+  - "renovation-checklist-printable"
+  - "how-to-budget-a-home-renovation"
 ---
 
 ![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.png)

@@ -1,6 +1,8 @@
 ---
-title: "Renovation Contingency Budget: How Much to Set Aside"
-description: "How big a renovation contingency budget you really need, what it's for, when to dip in, and how to track it so surprises don't sink the project."
+title: "Renovation Contingency Budget: How Much to Set Aside and Why"
+
+description: "Renovation contingency budget — why you need 15-20% extra, where surprises come from, and how to track your contingency."
+
 lede: "A renovation contingency budget isn't padding or pessimism — it's a funded line item for the surprises you can't see yet. Size it to the home (15–25%, not the builder's-folklore 10%), ring-fence it so it isn't spent on upgrades by week three, and draw it down visibly so you always know how much runway is left."
 keyword: "renovation contingency budget"
 cover: "/stock/07.png"
@@ -29,8 +31,8 @@ faq:
     answer: "Treat it as a live balance, not a fixed number. Start with the funded amount, and every time you draw on it, subtract the amount and note the reason, so the remaining buffer is always visible. Watch the trend, not just the total: contingency dropping fast in the first few weeks is an early warning that your estimates were optimistic and the scope may need cutting. Logging each draw as it happens — ideally in something you can update on-site — is what turns contingency from a guess into a control."
 relatedSlugs:
   - "how-to-budget-a-home-renovation"
-  - "renovation-budget-template"
-  - "home-renovation-phases"
+  - "renovation-cost-overrun-statistics"
+  - "kitchen-renovation-timeline"
 ---
 
 Almost every renovation that goes over budget had a contingency — on paper. The problem is rarely that homeowners forget the line entirely. It's that they size it too small, spend it on the wrong things, and never actually watch it drain until it's already gone. By then "contingency" has quietly become "the money we spent on the upgrades we couldn't resist," and there's nothing left for the wall that turns out to be holding the house up.

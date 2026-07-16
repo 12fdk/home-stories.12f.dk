@@ -1,6 +1,8 @@
 ---
-title: "The 7 Phases of a Home Renovation (and What to Track)"
-description: "The 7 phases of a home renovation, in order — and exactly what to track in each one so the project lands on time, on budget, and on plan."
+title: "Home Renovation Phases: The 6 Stages You Can't Skip"
+
+description: "Home renovation phases — the 6 stages you can't skip in a renovation, from inspiration to snags, with what to track at each."
+
 lede: "Every home renovation moves through the same seven phases, whether it's a single bathroom or a whole house. Knowing the sequence — and the one or two things that actually matter to track in each phase — is what separates a project that stays on plan from one that drifts."
 keyword: "home renovation phases"
 cover: "/stock/08.png"
@@ -26,9 +28,9 @@ faq:
   - question: "Can you skip phases in a small renovation?"
     answer: "You can compress them, but not skip them. A single-room refresh might fold budgeting, design, and hiring into an afternoon, and need no permits at all. But the phases still happen in sequence — you still decide scope, set a budget, choose materials, do the work, and check it. Trouble starts when people skip the deliberate version of a phase (a real budget, a written contract) and end up doing the accidental, expensive version instead."
 relatedSlugs:
-  - "how-to-budget-a-home-renovation"
-  - "renovation-budget-template"
-  - "renovation-spreadsheet-alternative"
+  - "how-to-plan-a-home-renovation-step-by-step"
+  - "kitchen-renovation-timeline"
+  - "renovation-checklist-printable"
 ---
 
 Ask ten homeowners how a renovation works and you'll get ten different stories. Ask ten builders and you'll get one: every project, from a single bathroom to a whole-house gut, moves through the same seven phases in the same order. The scale changes. The sequence doesn't.

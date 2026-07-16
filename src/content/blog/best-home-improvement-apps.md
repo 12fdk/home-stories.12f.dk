@@ -1,6 +1,8 @@
 ---
-title: "6 Best Home Improvement Apps for iPhone in 2026"
-description: "Most round-ups still recommend an app abandoned in 2022. Here are six iPhone apps that are actually maintained — and the job each one really does."
+title: "Best Home Improvement Apps 2026: 6 Actually Worth Installing"
+
+description: "Best home improvement apps 2026 — six iPhone apps that are actively maintained and actually useful for real projects."
+
 lede: "There is no single best home improvement app, because a renovation isn't a single job. Finding a contractor, measuring a room, designing a layout, and keeping the budget honest while the dust flies are four different problems, and the apps that are brilliant at one are usually hopeless at the others. Here are six iPhone apps worth your home screen in 2026 — checked against the App Store, not copied from other lists."
 keyword: "best home improvement apps 2026"
 cover: "/stock/02.webp"
@@ -28,9 +30,9 @@ faq:
   - question: "What's the difference between a home design app and a renovation tracking app?"
     answer: "A design app (Planner 5D, Houzz, Morpholio) helps you decide what to build — layouts, finishes, mood boards, 3D views. A tracking app helps you survive building it — what it's costing versus budget, what was decided, what was paid, and what the wall looked like before it was closed up. Design apps are used intensively for a few weeks and then abandoned; a tracking app earns its keep over the whole project. They're complementary, and the mistake is assuming the first kind will cover the second."
 relatedSlugs:
-  - "notion-for-home-renovation"
-  - "renovation-spreadsheet-alternative"
-  - "how-to-budget-a-home-renovation"
+  - "renovation-checklist-printable"
+  - "renovation-budget-template"
+  - "home-renovation-phases"
 ---
 
 Search for the best home improvement apps and you'll get a dozen lists that are all, quietly, the same list. The same six or seven names in a slightly different order, each with a paragraph of marketing copy lightly reworded. Almost none of them have been checked recently.

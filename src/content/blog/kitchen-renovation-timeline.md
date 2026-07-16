@@ -1,6 +1,8 @@
 ---
-title: "A Realistic Kitchen Renovation Timeline (Week-by-Week)"
-description: "A realistic kitchen renovation timeline — week by week, from design to the final walkthrough — with real durations and hidden steps."
+title: "Kitchen Renovation Timeline: 8 Phases from Design to Handover"
+
+description: "Kitchen renovation timeline — 8 realistic phases from design through to handover, with budget tips for each stage."
+
 lede: "Most kitchen renovation timelines are optimistic by 30–40%. They assume everything arrives on time, inspections pass first try, and your contractor has no other jobs bleeding into yours. This timeline shows what actually happens on a real kitchen renovation in 2026 — the weeks you plan for and the ones you don't."
 keyword: "renovation project timeline example"
 cover: "/stock/06.png"
@@ -27,10 +29,9 @@ faq:
   - question: "What should I do before a kitchen renovation starts?"
     answer: "Lock in your design, get permits approved, and order your cabinets and any long-lead appliances (range hoods, built-in ovens, specialty sinks) before the first demo day. Clear your kitchen of small appliances and pantry items. Decide on every finish — faucet, handles, backsplash tile, paint colour — before work starts, because changing your mind mid-project costs time and money. Make a temporary cooking plan for the weeks you'll lack a working kitchen. If you have kids, plan where they'll do homework and homework snacks during a noisy, dusty construction zone. Set up a budget tracker like <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> so you're logging expenses in real time from day one, not catching up at the end."
 relatedSlugs:
-  - "renovation-budget-template"
-  - "how-to-budget-a-home-renovation"
-  - "renovation-checklist-printable"
+  - "how-to-plan-a-home-renovation-step-by-step"
   - "renovation-contingency-budget"
+  - "renovation-cost-overrun-statistics"
 ---
 
 A kitchen renovation is one of the highest-stakes projects you can take on in your own home. The budget is usually the largest single line item outside the property purchase itself. The timeline stretches across months. And unlike a bathroom reno — where you can relocate to the guest bath for a week — a kitchen is the engine of your house. When it stops, everything slows down.
