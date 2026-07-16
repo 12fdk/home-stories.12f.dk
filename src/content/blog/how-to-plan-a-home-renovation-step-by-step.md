@@ -32,6 +32,7 @@ relatedSlugs:
   - "kitchen-renovation-timeline"
   - "renovation-checklist-printable"
   - "how-to-budget-a-home-renovation"
+  - "what-to-track-during-a-renovation"
 ---
 
 ![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.png)

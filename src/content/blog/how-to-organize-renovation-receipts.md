@@ -31,6 +31,7 @@ relatedSlugs:
   - "how-to-track-home-improvement-expenses"
   - "renovation-budget-template"
   - "renovation-spreadsheet-alternative"
+  - "what-to-track-during-a-renovation"
 ---
 
 There's a shoebox in a lot of houses. It sits on top of a wardrobe, and it contains the entire paper history of a renovation: crumpled builders' merchant slips, a folded contractor invoice, a till receipt for tiles that has faded to a blank grey rectangle, and — somewhere near the bottom — a warranty certificate for a boiler that stopped working last winter.
