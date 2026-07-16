@@ -221,6 +221,22 @@ const pt: Translation = {
       {
         "question": "Em que idiomas está disponível o Home Stories?",
         "answer": "O Home Stories está totalmente traduzido para 51 idiomas, incluindo inglês, alemão, francês, espanhol, italiano, dinamarquês, neerlandês, português, japonês, chinês, coreano e muitos mais, com suporte total de acessibilidade VoiceOver e Dynamic Type."
+      },
+      {
+        "question": "Posso acompanhar os custos por categoria, como materiais e mão de obra?",
+        "answer": "Sim — os custos vivem onde está o trabalho. Divida o projeto em fases e tarefas e associe a cada uma os materiais, acessórios, itens de mão de obra e orçamentos necessários. O gráfico de orçamento soma tudo como gasto, comprometido e restante, e o relatório PDF discrimina cada item."
+      },
+      {
+        "question": "Como faço a gestão de vários empreiteiros?",
+        "answer": "Agrupe o trabalho em fases e tarefas para que cada ofício saiba o que acontece e quando — o eletricista antes do estucador. Partilhe o projeto por iCloud para que um empreiteiro acompanhe orçamento, tarefas e fotos em direto, ou exporte um PDF apenas com as secções de que precisa."
+      },
+      {
+        "question": "Como evito ultrapassar o orçamento?",
+        "answer": "O gráfico de orçamento mostra o gasto, o comprometido e o restante num relance, por isso um excesso aparece enquanto ainda há tempo para agir. Adicione o widget ao ecrã principal ou de bloqueio para manter o anel do orçamento à vista sem abrir a app."
+      },
+      {
+        "question": "Os dados do meu projeto têm cópia de segurança?",
+        "answer": "Sim — com a sincronização iCloud ativa, os seus projetos vivem na sua conta iCloud e acompanham-no para um iPhone novo. Tudo também funciona totalmente offline; as alterações sincronizam quando voltar a estar online."
       }
     ]
   },

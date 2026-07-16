@@ -221,6 +221,22 @@ const tr: Translation = {
       {
         "question": "Home Stories hangi dillerde mevcut?",
         "answer": "Home Stories; İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Danca, Felemenkçe, Portekizce, Japonca, Çince, Korece ve daha birçok dil dahil olmak üzere 51 dile tam olarak çevrildi ve tam VoiceOver ve Dynamic Type erişilebilirlik desteğine sahip."
+      },
+      {
+        "question": "Malzeme ve işçilik gibi kategorilere göre maliyet takibi yapabilir miyim?",
+        "answer": "Evet — maliyetler işin olduğu yerde durur. Projeyi aşamalara ve görevlere bölün, her birine gereken malzemeleri, armatürleri, işçilik kalemlerini ve teklifleri ekleyin. Bütçe grafiği her şeyi harcanan, taahhüt edilen ve kalan olarak toplar; PDF raporu kalem kalem döker."
+      },
+      {
+        "question": "Birden fazla ustayı nasıl yönetirim?",
+        "answer": "İşi aşamalara ve görevlere ayırın; böylece her zanaat ne zaman ne yapılacağını bilir — sıvacıdan önce elektrikçi. Projeyi iCloud üzerinden paylaşın, usta bütçeyi, görevleri ve fotoğrafları canlı izlesin; ya da yalnızca gereken bölümleri içeren bir PDF dışa aktarın."
+      },
+      {
+        "question": "Bütçeyi aşmaktan nasıl kaçınırım?",
+        "answer": "Bütçe grafiği harcanan, taahhüt edilen ve kalanı tek bakışta gösterir; aşım, henüz müdahale şansı varken görünür olur. Ana ekrana veya kilit ekranına widget ekleyerek uygulamayı açmadan bütçe halkasını gözünüzün önünde tutun."
+      },
+      {
+        "question": "Proje verilerim yedekleniyor mu?",
+        "answer": "Evet — iCloud eşitleme açıkken projeleriniz iCloud hesabınızda durur ve yeni bir iPhone'a sizinle gelir. Her şey tamamen çevrimdışı da çalışır; değişiklikler yeniden çevrimiçi olduğunuzda eşitlenir."
       }
     ]
   },

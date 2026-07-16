@@ -312,6 +312,26 @@ const templateConfig: TemplateConfig = {
           answer:
             "Home Stories is fully translated into 51 languages, including English, German, French, Spanish, Italian, Danish, Dutch, Portuguese, Japanese, Chinese, Korean, and many more, with full VoiceOver and Dynamic Type accessibility support.",
         },
+        {
+          question: "Can I track costs by category, like materials and labour?",
+          answer:
+            "Yes — costs live where the work is. Break the project into phases and tasks, then attach the materials, fixtures, labour items, and quotes each one needs. The budget chart rolls it all up as spent, committed, and remaining, and the PDF report itemizes it.",
+        },
+        {
+          question: "How do I manage multiple contractors?",
+          answer:
+            "Group the work into phases and tasks so each trade knows what happens when — electrician before plasterer. Share the project over iCloud so a contractor can follow the budget, tasks, and photos live, or export a PDF with just the sections they need.",
+        },
+        {
+          question: "How do I avoid going over budget?",
+          answer:
+            "The budget chart shows spent, committed, and remaining at a glance, so an overrun shows up while there's still time to act. Add the Home Screen or Lock Screen widget to keep the budget ring in view without opening the app.",
+        },
+        {
+          question: "Is my project data backed up?",
+          answer:
+            "Yes — with iCloud sync on, your projects live in your iCloud account and follow you to a new iPhone. Everything also works fully offline; changes sync when you're back online.",
+        },
       ],
     },
     header: {
