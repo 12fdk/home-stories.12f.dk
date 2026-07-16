@@ -221,6 +221,22 @@ const fr: Translation = {
       {
         "question": "Dans quelles langues Home Stories est-elle disponible ?",
         "answer": "Home Stories est entièrement traduite en 51 langues, dont l'anglais, l'allemand, le français, l'espagnol, l'italien, le danois, le néerlandais, le portugais, le japonais, le chinois, le coréen, et bien d'autres, avec une prise en charge complète de l'accessibilité VoiceOver et Dynamic Type."
+      },
+      {
+        "question": "Puis-je suivre les coûts par catégorie, comme les matériaux et la main-d'œuvre ?",
+        "answer": "Oui — les coûts vivent là où se trouve le travail. Découpez le projet en phases et en tâches, puis rattachez à chacune les matériaux, équipements, postes de main-d'œuvre et devis nécessaires. Le graphique de budget totalise le tout en dépensé, engagé et restant, et le rapport PDF le détaille."
+      },
+      {
+        "question": "Comment gérer plusieurs artisans ?",
+        "answer": "Regroupez le travail en phases et en tâches pour que chaque corps de métier sache quoi faire et quand — l'électricien avant le plaquiste. Partagez le projet via iCloud pour qu'un artisan suive le budget, les tâches et les photos en direct, ou exportez un PDF avec uniquement les sections utiles."
+      },
+      {
+        "question": "Comment éviter de dépasser le budget ?",
+        "answer": "Le graphique de budget montre le dépensé, l'engagé et le restant d'un coup d'œil : un dépassement apparaît pendant qu'il est encore temps d'agir. Ajoutez le widget sur l'écran d'accueil ou l'écran verrouillé pour garder l'anneau de budget en vue sans ouvrir l'app."
+      },
+      {
+        "question": "Mes données de projet sont-elles sauvegardées ?",
+        "answer": "Oui — avec la synchronisation iCloud activée, vos projets vivent dans votre compte iCloud et vous suivent sur un nouvel iPhone. Tout fonctionne aussi entièrement hors ligne ; les modifications se synchronisent dès que vous êtes de nouveau en ligne."
       }
     ]
   },

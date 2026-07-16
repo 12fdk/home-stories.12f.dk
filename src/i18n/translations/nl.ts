@@ -221,6 +221,22 @@ const nl: Translation = {
       {
         "question": "In welke talen is Home Stories beschikbaar?",
         "answer": "Home Stories is volledig vertaald in 51 talen, waaronder Engels, Duits, Frans, Spaans, Italiaans, Deens, Nederlands, Portugees, Japans, Chinees, Koreaans en nog veel meer, met volledige toegankelijkheidsondersteuning voor VoiceOver en Dynamic Type."
+      },
+      {
+        "question": "Kan ik kosten per categorie bijhouden, zoals materiaal en arbeidsloon?",
+        "answer": "Ja — kosten wonen waar het werk is. Verdeel het project in fases en taken en koppel aan elk de materialen, armaturen, arbeidsposten en offertes die nodig zijn. De budgetgrafiek telt alles op als besteed, toegezegd en resterend, en het PDF-rapport specificeert het."
+      },
+      {
+        "question": "Hoe beheer ik meerdere aannemers?",
+        "answer": "Groepeer het werk in fases en taken zodat elk vak weet wat wanneer gebeurt — de elektricien vóór de stukadoor. Deel het project via iCloud zodat een aannemer budget, taken en foto's live kan volgen, of exporteer een PDF met alleen de secties die hij nodig heeft."
+      },
+      {
+        "question": "Hoe voorkom ik dat ik over het budget ga?",
+        "answer": "De budgetgrafiek toont besteed, toegezegd en resterend in één oogopslag, zodat een overschrijding zichtbaar wordt terwijl er nog tijd is om bij te sturen. Voeg de widget toe aan het begin- of toegangsscherm om de budgetring in beeld te houden zonder de app te openen."
+      },
+      {
+        "question": "Wordt er een back-up van mijn projectgegevens gemaakt?",
+        "answer": "Ja — met iCloud-synchronisatie aan staan je projecten in je iCloud-account en verhuizen ze mee naar een nieuwe iPhone. Alles werkt ook volledig offline; wijzigingen synchroniseren zodra je weer online bent."
       }
     ]
   },

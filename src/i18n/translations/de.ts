@@ -221,6 +221,22 @@ const de: Translation = {
       {
         "question": "In welchen Sprachen ist Home Stories verfügbar?",
         "answer": "Home Stories ist vollständig in 51 Sprachen übersetzt, darunter Englisch, Deutsch, Französisch, Spanisch, Italienisch, Dänisch, Niederländisch, Portugiesisch, Japanisch, Chinesisch, Koreanisch und viele mehr, mit voller Barrierefreiheit durch VoiceOver und Dynamic Type."
+      },
+      {
+        "question": "Kann ich Kosten nach Kategorien erfassen, z. B. Material und Arbeitslohn?",
+        "answer": "Ja — die Kosten sitzen dort, wo die Arbeit ist. Teile das Projekt in Phasen und Aufgaben auf und hänge Material, Armaturen, Arbeitsposten und Angebote an jede einzelne. Das Budgetdiagramm fasst alles als ausgegeben, gebunden und verbleibend zusammen, und der PDF-Bericht schlüsselt es auf."
+      },
+      {
+        "question": "Wie verwalte ich mehrere Handwerker?",
+        "answer": "Gruppiere die Arbeit in Phasen und Aufgaben, damit jedes Gewerk weiß, was wann passiert — Elektriker vor Verputzer. Teile das Projekt über iCloud, damit ein Handwerker Budget, Aufgaben und Fotos live verfolgen kann, oder exportiere ein PDF mit genau den Abschnitten, die er braucht."
+      },
+      {
+        "question": "Wie vermeide ich eine Budgetüberschreitung?",
+        "answer": "Das Budgetdiagramm zeigt ausgegeben, gebunden und verbleibend auf einen Blick, sodass eine Überschreitung sichtbar wird, solange noch Zeit zum Handeln bleibt. Füge das Widget auf dem Home- oder Sperrbildschirm hinzu, um den Budgetring im Blick zu behalten, ohne die App zu öffnen."
+      },
+      {
+        "question": "Werden meine Projektdaten gesichert?",
+        "answer": "Ja — mit aktivierter iCloud-Synchronisierung liegen deine Projekte in deinem iCloud-Konto und ziehen mit auf ein neues iPhone. Alles funktioniert auch komplett offline; Änderungen werden synchronisiert, sobald du wieder online bist."
       }
     ]
   },

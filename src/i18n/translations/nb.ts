@@ -221,6 +221,22 @@ const nb: Translation = {
       {
         "question": "Hvilke språk er Home Stories tilgjengelig på?",
         "answer": "Home Stories er fullt oversatt til 51 språk, inkludert engelsk, tysk, fransk, spansk, italiensk, dansk, nederlandsk, portugisisk, japansk, kinesisk, koreansk og mange flere, med full tilgjengelighetsstøtte for VoiceOver og Dynamic Type."
+      },
+      {
+        "question": "Kan jeg spore kostnader per kategori, som materialer og arbeid?",
+        "answer": "Ja — kostnadene bor der arbeidet er. Del prosjektet inn i faser og oppgaver, og knytt materialer, armaturer, arbeidsposter og tilbud til hver enkelt. Budsjettdiagrammet summerer alt som brukt, bundet og gjenstående, og PDF-rapporten spesifiserer det."
+      },
+      {
+        "question": "Hvordan håndterer jeg flere håndverkere?",
+        "answer": "Grupper arbeidet i faser og oppgaver slik at hvert fag vet hva som skjer når — elektriker før murpusser. Del prosjektet via iCloud så en håndverker kan følge budsjett, oppgaver og bilder direkte, eller eksporter en PDF med akkurat de delene de trenger."
+      },
+      {
+        "question": "Hvordan unngår jeg å sprenge budsjettet?",
+        "answer": "Budsjettdiagrammet viser brukt, bundet og gjenstående med ett blikk, så en overskridelse dukker opp mens det fortsatt er tid til å handle. Legg til widgeten på hjem- eller låseskjermen for å holde budsjettringen i syne uten å åpne appen."
+      },
+      {
+        "question": "Blir prosjektdataene mine sikkerhetskopiert?",
+        "answer": "Ja — med iCloud-synkronisering på ligger prosjektene dine i iCloud-kontoen din og blir med over på en ny iPhone. Alt fungerer også helt offline; endringer synkroniseres når du er på nett igjen."
       }
     ]
   },
