@@ -13,7 +13,8 @@
       "Bash(agent-browser screenshot:*)",
       "Bash(agent-browser scroll:*)",
       "Bash(agent-browser snapshot:*)",
-      "Bash(agent-browser click:*)"
+      "Bash(agent-browser click:*)",
+      "Bash(gh pr merge:*)"
     ]
   },
   "enabledPlugins": {

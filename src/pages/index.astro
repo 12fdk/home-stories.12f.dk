@@ -31,10 +31,9 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
 // (locale + homeHref + the hreflang alternate set shared with every /<lang>/).
 const baseConfig: TemplateConfig = {
   ...defaultTemplateConfig,
-  // Override logo with App Store icon (if available and not fallback)
-  logo: appStoreData.artworkUrl512.startsWith("http")
-    ? appStoreData.artworkUrl512
-    : defaultTemplateConfig.logo,
+  // Self-hosted copy of the App Store icon (downloaded at build, see
+  // src/pages/app-icon-512.jpg.ts) so nothing references Apple's CDN. #74
+  logo: "/app-icon-512.jpg",
   appStore: toAppStoreMetadata(appStoreData),
 };
 const config = getLocalizedConfig(baseConfig, "en");
