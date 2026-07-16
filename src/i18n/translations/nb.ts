@@ -240,6 +240,16 @@ const nb: Translation = {
       }
     ]
   },
+  "pricing": {
+    "label": "Pris",
+    "title": "Gratis for hele jobben",
+    "subtitle": "Kjernen er gratis, for alltid. Ett lite engangskjøp låser opp de dype budsjettverktøyene.",
+    "plans": [
+      { "name": "Gratis", "price": "0 kr.", "period": "for alltid", "features": ["Ubegrensede prosjekter, oppgaver og faser", "Fototidslinje med daterte bilder", "Utgiftsføring og varepriser", "Fungerer helt offline", "iCloud-synkronisering på tvers av enheter", "Widgeter for hjem- og låseskjerm"], "cta": "" },
+      { "name": "Home Stories Pro", "price": "29 kr.", "period": "engangskjøp — ikke noe abonnement", "features": ["Budsjettmål og budsjett-mot-kostnad-diagrammet", "Avansert kostnadsanalyse", "PDF- og CSV-eksport av rapporter og tidslogger", "Oppgavepåminnelser og fristvarsler"], "cta": "Last ned appen — oppgrader inni" }
+    ],
+    "footnote": "Pris fra den danske App Store — lokale priser varierer."
+  },
   "comparison": {
     "label": "Mot regnearket",
     "title": "Hvorfor ikke bare et regneark?",

@@ -240,6 +240,16 @@ const pl: Translation = {
       }
     ]
   },
+  "pricing": {
+    "label": "Cennik",
+    "title": "Cały remont za darmo",
+    "subtitle": "Rdzeń jest darmowy, na zawsze. Jeden drobny jednorazowy zakup odblokowuje zaawansowane narzędzia budżetowe.",
+    "plans": [
+      { "name": "Za darmo", "price": "0 kr.", "period": "na zawsze", "features": ["Nieograniczone projekty, zadania i etapy", "Oś czasu ze zdjęciami z datami", "Rejestr wydatków i ceny pozycji", "Działa całkowicie offline", "Synchronizacja iCloud między urządzeniami", "Widżety na ekranie głównym i blokady"], "cta": "" },
+      { "name": "Home Stories Pro", "price": "29 kr.", "period": "zakup jednorazowy — bez subskrypcji", "features": ["Cele budżetowe i wykres budżet-koszty", "Zaawansowana analiza kosztów", "Eksport PDF i CSV raportów oraz dziennika czasu", "Przypomnienia o zadaniach i terminach"], "cta": "Pobierz aplikację — ulepszenie w środku" }
+    ],
+    "footnote": "Cena z duńskiego App Store — ceny lokalne się różnią."
+  },
   "comparison": {
     "label": "Kontra arkusz",
     "title": "Dlaczego nie zwykły arkusz kalkulacyjny?",

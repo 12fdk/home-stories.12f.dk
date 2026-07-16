@@ -240,6 +240,16 @@ const zh: Translation = {
       }
     ]
   },
+  "pricing": {
+    "label": "价格",
+    "title": "整个工程都免费",
+    "subtitle": "核心功能永久免费。一次小额买断即可解锁深度预算工具。",
+    "plans": [
+      { "name": "免费", "price": "0 kr.", "period": "永久", "features": ["无限项目、任务和阶段", "带日期照片的时间线", "支出记录与物品价格", "完全离线可用", "跨设备 iCloud 同步", "主屏幕和锁定屏幕小组件"], "cta": "" },
+      { "name": "Home Stories Pro", "price": "29 kr.", "period": "一次买断 — 无订阅", "features": ["预算目标与预算-成本对比图", "高级成本分析", "报告与工时记录的 PDF 和 CSV 导出", "任务提醒与截止日期通知"], "cta": "获取应用 — 在应用内升级" }
+    ],
+    "footnote": "价格来自丹麦 App Store — 各地价格有所不同。"
+  },
   "comparison": {
     "label": "对比电子表格",
     "title": "为什么不用电子表格就好？",

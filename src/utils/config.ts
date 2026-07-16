@@ -132,6 +132,43 @@ const templateConfig: TemplateConfig = {
         },
       ],
     },
+    pricing: {
+      id: "pricing",
+      label: "Pricing",
+      title: "Free to run the whole job",
+      subtitle:
+        "The core is free, forever. One small one-time purchase unlocks the deep budget tools.",
+      plans: [
+        {
+          name: "Free",
+          price: "0 kr.",
+          period: "forever",
+          features: [
+            "Unlimited projects, tasks, and phases",
+            "Photo timeline with dated photos",
+            "Expense logging and item prices",
+            "Works fully offline",
+            "iCloud sync across your devices",
+            "Home Screen & Lock Screen widgets",
+          ],
+        },
+        {
+          name: "Home Stories Pro",
+          price: "29 kr.",
+          period: "one-time — no subscription",
+          highlight: true,
+          features: [
+            "Budget targets and the budget-vs-cost chart",
+            "Advanced cost analysis",
+            "PDF & CSV export of reports and time logs",
+            "Task reminders and deadline notifications",
+          ],
+          cta: "Get the app — upgrade inside",
+        },
+      ],
+      footnote:
+        "Price from the Danish App Store — local pricing varies by storefront.",
+    },
     comparison: {
       id: "vs-spreadsheets",
       label: "Vs the spreadsheet",

@@ -203,6 +203,22 @@ export type TemplateConfig = {
                 subtitle: string;
             }[];
         } | undefined;
+        /** Free vs Pro pricing cards. Prices are display strings (storefront-specific). */
+        pricing?: {
+            id?: string | undefined;
+            label: string;
+            title: string;
+            subtitle?: string | undefined;
+            plans: {
+                name: string;
+                price: string;
+                period: string;
+                highlight?: boolean | undefined;
+                features: string[];
+                cta?: string | undefined;
+            }[];
+            footnote?: string | undefined;
+        } | undefined;
         /** Spreadsheet-vs-app comparison table. Rows are aspect / them / us. */
         comparison?: {
             id?: string | undefined;

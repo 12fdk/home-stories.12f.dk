@@ -240,6 +240,16 @@ const nl: Translation = {
       }
     ]
   },
+  "pricing": {
+    "label": "Prijzen",
+    "title": "Gratis voor de hele klus",
+    "subtitle": "De kern is gratis, voor altijd. Eén kleine eenmalige aankoop ontgrendelt de diepe budgettools.",
+    "plans": [
+      { "name": "Gratis", "price": "0 kr.", "period": "voor altijd", "features": ["Onbeperkte projecten, taken en fases", "Fototijdlijn met gedateerde foto's", "Uitgaven bijhouden en artikelprijzen", "Werkt volledig offline", "iCloud-synchronisatie tussen apparaten", "Widgets voor begin- en toegangsscherm"], "cta": "" },
+      { "name": "Home Stories Pro", "price": "29 kr.", "period": "eenmalige aankoop — geen abonnement", "features": ["Budgetdoelen en de budget-versus-kosten-grafiek", "Geavanceerde kostenanalyse", "PDF- en CSV-export van rapporten en tijdlogs", "Taakherinneringen en deadline-meldingen"], "cta": "Download de app — upgrade in de app" }
+    ],
+    "footnote": "Prijs uit de Deense App Store — lokale prijzen verschillen."
+  },
   "comparison": {
     "label": "Versus de spreadsheet",
     "title": "Waarom niet gewoon een spreadsheet?",
