@@ -1,0 +1,17 @@
+---
+import NotFound from "@modules/notFound";
+import Layout from "Layout.astro";
+import defaultTemplateConfig from "utils/config";
+
+// GitHub Pages serves dist/404.html for any unmatched path. Branded so a bad
+// link keeps the site chrome and routes people back in. Noindexed: error pages
+// have no business in the index. See #78.
+const seo = {
+  title: "Page not found — Home Stories",
+  description: "That page was moved, renamed, or never built.",
+};
+---
+
+<Layout {...defaultTemplateConfig} seo={seo} noindex>
+  <NotFound client:load config={defaultTemplateConfig} />
+</Layout>
