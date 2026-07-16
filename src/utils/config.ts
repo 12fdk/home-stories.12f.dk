@@ -62,9 +62,9 @@ const templateConfig: TemplateConfig = {
   googlePlayLink: "",
   footer: {
     legalLinks: {
-      termsAndConditions: false,
-      cookiesPolicy: false,
-      privacyPolicy: false,
+      termsAndConditions: true,
+      cookiesPolicy: true,
+      privacyPolicy: true,
     },
     socials: {},
     links: [
