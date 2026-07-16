@@ -39,6 +39,14 @@ export interface Translation {
   testimonials: { title: string; subtitle: string; comments: string[] };
   faq: { title: string; qa: { question: string; answer: string }[] };
   /** Optional so older translation files fall back to English wholesale. */
+  pricing?: {
+    label: string;
+    title: string;
+    subtitle: string;
+    plans: { name: string; price: string; period: string; features: string[]; cta: string }[];
+    footnote: string;
+  };
+  /** Optional so older translation files fall back to English wholesale. */
   comparison?: {
     label: string;
     title: string;
@@ -96,6 +104,21 @@ export function extractEnglish(base: TemplateConfig): Translation {
       title: h.faq!.title,
       qa: h.faq!.qa.map((q) => ({ question: q.question, answer: q.answer })),
     },
+    pricing: h.pricing
+      ? {
+          label: h.pricing.label,
+          title: h.pricing.title,
+          subtitle: h.pricing.subtitle ?? "",
+          plans: h.pricing.plans.map((p) => ({
+            name: p.name,
+            price: p.price,
+            period: p.period,
+            features: [...p.features],
+            cta: p.cta ?? "",
+          })),
+          footnote: h.pricing.footnote ?? "",
+        }
+      : undefined,
     comparison: h.comparison
       ? {
           label: h.comparison.label,
@@ -233,6 +256,23 @@ export function applyTranslation(
             })),
           }
         : h.faq,
+      pricing: h.pricing
+        ? {
+            ...h.pricing,
+            label: t.pricing?.label ?? h.pricing.label,
+            title: t.pricing?.title ?? h.pricing.title,
+            subtitle: t.pricing?.subtitle ?? h.pricing.subtitle,
+            plans: byIndex(h.pricing.plans, t.pricing?.plans, (p, o) => ({
+              ...p,
+              name: o?.name ?? p.name,
+              price: o?.price ?? p.price,
+              period: o?.period ?? p.period,
+              features: byIndex(p.features, o?.features, (f, of) => of ?? f),
+              cta: p.cta ? (o?.cta || p.cta) : p.cta,
+            })),
+            footnote: t.pricing?.footnote ?? h.pricing.footnote,
+          }
+        : h.pricing,
       comparison: h.comparison
         ? {
             ...h.comparison,
