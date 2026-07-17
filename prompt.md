@@ -273,7 +273,13 @@ tail, and only on failure.
    ```
    The build MUST print `BUILD OK` before you push — it validates the frontmatter
    schema. If it failed, read only the tail, fix the frontmatter/markdown, rebuild.
-3. Commit: `git add -A && git commit -m "Blog: <title>"`
+3. Commit ONLY the post and its images — never scratch/helper scripts or logs you
+   created this run. Run `git status` first; if you wrote any helper files (e.g.
+   `scrape_*.py`, `*.log`, temp scripts), delete them before committing. Then stage
+   explicitly:
+   `git add src/content/blog/<slug>.md public/stock/ && git commit -m "Blog: <title>"`
+   (Avoid `git add -A`, which sweeps in stray files. `.gitignore` covers common ones,
+   but stage deliberately anyway.)
 4. Push to main: `git push origin main 2>&1 | tail -5` (GitHub Pages deploys from `main`).
 
 Same discipline everywhere: pipe any command that could be verbose (`comfy-gen`,

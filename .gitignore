@@ -25,3 +25,8 @@ pnpm-debug.log*
 
 # pnpm store
 .pnpm-store/
+
+# scratch/helper scripts the blog automation may create (never commit these)
+scrape_*.py
+*.log
+/tmp_*.py
