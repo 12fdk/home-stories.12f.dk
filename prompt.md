@@ -64,15 +64,26 @@ exceed the model context and crash the run. **Never read raw Reddit JSON.** Alwa
 pipe it through a filter that keeps ONLY the title, score, and comment count — one
 short line per post — and read that distilled list.
 
-Use this exact pattern per subreddit (small `limit`, titles only):
+Reddit blocks generic/datacenter requests, so send a real browser User-Agent and,
+if `www` is blocked, retry the SAME path on `old.reddit.com`. Titles only:
 
 ```
-for sub in HomeImprovement DIY Renovations FirstTimeHomeBuyer; do
-  echo "== r/$sub =="
-  curl -s -A "home-stories-blog/1.0" "https://www.reddit.com/r/$sub/top.json?t=week&limit=15" \
-    | python3 -c "import sys,json;[print(f\"{p['data']['ups']:>5}u {p['data']['num_comments']:>4}c  {p['data']['title'][:110]}\") for p in json.load(sys.stdin)['data']['children']]"
-done
+UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+fetch_sub() {  # $1 = subreddit
+  for host in www.reddit.com old.reddit.com; do
+    out=$(curl -s -m 20 -A "$UA" -H "Accept: application/json" "https://$host/r/$1/top.json?t=week&limit=15")
+    echo "$out" | python3 -c "import sys,json;d=json.load(sys.stdin);ch=d['data']['children'];[print(f\"{p['data']['ups']:>5}u {p['data']['num_comments']:>4}c  {p['data']['title'][:110]}\") for p in ch]" 2>/dev/null && return 0
+  done
+  echo "  (r/$1 unavailable)"
+}
+for sub in HomeImprovement DIY Renovations FirstTimeHomeBuyer; do echo "== r/$sub =="; fetch_sub "$sub"; done
 ```
+
+Reddit is the REQUIRED primary source — try the browser UA and the `old.reddit.com`
+fallback before giving up on a sub. Only if **every** subreddit genuinely fails
+(all "(r/... unavailable)") may you fall back to Google News RSS
+(`https://news.google.com/rss/search?q=home+renovation+budget&hl=en`), and you MUST
+say so in the final report. Never skip topic research entirely.
 
 - Scrape **3–4 subreddits only**, `limit=15`, `t=week` (fall back to `t=month` if a
   sub is quiet). Good pools to rotate through: `HomeImprovement`, `DIY`,
@@ -134,20 +145,37 @@ skeptical Redditor should upvote it and never feel sold to.
   save context, skim only the top with `head -60 src/content/blog/what-to-track-during-a-renovation.md`
   rather than reading the whole file; match that voice.
 
-**Style:** concrete over abstract, real numbers and examples over platitudes,
-short paragraphs, plain language, occasional dry wit. Second person ("you").
-No filler intro paragraphs — open with a real observation or a reader's problem.
+**Style:** concrete over abstract, vivid *illustrative* examples over platitudes,
+short paragraphs, plain language, occasional dry wit. Second person ("you"). No
+filler intro paragraphs — open with a real observation or a reader's problem.
+(Concrete ≠ fabricated: an illustrative scenario is fine — "say the roof quote
+comes in at $12k" — but never dress a made-up number as a researched statistic.)
 
 ---
 
-## 3. Factual accuracy (non-negotiable)
+## 3. Factual accuracy (non-negotiable — this is where past posts failed)
 
-This site's credibility is the whole point. **Every factual claim must be true.**
+This site's credibility is the whole point, and the single worst failure mode is
+**inventing authoritative-sounding statistics and citations.** You are running
+offline and CANNOT reliably verify a number or a source. So the rule is blunt:
 
-- **Never fabricate statistics.** If you cite a number (e.g. "renovations run X%
-  over budget"), it must come from a real, nameable source (Houzz study, industry
-  survey, government energy body, etc.) — attribute it in the text. If you cannot
-  verify a number, don't use it; make the point qualitatively instead.
+- **DEFAULT TO QUALITATIVE. Do not put specific statistics in the post.** No "94%
+  cost recovery", no "recovers 74¢ on the dollar", no "60% of renovations go over
+  by 10%". Make the point in words instead ("minor kitchen updates tend to return
+  far more of their cost than a full gut remodel"). The gold-standard post
+  `what-to-track-during-a-renovation.md` contains **zero fabricated stats** — copy
+  that discipline exactly.
+- **NEVER attribute a claim to a named report/study/organization** (Remodeling
+  Magazine "Cost vs. Value", NAR, NARI, Houzz, etc.) unless you have fetched that
+  exact source *in this run* and are quoting it. If you didn't fetch it, don't name
+  it. A fabricated citation is worse than no citation.
+- **NEVER write a URL you have not confirmed.** Only link to (a) pages inside this
+  site (`/blog/<slug>/`, confirmed to exist) and (b) the App Store link in §0. Do
+  NOT invent external links to reports or studies. External links you didn't fetch
+  are almost always wrong (broken domains, typos, dead pages).
+- **Dollar figures / percentages are allowed only as clearly-hypothetical
+  illustration**, and must read as such: "say a quote comes in around $12k", "a
+  spread of a few thousand dollars". Never as a surveyed or measured fact.
 - Prefer timeless, verifiable advice (sequence of trades, how contingency works,
   what a snag list is) over specific prices, which vary by country and date.
 - Don't state country-specific rules (tax, permits, code) as universal. Hedge
@@ -155,6 +183,11 @@ This site's credibility is the whole point. **Every factual claim must be true.*
 - Do not misrepresent what the Home Stories app does (see §0).
 - If Reddit anecdotes inspire a claim, generalize the *pattern*, don't present one
   person's story as fact.
+
+**Self-check before committing:** re-read the draft and delete any number that
+looks like a research finding, and any source name or external URL you did not
+actually fetch this run. When in doubt, cut it — a purely qualitative post is
+100% acceptable and always safer than a confidently wrong one.
 
 ---
 
