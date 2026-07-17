@@ -51,70 +51,66 @@ integration, no cloud account). If you are unsure a feature exists, don't mentio
 
 ---
 
-## 1. Topic research — ALWAYS scrape Reddit first (required, every run)
+## 1. Topic selection — pick from the Reddit-derived topic bank (stable-first)
 
-Never invent a topic from thin air. Start from what real people are actually
-asking this week. Pull live threads from Reddit's public JSON (no auth, no key)
-and mine them for pain points, recurring questions, and language people use.
+Topics are **grounded in real Reddit + search demand**, but the job does NOT depend
+on a live network scrape at run time (Reddit rate-limits and blocks server IPs, which
+crashed earlier runs). Instead, the demand research is **baked into the ranked topic
+bank below** and refreshed by a human/Claude when it needs updating. This is the
+stable pattern used by the sister Event Stories blog — mirror it.
 
-### CRITICAL: fetch Reddit token-efficiently (raw JSON will blow the context window)
+### How to choose (do this, in order)
 
-Reddit's raw JSON is enormous (full post bodies + comment metadata) and will
-exceed the model context and crash the run. **Never read raw Reddit JSON.** Always
-pipe it through a filter that keeps ONLY the title, score, and comment count — one
-short line per post — and read that distilled list.
+1. Run `ls src/content/blog/` and, if useful, `grep -h '^keyword:' src/content/blog/*.md`
+   to see what already exists. Read only slugs/keywords, not whole posts (save context).
+2. From the **Ranked topic bank** below, pick the **highest-ranked topic that is NOT
+   already covered** by an existing post. Higher = stronger demand × app fit.
+3. Adapt the exact title for SEO (≤70 chars, includes the keyword). The bracketed
+   phrase is roughly what people actually google — use it as the `keyword`.
+4. **Optional live confirmation (never required):** if you want, try ONE quick,
+   time-boxed Reddit check to confirm phrasing — but treat failure as normal and move
+   on immediately. Do NOT block, retry in a loop, or read raw JSON (it blows context):
+   ```
+   UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/125.0 Safari/537.36"
+   curl -s -m 12 -A "$UA" "https://www.reddit.com/r/HomeImprovement/top.json?t=week&limit=12" \
+     | python3 -c "import sys,json;[print(p['data']['title'][:100]) for p in json.load(sys.stdin)['data']['children']]" 2>/dev/null \
+     | head -12 || echo "(reddit unavailable — using the topic bank, which is fine)"
+   ```
+   If it returns titles, skim them for fresher phrasing; if not, just use the bank.
 
-Reddit blocks generic/datacenter requests, so send a real browser User-Agent and,
-if `www` is blocked, retry the SAME path on `old.reddit.com`. Titles only:
+### Ranked topic bank (Reddit-demand × Home-Stories-feature fit)
 
-```
-UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
-fetch_sub() {  # $1 = subreddit
-  for host in www.reddit.com old.reddit.com; do
-    out=$(curl -s -m 20 -A "$UA" -H "Accept: application/json" "https://$host/r/$1/top.json?t=week&limit=15")
-    echo "$out" | python3 -c "import sys,json;d=json.load(sys.stdin);ch=d['data']['children'];[print(f\"{p['data']['ups']:>5}u {p['data']['num_comments']:>4}c  {p['data']['title'][:110]}\") for p in ch]" 2>/dev/null && return 0
-  done
-  echo "  (r/$1 unavailable)"
-}
-for sub in HomeImprovement DIY Renovations FirstTimeHomeBuyer; do echo "== r/$sub =="; fetch_sub "$sub"; done
-```
+Each entry maps to a real app feature, so the app becomes the natural (unforced)
+answer. Pick the highest one not yet covered:
 
-Reddit is the REQUIRED primary source — try the browser UA and the `old.reddit.com`
-fallback before giving up on a sub. Only if **every** subreddit genuinely fails
-(all "(r/... unavailable)") may you fall back to Google News RSS
-(`https://news.google.com/rss/search?q=home+renovation+budget&hl=en`), and you MUST
-say so in the final report. Never skip topic research entirely.
+1. **Where to start on a house you just bought** — the first-90-days project order · *"where to start renovating a house"* · (projects + task checklist + photos)
+2. **DIY vs. hiring a pro** — an honest decide-in-five-minutes framework · *"should I DIY or hire a contractor"* · (time tracking + budget)
+3. **Hidden costs in an older home** — the surprises that blow budgets, and how to brace for them · *"unexpected renovation costs older home"* · (committed vs spent budget + contingency)
+4. **Managing a contractor** — change orders, scope creep, and keeping it civil · *"how to deal with contractor change orders"* · (notes log + committed budget + documents)
+5. **Documenting a renovation for insurance** — the photo + receipt trail that pays off later · *"how to document home renovation for insurance"* · (photos + receipts + PDF export)
+6. **Living through a renovation** — staying sane (and organized) while the house is a building site · *"living in your house during a renovation"* · (tasks + timeline + shared project)
+7. **Bathroom renovation order** — the sequence that avoids redoing work · *"bathroom renovation order of work"* · (phases + task checklist)
+8. **Where the renovation money actually goes** — a realistic breakdown of a project's line items · *"where does renovation money go"* · (budget categories + item tracking)
+9. **Renovation mistakes people regret** — the ones that are cheap to avoid up front · *"biggest home renovation mistakes"* · (planning + photos + notes)
+10. **Do I need a permit?** — how to tell, and why skipping it costs more later · *"do I need a permit for home renovation"* · (documents + notes)
+11. **Keeping renovation decisions straight** — paint codes, model numbers, why you chose what · *"how to keep track of renovation decisions"* · (notes with tags + item tracking)
+12. **Renovating room by room vs. all at once** — how to sequence a whole-house project · *"should I renovate one room at a time"* · (multiple projects + phases)
+13. **The end-of-project snag list** — defining "done" so the last 5% actually finishes · *"renovation snag list punch list"* · (task checklist + photos)
+14. **Energy-efficiency upgrades worth doing** — what actually pays back vs. what's hype · *"are energy efficient home upgrades worth it"* · (budget + notes)
+15. **Renovating a first home on a tight budget** — the frugal-but-not-cheap playbook · *"renovating first home on a budget"* · (budget charts + task checklist)
+16. **Moving into a fixer-upper** — the first month's must-dos before the fun stuff · *"moving into a fixer upper first steps"* · (projects + checklist + photos)
 
-- Scrape **3–4 subreddits only**, `limit=15`, `t=week` (fall back to `t=month` if a
-  sub is quiet). Good pools to rotate through: `HomeImprovement`, `DIY`,
-  `Renovations`, `HomeMaintenance`, `FirstTimeHomeBuyer`, `centuryhomes`,
-  `InteriorDesign`, `Kitchens`, `HomeDecorating`, `Frugal`.
-- That yields ~50 one-line titles total — cheap to read. Do NOT fetch `selftext`,
-  comments, or `limit` above 15. If you want detail on ONE promising thread, fetch
-  just that single post's JSON and read only its `selftext` (truncate to ~500 chars).
-- If a fetch fails or returns HTML (rate-limited), skip that sub and continue; do
-  not retry in a loop.
+If every bank topic is already covered, write a sharper/fresher take on the
+highest-demand cluster (budgeting, contractor management, documentation, getting
+started) from a new angle — and add a note in your report suggesting the bank be
+refreshed. Never repeat an existing post's angle.
 
-From the distilled titles, look for:
-
-- **Questions asked over and over** ("how do I keep track of…", "how much
-  contingency…", "contractor says X, is that normal?", "how do I not go over budget")
-- **Regrets and expensive mistakes** ("wish I'd photographed…", "receipts I lost")
-- **High-engagement pain** (high comment count = people needed help)
-- **Language the audience actually uses** — reuse their phrasing as the SEO keyword
-
-Then pick ONE topic where (a) there is clear, repeated demand, (b) we can give a
-genuinely useful, evergreen answer, and (c) it naturally touches something Home
-Stories helps with (tracking, budget, photos, documentation, planning) — *without
-the article needing the app to be useful.*
-
-**Deduplicate:** run `ls src/content/blog/` and read only the slug names (and, if
-needed, `grep -h '^title:' src/content/blog/*.md`). Do NOT open every post — that
-wastes context. Pick a genuinely new topic or a distinctly sharper take than what
-the existing slugs already cover.
-
-In your final report, list the specific Reddit threads/subreddits that informed
-the topic, so the choice is auditable.
+**Keeping the bank fresh (human/maintainer task, not the cron's):** periodically
+re-derive this list from live demand and edit it here. From a machine that isn't
+rate-limited, that's e.g.
+`curl -s -A "<browser UA>" "https://www.reddit.com/r/HomeImprovement/top.json?t=month&limit=25"`
+across r/HomeImprovement, r/DIY, r/Renovations, r/HomeMaintenance, r/FirstTimeHomeBuyer,
+plus Google keyword checks — then rank by demand × app-feature fit.
 
 ---
 
@@ -288,9 +284,13 @@ Same discipline everywhere: pipe any command that could be verbose (`comfy-gen`,
 
 Report concisely:
 - The new post: title, slug, file path, primary keyword, word count, cover image.
-- The **Reddit threads/subreddits** that informed the topic (for auditability).
-- Confirmation the build passed and the push to `main` succeeded.
-- Anything that fell back or is worth a human glance.
+- Which **topic-bank entry** you chose (its rank/number) and why it was the highest
+  uncovered one. If you ran the optional live Reddit check, say whether it worked and
+  whether it changed the phrasing.
+- Confirmation the build passed (`BUILD OK`) and the push to `main` succeeded.
+- Confirm you did the factual-accuracy self-check (§3): no invented statistics, no
+  unfetched report names, no unverified external URLs.
+- Anything that fell back or is worth a human glance (e.g. "topic bank is running low").
 
 If — and only if — there is genuinely nothing new worth publishing, reply with
 exactly `[SILENT]`. Otherwise always ship a post.
