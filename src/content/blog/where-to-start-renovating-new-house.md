@@ -33,11 +33,9 @@ relatedSlugs:
   - "what-to-track-during-a-renovation"
 ---
 
-You bought the house. The keys are on the hook by the door. The rooms are empty enough to walk across and echo, and every room screams a different priority. The kitchen needs everything. The bathroom has a crack in the tile that might be cosmetic or might be the house shifting. The bedroom with the skylight looks beautiful in the evening light, and the garage has good bones but the floor is a map of oil stains.
+You bought the house. The rooms are empty, every corner looks like it needs something different, and the kitchen is at the top of everyone's list. The temptation is to start there — excitement is real. But excitement and triage are not the same thing.
 
-The temptation is to start where the excitement is. That's usually the fastest route to a project that never ends, because excitement and triage are not the same thing.
-
-Here is the order I'd follow — the sequence that keeps the first ninety days from turning into a month of small projects that add up to nothing finished.
+Here's the order that keeps the first ninety days from becoming a month of small projects that add up to nothing finished.
 
 ## Step one: walk every room with a notebook
 
@@ -67,19 +65,11 @@ The reason this distinction matters is simple: renovation energy is finite. If y
 
 ## Step three: inspect before you interrupt
 
-Before you tear into any wall, pull any floor, or knock down any non-load-bearing partition, spend a day or two just looking — really looking — at what the house is hiding.
-
-Open the utility panel. Check the water heater. Look at the attic. Check the basement or crawl space for moisture, pest damage, or structural notes. Call an inspector if you haven't already, and don't just accept the first report — walk through their findings yourself. Ask them to show you the worst thing they found and explain why it matters.
-
-There's a particular kind of renovation anxiety that comes from opening a wall and finding something completely unexpected. It happens. The people who are least stressed by it are the ones who went in looking. If you know the water pipe is old copper before you frame a new bathroom around it, you can plan for it. If you find it while framing, you're paying for a plumber and a drywaller on a Sunday.
+Before you tear into any wall or pull any floor, spend a day looking at what the house is hiding. Check the utility panel, the water heater, the attic, the basement for moisture or structural notes. Walk through the inspector's report with them — ask them to show you the worst thing they found. The people who are least stressed by opening a wall are the ones who went in looking for what's there.
 
 ## Step four: plan the envelope before the interior
 
-The "envelope" is everything between the outside world and your living space: the roof, the windows, the exterior walls, the foundation, the gutters, the drainage. Get that right first.
-
-I know this feels backward. You spent months (probably years) thinking about what you wanted *inside* the house. That's normal. But the envelope dictates the timeline more than anything else, and a beautiful interior in a house with envelope problems is just a beautiful way to dry out.
-
-If the roof is fine and the windows are tight and the foundation holds water *away* from the house, you have the single biggest advantage a renovation can have: a dry, stable shell to work inside. If those aren't in good shape, everything inside them is at the mercy of weather and time.
+The "envelope" is everything between the outside world and your living space — roof, windows, walls, foundation, gutters, drainage. Get it right first. You probably spent months thinking about what you wanted *inside* the house. That's normal. But the envelope dictates the timeline, and a beautiful interior in a house with envelope problems is just a beautiful way to dry out. A dry, stable shell is the single biggest advantage a renovation can have.
 
 ## Step five: pick one room and finish it
 
@@ -93,43 +83,27 @@ Pick a room that's in Bucket B — something that would make you happy every day
 
 ## Step six: write down everything you decide
 
-This is the part nobody thinks about when they start. You pick a paint color. You order a faucet. You tell the plumber you want the shower on the left wall. Three months later, when the drywall is up and you need to know what paint code you used in the hallway, you will not remember. And nobody else will.
+You pick a paint color. You order a faucet. You tell the plumber you want the shower on the left wall. Three months later, when the drywall is up and you need to know what paint code you used, you will not remember.
 
-Write it down. Not in your head. Not in a text message buried in a thread with your partner. In one place. With dates.
-
-Paint codes and brands. Fixture model numbers. Tile specs. The reason you chose the gas range over induction. The trade that you talked to but didn't hire, and why. These seem trivial until you need them, and they come up more often than you expect — when a replacement part arrives and doesn't match, when you want to match paint six months later, when insurance asks what materials you used.
-
-This is the same habit that shows up in every renovation that ends well: the record-keeping. You don't need anything fancy. A notebook works. So does a spreadsheet. So does an app designed for it. What matters is consistency, not the tool. If you want something that stays in your pocket and doesn't ask you to open a laptop or find your notebook, [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) keeps all of this attached to one project so you never have to think about where the faucet model number lives.
+Write it down. One place. With dates. Paint codes, fixture model numbers, tile specs, the reason you chose the gas range over induction, the trade you talked to but didn't hire. These seem trivial until you need them — and they come up more than you expect. Consistency matters more than the tool: notebook, spreadsheet, or app. If you want everything in your pocket, [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) keeps all of it attached to one project.
 
 ## Step seven: set up a budget that you'll actually look at
 
-Not a dream budget. An honest one.
+Not a dream budget. An honest one. List every Bucket A and B item with a number — your best guess, even if it's rough — and add a contingency line. The contingency isn't "in case things go wrong." It's "because things *will* go wrong."
 
-List every Bucket A and Bucket B item with a number — your best guess, even if it's a guess. Then add a contingency line. The contingency isn't "in case things go wrong." The contingency is "because things *will* go wrong, just not in the way you expect."
-
-Set up a simple system for tracking what you've committed (signed a quote, placed an order) versus what you've actually spent. The gap between those two numbers is where most first-time renovators get surprised. You "have" money in the account until you sign something, and then suddenly you don't — but you tracked it as if it were already spent, so your spreadsheet looks fine right up until the invoices start arriving.
-
-A [renovation budget template](/blog/renovation-budget-template/) or a simple spreadsheet is enough. Track committed and spent as separate lines. Check it once a week. The act of looking at it weekly is what prevents small purchases from becoming a silent budget drain.
+Track what you've committed (signed a quote, placed an order) separately from what you've actually spent. That gap is where most first-time renovators get surprised. A [budget template](/blog/renovation-budget-template/) or simple spreadsheet works. Check it weekly. The act of looking at it is what prevents small purchases from becoming a silent drain.
 
 ![Tools and materials laid out on a workbench — tape measure, level, a roll of painter's tape, some hardware — the quiet preparation before the real work begins](/stock/14.png)
 
-## Step eight: don't be afraid to live in the house for a while
+## Step eight: live in the house for a while
 
-There's a pattern in renovation threads where the person who moved in immediately and then tore everything apart the first weekend is the one writing the most regretful comment.
-
-The house is a data source. Live in it for two or three weeks — do laundry in the basement, notice which bathroom you actually use versus which one is decorative, feel which rooms get cold, watch where water pools after rain, notice which outlets you constantly plug things into. The house tells you what it needs if you're patient enough to listen.
-
-Moving in first and renovating slowly is not a failure of vision. It's a strategy. You renovate better when you know how you actually use the space, not how you imagine you'll use it.
+The house is a data source. Live in it for two or three weeks — do laundry in the basement, notice which bathroom you actually use, feel which rooms get cold, watch where water pools after rain. You renovate better when you know how you actually use the space, not how you imagine you will.
 
 ## The thing nobody tells you about starting
 
-There's a moment in every renovation when the excitement fades and what's left is the work. The paint is up but the trim isn't caulked. The floor is down but the baseboards are still in the truck. The budget has two weeks of money left and you've got three items you hadn't planned for.
+There's a moment in every renovation when the excitement fades and what's left is the work. This is normal. Every renovation passes through it. The people who finish are the ones who planned the sequence, kept a record, and accepted that unfinished is better than perfect.
 
-This is normal. Every renovation passes through it. The people who finish — who actually cross the line from "we're renovating" to "we're done" — are the ones who planned the sequence, kept a record, and accepted that unfinished is better than perfect.
-
-Start with the notebook. Walk the rooms. Separate essential from desirable. Fix what's broken before making things pretty. Write everything down. Check your budget weekly. Live in the house for a bit and listen to what it tells you.
-
-Then pick one room and finish it. The rest follows.
+Walk the rooms. Separate essential from desirable. Fix what's broken before making things pretty. Write everything down. Check your budget weekly. Live in the house for a bit. Then pick one room and finish it. The rest follows.
 
 ---
 
