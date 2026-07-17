@@ -57,34 +57,39 @@ Never invent a topic from thin air. Start from what real people are actually
 asking this week. Pull live threads from Reddit's public JSON (no auth, no key)
 and mine them for pain points, recurring questions, and language people use.
 
-Fetch several of these (use `curl -s -A "home-stories-blog/1.0"` — Reddit blocks
-empty user-agents). Use `t=week` first for freshness, fall back to `t=month`:
+### CRITICAL: fetch Reddit token-efficiently (raw JSON will blow the context window)
+
+Reddit's raw JSON is enormous (full post bodies + comment metadata) and will
+exceed the model context and crash the run. **Never read raw Reddit JSON.** Always
+pipe it through a filter that keeps ONLY the title, score, and comment count — one
+short line per post — and read that distilled list.
+
+Use this exact pattern per subreddit (small `limit`, titles only):
 
 ```
-https://www.reddit.com/r/HomeImprovement/top.json?t=week&limit=40
-https://www.reddit.com/r/DIY/top.json?t=week&limit=40
-https://www.reddit.com/r/Renovations/top.json?t=week&limit=40
-https://www.reddit.com/r/HomeMaintenance/top.json?t=week&limit=40
-https://www.reddit.com/r/centuryhomes/top.json?t=month&limit=30
-https://www.reddit.com/r/FirstTimeHomeBuyer/top.json?t=week&limit=30
-https://www.reddit.com/r/InteriorDesign/top.json?t=week&limit=30
-https://www.reddit.com/r/Kitchens/top.json?t=month&limit=30
-https://www.reddit.com/r/HomeDecorating/top.json?t=week&limit=30
-https://www.reddit.com/r/Frugal/top.json?t=week&limit=30
+for sub in HomeImprovement DIY Renovations FirstTimeHomeBuyer; do
+  echo "== r/$sub =="
+  curl -s -A "home-stories-blog/1.0" "https://www.reddit.com/r/$sub/top.json?t=week&limit=15" \
+    | python3 -c "import sys,json;[print(f\"{p['data']['ups']:>5}u {p['data']['num_comments']:>4}c  {p['data']['title'][:110]}\") for p in json.load(sys.stdin)['data']['children']]"
+done
 ```
 
-You can also search across Reddit for a theme, e.g.:
-```
-https://www.reddit.com/search.json?q=renovation%20budget%20over&sort=top&t=month&limit=30
-```
+- Scrape **3–4 subreddits only**, `limit=15`, `t=week` (fall back to `t=month` if a
+  sub is quiet). Good pools to rotate through: `HomeImprovement`, `DIY`,
+  `Renovations`, `HomeMaintenance`, `FirstTimeHomeBuyer`, `centuryhomes`,
+  `InteriorDesign`, `Kitchens`, `HomeDecorating`, `Frugal`.
+- That yields ~50 one-line titles total — cheap to read. Do NOT fetch `selftext`,
+  comments, or `limit` above 15. If you want detail on ONE promising thread, fetch
+  just that single post's JSON and read only its `selftext` (truncate to ~500 chars).
+- If a fetch fails or returns HTML (rate-limited), skip that sub and continue; do
+  not retry in a loop.
 
-From the JSON, read `data.children[].data.title`, `selftext`, `num_comments`,
-`ups`, `subreddit`. Look for:
+From the distilled titles, look for:
 
 - **Questions asked over and over** ("how do I keep track of…", "how much
   contingency…", "contractor says X, is that normal?", "how do I not go over budget")
 - **Regrets and expensive mistakes** ("wish I'd photographed…", "receipts I lost")
-- **High-engagement pain** (high `num_comments` relative to `ups` = people needed help)
+- **High-engagement pain** (high comment count = people needed help)
 - **Language the audience actually uses** — reuse their phrasing as the SEO keyword
 
 Then pick ONE topic where (a) there is clear, repeated demand, (b) we can give a
@@ -92,8 +97,10 @@ genuinely useful, evergreen answer, and (c) it naturally touches something Home
 Stories helps with (tracking, budget, photos, documentation, planning) — *without
 the article needing the app to be useful.*
 
-**Deduplicate:** run `ls src/content/blog/` and read a few existing posts. Do NOT
-repeat an existing angle. Pick a genuinely new topic or a distinctly sharper take.
+**Deduplicate:** run `ls src/content/blog/` and read only the slug names (and, if
+needed, `grep -h '^title:' src/content/blog/*.md`). Do NOT open every post — that
+wastes context. Pick a genuinely new topic or a distinctly sharper take than what
+the existing slugs already cover.
 
 In your final report, list the specific Reddit threads/subreddits that informed
 the topic, so the choice is auditable.
