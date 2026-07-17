@@ -130,8 +130,9 @@ skeptical Redditor should upvote it and never feel sold to.
   selling, review-style praise of the app, or implying the reader is failing
   without it. No pressure. A nudge, not a push.
 - The **gold-standard reference** is `src/content/blog/what-to-track-during-a-renovation.md`
-  already in this repo — read it before writing and match its restraint,
-  specificity, and honesty. That is exactly the tone we want.
+  in this repo — its tone is exactly right (restraint, specificity, honesty). To
+  save context, skim only the top with `head -60 src/content/blog/what-to-track-during-a-renovation.md`
+  rather than reading the whole file; match that voice.
 
 **Style:** concrete over abstract, real numbers and examples over platitudes,
 short paragraphs, plain language, occasional dry wit. Second person ("you").
@@ -226,14 +227,29 @@ Rules:
 
 ---
 
-## 7. Build, commit, publish
+## 7. Build, commit, publish — REDIRECT ALL NOISY OUTPUT TO FILES
 
-1. From the repo root, install if needed and **build before pushing**:
-   `npm install` (or `pnpm install`) then `npm run build`. The build MUST pass —
-   it validates the frontmatter schema. Fix any error before committing.
-2. Commit: `git add -A && git commit -m "Blog: <title>"`
-3. Push to main: `git push origin main` (GitHub Pages deploys from `main`).
-4. Confirm the push succeeded and, if possible, that the GitHub Actions build is green.
+The model context is small. `npm install` and `npm run build` print thousands of
+lines; if that lands in context the run dies. **Never let build/install output
+stream into the conversation.** Always redirect to a file and read only a short
+tail, and only on failure.
+
+1. Install deps only if missing, silently:
+   ```
+   [ -d node_modules ] || npm install --silent --no-progress > /tmp/hs_install.log 2>&1 || tail -20 /tmp/hs_install.log
+   ```
+2. Build to a log; surface only pass/fail:
+   ```
+   npm run build > /tmp/hs_build.log 2>&1 && echo "BUILD OK" || { echo "BUILD FAILED — last lines:"; tail -30 /tmp/hs_build.log; }
+   ```
+   The build MUST print `BUILD OK` before you push — it validates the frontmatter
+   schema. If it failed, read only the tail, fix the frontmatter/markdown, rebuild.
+3. Commit: `git add -A && git commit -m "Blog: <title>"`
+4. Push to main: `git push origin main 2>&1 | tail -5` (GitHub Pages deploys from `main`).
+
+Same discipline everywhere: pipe any command that could be verbose (`comfy-gen`,
+`git log`, `npm`, long `cat`) through a file or `tail`. Read files with `head`/
+`grep`, never dump a whole large file into context.
 
 ## 8. Final report (your last message)
 
