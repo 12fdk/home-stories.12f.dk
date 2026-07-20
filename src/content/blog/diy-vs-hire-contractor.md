@@ -21,7 +21,7 @@ faq:
   - question: "Can I DIY part of a project and hire a pro for the rest?"
     answer: "Absolutely. Many people demo and prep themselves and hire for the skilled trades (plumbing, electrical, tiling). The key is deciding up front which part is which, and making sure both sides know exactly where their responsibility begins and ends."
   - question: "How long does a typical home renovation project take?"
-    answer: "Plan for 50–100% longer than you think. A two-week kitchen remodel often takes six. A weekend deck project frequently stretches into a month. The gap comes from material delays, unexpected conditions behind walls, and the fact that every trade takes days between booking and showing up."
+    answer: "Plan for considerably longer than you think. A two-week kitchen remodel often stretches to six or more. A weekend deck project frequently becomes a month-long affair. The gap comes from material delays, unexpected conditions behind walls, and the fact that every trade takes days between booking and showing up."
   - question: "What should I ask before hiring a contractor?"
     answer: "At minimum: Can you give me a written quote that breaks down labor and materials? What's included and what's not? How do you handle changes once the work starts? And can you show me two similar projects you've finished? If they won't put it in writing or won't share references, keep looking."
   - question: "Should I track my DIY time the same way contractors do?"
