@@ -28,6 +28,15 @@ const APP_STORE_URL = "https://apps.apple.com/app/id6754754960";
 // but exempt from WARN-level nitpicks that would otherwise create pointless noise.
 const SET_PREFIX = "how-long-does-";
 
+/**
+ * Page-set posts that brush against an existing post's territory, and the post they
+ * must link to so a reader (and a crawler) can tell the two apart. Keyed by a
+ * substring of the set slug.
+ */
+const DIFFERENTIATE_FROM = {
+  kitchen: "kitchen-renovation-timeline",
+};
+
 /* ------------------------------------------------------------------ parsing */
 
 /**
@@ -194,6 +203,28 @@ function checkPost(file) {
     const target = l.replace("/blog/", "");
     if (target === slug) E(`links to itself (${l})`);
     else if (!fs.existsSync(path.join(BLOG_DIR, `${target}.md`))) E(`internal link "${l}" points at a post that does not exist`);
+  }
+
+  /* --- page-set cohesion (prompt.md §1a) ---
+   * A set only earns its keep if its pages are linked into a cluster and each one is
+   * clearly distinct from whatever already covered that ground. Run 1 of the set
+   * silently skipped its required differentiation link, so this is checked, not asked. */
+  if (slug.startsWith(SET_PREFIX)) {
+    const siblings = fs
+      .readdirSync(BLOG_DIR)
+      .filter((f) => f.startsWith(SET_PREFIX) && f.endsWith(".md") && f !== `${slug}.md`)
+      .map((f) => f.replace(/\.md$/, ""));
+    if (siblings.length) {
+      const linked = siblings.filter((s) => uniqueInternal.includes(`/blog/${s}`));
+      if (!linked.length) {
+        E(`page-set post links to none of its ${siblings.length} sibling(s) — the set must form a cluster`);
+      }
+    }
+    for (const [needle, required] of Object.entries(DIFFERENTIATE_FROM)) {
+      if (slug.includes(needle) && !uniqueInternal.includes(`/blog/${required}`)) {
+        E(`must link to /blog/${required}/ — it covers adjacent ground and the two posts have to be told apart`);
+      }
+    }
   }
 
   /* --- external links: only the App Store link is allowed (prompt.md §3) --- */

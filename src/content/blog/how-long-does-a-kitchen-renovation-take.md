@@ -55,7 +55,7 @@ If you're new to managing a home renovation at all, a [step-by-step planning gui
 
 ## What the weeks are actually spent on
 
-A kitchen renovation timeline isn't one continuous block of hammering and screwing. It's a chain of phases, some fast and loud, some slow and invisible, and the gaps between them are where projects lose months.
+A kitchen renovation timeline isn't one continuous block of hammering and screwing. It's a chain of phases, some fast and loud, some slow and invisible, and the gaps between them are where projects lose months. What follows is the shape of those phases and why each one takes as long as it does; if you'd rather see a schedule laid out week by week, [a realistic kitchen renovation timeline](/blog/kitchen-renovation-timeline/) works through one as an example.
 
 **Weeks 1–3: demolition, rough-in, inspections.** This is the loud, messy phase. Old cabinets come down, drywall gets torn open, and the new electrical and plumbing lines go in behind the walls. Once the rough work is done, an inspector needs to sign off before the walls can close up. If everything passes — and a lot of projects don't the first time — you're looking at three to five days of actual work spread across these weeks. The time is spent waiting.
 
