@@ -101,7 +101,7 @@ Other projects tend to belong to professionals: anything touching plumbing, elec
 
 Here's the thing most people don't tell you: you can mix both. Many homeowners do the prep work themselves — demo, painting, clearing out old fixtures — and then hire a pro for the skilled portion. Or they DIY the non-critical elements and hire for the things that actually matter structurally.
 
-The key is deciding *up front* where the line is. Don't start a project thinking you'll DIY and then call a contractor halfway through because you hit something you didn't expect. That "change order" mindset is exactly what makes renovation costs spiral. If you know part of it will be pro work, plan the scope with that in mind from day one.
+The key is deciding *up front* where the line is. Don't start a project thinking you'll DIY and then call a contractor halfway through because you hit something you didn't expect. That "change order" mindset is exactly what makes renovation costs spiral, and a [contingency budget](/blog/renovation-contingency-budget/) is what absorbs it when it happens anyway. If you know part of it will be pro work, plan the scope with that in mind from day one — [the phases of a renovation](/blog/home-renovation-phases/) are a useful frame for deciding where the handover points sit.
 
 ## The honest decision matrix
 
@@ -114,6 +114,8 @@ Here's the framework I keep going back to, compressed into something you can run
 5. **Compare the numbers** and ask: "Would I save money hiring someone, and what would I be giving up?"
 
 If the answer is "I'd save money DIYing," go for it. If the answer is "hiring is cheaper when I count everything," hire. And if the answer is "I don't know" — that's the most common outcome — then lean toward hiring, because the uncertainty itself is a cost you haven't factored in.
+
+Step 1 is easier if you already know roughly how long the job runs when a professional does it: [how long it takes to install flooring](/blog/how-long-does-it-take-to-install-flooring/) is a good example of a job where the material, not the labour, sets the schedule — and where a DIYer's timeline and a pro's are much closer than for something like [rewiring a house](/blog/how-long-does-it-take-to-rewire-a-house/).
 
 ## The tool that makes this honest
 

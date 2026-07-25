@@ -263,8 +263,18 @@ actually fetch this run. When in doubt, cut it — a purely qualitative post is
   dictionary definition.
 - Use short lists and the occasional bold lead-in. Include at least one concrete
   worked example (numbers, a scenario, a before/after).
-- Link to 2–3 **existing** related posts inline where relevant, using
-  `/blog/<slug>/` (confirm the slug exists in `src/content/blog/`).
+- **Link to at least 3 existing posts inline** using `/blog/<slug>/` — confirm each
+  slug exists in `src/content/blog/`. The validator fails a post with fewer than three.
+  At least one of them should be a **pillar**: `how-to-plan-a-home-renovation-step-by-step`
+  (the how-do-I-start pillar), `how-to-budget-a-home-renovation` (the money pillar), or
+  `home-renovation-phases` (the sequence pillar). Everything else on the blog is a spoke
+  that should point up at one of those three, so authority collects somewhere instead of
+  spreading evenly across 25 dead ends.
+- **Then make your post reachable.** Links out are only half of it — a post nothing
+  links *to* is invisible no matter how many links it contains. After writing, add a
+  sentence linking to your new post from **one existing post** where it genuinely
+  belongs, and commit that edit alongside the new file. `node scripts/validate-posts.mjs`
+  (no arguments) reports orphans if you want to check the picture.
 - End with a short, honest wrap-up and the single soft CTA.
 - **At least 3–4 images** placed at logical breaks (see §6), each with meaningful
   alt text describing the photo.

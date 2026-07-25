@@ -139,7 +139,7 @@ Here's how the three stack up on the criteria that actually matter for a homeown
 
 ## So which should you use?
 
-It depends on who you are and where you are in the renovation timeline.
+It depends on who you are and where you are in the renovation timeline. If you're still deciding what you need a tool to do at all, [what to track during a renovation](/blog/what-to-track-during-a-renovation/) is the better starting point — the shortlist gets much easier once you know which four or five things actually need recording.
 
 **Use HomeZada if:** You already manage your home's assets, warranties, and maintenance in it from a desk. It's a home-management system with renovation features. If the whole house is your project and you want one platform for everything, it has the breadth. Just accept that it's going to be a planning tool, not an on-site companion.
 
@@ -163,7 +163,7 @@ Home Stories has exactly the features a homeowner needs for execution: budget, p
 
 ## Putting it together
 
-If you want to plan from a desk and log from your phone, you might use HomeZada for the planning phase and then switch to something phone-first when execution starts. That's a perfectly reasonable approach — just accept that the switching cost is real, and that most people abandon the planning tool entirely once work begins.
+If you want to plan from a desk and log from your phone, you might use HomeZada for the planning phase and then switch to something phone-first when execution starts. That's a perfectly reasonable approach — just accept that the switching cost is real, and that most people abandon the planning tool entirely once work begins. The same trade-off shows up with general-purpose tools: [Notion for a home renovation](/blog/notion-for-home-renovation/) and [the spreadsheet approach](/blog/renovation-spreadsheet-alternative/) both plan well and both get abandoned around the point the dust starts.
 
 If you want one tool from start to finish, and that tool needs to survive on-site conditions, Home Stories is the only option on this list designed for that from the ground up. It's free to try, takes two minutes to set up, and exports to a format a contractor or accountant will actually open.
 

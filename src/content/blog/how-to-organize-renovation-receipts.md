@@ -44,7 +44,7 @@ Getting this right isn't about being tidy. It's about the fact that a renovation
 
 ## Why renovation receipts are worth real money
 
-Two things happen long after your project finishes, and both of them cash in on your record-keeping.
+Two things happen long after your project finishes, and both of them cash in on your record-keeping. There's a third that happens during it: a receipt trail is the only way to see an overrun while you can still do something about it, which is most of [why renovations go over budget](/blog/renovation-cost-overrun-statistics/) in the first place.
 
 **Tax when you sell.** In most tax systems, the money you put into *capital improvements* — work that adds value to the property or extends its life — is added to what the property cost you, which can reduce the taxable gain when you eventually sell. Routine repairs and maintenance generally don't count. The details vary a lot by country and they change over time, so the specifics belong with a qualified tax professional in your jurisdiction. But the universal part is this: **the deduction is only ever as good as the documentation behind it.** A remembered figure is not evidence. A receipt is.
 
