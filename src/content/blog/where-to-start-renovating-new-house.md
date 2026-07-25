@@ -57,6 +57,8 @@ Take the notebook and sort everything into two buckets.
 
 **Bucket A — Essential (do first):** Things that, if you left them alone, would cause damage, cost, or danger. Examples: a roof that leaks every spring, a water heater that's fifteen years old and making gurgling noises, electrical outlets that spark, mold in the basement, a driveway that slopes toward the foundation. These are not aesthetic choices. These are decisions that get more expensive the longer you wait.
 
+Bucket A items are also the ones worth checking the clock on before you commit, because they tend to displace everything else while they run: [rewiring a house](/blog/how-long-does-it-take-to-rewire-a-house/), [replacing windows](/blog/how-long-does-it-take-to-replace-windows/) and [replacing a roof](/blog/how-long-does-a-roof-replacement-take/) all sound like short jobs and all sit on the critical path for the cosmetic work you actually want to do.
+
 **Bucket B — Desirable (do when you can afford it):** Things that would make your life better but won't actively hurt anything if you wait. Examples: a kitchen backsplash, a painted front door, new light fixtures, a nicer bathroom vanity, adding shelving instead of a full kitchen remodel. These are legitimate improvements. They're just not urgent.
 
 The reason this distinction matters is simple: renovation energy is finite. If you spend your enthusiasm, your weekends, and your money on Bucket B while Bucket A is still sitting there, you end up with a pretty room in a house that still has problems. And those problems will eventually come knocking.

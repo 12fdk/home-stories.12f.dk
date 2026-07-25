@@ -284,7 +284,7 @@ lede: "..."             # 1–3 sentence hook shown under the title; concrete, n
 keyword: "..."          # the primary SEO keyword/phrase (the reader's own words)
 cover: "/stock/NN.png"  # next available number — see §6, never overwrite an existing file
 coverAlt: "..."         # describes the photograph itself (it's read aloud); not decoration
-publishDate: YYYY-MM-DD # a §1a queue row: its assigned date, verbatim. Otherwise: today.
+publishDate: YYYY-MM-DD # queue row → its assigned date. Otherwise → next free date (below).
 author: "Robert Jensen"
 tags: ["...", "..."]    # 3–5 lowercase, relevant tags
 tldr:                   # 3–5 bullet strings; each may use <strong>…</strong>; plain takeaways, not app ads
@@ -298,6 +298,15 @@ relatedSlugs:           # 3–4 slugs that ACTUALLY EXIST in src/content/blog/
 ```
 
 Rules:
+- **`publishDate` — one post per day, no exceptions.** If your post came from the §1a
+  queue, use that row's date verbatim. Otherwise use **today's date, unless a post
+  already has it** — then walk forward to the first date no post is using:
+  ```
+  grep -h '^publishDate:' src/content/blog/*.md | sort | tail -5
+  ```
+  Scheduled posts from a page set can occupy dates weeks ahead, so today is not always
+  free. Two posts sharing a date breaks the blog's one-a-day rule and the validator
+  will warn about it.
 - `title` ≤ 70 characters and `description` ≤ 160 characters — the deploy has
   broken before on an over-length title. Count characters.
 - `relatedSlugs` must be real existing slugs (run `ls src/content/blog/`), topically

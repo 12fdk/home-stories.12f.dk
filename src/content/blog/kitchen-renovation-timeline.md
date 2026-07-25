@@ -40,6 +40,8 @@ I've watched three kitchen renovations start to finish — two of my own, one fo
 
 The timeline below is week-by-week, from the first demo day to the punch list walkthrough. But there's a hidden timeline before that: design and permits. Most renovators underestimate it by 3–4 weeks.
 
+If you're after the short answer rather than the full week-by-week, [how long a kitchen renovation takes](/blog/how-long-does-a-kitchen-renovation-take/) covers the realistic ranges and the delays that cause the spread.
+
 ## The hidden timeline: design and permits (weeks –4 to 0)
 
 Before the first hammer swings, you need:
@@ -132,7 +134,7 @@ The backsplash work starts — tiling begins from the countertop up. Depending o
 
 By this point, several sub-trades should be converging:
 
-**Flooring:** If the floor is vinyl, laminate, or engineered wood, it's laid now. If it's tile, it may have started during the backsplash phase. Hardwood is usually laid before the cabinets go in (under-cabinet height), which is why the timeline above has it here rather than earlier.
+**Flooring:** If the floor is vinyl, laminate, or engineered wood, it's laid now. If it's tile, it may have started during the backsplash phase. Hardwood is usually laid before the cabinets go in (under-cabinet height), which is why the timeline above has it here rather than earlier. The material decides the schedule here more than anything else — [how long flooring takes to install](/blog/how-long-does-it-take-to-install-flooring/) breaks the difference down by type.
 
 **Paint:** Walls are painted now. The ceiling was painted during the drywall phase, but the walls get their finish coat after the cabinets are installed so you can cut a clean line where the cabinets meet the wall.
 

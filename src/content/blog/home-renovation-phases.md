@@ -77,6 +77,8 @@ This is also the phase to get everything in writing. The U.S. Federal Trade Comm
 
 The loud, dusty, visible phase — and, on the calendar, usually the longest. Walls come down, services go in, the structure takes shape. It feels like the main event, and in terms of effort it is. But here's the thing most homeowners learn the hard way: **the outcome of phase 5 was largely decided in phases 1–4.** A complete scope, a real budget, clear drawings, and a solid contract are what make the build boring in the good way.
 
+How long phase 5 actually runs depends entirely on what you're doing, and the honest answers vary more than most planning advice admits: [a kitchen](/blog/how-long-does-a-kitchen-renovation-take/) and [a bathroom](/blog/how-long-does-a-bathroom-renovation-take/) run on very different clocks, single-trade jobs like [rewiring](/blog/how-long-does-it-take-to-rewire-a-house/), [replacing windows](/blog/how-long-does-it-take-to-replace-windows/) or [a new roof](/blog/how-long-does-a-roof-replacement-take/) are shorter but sit on the critical path for everything after them, and structural work such as [a house extension](/blog/how-long-does-a-house-extension-take/) or [a loft conversion](/blog/how-long-does-a-loft-conversion-take/) is a different order of magnitude again.
+
 What this phase demands is *live tracking*, because this is where the budget either holds or leaks. Costs get committed daily, changes get requested on the spot, and the gap between "the plan" and "what's actually happening" opens up fast if nobody is watching it.
 
 **What to track:**
