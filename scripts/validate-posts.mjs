@@ -210,14 +210,22 @@ function checkPost(file) {
    * clearly distinct from whatever already covered that ground. Run 1 of the set
    * silently skipped its required differentiation link, so this is checked, not asked. */
   if (slug.startsWith(SET_PREFIX)) {
+    // Only *earlier* siblings count. A post cannot link to one that did not exist when
+    // it was written, and requiring it would retroactively fail every post each time a
+    // new row lands. Backward links are the cron's job; the forward links that turn the
+    // chain into a mesh are a deliberate pass once the set is complete (#95).
     const siblings = fs
       .readdirSync(BLOG_DIR)
       .filter((f) => f.startsWith(SET_PREFIX) && f.endsWith(".md") && f !== `${slug}.md`)
-      .map((f) => f.replace(/\.md$/, ""));
+      .map((f) => f.replace(/\.md$/, ""))
+      .filter((s) => {
+        const sib = parseFrontmatter(fs.readFileSync(path.join(BLOG_DIR, `${s}.md`), "utf8")).data;
+        return sib?.publishDate && data.publishDate && String(sib.publishDate) < String(data.publishDate);
+      });
     if (siblings.length) {
       const linked = siblings.filter((s) => uniqueInternal.includes(`/blog/${s}`));
       if (!linked.length) {
-        E(`page-set post links to none of its ${siblings.length} sibling(s) — the set must form a cluster`);
+        E(`page-set post links to none of its ${siblings.length} earlier sibling(s) — the set must form a cluster`);
       }
     }
     for (const [needle, required] of Object.entries(DIFFERENTIATE_FROM)) {
