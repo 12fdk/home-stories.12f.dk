@@ -14,7 +14,7 @@ tldr:
   - "A renovation has a <strong>universal task list</strong> that repeats in every room — survey, strip, services, surfaces, fit-out, snag — plus room-specific tasks the generic checklists always miss."
   - "The tasks people <strong>forget are the cheap ones</strong>: ordering long-lead items early, photographing pipe runs before they're covered, confirming permits before the trades arrive."
   - "Work the checklist in <strong>phase order, not room order</strong> — first-fix electrics and plumbing happen across every room before any finishes go in anywhere."
-  - "Print it for the wall, or track the same list on your phone so it's actually with you on-site. <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> keeps the checklist, the budget, and the photos in one project."
+  - "Print it for the wall, or track the same list on your phone so it's actually with you on-site. <a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> keeps the checklist, the budget, and the photos in one project."
 faq:
   - question: "What should be on a home renovation checklist?"
     answer: "A complete renovation checklist has three layers: a pre-start layer (scope, budget, quotes, permits, long-lead orders), a per-room task layer broken into strip-out, first-fix services, surfaces, and fit-out, and a handover layer (snagging, final payments, warranties, and documents). The most-missed items are not the big jobs — they're the small early tasks like ordering made-to-measure windows weeks ahead and photographing wiring and pipework before the walls close up."
@@ -34,7 +34,7 @@ relatedSlugs:
 
 A renovation looks like one decision — "we're doing the kitchen" — but it's really a few hundred small tasks stacked on top of each other. The big ones (knock down the wall, fit the kitchen) take care of themselves because they're impossible to forget. It's the small, boring, cheap tasks that get missed: ordering the made-to-measure window six weeks before you need it, photographing the pipe runs before the plasterboard goes on, confirming the permit is approved before the trades turn up. Each one is trivial on its own. Each one, forgotten, costs days or money.
 
-A checklist is the cheapest insurance you can buy against that. Below is a complete, printable renovation checklist — organised the way the work actually happens — that you can copy, print, or rebuild in any app. Print it for the wall, or [keep the same list on your phone](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) so it's with you when it matters.
+A checklist is the cheapest insurance you can buy against that. Below is a complete, printable renovation checklist — organised the way the work actually happens — that you can copy, print, or rebuild in any app. Print it for the wall, or [keep the same list on your phone](https://apps.apple.com/app/id6754754960) so it's with you when it matters.
 
 ![Interior painting in progress — fresh white paint on bare walls, paint rollers and trays on a drop cloth, painter's tape along the edges, realistic scene of a room being painted during renovation](/stock/11.png)
 
@@ -96,7 +96,7 @@ First fix is everything that goes *inside* the walls and floors before they're c
 
 That photo step matters more than any other on this page. Once the plasterboard is up, the exact position of every pipe and cable is invisible — until the day you want to hang a heavy shelf, chase a leak, or prove to a buyer's surveyor what's behind the wall.
 
-A renovation checklist is only useful if it's *with you* when you're doing this work — and a printout taped to the wall isn't on the scaffold or at the merchant. This is exactly the gap [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) was built to close: the same checklist on your phone, where you can tick a task, snap the pipe-run photo against it, and log what you just paid — all in one tap, on-site. It's free on the App Store.
+A renovation checklist is only useful if it's *with you* when you're doing this work — and a printout taped to the wall isn't on the scaffold or at the merchant. This is exactly the gap [Home Stories](https://apps.apple.com/app/id6754754960) was built to close: the same checklist on your phone, where you can tick a task, snap the pipe-run photo against it, and log what you just paid — all in one tap, on-site. It's free on the App Store.
 
 ## Phase 3 — Plaster and surfaces
 
@@ -166,6 +166,6 @@ A renovation isn't finished when the work stops — it's finished when the snags
 
 You can print this whole list straight from the page and tape it to the wall — that's genuinely useful for the at-a-glance, whole-project view, and crossing items off by hand is satisfying.
 
-But a wall chart has one flaw: it isn't with you at the builder's merchant, on the scaffold, or standing in the half-stripped bathroom wondering whether the plumber's first fix is signed off. That's where the checklist needs to live. [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) keeps this same task list on your phone, alongside the budget and the photos, so each task carries its own receipt and its own pipe-run photo. Tick it, shoot it, log the cost — once, on the spot.
+But a wall chart has one flaw: it isn't with you at the builder's merchant, on the scaffold, or standing in the half-stripped bathroom wondering whether the plumber's first fix is signed off. That's where the checklist needs to live. [Home Stories](https://apps.apple.com/app/id6754754960) keeps this same task list on your phone, alongside the budget and the photos, so each task carries its own receipt and its own pipe-run photo. Tick it, shoot it, log the cost — once, on the spot.
 
 Print the master list for the wall, run the working copy on your phone, and the boring, cheap, easily-forgotten tasks — the ones that actually derail renovations — stop falling through the cracks. It's free on the App Store, and it's built to carry a project from the first strip-out to the final signed-off snag.

@@ -121,7 +121,7 @@ The hardest part of this framework is that step about tracking your hours honest
 
 I started doing this after a particularly embarrassing weekend when I logged 18 hours of "DIY" kitchen prep and it turned out the contractor's quote was $600 less than what I'd spent on tools and wasted materials. That was the moment I realized: the real comparison isn't between DIY and hiring. It's between an honest budget and a hopeful one.
 
-Keeping all of that — quotes, hours, expenses, photos, decisions — in one place on the phone you already carry is what convinced me that a dedicated project tool was worth using. [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) lets you log time, track your budget, attach photos of the work, and review everything in one project view. The time tracking feature is especially useful for the DIY-vs-pro comparison because it makes your hours feel as real as the contractor's invoice.
+Keeping all of that — quotes, hours, expenses, photos, decisions — in one place on the phone you already carry is what convinced me that a dedicated project tool was worth using. [Home Stories](https://apps.apple.com/app/id6754754960) lets you log time, track your budget, attach photos of the work, and review everything in one project view. The time tracking feature is especially useful for the DIY-vs-pro comparison because it makes your hours feel as real as the contractor's invoice.
 
 You don't need any app to make this decision. A notebook and a calculator work. But if you're going to track hours honestly, why not make it as easy as opening the app you already use every day?
 

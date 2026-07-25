@@ -44,7 +44,7 @@ Amazon/IKEA share extension, search across all projects, and 50 languages. It
 **works fully offline, needs no account, and syncs via iCloud when you want it.**
 Free, with an optional one-time Premium Lifetime unlock. Made in Denmark by
 Robert Jensen. App Store:
-`https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960`
+`https://apps.apple.com/app/id6754754960`
 
 Do **not** invent features (no Android app, no web app, no AI features, no bank
 integration, no cloud account). If you are unsure a feature exists, don't mention it.

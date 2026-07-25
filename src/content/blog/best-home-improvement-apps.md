@@ -15,7 +15,7 @@ tldr:
   - "<strong>Houzz for ideas and finding a pro</strong> (4.8★, 322k ratings), <strong>Polycam for measuring</strong> with the LiDAR scanner already in your iPhone, and <strong>magicplan</strong> if you need a floor plan a builder will take seriously."
   - "<strong>Planner 5D</strong> is the friendliest way to try a layout before you commit to knocking a wall down. <strong>Buildertrend</strong> matters only if your contractor uses it — but if they do, ask for portal access."
   - "<strong>Check the 'last updated' date before you trust a round-up.</strong> HomeZada is recommended almost everywhere, yet its iPhone app hasn't been updated since May 2022 and averages 2.9 stars. We left it off, and we explain why."
-  - "<strong>Disclosure: Home Stories is our app.</strong> It's on this list because none of the other five do the day-to-day job of logging costs, photos and receipts on-site — and that's the part that actually goes wrong. It's <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>free on the App Store</a>."
+  - "<strong>Disclosure: Home Stories is our app.</strong> It's on this list because none of the other five do the day-to-day job of logging costs, photos and receipts on-site — and that's the part that actually goes wrong. It's <a href='https://apps.apple.com/app/id6754754960'>free on the App Store</a>."
 faq:
   - question: "What is the best app for home renovation in 2026?"
     answer: "There isn't one, and any list that gives you a single answer is selling something. Renovation splits into four jobs that need different tools: gathering ideas and hiring a professional (Houzz), measuring rooms and producing floor plans (Polycam or magicplan), designing and visualising a layout (Planner 5D), and running the project day-to-day once work starts — tracking costs, photos, receipts and tasks (a phone-first tracker like Home Stories). Most homeowners genuinely need two of these, not six. Work out which phase you're actually in and install for that."
@@ -144,7 +144,7 @@ It deliberately does *less* than most apps here. It won't design your kitchen or
 
 **Install it if:** work is about to start, or has started, and nothing is currently keeping track of what it's costing you.
 
-[Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+[Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960).
 
 ---
 

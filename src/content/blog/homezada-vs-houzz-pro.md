@@ -171,10 +171,10 @@ You can compare the full details on each product's website:
 
 - [HomeZada](https://www.homezada.com) — home management platform with renovation features
 - [Houzz Pro](https://www.houzz.com/pro) — contractor and designer business tools
-- [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) — free renovation tracking for iPhone
+- [Home Stories](https://apps.apple.com/app/id6754754960) — free renovation tracking for iPhone
 
 The decision isn't about which app has the most features. It's about which tool you'll still be using in the third month of a renovation, when you're tired, the budget is tight, and you just need to log one more receipt before the invoice deadline.
 
 ## Ready to try one?
 
-[Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960). Set up a project in two minutes, log your first budget category, and see whether a phone-first approach changes how consistently you track. You can always switch to a desktop-heavy tool later — but once work starts, it's much harder to find one that works in a dusty room on a phone.
+[Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set up a project in two minutes, log your first budget category, and see whether a phone-first approach changes how consistently you track. You can always switch to a desktop-heavy tool later — but once work starts, it's much harder to find one that works in a dusty room on a phone.

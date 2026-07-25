@@ -15,7 +15,7 @@ tldr:
   - "Each phase has a <strong>different thing worth tracking</strong> — scope in planning, contingency draw-down in construction, defects at handover. Track the wrong metric and you miss the drift."
   - "Most overruns and delays are <strong>baked in during phases 1–4</strong> (the desk phases), even though they only become visible during phase 5 (the build)."
   - "The <strong>handover phase is the one people skip</strong> — and it's where retained money, warranties, and your future records are either captured or lost forever."
-  - "Tracking across all seven phases in one place beats juggling a planning spreadsheet, a contractor's email thread, and a shoebox of receipts. <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> keeps the whole arc in one project."
+  - "Tracking across all seven phases in one place beats juggling a planning spreadsheet, a contractor's email thread, and a shoebox of receipts. <a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> keeps the whole arc in one project."
 faq:
   - question: "What are the phases of a home renovation?"
     answer: "A home renovation moves through seven phases in order: (1) planning and vision, (2) budgeting and financing, (3) design and permits, (4) hiring and contracts, (5) demolition and construction, (6) finishes and fit-out, and (7) snagging and handover. Smaller projects compress some phases, but the sequence is the same — and skipping a phase doesn't remove the work, it just moves it to a worse moment later in the project."
@@ -86,7 +86,7 @@ What this phase demands is *live tracking*, because this is where the budget eit
 - **Contingency draw-down.** Log each dip into the contingency and what it was for, so you can see whether you're on pace or burning it by week three.
 - **Progress photos.** Especially of anything about to be covered up — pipe runs, wiring, waterproofing. You will want those photos one day.
 
-This is precisely the phase where [a planning spreadsheet stops working](/blog/renovation-spreadsheet-alternative/): you're on site, one-handed, in the dust, and a desk tool just doesn't get updated. Home Stories was built for this half of the project — log a receipt at the merchant in ten seconds, snap a photo against the right line item, and always know where you stand. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+This is precisely the phase where [a planning spreadsheet stops working](/blog/renovation-spreadsheet-alternative/): you're on site, one-handed, in the dust, and a desk tool just doesn't get updated. Home Stories was built for this half of the project — log a receipt at the merchant in ten seconds, snap a photo against the right line item, and always know where you stand. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
 
 ## Phase 6: Finishes and fit-out
 
@@ -112,4 +112,4 @@ The first: **problems are created early and revealed late.** Overruns and delays
 
 The second: **the thing worth tracking changes as you go.** Scope and decisions early. Itemised budget and contingency once costs are known. Actual-vs-estimate, change orders, and photos during the build. Defects and documents at the end. A tool that only does one of these — a planning spreadsheet, a contractor's email thread, a shoebox of receipts — leaves the others uncovered.
 
-That's the case for keeping the whole arc in one place. [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) holds all seven phases in a single project — scope, budget, line-item tracking, change orders, photos, and a PDF report at the end — so nothing falls into the gap between phases. It's free on the App Store, and it's built to carry a renovation from the first sketch to the final signed-off snag.
+That's the case for keeping the whole arc in one place. [Home Stories](https://apps.apple.com/app/id6754754960) holds all seven phases in a single project — scope, budget, line-item tracking, change orders, photos, and a PDF report at the end — so nothing falls into the gap between phases. It's free on the App Store, and it's built to carry a renovation from the first sketch to the final signed-off snag.

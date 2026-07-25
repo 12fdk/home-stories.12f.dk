@@ -14,7 +14,7 @@ tldr:
   - "Spreadsheets break down at predictable points: receipt logging, photo attachment, on-site updates, and contractor handoff."
   - "The cost isn't the spreadsheet — it's the <em>information you lose</em> when you stop maintaining it."
   - "A purpose-built app keeps the same data model but removes the friction of on-site logging."
-  - "<a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> was built specifically as a renovation tracker — same line-items as a spreadsheet, faster to update from a phone."
+  - "<a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> was built specifically as a renovation tracker — same line-items as a spreadsheet, faster to update from a phone."
 faq:
   - question: "What's wrong with using a spreadsheet for a renovation?"
     answer: "Nothing — for planning. The problems start at execution. Spreadsheets need a desk, a laptop, two hands, and 30 seconds of focus per entry. Renovations need one-handed logging on a phone while standing in a dusty kitchen. The mismatch causes people to skip logging, and once logging stops the spreadsheet stops being a tracker and starts being a relic."
@@ -145,4 +145,4 @@ You'll save the spreadsheet as `renovation-archive.xlsx` and forget about it wit
 
 The spreadsheet isn't the enemy. Friction is. Every tool you choose for a renovation will either reduce friction or add it — and the only friction that matters is *the friction at the moment you're trying to log something*.
 
-If that moment happens at a kitchen tile shop with one free hand, the right tool is on your phone. [Home Stories is free, designed for exactly this, and you can be set up in 90 seconds.](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)
+If that moment happens at a kitchen tile shop with one free hand, the right tool is on your phone. [Home Stories is free, designed for exactly this, and you can be set up in 90 seconds.](https://apps.apple.com/app/id6754754960)

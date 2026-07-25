@@ -15,7 +15,7 @@ tldr:
   - "Contingency covers <strong>genuine surprises</strong> — rot, non-compliant wiring, an un-level floor — not scope upgrades you talked yourself into. Keep the two strictly separate."
   - "<strong>Ring-fence it</strong> as its own line and resist spending it early. The classic failure is dipping in for a nicer worktop in week three and having nothing left for the real surprise in week eight."
   - "<strong>Draw it down visibly.</strong> Log every dip — what for, how much, what's left — so the remaining buffer is always a number you can see, not a vibe."
-  - "Spreadsheets are fine for setting the contingency; for watching it drain in real time on-site, an app like <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> keeps the running balance current without nightly admin."
+  - "Spreadsheets are fine for setting the contingency; for watching it drain in real time on-site, an app like <a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> keeps the running balance current without nightly admin."
 faq:
   - question: "How much contingency should I budget for a renovation?"
     answer: "Size it to the home, not to a flat rule. Use about 15% for a newer home (post-1990) in good condition with nothing being opened up, 20% for an older home or any project disturbing walls, floors, or services, and 25% or more for a pre-war home, known structural issues, or large unknown areas. The common 10% figure comes from new construction, where the site is a blank slab — renovations have far more hidden risk, so 10% almost always runs out."
@@ -101,7 +101,7 @@ Treat contingency as a **live balance**, exactly like the balance on a bank acco
 
 And watch the **trend, not just the total.** Contingency draining fast in the first few weeks is one of the most valuable early-warning signals a renovation gives you: it means your original estimates were optimistic, the surprises are stacking up, and you should be cutting scope *now*, while you still have time to react — not at handover, when the only options are a bigger loan or an unfinished room.
 
-This is precisely the kind of running balance a spreadsheet handles fine at the desk and badly on-site. Home Stories keeps the contingency as a live line alongside the rest of the budget, so when you log a surprise cost at the builder's merchant, the remaining buffer updates instantly and you can see — to the dollar — how much runway is left. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+This is precisely the kind of running balance a spreadsheet handles fine at the desk and badly on-site. Home Stories keeps the contingency as a live line alongside the rest of the budget, so when you log a surprise cost at the builder's merchant, the remaining buffer updates instantly and you can see — to the dollar — how much runway is left. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
 
 ## When it's actually fair to dip in
 
@@ -142,4 +142,4 @@ A renovation contingency budget that actually protects you comes down to four th
 
 The setup happens at a desk, and a [budget template](/blog/renovation-budget-template/) handles it well. The hard part — keeping the buffer honest while you're standing in a half-demolished room logging a surprise cost one-handed — happens on-site, which is exactly where a desk tool stops working.
 
-If you'd rather have the live balance handled for you, [Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960). Set your contingency once, log each draw as it happens, and always know — to the line item — how much of your buffer is left to face whatever's behind the next wall.
+If you'd rather have the live balance handled for you, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set your contingency once, log each draw as it happens, and always know — to the line item — how much of your buffer is left to face whatever's behind the next wall.
