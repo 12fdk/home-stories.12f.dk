@@ -51,7 +51,64 @@ integration, no cloud account). If you are unsure a feature exists, don't mentio
 
 ---
 
-## 1. Topic selection — pick from the Reddit-derived topic bank (stable-first)
+## 1. Topic selection — the page-set queue first, then the topic bank
+
+### 1a. Page-set queue (WORK THIS FIRST while it has unwritten rows)
+
+A **page set** is a group of posts that share a shape and each answer one distinct
+long-tail question. Sets earn traffic that one-off posts can't, because they cover a
+whole question space instead of a single query. Issue #95 tracks this.
+
+**How to use the queue:**
+
+1. Run `ls src/content/blog/` once.
+2. Walk the table below **top to bottom** and take the **first row whose slug has no
+   matching `.md` file.** That row is your post this run. Do not pick a different one,
+   do not reorder, do not write two.
+3. Use the row's `slug`, `keyword` and `publishDate` **exactly as written.** The
+   `publishDate` is deliberately in the future — the set is written over a few sittings
+   but released one post per day, so the blog never dumps a pile of posts on one date.
+   A future-dated post correctly does not appear on the site until that day; that is
+   the design, not a bug (see `src/utils/posts.ts`). **Never change a row's date to
+   today.**
+4. If every row is written, the set is done — fall through to §1b (the topic bank).
+
+**The set: "how long does <task> take"** — duration questions people actually type.
+Each row must be genuinely its own article: the honest answer, what the days are
+actually spent on, and what makes it run long. Same shape, different substance.
+
+| # | slug | keyword | publishDate |
+|---|------|---------|-------------|
+| 1 | `how-long-does-a-kitchen-renovation-take` | how long does a kitchen renovation take | 2026-07-27 |
+| 2 | `how-long-does-a-bathroom-renovation-take` | how long does a bathroom renovation take | 2026-07-28 |
+| 3 | `how-long-does-it-take-to-rewire-a-house` | how long does it take to rewire a house | 2026-07-29 |
+| 4 | `how-long-does-it-take-to-replace-windows` | how long does it take to replace windows | 2026-07-30 |
+| 5 | `how-long-does-it-take-to-install-flooring` | how long does it take to install flooring | 2026-07-31 |
+| 6 | `how-long-does-a-roof-replacement-take` | how long does a roof replacement take | 2026-08-01 |
+| 7 | `how-long-does-a-house-extension-take` | how long does a house extension take | 2026-08-02 |
+| 8 | `how-long-does-a-loft-conversion-take` | how long does a loft conversion take | 2026-08-03 |
+
+**Rules specific to this set (on top of everything else in this brief):**
+
+- **Durations are ranges with reasons, never researched-sounding facts.** Write "most
+  straightforward kitchen refits run somewhere in the region of four to eight weeks on
+  site, and the spread is mostly about whether anything moves" — never "the average
+  kitchen renovation takes 6.2 weeks". §3 applies in full: no surveys, no studies, no
+  named sources. If you cannot say it qualitatively and honestly, cut it.
+- **Say what the time is actually spent on.** The valuable part is the breakdown —
+  lead times on ordered items, the wait for an inspection, the drying/curing days
+  nobody counts, the gap between trades. That is what makes each row different.
+- **Name what makes it run long**, specifically for that task. This is the section
+  that must not be interchangeable between rows.
+- **Row 1 must differentiate itself from the existing `kitchen-renovation-timeline`
+  post** (which targets "renovation project timeline example" — a week-by-week worked
+  example). Yours answers the duration question and the delay causes; link to that post
+  rather than repeating it. Same for any other row that brushes an existing post.
+- Cross-link **within the set**: link to at least one other `how-long-does-*` post that
+  already exists, plus the usual pillar links. Row 1 has no siblings yet — that's fine,
+  link to the pillars only.
+
+### 1b. Topic bank — pick from the Reddit-derived topic bank (stable-first)
 
 Topics are **grounded in real Reddit + search demand**, but the job does NOT depend
 on a live network scrape at run time (Reddit rate-limits and blocks server IPs, which
@@ -217,7 +274,7 @@ lede: "..."             # 1–3 sentence hook shown under the title; concrete, n
 keyword: "..."          # the primary SEO keyword/phrase (the reader's own words)
 cover: "/stock/NN.png"  # next available number — see §6, never overwrite an existing file
 coverAlt: "..."         # describes the photograph itself (it's read aloud); not decoration
-publishDate: YYYY-MM-DD # today's date
+publishDate: YYYY-MM-DD # a §1a queue row: its assigned date, verbatim. Otherwise: today.
 author: "Robert Jensen"
 tags: ["...", "..."]    # 3–5 lowercase, relevant tags
 tldr:                   # 3–5 bullet strings; each may use <strong>…</strong>; plain takeaways, not app ads
@@ -273,14 +330,31 @@ tail, and only on failure.
    ```
    The build MUST print `BUILD OK` before you push — it validates the frontmatter
    schema. If it failed, read only the tail, fix the frontmatter/markdown, rebuild.
-3. Commit ONLY the post and its images — never scratch/helper scripts or logs you
+3. **Validate the post you just wrote — this gate is not optional:**
+   ```
+   node scripts/validate-posts.mjs <your-slug> && echo "VALIDATE OK"
+   ```
+   Pass **only your own slug**, not the whole blog — older posts have known
+   violations and would drown your result. The checker enforces the rules in §2, §3
+   and §4 that the build cannot see: fabricated statistics, invented citations,
+   unverified external URLs, hype words, too many app mentions, word count, missing
+   FAQ entries, and internal links that point nowhere.
+
+   Every `ERROR` must be fixed and the check re-run until it prints `VALIDATE OK`.
+   Fix them by **cutting or rewording the offending sentence** — never by deleting the
+   check. A `warn` is advice; mention it in your report and move on.
+
+   If you genuinely cannot get it to pass after a few attempts, do NOT push a failing
+   post. Say so plainly in your report and stop — an unpublished post costs nothing,
+   a wrong one costs the site's credibility.
+4. Commit ONLY the post and its images — never scratch/helper scripts or logs you
    created this run. Run `git status` first; if you wrote any helper files (e.g.
    `scrape_*.py`, `*.log`, temp scripts), delete them before committing. Then stage
    explicitly:
    `git add src/content/blog/<slug>.md public/stock/ && git commit -m "Blog: <title>"`
    (Avoid `git add -A`, which sweeps in stray files. `.gitignore` covers common ones,
    but stage deliberately anyway.)
-4. Push to main: `git push origin main 2>&1 | tail -5` (GitHub Pages deploys from `main`).
+5. Push to main: `git push origin main 2>&1 | tail -5` (GitHub Pages deploys from `main`).
 
 Same discipline everywhere: pipe any command that could be verbose (`comfy-gen`,
 `git log`, `npm`, long `cat`) through a file or `tail`. Read files with `head`/
@@ -290,10 +364,14 @@ Same discipline everywhere: pipe any command that could be verbose (`comfy-gen`,
 
 Report concisely:
 - The new post: title, slug, file path, primary keyword, word count, cover image.
-- Which **topic-bank entry** you chose (its rank/number) and why it was the highest
-  uncovered one. If you ran the optional live Reddit check, say whether it worked and
-  whether it changed the phrasing.
-- Confirmation the build passed (`BUILD OK`) and the push to `main` succeeded.
+- **Where the topic came from:** the §1a page-set queue (say which row number, and how
+  many rows remain unwritten) or, if the queue is finished, the §1b topic bank (say
+  which rank and why it was the highest uncovered one). If you ran the optional live
+  Reddit check, say whether it worked and whether it changed the phrasing.
+- Confirmation the build passed (`BUILD OK`), the validator passed (`VALIDATE OK`),
+  and the push to `main` succeeded. List any `warn`s the validator printed, and any
+  `ERROR` you had to fix and how you fixed it — that feedback is what improves this
+  brief over time.
 - Confirm you did the factual-accuracy self-check (§3): no invented statistics, no
   unfetched report names, no unverified external URLs.
 - Anything that fell back or is worth a human glance (e.g. "topic bank is running low").

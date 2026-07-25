@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
+import { isPublished } from "../../utils/posts";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { readingTime } from "../../utils/readingTime";
 
-const allPosts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+const allPosts = (await getCollection("blog", ({ data }) => isPublished(data))).sort(
   (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
 );
 
