@@ -96,7 +96,7 @@ Without a structured timeline of edits — *who logged what, when* — the sprea
 
 ## What "an app" actually does differently
 
-I built [Home Stories](/) because every alternative I tried was either a generic project manager (Asana, Trello, Notion) or a spreadsheet in a fancier UI. Neither matched how renovation work actually happens.
+I built [Home Stories](/) because every alternative I tried was either a generic project manager (Asana, Trello, Notion) or a spreadsheet in a fancier UI. Neither matched how renovation work actually happens. If you'd rather see the field first, [the renovation apps worth installing](/blog/best-home-improvement-apps/) covers the categories honestly, and [HomeZada vs Houzz Pro](/blog/homezada-vs-houzz-pro/) compares the two heavyweight platforms people usually land on.
 
 Concretely, here's what changes with a renovation-specific app:
 

@@ -252,6 +252,6 @@ But even with both of those, 8 weeks is the floor for a full kitchen reno. Anyth
 
 ## Ready to track your renovation from day one?
 
-[A Realistic Kitchen Renovation Timeline (Week-by-Week)](/blog/kitchen-renovation-timeline/) gives you the schedule. [Home Stories](https://apps.apple.com/app/id6754754960) gives you the record — every expense logged on the day it happens, every photo of what's behind the walls saved before it's closed up, and a running budget that tells you whether you're on track every single week. Set it up before demo starts so week one numbers are already there.
+The schedule above gives you the shape of the project. [Home Stories](https://apps.apple.com/app/id6754754960) gives you the record — every expense logged on the day it happens, every photo of what's behind the walls saved before it's closed up, and a running budget that tells you whether you're on track every single week. Set it up before demo starts so week one numbers are already there.
 
 *Home Stories is free on the App Store.*

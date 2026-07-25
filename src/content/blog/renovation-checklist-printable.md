@@ -49,7 +49,7 @@ There's a fuller explanation of the sequence in our guide to the [seven phases o
 
 ## Phase 0 — Before any work starts
 
-Tick every one of these before a tradesperson sets foot in the house. They're cheap now and expensive later.
+Tick every one of these before a tradesperson sets foot in the house. They're cheap now and expensive later. If you've only just got the keys and aren't sure which room to touch first, [where to start renovating a house you just bought](/blog/where-to-start-renovating-new-house/) covers the ordering decision this checklist assumes you've already made.
 
 - [ ] Write down the full scope, room by room — what's changing and what isn't
 - [ ] Set an itemised budget with a contingency line (see the [free budget template](/blog/renovation-budget-template/))

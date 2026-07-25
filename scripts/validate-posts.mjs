@@ -202,7 +202,9 @@ function checkPost(file) {
   /* --- internal links --- */
   const internal = [...body.matchAll(/\]\((\/blog\/[a-z0-9-]+)\/?\)/g)].map((m) => m[1]);
   const uniqueInternal = [...new Set(internal)];
-  if (uniqueInternal.length < 2) E(`only ${uniqueInternal.length} inline internal /blog/ links (need 2–3)`);
+  // Floor raised from 2 to 3 with #96, once every post on the blog cleared it. Three is
+  // the point where a post is part of the site rather than a cul-de-sac in it.
+  if (uniqueInternal.length < 3) E(`only ${uniqueInternal.length} inline internal /blog/ links (need at least 3)`);
   for (const l of uniqueInternal) {
     const target = l.replace("/blog/", "");
     if (target === slug) E(`links to itself (${l})`);

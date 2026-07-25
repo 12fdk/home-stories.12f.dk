@@ -38,10 +38,23 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 const ogImage = post.data.ogImage ?? `/og/${post.slug}.png`;
 const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
 
+// Explicit relatedSlugs win. The fallback used to take the first three posts in the
+// collection, which is arbitrary — it linked a roof-timeline post to whatever happened
+// to be newest. Falling back on shared tags means a post with no relatedSlugs still
+// lands in the right cluster instead of being effectively orphaned. (#96)
+const byTag = (a: (typeof allPosts)[number]) =>
+  a.data.tags.filter((t) => post.data.tags.includes(t)).length;
+
 const related = (
   post.data.relatedSlugs.length > 0
     ? allPosts.filter((p) => post.data.relatedSlugs.includes(p.slug))
-    : allPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
+    : allPosts
+        .filter((p) => p.slug !== post.slug && byTag(p) > 0)
+        .sort(
+          (a, b) =>
+            byTag(b) - byTag(a) ||
+            b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+        )
 ).slice(0, 3);
 
 const articleSchema = {

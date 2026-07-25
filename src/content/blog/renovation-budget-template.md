@@ -49,7 +49,7 @@ The template I'm sharing below is the one I built for myself after two of my own
 
 ## The 9 cost categories you actually need
 
-Most templates have 3–4. The ones below are where renovators consistently lose track of money:
+Most templates have 3–4. The ones below are where renovators consistently lose track of money. If you haven't set a total figure yet, work through [how to budget a home renovation](/blog/how-to-budget-a-home-renovation/) first — the categories are only useful once you know roughly what the whole job is worth to you:
 
 ### 1. Design & permits
 - Architect / designer fees
@@ -111,7 +111,7 @@ The template has all nine pre-populated with typical line items. You'll add and 
 
 ## The 20% rule, explained
 
-There's a folk-rule that you should budget 10% contingency. **That's wrong for renovations.** It's a number borrowed from new construction, where the site is a blank slab and there are few unknowns.
+There's a folk-rule that you should budget 10% contingency. **That's wrong for renovations.** It's a number borrowed from new construction, where the site is a blank slab and there are few unknowns. [How a renovation contingency budget actually works](/blog/renovation-contingency-budget/) goes into why the right figure depends on the age and condition of the house.
 
 Renovations are the opposite. The unknowns are *the entire reason renovations cost more than expected*. Wiring that's not to code. Joists that have rot. A wall that's actually load-bearing. A drain that runs the opposite direction to what's on the plans.
 
@@ -144,7 +144,7 @@ The "actuals as they happen" rule is the only one that matters. Everything else 
 
 I'll be honest: this template is great until about week four of a real renovation.
 
-Then the dust starts. Decisions multiply. You're at a tile shop, you're at the builder's merchant, you're approving a contractor invoice on your phone while standing in your half-demolished kitchen. The spreadsheet — even on your phone — is too clumsy to update in real time. So you stop. Then the budget stops being accurate. Then it stops being useful.
+Then the dust starts. Decisions multiply. You're at a tile shop, you're at the builder's merchant, you're approving a contractor invoice on your phone while standing in your half-demolished kitchen. The spreadsheet — even on your phone — is too clumsy to update in real time. So you stop. Then the budget stops being accurate. Then it stops being useful. It's a common enough pattern that it's worth reading about [why renovation spreadsheets break down](/blog/renovation-spreadsheet-alternative/) before you rely on one for a long project.
 
 This is the exact problem I was trying to solve when I built [Home Stories](/) — a free iPhone app that does what the spreadsheet does, plus:
 
