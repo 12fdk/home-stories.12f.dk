@@ -10,7 +10,7 @@
 - **Price**: Free, with an optional one-time Premium Lifetime upgrade (no subscription)
 - **Developer**: Robert Jensen (12f, Denmark)
 - **Canonical URL**: https://home-stories.12f.dk
-- **App Store**: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+- **App Store**: https://apps.apple.com/app/id6754754960
 - **Contact**: robert@12f.dk
 - **Privacy**: No tracking, no ads, data stays on-device with optional iCloud sync
 

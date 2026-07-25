@@ -26,7 +26,13 @@ interface AppStoreApiResponse {
 }
 
 const APP_ID = "6754754960";
-const COUNTRY = "dk";
+// The lookup API has no worldwide aggregate — it needs a storefront, and each
+// one reports only its OWN ratings (checked 2026-07-25: us 2, gb 2, de 2, dk 1,
+// au 0). Denmark is not the app's market, so a dk lookup both undercounts the
+// rating total and holds the AggregateRating schema below MIN_RATING_COUNT
+// (Layout.astro) far longer than it should. We use the largest storefront,
+// which is also where the country-neutral App Store link resolves by default. #97
+const COUNTRY = "us";
 const API_URL = `https://itunes.apple.com/lookup?id=${APP_ID}&country=${COUNTRY}`;
 
 export async function fetchAppStoreData(): Promise<AppStoreData | null> {

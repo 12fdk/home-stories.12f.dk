@@ -14,7 +14,7 @@ tldr:
   - "The most expensive renovation mistakes are information mistakes — things nobody wrote down, photographed, or dated."
   - "Eleven items cover almost every regret: walls before they close, receipts, quotes vs invoices, committed money, small purchases, hours, decisions, trade sequence, contractor conversations, contingency burn, and what 'done' means."
   - "Each one takes seconds to capture in the moment and is somewhere between annoying and impossible to reconstruct later."
-  - "<a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> exists because keeping these eleven habits in one place is exactly what a renovation tracker is for."
+  - "<a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> exists because keeping these eleven habits in one place is exactly what a renovation tracker is for."
 faq:
   - question: "What should I track during a home renovation?"
     answer: "At minimum: dated photos of every wall and floor before they're closed up, every receipt and invoice, each quote against its final bill, money you've committed but not yet paid, hours spent, and the decisions you made — paint codes, model numbers, and why. Everything else on the list of eleven is a refinement of those."
@@ -102,6 +102,6 @@ Write the list *before* the final walkthrough, walk it with the contractor, and 
 
 Every one of these eleven is a seconds-long habit in the moment and a genuine loss when skipped. The pattern behind them all: **a renovation generates evidence continuously, and the evidence has to be caught live or reconstructed painfully.**
 
-You can run all eleven habits with a phone camera, a notes app, and heroic discipline. Or you can keep them in one place, attached to the project, with the totals doing themselves. [Home Stories is free, built for exactly this list, and lives in the pocket you already bring to the job site.](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)
+You can run all eleven habits with a phone camera, a notes app, and heroic discipline. Or you can keep them in one place, attached to the project, with the totals doing themselves. [Home Stories is free, built for exactly this list, and lives in the pocket you already bring to the job site.](https://apps.apple.com/app/id6754754960)
 
 Start it before the first wall opens. Your future self — standing in a finished kitchen, holding a drill, wondering what's behind that plasterboard — is counting on you.

@@ -14,7 +14,7 @@ tldr:
   - "The template covers <strong>five cost categories</strong> renovators consistently miss: demolition/disposal, permits, contingency, finance costs, and post-project cleanup."
   - "Use a <strong>20% contingency</strong> for renovations on homes built before 1990, 15% for newer homes."
   - "Track <strong>actual vs. estimated</strong> per line — not just per category — or you'll lose visibility into where overruns happen."
-  - "Spreadsheet works for the first month. After that, an app like <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> keeps it useful without manual maintenance."
+  - "Spreadsheet works for the first month. After that, an app like <a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> keeps it useful without manual maintenance."
 faq:
   - question: "How much should I budget for a home renovation?"
     answer: "There's no useful answer in dollars per square metre because finishes, region, and scope vary too much. The right approach: get three contractor quotes for each major trade, sum them, then add 20% contingency. For DIY projects, multiply your material list cost by 1.3 to cover waste and forgotten items."
@@ -171,6 +171,6 @@ It uses the same 9-category structure as the template. If you start on the sprea
 
 Polished PDF and Google Sheet copies of this template are in preparation and will be linked at the top of this post when ready. In the meantime, the structure above is everything you need to set it up in any spreadsheet tool.
 
-If you'd rather skip the spreadsheet entirely, [Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960). Same 9 categories, same contingency logic, but you can log a receipt in 5 seconds at the builder's merchant.
+If you'd rather skip the spreadsheet entirely, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Same 9 categories, same contingency logic, but you can log a receipt in 5 seconds at the builder's merchant.
 
 Either way: get the structure right, get the contingency right, and log actuals the day they happen. That's 80% of the battle.

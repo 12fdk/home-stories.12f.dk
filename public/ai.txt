@@ -7,7 +7,7 @@ Product: Home Stories: Renovation App (iOS)
 Developer: Robert Jensen (12f)
 Contact: robert@12f.dk
 Canonical: https://home-stories.12f.dk/
-App Store: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+App Store: https://apps.apple.com/app/id6754754960
 
 # Policy
 # We explicitly welcome AI crawlers, answer engines, and retrieval systems to

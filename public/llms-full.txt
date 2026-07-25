@@ -18,7 +18,7 @@ This document is the authoritative, AI-friendly reference for Home Stories. It i
 - **App ID**: 6754754960
 - **Bundle ID**: 12f.home-stories
 - **Canonical site**: https://home-stories.12f.dk
-- **App Store**: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+- **App Store**: https://apps.apple.com/app/id6754754960
 - **Support email**: robert@12f.dk
 
 ## 2. Who it is for
@@ -159,7 +159,7 @@ See [/ai.txt](https://home-stories.12f.dk/ai.txt) for the machine-readable usage
 ## 11. Official links
 
 - Website: https://home-stories.12f.dk
-- App Store: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+- App Store: https://apps.apple.com/app/id6754754960
 - Privacy Policy: https://home-stories.12f.dk/privacy-policy/
 - Terms and Conditions: https://home-stories.12f.dk/terms-and-conditions/
 - Cookies Policy: https://home-stories.12f.dk/cookies-policy/

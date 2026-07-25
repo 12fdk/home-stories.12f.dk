@@ -15,7 +15,7 @@ Based on [mobile-app-landing-template](https://github.com/sofiyevsr/mobile-app-l
 ## App Store Integration
 The website should automatically pull data from the iOS App Store:
 
-- **App Store URL**: https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960
+- **App Store URL**: https://apps.apple.com/app/id6754754960
 - **App ID**: 6754754960
 - **Bundle ID**: 12f.home-stories
 

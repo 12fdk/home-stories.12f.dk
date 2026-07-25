@@ -58,7 +58,7 @@ const templateConfig: TemplateConfig = {
   // Shows switch to toggle between dark and light modes
   showThemeSwitch: true,
   appStoreLink:
-    "https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960",
+    "https://apps.apple.com/app/id6754754960",
   googlePlayLink: "",
   footer: {
     legalLinks: {

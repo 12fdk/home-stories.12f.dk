@@ -81,7 +81,7 @@ Notion has become the default renovation planning tool for a generation that gre
 
 ## Method 3: Dedicated renovation app
 
-This is where things get interesting. A dedicated renovation app — [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960), HomeZada, Houzz Pro, or similar — is purpose-built for the execution phase. It does one thing: make capturing a cost, a photo, and a category take seconds on your phone.
+This is where things get interesting. A dedicated renovation app — [Home Stories](https://apps.apple.com/app/id6754754960), HomeZada, Houzz Pro, or similar — is purpose-built for the execution phase. It does one thing: make capturing a cost, a photo, and a category take seconds on your phone.
 
 **What works:**
 
@@ -96,7 +96,7 @@ This is where things get interesting. A dedicated renovation app — [Home Stori
 - Vendor lock-in. Your data lives in the app. Exporting a PDF or CSV is usually possible, but you're tied to the app for the duration of the build. If the app shuts down, your data goes with it. Most dedicated apps are built by companies that own the data problem — they have a strong incentive to keep you as a customer, and they export cleanly.
 - iOS only (for Home Stories). If you're on Android, the options are more limited. Most renovation apps target iOS first.
 
-**Verdict:** This is the method I use and recommend for anyone doing a medium-to-large renovation. The time savings per entry add up to hours over a 12-week build, and the real-time accuracy is what makes the budget useful. [Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+**Verdict:** This is the method I use and recommend for anyone doing a medium-to-large renovation. The time savings per entry add up to hours over a 12-week build, and the real-time accuracy is what makes the budget useful. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960).
 
 ## Method 4: The receipts-in-a-jar method (no digital tracking)
 
@@ -160,4 +160,4 @@ Already covered in the FAQ section above — four practical questions on the bes
 
 ## Ready to track expenses without the spreadsheet headache?
 
-[Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960). Set your budget once, log costs and receipt photos as they happen, and always know — to the line item — how much of your budget is left. No Sunday catch-up, no stale spreadsheets. Just current numbers, wherever the work takes you.
+[Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set your budget once, log costs and receipt photos as they happen, and always know — to the line item — how much of your budget is left. No Sunday catch-up, no stale spreadsheets. Just current numbers, wherever the work takes you.

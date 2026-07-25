@@ -15,7 +15,7 @@ tldr:
   - "Add a <strong>contingency of 15–25%</strong> depending on the home's age and condition, and ring-fence it so it isn't spent early."
   - "Include the <strong>hidden third</strong>: permits, design fees, finance costs, disposal, temporary living, and the cost of finishing (furniture, decoration)."
   - "Track <strong>actual vs. estimated per line item</strong> — not per room — or you lose sight of where the money is leaking."
-  - "Spreadsheets work for planning; for on-site tracking, an app like <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>Home Stories</a> keeps the numbers current without nightly admin."
+  - "Spreadsheets work for planning; for on-site tracking, an app like <a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> keeps the numbers current without nightly admin."
 faq:
   - question: "How much should I budget for a home renovation?"
     answer: "Don't start from a price-per-square-metre figure — finishes, region, and scope vary too much for it to mean anything. Instead, get three itemised quotes for each major trade, sum them, then add the hidden third (permits, design, finance, disposal, fixtures, decoration) and a 15–25% contingency on top. For DIY work, multiply your material list by 1.3 to cover waste and forgotten items."
@@ -119,7 +119,7 @@ You can do everything above perfectly and still go over, because **a budget you 
 
 The rule: track **actual spend against your estimate, per line item, every week.** Per line item — not per room, not per category — because that's the only resolution fine enough to show you *where* a number started slipping.
 
-Home Stories tracks actual vs. estimated per line and shows the running total against your budget — so you can log a receipt at the merchant in ten seconds and see instantly whether you're still on plan. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+Home Stories tracks actual vs. estimated per line and shows the running total against your budget — so you can log a receipt at the merchant in ten seconds and see instantly whether you're still on plan. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
 
 Why weekly, and why per line:
 
@@ -170,4 +170,4 @@ Budgeting a renovation without going over isn't about predicting the future perf
 
 Steps 1–4 happen at a desk and a [budget template](/blog/renovation-budget-template/) is perfect for them. Steps 5–6 happen on-site, one-handed, in the dust — which is exactly where a desk tool stops working and a phone-first tracker takes over.
 
-If you want the live-tracking half handled for you, [Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960), built specifically to keep a renovation budget current without nightly admin. Set up your categories once, log as you go, and always know — to the line item — exactly where you stand.
+If you want the live-tracking half handled for you, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960), built specifically to keep a renovation budget current without nightly admin. Set up your categories once, log as you go, and always know — to the line item — exactly where you stand.

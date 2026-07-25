@@ -12,7 +12,7 @@ author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]
 tldr:
   - "<strong>Notion wins the planning phase.</strong> Free-form pages, databases, mood boards, contractor research, and document storage — it's one of the best tools there is for thinking a renovation through before work starts."
-  - "<strong>Home Stories wins the execution phase.</strong> It's a phone-first <a href='https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960'>renovation tracker</a> built for one-handed logging on-site: a cost, a photo, a task, updated in seconds while you're standing in the room."
+  - "<strong>Home Stories wins the execution phase.</strong> It's a phone-first <a href='https://apps.apple.com/app/id6754754960'>renovation tracker</a> built for one-handed logging on-site: a cost, a photo, a task, updated in seconds while you're standing in the room."
   - "The deciding factor isn't features — it's <strong>where and how you log</strong>. Notion assumes a desk and focus; a live renovation gives you neither."
   - "The honest answer for most people is <strong>both</strong>: Notion for the static planning artefacts, a phone-first app for the live running balance once the dust starts flying."
   - "If you only want one tool for the part that actually breaks — keeping the budget honest while work is underway — that's the part Notion handles worst and Home Stories was built for."
@@ -79,7 +79,7 @@ None of these is a flaw in Notion as a product. They're the cost of generality. 
 
 ## Where Home Stories wins: the on-site logging job
 
-[Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) is the opposite trade-off. It can't be a contractor CRM or a mood board, and it doesn't try. It does one job: make capturing a cost, a photo, a task, or a note take seconds on your phone while you're standing in the room.
+[Home Stories](https://apps.apple.com/app/id6754754960) is the opposite trade-off. It can't be a contractor CRM or a mood board, and it doesn't try. It does one job: make capturing a cost, a photo, a task, or a note take seconds on your phone while you're standing in the room.
 
 What that buys you in the execution phase:
 
@@ -118,4 +118,4 @@ The two don't really compete; they hand off. Notion holds the static planning ar
 
 And if you only want *one* new tool — if you've already got planning handled in Notion, a spreadsheet, or your head — then add the one for the part that actually breaks. The part that breaks is never the planning. It's keeping the budget honest while the work is underway, logging one-handed in a room full of dust. That's the part Notion handles worst, and the part [Home Stories was built for](/blog/how-to-budget-a-home-renovation/).
 
-[Home Stories is free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) — keep your Notion hub for planning, and let a phone-first tracker carry the budget through the months when a desk tool can't.
+[Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960) — keep your Notion hub for planning, and let a phone-first tracker carry the budget through the months when a desk tool can't.

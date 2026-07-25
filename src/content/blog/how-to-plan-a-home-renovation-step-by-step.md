@@ -14,12 +14,12 @@ tldr:
   - "The renovation process breaks into **six clear phases**: decide what you want, define your budget, design the scope, get quotes, manage construction, and close out. Each phase has specific deliverables — once those are ready, you move on."
   - "**The biggest mistake first-time renovators make** is starting design before the budget is set. Always know your maximum spend before you look at a single countertop sample."
   - "**Realistic timelines: kitchens take 12–20 weeks total** (including design and permits), bathrooms 8–14 weeks, and full-home renovations 24–48 weeks depending on scope."
-  - "**Home Stories tracks every step** of this process — budget, timeline, photos, receipts — from the first decision to the final walkthrough. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)."
+  - "**Home Stories tracks every step** of this process — budget, timeline, photos, receipts — from the first decision to the final walkthrough. [It's free on the App Store](https://apps.apple.com/app/id6754754960)."
 faq:
   - question: "What is the first step in planning a home renovation?"
     answer: "The first step is defining what you want to achieve, not what you think you can afford. Sit down with your household and make a list of every problem in the space — leaky faucet, outdated layout, insufficient storage, poor lighting, uncomfortable workflow. Then prioritise: which issues are dealbreakers, which are annoyances, and which are nice-to-haves. This prioritisation becomes the foundation for everything that follows. Without it, you'll either over-spend on things that don't matter or compromise on the changes you actually need. Once you have your prioritised list, that's when you move to step two: figuring out what a renovation like that costs."
   - question: "How much should I budget for a home renovation?"
-    answer: "There's no single number, but the data is clear. Cosmetic kitchen updates (paint, new hardware, resurface cabinets) run $3,000–$8,000. Mid-range kitchen renovations (new cabinets, countertops, appliances, flooring) typically run $25,000–$55,000. Full kitchen gut-and-replace runs $40,000–$90,000 depending on home size and finishes. Bathroom renovations range from $7,000 for a surface refresh to $35,000 for a full reconfiguration. The key is to set your maximum spend before looking at any design options, then work backwards from that number. Home Stories lets you set a total budget and track every line item against it in real time, so you never discover at week eight that you've blown past budget — [download free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960)."
+    answer: "There's no single number, but the data is clear. Cosmetic kitchen updates (paint, new hardware, resurface cabinets) run $3,000–$8,000. Mid-range kitchen renovations (new cabinets, countertops, appliances, flooring) typically run $25,000–$55,000. Full kitchen gut-and-replace runs $40,000–$90,000 depending on home size and finishes. Bathroom renovations range from $7,000 for a surface refresh to $35,000 for a full reconfiguration. The key is to set your maximum spend before looking at any design options, then work backwards from that number. Home Stories lets you set a total budget and track every line item against it in real time, so you never discover at week eight that you've blown past budget — [download free on the App Store](https://apps.apple.com/app/id6754754960)."
   - question: "How long does a home renovation take?"
     answer: "Timelines vary wildly by scope, but typical ranges are: cosmetic updates (paint, flooring, fixtures) — 2–4 weeks; kitchen renovation — 12–20 weeks total including design, permits, and cabinet ordering; bathroom renovation — 8–14 weeks; room additions — 16–32 weeks; full-home renovation — 24–48 weeks. The timeline almost always starts before demolition. Expect 2–6 weeks for design and planning, 1–4 weeks for permits, and then the construction timeline. The single biggest source of delay is waiting for cabinets, which often take 8–12 weeks to deliver. Plan accordingly — most renovators underestimate total timeline by 30–50%."
   - question: "Should I hire an architect or a contractor first?"
@@ -131,7 +131,7 @@ Once you have your scope and your research, build a budget with every line item:
 - Contingency
 - Temporary living arrangements (if needed)
 
-Home Stories does this automatically — you enter your budget, log every expense as it happens, and the app shows you your remaining buffer in real time. You always know whether you're on track or in trouble. [It's free on the App Store](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960).
+Home Stories does this automatically — you enter your budget, log every expense as it happens, and the app shows you your remaining buffer in real time. You always know whether you're on track or in trouble. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
 
 ## Phase 3: Design the scope
 
@@ -345,7 +345,7 @@ Planning a home renovation is a process — not a single decision or a single da
 
 Skip a phase and you pay for it. Follow them in order and you end up with exactly what you wanted, on budget, and with far less stress than most people experience.
 
-The [renovation budget template](/blog/renovation-budget-template/) gives you a starting point for your budget. The [7 phases of a home renovation](/blog/home-renovation-phases/) guide shows you what happens during each phase. And [Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) tracks every step of the process from your first decision to your final walkthrough — so you're never guessing where you stand.
+The [renovation budget template](/blog/renovation-budget-template/) gives you a starting point for your budget. The [7 phases of a home renovation](/blog/home-renovation-phases/) guide shows you what happens during each phase. And [Home Stories](https://apps.apple.com/app/id6754754960) tracks every step of the process from your first decision to your final walkthrough — so you're never guessing where you stand.
 
 ## Related posts
 
@@ -359,6 +359,6 @@ The [renovation budget template](/blog/renovation-budget-template/) gives you a 
 
 Understanding how to plan a home renovation step by step is only half the equation. The other half is tracking your progress — your budget, your timeline, your photos, and your receipts — as the project actually unfolds.
 
-[Home Stories](https://apps.apple.com/dk/app/home-stories-renovation-app/id6754754960) does all of that automatically. Set up a project, define your rooms and budgets, and start logging expenses and photos from the first decision to the final walkthrough. It's free on the App Store, and it replaces the chaos of spreadsheets, notebooks, and scattered photos.
+[Home Stories](https://apps.apple.com/app/id6754754960) does all of that automatically. Set up a project, define your rooms and budgets, and start logging expenses and photos from the first decision to the final walkthrough. It's free on the App Store, and it replaces the chaos of spreadsheets, notebooks, and scattered photos.
 
 *Home Stories is free on the App Store.*
