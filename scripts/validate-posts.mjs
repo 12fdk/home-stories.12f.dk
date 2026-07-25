@@ -191,7 +191,11 @@ function checkPost(file) {
   const words = wordCount(body);
   if (words < 1400) E(`body is ${words} words (min 1,500 — 1,400 tolerated)`);
   else if (words < 1500) W(`body is ${words} words (target 1,500–2,200)`);
-  if (words > 2400) W(`body is ${words} words (target 1,500–2,200 — check for padding)`);
+  // Page-set posts get a tighter ceiling. The format's failure mode is padding —
+  // row 2 reached 2,278 words by answering "what is the time spent on" in two separate
+  // sections. A duration question does not need 2,200 words to answer honestly.
+  const padCeiling = slug.startsWith(SET_PREFIX) ? 2100 : 2400;
+  if (words > padCeiling) W(`body is ${words} words (target 1,500–2,000 for a set post — check for repeated sections)`);
   if (/^#\s+/m.test(body)) E("body contains an H1 — the template renders the H1 from `title`");
   if (!/^##\s+/m.test(body)) E("body has no H2 sections");
 

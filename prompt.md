@@ -95,6 +95,12 @@ actually spent on, and what makes it run long. Same shape, different substance.
   site, and the spread is mostly about whether anything moves" — never "the average
   kitchen renovation takes 6.2 weeks". §3 applies in full: no surveys, no studies, no
   named sources. If you cannot say it qualitatively and honestly, cut it.
+- **Answer each question once.** Set posts run long by saying the same thing twice
+  under two headings — a "what the weeks are spent on" section *and* a "what the time
+  is spent on" walk-through are the same section with two titles. Before you commit,
+  read your own `##` headings in order and delete any that duplicates another's job.
+  **Aim for 1,500–2,000 words here**, not the 2,200 ceiling in §4; a duration question
+  answered honestly does not need padding.
 - **Say what the time is actually spent on.** The valuable part is the breakdown —
   lead times on ordered items, the wait for an inspection, the drying/curing days
   nobody counts, the gap between trades. That is what makes each row different.
