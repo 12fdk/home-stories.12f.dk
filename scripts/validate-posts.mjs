@@ -191,7 +191,11 @@ function checkPost(file) {
   const words = wordCount(body);
   if (words < 1400) E(`body is ${words} words (min 1,500 — 1,400 tolerated)`);
   else if (words < 1500) W(`body is ${words} words (target 1,500–2,200)`);
-  if (words > 2400) W(`body is ${words} words (target 1,500–2,200 — check for padding)`);
+  // Page-set posts get a tighter ceiling. The format's failure mode is padding —
+  // row 2 reached 2,278 words by answering "what is the time spent on" in two separate
+  // sections. A duration question does not need 2,200 words to answer honestly.
+  const padCeiling = slug.startsWith(SET_PREFIX) ? 2100 : 2400;
+  if (words > padCeiling) W(`body is ${words} words (target 1,500–2,000 for a set post — check for repeated sections)`);
   if (/^#\s+/m.test(body)) E("body contains an H1 — the template renders the H1 from `title`");
   if (!/^##\s+/m.test(body)) E("body has no H2 sections");
 
@@ -210,14 +214,22 @@ function checkPost(file) {
    * clearly distinct from whatever already covered that ground. Run 1 of the set
    * silently skipped its required differentiation link, so this is checked, not asked. */
   if (slug.startsWith(SET_PREFIX)) {
+    // Only *earlier* siblings count. A post cannot link to one that did not exist when
+    // it was written, and requiring it would retroactively fail every post each time a
+    // new row lands. Backward links are the cron's job; the forward links that turn the
+    // chain into a mesh are a deliberate pass once the set is complete (#95).
     const siblings = fs
       .readdirSync(BLOG_DIR)
       .filter((f) => f.startsWith(SET_PREFIX) && f.endsWith(".md") && f !== `${slug}.md`)
-      .map((f) => f.replace(/\.md$/, ""));
+      .map((f) => f.replace(/\.md$/, ""))
+      .filter((s) => {
+        const sib = parseFrontmatter(fs.readFileSync(path.join(BLOG_DIR, `${s}.md`), "utf8")).data;
+        return sib?.publishDate && data.publishDate && String(sib.publishDate) < String(data.publishDate);
+      });
     if (siblings.length) {
       const linked = siblings.filter((s) => uniqueInternal.includes(`/blog/${s}`));
       if (!linked.length) {
-        E(`page-set post links to none of its ${siblings.length} sibling(s) — the set must form a cluster`);
+        E(`page-set post links to none of its ${siblings.length} earlier sibling(s) — the set must form a cluster`);
       }
     }
     for (const [needle, required] of Object.entries(DIFFERENTIATE_FROM)) {
@@ -316,6 +328,38 @@ if (collisions.length && files.length > 1) {
     totalWarns++;
   }
 }
+/* --- orphan check ---
+ * Outbound links are easy to satisfy and mean little on their own; what moves crawl
+ * priority and authority is whether anything points *at* a post. The page set was
+ * written entirely with backward links, which left it reachable only from the sitemap
+ * and from itself — no established post linked into it. Scans every post on disk, not
+ * just the ones being validated, since inbound links come from anywhere. (#95, #96) */
+{
+  const all = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"));
+  const inbound = new Map(all.map((f) => [f.replace(/\.md$/, ""), new Set()]));
+  for (const f of all) {
+    const from = f.replace(/\.md$/, "");
+    const raw = fs.readFileSync(path.join(BLOG_DIR, f), "utf8");
+    for (const m of raw.matchAll(/\]\((\/blog\/([a-z0-9-]+))\/?\)/g)) {
+      if (m[2] !== from && inbound.has(m[2])) inbound.get(m[2]).add(from);
+    }
+  }
+  for (const r of results) {
+    const sources = inbound.get(r.slug);
+    if (!sources) continue;
+    if (sources.size === 0) {
+      console.log(`    warn   ${r.slug} is orphaned — no other post links to it`);
+      totalWarns++;
+    } else if (r.slug.startsWith(SET_PREFIX)) {
+      const outside = [...sources].filter((s) => !s.startsWith(SET_PREFIX));
+      if (!outside.length) {
+        console.log(`    warn   ${r.slug} is only linked from inside its own page set — no established post points into it`);
+        totalWarns++;
+      }
+    }
+  }
+}
+
 const dupeKeywords = [...byKeyword.entries()].filter(([, s]) => s.length > 1);
 for (const [k, slugs] of dupeKeywords) {
   console.log(`    ERROR  duplicate keyword "${k}" in: ${slugs.join(", ")} — these will cannibalise each other`);

@@ -95,6 +95,12 @@ actually spent on, and what makes it run long. Same shape, different substance.
   site, and the spread is mostly about whether anything moves" — never "the average
   kitchen renovation takes 6.2 weeks". §3 applies in full: no surveys, no studies, no
   named sources. If you cannot say it qualitatively and honestly, cut it.
+- **Answer each question once.** Set posts run long by saying the same thing twice
+  under two headings — a "what the weeks are spent on" section *and* a "what the time
+  is spent on" walk-through are the same section with two titles. Before you commit,
+  read your own `##` headings in order and delete any that duplicates another's job.
+  **Aim for 1,500–2,000 words here**, not the 2,200 ceiling in §4; a duration question
+  answered honestly does not need padding.
 - **Say what the time is actually spent on.** The valuable part is the breakdown —
   lead times on ordered items, the wait for an inspection, the drying/curing days
   nobody counts, the gap between trades. That is what makes each row different.
@@ -278,7 +284,7 @@ lede: "..."             # 1–3 sentence hook shown under the title; concrete, n
 keyword: "..."          # the primary SEO keyword/phrase (the reader's own words)
 cover: "/stock/NN.png"  # next available number — see §6, never overwrite an existing file
 coverAlt: "..."         # describes the photograph itself (it's read aloud); not decoration
-publishDate: YYYY-MM-DD # a §1a queue row: its assigned date, verbatim. Otherwise: today.
+publishDate: YYYY-MM-DD # queue row → its assigned date. Otherwise → next free date (below).
 author: "Robert Jensen"
 tags: ["...", "..."]    # 3–5 lowercase, relevant tags
 tldr:                   # 3–5 bullet strings; each may use <strong>…</strong>; plain takeaways, not app ads
@@ -292,6 +298,15 @@ relatedSlugs:           # 3–4 slugs that ACTUALLY EXIST in src/content/blog/
 ```
 
 Rules:
+- **`publishDate` — one post per day, no exceptions.** If your post came from the §1a
+  queue, use that row's date verbatim. Otherwise use **today's date, unless a post
+  already has it** — then walk forward to the first date no post is using:
+  ```
+  grep -h '^publishDate:' src/content/blog/*.md | sort | tail -5
+  ```
+  Scheduled posts from a page set can occupy dates weeks ahead, so today is not always
+  free. Two posts sharing a date breaks the blog's one-a-day rule and the validator
+  will warn about it.
 - `title` ≤ 70 characters and `description` ≤ 160 characters — the deploy has
   broken before on an over-length title. Count characters.
 - `relatedSlugs` must be real existing slugs (run `ls src/content/blog/`), topically
