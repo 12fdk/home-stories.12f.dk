@@ -328,6 +328,38 @@ if (collisions.length && files.length > 1) {
     totalWarns++;
   }
 }
+/* --- orphan check ---
+ * Outbound links are easy to satisfy and mean little on their own; what moves crawl
+ * priority and authority is whether anything points *at* a post. The page set was
+ * written entirely with backward links, which left it reachable only from the sitemap
+ * and from itself — no established post linked into it. Scans every post on disk, not
+ * just the ones being validated, since inbound links come from anywhere. (#95, #96) */
+{
+  const all = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"));
+  const inbound = new Map(all.map((f) => [f.replace(/\.md$/, ""), new Set()]));
+  for (const f of all) {
+    const from = f.replace(/\.md$/, "");
+    const raw = fs.readFileSync(path.join(BLOG_DIR, f), "utf8");
+    for (const m of raw.matchAll(/\]\((\/blog\/([a-z0-9-]+))\/?\)/g)) {
+      if (m[2] !== from && inbound.has(m[2])) inbound.get(m[2]).add(from);
+    }
+  }
+  for (const r of results) {
+    const sources = inbound.get(r.slug);
+    if (!sources) continue;
+    if (sources.size === 0) {
+      console.log(`    warn   ${r.slug} is orphaned — no other post links to it`);
+      totalWarns++;
+    } else if (r.slug.startsWith(SET_PREFIX)) {
+      const outside = [...sources].filter((s) => !s.startsWith(SET_PREFIX));
+      if (!outside.length) {
+        console.log(`    warn   ${r.slug} is only linked from inside its own page set — no established post points into it`);
+        totalWarns++;
+      }
+    }
+  }
+}
+
 const dupeKeywords = [...byKeyword.entries()].filter(([, s]) => s.length > 1);
 for (const [k, slugs] of dupeKeywords) {
   console.log(`    ERROR  duplicate keyword "${k}" in: ${slugs.join(", ")} — these will cannibalise each other`);
