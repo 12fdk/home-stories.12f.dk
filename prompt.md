@@ -100,13 +100,17 @@ actually spent on, and what makes it run long. Same shape, different substance.
   nobody counts, the gap between trades. That is what makes each row different.
 - **Name what makes it run long**, specifically for that task. This is the section
   that must not be interchangeable between rows.
-- **Row 1 must differentiate itself from the existing `kitchen-renovation-timeline`
-  post** (which targets "renovation project timeline example" — a week-by-week worked
-  example). Yours answers the duration question and the delay causes; link to that post
-  rather than repeating it. Same for any other row that brushes an existing post.
-- Cross-link **within the set**: link to at least one other `how-long-does-*` post that
-  already exists, plus the usual pillar links. Row 1 has no siblings yet — that's fine,
-  link to the pillars only.
+- **Two link requirements, both enforced by the validator — it will fail your post:**
+  1. **Link to every sibling requirement in this list that applies to your row.** Row 1
+     (kitchen) **must** link to `/blog/kitchen-renovation-timeline/`, which targets
+     "renovation project timeline example" and lays out a week-by-week worked example.
+     Yours answers the *duration* question and the *delay causes*. Point at it instead
+     of repeating it, so a reader and a crawler can tell the two apart.
+  2. **Link to at least one existing `how-long-does-*` sibling**, so the set forms a
+     cluster rather than eight islands. Row 1 has no siblings — it is exempt until
+     row 2 exists. Every later row is not.
+
+  These are on top of the usual 2–3 pillar links, not instead of them.
 
 ### 1b. Topic bank — pick from the Reddit-derived topic bank (stable-first)
 
