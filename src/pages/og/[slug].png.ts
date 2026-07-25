@@ -1,4 +1,5 @@
 import { getCollection } from "astro:content";
+import { isPublished } from "../../utils/posts";
 import type { APIContext } from "astro";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
@@ -13,7 +14,7 @@ const interRegular = await readFile(
 );
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", ({ data }) => isPublished(data));
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },

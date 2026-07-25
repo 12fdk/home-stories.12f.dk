@@ -3,6 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Scheduled posts need a build to appear. The site is static, so a post with a
+  # future publishDate is simply absent from the output until a build runs on or
+  # after its date (see src/utils/posts.ts). This daily rebuild is what releases
+  # them one per day. Removing it silently strands every future-dated post. #95
+  schedule:
+    - cron: "20 5 * * *" # 05:20 UTC daily — after midnight in every timezone we date posts in
   workflow_dispatch:
 
 permissions:
