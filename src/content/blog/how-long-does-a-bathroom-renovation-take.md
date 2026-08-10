@@ -85,7 +85,7 @@ The bathroom renovation is one of the most compact projects in the house — you
 
 ## What the time is actually spent on (a quick walk-through)
 
-It helps to see the schedule in the actual sequence, because the bathroom renovation has a rhythm that's different from, say, a [kitchen renovation](/blog/kitchen-renovation-timeline/) where the cabinet delivery dominates everything.
+It helps to see the schedule in the actual sequence, because the bathroom renovation has a rhythm that's different from, say, a [kitchen renovation](/blog/kitchen-renovation-timeline/) where the cabinet delivery dominates everything. The [bathroom renovation order](/blog/bathroom-renovation-sequence/) post walks through the full sequence phase by phase — not just duration, but what each phase actually involves and why the order matters.
 
 The [kitchen renovation duration post](/blog/how-long-does-a-kitchen-renovation-take/) walks through a full renovation week by week and shows how the phases connect — the plumbing and electrical rough-in that has to happen before the walls close, the inspection that holds up everything until it passes, the gap between demo and when the room is actually functional. A bathroom follows a similar pattern, just compressed: the same sequence of trades, the same waiting game, the same surprise discoveries behind the walls.
 
