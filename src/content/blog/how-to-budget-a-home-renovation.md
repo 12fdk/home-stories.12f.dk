@@ -98,7 +98,7 @@ Add these lines explicitly. A budget that lists them is honest; one that doesn't
 
 ## Step 4: Set the right contingency — and ring-fence it
 
-Contingency isn't padding or pessimism. It's a line item for the surprises you can't see yet — the rot behind the bath, the wiring that doesn't meet code, the floor that isn't level.
+Contingency isn't padding or pessimism. It's a line item for the surprises you can't see yet — the rot behind the bath, the wiring that doesn't meet code, the floor that isn't level. [This guide to hidden costs in older homes](/blog/hidden-costs-older-home/) walks through the specific things that tend to show up once you start opening walls, and how to budget for them.
 
 My rule of thumb:
 
