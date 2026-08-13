@@ -1,0 +1,76 @@
+/**
+ * Outbound App Store click tracking.
+ *
+ * Umami is the only measurement we get on this handoff. App Store Connect can
+ * say a first-time download came from a "Web referrer", but it only names the
+ * referring domain in the *Detailed* downloads report, which Apple
+ * privacy-suppresses down to a few hundred rows a year — home-stories.12f.dk
+ * has never once survived that threshold. So the click *leaving* this site is
+ * the last event we can actually observe, and it only means anything if every
+ * surface reports it. One untracked button and the total quietly understates.
+ *
+ * Deliberately one event name: the headline question is "how many people went
+ * from the site to the App Store", and that should be readable in Umami's
+ * Events panel without summing eight rows. `surface` carries the breakdown.
+ */
+export const APP_STORE_CLICK_EVENT = "appstore-click";
+
+export type AppStoreSurface =
+  | "hero"
+  | "pricing"
+  | "navbar"
+  | "navbar-mobile"
+  | "app-banner"
+  | "sticky"
+  | "404"
+  | "blog-inline-cta"
+  /** The /app redirect stub, which forwards straight to the store. */
+  | "app-redirect";
+
+/**
+ * Attributes to spread onto an `<a>` that leaves for the App Store. Umami's
+ * script binds a delegated click listener at load, so this works the same in
+ * Astro markup and in React-rendered DOM — no imperative call needed.
+ */
+export function appStoreClick(surface: AppStoreSurface) {
+  return {
+    "data-umami-event": APP_STORE_CLICK_EVENT,
+    "data-umami-event-surface": surface,
+  } as const;
+}
+
+type UmamiGlobal = {
+  track?: (event: string, data?: Record<string, unknown>) => Promise<unknown> | void;
+};
+
+/**
+ * Imperative version, for the one case that is not an anchor: `/app` redirects
+ * via `window.location`, so there is no element for the delegated listener to
+ * find.
+ *
+ * Resolves once the beacon is away, but never blocks the redirect for more
+ * than `timeoutMs` — a measurement call that delays a user is a bug, and this
+ * runs on a page whose entire job is to get out of the way. Also resolves (not
+ * rejects) when Umami is blocked or still loading, which is the common case for
+ * a redirect stub that unmounts almost immediately.
+ */
+export function trackAppStoreClick(
+  surface: AppStoreSurface,
+  timeoutMs = 300,
+): Promise<void> {
+  const umami = (globalThis as { umami?: UmamiGlobal }).umami;
+  if (!umami?.track) return Promise.resolve();
+
+  let sent: Promise<unknown> | void;
+  try {
+    sent = umami.track(APP_STORE_CLICK_EVENT, { surface });
+  } catch {
+    return Promise.resolve();
+  }
+  if (!(sent instanceof Promise)) return Promise.resolve();
+
+  return Promise.race([
+    sent.then(() => undefined).catch(() => undefined),
+    new Promise<void>((resolve) => setTimeout(resolve, timeoutMs)),
+  ]);
+}

@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
+import { appStoreClick } from "../../utils/tracking";
 
 /** Phone-only: the action follows you down the page, quietly. */
 function StickyDownload() {
@@ -22,6 +23,7 @@ function StickyDownload() {
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-primary w-full text-base font-semibold normal-case"
+        {...appStoreClick("sticky")}
       >
         Download free
         <span className="tick-label opacity-70">iOS 17+</span>
