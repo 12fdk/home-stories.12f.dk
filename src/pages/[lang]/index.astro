@@ -4,7 +4,7 @@ import { isPublished } from "../../utils/posts";
 import HomePage from "@modules/home"
 import Layout from "Layout.astro"
 import defaultTemplateConfig from "utils/config"
-import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata } from "utils/appStoreData"
+import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata, fetchStorefrontPricing } from "utils/appStoreData"
 import { readingTime } from "utils/readingTime"
 import { NON_DEFAULT_LOCALES } from "../../i18n/locales"
 import { getLocalizedConfig } from "../../i18n/getConfig"
@@ -33,14 +33,21 @@ export async function getStaticPaths() {
       minutes: readingTime(post.body).minutes,
     }));
 
-  return NON_DEFAULT_LOCALES.map((l) => ({
+  // In-app purchase prices, read from each locale's own App Store storefront in
+  // parallel so the build isn't sixteen serial round-trips. A storefront that
+  // fails resolves to null and that locale keeps the config's fallback. #109
+  const pricing = await Promise.all(
+    NON_DEFAULT_LOCALES.map((l) => fetchStorefrontPricing(l.storefront)),
+  );
+
+  return NON_DEFAULT_LOCALES.map((l, i) => ({
     params: { lang: l.code },
-    props: { appStore, logo, posts },
+    props: { appStore, logo, posts, pricing: pricing[i] },
   }));
 }
 
 const { lang } = Astro.params;
-const { appStore, logo, posts } = Astro.props;
+const { appStore, logo, posts, pricing } = Astro.props;
 
 const baseConfig: TemplateConfig = {
   ...defaultTemplateConfig,
@@ -48,7 +55,7 @@ const baseConfig: TemplateConfig = {
   appStore,
 };
 
-const config = getLocalizedConfig(baseConfig, lang!);
+const config = getLocalizedConfig(baseConfig, lang!, pricing);
 ---
 
 <Layout {...config}>

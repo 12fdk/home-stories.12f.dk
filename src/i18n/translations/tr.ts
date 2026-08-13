@@ -245,10 +245,10 @@ const tr: Translation = {
     "title": "Tüm iş için ücretsiz",
     "subtitle": "Çekirdek sonsuza dek ücretsiz. Küçük bir tek seferlik satın alma, derin bütçe araçlarının kilidini açar.",
     "plans": [
-      { "name": "Ücretsiz", "price": "0 kr.", "period": "sonsuza dek", "features": ["Sınırsız proje, görev ve aşama", "Tarihli fotoğraflarla zaman çizelgesi", "Harcama kaydı ve ürün fiyatları", "Tamamen çevrimdışı çalışır", "Cihazlar arası iCloud eşitleme", "Ana ekran ve kilit ekranı widget'ları"], "cta": "" },
-      { "name": "Home Stories Pro", "price": "29 kr.", "period": "tek seferlik — abonelik yok", "features": ["Bütçe hedefleri ve bütçe-maliyet grafiği", "Gelişmiş maliyet analizi", "Rapor ve zaman kayıtlarının PDF ve CSV dışa aktarımı", "Görev hatırlatıcıları ve son tarih bildirimleri"], "cta": "Uygulamayı edinin — yükseltme içeride" }
+      { "name": "Ücretsiz", "period": "sonsuza dek", "features": ["Sınırsız proje, görev ve aşama", "Tarihli fotoğraflarla zaman çizelgesi", "Harcama kaydı ve ürün fiyatları", "Tamamen çevrimdışı çalışır", "Cihazlar arası iCloud eşitleme", "Ana ekran ve kilit ekranı widget'ları"], "cta": "" },
+      { "name": "Home Stories Pro", "period": "tek seferlik — abonelik yok", "features": ["Bütçe hedefleri ve bütçe-maliyet grafiği", "Gelişmiş maliyet analizi", "Rapor ve zaman kayıtlarının PDF ve CSV dışa aktarımı", "Görev hatırlatıcıları ve son tarih bildirimleri"], "cta": "Uygulamayı edinin — yükseltme içeride" }
     ],
-    "footnote": "Fiyat Danimarka App Store'undan — yerel fiyatlar değişir."
+    "footnote": "App Store'da tek seferlik fiyat — ülkeye göre değişir."
   },
   "comparison": {
     "label": "Tabloya karşı",

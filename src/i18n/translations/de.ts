@@ -245,10 +245,10 @@ const de: Translation = {
     "title": "Kostenlos für das ganze Projekt",
     "subtitle": "Der Kern ist kostenlos, für immer. Ein kleiner Einmalkauf schaltet die tiefen Budget-Werkzeuge frei.",
     "plans": [
-      { "name": "Kostenlos", "price": "0 kr.", "period": "für immer", "features": ["Unbegrenzte Projekte, Aufgaben und Phasen", "Foto-Timeline mit datierten Fotos", "Ausgabenerfassung und Artikelpreise", "Funktioniert komplett offline", "iCloud-Sync über alle Geräte", "Widgets für Home- und Sperrbildschirm"], "cta": "" },
-      { "name": "Home Stories Pro", "price": "29 kr.", "period": "Einmalkauf — kein Abo", "features": ["Budgetziele und das Budget-Kosten-Diagramm", "Erweiterte Kostenanalyse", "PDF- & CSV-Export von Berichten und Zeitprotokollen", "Aufgaben-Erinnerungen und Termin-Benachrichtigungen"], "cta": "App laden — Upgrade in der App" }
+      { "name": "Kostenlos", "period": "für immer", "features": ["Unbegrenzte Projekte, Aufgaben und Phasen", "Foto-Timeline mit datierten Fotos", "Ausgabenerfassung und Artikelpreise", "Funktioniert komplett offline", "iCloud-Sync über alle Geräte", "Widgets für Home- und Sperrbildschirm"], "cta": "" },
+      { "name": "Home Stories Pro", "period": "Einmalkauf — kein Abo", "features": ["Budgetziele und das Budget-Kosten-Diagramm", "Erweiterte Kostenanalyse", "PDF- & CSV-Export von Berichten und Zeitprotokollen", "Aufgaben-Erinnerungen und Termin-Benachrichtigungen"], "cta": "App laden — Upgrade in der App" }
     ],
-    "footnote": "Preis aus dem dänischen App Store — lokale Preise variieren."
+    "footnote": "Einmalpreis aus dem App Store — er variiert je nach Land."
   },
   "comparison": {
     "label": "Gegen die Tabelle",
