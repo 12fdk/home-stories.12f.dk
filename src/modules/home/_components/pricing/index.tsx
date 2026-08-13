@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
+import { appStoreClick } from "../../../../utils/tracking";
 import SectionHeading from "../../../../components/sectionHeading";
 
 /**
@@ -74,6 +75,7 @@ function Pricing() {
                 className={`mt-8 self-start ${
                   plan.highlight ? "btn btn-primary" : "btn btn-outline"
                 }`}
+                {...appStoreClick("pricing")}
               >
                 {plan.cta}
               </a>

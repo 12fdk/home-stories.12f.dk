@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import { withBase } from "../../utils/basePath";
+import { appStoreClick } from "../../utils/tracking";
 import { motion } from "framer-motion";
 import AppStoreRating from "../appStoreRating";
 
@@ -44,6 +45,7 @@ function AppBanner() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex"
+                {...appStoreClick("app-banner")}
               >
                 <img
                   className="h-[52px]"

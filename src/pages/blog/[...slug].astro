@@ -145,7 +145,7 @@ const articleSchema = {
       heading="Ready to put this into practice?"
       body="Home Stories is the free iPhone app that turns this kind of advice into one tappable project — budget, tasks, photos, and PDF reports included."
       buttonText="Get Home Stories — Free on the App Store"
-      trackingId={`blog-cta-end-${post.slug}`}
+      slug={post.slug}
     />
 
     <FaqSection items={post.data.faq} />
@@ -177,6 +177,24 @@ const articleSchema = {
         },
         { once: true }
       );
+
+      // Prose links to the App Store come from post markdown, so they can't
+      // carry data-umami-event attributes the way the CTA components do. They
+      // are also the most-clicked route out of a post — the recommendation in
+      // the middle of a paragraph — so leaving them untracked would understate
+      // blog click-through badly.
+      //
+      // Bound explicitly rather than by stamping attributes on: Umami collects
+      // its data-umami-event targets when the tracker loads, and these are
+      // stamped after that, so a delegated binding would silently miss them.
+      document.querySelectorAll('a[href*="apps.apple.com/app/id"]').forEach((link) => {
+        if (link.hasAttribute("data-umami-event")) return; // an InlineCTA — already counted
+        link.addEventListener("click", () => {
+          if (window.umami && typeof window.umami.track === "function") {
+            window.umami.track("appstore-click", { surface: "blog-prose", slug });
+          }
+        });
+      });
     }
   </script>
 </BlogLayout>
