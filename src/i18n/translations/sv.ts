@@ -245,10 +245,10 @@ const sv: Translation = {
     "title": "Gratis för hela bygget",
     "subtitle": "Kärnan är gratis, för alltid. Ett litet engångsköp låser upp de djupa budgetverktygen.",
     "plans": [
-      { "name": "Gratis", "price": "0 kr.", "period": "för alltid", "features": ["Obegränsade projekt, uppgifter och faser", "Fototidslinje med daterade foton", "Utgiftsloggning och artikelpriser", "Fungerar helt offline", "iCloud-synk mellan enheter", "Widgets för hem- och låsskärm"], "cta": "" },
-      { "name": "Home Stories Pro", "price": "29 kr.", "period": "engångsköp — ingen prenumeration", "features": ["Budgetmål och budget-mot-kostnad-diagrammet", "Avancerad kostnadsanalys", "PDF- och CSV-export av rapporter och tidsloggar", "Uppgiftspåminnelser och deadline-notiser"], "cta": "Hämta appen — uppgradera i appen" }
+      { "name": "Gratis", "period": "för alltid", "features": ["Obegränsade projekt, uppgifter och faser", "Fototidslinje med daterade foton", "Utgiftsloggning och artikelpriser", "Fungerar helt offline", "iCloud-synk mellan enheter", "Widgets för hem- och låsskärm"], "cta": "" },
+      { "name": "Home Stories Pro", "period": "engångsköp — ingen prenumeration", "features": ["Budgetmål och budget-mot-kostnad-diagrammet", "Avancerad kostnadsanalys", "PDF- och CSV-export av rapporter och tidsloggar", "Uppgiftspåminnelser och deadline-notiser"], "cta": "Hämta appen — uppgradera i appen" }
     ],
-    "footnote": "Pris från danska App Store — lokala priser varierar."
+    "footnote": "Engångspris från App Store — det varierar mellan länder."
   },
   "comparison": {
     "label": "Mot kalkylarket",

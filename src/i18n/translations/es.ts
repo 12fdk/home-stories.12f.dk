@@ -245,10 +245,10 @@ const es: Translation = {
     "title": "Gratis para toda la obra",
     "subtitle": "Lo esencial es gratis, para siempre. Una pequeña compra única desbloquea las herramientas avanzadas de presupuesto.",
     "plans": [
-      { "name": "Gratis", "price": "0 kr.", "period": "para siempre", "features": ["Proyectos, tareas y fases ilimitados", "Cronología fotográfica con fotos fechadas", "Registro de gastos y precios de artículos", "Funciona totalmente sin conexión", "Sincronización iCloud entre dispositivos", "Widgets de pantalla de inicio y de bloqueo"], "cta": "" },
-      { "name": "Home Stories Pro", "price": "29 kr.", "period": "pago único — sin suscripción", "features": ["Objetivos de presupuesto y gráfico presupuesto-coste", "Análisis de costes avanzado", "Exportación PDF y CSV de informes y registros de tiempo", "Recordatorios de tareas y avisos de plazos"], "cta": "Descarga la app — mejora dentro" }
+      { "name": "Gratis", "period": "para siempre", "features": ["Proyectos, tareas y fases ilimitados", "Cronología fotográfica con fotos fechadas", "Registro de gastos y precios de artículos", "Funciona totalmente sin conexión", "Sincronización iCloud entre dispositivos", "Widgets de pantalla de inicio y de bloqueo"], "cta": "" },
+      { "name": "Home Stories Pro", "period": "pago único — sin suscripción", "features": ["Objetivos de presupuesto y gráfico presupuesto-coste", "Análisis de costes avanzado", "Exportación PDF y CSV de informes y registros de tiempo", "Recordatorios de tareas y avisos de plazos"], "cta": "Descarga la app — mejora dentro" }
     ],
-    "footnote": "Precio de la App Store danesa — el precio local varía."
+    "footnote": "Precio único de la App Store — varía según el país."
   },
   "comparison": {
     "label": "Contra la hoja de cálculo",

@@ -5,6 +5,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useContext, useState } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import { withBase } from "../../utils/basePath";
+import { appStoreClick } from "../../utils/tracking";
 import ThemeSwitcher from "./themeSwitcher";
 import LanguageSwitcher from "../languageSwitcher";
 
@@ -82,6 +83,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-sm h-10 min-h-0 px-5 text-sm font-semibold normal-case"
+              {...appStoreClick("navbar")}
             >
               {topNavbar.cta}
             </a>
@@ -117,7 +119,12 @@ function Navbar() {
         >
           {appStoreLink && (
             <li>
-              <a href={appStoreLink} target="_blank" rel="noopener noreferrer">
+              <a
+                href={appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                {...appStoreClick("navbar-mobile")}
+              >
                 <img
                   className="h-12"
                   src={withBase("/stores/app-store.svg")}

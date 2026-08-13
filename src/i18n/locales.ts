@@ -10,6 +10,13 @@ export interface LocaleDef {
   label: string;
   /** BCP-47 tag for hreflang, og:locale and <html lang>. */
   hreflang: string;
+  /**
+   * App Store storefront (ISO country) this locale quotes prices from. A static
+   * page can't know where the reader is, so the language they chose is the best
+   * available proxy — far better than quoting one country's currency to all
+   * sixteen. The footnote says prices vary by storefront. #109
+   */
+  storefront: string;
 }
 
 export const DEFAULT_LOCALE = "en";
@@ -17,22 +24,22 @@ export const DEFAULT_LOCALE = "en";
 export const SITE = "https://home-stories.12f.dk";
 
 export const LOCALES: LocaleDef[] = [
-  { code: "en", label: "English", hreflang: "en" },
-  { code: "da", label: "Dansk", hreflang: "da" },
-  { code: "de", label: "Deutsch", hreflang: "de" },
-  { code: "fr", label: "Français", hreflang: "fr" },
-  { code: "es", label: "Español", hreflang: "es" },
-  { code: "it", label: "Italiano", hreflang: "it" },
-  { code: "nl", label: "Nederlands", hreflang: "nl" },
-  { code: "pt", label: "Português", hreflang: "pt" },
-  { code: "sv", label: "Svenska", hreflang: "sv" },
-  { code: "ja", label: "日本語", hreflang: "ja" },
-  { code: "zh", label: "中文", hreflang: "zh-Hans" },
-  { code: "ko", label: "한국어", hreflang: "ko" },
-  { code: "pl", label: "Polski", hreflang: "pl" },
-  { code: "tr", label: "Türkçe", hreflang: "tr" },
-  { code: "ru", label: "Русский", hreflang: "ru" },
-  { code: "nb", label: "Norsk", hreflang: "nb" },
+  { code: "en", label: "English", hreflang: "en", storefront: "us" },
+  { code: "da", label: "Dansk", hreflang: "da", storefront: "dk" },
+  { code: "de", label: "Deutsch", hreflang: "de", storefront: "de" },
+  { code: "fr", label: "Français", hreflang: "fr", storefront: "fr" },
+  { code: "es", label: "Español", hreflang: "es", storefront: "es" },
+  { code: "it", label: "Italiano", hreflang: "it", storefront: "it" },
+  { code: "nl", label: "Nederlands", hreflang: "nl", storefront: "nl" },
+  { code: "pt", label: "Português", hreflang: "pt", storefront: "pt" },
+  { code: "sv", label: "Svenska", hreflang: "sv", storefront: "se" },
+  { code: "ja", label: "日本語", hreflang: "ja", storefront: "jp" },
+  { code: "zh", label: "中文", hreflang: "zh-Hans", storefront: "cn" },
+  { code: "ko", label: "한국어", hreflang: "ko", storefront: "kr" },
+  { code: "pl", label: "Polski", hreflang: "pl", storefront: "pl" },
+  { code: "tr", label: "Türkçe", hreflang: "tr", storefront: "tr" },
+  { code: "ru", label: "Русский", hreflang: "ru", storefront: "ru" },
+  { code: "nb", label: "Norsk", hreflang: "nb", storefront: "no" },
 ];
 
 /** Locales other than English — the ones that get a prefixed route. */

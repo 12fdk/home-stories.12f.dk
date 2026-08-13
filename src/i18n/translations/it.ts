@@ -245,10 +245,10 @@ const it: Translation = {
     "title": "Gratis per l'intero cantiere",
     "subtitle": "Il nucleo è gratuito, per sempre. Un piccolo acquisto una tantum sblocca gli strumenti di budget avanzati.",
     "plans": [
-      { "name": "Gratis", "price": "0 kr.", "period": "per sempre", "features": ["Progetti, attività e fasi illimitati", "Timeline fotografica con foto datate", "Registrazione spese e prezzi degli articoli", "Funziona completamente offline", "Sincronizzazione iCloud tra dispositivi", "Widget per schermata Home e di blocco"], "cta": "" },
-      { "name": "Home Stories Pro", "price": "29 kr.", "period": "acquisto una tantum — nessun abbonamento", "features": ["Obiettivi di budget e grafico budget-costi", "Analisi dei costi avanzata", "Esportazione PDF e CSV di report e registri tempo", "Promemoria attività e notifiche di scadenza"], "cta": "Scarica l'app — upgrade all'interno" }
+      { "name": "Gratis", "period": "per sempre", "features": ["Progetti, attività e fasi illimitati", "Timeline fotografica con foto datate", "Registrazione spese e prezzi degli articoli", "Funziona completamente offline", "Sincronizzazione iCloud tra dispositivi", "Widget per schermata Home e di blocco"], "cta": "" },
+      { "name": "Home Stories Pro", "period": "acquisto una tantum — nessun abbonamento", "features": ["Obiettivi di budget e grafico budget-costi", "Analisi dei costi avanzata", "Esportazione PDF e CSV di report e registri tempo", "Promemoria attività e notifiche di scadenza"], "cta": "Scarica l'app — upgrade all'interno" }
     ],
-    "footnote": "Prezzo dell'App Store danese — i prezzi locali variano."
+    "footnote": "Prezzo una tantum su App Store — varia da Paese a Paese."
   },
   "comparison": {
     "label": "Contro il foglio di calcolo",

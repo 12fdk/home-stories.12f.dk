@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { ConfigContext } from "../../utils/configContext";
+import { appStoreClick } from "../../utils/tracking";
 import type { TemplateConfig } from "../../utils/configType";
 
 interface Props {
@@ -40,6 +41,7 @@ function NotFound({ config }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               className="link text-base-content/70"
+              {...appStoreClick("404")}
             >
               Get the app
             </a>

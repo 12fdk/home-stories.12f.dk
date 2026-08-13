@@ -4,13 +4,17 @@ import { isPublished } from "../utils/posts";
 import HomePage from "@modules/home"
 import Layout from "Layout.astro"
 import defaultTemplateConfig from "utils/config"
-import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata } from "utils/appStoreData"
+import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata, fetchStorefrontPricing } from "utils/appStoreData"
 import { readingTime } from "utils/readingTime"
 import { getLocalizedConfig } from "../i18n/getConfig"
+import { getLocale } from "../i18n/locales"
 import type { TemplateConfig } from "utils/configType"
 
 // Fetch App Store data at build time
 const appStoreData = await fetchAppStoreData() ?? fallbackAppStoreData;
+
+// Live in-app purchase prices from the US storefront — English's. #109
+const pricing = await fetchStorefrontPricing(getLocale("en")!.storefront);
 
 // The three newest posts, linked from the homepage so the blog cluster has a
 // path in from the site's strongest page.
@@ -37,7 +41,7 @@ const baseConfig: TemplateConfig = {
   logo: "/app-icon-512.jpg",
   appStore: toAppStoreMetadata(appStoreData),
 };
-const config = getLocalizedConfig(baseConfig, "en");
+const config = getLocalizedConfig(baseConfig, "en", pricing);
 ---
 
 <Layout {...config}>

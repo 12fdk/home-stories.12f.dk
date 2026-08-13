@@ -138,10 +138,13 @@ const templateConfig: TemplateConfig = {
       title: "Free to run the whole job",
       subtitle:
         "The core is free, forever. One small one-time purchase unlocks the deep budget tools.",
+      // Both prices are only the fallback for a failed fetch: every build
+      // overwrites them with the real in-app purchase price read from the
+      // reader's locale storefront (utils/appStoreData → i18n/getConfig). #109
       plans: [
         {
           name: "Free",
-          price: "0 kr.",
+          price: "$0.00",
           period: "forever",
           features: [
             "Unlimited projects, tasks, and phases",
@@ -154,7 +157,7 @@ const templateConfig: TemplateConfig = {
         },
         {
           name: "Home Stories Pro",
-          price: "29 kr.",
+          price: "$9.99",
           period: "one-time — no subscription",
           highlight: true,
           features: [
@@ -167,7 +170,7 @@ const templateConfig: TemplateConfig = {
         },
       ],
       footnote:
-        "Price from the Danish App Store — local pricing varies by storefront.",
+        "One-time price from the App Store — it varies by country.",
     },
     comparison: {
       id: "vs-spreadsheets",

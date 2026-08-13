@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { getMobileOperatingSystem } from "utils/common";
+import { trackAppStoreClick } from "utils/tracking";
 import type { TemplateConfig } from "utils/configType";
 
 interface Props {
@@ -11,8 +12,20 @@ function AppRedirectionPage({ config }: Props) {
 
   useEffect(() => {
     const platform = getMobileOperatingSystem();
-    if (platform === "ios" && appStoreLink) window.location.href = appStoreLink;
-    else if (platform === "android" && googlePlayLink)
+
+    // Only the iOS branch is an App Store click. The Android and desktop
+    // branches go elsewhere and would inflate the count if tracked here.
+    if (platform === "ios" && appStoreLink) {
+      // Fire-and-redirect: trackAppStoreClick resolves as soon as the beacon
+      // is away and self-caps at 300ms, so a blocked or slow Umami can't
+      // strand anyone on a page whose only job is to forward them.
+      void trackAppStoreClick("app-redirect").then(() => {
+        window.location.href = appStoreLink;
+      });
+      return;
+    }
+
+    if (platform === "android" && googlePlayLink)
       window.location.href = googlePlayLink;
     else window.location.href = "/";
   }, [googlePlayLink, appStoreLink]);

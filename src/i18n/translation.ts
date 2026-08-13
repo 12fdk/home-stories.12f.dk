@@ -43,7 +43,9 @@ export interface Translation {
     label: string;
     title: string;
     subtitle: string;
-    plans: { name: string; price: string; period: string; features: string[]; cta: string }[];
+    /** No `price` — amounts come from the locale's App Store storefront at
+     *  build time, so there is nothing here for a translator to get wrong. #109 */
+    plans: { name: string; period: string; features: string[]; cta: string }[];
     footnote: string;
   };
   /** Optional so older translation files fall back to English wholesale. */
@@ -111,7 +113,6 @@ export function extractEnglish(base: TemplateConfig): Translation {
           subtitle: h.pricing.subtitle ?? "",
           plans: h.pricing.plans.map((p) => ({
             name: p.name,
-            price: p.price,
             period: p.period,
             features: [...p.features],
             cta: p.cta ?? "",
@@ -265,7 +266,6 @@ export function applyTranslation(
             plans: byIndex(h.pricing.plans, t.pricing?.plans, (p, o) => ({
               ...p,
               name: o?.name ?? p.name,
-              price: o?.price ?? p.price,
               period: o?.period ?? p.period,
               features: byIndex(p.features, o?.features, (f, of) => of ?? f),
               cta: p.cta ? (o?.cta || p.cta) : p.cta,
