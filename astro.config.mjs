@@ -84,10 +84,12 @@ export default defineConfig({
         },
       },
       // A sitemap is a list of pages we want indexed. /app is a redirect stub
-      // (noindexed), and llms.txt / llms-full.txt are plain-text files for AI
-      // crawlers — Google parks those at "crawled, currently not indexed"
+      // (noindexed), /join is the CloudKit share fallback — a functional
+      // endpoint only ever reached from an invite link, useless without a share
+      // token — and llms.txt / llms-full.txt are plain-text files for AI
+      // crawlers, which Google parks at "crawled, currently not indexed"
       // forever. They stay in robots.txt; they just don't belong here.
-      filter: (page) => !page.includes("/app/"),
+      filter: (page) => !page.includes("/app/") && !page.includes("/join/"),
       serialize(item) {
         // Homepage gets highest priority
         if (item.url === `${SITE}/`) {
