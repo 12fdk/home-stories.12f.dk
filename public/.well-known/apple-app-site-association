@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["9643M8PZU4.12f.home-stories"],
+        "components": [
+          {
+            "/": "/join",
+            "comment": "CloudKit share invite. Once the app declares applinks:home-stories.12f.dk, a recipient who already installed it lands in the app instead of Safari, and the share is accepted without them pasting anything."
+          },
+          {
+            "/": "/join/",
+            "comment": "Astro emits directory-style URLs, so the trailing-slash form is the one Apple actually redirects to."
+          }
+        ]
+      }
+    ]
+  }
+}

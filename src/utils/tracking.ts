@@ -25,7 +25,14 @@ export type AppStoreSurface =
   | "404"
   | "blog-inline-cta"
   /** The /app redirect stub, which forwards straight to the store. */
-  | "app-redirect";
+  | "app-redirect"
+  /**
+   * `/join` — the CloudKit share fallback. Someone was sent a project invite
+   * and does not have the app, so Apple bounced them here. The highest-intent
+   * install this site sees: they are not evaluating the app, they are trying to
+   * open something a person they know already made.
+   */
+  | "share-invite";
 
 /**
  * Attributes to spread onto an `<a>` that leaves for the App Store. Umami's

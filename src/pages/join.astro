@@ -1,0 +1,80 @@
+---
+import Layout from "Layout.astro";
+import defaultTemplateConfig from "utils/config";
+import { appStoreClick } from "utils/tracking";
+
+// The CloudKit share fallback.
+//
+// When someone taps a Home Stories project invite, iOS hands it straight to the
+// app — the app declares `CKSharingSupported`, so the link never reaches a
+// browser. Nobody with the app installed ever sees this page.
+//
+// The people who land here are the ones the invite currently fails: no app, or
+// a desktop browser. Apple redirects them to the container's fallback URL and
+// appends the share token. Without a fallback URL configured they get a bare
+// iCloud page that cannot open anything, which is a dead end at the single
+// highest-intent moment the product has — a real person sent them a real
+// project.
+//
+// Deliberately NOT an auto-redirect like /app. Bouncing them to the App Store
+// without a word loses the one instruction that makes the invite work:
+// installing the app does not deliver the pending share, so they have to come
+// back and tap the invite a second time. Apple does not vend the metadata to a
+// fresh install. Saying so is the difference between a second tap and a user
+// who concludes the app is broken.
+//
+// Privacy: the share token Apple appends is the capability to join the share,
+// and CloudKit puts the project name in the URL fragment. Nothing on this page
+// reads, forwards, or reports either — the Umami event carries a fixed surface
+// label and nothing else. Do not add the query string to analytics, and do not
+// echo it into the markup.
+const seo = {
+  title: "You've been invited to a Home Stories project",
+  description:
+    "Someone shared a home project with you. Get Home Stories to open it.",
+};
+---
+
+<Layout {...defaultTemplateConfig} seo={seo} noindex>
+  <main class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+    <div class="w-full max-w-md text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        You've been invited to a project
+      </h1>
+
+      <p class="text-lg opacity-80 mb-10">
+        Someone shared a Home Stories project with you — their plans, photos,
+        costs and progress, all in one place.
+      </p>
+
+      <!-- iOS: the whole point of the page. -->
+      <a
+        href={defaultTemplateConfig.appStoreLink}
+        class="btn btn-primary btn-lg w-full mb-4"
+        {...appStoreClick("share-invite")}
+      >
+        Get Home Stories — free
+      </a>
+
+      <!--
+        The instruction this page exists for. Installing the app does not carry
+        the invite across; iOS only delivers a share when the link is tapped by
+        an app that is already installed.
+      -->
+      <div class="alert alert-info text-left mt-8">
+        <div>
+          <p class="font-semibold mb-1">Then open your invite again</p>
+          <p class="text-sm opacity-90">
+            Once Home Stories is installed, go back to the message and tap the
+            invite link a second time. That opens the project in the app.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-sm opacity-70 mt-8">
+        On a computer? Home Stories is an iPhone and iPad app — open this invite
+        on your device to join the project.
+      </p>
+    </div>
+  </main>
+</Layout>
