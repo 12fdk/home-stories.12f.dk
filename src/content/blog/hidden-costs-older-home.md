@@ -55,7 +55,7 @@ The cost of a full electrical upgrade — new panel, rewiring, updated outlets a
 
 Many insurance companies won't cover a house with knob-and-tube wiring at all, or will charge a significant surcharge. Some municipalities require upgrades before a renovation permit is issued. Whatever your situation, you need to know early.
 
-![Close-up of a panel box showing outdated fuses and aging wiring behind it](/stock/03.png)
+![An electrician working at an open wall socket in an older room, with old cabling exposed in the opened wall](/stock/20.png)
 
 ### 2. Plumbing that has outlived its purpose
 
