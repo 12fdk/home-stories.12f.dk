@@ -1,5 +1,5 @@
 ---
-title: "How Long Does a Loft Conversion Take? (Realistic Timelines)"
+title: "How Long Does a Loft Conversion Take? Realistic Timeline by Type"
 description: "How long does a loft conversion take? Realistic timelines from planning permission to the last coat of paint, with the delays that actually matter."
 lede: "A loft conversion sounds like the simplest kind of extension — you're just using space you already have. Anyone who's managed one learns quickly that cutting through an existing roof, supporting the structure, and fitting everything to a sloping ceiling adds complications that most people never see coming."
 keyword: "how long does a loft conversion take"

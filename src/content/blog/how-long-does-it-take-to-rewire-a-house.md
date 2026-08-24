@@ -1,5 +1,5 @@
 ---
-title: "How Long Does It Take to Rewire a House? A Realistic Timeline"
+title: "How Long Does It Take to Rewire a House? Realistic Time by Size"
 description: "How long does it take to rewire a house? The realistic timeline, what makes it run long, and how to plan around the delays."
 lede: "A full house rewire is one of those projects that looks simple on paper — strip the old cables, run new ones, attach the board — and then the first wall opens and you realise there's a completely different timeline hiding behind the plaster. This is what that timeline actually looks like."
 keyword: "how long does it take to rewire a house"

@@ -1,5 +1,5 @@
 ---
-title: "How Long Does a Roof Replacement Take — Realistic Timelines"
+title: "How Long Does a Roof Replacement Take? Realistic Timeline by Pitch"
 description: "How long a roof replacement takes, from tear-off to cleanup, with the delays that actually slow things down."
 lede: "A roof replacement sounds simple — strip the old, lay the new — but anyone who's managed one learns quickly that the timeline depends on weather, materials, and the number of people who need to coordinate. Here's what the actual schedule looks like."
 keyword: "how long does a roof replacement take"

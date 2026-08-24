@@ -1,5 +1,5 @@
 ---
-title: "How Long Does It Take to Replace Windows? (With Realistic Ranges)"
+title: "How Long Does It Take to Replace Windows? Realistic Ranges"
 description: "How long does it take to replace windows? Realistic time ranges for a single window through a full-house job, plus the delays that always creep in."
 lede: "Ask how long it takes to replace windows and you'll get very different answers depending on whether it's one window in a bathroom or every window in the house. The honest answer depends on scope, house age, and how much time gets eaten by the gaps between trades. Here's what those ranges actually look like."
 keyword: "how long does it take to replace windows"

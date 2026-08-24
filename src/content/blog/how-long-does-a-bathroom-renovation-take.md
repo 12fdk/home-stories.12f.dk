@@ -1,5 +1,5 @@
 ---
-title: "How Long Does a Bathroom Renovation Take? (With Realistic Ranges)"
+title: "How Long Does a Bathroom Renovation Take? Realistic Ranges by Scope"
 description: "How long does a bathroom renovation take? Realistic time ranges for a refresh through a full gut, plus the delays that always creep in."
 lede: "Ask a contractor how long a bathroom renovation takes and you'll get a number. Ask them how long it took *last* time and they'll tell you how the number drifted. The honest answer is a range — and the range is determined by what happens behind the tiles, not what you picked out at the showroom."
 keyword: "how long does a bathroom renovation take"

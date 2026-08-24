@@ -1,5 +1,5 @@
 ---
-title: "How Long Does a House Extension Take? (With Realistic Ranges)"
+title: "How Long Does a House Extension Take? A Realistic Build Timeline"
 description: "How long does a house extension take? Realistic timelines for single and two-storey extensions, plus the delays that actually matter."
 lede: "A house extension sounds like the most straightforward kind of renovation — you're adding space, not rearranging it. Anyone who has managed one learns quickly that extensions move at the speed of concrete, inspections, and weather, and the timeline stretches far beyond what a contractor's initial estimate suggests."
 keyword: "how long does a house extension take"

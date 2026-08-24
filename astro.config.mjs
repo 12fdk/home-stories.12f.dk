@@ -89,7 +89,7 @@ export default defineConfig({
       // token — and llms.txt / llms-full.txt are plain-text files for AI
       // crawlers, which Google parks at "crawled, currently not indexed"
       // forever. They stay in robots.txt; they just don't belong here.
-      filter: (page) => !page.includes("/app/") && !page.includes("/join/"),
+      filter: (page) => !page.includes("/app/") && !page.includes("/join/") && !page.includes("/blog/how-to-document-home-renovation-for-insurance/"),
       serialize(item) {
         // Homepage gets highest priority
         if (item.url === `${SITE}/`) {

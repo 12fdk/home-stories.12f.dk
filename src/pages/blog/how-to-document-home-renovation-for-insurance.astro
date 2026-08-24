@@ -1,0 +1,24 @@
+---
+// 301: this post was consolidated into /blog/documenting-renovation-for-insurance/
+// (2026-08-24). Static-site redirect: meta refresh + canonical + noindex so
+// crawlers and users both land on the keeper, and the old URL isn't a soft 404.
+const target = "https://home-stories.12f.dk/blog/documenting-renovation-for-insurance/";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <meta http-equiv="refresh" content="0; url=https://home-stories.12f.dk/blog/documenting-renovation-for-insurance/" />
+    <link rel="canonical" href={target} />
+    <title>Moved Permanently</title>
+    <script>
+      window.location.replace("https://home-stories.12f.dk/blog/documenting-renovation-for-insurance/");
+    </script>
+  </head>
+  <body>
+    <p>This page has moved.
+      <a href={target}>Click here if you are not redirected.</a></p>
+  </body>
+</html>

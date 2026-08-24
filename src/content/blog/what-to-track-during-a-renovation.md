@@ -1,7 +1,7 @@
 ---
 title: "11 Things I Wish I'd Tracked Before Starting My Renovation"
 
-description: "What to track during a renovation — 11 things renovators wish they'd logged from day one, and the cheap habit that saves each one."
+description: "The 11 things renovators wish they'd tracked from day one — photos, receipts, quotes — and the cheap habit that saves each one."
 
 lede: "Ask anyone who's finished a renovation what they'd do differently and you rarely hear about tile choices. You hear about information: the photo they didn't take, the receipt they can't find, the verbal quote that grew 40% between the handshake and the invoice. This is the list I'd hand my past self on day one."
 keyword: "what to track during a renovation"
@@ -44,7 +44,7 @@ Photograph every open wall, floor, and ceiling *the day before* the plasterer or
 
 ## 2. Receipts, at the till
 
-Not in a shoebox at the end of the month. At the till, while the paper is still in your hand — thermal receipts fade, and the eighth trip to the hardware store erases the seventh from memory. A photographed receipt with a date and a project attached is evidence: for the tax deduction when you sell, for the insurance claim (the full [documentation trail an insurance claim needs](/blog/how-to-document-home-renovation-for-insurance/) is worth reading before you need it), for the warranty argument. We wrote a whole [photo-first receipt system](/blog/how-to-organize-renovation-receipts/) about this, because it's the habit with the highest money-recovered-per-second ratio.
+Not in a shoebox at the end of the month. At the till, while the paper is still in your hand — thermal receipts fade, and the eighth trip to the hardware store erases the seventh from memory. A photographed receipt with a date and a project attached is evidence: for the tax deduction when you sell, for the insurance claim (the full [documentation trail an insurance claim needs](/blog/documenting-renovation-for-insurance/) is worth reading before you need it), for the warranty argument. We wrote a whole [photo-first receipt system](/blog/how-to-organize-renovation-receipts/) about this, because it's the habit with the highest money-recovered-per-second ratio.
 
 ## 3. The quote next to the invoice
 

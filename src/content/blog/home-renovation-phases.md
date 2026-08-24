@@ -1,7 +1,7 @@
 ---
 title: "Home Renovation Phases: The 6 Stages You Can't Skip"
 
-description: "Home renovation phases — the 6 stages you can't skip in a renovation, from inspiration to snags, with what to track at each."
+description: "The 6 home renovation phases you can't skip, from planning to snag-free handover, with what actually matters to track at each stage."
 
 lede: "Every home renovation moves through the same seven phases, whether it's a single bathroom or a whole house. Knowing the sequence — and the one or two things that actually matter to track in each phase — is what separates a project that stays on plan from one that drifts."
 keyword: "home renovation phases"

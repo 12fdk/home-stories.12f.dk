@@ -8,6 +8,10 @@ coverAlt: "A person crouching on a wooden floor photographing an open plasterboa
 publishDate: 2026-08-24
 author: "Robert Jensen"
 tags: ["documentation", "insurance", "photos", "receipts", "planning"]
+# Consolidated into /blog/documenting-renovation-for-insurance/ (2026-08-24).
+# Kept as a draft so the URL stays unindexed; a 301 from the old slug to the
+# keeper is served by src/pages/blog/how-to-document-home-renovation-for-insurance.astro.
+draft: true
 tldr:
   - "Insurance claims turn on evidence: dated photos, receipts, and a clear record of what changed and who did it. Most people don't have it, and it's the first thing the adjuster asks for."
   - "Document *before* you start too — the pre-existing condition of every room is your baseline and protects you from claims about pre-existing damage."

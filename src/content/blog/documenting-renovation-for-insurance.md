@@ -34,6 +34,8 @@ relatedSlugs:
   - "how-to-organize-renovation-receipts"
   - "how-to-plan-a-home-renovation-step-by-step"
   - "home-renovation-phases"
+  - "renovation-contingency-budget"
+  - "managing-contractor-change-orders"
 ---
 
 You've just spent months on the kitchen. You've got the work done, the budget (mostly) held, the photos on your phone. Then the pipe bursts, or the fire takes the range, or the storm takes the new roof. Your insurance claim starts with one question your policy never answered clearly: *what was the house like, and what changed?*
@@ -99,6 +101,19 @@ We wrote a whole post on [the photo-first receipt system](/blog/how-to-organize-
 ![A man at a kitchen table reading a paper receipt, more receipts and a phone spread in front of him](/stock/03.webp)
 
 **One rule for the paper trail:** if it has a date and a number and a signature or a logo, it belongs in the project folder. Don't wait for the project to end to start organising. Start the folder on day one and drop things in as they arrive. A folder you build over six months is worth more than a folder you build over one weekend at the end.
+
+**Make the money trail tell the story.** A claims file that's strong on the money side answers four questions without anyone asking twice:
+
+- **What was the work, and who did it?** The signed quote or work order, with the contractor's name and the scope in their own words — not the text-message version, the paper one.
+- **What was it actually?** The final invoice, itemised where possible, and the one that matches the quote (or explains why it doesn't).
+- **What was paid, and when?** A bank statement or card history that lines up with the invoices. Insurers check that the money left the account; invoices with no matching payment pattern read as a reconstruction, not a record.
+- **What did the materials cost, and where?** The hardware-store receipts for the fixtures and fittings you bought yourself — the big trade invoices are usually kept, but a claim that covers the whole project needs the small receipts too, not just the big ticket.
+
+## Change orders: get every price change in writing
+
+The documentation habit that quietly prevents the most claims disputes is the cheapest one in this post. Three weeks into a project, the contractor says a wall's in worse shape than expected and the price is going up, and you agree over coffee in the hallway. Six weeks later the final invoice is a few thousand more than the quote you signed, and when the claim is made the adjuster asks for the paperwork that authorises the increase. There isn't any — just two memories that have, understandably, drifted apart.
+
+The fix is one rule: **no money moves without a line of writing.** It can be an email, a message, or a signed addendum — anything dated that says what changed and by how much. If it's not written down, it's a conversation, and conversations don't survive a claims file. Set a [contingency budget](/blog/renovation-contingency-budget/) from the start and every change order becomes a line item you can trace to a decision, which keeps the whole money trail coherent. The mechanics of handling change orders are covered in [managing contractor change orders](/blog/managing-contractor-change-orders/).
 
 ## Disclosure: the part most people skip
 

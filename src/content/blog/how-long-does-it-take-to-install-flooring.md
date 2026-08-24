@@ -1,5 +1,5 @@
 ---
-title: "How Long Does It Take to Install Flooring? (Realistic Ranges)"
+title: "How Long Does It Take to Install Flooring? Realistic Ranges by Type"
 description: "How long does it take to install flooring? Realistic timelines for laminate, LVP, hardwood, tile — plus the hidden delays that push projects past the quote."
 lede: "Ask a flooring installer how long the job takes and they'll give you a day count. The thing they're not mentioning is that the floor doesn't start when the first plank hits the subfloor. Between measuring, moving furniture, dealing with what's underneath, and the various curing and acclimation waits, the total elapsed time is always longer than the install time."
 keyword: "how long does it take to install flooring"

@@ -1,7 +1,7 @@
 ---
 title: "Notion for Home Renovation: When It Works and When It Doesn't"
 
-description: "Notion for home renovation — when Notion works as a renovation tracker, when it doesn't, and what to use instead on-site."
+description: "When Notion works as a home renovation tracker, where it falls apart on-site, and what to use instead for the execution half of the project."
 
 lede: "Notion is genuinely excellent for the planning half of a renovation: research, mood boards, contractor notes, a flexible database you can shape however you think. It's just as genuinely frustrating for the execution half — logging a receipt one-handed in a dusty kitchen — because it was never built for a phone on a building site. This is an honest map of where each tool wins."
 keyword: "notion for home renovation"
