@@ -8,6 +8,7 @@ keyword: "renovation spreadsheet alternative"
 cover: "/stock/04.webp"
 coverAlt: "A man photographing a half-painted wall with his phone to document the progress"
 publishDate: 2026-05-25
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]
 tldr:
@@ -146,3 +147,12 @@ You'll save the spreadsheet as `renovation-archive.xlsx` and forget about it wit
 The spreadsheet isn't the enemy. Friction is. Every tool you choose for a renovation will either reduce friction or add it — and the only friction that matters is *the friction at the moment you're trying to log something*.
 
 If that moment happens at a kitchen tile shop with one free hand, the right tool is on your phone. [Home Stories is free, designed for exactly this, and you can be set up in 90 seconds.](https://apps.apple.com/app/id6754754960)
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission

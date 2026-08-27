@@ -8,6 +8,7 @@ keyword: "what to track during a renovation"
 cover: "/stock/15.png"
 coverAlt: "A woman standing in a partly renovated room, looking at notes pinned to the bare wall"
 publishDate: 2026-07-16
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "tracking", "lessons"]
 tldr:
@@ -105,3 +106,13 @@ Every one of these eleven is a seconds-long habit in the moment and a genuine lo
 You can run all eleven habits with a phone camera, a notes app, and heroic discipline. Or you can keep them in one place, attached to the project, with the totals doing themselves. [Home Stories is free, built for exactly this list, and lives in the pocket you already bring to the job site.](https://apps.apple.com/app/id6754754960)
 
 Start it before the first wall opens. Your future self — standing in a finished kitchen, holding a drill, wondering what's behind that plasterboard — is counting on you.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Facts + statistics: homeowners and renters insurance](https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance) — Insurance Information Institute
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

@@ -1,11 +1,12 @@
 ---
 title: "How Long Does a House Extension Take? A Realistic Build Timeline"
 description: "How long does a house extension take? Realistic timelines for single and two-storey extensions, plus the delays that actually matter."
-lede: "A house extension sounds like the most straightforward kind of renovation — you're adding space, not rearranging it. Anyone who has managed one learns quickly that extensions move at the speed of concrete, inspections, and weather, and the timeline stretches far beyond what a contractor's initial estimate suggests."
+lede: "A single-storey extension takes twelve to twenty weeks from first sketch to final inspection; a two-storey or structurally complex one takes twenty to thirty-two. Four to eight of those weeks are design, planning permission and building regulations, before ground is broken — the phase almost everyone under-counts."
 keyword: "how long does a house extension take"
 cover: "/stock/26.png"
 coverAlt: "A timber-framed single-storey house extension under construction against a clear sky"
 publishDate: 2026-08-02
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["extension", "planning", "timeline", "duration", "foundation"]
 tldr:
@@ -34,6 +35,13 @@ relatedSlugs:
   - "kitchen-renovation-timeline"
   - "how-to-plan-a-home-renovation-step-by-step"
 ---
+
+## At a glance
+
+| Scope | Design & permissions | On-site build | Realistic total |
+| --- | --- | --- | --- |
+| Single-storey, straightforward | 4–8 weeks | 12–20 weeks | 16–28 weeks |
+| Two-storey or complex structural work | 4–8 weeks | 20–32 weeks | 24–40 weeks |
 
 A house extension is the kind of project that sounds simple until you stand in a foundation trench and realise that everything you're building depends on what's underground and what the weather does next.
 
@@ -118,3 +126,13 @@ If you're just expanding your living space, sometimes moving to a larger propert
 An extension is one of the most rewarding home improvements — you're literally creating space that didn't exist. But the timeline is governed by concrete, inspections, and trade sequences that move at their own pace, not yours. Plan for the longer end of the ranges, order materials early, get the ground checked, and lock your design before anything is dug. If you do that, your extension is more likely to finish with its budget and sanity intact than to become a construction site that lingers months past the expected completion date.
 
 If you're looking for a place to track the schedule, budget, trades, and photos of your extension from first sketch to final inspection, [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app that handles exactly that — project tracking, budget management, and a before-and-after photo log that makes the snugging-in phase at the end much clearer.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Do you need planning permission?](https://www.planningportal.co.uk/permission) — UK Planning Portal
+- [Planning permission (England and Wales)](https://www.gov.uk/planning-permission-england-wales) — GOV.UK
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK

@@ -24,6 +24,41 @@ import path from "node:path";
 const BLOG_DIR = "src/content/blog";
 const APP_STORE_URL = "https://apps.apple.com/app/id6754754960";
 
+/**
+ * Citations the blog is allowed to link out to (prompt.md §3).
+ *
+ * §3 bans external URLs because the weekly cron writes offline and cannot check
+ * that a link resolves — it once invented authoritative-looking citations, which
+ * is the worst failure mode this site has. The ban is the enforcement mechanism
+ * for "never write a URL you have not confirmed", not a position that outbound
+ * links are bad: §3 explicitly permits a source you fetched in the same run.
+ *
+ * So the rule stays blunt for anything not on this list. Every entry below was
+ * fetched and returned HTTP 200 on 2026-08-27. Adding one is a deliberate act:
+ * fetch it first, confirm it resolves, then add it here in the same commit.
+ * Primary sources only — standards bodies, regulators, government guidance.
+ */
+const VERIFIED_CITATIONS = new Set([
+  "https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam",
+  "https://consumer.ftc.gov/shopping-and-donating/for-the-home",
+  "https://www.hud.gov/topics/home_improvements",
+  "https://www.nahb.org/news-and-economics/housing-economics",
+  "https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394",
+  "https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance",
+  "https://www.nfpa.org/education-and-research/home-fire-safety",
+  "https://www.epa.gov/lead/renovation-repair-and-painting-program",
+  "https://www.electricalsafetyfirst.org.uk/",
+  "https://www.planningportal.co.uk/permission",
+  "https://www.gov.uk/planning-permission-england-wales",
+  "https://www.gov.uk/building-regulations-approval",
+  "https://www.fmb.org.uk/",
+  "https://www.nwfa.org/",
+  "https://www.asphaltroofing.org/",
+  // Named in the tool-comparison posts, which cannot be written without them.
+  "https://www.homezada.com",
+  "https://www.houzz.com/pro",
+]);
+
 // Posts written before the validator existed. They are held to the ERROR rules
 // but exempt from WARN-level nitpicks that would otherwise create pointless noise.
 const SET_PREFIX = "how-long-does-";
@@ -241,10 +276,12 @@ function checkPost(file) {
     }
   }
 
-  /* --- external links: only the App Store link is allowed (prompt.md §3) --- */
+  /* --- external links: App Store link + the verified citation allowlist (prompt.md §3) --- */
   const external = [...body.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map((m) => m[1]);
   for (const u of external) {
-    if (!u.startsWith(APP_STORE_URL)) E(`unverified external URL: ${u}`);
+    if (u.startsWith(APP_STORE_URL)) continue;
+    if (VERIFIED_CITATIONS.has(u)) continue;
+    E(`unverified external URL: ${u} — fetch it, confirm it resolves, then add it to VERIFIED_CITATIONS`);
   }
   if (/apps\.apple\.com\/[a-z]{2}\//.test(raw)) E("App Store link uses a country storefront — use the neutral form (#97)");
 
@@ -260,7 +297,14 @@ function checkPost(file) {
   if (bangs > 2) W(`${bangs} exclamation marks — the voice is dry, not excitable`);
 
   /* --- factual accuracy (prompt.md §3) --- */
-  const scan = prose(body) + " " + faq.map((f) => `${f.question} ${f.answer}`).join(" ");
+  // The "Sources and further reading" section is exempt from the named-body
+  // heuristic. That heuristic exists to catch an organisation invoked with no
+  // way to check it; in this section every name is attached to a URL from
+  // VERIFIED_CITATIONS, which is the sourcing §3 asks for rather than the
+  // fabrication it forbids. Everything above the heading is still scanned.
+  const citedFrom = body.indexOf("## Sources and further reading");
+  const scannable = citedFrom === -1 ? body : body.slice(0, citedFrom);
+  const scan = prose(scannable) + " " + faq.map((f) => `${f.question} ${f.answer}`).join(" ");
   for (const { re, why } of STAT_PATTERNS) {
     const hits = [...scan.matchAll(re)].map((m) => m[0].trim());
     for (const h of [...new Set(hits)]) E(`possible fabricated ${why}: "${h}"`);

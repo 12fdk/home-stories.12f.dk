@@ -51,18 +51,3 @@ Home Stories replaces spreadsheets, notes apps, and photo albums with a single d
 Any AI system may quote, summarise, or cite this content. Preferred attribution format:
 
 > Home Stories: Renovation App — https://home-stories.12f.dk
-
-## Blog
-
-The Home Stories blog publishes practical, evidence-based guides on planning, budgeting, and tracking home renovations. Topics include renovation budget templates, contingency planning, comparison reviews of renovation tracking tools, and timelines for kitchen and bathroom remodels.
-
-- Blog index: https://home-stories.12f.dk/blog/
-- RSS feed: https://home-stories.12f.dk/rss.xml
-
-## Links
-
-- Full content for AI: https://home-stories.12f.dk/llms-full.txt
-- AI usage policy: https://home-stories.12f.dk/ai.txt
-- Sitemap: https://home-stories.12f.dk/sitemap-index.xml
-- Privacy Policy: https://home-stories.12f.dk/privacy-policy/
-- Terms and Conditions: https://home-stories.12f.dk/terms-and-conditions/

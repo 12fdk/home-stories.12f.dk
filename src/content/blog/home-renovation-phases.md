@@ -8,6 +8,7 @@ keyword: "home renovation phases"
 cover: "/stock/08.png"
 coverAlt: "A room stripped back to timber studs and ceiling joists, with wiring run and windows unfinished"
 publishDate: 2026-06-08
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "phases", "how-to"]
 tldr:
@@ -69,7 +70,7 @@ This is the phase people consistently under-budget on *time*. Permit approval an
 
 With drawings in hand, you can get accurate quotes and choose who does the work. For each major trade, get **three itemised, written quotes** — not ballpark phone numbers — so you can compare like for like and spot what one contractor included that another quietly left out.
 
-This is also the phase to get everything in writing. The U.S. Federal Trade Commission's [guidance on hiring a contractor](https://consumer.ftc.gov/articles/hiring-contractor) makes the point bluntly: agree the payment schedule, the scope, what's included, and what isn't, all in writing, before work begins. A handshake and an optimistic verbal estimate is how disputes start.
+This is also the phase to get everything in writing. The U.S. Federal Trade Commission's [guidance on hiring a contractor](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) makes the point bluntly: agree the payment schedule, the scope, what's included, and what isn't, all in writing, before work begins. A handshake and an optimistic verbal estimate is how disputes start.
 
 **What to track:** quotes (so you can compare and hold contractors to their numbers), contracts, the agreed payment schedule, and key contacts. When phase 5 gets chaotic, knowing exactly what you agreed and what you've paid is what keeps you in control.
 
@@ -115,3 +116,13 @@ The first: **problems are created early and revealed late.** Overruns and delays
 The second: **the thing worth tracking changes as you go.** Scope and decisions early. Itemised budget and contingency once costs are known. Actual-vs-estimate, change orders, and photos during the build. Defects and documents at the end. A tool that only does one of these — a planning spreadsheet, a contractor's email thread, a shoebox of receipts — leaves the others uncovered.
 
 That's the case for keeping the whole arc in one place. [Home Stories](https://apps.apple.com/app/id6754754960) holds all seven phases in a single project — scope, budget, line-item tracking, change orders, photos, and a PDF report at the end — so nothing falls into the gap between phases. It's free on the App Store, and it's built to carry a renovation from the first sketch to the final signed-off snag.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

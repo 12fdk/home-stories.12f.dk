@@ -3,7 +3,7 @@ import type { Translation } from "../translation";
 const da: Translation = {
   "seo": {
     "title": "Home Stories - Gratis renoveringsværktøj til iPhone",
-    "description": "Hold styr på dit renoveringsbudget, organiser opgaver og dokumentér fremskridt med billeder. Eksportér professionelle PDF-rapporter. Gratis til iPhone – hent den nu!"
+    "description": "Hold styr på renoveringsbudgettet, organiser opgaver og dokumentér fremskridt med billeder. Eksportér PDF-rapporter. Gratis til iPhone – hent den nu!"
   },
   "nav": {
     "cta": "Hent appen",
@@ -11,7 +11,9 @@ const da: Translation = {
       "Funktioner",
       "Sådan virker det",
       "Blog",
-      "FAQ"
+      "FAQ",
+      "Om"
+    
     ]
   },
   "ui": {

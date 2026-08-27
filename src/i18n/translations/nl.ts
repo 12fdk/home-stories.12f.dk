@@ -11,7 +11,9 @@ const nl: Translation = {
       "Functies",
       "Hoe het werkt",
       "Blog",
-      "FAQ"
+      "FAQ",
+      "Over"
+    
     ]
   },
   "ui": {

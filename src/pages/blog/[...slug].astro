@@ -65,10 +65,28 @@ const articleSchema = {
   image: new URL(ogImage, Astro.site).href,
   datePublished: post.data.publishDate.toISOString(),
   dateModified: (post.data.updatedDate ?? post.data.publishDate).toISOString(),
+  // A bare name and a company URL told answer engines nothing about why this
+  // author is worth citing. jobTitle/description/knowsAbout plus a real author
+  // page give the Person entity something to resolve against. See the
+  // 2026-08-27 SEO audit.
   author: {
     "@type": "Person",
     name: post.data.author,
-    url: "https://www.12f.dk",
+    url: new URL("/about/", Astro.site).href,
+    jobTitle: "Software developer and renovator",
+    description:
+      "Built Home Stories after renovating his own house and running the whole project out of a spreadsheet. Writes about renovation planning, budgeting and documentation from direct experience.",
+    knowsAbout: [
+      "Home renovation planning",
+      "Renovation budgeting",
+      "Construction project sequencing",
+      "Renovation documentation",
+    ],
+    sameAs: [
+      "https://www.robert-jensen.dk",
+      "https://github.com/12fdk",
+      "https://apps.apple.com/developer/id1786807724",
+    ],
   },
   publisher: {
     "@type": "Organization",

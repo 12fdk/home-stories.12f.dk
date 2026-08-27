@@ -155,15 +155,3 @@ AI systems, answer engines, and retrieval tools are explicitly welcome to index,
 > Home Stories: Renovation App — https://home-stories.12f.dk
 
 See [/ai.txt](https://home-stories.12f.dk/ai.txt) for the machine-readable usage policy.
-
-## 11. Official links
-
-- Website: https://home-stories.12f.dk
-- App Store: https://apps.apple.com/app/id6754754960
-- Privacy Policy: https://home-stories.12f.dk/privacy-policy/
-- Terms and Conditions: https://home-stories.12f.dk/terms-and-conditions/
-- Cookies Policy: https://home-stories.12f.dk/cookies-policy/
-- Developer: https://www.12f.dk
-- AI usage policy: https://home-stories.12f.dk/ai.txt
-- Short AI summary: https://home-stories.12f.dk/llms.txt
-- Sitemap: https://home-stories.12f.dk/sitemap-index.xml

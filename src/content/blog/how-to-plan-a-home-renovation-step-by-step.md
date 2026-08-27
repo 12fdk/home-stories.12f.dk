@@ -8,6 +8,7 @@ keyword: "how to plan a home renovation step by step"
 cover: "/stock/13.png"
 coverAlt: "Two hands tracing a line across architectural drawings spread over a table"
 publishDate: 2026-07-14
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "step-by-step", "first-timer", "guide"]
 tldr:
@@ -362,3 +363,13 @@ Understanding how to plan a home renovation step by step is only half the equati
 [Home Stories](https://apps.apple.com/app/id6754754960) does all of that automatically. Set up a project, define your rooms and budgets, and start logging expenses and photos from the first decision to the final walkthrough. It's free on the App Store, and it replaces the chaos of spreadsheets, notebooks, and scattered photos.
 
 *Home Stories is free on the App Store.*
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK

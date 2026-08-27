@@ -8,6 +8,7 @@ keyword: "renovation project timeline example"
 cover: "/stock/06.png"
 coverAlt: "A kitchen with new white cabinets and stone worktops fitted, the floor still unfinished"
 publishDate: 2026-07-13
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["kitchen", "planning", "timeline", "how-to"]
 tldr:
@@ -255,3 +256,13 @@ But even with both of those, 8 weeks is the floor for a full kitchen reno. Anyth
 The schedule above gives you the shape of the project. [Home Stories](https://apps.apple.com/app/id6754754960) gives you the record — every expense logged on the day it happens, every photo of what's behind the walls saved before it's closed up, and a running budget that tells you whether you're on track every single week. Set it up before demo starts so week one numbers are already there.
 
 *Home Stories is free on the App Store.*
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

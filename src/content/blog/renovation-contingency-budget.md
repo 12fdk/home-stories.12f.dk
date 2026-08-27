@@ -8,6 +8,7 @@ keyword: "renovation contingency budget"
 cover: "/stock/07.png"
 coverAlt: "A gutted bathroom with patched, pockmarked walls and a basin balanced on a timber trestle"
 publishDate: 2026-06-22
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:
@@ -143,3 +144,13 @@ A renovation contingency budget that actually protects you comes down to four th
 The setup happens at a desk, and a [budget template](/blog/renovation-budget-template/) handles it well. The hard part — keeping the buffer honest while you're standing in a half-demolished room logging a surprise cost one-handed — happens on-site, which is exactly where a desk tool stops working.
 
 If you'd rather have the live balance handled for you, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set your contingency once, log each draw as it happens, and always know — to the line item — how much of your buffer is left to face whatever's behind the next wall.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [Houzz & Home study — renovation spend and scope data](https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394) — Houzz
+- [Renovation, Repair and Painting (RRP) rule — lead-safe work](https://www.epa.gov/lead/renovation-repair-and-painting-program) — US Environmental Protection Agency

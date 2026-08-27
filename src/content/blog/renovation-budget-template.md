@@ -8,6 +8,7 @@ keyword: "renovation budget template"
 cover: "/stock/01.webp"
 coverAlt: "A couple standing in a stripped room, looking at a tablet together, paint swatches taped to the wall"
 publishDate: 2026-05-18
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "templates", "planning"]
 tldr:
@@ -174,3 +175,13 @@ Polished PDF and Google Sheet copies of this template are in preparation and wil
 If you'd rather skip the spreadsheet entirely, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Same 9 categories, same contingency logic, but you can log a receipt in 5 seconds at the builder's merchant.
 
 Either way: get the structure right, get the contingency right, and log actuals the day they happen. That's 80% of the battle.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [Houzz & Home study — renovation spend and scope data](https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394) — Houzz
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

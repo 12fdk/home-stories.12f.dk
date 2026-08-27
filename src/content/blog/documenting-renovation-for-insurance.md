@@ -6,6 +6,7 @@ keyword: "how to document home renovation for insurance"
 cover: "/stock/30.png"
 coverAlt: "A rolled insurance document and a stack of receipts sitting on a bare floorboard in a mid-renovation kitchen, a camera on the workbench behind"
 publishDate: 2026-08-07
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["insurance", "documentation", "planning", "photos"]
 tldr:
@@ -156,3 +157,13 @@ The documentation that makes an insurance claim smooth is the same documentation
 None of it takes more than a minute per item if it happens in the moment. The cost of skipping it shows up only when something bad happens, and by then it's too late to take the photo of the wall before it's covered.
 
 The habit is cheap. The record is worth it. Start the folder on day one, take the before-photos, keep the receipts, and when the claim comes — or when the buyer's surveyor asks — the answer is already in the file.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Facts + statistics: homeowners and renters insurance](https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance) — Insurance Information Institute
+- [Home fire safety research and guidance](https://www.nfpa.org/education-and-research/home-fire-safety) — National Fire Protection Association
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

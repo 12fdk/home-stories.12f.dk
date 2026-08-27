@@ -8,6 +8,7 @@ keyword: "homezada vs houzz pro"
 cover: "/stock/14.png"
 coverAlt: "A tradesman fitting a white tiled backsplash above a kitchen worktop"
 publishDate: 2026-07-06
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["comparison", "apps", "planning", "tools"]
 tldr:
@@ -178,3 +179,12 @@ The decision isn't about which app has the most features. It's about which tool 
 ## Ready to try one?
 
 [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set up a project in two minutes, log your first budget category, and see whether a phone-first approach changes how consistently you track. You can always switch to a desktop-heavy tool later — but once work starts, it's much harder to find one that works in a dusty room on a phone.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Houzz & Home study — renovation spend and scope data](https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394) — Houzz
+- [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission

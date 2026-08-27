@@ -8,6 +8,7 @@ keyword: "renovation checklist printable"
 cover: "/stock/11.png"
 coverAlt: "An empty room freshly painted white, with a paint tray and roller left on the floor"
 publishDate: 2026-06-15
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "checklists", "templates"]
 tldr:
@@ -169,3 +170,13 @@ You can print this whole list straight from the page and tape it to the wall —
 But a wall chart has one flaw: it isn't with you at the builder's merchant, on the scaffold, or standing in the half-stripped bathroom wondering whether the plumber's first fix is signed off. That's where the checklist needs to live. [Home Stories](https://apps.apple.com/app/id6754754960) keeps this same task list on your phone, alongside the budget and the photos, so each task carries its own receipt and its own pipe-run photo. Tick it, shoot it, log the cost — once, on the spot.
 
 Print the master list for the wall, run the working copy on your phone, and the boring, cheap, easily-forgotten tasks — the ones that actually derail renovations — stop falling through the cracks. It's free on the App Store, and it's built to carry a project from the first strip-out to the final signed-off snag.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK

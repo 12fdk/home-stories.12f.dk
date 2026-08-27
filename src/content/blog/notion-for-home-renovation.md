@@ -8,6 +8,7 @@ keyword: "notion for home renovation"
 cover: "/stock/12.png"
 coverAlt: "Power tools, tape measures and a hammer laid out across a worn workbench"
 publishDate: 2026-06-29
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]
 tldr:
@@ -119,3 +120,12 @@ The two don't really compete; they hand off. Notion holds the static planning ar
 And if you only want *one* new tool — if you've already got planning handled in Notion, a spreadsheet, or your head — then add the one for the part that actually breaks. The part that breaks is never the planning. It's keeping the budget honest while the work is underway, logging one-handed in a room full of dust. That's the part Notion handles worst, and the part [Home Stories was built for](/blog/how-to-budget-a-home-renovation/).
 
 [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960) — keep your Notion hub for planning, and let a phone-first tracker carry the budget through the months when a desk tool can't.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

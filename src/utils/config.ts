@@ -72,6 +72,7 @@ const templateConfig: TemplateConfig = {
       { href: "/#how-it-works", title: "How it works" },
       { href: "/blog/", title: "Blog" },
       { href: "/#faq", title: "FAQ" },
+      { href: "/about/", title: "About" },
     ],
   },
   topNavbar: {
@@ -84,6 +85,9 @@ const templateConfig: TemplateConfig = {
       { href: "/#how-it-works", title: "How it works" },
       { href: "/blog/", title: "Blog" },
       { href: "/#faq", title: "FAQ" },
+      // Keep this array index-parallel with footer.links: applyTranslation maps
+      // BOTH against the same t.nav.links array by position.
+      { href: "/about/", title: "About" },
     ],
   },
   appBanner: {
@@ -226,30 +230,40 @@ const templateConfig: TemplateConfig = {
           subtitle:
             "Name the project, put a number on it, and give it a deadline. That number is what everything else is measured against.",
           image: "/stock/01.webp",
+          imageAlt:
+            "A notebook and calculator on a kitchen worktop beside a tape measure, with a renovation budget written out by hand.",
         },
         {
           title: "List the work",
           subtitle:
             "Break the job into tasks, then add the materials, fixtures, and quotes each one needs. Estimates now, receipts later.",
           image: "/stock/02.webp",
+          imageAlt:
+            "Timber studs and boxed fixtures stacked in a stripped-back room waiting to be fitted.",
         },
         {
           title: "Log what you spend",
           subtitle:
             "Enter costs as they land. The chart splits spent, committed, and remaining, so an overrun shows up while you can still act on it.",
           image: "/stock/03.webp",
+          imageAlt:
+            "A pile of building-merchant receipts and invoices spread across a table next to a phone.",
         },
         {
           title: "Photograph the progress",
           subtitle:
             "Shoot from inside the app. Photos are dated and pinned to the project, which is how you settle what the wall looked like in March.",
           image: "/stock/04.webp",
+          imageAlt:
+            "A phone held up to photograph a half-finished wall, framing the work in progress.",
         },
         {
           title: "Export the report",
           subtitle:
             "One tap turns budget, tasks, photos, and notes into a PDF. Send it to the contractor, the insurer, or the folder you'll want next year.",
           image: "/stock/05.webp",
+          imageAlt:
+            "A printed project report on a worktop in a finished room, ready to hand to a contractor.",
         },
       ],
     },
@@ -441,8 +455,8 @@ const templateConfig: TemplateConfig = {
   },
   privacyPolicy: {
     seo: {
-      title: "Privacy Policy - Home Stories",
-      description: "Privacy Policy for Home Stories - Renovation App",
+      title: "Privacy Policy — Home Stories Renovation App for iPhone",
+      description: "How Home Stories handles your renovation data: stored on-device by default, synced only to your own iCloud, with no tracking and no advertising.",
     },
     content: `# Privacy Policy
 
@@ -467,8 +481,8 @@ robert@12f.dk
   },
   cookiesPolicy: {
     seo: {
-      title: "Cookies Policy - Home Stories",
-      description: "Cookies Policy for Home Stories",
+      title: "Cookies Policy — Home Stories Renovation App for iPhone",
+      description: "Which cookies home-stories.12f.dk sets, what the privacy-friendly analytics record, and how to opt out. No advertising or cross-site tracking cookies.",
     },
     content: `# Cookies Policy
 
@@ -481,8 +495,8 @@ If you have any questions, please contact us at robert@12f.dk
   },
   termsAndConditions: {
     seo: {
-      title: "Terms and Conditions - Home Stories",
-      description: "Terms and Conditions for Home Stories - Renovation App",
+      title: "Terms & Conditions — Home Stories Renovation App",
+      description: "The terms covering use of the Home Stories iPhone app and this website, including the one-time Pro purchase, acceptable use, and limits of liability.",
     },
     content: `# Terms and Conditions
 

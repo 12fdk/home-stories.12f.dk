@@ -1,11 +1,12 @@
 ---
 title: "How Long Does a Loft Conversion Take? Realistic Timeline by Type"
 description: "How long does a loft conversion take? Realistic timelines from planning permission to the last coat of paint, with the delays that actually matter."
-lede: "A loft conversion sounds like the simplest kind of extension — you're just using space you already have. Anyone who's managed one learns quickly that cutting through an existing roof, supporting the structure, and fitting everything to a sloping ceiling adds complications that most people never see coming."
+lede: "A dormer loft conversion takes six to ten weeks on site; a mansard takes ten to sixteen. Add four to eight weeks of planning permission, structural engineering and building regulations first. Where the staircase lands is the decision that shapes everything else, and getting it wrong restarts the design."
 keyword: "how long does a loft conversion take"
 cover: "/stock/27.png"
 coverAlt: "A timber-framed loft conversion under construction, showing exposed roof trusses and new floor joists"
 publishDate: 2026-08-03
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["loft conversion", "timeline", "duration", "planning", "structural"]
 relatedSlugs:
@@ -32,6 +33,13 @@ faq:
   - question: "How long does the steel work take?"
     answer: "The structural steel phase — installing the steel beams that carry the new wall, cutting the roof, and putting in the new floor joists — typically takes one to two weeks. The steel itself is delivered and fitted in a day or two, but the supporting work around it (installing the new load-bearing wall, checking foundations, making good the existing structure) takes longer. The building inspector needs to sign off the steel before any roof work can begin, and that inspection is what usually creates the pause."
 ---
+
+## At a glance
+
+| Conversion type | Design & permissions | On-site build | Realistic total |
+| --- | --- | --- | --- |
+| Dormer | 4–8 weeks | 6–10 weeks | 10–18 weeks |
+| Mansard | 4–8 weeks | 10–16 weeks | 14–24 weeks |
 
 A loft conversion sounds like the simplest way to add space to a house. You're not digging foundations, not extending out, not rearranging the street-facing facade. You're just making use of an empty attic that's already there. Anyone who has managed one quickly learns that this is a comfortable way to lose sleep over timelines.
 
@@ -124,3 +132,13 @@ Loft conversions are one of the best ways to add value and space to a house. The
 The work that matters happens before the steel arrives. Get the design right, sort the stairs early, confirm whether you need planning permission, and pick your contractor while there's still time to compare quotes properly. The actual build is the easy part; it's the preparation that determines whether the timeline stays on track or stretches.
 
 For more on renovation timelines and project phases, see the [kitchen renovation timeline](/blog/kitchen-renovation-timeline/) and our post on [how long a bathroom renovation takes](/blog/how-long-does-a-bathroom-renovation-take/). If you're planning a larger project and want to understand the overall sequence, the [house extension guide](/blog/how-long-does-a-house-extension-take/) covers similar ground on a bigger scale.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Do you need planning permission?](https://www.planningportal.co.uk/permission) — UK Planning Portal
+- [Planning permission (England and Wales)](https://www.gov.uk/planning-permission-england-wales) — GOV.UK
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK

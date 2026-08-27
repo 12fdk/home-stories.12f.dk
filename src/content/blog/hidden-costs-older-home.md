@@ -6,6 +6,7 @@ keyword: "unexpected renovation costs older home"
 cover: "/stock/29.png"
 coverAlt: "An open wall cavity in an older house, revealing outdated wiring and old pipes behind the plasterboard"
 publishDate: 2026-08-05
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "older-homes", "planning", "surprises", "hidden-costs"]
 tldr:
@@ -152,3 +153,13 @@ Plan for it. Budget for it. Log every dollar that goes into the unknown. The hou
 Older homes are worth the surprises. They're solid, they're repairable, and they reward patience with spaces that new construction can't match. Just plan for the surprises — because they'll arrive whether you planned for them or not.
 
 If you're managing a renovation in an older home and want to keep the hidden costs visible, [Home Stories](https://apps.apple.com/app/id6754754960) has a budget feature built for exactly this: track each surprise as it comes up, see it against your contingency in real time, and know whether you still have room or need to trim elsewhere. Free on the App Store, no account needed.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Renovation, Repair and Painting (RRP) rule — lead-safe work](https://www.epa.gov/lead/renovation-repair-and-painting-program) — US Environmental Protection Agency
+- [Electrical safety guidance for homeowners](https://www.electricalsafetyfirst.org.uk/) — Electrical Safety First (UK)
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders

@@ -1,11 +1,12 @@
 ---
 title: "How Long Does a Roof Replacement Take? Realistic Timeline by Pitch"
 description: "How long a roof replacement takes, from tear-off to cleanup, with the delays that actually slow things down."
-lede: "A roof replacement sounds simple — strip the old, lay the new — but anyone who's managed one learns quickly that the timeline depends on weather, materials, and the number of people who need to coordinate. Here's what the actual schedule looks like."
+lede: "A full roof replacement on an average house takes one to three days of active work, but two to four weeks from signing the quote to the final walkthrough. The crew is fast. Ordering materials, waiting for a dry-weather window and scheduling the inspection are what fill the calendar."
 keyword: "how long does a roof replacement take"
 cover: "/stock/25.png"
 coverAlt: "Workers installing new asphalt shingles on a residential roof under clear daylight"
 publishDate: 2026-08-01
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["roofing", "planning", "timeline", "contractors"]
 tldr:
@@ -33,6 +34,15 @@ relatedSlugs:
   - "how-to-plan-a-home-renovation-step-by-step"
   - "what-to-track-during-a-renovation"
 ---
+
+## At a glance
+
+| Phase | Duration | The wildcard |
+| --- | --- | --- |
+| Quote to scheduling | 1–2 weeks | Material lead times; HOA or design review can add 1–3 weeks |
+| Tear-off and deck inspection | 1–2 days | Rotted decking found once the old material is off |
+| Underlayment and installation | 1–2 days | Rain or gusts over 25 mph stop work entirely |
+| Cleanup and final walkthrough | Half a day | — |
 
 A roof replacement is one of those renovation tasks that sounds straightforward on paper — strip the old, install the new — and then reality reminds you that roofs are built to handle thousands of pounds of snow, hurricane-force winds, and everything in between, so doing it right requires more coordination than a weekend warrior's calendar can easily accommodate.
 
@@ -130,3 +140,12 @@ Budget two to four weeks from quote to done, expect one to three days of active 
 ---
 
 If you're juggling multiple renovation projects and want a single place to track the roof replacement alongside everything else — photos of the deck condition, receipts for materials, the contractor's schedule — [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app designed exactly for that. It's one tool for all of it, not just the roof.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Asphalt roofing installation guidance](https://www.asphaltroofing.org/) — Asphalt Roofing Manufacturers Association
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

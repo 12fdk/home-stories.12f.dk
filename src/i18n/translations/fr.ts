@@ -3,7 +3,7 @@ import type { Translation } from "../translation";
 const fr: Translation = {
   "seo": {
     "title": "Home Stories - Suivi de rénovation gratuit pour iPhone",
-    "description": "Suivez votre budget de rénovation, organisez les tâches et documentez l'avancement en photos. Exportez des rapports PDF professionnels. Gratuit sur iPhone - téléchargez maintenant !"
+    "description": "Suivez le budget de vos travaux, organisez les tâches et documentez l'avancement en photos. Exportez des rapports PDF. Gratuit sur iPhone !"
   },
   "nav": {
     "cta": "Télécharger l'app",
@@ -11,7 +11,9 @@ const fr: Translation = {
       "Fonctionnalités",
       "Comment ça marche",
       "Blog",
-      "FAQ"
+      "FAQ",
+      "À propos"
+    
     ]
   },
   "ui": {

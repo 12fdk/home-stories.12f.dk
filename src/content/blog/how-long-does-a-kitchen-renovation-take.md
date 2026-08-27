@@ -1,11 +1,12 @@
 ---
 title: "How Long Does a Kitchen Renovation Take? Realistic Time Ranges"
 description: "How long does a kitchen renovation take? Realistic time ranges for a refresh through a full remodel, plus the delays that always creep in."
-lede: "Ask a contractor how long a kitchen renovation takes and you'll get a number. Ask them how long it took *last* time and they'll tell you how the number drifted. The honest answer is a range — and the range is determined by what happens behind the cabinets, not what you picked out at the showroom."
+lede: "A kitchen renovation takes four to eight weeks on site for a straightforward refresh that keeps the existing layout, or ten to sixteen weeks for a full gut with walls and services moved. Add four to eight weeks of design, permits and ordering first. Cabinet delivery, at eight to twelve weeks, usually sets the real finish date."
 keyword: "how long does a kitchen renovation take"
 cover: "/stock/16.png"
 coverAlt: "A kitchen with exposed wall framing and an unfinished countertop, tools on the floor"
 publishDate: 2026-07-27
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["kitchen", "planning", "timeline", "duration"]
 tldr:
@@ -32,6 +33,14 @@ relatedSlugs:
   - "renovation-checklist-printable"
   - "what-to-track-during-a-renovation"
 ---
+
+## At a glance
+
+| Scope | On-site time | Design, permits & ordering | Realistic total |
+| --- | --- | --- | --- |
+| Refresh — same layout, sink and services stay put | 4–8 weeks | 4–8 weeks | 8–16 weeks |
+| Full gut — walls removed, plumbing and electrics moved | 10–16 weeks | 4–8 weeks | 14–24 weeks |
+| Cabinet lead time (runs in parallel, but gates install) | — | 8–12 weeks custom or semi-custom | — |
 
 Ask a contractor how long a kitchen renovation takes and you'll get a number. Ask them how long it took *last* time and they'll tell you how that number drifted.
 
@@ -108,3 +117,13 @@ A straightforward kitchen refresh takes four to eight weeks on site, all else be
 The spread inside that range isn't random. It's determined by how much you move, how old the house is, and whether you order your cabinets before the demo crew walks in.
 
 If you're planning a kitchen renovation and want to keep track of budget, timeline, and decisions as the work progresses, [Home Stories](https://apps.apple.com/app/id6754754960) was built for exactly that kind of thing. It's free on iPhone, works offline, and keeps budget, tasks, photos, and notes attached to your project — so you're not hunting through emails and receipts when you need to check what's changed since last week.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders

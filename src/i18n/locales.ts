@@ -17,6 +17,13 @@ export interface LocaleDef {
    * sixteen. The footnote says prices vary by storefront. #109
    */
   storefront: string;
+  /**
+   * ISO 4217 currency of that storefront. Declared explicitly rather than
+   * inferred from the price string: symbols are ambiguous (¥ is both JPY and
+   * CNY) and thousands separators differ by locale, so parsing the display
+   * string guessed wrong. Used for the AggregateOffer priceCurrency.
+   */
+  currency: string;
 }
 
 export const DEFAULT_LOCALE = "en";
@@ -24,22 +31,22 @@ export const DEFAULT_LOCALE = "en";
 export const SITE = "https://home-stories.12f.dk";
 
 export const LOCALES: LocaleDef[] = [
-  { code: "en", label: "English", hreflang: "en", storefront: "us" },
-  { code: "da", label: "Dansk", hreflang: "da", storefront: "dk" },
-  { code: "de", label: "Deutsch", hreflang: "de", storefront: "de" },
-  { code: "fr", label: "Français", hreflang: "fr", storefront: "fr" },
-  { code: "es", label: "Español", hreflang: "es", storefront: "es" },
-  { code: "it", label: "Italiano", hreflang: "it", storefront: "it" },
-  { code: "nl", label: "Nederlands", hreflang: "nl", storefront: "nl" },
-  { code: "pt", label: "Português", hreflang: "pt", storefront: "pt" },
-  { code: "sv", label: "Svenska", hreflang: "sv", storefront: "se" },
-  { code: "ja", label: "日本語", hreflang: "ja", storefront: "jp" },
-  { code: "zh", label: "中文", hreflang: "zh-Hans", storefront: "cn" },
-  { code: "ko", label: "한국어", hreflang: "ko", storefront: "kr" },
-  { code: "pl", label: "Polski", hreflang: "pl", storefront: "pl" },
-  { code: "tr", label: "Türkçe", hreflang: "tr", storefront: "tr" },
-  { code: "ru", label: "Русский", hreflang: "ru", storefront: "ru" },
-  { code: "nb", label: "Norsk", hreflang: "nb", storefront: "no" },
+  { code: "en", label: "English", hreflang: "en", storefront: "us", currency: "USD" },
+  { code: "da", label: "Dansk", hreflang: "da", storefront: "dk", currency: "DKK" },
+  { code: "de", label: "Deutsch", hreflang: "de", storefront: "de", currency: "EUR" },
+  { code: "fr", label: "Français", hreflang: "fr", storefront: "fr", currency: "EUR" },
+  { code: "es", label: "Español", hreflang: "es", storefront: "es", currency: "EUR" },
+  { code: "it", label: "Italiano", hreflang: "it", storefront: "it", currency: "EUR" },
+  { code: "nl", label: "Nederlands", hreflang: "nl", storefront: "nl", currency: "EUR" },
+  { code: "pt", label: "Português", hreflang: "pt", storefront: "pt", currency: "EUR" },
+  { code: "sv", label: "Svenska", hreflang: "sv", storefront: "se", currency: "SEK" },
+  { code: "ja", label: "日本語", hreflang: "ja", storefront: "jp", currency: "JPY" },
+  { code: "zh", label: "中文", hreflang: "zh-Hans", storefront: "cn", currency: "CNY" },
+  { code: "ko", label: "한국어", hreflang: "ko", storefront: "kr", currency: "KRW" },
+  { code: "pl", label: "Polski", hreflang: "pl", storefront: "pl", currency: "PLN" },
+  { code: "tr", label: "Türkçe", hreflang: "tr", storefront: "tr", currency: "TRY" },
+  { code: "ru", label: "Русский", hreflang: "ru", storefront: "ru", currency: "RUB" },
+  { code: "nb", label: "Norsk", hreflang: "nb", storefront: "no", currency: "NOK" },
 ];
 
 /** Locales other than English — the ones that get a prefixed route. */

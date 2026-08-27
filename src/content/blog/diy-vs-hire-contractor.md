@@ -6,6 +6,7 @@ keyword: "should I DIY or hire a contractor"
 cover: "/stock/19.png"
 coverAlt: "A person in casual work clothes holding a drill, standing in a room mid-renovation with tools laid out on a sawhorse, natural window light"
 publishDate: 2026-07-20
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "contractors", "budget"]
 tldr:
@@ -138,3 +139,13 @@ The DIY or contractor decision is rarely about skill. It's about three things:
 ![A finished kitchen with new cabinets and counters, natural light coming through the windows](/stock/10.png)
 
 Run through those four questions. If the numbers surprise you (and they probably will), you've saved yourself a lot of potential pain. And if the answer is still "I think I can handle this" — well, nobody's stopping you. Just know exactly what you're signing up for.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
+- [Finding and vetting a builder](https://www.fmb.org.uk/) — Federation of Master Builders (UK)
+- [Renovation, Repair and Painting (RRP) rule — lead-safe work](https://www.epa.gov/lead/renovation-repair-and-painting-program) — US Environmental Protection Agency

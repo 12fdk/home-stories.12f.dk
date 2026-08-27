@@ -3,7 +3,7 @@ import type { Translation } from "../translation";
 const de: Translation = {
   "seo": {
     "title": "Home Stories – Kostenloser Renovierungs-Tracker fürs iPhone",
-    "description": "Behalten Sie Ihr Renovierungsbudget im Blick, organisieren Sie Aufgaben und dokumentieren Sie den Fortschritt mit Fotos. Exportieren Sie professionelle PDF-Berichte. Kostenlos fürs iPhone – jetzt laden!"
+    "description": "Renovierungsbudget im Blick behalten, Aufgaben organisieren und Fortschritt mit Fotos dokumentieren. PDF-Berichte exportieren. Kostenlos fürs iPhone!"
   },
   "nav": {
     "cta": "App holen",
@@ -11,7 +11,9 @@ const de: Translation = {
       "Funktionen",
       "So funktioniert's",
       "Blog",
-      "FAQ"
+      "FAQ",
+      "Über"
+    
     ]
   },
   "ui": {

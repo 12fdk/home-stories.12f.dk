@@ -1,11 +1,12 @@
 ---
 title: "How Long Does a Bathroom Renovation Take? Realistic Ranges by Scope"
 description: "How long does a bathroom renovation take? Realistic time ranges for a refresh through a full gut, plus the delays that always creep in."
-lede: "Ask a contractor how long a bathroom renovation takes and you'll get a number. Ask them how long it took *last* time and they'll tell you how the number drifted. The honest answer is a range — and the range is determined by what happens behind the tiles, not what you picked out at the showroom."
+lede: "A bathroom renovation takes three to six weeks on site for a refresh that keeps the existing plumbing, or eight to twelve weeks for a full gut with fixtures relocated. Add two to four weeks of design and permitting first. Custom shower pan fabrication and tile cure time are the delays early estimates miss."
 keyword: "how long does a bathroom renovation take"
 cover: "/stock/17.png"
 coverAlt: "A bathroom mid-renovation with exposed wall framing, visible plumbing pipes, and tools on the floor"
 publishDate: 2026-07-28
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["bathroom", "planning", "timeline", "duration"]
 tldr:
@@ -32,6 +33,13 @@ relatedSlugs:
   - "how-to-plan-a-home-renovation-step-by-step"
   - "what-to-track-during-a-renovation"
 ---
+
+## At a glance
+
+| Scope | On-site time | Design, permits & ordering | Realistic total |
+| --- | --- | --- | --- |
+| Refresh — same layout, plumbing stays put | 3–6 weeks | 2–4 weeks | 5–10 weeks |
+| Full gut — walls opened, fixtures relocated | 8–12 weeks | 2–4 weeks | 10–16 weeks |
 
 Ask a contractor how long a bathroom renovation takes and you'll get a number. Ask them how long it took *last* time and they'll tell you how the number drifted.
 
@@ -132,3 +140,12 @@ A bathroom renovation almost always takes longer than you think it will, and the
 Plan for the longer end of the range. Lock your decisions early. Order long-lead items before demo starts. And if you want to see how a similar project plays out week by week, the [kitchen renovation timeline](/blog/kitchen-renovation-timeline/) walks through the full sequence with the same kind of honest timing.
 
 If you're about to start a bathroom renovation and want a realistic picture of what's ahead, the questions below should cover what most people want to know.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

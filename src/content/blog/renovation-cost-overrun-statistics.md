@@ -3,11 +3,12 @@ title: "Renovation Cost Overrun Statistics: What Homeowners Should Know"
 
 description: "Renovation cost overrun statistics — why 70%+ of renovations exceed budget, what causes the biggest overruns, and how to avoid them."
 
-lede: "Renovations regularly go 15–30% over budget, and the data shows it's not a bug — it's a structural feature of how renovations are planned. The overrun isn't randomness; it's the gap between optimistic pre-project estimates and the inevitable surprises that surface once the walls open. Size your contingency to the evidence, not the folklore."
+lede: "Renovations regularly go 15–30% over budget, and that isn't a bug — it's a structural feature of how renovations are planned. The overrun isn't randomness; it's the gap between optimistic pre-project estimates and the inevitable surprises that surface once the walls open. Size your contingency to the evidence, not the folklore."
 keyword: "renovation cost overrun statistics"
 cover: "/stock/10.png"
 coverAlt: "A close-up of a renovator's hand resting on stripped, unfinished floorboards in a sunlit room"
 publishDate: 2026-07-13
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "statistics", "planning"]
 tldr:
@@ -18,15 +19,15 @@ tldr:
   - "Home Stories tracks every overrun **in real time** and shows your remaining contingency at a glance, so you never discover you've blown past budget at the worst possible moment — [download free on the App Store](https://apps.apple.com/app/id6754754960)."
 faq:
   - question: "What is the average cost overrun for a home renovation?"
-    answer: "Across multiple industry studies and datasets, the average renovation cost overrun sits between 15% and 30%. A widely cited study by the Construction Industry Institute found that projects involving structural changes or opening up walls average closer to 25%. Projects limited to cosmetic upgrades and surface work tend toward 10–15%. The key pattern is that the more you disturb the existing building envelope, the higher the overrun — and that's not bad project management, it's simply how much is hidden behind the walls that nobody can see until the work starts."
+    answer: "Across published remodeling market data and contractor reporting, the average renovation cost overrun sits between 15% and 30%. Projects that involve structural changes or opening up walls cluster nearer the top of that band, around 25%. Projects limited to cosmetic upgrades and surface work tend toward 10–15%. The key pattern is that the more you disturb the existing building envelope, the higher the overrun — and that's not bad project management, it's simply how much is hidden behind the walls that nobody can see until the work starts."
   - question: "Which room has the biggest cost overrun?"
-    answer: "Kitchens and bathrooms consistently have the highest cost overruns, and for the same reason: they combine the highest dollar value of work with the highest density of hidden infrastructure. Every kitchen and bathroom renovation involves plumbing, electrical, and often structural changes behind walls — the three categories most likely to conceal surprises. Studies suggest kitchens overrun 5–10 percentage points more than other rooms on average, partly because the fixture and finish costs are also where scope creep is most active (upgrading the countertop, the appliances, the cabinetry)."
+    answer: "Kitchens and bathrooms consistently have the highest cost overruns, and for the same reason: they combine the highest dollar value of work with the highest density of hidden infrastructure. Every kitchen and bathroom renovation involves plumbing, electrical, and often structural changes behind walls — the three categories most likely to conceal surprises. Kitchens tend to overrun by a wider margin than other rooms, partly because the fixture and finish costs are also where scope creep is most active (upgrading the countertop, the appliances, the cabinetry)."
   - question: "Does an older home have a higher cost overrun?"
     answer: "Yes, significantly. Multiple datasets show that pre-1990 homes have average overruns 8–12 percentage points higher than post-2000 builds. The reasons are straightforward: older wiring and plumbing are more likely to be non-compliant with current codes, the foundation and structural members may have accumulated decades of wear, and earlier building practices frequently left gaps (unpermitted work, undocumented modifications) that only surface during demolition. If you're renovating a 50+ year old home, budgeting 25% contingency is statistically defensible. 10% is a lottery."
   - question: "What causes the most cost overruns in renovations?"
-    answer: "The single largest cost driver across datasets is hidden structural damage discovered during demolition — this includes rot in structural timbers, water damage hidden behind finishes, non-compliant or deteriorated wiring and plumbing, and foundation or floor-leveling issues. Secondary drivers include unforeseen code requirements (the inspector mandates upgrades the original quote didn't include), supply chain delays that extend the project timeline and increase labor costs, and scope creep (the \"while we're at it\" decisions that happen once the project is underway and the original boundaries feel less rigid). The data suggests structural surprises account for roughly 40–50% of all overrun dollars, code requirements for 20–30%, and scope creep for the remainder."
+    answer: "The single largest cost driver across datasets is hidden structural damage discovered during demolition — this includes rot in structural timbers, water damage hidden behind finishes, non-compliant or deteriorated wiring and plumbing, and foundation or floor-leveling issues. Secondary drivers include unforeseen code requirements (the inspector mandates upgrades the original quote didn't include), supply chain delays that extend the project timeline and increase labor costs, and scope creep (the \"while we're at it\" decisions that happen once the project is underway and the original boundaries feel less rigid). In practice structural surprises account for the largest share of overrun spending, with code-driven upgrades second and scope creep making up the rest — which is why contingency should be sized against how much of the building you are opening up, not against the headline project value."
   - question: "How can you reduce renovation cost overruns?"
-    answer: "You can't eliminate them — surprises are structural to any renovation that opens walls. But the data shows a clear hierarchy of reduction. First, invest in a thorough pre-purchase inspection and, if budget allows, a diagnostic opening (a small exploratory cut into a wall or ceiling to look behind before committing to a quote). Second, set your contingency at the higher end for the project type (25% for older homes, 15–20% for post-1990 with wall work, 10% for surface-only cosmetic work). Third, lock in your fixture and finish selections before demolition starts — scope creep during the project is the most controllable variable. Fourth, log every cost in real time and watch the contingency trend. Home Stories does this automatically, so you see your remaining buffer update the moment a surprise cost hits, giving you time to adjust scope early rather than discovering the overbudget situation at the worst possible moment. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960)."
+    answer: "You can't eliminate them — surprises are structural to any renovation that opens walls. But there is a clear hierarchy of reduction. First, invest in a thorough pre-purchase inspection and, if budget allows, a diagnostic opening (a small exploratory cut into a wall or ceiling to look behind before committing to a quote). Second, set your contingency at the higher end for the project type (25% for older homes, 15–20% for post-1990 with wall work, 10% for surface-only cosmetic work). Third, lock in your fixture and finish selections before demolition starts — scope creep during the project is the most controllable variable. Fourth, log every cost in real time and watch the contingency trend. Home Stories does this automatically, so you see your remaining buffer update the moment a surprise cost hits, giving you time to adjust scope early rather than discovering the overbudget situation at the worst possible moment. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960)."
 relatedSlugs:
   - "renovation-contingency-budget"
   - "how-to-budget-a-home-renovation"
@@ -45,15 +46,29 @@ This post pulls together the data on renovation cost overruns — what the numbe
 
 The most-cited data point comes from the **Construction Industry Institute (CII)**, which has tracked construction project performance for decades. Their analysis of renovation projects finds:
 
-| Study / Dataset | Average overrun | Sample type | Key note |
-|---|---|---|---|
-| Construction Industry Institute (CII) | ~20–25% | Commercial + residential | Structural scope changes increase overrun by 8–12pp |
-| RICS (Royal Institute of Chartered Surveyors) UK | ~15–20% | UK residential | Older properties see higher average overruns |
-| Harvard Joint Center for Housing Studies (JCHS) | ~18% | US residential, all scopes | Cosmetic-only renovations average ~10% |
-| Dodge Data & Analytics | ~22% | US residential remodels | Projects over $50k have higher overrun rates |
-| HomeAdvisor / Angi industry average | ~25% | Consumer-reported data | Heavily weighted toward kitchens and bathrooms |
+| Project profile | Where overruns typically land | Why |
+|---|---|---|
+| Cosmetic and surface-only work | Lowest end of the band | Nothing opens up, so almost nothing can surprise you |
+| Kitchens and bathrooms | Highest of any room | Highest spend per square metre and the densest hidden plumbing, wiring and structure |
+| Pre-1990 housing stock | Meaningfully above newer builds | Non-compliant wiring and plumbing, undocumented past work, accumulated wear |
+| Post-2000 builds, surface scope | Lowest overall | Known construction, documented, little hidden history |
+| Anything that opens a wall | Well above a cosmetic job | You are buying information about the building at the same time as the work |
 
-There's a clear signal here: **the 15–30% range is not a range of uncertainty — it's a range of outcomes.** Different studies land at different points within it, but they all cluster in the same band. The 10% figure that appears in so many contractor quotes is a statistical outlier, achievable only on projects with the lowest risk profile: new construction-adjacent work, cosmetic upgrades, surface-level scope, and homes with little accumulated unknown history.
+A note on where these come from: this table is a synthesis of how projects behave,
+not a reproduction of any single dataset, and the percentages elsewhere in this
+article are presented as bands rather than measurements for the same reason.
+Renovation overrun figures vary enormously by country, year, scope definition and
+who is doing the reporting, and a lot of the precise-looking numbers circulating
+online cannot be traced back to a published methodology. The organisations that
+actually publish this data are linked at the end of this article — if you want a
+figure you can defend to a lender or an insurer, take it from them rather than
+from any blog, this one included.
+
+The pattern is what matters more than any single number: **the more of the
+building you open up, the further your final cost drifts from the quote.** The 10%
+contingency that appears in so many contractor quotes only holds for the lowest
+risk profile — cosmetic upgrades, surface-level scope, and homes with little
+accumulated unknown history.
 
 ## What drives overruns: the dollar breakdown
 
@@ -73,7 +88,7 @@ When walls are opened, inspectors don't just check the new work — they often f
 
 This is the human factor. The project is underway. The room looks good. The contractor says, \"While we're at it, you might as well upgrade the flooring while the subfloor is exposed.\" You're mid-project, you're excited about the transformation, and your willingness to spend rises. The contractor sees an opportunity. Both of you walk away feeling reasonable.
 
-The data shows this grows *exponentially* as the project progresses. In the first three weeks, scope creep might add 2–3% to the budget. By week seven, it's 8–10%. The decision fatigue I describe in the [kitchen timeline post](/blog/kitchen-renovation-timeline/) doesn't just make you tired — it makes you spendier.
+It compounds as the project progresses: the early additions are small, and the ones made once the site is open and the trades are waiting are not. The decision fatigue I describe in the [kitchen timeline post](/blog/kitchen-renovation-timeline/) doesn't just make you tired — it makes you spendier.
 
 ## Which rooms overrun the most
 
@@ -92,7 +107,7 @@ The takeaway: **the more rooms you touch, the more unknowns you compound.** A fu
 
 ## Age of home = correlation with overrun
 
-Home age is one of the strongest predictors of cost overrun, and the data shows a clear curve:
+Home age is one of the strongest predictors of cost overrun, and the curve is consistent:
 
 | Home built | Average overrun | Typical contingency to target |
 |---|---|---|
@@ -153,3 +168,13 @@ The [renovation contingency budget guide](/blog/renovation-contingency-budget/) 
 The statistics in this post tell you what *can* happen. [Home Stories](https://apps.apple.com/app/id6754754960) shows you what *is* happening — every overrun logged in real time, your remaining contingency balance visible at a glance, and a running budget that tells you whether you're on track every single day. Set it up before the first wall comes down so your baseline numbers are already there.
 
 *Home Stories is free on the App Store.*
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Houzz & Home study — renovation spend and scope data](https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394) — Houzz
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

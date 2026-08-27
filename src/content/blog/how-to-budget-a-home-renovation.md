@@ -8,6 +8,7 @@ keyword: "how to budget a home renovation"
 cover: "/stock/09.png"
 coverAlt: "Floor plans on a desk with a calculator, tape measure, notebook and pen"
 publishDate: 2026-06-01
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:
@@ -92,7 +93,7 @@ This is where complete budgets separate from optimistic ones. Beyond the buildin
 | The finishing layer | Paint, trims, blinds, handles, furniture |
 | Snagging & defects | The final 5% always costs more attention than expected |
 
-The U.S. Federal Trade Commission's [guidance on hiring a contractor](https://consumer.ftc.gov/articles/hiring-contractor) makes the same point from the consumer-protection angle: get everything — payment schedule, what's included, what isn't — in writing before work starts. A vague quote is a budget overrun waiting to happen.
+The U.S. Federal Trade Commission's [guidance on hiring a contractor](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) makes the same point from the consumer-protection angle: get everything — payment schedule, what's included, what isn't — in writing before work starts. A vague quote is a budget overrun waiting to happen.
 
 Add these lines explicitly. A budget that lists them is honest; one that doesn't just delays the bad news.
 
@@ -171,3 +172,13 @@ Budgeting a renovation without going over isn't about predicting the future perf
 Steps 1–4 happen at a desk and a [budget template](/blog/renovation-budget-template/) is perfect for them. Steps 5–6 happen on-site, one-handed, in the dust — which is exactly where a desk tool stops working and a phone-first tracker takes over.
 
 If you want the live-tracking half handled for you, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960), built specifically to keep a renovation budget current without nightly admin. Set up your categories once, log as you go, and always know — to the line item — exactly where you stand.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [Houzz & Home study — renovation spend and scope data](https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394) — Houzz
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
