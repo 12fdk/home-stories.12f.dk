@@ -123,16 +123,28 @@ a follow-up, not a blocker.
 
 ## Cache rules
 
-| Rule | Matches | Edge TTL | Browser TTL |
-| --- | --- | --- | --- |
-| Immutable assets | `/_astro/`, `/fonts/`, `/videos/`, and `.webp .png .jpg .jpeg .svg .woff2 .mp4` | 1 year | 1 year |
-| AI text surfaces | `/llms.txt`, `/llms-full.txt`, `/ai.txt`, `/robots.txt` | 1 day | 1 day |
-| HTML | everything else on this host | 1 hour | 10 min |
+| Order | Rule | Matches | Edge TTL | Browser TTL |
+| --- | --- | --- | --- | --- |
+| 1 | HTML | everything on this host **except** the two below | 1 hour | 10 min |
+| 2 | AI text surfaces | `/llms.txt`, `/llms-full.txt`, `/ai.txt`, `/robots.txt` | 1 day | 1 day |
+| 3 | Immutable assets | `/_astro/`, `/fonts/`, `/videos/`, and `.webp .png .jpg .jpeg .svg .woff2 .mp4` | 1 year | 1 year |
 
-Everything in the first row is content-hashed by Astro or version-stable, so a
-year is safe there and only there. HTML stays short so a deploy is visible
-quickly — the current `max-age=600` from GitHub Pages is roughly right for HTML;
-it was only ever wrong for assets.
+**The order matters.** Cache Rules are *stackable*, not first-match-wins: when
+several rules match one request, the **last** matching rule wins for a given
+setting ([docs](https://developers.cloudflare.com/cache/how-to/cache-rules/order/)).
+So the broad HTML rule goes first and the specific ones after it. Listed the
+other way round, the catch-all would overwrite the one-year TTL on hashed assets
+with the ten-minute HTML TTL — which is exactly the bug this file previously
+described.
+
+The rules are also written to be mutually exclusive (rule 1 carries `not (...)`
+for the other two), so they stay correct even if someone reorders them later.
+Belt and braces.
+
+Everything in rule 3 is content-hashed by Astro or version-stable, so a year is
+safe there and only there. HTML stays short so a deploy is visible quickly — the
+current `max-age=600` from GitHub Pages is roughly right for HTML; it was only
+ever wrong for assets.
 
 ## Dashboard equivalent
 

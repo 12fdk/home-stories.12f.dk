@@ -132,25 +132,37 @@ json_cache() {
       browser_ttl: { mode: "override", default: browser },
     });
     const YEAR = 31536000, DAY = 86400;
+
+    // ORDER IS LOAD-BEARING. Cache Rules are stackable, not first-match-wins:
+    // when several rules match one request, the LAST matching rule wins for a
+    // given setting. So the broad HTML rule goes FIRST and the specific ones
+    // after it, otherwise the catch-all would overwrite the one-year TTL on
+    // hashed assets with the ten-minute HTML TTL.
+    // https://developers.cloudflare.com/cache/how-to/cache-rules/order/
+    const ASSETS = `starts_with(http.request.uri.path, "/_astro/") or starts_with(http.request.uri.path, "/fonts/") or starts_with(http.request.uri.path, "/videos/") or http.request.uri.path matches "\\.(webp|png|jpg|jpeg|svg|woff2|mp4)$"`;
+    const TEXT = `http.request.uri.path in {"/llms.txt" "/llms-full.txt" "/ai.txt" "/robots.txt"}`;
+
     process.stdout.write(JSON.stringify({
       rules: [
         {
-          expression: `${f} and (starts_with(http.request.uri.path, "/_astro/") or starts_with(http.request.uri.path, "/fonts/") or starts_with(http.request.uri.path, "/videos/") or http.request.uri.path matches "\\.(webp|png|jpg|jpeg|svg|woff2|mp4)$")`,
-          description: "home-stories immutable assets",
+          // Belt and braces: the exclusions make the rules mutually exclusive,
+          // so this stays correct even if someone reorders them later.
+          expression: `${f} and not (${ASSETS}) and not (${TEXT})`,
+          description: "home-stories HTML",
           action: "set_cache_settings",
-          action_parameters: ttl(YEAR, YEAR),
+          action_parameters: ttl(3600, 600),
         },
         {
-          expression: `${f} and http.request.uri.path in {"/llms.txt" "/llms-full.txt" "/ai.txt" "/robots.txt"}`,
+          expression: `${f} and (${TEXT})`,
           description: "home-stories AI text surfaces",
           action: "set_cache_settings",
           action_parameters: ttl(DAY, DAY),
         },
         {
-          expression: f,
-          description: "home-stories HTML",
+          expression: `${f} and (${ASSETS})`,
+          description: "home-stories immutable assets",
           action: "set_cache_settings",
-          action_parameters: ttl(3600, 600),
+          action_parameters: ttl(YEAR, YEAR),
         },
       ],
     }));'
