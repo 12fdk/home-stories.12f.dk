@@ -3,8 +3,16 @@ import "@styles/styles.scss";
 import type { TemplateConfig } from "utils/configType";
 import { getLocale, DEFAULT_LOCALE } from "./i18n/locales";
 
-const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore, noindex, locale, localeAlternates, home } =
-  Astro.props as TemplateConfig & { noindex?: boolean };
+const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore, noindex, locale, localeAlternates, home, isAppPage } =
+  Astro.props as TemplateConfig & { noindex?: boolean; isAppPage?: boolean };
+
+// The product-describing schema (SoftwareApplication, FAQPage, HowTo, Speakable,
+// VideoObject) describes the *app* and belongs only on the pages that actually
+// present it — the English homepage and each /<lang>/ homepage. It used to be
+// emitted from this layout unconditionally, which meant /privacy-policy/,
+// /cookies-policy/, /terms-and-conditions/ and /404 all declared a HowTo for
+// running a renovation and an FAQ they do not contain. Schema should describe
+// the page it sits on. See the 2026-08-27 SEO audit.
 
 // Language of the rendered page. English is the default; localized homepages
 // pass their code and a full set of hreflang alternates.
@@ -22,6 +30,62 @@ const ogLocale = OG_LOCALES[localeCode] ?? htmlLang.replace("-", "_");
 const ogLocaleAlternates = localeAlternates?.length
   ? Object.values(OG_LOCALES).filter((l) => l !== ogLocale)
   : [];
+
+// Live Pro price from the storefront lookup when the homepage supplied it;
+// falls back to the published US price so the Offer is never empty.
+//
+// The currency comes from the locale table, not from the symbol in the display
+// string: "¥" is both JPY and CNY, and thousands separators differ by
+// storefront, so parsing the symbol produced wrong ISO codes (¥1,500 read as
+// "1.500 USD"). Zero-decimal currencies are quoted as whole numbers, so their
+// separators are stripped rather than treated as a decimal point.
+const ZERO_DECIMAL = new Set(["JPY", "KRW"]);
+const localeCurrency = getLocale(localeCode)?.currency ?? "USD";
+
+function parsePrice(display: string | undefined, currency: string): string | undefined {
+  if (!display) return undefined;
+  const digits = display.match(/[\d][\d.,\u00A0\s]*/)?.[0]?.trim();
+  if (!digits) return undefined;
+  if (ZERO_DECIMAL.has(currency)) {
+    const whole = digits.replace(/[^\d]/g, "");
+    return whole || undefined;
+  }
+  // Last separator followed by exactly two digits is the decimal point;
+  // everything before it is a thousands separator.
+  const normalised = digits.replace(/[\u00A0\s]/g, "").replace(/[.,](\d{2})$/, "|$1").replace(/[.,]/g, "");
+  const value = normalised.replace("|", ".");
+  return /^\d+(\.\d{2})?$/.test(value) ? value : undefined;
+}
+
+const proTier = home?.pricing?.plans?.find((p) => /pro|premium|lifetime/i.test(p.name ?? ""));
+const proAmount = parsePrice(proTier?.price, localeCurrency);
+const proPrice = proAmount ? { amount: proAmount, currency: localeCurrency } : undefined;
+
+// The hero demo clips, described for crawlers. Kept beside the markup that
+// references them so the two cannot drift.
+const DEMO_VIDEOS = [
+  {
+    src: "/videos/demo-1.mp4",
+    poster: "/videos/poster-1.webp",
+    name: "Tracking a renovation budget in Home Stories",
+    description: "Logging costs against a renovation budget in Home Stories and watching the spent, committed and remaining totals update on the budget chart.",
+    duration: "PT8S",
+  },
+  {
+    src: "/videos/demo-2.mp4",
+    poster: "/videos/poster-2.webp",
+    name: "Organising renovation tasks into phases",
+    description: "Breaking a renovation into phases and tasks in Home Stories so the work stays in the right order from demolition through to finishes.",
+    duration: "PT8S",
+  },
+  {
+    src: "/videos/demo-3.mp4",
+    poster: "/videos/poster-3.webp",
+    name: "Building a dated photo timeline of a renovation",
+    description: "Capturing dated progress photos inside Home Stories and exporting the project as a PDF report to share with a contractor or insurer.",
+    duration: "PT8S",
+  },
+];
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Always a real 1200x630 image (generated in src/pages/og-image.png.ts) so social
@@ -133,7 +197,8 @@ const aggregateRating = hasRealRatings
     <meta name="twitter:description" content={seo.description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Structured Data - Software / Mobile Application -->
+    <!-- Structured Data - Software / Mobile Application (app pages only) -->
+    {isAppPage && (
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": ["SoftwareApplication", "MobileApplication"],
@@ -141,14 +206,49 @@ const aggregateRating = hasRealRatings
       "operatingSystem": "iOS 17.0+",
       "applicationCategory": "LifestyleApplication",
       "applicationSubCategory": "Productivity",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        // The canonical storefront link is the Danish App Store, whose
-        // currency is DKK — keep the declared currency consistent with it.
-        "priceCurrency": "DKK",
-        "availability": "https://schema.org/InStock"
-      },
+      // The app is free to download and carries one optional non-consumable
+      // in-app purchase. Declaring only the free tier described the product
+      // inaccurately, so both are listed under an AggregateOffer with the real
+      // low/high bounds. Pro price comes from the live storefront lookup where
+      // available. See the 2026-08-27 SEO audit.
+      "offers": proPrice
+        ? {
+            "@type": "AggregateOffer",
+            "priceCurrency": proPrice.currency,
+            "lowPrice": "0",
+            "highPrice": proPrice.amount,
+            "offerCount": "2",
+            "availability": "https://schema.org/InStock",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Home Stories (free)",
+                "price": "0",
+                "priceCurrency": proPrice.currency,
+                "availability": "https://schema.org/InStock",
+                "url": appStoreLink
+              },
+              {
+                "@type": "Offer",
+                "name": "Home Stories Pro (one-time unlock)",
+                "price": proPrice.amount,
+                "priceCurrency": proPrice.currency,
+                "availability": "https://schema.org/InStock",
+                "url": appStoreLink,
+                "category": "InAppPurchase"
+              }
+            ]
+          }
+        : {
+            // Storefront lookup failed or returned an unparseable price. Declare
+            // only what we know for certain — the download is free — rather than
+            // asserting a Pro price that may be wrong for this storefront.
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": localeCurrency,
+            "availability": "https://schema.org/InStock",
+            "url": appStoreLink
+          },
       ...(aggregateRating ? { "aggregateRating": aggregateRating } : {}),
       "description": seo.description,
       "url": canonicalURL.href,
@@ -178,9 +278,10 @@ const aggregateRating = hasRealRatings
         ]
       }
     })} />
+    )}
 
     <!-- Structured Data - FAQ (built from the page's own, localized, FAQ copy) -->
-    {home?.faq?.qa?.length && (
+    {isAppPage && home?.faq?.qa?.length && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -204,7 +305,8 @@ const aggregateRating = hasRealRatings
       "publisher": {
         "@type": "Organization",
         "name": "12f",
-        "url": "https://www.12f.dk"
+        "url": "https://www.12f.dk",
+        "logo": new URL("/logo.png", Astro.site).href
       }
     })} />
 
@@ -215,9 +317,18 @@ const aggregateRating = hasRealRatings
       "name": "12f",
       "url": "https://www.12f.dk",
       "email": "robert@12f.dk",
+      // Google uses logo to pick the brand mark for knowledge panels; without it
+      // the entity has no image to attach. Same file the Article publisher uses.
+      "logo": {
+        "@type": "ImageObject",
+        "url": new URL("/logo.png", Astro.site).href
+      },
+      // Verified, first-party profiles only. A sameAs pointing at a profile we
+      // do not control is worse than a short list. #77
       "sameAs": [
         "https://github.com/12fdk",
-        "https://apps.apple.com/developer/id1786807724"
+        "https://apps.apple.com/developer/id1786807724",
+        "https://www.robert-jensen.dk"
       ],
       "founder": {
         "@type": "Person",
@@ -254,6 +365,7 @@ const aggregateRating = hasRealRatings
     })} />
 
     <!-- Structured Data - HowTo (for AI answer engines) -->
+    {isAppPage && (
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "HowTo",
@@ -305,8 +417,10 @@ const aggregateRating = hasRealRatings
         }
       ]
     })} />
+    )}
 
     <!-- Structured Data - SpeakableSpecification (voice answer engines) -->
+    {isAppPage && (
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -319,6 +433,33 @@ const aggregateRating = hasRealRatings
         "xpath": ["/html/head/title", "/html/head/meta[@name='description']/@content"]
       }
     })} />
+    )}
+
+    <!-- Structured Data - VideoObject: the three product demos that play in the
+         hero. Without this the clips are opaque to crawlers and answer engines,
+         which see three <video> tags and no description of what they show. -->
+    {isAppPage && (
+      <script type="application/ld+json" set:html={JSON.stringify(
+        DEMO_VIDEOS.map((v) => ({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": v.name,
+          "description": v.description,
+          "contentUrl": new URL(v.src, Astro.site).href,
+          "thumbnailUrl": new URL(v.poster, Astro.site).href,
+          "uploadDate": appStore?.lastUpdated ?? undefined,
+          "duration": v.duration,
+          "inLanguage": htmlLang,
+          "isFamilyFriendly": true,
+          "publisher": {
+            "@type": "Organization",
+            "name": "12f",
+            "url": "https://www.12f.dk",
+            "logo": new URL("/logo.png", Astro.site).href
+          }
+        }))
+      )} />
+    )}
 
     <script is:inline define:vars={{ forceTheme, theme }}>
       const darkTheme = `${theme}-dark`;

@@ -4,6 +4,7 @@ import path from "node:path";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import { rehypeImageAttrs } from "./src/plugins/rehype-image-attrs.mjs";
 
 const SITE = "https://home-stories.12f.dk";
 const BLOG_DIR = "src/content/blog";
@@ -57,6 +58,12 @@ export default defineConfig({
         },
       },
     },
+  },
+  markdown: {
+    // Markdown images render as a bare <img>: no dimensions, no loading hint.
+    // This stamps intrinsic width/height (so the article stops reflowing as
+    // photos arrive) and marks the first image as the LCP candidate.
+    rehypePlugins: [rehypeImageAttrs],
   },
   image: {
     // Enable image optimization with sharp

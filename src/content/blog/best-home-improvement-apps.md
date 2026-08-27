@@ -8,6 +8,7 @@ keyword: "best home improvement apps 2026"
 cover: "/stock/02.webp"
 coverAlt: "A renovator kneeling on a bare concrete floor, checking a phone beside stacked tile and flooring samples"
 publishDate: 2026-07-13
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["apps", "tools", "planning", "reviews"]
 tldr:
@@ -168,3 +169,12 @@ Most people need **two**: one from the top half of that table, and one from the 
 Install for the phase you're actually in. And when work starts, make sure *something* is keeping score — because the renovation will keep spending your money whether or not anyone is writing it down.
 
 *App Store ratings, review counts and update dates were checked on the US App Store in July 2026 and will drift over time. The one number worth re-checking yourself is the last-updated date.*
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

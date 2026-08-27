@@ -1,11 +1,12 @@
 ---
 title: "How Long Does It Take to Install Flooring? Realistic Ranges by Type"
 description: "How long does it take to install flooring? Realistic timelines for laminate, LVP, hardwood, tile — plus the hidden delays that push projects past the quote."
-lede: "Ask a flooring installer how long the job takes and they'll give you a day count. The thing they're not mentioning is that the floor doesn't start when the first plank hits the subfloor. Between measuring, moving furniture, dealing with what's underneath, and the various curing and acclimation waits, the total elapsed time is always longer than the install time."
+lede: "Most flooring takes one to three days of actual installation per room, but anywhere from four days to five weeks from order to walking on it. The gap is acclimation, removing the old floor, levelling the subfloor and cure time. Laminate and LVP are quickest; solid hardwood is slowest by a wide margin."
 keyword: "how long does it take to install flooring"
 cover: "/stock/22.png"
 coverAlt: "An open living room with subfloor exposed and several types of flooring samples laid out in a row"
 publishDate: 2026-07-31
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["flooring", "planning", "timeline", "duration"]
 tldr:
@@ -34,6 +35,15 @@ relatedSlugs:
   - "how-long-does-it-take-to-rewire-a-house"
   - "how-to-plan-a-home-renovation-step-by-step"
 ---
+
+## At a glance
+
+| Flooring type | Active install time | Total elapsed time | What the waiting is for |
+| --- | --- | --- | --- |
+| Laminate and LVP | 1–2 days per room | 4–7 days | Acclimation, old-floor removal |
+| Engineered wood | 1–2 days | A few days | 48–72 hours acclimation |
+| Tile | 2–3 days | 1–2 weeks | Mortar set, then 24–72 hours grout cure |
+| Solid hardwood | 3–5 days | 3–5 weeks | Acclimation, sanding, drying between finish coats |
 
 The floor you're walking on today was probably installed by someone who measured the room twice, checked the subfloor condition, and then spent one or two days putting planks or tiles down. That install window is easy to picture.
 
@@ -146,3 +156,12 @@ For a typical room, the active labour is **one to three days** depending on floo
 If you're planning a renovation at all, keeping a record of when each decision is made and when each phase starts helps enormously. [Planning a home renovation step by step](/blog/how-to-plan-a-home-renovation-step-by-step/) walks through the full sequence and shows where flooring fits in. And if you want a simple way to track all the moving parts — what's ordered, what's installed, what's waiting to cure — [Home Stories](https://apps.apple.com/app/id6754754960) keeps the timeline, budget, and decisions for a project in one place on your phone.
 
 The floor will be done when it's done. The people who manage to finish on schedule are the ones who planned for the delays, not the ones who optimistically ignored them.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Wood flooring installation and acclimation standards](https://www.nwfa.org/) — National Wood Flooring Association
+- [Renovation, Repair and Painting (RRP) rule — lead-safe work](https://www.epa.gov/lead/renovation-repair-and-painting-program) — US Environmental Protection Agency

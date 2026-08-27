@@ -67,7 +67,7 @@ function HowItWorks() {
               <img
                 className="w-full rounded-box border border-base-300 object-cover shadow-sm md:aspect-[4/3]"
                 src={withBase(step.image)}
-                alt=""
+                alt={step.imageAlt ?? ""}
                 loading="lazy"
                 width={480}
                 height={360}

@@ -1,11 +1,12 @@
 ---
 title: "How Long Does It Take to Rewire a House? Realistic Time by Size"
 description: "How long does it take to rewire a house? The realistic timeline, what makes it run long, and how to plan around the delays."
-lede: "A full house rewire is one of those projects that looks simple on paper — strip the old cables, run new ones, attach the board — and then the first wall opens and you realise there's a completely different timeline hiding behind the plaster. This is what that timeline actually looks like."
+lede: "A full rewire of an average home takes one to three weeks of active on-site work, but six to eight weeks from first quote to a house you can decorate. The electrician is rarely the bottleneck: permits, the consumer unit arriving, the inspection slot and the decorator's calendar are what stretch it."
 keyword: "how long does it take to rewire a house"
 cover: "/stock/20.png"
 coverAlt: "An electrician working at an open wall socket in a partly renovated room, with new cables visible"
 publishDate: 2026-07-29
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["electrical", "planning", "timeline", "safety"]
 tldr:
@@ -34,6 +35,16 @@ relatedSlugs:
   - "how-to-plan-a-home-renovation-step-by-step"
   - "renovation-contingency-budget"
 ---
+
+## At a glance
+
+| Phase | Typical duration | What actually holds it up |
+| --- | --- | --- |
+| Assessment and quotes | Weeks 1–2 | Deciding scope: socket counts, smart switches, EV charging |
+| Permits and approvals | Weeks 2–4 | The building authority's turnaround, not your electrician's |
+| On-site electrical work | 1–3 weeks | What's behind the walls in a pre-1960s house |
+| Ordering and inspection | Weeks 4–6 | Consumer unit lead time; the inspector's calendar |
+| Make-good and decorating | Weeks 4–8 | Plaster drying, then a decorator booked weeks out |
 
 A full house rewire is one of those projects where the simple answer is wrong.
 
@@ -135,3 +146,13 @@ The things that reliably stretch the timeline are not the electrician's pace but
 The best time to do a full rewire is when you're already opening the walls for something else. A kitchen or bathroom renovation is the obvious choice — but any project that involves chasing into walls is a good time to also get the electrics right. You pay for opening walls once; don't pay twice because you decided the wiring was "probably fine."
 
 If you're planning a rewire, the first step is a professional assessment. Most electricians will walk through the house, look at what you've got, and tell you whether a full rewire is needed or if a targeted update will do. That assessment takes an hour, costs almost nothing, and saves you from making a decision in the dark — which, in an electrical project, is exactly the kind of dark spot you want to avoid.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Electrical safety guidance for homeowners](https://www.electricalsafetyfirst.org.uk/) — Electrical Safety First (UK)
+- [Home fire safety research and guidance](https://www.nfpa.org/education-and-research/home-fire-safety) — National Fire Protection Association
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK

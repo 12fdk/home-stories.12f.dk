@@ -9,6 +9,7 @@ keyword: "how to deal with contractor change orders"
 cover: "/stock/28.png"
 coverAlt: "A homeowner standing in an open kitchen space, talking with a tradesperson who is pointing at plans on a tablet"
 publishDate: 2026-08-04
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["contractor", "budgeting", "communication", "planning"]
 tldr:
@@ -163,3 +164,13 @@ Get the scope in writing. Require a written note before any extra work. Set a th
 Do that, and the three-week project stays three weeks. Skip it, and the kitchen refit becomes a year-long negotiation about work nobody originally agreed to.
 
 The choice, as usual, is yours.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission
+- [Finding and vetting a builder](https://www.fmb.org.uk/) — Federation of Master Builders (UK)
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development

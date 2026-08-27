@@ -8,6 +8,7 @@ keyword: "how to organize renovation receipts"
 cover: "/stock/03.webp"
 coverAlt: "A man at a kitchen table reading a paper receipt, more receipts and a phone spread in front of him"
 publishDate: 2026-07-13
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "organization", "tax", "insurance"]
 tldr:
@@ -115,3 +116,13 @@ That's the whole thing. It takes ten seconds per receipt during the project, and
 The alternative isn't chaos, exactly. It's a shoebox — which looks like a system right up until the day you need it, and then quietly isn't one.
 
 If you'd rather not keep a shoebox at all, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Log each cost with its receipt photo and room as it happens, and export a complete, dated record of the whole renovation whenever your accountant, your insurer, or your buyer asks for one.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Facts + statistics: homeowners and renters insurance](https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance) — Insurance Information Institute
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
+- [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission

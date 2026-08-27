@@ -8,6 +8,7 @@ keyword: "how to track home improvement expenses"
 cover: "/stock/05.webp"
 coverAlt: "A homeowner and a contractor in a hard hat looking at a phone together on site"
 publishDate: 2026-07-13
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:
@@ -161,3 +162,13 @@ Already covered in the FAQ section above — four practical questions on the bes
 ## Ready to track expenses without the spreadsheet headache?
 
 [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set your budget once, log costs and receipt photos as they happen, and always know — to the line item — how much of your budget is left. No Sunday catch-up, no stale spreadsheets. Just current numbers, wherever the work takes you.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
+- [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission

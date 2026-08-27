@@ -6,6 +6,7 @@ keyword: "bathroom renovation order of work"
 cover: "/stock/29.png"
 coverAlt: "A mid-reno bathroom showing exposed wall studs, plumbing rough-ins, and a partially tiled wall — the look of a project in the middle of its sequence"
 publishDate: 2026-08-06
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["bathroom", "renovation", "sequence", "project planning", "phasing"]
 tldr:
@@ -146,3 +147,13 @@ If you're planning one, start with the sequence, not the tile. Figure out the or
 ---
 
 Home Stories is free on the App Store and works fully offline on iPhone. If you're planning a renovation and want a simple way to keep tasks, budget, and photos organized in one place, you can find it at [the App Store](https://apps.apple.com/app/id6754754960).
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK
+- [Renovation, Repair and Painting (RRP) rule — lead-safe work](https://www.epa.gov/lead/renovation-repair-and-painting-program) — US Environmental Protection Agency
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

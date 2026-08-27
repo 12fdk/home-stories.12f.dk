@@ -1,11 +1,12 @@
 ---
 title: "How Long Does It Take to Replace Windows? Realistic Ranges"
 description: "How long does it take to replace windows? Realistic time ranges for a single window through a full-house job, plus the delays that always creep in."
-lede: "Ask how long it takes to replace windows and you'll get very different answers depending on whether it's one window in a bathroom or every window in the house. The honest answer depends on scope, house age, and how much time gets eaten by the gaps between trades. Here's what those ranges actually look like."
+lede: "A single like-for-like window replacement takes one day. A full-house job across ten to fifteen windows takes one to three weeks on site. Elapsed time is far longer: fabrication runs three to eight weeks before anyone arrives, and patching and painting the reveals afterwards adds another one to two weeks."
 keyword: "how long does it take to replace windows"
 cover: "/stock/21.png"
 coverAlt: "A worker fitting a new double-glazed window into an exposed wall opening on a residential property"
 publishDate: 2026-07-30
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["windows", "planning", "timeline", "duration"]
 tldr:
@@ -34,6 +35,14 @@ relatedSlugs:
   - "how-long-does-it-take-to-rewire-a-house"
   - "kitchen-renovation-timeline"
 ---
+
+## At a glance
+
+| Scope | On-site time | Ordering & fabrication | Make-good after install |
+| --- | --- | --- | --- |
+| Single window, sound opening | 1 day | 3–8 weeks | 1–2 days |
+| Full house, 10–15 windows | 1–3 weeks | 3–8 weeks | 1–2 weeks |
+| Bay windows and specialty shapes | +1–2 days per unit | 3–8 weeks | 1–2 weeks |
 
 Ask how long it takes to replace windows and you'll get very different answers. One contractor says two days. Another says six weeks. Both are right — for their own project, in their own house, at their own pace.
 
@@ -112,3 +121,12 @@ The gap between the installer leaving and the house feeling done is almost alway
 A [renovation contingency budget](/blog/renovation-contingency-budget/) is the other piece of practical advice that applies here: the budget line that exists for when the installer finds rot behind the old frame or the decorator's reveal work turns out to be more extensive than expected. It's not a failure to have one. It's planning for the reality that older homes always have surprises.
 
 If you're managing a renovation at all — whether it's ten windows or ten rooms — a single place to keep track of decisions, budgets, and tasks makes the whole process considerably less stressful. [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app that does exactly that: budget tracking, task lists, before-and-after photos, and PDF reports, all synced across your devices. No account needed, works fully offline.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Do you need planning permission?](https://www.planningportal.co.uk/permission) — UK Planning Portal
+- [Building regulations approval](https://www.gov.uk/building-regulations-approval) — GOV.UK

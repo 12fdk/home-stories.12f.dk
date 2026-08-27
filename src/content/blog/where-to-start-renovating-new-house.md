@@ -6,6 +6,7 @@ keyword: "where to start renovating a house"
 cover: "/stock/18.png"
 coverAlt: "An empty room in a newly purchased older house with soft morning light, bare walls, and a single cardboard box near a window"
 publishDate: 2026-07-17
+updatedDate: 2026-08-27
 author: "Robert Jensen"
 tags: ["planning", "getting-started", "renovation-order"]
 tldr:
@@ -110,3 +111,13 @@ Walk the rooms. Separate essential from desirable. Fix what's broken before maki
 ---
 
 If this was useful, the best next step is the [renovation checklist](/blog/renovation-checklist-printable/) — a printable one-page summary you can tape to the fridge and update as you go. And if you want to track your budget and every decision in one place, [Home Stories](https://apps.apple.com/app/id6754754960) is free on the App Store and works fully offline. No account needed.
+
+## Sources and further reading
+
+The ranges and guidance above are drawn from direct project experience and
+from the bodies below, which publish the underlying standards, rules and
+market data. They are worth reading directly before you commit money.
+
+- [Renovation, Repair and Painting (RRP) rule — lead-safe work](https://www.epa.gov/lead/renovation-repair-and-painting-program) — US Environmental Protection Agency
+- [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
+- [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

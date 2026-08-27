@@ -1,3 +1,15 @@
+# ⚠️  INERT ON GITHUB PAGES — THIS FILE DOES NOTHING TODAY.
+#
+# `_headers` is a Netlify / Cloudflare Pages convention. GitHub Pages does not
+# read it, so none of the rules below are applied. Verified 2026-08-27: the live
+# response for / returns `cache-control: max-age=600` (the GitHub Pages default),
+# not the 31536000 this file asks for.
+#
+# It is kept as the source of truth for the intended caching policy. To actually
+# apply it, mirror these rules as Cloudflare Cache Rules — Cloudflare already
+# fronts this domain. See docs/edge-headers.md for the exact rule set, which also
+# covers the security headers the site currently ships without.
+#
 # Cache static assets for 1 year
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable

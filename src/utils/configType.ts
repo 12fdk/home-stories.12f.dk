@@ -170,6 +170,9 @@ export type TemplateConfig = {
             subtitle?: string | undefined;
             steps: {
                 image: string;
+                /** Describes the photograph itself. These are content images,
+                 *  not decoration, so they are read out rather than skipped. */
+                imageAlt?: string | undefined;
                 title: string;
                 subtitle: string;
             }[];

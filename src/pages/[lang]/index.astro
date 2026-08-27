@@ -58,6 +58,6 @@ const baseConfig: TemplateConfig = {
 const config = getLocalizedConfig(baseConfig, lang!, pricing);
 ---
 
-<Layout {...config}>
+<Layout {...config} isAppPage>
   <HomePage client:load config={config} posts={posts} />
 </Layout>

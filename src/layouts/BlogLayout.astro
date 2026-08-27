@@ -16,6 +16,8 @@ interface Props {
   ogImage?: string;
   canonicalPath?: string;
   articleSchema?: Record<string, unknown>;
+  /** Extra JSON-LD blocks (ItemList on the index, Speakable on posts). */
+  extraSchema?: Record<string, unknown>[];
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
@@ -30,6 +32,7 @@ const {
   ogImage,
   canonicalPath,
   articleSchema,
+  extraSchema = [],
   publishedTime,
   modifiedTime,
   author,
@@ -93,6 +96,28 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: breadcrumbItems,
 };
+
+// Speakable used to be emitted on the marketing layout only, which meant it sat
+// on the privacy policy but not on the 29 articles that actually answer spoken
+// questions. Point it at the spans worth reading aloud: the headline, the TL;DR
+// summary and the FAQ answers. See the 2026-08-27 SEO audit.
+const speakableSchema = articleSchema
+  ? {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      url: canonicalURL.href,
+      name: title,
+      description,
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", "[data-speakable]", ".faq-answer"],
+        xpath: [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content",
+        ],
+      },
+    }
+  : undefined;
 ---
 
 <!doctype html>
@@ -157,6 +182,10 @@ const breadcrumbSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+    {speakableSchema && <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />}
+    {extraSchema.map((block) => (
+      <script type="application/ld+json" set:html={JSON.stringify(block)} />
+    ))}
 
     <script is:inline define:vars={{ forceTheme: config.forceTheme }}>
       function getPreferredColorScheme() {

@@ -30,3 +30,7 @@ pnpm-debug.log*
 scrape_*.py
 *.log
 /tmp_*.py
+
+# Audit reports are deliverables, not source — kept locally.
+seo-audit-*.docx
+seo-audit-*.pdf

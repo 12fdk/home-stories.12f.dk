@@ -3,7 +3,7 @@ import type { Translation } from "../translation";
 const tr: Translation = {
   "seo": {
     "title": "Home Stories - iPhone için Ücretsiz Ev Tadilatı Takip Uygulaması",
-    "description": "Tadilat bütçenizi takip edin, görevleri düzenleyin ve ilerlemeyi fotoğraflarla belgeleyin. Profesyonel PDF raporları dışa aktarın. iPhone için ücretsiz — hemen indirin!"
+    "description": "Tadilat bütçenizi takip edin, görevleri düzenleyin ve ilerlemeyi fotoğraflarla belgeleyin. PDF raporları dışa aktarın. iPhone için ücretsiz!"
   },
   "nav": {
     "cta": "Uygulamayı indir",
@@ -11,7 +11,9 @@ const tr: Translation = {
       "Özellikler",
       "Nasıl çalışır",
       "Blog",
-      "SSS"
+      "SSS",
+      "Hakkında"
+    
     ]
   },
   "ui": {

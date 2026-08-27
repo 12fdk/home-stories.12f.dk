@@ -11,7 +11,9 @@ const sv: Translation = {
       "Funktioner",
       "Så fungerar det",
       "Blogg",
-      "FAQ"
+      "FAQ",
+      "Om"
+    
     ]
   },
   "ui": {

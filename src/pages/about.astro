@@ -1,0 +1,155 @@
+---
+import BlogLayout from "../layouts/BlogLayout.astro";
+import { getCollection } from "astro:content";
+import { isPublished } from "../utils/posts";
+
+// The site had no About page at all: no page explaining who builds the app or
+// why they are worth trusting on renovation. That is the weakest E-E-A-T
+// signal a site can send, and it is the page every Article's author URL should
+// resolve to. See the 2026-08-27 SEO audit.
+const posts = await getCollection("blog", ({ data }) => isPublished(data));
+const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
+const canonicalPath = "/about/";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": new URL("/about/#robert-jensen", Astro.site).href,
+  name: "Robert Jensen",
+  url: new URL(canonicalPath, Astro.site).href,
+  email: "robert@12f.dk",
+  jobTitle: "Software developer and renovator",
+  nationality: "Danish",
+  description:
+    "Danish software developer who built Home Stories after renovating his own kitchen, bathroom and attic, and running each project out of a spreadsheet that stopped being useful by week two.",
+  knowsAbout: [
+    "Home renovation planning",
+    "Renovation budgeting and contingency",
+    "Construction project sequencing",
+    "Renovation documentation and insurance evidence",
+    "iOS application development",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "12f",
+    url: "https://www.12f.dk",
+  },
+  sameAs: [
+    "https://www.robert-jensen.dk",
+    "https://github.com/12fdk",
+    "https://apps.apple.com/developer/id1786807724",
+  ],
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  url: new URL(canonicalPath, Astro.site).href,
+  name: "About Home Stories and Robert Jensen",
+  description:
+    "Who builds Home Stories, why it exists, how it is funded, and the experience behind the renovation guides published on this site.",
+  inLanguage: "en",
+  mainEntity: { "@id": new URL("/about/#robert-jensen", Astro.site).href },
+  isPartOf: { "@type": "WebSite", url: siteUrl },
+};
+---
+
+<BlogLayout
+  title="About Home Stories — Who Builds It and Why"
+  description="Home Stories is built by Robert Jensen, a Danish developer who renovated his own kitchen, bathroom and attic first. Who writes the guides, how the app is funded, and what it will never do."
+  canonicalPath={canonicalPath}
+  extraSchema={[personSchema, aboutSchema]}
+>
+  <main class="mx-auto max-w-3xl px-4 py-10 md:py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-base-content/60">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>About</span>
+    </nav>
+
+    <header class="mb-10">
+      <h1 class="mb-4 text-3xl font-bold leading-tight md:text-5xl">
+        About Home Stories
+      </h1>
+      <p class="text-lg leading-relaxed text-base-content/80" data-speakable>
+        Home Stories is a renovation tracker for iPhone, built and maintained by
+        one person: Robert Jensen, a Danish software developer who renovated a
+        kitchen, a bathroom and an attic before writing a line of it. The app
+        exists because every tool he tried — spreadsheets, Notion, generic
+        project managers — stopped being useful somewhere around week two.
+      </p>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <h2>Who writes the guides</h2>
+      <p>
+        Every article on this site is written by Robert Jensen. They are not
+        commissioned, syndicated, or generated on someone else's behalf. The
+        numbers in them come from three sources, and the articles say which:
+        published industry research (cited inline), quoted work from Danish and
+        UK contractors, and direct experience of running the projects above.
+      </p>
+      <p>
+        Where a figure is a range rather than a number, that is deliberate —
+        renovation costs and durations vary enormously by region, scope and the
+        state of the building. An article that gives you one confident number
+        for "how long a bathroom takes" is guessing.
+      </p>
+
+      <h2>Why the app exists</h2>
+      <p>
+        A renovation generates three streams of information at once: what you
+        are spending, what still has to happen and in what order, and what the
+        place looked like before you closed the wall. Most people track the
+        first in a spreadsheet, the second in their head, and the third in a
+        camera roll they cannot search. Home Stories keeps all three attached
+        to the same project, which is the only reason any of it stays useful
+        six months later when the insurer asks.
+      </p>
+
+      <h2>How it is funded</h2>
+      <p>
+        The app is free, and it stays free for the whole job — unlimited
+        projects, tasks, phases, photos and expense logging. There is one
+        optional in-app purchase that unlocks the deeper budget analysis, CSV
+        and PDF export, and task notifications. That single purchase is the
+        entire business model.
+      </p>
+      <p>
+        There is no subscription, no advertising, no analytics SDK inside the
+        app, and no data sold to anyone. Projects live on your device and sync
+        only to your own iCloud account if you turn that on. The
+        <a href="/privacy-policy/">privacy policy</a> spells out the details.
+      </p>
+
+      <h2>What this site will not do</h2>
+      <p>
+        The guides are here because they are worth reading on their own. They
+        mention the app where it is genuinely the tool for the job and not
+        otherwise — several of them recommend a spreadsheet, a printed
+        checklist, or a competitor if that fits better. If an article ever reads
+        like an advert, it has failed at the thing it was written for.
+      </p>
+
+      <h2>Get in touch</h2>
+      <p>
+        Corrections, disagreements and bug reports are all welcome, and
+        corrections to published articles are made with a visible updated date.
+        Email <a href="mailto:robert@12f.dk">robert@12f.dk</a>.
+      </p>
+
+      <h2>The details</h2>
+      <ul>
+        <li><strong>App</strong>: Home Stories: Renovation App, iPhone, iOS 17.0 or later</li>
+        <li><strong>Developer</strong>: Robert Jensen, trading as 12f, Denmark</li>
+        <li><strong>Published guides</strong>: {posts.length} articles, all written in-house</li>
+        <li><strong>Contact</strong>: <a href="mailto:robert@12f.dk">robert@12f.dk</a></li>
+        <li><strong>Elsewhere</strong>:
+          <a href="https://www.robert-jensen.dk" rel="me">robert-jensen.dk</a>,
+          <a href="https://github.com/12fdk" rel="me">GitHub</a>,
+          <a href="https://apps.apple.com/developer/id1786807724" rel="me">App Store</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+</BlogLayout>

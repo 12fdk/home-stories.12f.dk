@@ -3,7 +3,7 @@ import type { Translation } from "../translation";
 const es: Translation = {
   "seo": {
     "title": "Home Stories - Gestor de reformas gratis para iPhone",
-    "description": "Controla el presupuesto de tu reforma, organiza las tareas y documenta el progreso con fotos. Exporta informes profesionales en PDF. Gratis para iPhone: ¡descárgala ya!"
+    "description": "Controla el presupuesto de tu reforma, organiza tareas y documenta el progreso con fotos. Exporta informes PDF. Gratis para iPhone: ¡descárgala ya!"
   },
   "nav": {
     "cta": "Descarga la app",
@@ -11,7 +11,9 @@ const es: Translation = {
       "Funciones",
       "Cómo funciona",
       "Blog",
-      "FAQ"
+      "FAQ",
+      "Acerca de"
+    
     ]
   },
   "ui": {
