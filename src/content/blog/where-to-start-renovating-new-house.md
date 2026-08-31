@@ -110,7 +110,7 @@ Walk the rooms. Separate essential from desirable. Fix what's broken before maki
 
 ---
 
-If this was useful, the best next step is the [renovation checklist](/blog/renovation-checklist-printable/) — a printable one-page summary you can tape to the fridge and update as you go. And if you want to track your budget and every decision in one place, [Home Stories](https://apps.apple.com/app/id6754754960) is free on the App Store and works fully offline. No account needed.
+If this was useful, the best next step is the [renovation checklist](/blog/renovation-checklist-printable/) — a printable one-page summary you can tape to the fridge and update as you go. And once you have the keys and the house is actually yours, the [first-month order for a fixer-upper](/blog/moving-into-a-fixer-upper/) is where that list becomes a plan you can live in. And if you want to track your budget and every decision in one place, [Home Stories](https://apps.apple.com/app/id6754754960) is free on the App Store and works fully offline. No account needed.
 
 ## Sources and further reading
 
