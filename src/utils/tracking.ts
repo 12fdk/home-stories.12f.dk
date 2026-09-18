@@ -49,6 +49,44 @@ export function appStoreClick(surface: AppStoreSurface) {
   } as const;
 }
 
+/**
+ * Free-download tracking.
+ *
+ * Separate from the App Store event on purpose: a download and a store click
+ * answer different questions, and folding them together would make the store
+ * total — the number this site actually optimises — unreadable.
+ *
+ * Same one-event-name rule as above, though. "How many people took a
+ * download" should be one row in Umami's Events panel, with `file`, `surface`
+ * and `slug` carrying the breakdown, not three separate events to sum by hand.
+ *
+ * Nothing personal is recorded: Umami has no cookies and no cross-site
+ * identity, and these properties describe the file and the page, not the
+ * reader. The downloads themselves stay ungated — this measures whether they
+ * are worth keeping, it does not gate them. #119
+ */
+export const DOWNLOAD_EVENT = "download";
+
+export type DownloadSurface =
+  /** The transitional CTA under the App Store button at the end of a post. */
+  | "blog-transitional-cta"
+  /** A link inside post prose — the two posts that ship their own file. */
+  | "blog-prose";
+
+/** Attributes to spread onto an `<a download>` that serves a static file. */
+export function downloadClick(
+  surface: DownloadSurface,
+  file: string,
+  slug?: string,
+) {
+  return {
+    "data-umami-event": DOWNLOAD_EVENT,
+    "data-umami-event-surface": surface,
+    "data-umami-event-file": file,
+    ...(slug ? { "data-umami-event-slug": slug } : {}),
+  } as const;
+}
+
 type UmamiGlobal = {
   track?: (event: string, data?: Record<string, unknown>) => Promise<unknown> | void;
 };

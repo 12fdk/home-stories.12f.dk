@@ -231,6 +231,20 @@ const articleSchema = {
           }
         });
       });
+
+      // The two posts that ship their own file link it from markdown prose,
+      // so the same attribute problem applies — and these are the highest
+      // intent downloads on the site, since the reader came for that exact
+      // file. Untracked, they would be invisible. #119
+      document.querySelectorAll('a[href^="/downloads/"]').forEach((link) => {
+        if (link.hasAttribute("data-umami-event")) return; // the transitional CTA
+        link.addEventListener("click", () => {
+          if (window.umami && typeof window.umami.track === "function") {
+            const file = link.getAttribute("href").split("/").pop();
+            window.umami.track("download", { surface: "blog-prose", file, slug });
+          }
+        });
+      });
     }
   </script>
 </BlogLayout>

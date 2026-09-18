@@ -1,5 +1,5 @@
 ---
-import { APP_STORE_CLICK_EVENT } from "../../utils/tracking";
+import { APP_STORE_CLICK_EVENT, downloadClick } from "../../utils/tracking";
 
 type Variant = "inline" | "callout";
 
@@ -49,6 +49,13 @@ const track = {
   "data-umami-event-surface": "blog-inline-cta",
   ...(slug ? { "data-umami-event-slug": slug } : {}),
 };
+
+// Only a real file download is counted. If the transitional CTA is ever
+// pointed at another page instead, it is a navigation, not a download, and
+// tracking it under this event would inflate the number.
+const trackDownload = transitionalDownload
+  ? downloadClick("blog-transitional-cta", transitionalHref.split("/").pop() ?? transitionalHref, slug)
+  : {};
 ---
 
 {
@@ -86,6 +93,7 @@ const track = {
             <a
               href={transitionalHref}
               download={transitionalDownload ? "" : undefined}
+              {...trackDownload}
               class="text-base-content/60 underline-offset-4 hover:text-base-content"
             >
               {transitionalText} ↓
