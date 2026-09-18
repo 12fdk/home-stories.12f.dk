@@ -11,6 +11,7 @@ const nb: Translation = {
       "Funksjoner",
       "Slik fungerer det",
       "Blogg",
+      "Nedlastinger",
       "FAQ",
       "Om"
     ]

@@ -11,6 +11,7 @@ const pl: Translation = {
       "Funkcje",
       "Jak to działa",
       "Blog",
+      "Pliki",
       "FAQ",
       "O nas"
     ]

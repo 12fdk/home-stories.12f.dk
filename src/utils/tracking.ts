@@ -71,7 +71,13 @@ export type DownloadSurface =
   /** The transitional CTA under the App Store button at the end of a post. */
   | "blog-transitional-cta"
   /** A link inside post prose — the two posts that ship their own file. */
-  | "blog-prose";
+  | "blog-prose"
+  /**
+   * The /downloads/ page. The one surface where the reader came for the file
+   * itself rather than arriving at it from the bottom of an article, so its
+   * rate is the honest read on whether these are wanted.
+   */
+  | "downloads-page";
 
 /** Attributes to spread onto an `<a download>` that serves a static file. */
 export function downloadClick(

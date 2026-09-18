@@ -11,6 +11,7 @@ const tr: Translation = {
       "Özellikler",
       "Nasıl çalışır",
       "Blog",
+      "İndirilenler",
       "SSS",
       "Hakkında"
     ]
