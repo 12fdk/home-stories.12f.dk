@@ -11,6 +11,7 @@ const fr: Translation = {
       "Fonctionnalités",
       "Comment ça marche",
       "Blog",
+      "Téléchargements",
       "FAQ",
       "À propos"
     ]

@@ -1,0 +1,186 @@
+---
+import BlogLayout from "../layouts/BlogLayout.astro";
+import { downloadClick } from "../utils/tracking";
+
+// The two files existed with no route to them: /downloads/ was a 404, nothing
+// in the nav, footer, homepage, blog index or sitemap linked them, and the only
+// way to meet one was to read a post to the end. #123
+const canonicalPath = "/downloads/";
+
+interface Asset {
+  slug: string;
+  title: string;
+  /** What is actually in the file — checkable claims, not adjectives. */
+  contains: string[];
+  /** The honest line about where this file stops being the right tool. */
+  limit: string;
+  post: { href: string; label: string };
+  files: { href: string; label: string; format: string; primary?: boolean }[];
+}
+
+const assets: Asset[] = [
+  {
+    slug: "budget-template",
+    title: "Renovation budget template",
+    contains: [
+      "9 cost categories, 34 line items, already filled in",
+      "One contingency cell that drives the totals — set it once",
+      "A per-category summary sheet that follows the rows you keep",
+      "Columns for low, mid and high quotes, so the range stays visible",
+    ],
+    limit:
+      "It is the right tool for planning. It stops being the right tool once the work starts and costs arrive faster than you update rows.",
+    post: {
+      href: "/blog/renovation-budget-template/",
+      label: "How to use it, and the 9 categories explained",
+    },
+    files: [
+      { href: "/downloads/renovation-budget-template.xlsx", label: "Download XLSX", format: "XLSX", primary: true },
+      { href: "/downloads/renovation-budget-template.csv", label: "CSV instead", format: "CSV" },
+    ],
+  },
+  {
+    slug: "phase-checklist",
+    title: "Renovation phase checklist",
+    contains: [
+      "6 phases, 64 tasks, from before any work starts to final handover",
+      "Grouped by phase, not by room — the order trades actually work in",
+      "Room-specific lists slotted into the phase they belong to",
+      "3 A4 pages with real tick boxes, made to be printed and marked up",
+    ],
+    limit:
+      "It is the right tool for the wall. It is the wrong tool on the scaffold, at the merchant, or six months later when the insurer asks what was behind the wall.",
+    post: {
+      href: "/blog/renovation-checklist-printable/",
+      label: "The full checklist, with the reasoning behind the order",
+    },
+    files: [
+      { href: "/downloads/renovation-checklist.pdf", label: "Download PDF", format: "PDF", primary: true },
+    ],
+  },
+];
+
+const MEDIA_TYPE: Record<string, string> = {
+  PDF: "application/pdf",
+  CSV: "text/csv",
+  XLSX: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+};
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  url: new URL(canonicalPath, Astro.site).href,
+  name: "Free renovation downloads",
+  description:
+    "A renovation budget template and a phase-by-phase renovation checklist, free to download with no email address required.",
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", url: Astro.site?.href },
+  hasPart: assets.flatMap((asset) =>
+    asset.files.map((file) => ({
+      "@type": "DigitalDocument",
+      name: `${asset.title} (${file.format})`,
+      url: new URL(file.href, Astro.site).href,
+      encodingFormat: MEDIA_TYPE[file.format],
+      inLanguage: "en",
+      isAccessibleForFree: true,
+      license: new URL(canonicalPath, Astro.site).href,
+      author: { "@type": "Person", name: "Robert Jensen", url: new URL("/about/", Astro.site).href },
+    })),
+  ),
+};
+---
+
+<BlogLayout
+  title="Free Renovation Downloads — Budget Template and Phase Checklist"
+  description="A renovation budget template with the contingency built in, and a printable phase-by-phase renovation checklist. Both free, no email address required."
+  canonicalPath={canonicalPath}
+  extraSchema={[collectionSchema]}
+>
+  <main class="mx-auto max-w-3xl px-4 py-10 md:py-16">
+    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-base-content/60">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>Downloads</span>
+    </nav>
+
+    <header class="mb-12">
+      <h1 class="mb-4 text-3xl font-bold leading-tight md:text-5xl">
+        Free downloads
+      </h1>
+      <p class="text-lg leading-relaxed text-base-content/80" data-speakable>
+        Two files, built from the guides on this site. No email address, no
+        signup, no form — the link downloads the file. Both say plainly where
+        they stop working, because every planning tool does.
+      </p>
+    </header>
+
+    <div class="space-y-10">
+      {
+        assets.map((asset) => (
+          <article
+            id={asset.slug}
+            class="rounded-2xl border border-base-300 bg-base-200 p-6 sm:p-8"
+          >
+            <h2 class="mb-4 text-2xl font-bold text-base-content">
+              {asset.title}
+            </h2>
+
+            <ul class="mb-6 space-y-2 text-base-content/80">
+              {asset.contains.map((line) => (
+                <li class="flex gap-3">
+                  <span
+                    aria-hidden="true"
+                    class="mt-2.5 inline-block h-0.5 w-3 flex-none bg-accent"
+                  />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+              {asset.files.map((file) => (
+                <a
+                  href={file.href}
+                  download
+                  {...downloadClick("downloads-page", file.href.split("/").pop()!)}
+                  class={
+                    file.primary
+                      ? "btn btn-primary"
+                      : "text-sm text-base-content/60 underline-offset-4 hover:text-base-content"
+                  }
+                >
+                  {file.label} ↓
+                </a>
+              ))}
+            </div>
+
+            <p class="mb-3 text-sm leading-relaxed text-base-content/60">
+              {asset.limit}
+            </p>
+
+            <p class="m-0 text-sm">
+              <a href={asset.post.href} class="text-primary hover:underline">
+                {asset.post.label} →
+              </a>
+            </p>
+          </article>
+        ))
+      }
+    </div>
+
+    <section class="mt-14 border-t border-base-300 pt-8">
+      <h2 class="mb-3 text-xl font-bold">When a file stops being enough</h2>
+      <p class="mb-5 leading-relaxed text-base-content/80">
+        Both of these work right up until the job starts. Then the costs arrive
+        faster than you update rows, the checklist is on a wall you are not
+        standing at, and the photo that proves what was behind the wall was
+        never taken. Home Stories keeps the budget, the tasks and the dated
+        photos attached to the same project, on the phone that is already in
+        your pocket.
+      </p>
+      <a href="/" class="text-primary hover:underline">
+        See what the app does →
+      </a>
+    </section>
+  </main>
+</BlogLayout>

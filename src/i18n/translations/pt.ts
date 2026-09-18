@@ -11,6 +11,7 @@ const pt: Translation = {
       "Funcionalidades",
       "Como funciona",
       "Blog",
+      "Transferências",
       "FAQ",
       "Sobre"
     ]

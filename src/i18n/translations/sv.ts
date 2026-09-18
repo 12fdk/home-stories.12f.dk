@@ -11,6 +11,7 @@ const sv: Translation = {
       "Funktioner",
       "Så fungerar det",
       "Blogg",
+      "Nedladdningar",
       "FAQ",
       "Om"
     ]

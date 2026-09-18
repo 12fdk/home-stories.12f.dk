@@ -74,6 +74,7 @@ const templateConfig: TemplateConfig = {
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
       { href: "/blog/", title: "Blog" },
+      { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },
       { href: "/about/", title: "About" },
     ],
@@ -87,6 +88,7 @@ const templateConfig: TemplateConfig = {
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
       { href: "/blog/", title: "Blog" },
+      { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },
       // Keep this array index-parallel with footer.links: applyTranslation maps
       // BOTH against the same t.nav.links array by position.

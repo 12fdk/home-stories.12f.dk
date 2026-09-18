@@ -11,6 +11,7 @@ const de: Translation = {
       "Funktionen",
       "So funktioniert's",
       "Blog",
+      "Downloads",
       "FAQ",
       "Über"
     ]

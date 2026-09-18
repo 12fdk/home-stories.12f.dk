@@ -11,6 +11,7 @@ const da: Translation = {
       "Funktioner",
       "Sådan virker det",
       "Blog",
+      "Downloads",
       "FAQ",
       "Om"
     ]
