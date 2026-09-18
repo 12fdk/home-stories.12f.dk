@@ -17,6 +17,9 @@ export const APP_STORE_CLICK_EVENT = "appstore-click";
 
 export type AppStoreSurface =
   | "hero"
+  /** The stakes section's button — the first contrasting CTA on the page,
+   *  and the one that follows the problem rather than the feature list. */
+  | "stakes"
   | "pricing"
   | "navbar"
   | "navbar-mobile"

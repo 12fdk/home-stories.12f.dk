@@ -21,6 +21,15 @@ export interface Translation {
     headlineMark: [number, number] | null;
   };
   facts: { label: string; value: string }[];
+  /** Optional so older translation files fall back to English wholesale. */
+  stakes?: {
+    label: string;
+    title: string;
+    body: string[];
+    stat: { value: string; caption: string; linkText: string };
+    success: { label: string; title: string; body: string };
+    cta: string;
+  };
   features: {
     title: string;
     subtitle: string;
@@ -78,6 +87,22 @@ export function extractEnglish(base: TemplateConfig): Translation {
       headlineMark: (h.header.headlineMark as [number, number]) ?? null,
     },
     facts: (h.facts ?? []).map((f) => ({ label: f.label, value: f.value })),
+    stakes: h.stakes
+      ? {
+          label: h.stakes.label,
+          title: h.stakes.title,
+          body: [...h.stakes.body],
+          // No `href` — the post it links to is English-only, so the URL
+          // comes from the base config and only the label is translated.
+          stat: {
+            value: h.stakes.stat?.value ?? "",
+            caption: h.stakes.stat?.caption ?? "",
+            linkText: h.stakes.stat?.linkText ?? "",
+          },
+          success: { ...h.stakes.success },
+          cta: h.stakes.cta,
+        }
+      : undefined,
     features: {
       title: h.features!.title,
       subtitle: h.features!.subtitle ?? "",
@@ -199,6 +224,28 @@ export function applyTranslation(
       facts: h.facts
         ? byIndex(h.facts, t.facts, (f, o) => ({ label: o?.label ?? f.label, value: o?.value ?? f.value }))
         : h.facts,
+      stakes: h.stakes
+        ? {
+            ...h.stakes,
+            label: t.stakes?.label ?? h.stakes.label,
+            title: t.stakes?.title ?? h.stakes.title,
+            body: byIndex(h.stakes.body, t.stakes?.body, (b, o) => o ?? b),
+            stat: h.stakes.stat
+              ? {
+                  ...h.stakes.stat,
+                  value: t.stakes?.stat?.value ?? h.stakes.stat.value,
+                  caption: t.stakes?.stat?.caption ?? h.stakes.stat.caption,
+                  linkText: t.stakes?.stat?.linkText ?? h.stakes.stat.linkText,
+                }
+              : h.stakes.stat,
+            success: {
+              label: t.stakes?.success?.label ?? h.stakes.success.label,
+              title: t.stakes?.success?.title ?? h.stakes.success.title,
+              body: t.stakes?.success?.body ?? h.stakes.success.body,
+            },
+            cta: t.stakes?.cta ?? h.stakes.cta,
+          }
+        : h.stakes,
       features: h.features
         ? {
             ...h.features,

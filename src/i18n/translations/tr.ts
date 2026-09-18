@@ -13,7 +13,6 @@ const tr: Translation = {
       "Blog",
       "SSS",
       "Hakkında"
-    
     ]
   },
   "ui": {
@@ -56,15 +55,15 @@ const tr: Translation = {
     "footer": {
       "site": "Site",
       "contact": "İletişim",
-      "tagline": "iPhone için bir tadilat takip uygulaması. Danimarka'da Robert Jensen tarafından yapıldı."
+      "tagline": "Tadilat bütçeleri kayar. Home Stories harcanan, bağlanan ve kalanı tek ekranda tutar; böylece bir aşım, hâlâ müdahale edebilecekken görünür. iPhone için bir tadilat takipçisi, Danimarka'da Robert Jensen tarafından yapıldı."
     }
   },
   "header": {
-    "headline": "Ev tadilatınız, artık ölçülü.",
-    "subtitle": "Home Stories, iPhone için bir tadilat takip uygulamasıdır. Dürüst kalan bütçeler, doğru sıradaki işler, olan biteni kanıtlayan fotoğraflar — hepsi müteahhitinizin okuyabileceği bir PDF olarak dışa aktarılır.",
+    "headline": "Tadilatı bütçe elinizden kaçmadan bitirin.",
+    "subtitle": "Tadilatlar kayar, çünkü para çoktan gitmeden kimse aşımı görmez. Home Stories harcanan, bağlanan ve kalanı tek ekranda tutar — işler doğru sırayla, ne olduğunu kanıtlayan tarihli fotoğraflarla.",
     "usersDescription": "Tadilatın ortasındaki bir ev sahibi tarafından, tadilatın ortasındaki ev sahipleri için yapıldı",
     "headlineMark": [
-      3,
+      1,
       4
     ]
   },
@@ -74,20 +73,20 @@ const tr: Translation = {
       "value": "Ücretsiz"
     },
     {
-      "label": "Çevrimdışı",
-      "value": "Tamamen"
+      "label": "Abonelik",
+      "value": "Yok"
     },
     {
       "label": "Hesap",
       "value": "Yok"
     },
     {
-      "label": "Eşitleme",
-      "value": "iCloud"
+      "label": "Çevrimdışı",
+      "value": "Her zaman"
     },
     {
-      "label": "Gerekli",
-      "value": "iOS 17"
+      "label": "Verileriniz",
+      "value": "Cihazda"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const tr: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Beş adım, baştan teslime",
+    "title": "Dört adım, başlangıçtan teslime",
     "subtitle": "Uygulamanın beklediği sıra ve bir tadilatın gerçekte ilerlediği sıra.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const tr: Translation = {
         "subtitle": "İşi görevlere bölün, ardından her birinin ihtiyaç duyduğu malzemeleri, demirbaşları ve teklifleri ekleyin. Şimdi tahminler, sonra fişler."
       },
       {
-        "title": "Harcamalarınızı kaydedin",
-        "subtitle": "Maliyetleri oluştukça girin. Grafik; harcanan, taahhüt edilen ve kalanı ayırır, böylece bir bütçe aşımı siz hâlâ önlem alabilecekken ortaya çıkar."
-      },
-      {
-        "title": "İlerlemeyi fotoğraflayın",
-        "subtitle": "Fotoğrafları uygulamanın içinden çekin. Fotoğraflar tarihlenir ve projeye sabitlenir; duvarın Mart ayında nasıl göründüğünü işte böyle netleştirirsiniz."
+        "title": "Harcamayı yazın, işi fotoğraflayın",
+        "subtitle": "Masrafları geldikçe girin ve doğrudan uygulamadan fotoğraflayın. Grafik harcanan, bağlanan ve kalanı ayırır; böylece bir aşım, hâlâ müdahale edebilecekken görünür — ve her fotoğraf tarihlenip projeye iliştirilir."
       },
       {
         "title": "Raporu dışa aktarın",
@@ -181,12 +176,10 @@ const tr: Translation = {
     ]
   },
   "testimonials": {
-    "title": "Ev sahipleri ne diyor",
-    "subtitle": "Tadilatın ortasındaki insanlardan",
+    "title": "Şimdiye kadarki tüm değerlendirmeler",
+    "subtitle": "Uygulama yeni, bu yüzden henüz çok yok. Gelen her değerlendirme burada; düzenlenmedi, Danca'dan çevrildi.",
     "comments": [
-      "Home Stories, mutfak tadilatımızı yönetmeyi çok daha kolay hale getirdi. Bütçe takibi özelliği her kuruşun tam olarak nereye gittiğini gösterdi ve fotoğraf zaman çizelgesi, dönüşümün harika bir kaydı oldu.",
-      "Birden fazla odayı tadil ediyorum ve Home Stories her şeyi düzenli tutuyor. Her projenin kendi görevleri, bütçesi ve fotoğrafları var. PDF dışa aktarma, ilerlemeyi müteahhitlerle paylaşmak için mükemmel.",
-      "Bütçe grafikleri inanılmaz. Neyin harcandığını, neyin kaldığını ve olası maliyetleri bir bakışta görebiliyorum. Artık elektronik tablo yok — Home Stories her şeyi tek bir yerde topluyor."
+      "Bu uygulama, büyük küçük projeleri planlayıp yürütmek gerektiğinde harika. Keşke birkaç yıl önce, bir daireyi yenilerken elimde olsaydı. Tadilatı planlamak ve belgelemek, harcanan saatleri ve alınan malzemeleri kaydetmek için çok işe yarardı."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const tr: Translation = {
     "qa": [
       {
         "question": "Home Stories'i kullanmak ücretsiz mi?",
-        "answer": "Evet, ücretsiz! Ayrıca ciddi tadilatçılar için daha gelişmiş özellikler sunan bir Premium Ömür Boyu yükseltme de sunuyoruz."
+        "answer": "Evet — işin tamamı boyunca ücretsiz; sınırsız proje, görev, aşama, fotoğraf ve masraf kaydıyla. İsteğe bağlı tek bir uygulama içi satın alma olan Home Stories Pro, bütçe hedeflerini, bütçe-maliyet grafiğini, PDF ve CSV dışa aktarmayı ve hatırlatıcıları açar. Bu tek seferlik bir fiyattır, abonelik değil."
       },
       {
         "question": "Uygulama çevrimdışı çalışır mı?",
-        "answer": "Kesinlikle! Home Stories tamamen çevrimdışı çalışacak şekilde tasarlandı; böylece internet erişimi olmadan bile projelerinize, bütçelerinize ve fotoğraflarınıza ulaşabilirsiniz — şantiyeler için ideal."
+        "answer": "Tamamen. Projeler, bütçeler ve fotoğraflar cihazda durur; uygulama çekmeyen bir bodrumda da çalışır, sonra eşitler. Hiçbir yanı çevrimiçi olmanızı gerektirmez."
       },
       {
         "question": "Projeleri başkalarıyla paylaşabilir miyim?",
-        "answer": "Evet! iCloud eşitleme ile projeleriniz tüm cihazlarınızda güncel kalır. Ayrıca müteahhitlerle veya ailenizle paylaşmak ya da kayıt olarak saklamak için profesyonel PDF raporları dışa aktarabilirsiniz."
+        "answer": "Evet, iki şekilde. Projeyi iCloud üzerinden paylaşın; eşiniz, bir aile üyeniz ya da müteahhitle gerçek zamanlı eşitlenir. Ya da yalnızca okuması gerekenler için PDF rapor alın — bütçe, görevler, fotoğraflar ve notlar."
       },
       {
         "question": "Raporları nasıl dışa aktarırım?",
-        "answer": "Projenizi açmanız, dışa aktarma düğmesine dokunmanız ve PDF'i seçmeniz yeterli. Home Stories; bütçe özetiniz, görev ilerlemeniz, fotoğraflarınız ve notlarınızla profesyonel bir rapor oluşturur."
+        "answer": "Projeyi açın, dışa aktara dokunun, PDF ya da CSV seçin. Rapor bütçe özeti, görev ilerlemesi, fotoğraflar ve notlar yerleşmiş hâlde çıkar; müteahhide ya da sigortaya göndermeye hazırdır. Dışa aktarma Home Stories Pro'ya dahildir."
       },
       {
         "question": "Hangi cihazlar destekleniyor?",
-        "answer": "Home Stories şu anda iPhone için mevcut ve iOS 17.0 veya sonrasını gerektirir. Öncelikle iOS'ta mümkün olan en iyi deneyimi sunmaya odaklandık."
+        "answer": "iOS 17.0 veya sonrasını çalıştıran iPhone. Henüz iPad ya da Android sürümü yok."
       },
       {
         "question": "Home Stories'in widget'ları var mı?",
@@ -247,8 +240,30 @@ const tr: Translation = {
     "title": "Tüm iş için ücretsiz",
     "subtitle": "Çekirdek sonsuza dek ücretsiz. Küçük bir tek seferlik satın alma, derin bütçe araçlarının kilidini açar.",
     "plans": [
-      { "name": "Ücretsiz", "period": "sonsuza dek", "features": ["Sınırsız proje, görev ve aşama", "Tarihli fotoğraflarla zaman çizelgesi", "Harcama kaydı ve ürün fiyatları", "Tamamen çevrimdışı çalışır", "Cihazlar arası iCloud eşitleme", "Ana ekran ve kilit ekranı widget'ları"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "tek seferlik — abonelik yok", "features": ["Bütçe hedefleri ve bütçe-maliyet grafiği", "Gelişmiş maliyet analizi", "Rapor ve zaman kayıtlarının PDF ve CSV dışa aktarımı", "Görev hatırlatıcıları ve son tarih bildirimleri"], "cta": "Uygulamayı edinin — yükseltme içeride" }
+      {
+        "name": "Ücretsiz",
+        "period": "sonsuza dek",
+        "features": [
+          "Sınırsız proje, görev ve aşama",
+          "Tarihli fotoğraflarla zaman çizelgesi",
+          "Harcama kaydı ve ürün fiyatları",
+          "Tamamen çevrimdışı çalışır",
+          "Cihazlar arası iCloud eşitleme",
+          "Ana ekran ve kilit ekranı widget'ları"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "tek seferlik — abonelik yok",
+        "features": [
+          "Bütçe hedefleri ve bütçe-maliyet grafiği",
+          "Gelişmiş maliyet analizi",
+          "Rapor ve zaman kayıtlarının PDF ve CSV dışa aktarımı",
+          "Görev hatırlatıcıları ve son tarih bildirimleri"
+        ],
+        "cta": "Uygulamayı edinin — yükseltme içeride"
+      }
     ],
     "footnote": "App Store'da tek seferlik fiyat — ülkeye göre değişir."
   },
@@ -256,20 +271,66 @@ const tr: Translation = {
     "label": "Tabloya karşı",
     "title": "Neden sadece bir tablo değil?",
     "subtitle": "İşe yarıyor — aşağı yukarı üçüncü haftaya kadar. Dürüst karşılaştırma.",
-    "columns": { "them": "Bir tablo", "us": "Home Stories" },
+    "columns": {
+      "them": "Bir tablo",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Fotoğraflar", "them": "Kamera rulosunda ya da bir klasörde, etiketsiz", "us": "Tarihli ve projenin zaman çizelgesine sabitlenmiş" },
-      { "aspect": "Toplamlar", "them": "Kendi yazıp koruduğun formüller", "us": "Harcanan, taahhüt edilen ve kalan — otomatik" },
-      { "aspect": "Şantiyede", "them": "Telefonda hücreleri yakınlaştırmak", "us": "iPhone için yapıldı, tamamen çevrimdışı çalışır" },
-      { "aspect": "Paylaşım", "them": "budget_v7_final_FINAL.xlsx dosyasını e-postayla göndermek", "us": "iCloud ile canlı paylaşım ya da herkesin okuyabildiği bir PDF" },
-      { "aspect": "Fişler", "them": "Bir ayakkabı kutusu ve iyi niyet", "us": "Fotoğraflanır ve projeyle birlikte saklanır" },
-      { "aspect": "Bozulduğunda", "them": "Silinen formül sessizce yanlış hesaplar", "us": "Bakım gerektirmez — yapı içinde hazır gelir" }
+      {
+        "aspect": "Fotoğraflar",
+        "them": "Kamera rulosunda ya da bir klasörde, etiketsiz",
+        "us": "Tarihli ve projenin zaman çizelgesine sabitlenmiş"
+      },
+      {
+        "aspect": "Toplamlar",
+        "them": "Kendi yazıp koruduğun formüller",
+        "us": "Harcanan, taahhüt edilen ve kalan — otomatik"
+      },
+      {
+        "aspect": "Şantiyede",
+        "them": "Telefonda hücreleri yakınlaştırmak",
+        "us": "iPhone için yapıldı, tamamen çevrimdışı çalışır"
+      },
+      {
+        "aspect": "Paylaşım",
+        "them": "budget_v7_final_FINAL.xlsx dosyasını e-postayla göndermek",
+        "us": "iCloud ile canlı paylaşım ya da herkesin okuyabildiği bir PDF"
+      },
+      {
+        "aspect": "Fişler",
+        "them": "Bir ayakkabı kutusu ve iyi niyet",
+        "us": "Fotoğraflanır ve projeyle birlikte saklanır"
+      },
+      {
+        "aspect": "Bozulduğunda",
+        "them": "Silinen formül sessizce yanlış hesaplar",
+        "us": "Bakım gerektirmez — yapı içinde hazır gelir"
+      }
     ],
     "cta": "Tabloların neden tıkandığını okuyun"
   },
   "appBanner": {
     "title": "Sıradakini ölçün.",
     "subtitle": "App Store'da ücretsiz. Çevrimdışı çalışır, hesap gerektirmez ve istediğinizde iCloud ile eşitlenir. iOS 17 veya sonrasına sahip bir iPhone gerektirir."
+  },
+  "stakes": {
+    "label": "Sorun",
+    "title": "Bütçe aşımı kendini duyurmaz",
+    "body": [
+      "Şurada birkaç yüz, burada bir ek iş kalemi, bir de kaldırmayı düşündüğünüz bir fiş olarak gelir. Her biri el sallayıp geçecek kadar küçüktür ve hiçbiri fark ettiğiniz an değildir.",
+      "Hesap tablosu bunu ancak fayanslar döşenip para bittiğinde söyler. Altı ay sonra sigortacı o duvarın arkasında ne olduğunu sorduğunda ise kimsede fotoğrafı yoktur."
+    ],
+    "stat": {
+      "value": "%15–30",
+      "caption": "tadilatların bütçeyi genelde aştığı aralık — eski evlerde ve duvar açan her işte daha geniş.",
+      "linkText": "Verilerin ne dediğine bakın"
+    },
+    "success": {
+      "label": "Diğer yol",
+      "title": "Ya da teslime hâlâ fişler elinizdeyken varırsınız",
+      "body": "Harcanan, bağlanan ve kalan ilk günden tek ekranda durur. Her masraf, fotoğraf ve not, siz hâlâ o odada dururken ait olduğu projeye düşer. Teslim günü bütün iş tek bir PDF'tir: rakamlar, zaman çizelgesi ve duvarın arkasında ne olduğunun kanıtı."
+    },
+    "cta": "Takibe başlayın — ücretsiz"
   }
 };
 

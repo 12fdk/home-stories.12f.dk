@@ -13,7 +13,6 @@ const es: Translation = {
       "Blog",
       "FAQ",
       "Acerca de"
-    
     ]
   },
   "ui": {
@@ -56,16 +55,16 @@ const es: Translation = {
     "footer": {
       "site": "Sitio",
       "contact": "Contacto",
-      "tagline": "Un gestor de reformas para iPhone. Hecho en Dinamarca por Robert Jensen."
+      "tagline": "Los presupuestos de reforma se desvían. Home Stories pone gastado, comprometido y restante en una sola pantalla, para que un sobrecoste aparezca cuando todavía puedes hacer algo. Un gestor de reformas para iPhone, hecho en Dinamarca por Robert Jensen."
     }
   },
   "header": {
-    "headline": "Tu reforma del hogar, medida.",
-    "subtitle": "Home Stories es un gestor de reformas para iPhone. Presupuestos que no mienten, tareas en el orden correcto, fotos que demuestran lo que pasó — exportado como un PDF que tu contratista puede leer.",
+    "headline": "Termina la reforma sin que el presupuesto se te escape.",
+    "subtitle": "Las reformas se desvían porque nadie ve el sobrecoste hasta que el dinero ya está gastado. Home Stories mantiene gastado, comprometido y restante en una sola pantalla, con las tareas en el orden correcto y fotos fechadas que demuestran lo que pasó.",
     "usersDescription": "Creado por un propietario en plena reforma, para propietarios en plena reforma",
     "headlineMark": [
-      4,
-      5
+      6,
+      10
     ]
   },
   "facts": [
@@ -74,20 +73,20 @@ const es: Translation = {
       "value": "Gratis"
     },
     {
-      "label": "Sin conexión",
-      "value": "Totalmente"
+      "label": "Suscripción",
+      "value": "Ninguna"
     },
     {
       "label": "Cuenta",
       "value": "Ninguna"
     },
     {
-      "label": "Sincronización",
-      "value": "iCloud"
+      "label": "Sin conexión",
+      "value": "Siempre"
     },
     {
-      "label": "Requiere",
-      "value": "iOS 17"
+      "label": "Tus datos",
+      "value": "En el dispositivo"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const es: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Cinco pasos, del inicio a la entrega",
+    "title": "Cuatro pasos, del inicio a la entrega",
     "subtitle": "El orden que espera la app, y el orden en que realmente transcurre una reforma.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const es: Translation = {
         "subtitle": "Divide el trabajo en tareas y añade los materiales, los accesorios y los presupuestos que necesita cada una. Estimaciones ahora, recibos después."
       },
       {
-        "title": "Registra lo que gastas",
-        "subtitle": "Introduce los costes según llegan. El gráfico separa gastado, comprometido y restante, así que un sobrecoste aparece cuando aún puedes actuar."
-      },
-      {
-        "title": "Fotografía el progreso",
-        "subtitle": "Haz las fotos desde la propia app. Las fotos llevan fecha y quedan ancladas al proyecto, así es como zanjas cómo estaba la pared en marzo."
+        "title": "Anota el gasto, fotografía la obra",
+        "subtitle": "Introduce los costes según llegan y haz las fotos desde la propia app. El gráfico separa gastado, comprometido y restante, así un sobrecoste aparece cuando todavía puedes hacer algo — y cada foto queda fechada y asociada al proyecto."
       },
       {
         "title": "Exporta el informe",
@@ -181,12 +176,10 @@ const es: Translation = {
     ]
   },
   "testimonials": {
-    "title": "Lo que dicen los propietarios",
-    "subtitle": "De gente en plena reforma",
+    "title": "Todas las reseñas hasta ahora",
+    "subtitle": "La app es nueva, así que aún no hay muchas. Estas son todas las reseñas que han llegado, sin editar, traducidas del danés.",
     "comments": [
-      "Home Stories hizo que gestionar la reforma de nuestra cocina fuera muchísimo más fácil. El seguimiento del presupuesto mostraba exactamente a dónde iba cada corona, y la cronología de fotos se convirtió en un registro fantástico de la transformación.",
-      "Estoy reformando varias habitaciones y Home Stories lo mantiene todo organizado. Cada proyecto tiene sus propias tareas, presupuesto y fotos. La exportación a PDF es perfecta para compartir el progreso con los contratistas.",
-      "Los gráficos de presupuesto son increíbles. Veo de un vistazo lo gastado, lo restante y los costes potenciales. Se acabaron las hojas de cálculo: Home Stories lo tiene todo en un solo sitio."
+      "Esta app es genial cuando tienes que planificar y sacar adelante proyectos, grandes o pequeños. Ojalá la hubiera tenido hace un par de años, cuando reformamos un piso. Habría sido muy útil para planificar y documentar la reforma, las horas dedicadas y los materiales comprados."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const es: Translation = {
     "qa": [
       {
         "question": "¿Home Stories es gratis?",
-        "answer": "¡Sí, es gratis! También ofrecemos una mejora Premium de por vida con funciones más avanzadas para quienes se toman en serio sus reformas."
+        "answer": "Sí, gratis para toda la obra, con proyectos, tareas, fases, fotos y registro de gastos ilimitados. Una compra opcional dentro de la app, Home Stories Pro, desbloquea los objetivos de presupuesto, el gráfico de presupuesto frente a coste, la exportación a PDF y CSV, y los recordatorios. Es un pago único, no una suscripción."
       },
       {
         "question": "¿La app funciona sin conexión?",
-        "answer": "¡Por supuesto! Home Stories está diseñada para funcionar totalmente sin conexión, así puedes acceder a tus proyectos, presupuestos y fotos incluso sin internet — perfecto para la obra."
+        "answer": "Por completo. Los proyectos, presupuestos y fotos viven en el dispositivo, así que la app funciona en un sótano sin cobertura y sincroniza después. Nada en ella depende de estar conectado."
       },
       {
         "question": "¿Puedo compartir proyectos con otras personas?",
-        "answer": "¡Sí! Con la sincronización de iCloud tus proyectos se mantienen actualizados en todos tus dispositivos. También puedes exportar informes profesionales en PDF para compartir con contratistas, familia o guardar como registro."
+        "answer": "Sí, de dos maneras. Comparte un proyecto por iCloud y se mantiene sincronizado en tiempo real con tu pareja, un familiar o el contratista. O exporta un informe en PDF —presupuesto, tareas, fotos y notas— para quien solo necesite leerlo."
       },
       {
         "question": "¿Cómo exporto los informes?",
-        "answer": "Simplemente abre tu proyecto, toca el botón de exportar y elige PDF. Home Stories genera un informe profesional con el resumen de tu presupuesto, el progreso de las tareas, las fotos y las notas."
+        "answer": "Abre el proyecto, pulsa exportar y elige PDF o CSV. El informe sale con el resumen del presupuesto, el avance de las tareas, las fotos y las notas ya maquetados, listo para enviar al contratista o al seguro. La exportación forma parte de Home Stories Pro."
       },
       {
         "question": "¿Qué dispositivos son compatibles?",
-        "answer": "Home Stories está disponible actualmente para iPhone y requiere iOS 17.0 o posterior. Nos centramos en ofrecer primero la mejor experiencia posible en iOS."
+        "answer": "iPhone con iOS 17.0 o posterior. Todavía no hay versión para iPad ni para Android."
       },
       {
         "question": "¿Home Stories tiene widgets?",
@@ -247,8 +240,30 @@ const es: Translation = {
     "title": "Gratis para toda la obra",
     "subtitle": "Lo esencial es gratis, para siempre. Una pequeña compra única desbloquea las herramientas avanzadas de presupuesto.",
     "plans": [
-      { "name": "Gratis", "period": "para siempre", "features": ["Proyectos, tareas y fases ilimitados", "Cronología fotográfica con fotos fechadas", "Registro de gastos y precios de artículos", "Funciona totalmente sin conexión", "Sincronización iCloud entre dispositivos", "Widgets de pantalla de inicio y de bloqueo"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "pago único — sin suscripción", "features": ["Objetivos de presupuesto y gráfico presupuesto-coste", "Análisis de costes avanzado", "Exportación PDF y CSV de informes y registros de tiempo", "Recordatorios de tareas y avisos de plazos"], "cta": "Descarga la app — mejora dentro" }
+      {
+        "name": "Gratis",
+        "period": "para siempre",
+        "features": [
+          "Proyectos, tareas y fases ilimitados",
+          "Cronología fotográfica con fotos fechadas",
+          "Registro de gastos y precios de artículos",
+          "Funciona totalmente sin conexión",
+          "Sincronización iCloud entre dispositivos",
+          "Widgets de pantalla de inicio y de bloqueo"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "pago único — sin suscripción",
+        "features": [
+          "Objetivos de presupuesto y gráfico presupuesto-coste",
+          "Análisis de costes avanzado",
+          "Exportación PDF y CSV de informes y registros de tiempo",
+          "Recordatorios de tareas y avisos de plazos"
+        ],
+        "cta": "Descarga la app — mejora dentro"
+      }
     ],
     "footnote": "Precio único de la App Store — varía según el país."
   },
@@ -256,20 +271,66 @@ const es: Translation = {
     "label": "Contra la hoja de cálculo",
     "title": "¿Por qué no simplemente una hoja de cálculo?",
     "subtitle": "Funciona — hasta la tercera semana, más o menos. La comparación honesta.",
-    "columns": { "them": "Una hoja de cálculo", "us": "Home Stories" },
+    "columns": {
+      "them": "Una hoja de cálculo",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Fotos", "them": "En el carrete o una carpeta, sin etiquetar", "us": "Fechadas y ancladas a la cronología del proyecto" },
-      { "aspect": "Totales", "them": "Fórmulas que escribes y mantienes tú", "us": "Gastado, comprometido y restante — automático" },
-      { "aspect": "En la obra", "them": "Haciendo zoom en celdas desde el móvil", "us": "Hecho para iPhone, funciona totalmente sin conexión" },
-      { "aspect": "Compartir", "them": "Enviar budget_v7_final_FINAL.xlsx por correo", "us": "Compartir por iCloud en directo, o un PDF que cualquiera lee" },
-      { "aspect": "Recibos", "them": "Una caja de zapatos y buenas intenciones", "us": "Fotografiados y guardados con el proyecto" },
-      { "aspect": "Cuando falla", "them": "Una fórmula borrada falla en silencio", "us": "Nada que mantener — la estructura viene integrada" }
+      {
+        "aspect": "Fotos",
+        "them": "En el carrete o una carpeta, sin etiquetar",
+        "us": "Fechadas y ancladas a la cronología del proyecto"
+      },
+      {
+        "aspect": "Totales",
+        "them": "Fórmulas que escribes y mantienes tú",
+        "us": "Gastado, comprometido y restante — automático"
+      },
+      {
+        "aspect": "En la obra",
+        "them": "Haciendo zoom en celdas desde el móvil",
+        "us": "Hecho para iPhone, funciona totalmente sin conexión"
+      },
+      {
+        "aspect": "Compartir",
+        "them": "Enviar budget_v7_final_FINAL.xlsx por correo",
+        "us": "Compartir por iCloud en directo, o un PDF que cualquiera lee"
+      },
+      {
+        "aspect": "Recibos",
+        "them": "Una caja de zapatos y buenas intenciones",
+        "us": "Fotografiados y guardados con el proyecto"
+      },
+      {
+        "aspect": "Cuando falla",
+        "them": "Una fórmula borrada falla en silencio",
+        "us": "Nada que mantener — la estructura viene integrada"
+      }
     ],
     "cta": "Por qué las hojas de cálculo dejan de funcionar"
   },
   "appBanner": {
     "title": "Mide la próxima.",
     "subtitle": "Gratis en la App Store. Funciona sin conexión, no necesita cuenta y se sincroniza con iCloud cuando tú quieras. Requiere iPhone con iOS 17 o posterior."
+  },
+  "stakes": {
+    "label": "El problema",
+    "title": "El sobrecoste no se anuncia",
+    "body": [
+      "Llega como unos cientos aquí, una modificación de obra allá y un recibo que ibas a guardar. Cada uno es lo bastante pequeño como para dejarlo pasar, y ninguno es el momento en que te das cuenta.",
+      "La hoja de cálculo te lo dice cuando ya están puestos los azulejos y el dinero se ha ido. Y seis meses después, cuando el seguro pregunta qué había detrás de esa pared, nadie tiene una foto."
+    ],
+    "stat": {
+      "value": "15–30 %",
+      "caption": "la horquilla en la que las reformas suelen superar el presupuesto: más amplia en casas antiguas y en todo lo que implique abrir una pared.",
+      "linkText": "Mira lo que dicen los datos"
+    },
+    "success": {
+      "label": "La otra vía",
+      "title": "O llegas a la entrega con los recibos en la mano",
+      "body": "Gastado, comprometido y restante están en una sola pantalla desde el primer día. Cada coste, foto y nota cae en el proyecto al que pertenece, mientras sigues de pie en la habitación. El día de la entrega, toda la obra es un PDF: las cifras, la cronología y la prueba de lo que había detrás de la pared."
+    },
+    "cta": "Empieza a controlarlo — gratis"
   }
 };
 

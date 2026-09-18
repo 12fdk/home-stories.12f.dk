@@ -199,6 +199,20 @@ function Header() {
             <AppStoreRating size="md" showReviewCount={false} />
           </div>
 
+          {/* The guide, in one line. This string has been in the config (and
+              translated into 15 locales) since i18n landed without ever being
+              rendered — it is the strongest empathy+authority sentence the
+              page has, so it now sits next to the CTA. #117 */}
+          {header.usersDescription && (
+            <p className="not-prose mt-5 flex items-start gap-3 text-sm leading-relaxed text-base-content/60">
+              <span
+                aria-hidden="true"
+                className="mt-2 inline-block h-0.5 w-6 flex-none bg-accent"
+              />
+              {header.usersDescription}
+            </p>
+          )}
+
           {header.sample && (
             <BudgetRail
               {...header.sample}

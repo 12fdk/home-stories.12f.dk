@@ -93,7 +93,7 @@ Main configuration in `src/utils/config.ts` - customize:
 - **Contact**: robert@12f.dk
 - **Privacy Policy**: https://www.12f.dk/home-stories/privacy-policy/
 - **Category**: Productivity, Lifestyle
-- **Price**: Free (Premium Lifetime available)
+- **Price**: Free (one-time "Home Stories Pro" upgrade available)
 - **iOS Requirement**: iOS 17.0+
 
 ## Claude Code Instructions

@@ -83,7 +83,11 @@ export async function GET(_context: APIContext) {
                       letterSpacing: "-2px",
                       maxWidth: "1040px",
                     },
-                    children: "Your home renovation, measured.",
+                    // Must stay in step with home.header.headline in
+                    // utils/config.ts — a share card that argues with the page
+                    // it links to is worse than no share card. #117
+                    children:
+                      "Finish the renovation without the budget getting away from you.",
                   },
                 },
                 {

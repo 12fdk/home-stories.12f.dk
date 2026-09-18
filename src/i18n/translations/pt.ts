@@ -13,7 +13,6 @@ const pt: Translation = {
       "Blog",
       "FAQ",
       "Sobre"
-    
     ]
   },
   "ui": {
@@ -56,16 +55,16 @@ const pt: Translation = {
     "footer": {
       "site": "Site",
       "contact": "Contacto",
-      "tagline": "Um gestor de renovações para iPhone. Feito na Dinamarca por Robert Jensen."
+      "tagline": "Os orçamentos de renovação derrapam. O Home Stories põe gasto, comprometido e restante num só ecrã, para que uma derrapagem apareça enquanto ainda pode agir. Um gestor de renovações para iPhone, feito na Dinamarca por Robert Jensen."
     }
   },
   "header": {
-    "headline": "A sua renovação de casa, medida.",
-    "subtitle": "O Home Stories é um gestor de renovações para iPhone. Orçamentos que se mantêm honestos, tarefas pela ordem certa, fotos que provam o que aconteceu — exportado num PDF que o seu empreiteiro consegue ler.",
+    "headline": "Termine a renovação sem que o orçamento lhe fuja.",
+    "subtitle": "As renovações derrapam porque ninguém vê a derrapagem antes de o dinheiro já estar gasto. O Home Stories mantém gasto, comprometido e restante num só ecrã, com as tarefas pela ordem certa e fotografias datadas que provam o que aconteceu.",
     "usersDescription": "Criado por um proprietário a meio de uma renovação, para proprietários a meio de uma renovação",
     "headlineMark": [
-      5,
-      6
+      6,
+      9
     ]
   },
   "facts": [
@@ -74,20 +73,20 @@ const pt: Translation = {
       "value": "Grátis"
     },
     {
-      "label": "Offline",
-      "value": "Total"
+      "label": "Subscrição",
+      "value": "Nenhuma"
     },
     {
       "label": "Conta",
       "value": "Nenhuma"
     },
     {
-      "label": "Sincr.",
-      "value": "iCloud"
+      "label": "Offline",
+      "value": "Sempre"
     },
     {
-      "label": "Requer",
-      "value": "iOS 17"
+      "label": "Os seus dados",
+      "value": "No dispositivo"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const pt: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Cinco passos, do início à entrega",
+    "title": "Quatro passos, do início à entrega",
     "subtitle": "A ordem que a app espera, e a ordem em que uma renovação realmente decorre.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const pt: Translation = {
         "subtitle": "Divida o trabalho em tarefas e acrescente os materiais, equipamentos e orçamentos que cada uma precisa. Estimativas agora, recibos depois."
       },
       {
-        "title": "Registe o que gasta",
-        "subtitle": "Introduza os custos à medida que surgem. O gráfico divide gasto, comprometido e restante, para que um excesso apareça enquanto ainda pode agir."
-      },
-      {
-        "title": "Fotografe o progresso",
-        "subtitle": "Tire fotos dentro da app. As fotos ficam datadas e fixadas ao projeto, que é como resolve como estava a parede em março."
+        "title": "Registe a despesa, fotografe o trabalho",
+        "subtitle": "Introduza os custos à medida que surgem e fotografe diretamente da app. O gráfico separa gasto, comprometido e restante, por isso uma derrapagem aparece enquanto ainda pode agir — e cada fotografia fica datada e ligada ao projeto."
       },
       {
         "title": "Exporte o relatório",
@@ -181,12 +176,10 @@ const pt: Translation = {
     ]
   },
   "testimonials": {
-    "title": "O que dizem os proprietários",
-    "subtitle": "De pessoas a meio de uma renovação",
+    "title": "Todas as avaliações até agora",
+    "subtitle": "A app é recente, por isso ainda não são muitas. Estas são todas as avaliações que chegaram, sem edição, traduzidas do dinamarquês.",
     "comments": [
-      "O Home Stories tornou a renovação da nossa cozinha muito mais fácil de gerir. O controlo de orçamento mostrou exatamente para onde foi cada coroa, e a cronologia de fotos tornou-se um registo fantástico da transformação.",
-      "Estou a renovar vários compartimentos e o Home Stories mantém tudo organizado. Cada projeto tem as suas próprias tarefas, orçamento e fotos. A exportação em PDF é perfeita para partilhar o progresso com os empreiteiros.",
-      "Os gráficos de orçamento são incríveis. Vejo num relance o que está gasto, o que resta e os custos potenciais. Acabaram-se as folhas de cálculo — o Home Stories tem tudo num só lugar."
+      "Esta app é genial quando é preciso planear e levar a cabo projetos, grandes ou pequenos. Quem me dera tê-la tido há uns anos, quando renovámos um apartamento. Teria sido muito útil para planear e documentar a renovação, as horas gastas e os materiais comprados."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const pt: Translation = {
     "qa": [
       {
         "question": "O Home Stories é gratuito?",
-        "answer": "Sim, é grátis! Também oferecemos uma atualização Premium Vitalícia com funcionalidades mais avançadas para quem leva as renovações a sério."
+        "answer": "Sim, grátis para a obra toda, com projetos, tarefas, fases, fotografias e registo de despesas ilimitados. Uma compra opcional na app, o Home Stories Pro, desbloqueia as metas de orçamento, o gráfico de orçamento versus custo, a exportação para PDF e CSV e os lembretes. É um preço único, não uma subscrição."
       },
       {
         "question": "A app funciona offline?",
-        "answer": "Sem dúvida! O Home Stories foi concebido para funcionar totalmente offline, para que possa aceder aos seus projetos, orçamentos e fotos mesmo sem acesso à internet — perfeito para obras."
+        "answer": "Totalmente. Os projetos, orçamentos e fotografias vivem no dispositivo, por isso a app funciona numa cave sem rede e sincroniza depois. Nada nela depende de estar online."
       },
       {
         "question": "Posso partilhar projetos com outras pessoas?",
-        "answer": "Sim! Com a sincronização iCloud, os seus projetos mantêm-se atualizados em todos os seus dispositivos. Também pode exportar relatórios PDF profissionais para partilhar com empreiteiros, família, ou guardar como registo."
+        "answer": "Sim, de duas formas. Partilhe um projeto pelo iCloud e fica sincronizado em tempo real com o companheiro, um familiar ou o empreiteiro. Ou exporte um relatório em PDF — orçamento, tarefas, fotografias e notas — para quem só precisa de o ler."
       },
       {
         "question": "Como exporto relatórios?",
-        "answer": "Basta abrir o projeto, tocar no botão de exportar e escolher PDF. O Home Stories gera um relatório profissional com o resumo do orçamento, o progresso das tarefas, fotos e notas."
+        "answer": "Abra o projeto, toque em exportar e escolha PDF ou CSV. O relatório sai com o resumo do orçamento, o progresso das tarefas, as fotografias e as notas já compostos, pronto a enviar ao empreiteiro ou à seguradora. A exportação faz parte do Home Stories Pro."
       },
       {
         "question": "Que dispositivos são suportados?",
-        "answer": "O Home Stories está atualmente disponível para iPhone e requer o iOS 17.0 ou posterior. Estamos focados em oferecer primeiro a melhor experiência possível no iOS."
+        "answer": "iPhone, com iOS 17.0 ou posterior. Ainda não há versão para iPad nem para Android."
       },
       {
         "question": "O Home Stories tem widgets?",
@@ -247,8 +240,30 @@ const pt: Translation = {
     "title": "Grátis para a obra inteira",
     "subtitle": "O essencial é grátis, para sempre. Uma pequena compra única desbloqueia as ferramentas avançadas de orçamento.",
     "plans": [
-      { "name": "Grátis", "period": "para sempre", "features": ["Projetos, tarefas e fases ilimitados", "Cronologia fotográfica com fotos datadas", "Registo de despesas e preços de artigos", "Funciona totalmente offline", "Sincronização iCloud entre dispositivos", "Widgets de ecrã principal e de bloqueio"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "compra única — sem subscrição", "features": ["Metas de orçamento e gráfico orçamento-custos", "Análise de custos avançada", "Exportação PDF e CSV de relatórios e registos de tempo", "Lembretes de tarefas e notificações de prazos"], "cta": "Obter a app — atualize lá dentro" }
+      {
+        "name": "Grátis",
+        "period": "para sempre",
+        "features": [
+          "Projetos, tarefas e fases ilimitados",
+          "Cronologia fotográfica com fotos datadas",
+          "Registo de despesas e preços de artigos",
+          "Funciona totalmente offline",
+          "Sincronização iCloud entre dispositivos",
+          "Widgets de ecrã principal e de bloqueio"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "compra única — sem subscrição",
+        "features": [
+          "Metas de orçamento e gráfico orçamento-custos",
+          "Análise de custos avançada",
+          "Exportação PDF e CSV de relatórios e registos de tempo",
+          "Lembretes de tarefas e notificações de prazos"
+        ],
+        "cta": "Obter a app — atualize lá dentro"
+      }
     ],
     "footnote": "Preço único na App Store — varia consoante o país."
   },
@@ -256,20 +271,66 @@ const pt: Translation = {
     "label": "Contra a folha de cálculo",
     "title": "Porquê não simplesmente uma folha de cálculo?",
     "subtitle": "Funciona — até cerca da terceira semana. A comparação honesta.",
-    "columns": { "them": "Uma folha de cálculo", "us": "Home Stories" },
+    "columns": {
+      "them": "Uma folha de cálculo",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Fotos", "them": "No rolo da câmara ou numa pasta, sem etiqueta", "us": "Datadas e fixadas na cronologia do projeto" },
-      { "aspect": "Totais", "them": "Fórmulas que escreve e mantém sozinho", "us": "Gasto, comprometido e restante — automático" },
-      { "aspect": "Na obra", "them": "Ampliar células no telemóvel", "us": "Feito para iPhone, funciona totalmente offline" },
-      { "aspect": "Partilha", "them": "Enviar budget_v7_final_FINAL.xlsx por e-mail", "us": "Partilha iCloud em direto, ou um PDF que todos leem" },
-      { "aspect": "Recibos", "them": "Uma caixa de sapatos e boas intenções", "us": "Fotografados e guardados com o projeto" },
-      { "aspect": "Quando falha", "them": "Uma fórmula apagada falha em silêncio", "us": "Nada para manter — a estrutura vem integrada" }
+      {
+        "aspect": "Fotos",
+        "them": "No rolo da câmara ou numa pasta, sem etiqueta",
+        "us": "Datadas e fixadas na cronologia do projeto"
+      },
+      {
+        "aspect": "Totais",
+        "them": "Fórmulas que escreve e mantém sozinho",
+        "us": "Gasto, comprometido e restante — automático"
+      },
+      {
+        "aspect": "Na obra",
+        "them": "Ampliar células no telemóvel",
+        "us": "Feito para iPhone, funciona totalmente offline"
+      },
+      {
+        "aspect": "Partilha",
+        "them": "Enviar budget_v7_final_FINAL.xlsx por e-mail",
+        "us": "Partilha iCloud em direto, ou um PDF que todos leem"
+      },
+      {
+        "aspect": "Recibos",
+        "them": "Uma caixa de sapatos e boas intenções",
+        "us": "Fotografados e guardados com o projeto"
+      },
+      {
+        "aspect": "Quando falha",
+        "them": "Uma fórmula apagada falha em silêncio",
+        "us": "Nada para manter — a estrutura vem integrada"
+      }
     ],
     "cta": "Porque é que as folhas de cálculo deixam de funcionar"
   },
   "appBanner": {
     "title": "Meça a próxima.",
     "subtitle": "Grátis na App Store. Funciona offline, não precisa de conta e sincroniza com o iCloud quando quiser. Requer um iPhone com iOS 17 ou posterior."
+  },
+  "stakes": {
+    "label": "O problema",
+    "title": "A derrapagem não se anuncia",
+    "body": [
+      "Chega como umas centenas aqui, um trabalho a mais ali e um recibo que tencionava guardar. Cada um é pequeno o suficiente para deixar passar, e nenhum é o momento em que dá por isso.",
+      "A folha de cálculo só lhe diz quando os azulejos já estão assentes e o dinheiro acabou. E seis meses depois, quando a seguradora pergunta o que estava atrás daquela parede, ninguém tem uma fotografia."
+    ],
+    "stat": {
+      "value": "15–30 %",
+      "caption": "a margem em que as renovações costumam ultrapassar o orçamento — mais larga em casas antigas e em tudo o que abra uma parede.",
+      "linkText": "Veja o que dizem os dados"
+    },
+    "success": {
+      "label": "O outro caminho",
+      "title": "Ou chega à entrega ainda com os recibos na mão",
+      "body": "Gasto, comprometido e restante ficam num só ecrã desde o primeiro dia. Cada custo, fotografia e nota cai no projeto a que pertence, enquanto ainda está de pé na divisão. No dia da entrega a obra inteira é um PDF: os números, a cronologia e a prova do que estava atrás da parede."
+    },
+    "cta": "Comece a registar — grátis"
   }
 };
 

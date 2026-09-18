@@ -46,7 +46,10 @@ const templateConfig: TemplateConfig = {
     footer: {
       site: "Site",
       contact: "Contact",
-      tagline: "A renovation tracker for iPhone. Made in Denmark by Robert Jensen.",
+      // The one-liner: problem + solution + result. Reused in the About lede
+      // and the blog CTA so the same sentence works everywhere. #117
+      tagline:
+        "Renovation budgets drift. Home Stories puts spent, committed and remaining on one screen, so an overrun shows up while you can still act on it. A renovation tracker for iPhone, made in Denmark by Robert Jensen.",
     },
   },
   // Draws grid behind main container
@@ -107,32 +110,55 @@ const templateConfig: TemplateConfig = {
       description:
         "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
     },
+    // StoryBrand agreement plan: the same facts, phrased as the commitments
+    // that remove the fear of downloading. #117
     facts: [
       { label: "Price", value: "Free" },
-      { label: "Offline", value: "Fully" },
+      { label: "Subscription", value: "None" },
       { label: "Account", value: "None" },
-      { label: "Sync", value: "iCloud" },
-      { label: "Requires", value: "iOS 17" },
+      { label: "Offline", value: "Always" },
+      { label: "Your data", value: "On device" },
     ],
+    // The missing middle of the story: the problem the reader is already in,
+    // what it costs to leave alone, and what the other side looks like. Sits
+    // directly under the hero, because that is where the story gap opens. #117
+    stakes: {
+      id: "stakes",
+      label: "The problem",
+      title: "The overrun doesn't announce itself",
+      body: [
+        "It arrives as a few hundred here, a change order there, and a receipt you meant to file. Each one is small enough to wave through, and none of them is the moment you notice.",
+        "The spreadsheet only tells you once the tiles are down and the money is gone. And six months later, when the insurer asks what was behind that wall, nobody has a photo of it.",
+      ],
+      stat: {
+        value: "15–30%",
+        caption:
+          "the band renovations typically overrun by — wider for older homes, and for anything that opens a wall.",
+        linkText: "See what the data says",
+        href: "/blog/renovation-cost-overrun-statistics/",
+      },
+      success: {
+        label: "The other way",
+        title: "Or you reach handover still holding the receipts",
+        body: "Spent, committed and remaining sit on one screen from the first day. Every cost, photo and note lands on the project it belongs to, while you are still standing in the room. On handover day the whole job is one PDF — the figures, the timeline, and the proof of what was behind the wall.",
+      },
+      cta: "Start tracking — free",
+    },
     testimonials: {
       id: "testimonials",
-      title: "What homeowners say",
-      subtitle: "From people mid-renovation",
+      title: "Every review, so far",
+      // The three previous cards were template placeholders with invented
+      // names. Checked against the App Store customer-review RSS feed on
+      // 2026-09-18 across us/gb/de/dk/nl/se/no: this is the only real review
+      // that exists. It stays a list of one until more arrive. #117
+      subtitle:
+        "The app is new, so there are not many yet. This is every review that has come in, unedited.",
       cards: [
         {
-          name: "Anders T.",
+          name: "Henrik Moenster",
+          source: "App Store · Denmark · 5★ · translated from Danish",
           comment:
-            "Home Stories made our kitchen renovation so much easier to manage. The budget tracking feature showed exactly where every krone went, and the photo timeline became a fantastic record of the transformation.",
-        },
-        {
-          name: "Maria S.",
-          comment:
-            "I'm renovating multiple rooms and Home Stories keeps everything organized. Each project has its own tasks, budget, and photos. The PDF export is perfect for sharing progress with contractors.",
-        },
-        {
-          name: "Thomas H.",
-          comment:
-            "The budget charts are incredible. I can see at a glance what's spent, what's remaining, and potential costs. No more spreadsheets - Home Stories has everything in one place.",
+            "This app is brilliant when you have to plan and carry out projects, large and small. I wish I had had it a couple of years ago when we renovated a flat. It would have been very useful for planning and documenting the renovation, the hours spent and the materials bought.",
         },
       ],
     },
@@ -221,7 +247,7 @@ const templateConfig: TemplateConfig = {
     },
     howItWorks: {
       id: "how-it-works",
-      title: "Five steps, start to handover",
+      title: "Four steps, start to handover",
       subtitle:
         "The order the app expects, and the order a renovation actually runs in.",
       steps: [
@@ -242,20 +268,14 @@ const templateConfig: TemplateConfig = {
             "Timber studs and boxed fixtures stacked in a stripped-back room waiting to be fitted.",
         },
         {
-          title: "Log what you spend",
+          // Costs and photos are one habit on site, not two steps: a plan
+          // stays a plan at four steps, not five. #117
+          title: "Log the spend, shoot the work",
           subtitle:
-            "Enter costs as they land. The chart splits spent, committed, and remaining, so an overrun shows up while you can still act on it.",
+            "Enter costs as they land and photograph straight from the app. The chart splits spent, committed, and remaining, so an overrun shows up while you can still act on it — and every photo is dated and pinned to the project.",
           image: "/stock/03.webp",
           imageAlt:
             "A pile of building-merchant receipts and invoices spread across a table next to a phone.",
-        },
-        {
-          title: "Photograph the progress",
-          subtitle:
-            "Shoot from inside the app. Photos are dated and pinned to the project, which is how you settle what the wall looked like in March.",
-          image: "/stock/04.webp",
-          imageAlt:
-            "A phone held up to photograph a half-finished wall, framing the work in progress.",
         },
         {
           title: "Export the report",
@@ -372,27 +392,27 @@ const templateConfig: TemplateConfig = {
         {
           question: "Is Home Stories free to use?",
           answer:
-            "Yes, it's free! We also offer a Premium Lifetime upgrade with more advanced features for serious renovators.",
+            "Yes — free for the whole job, with unlimited projects, tasks, phases, photos and expense logging. One optional in-app purchase, Home Stories Pro, unlocks budget targets, the budget-vs-cost chart, PDF and CSV export, and task reminders. It is a one-time price, not a subscription.",
         },
         {
           question: "Does the app work offline?",
           answer:
-            "Absolutely! Home Stories is designed to work fully offline so you can access your projects, budgets, and photos even without internet access - perfect for job sites.",
+            "Fully. Projects, budgets and photos all live on the device, so the app works in a basement with no signal and syncs later. Nothing about it depends on being online.",
         },
         {
           question: "Can I share projects with others?",
           answer:
-            "Yes! With iCloud sync your projects stay up to date across your devices. You can also export professional PDF reports to share with contractors, family, or keep for records.",
+            "Yes, two ways. Share a project over iCloud and it stays in sync in real time with a partner, family member or contractor. Or export a PDF report — budget, tasks, photos and notes — for anyone who just needs to read it.",
         },
         {
           question: "How do I export reports?",
           answer:
-            "Simply open your project, tap the export button, and choose PDF. Home Stories generates a professional report with your budget summary, task progress, photos, and notes.",
+            "Open the project, tap export, and choose PDF or CSV. The report comes out with the budget summary, task progress, photos and notes already laid out, ready to send to a contractor or an insurer. Export is part of Home Stories Pro.",
         },
         {
           question: "What devices are supported?",
           answer:
-            "Home Stories is currently available for iPhone and requires iOS 17.0 or later. We're focused on delivering the best possible experience on iOS first.",
+            "iPhone, running iOS 17.0 or later. There is no iPad or Android version yet.",
         },
         {
           question: "Does Home Stories have widgets?",
@@ -432,9 +452,9 @@ const templateConfig: TemplateConfig = {
       ],
     },
     header: {
-      headline: "Your home renovation, measured.",
+      headline: "Finish the renovation without the budget getting away from you.",
       subtitle:
-        "Home Stories is a renovation tracker for iPhone. Budgets that stay honest, tasks in the right order, photos that prove what happened — exported as a PDF your contractor can read.",
+        "Renovations drift because nobody sees the overrun until the money is already spent. Home Stories keeps spent, committed and remaining on one screen — with tasks in the right order and dated photos that prove what happened.",
       screenshots: [
         "/screenshots/projects-list.webp",
         "/screenshots/budget-chart.webp",
@@ -442,7 +462,8 @@ const templateConfig: TemplateConfig = {
       ],
       rewards: [],
       usersDescription: "Built by a homeowner mid-renovation, for homeowners mid-renovation",
-      headlineMark: [3, 4],
+      // "budget getting away" — the words carrying the desire, not the feature.
+      headlineMark: [5, 8],
       // The kitchen project in the screenshot beside it, figure for figure.
       sample: {
         project: "Kitchen renovation",

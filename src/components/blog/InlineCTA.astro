@@ -16,6 +16,14 @@ interface Props {
    */
   slug?: string;
   appStoreLink?: string;
+  /**
+   * The transitional CTA: a lower-commitment next step for the reader who is
+   * three weeks from starting and will not install an app today. Keeps them in
+   * the story instead of dropping them at a download they are not ready for.
+   * Pass `null` to suppress it — a post must not offer a link to itself. #117
+   */
+  transitionalText?: string | null;
+  transitionalHref?: string;
 }
 
 const {
@@ -25,6 +33,8 @@ const {
   buttonText = "Get Home Stories — Free",
   slug,
   appStoreLink = "https://apps.apple.com/app/id6754754960",
+  transitionalText = "Not starting yet? Take the printable renovation checklist instead",
+  transitionalHref = "/blog/renovation-checklist-printable/",
 } = Astro.props;
 
 const track = {
@@ -63,6 +73,18 @@ const track = {
       >
         {buttonText}
       </a>
+      {
+        transitionalText && (
+          <p class="mb-0 mt-4 text-sm">
+            <a
+              href={transitionalHref}
+              class="text-base-content/60 underline-offset-4 hover:text-base-content"
+            >
+              {transitionalText} →
+            </a>
+          </p>
+        )
+      }
     </aside>
   )
 }
