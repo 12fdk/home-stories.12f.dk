@@ -3,12 +3,19 @@ import { useContext } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import SectionHeading from "../../../../components/sectionHeading";
 
+/**
+ * Real reviews only. The section used to carry three invented ones; there is
+ * exactly one genuine review, so the grid has to read well at a length of one
+ * rather than pad itself back up to three. #117
+ */
 function Testimonials() {
   const {
     ui,
     home: { testimonials },
   } = useContext(ConfigContext)!;
-  if (!testimonials) return null;
+  if (!testimonials?.cards.length) return null;
+
+  const single = testimonials.cards.length === 1;
 
   return (
     <section
@@ -21,8 +28,12 @@ function Testimonials() {
         subtitle={testimonials.subtitle}
       />
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
-        {testimonials.cards.map(({ name, comment }, index) => (
+      <div
+        className={`mt-14 grid gap-6 ${
+          single ? "max-w-2xl" : "md:grid-cols-3"
+        }`}
+      >
+        {testimonials.cards.map(({ name, comment, source }, index) => (
           <motion.figure
             key={name}
             initial={{ opacity: 0, y: 16 }}
@@ -55,6 +66,11 @@ function Testimonials() {
 
             <figcaption className="mt-6 border-t border-base-300 pt-4">
               <span className="tick-label text-base-content/50">{name}</span>
+              {source && (
+                <span className="mt-1 block text-xs text-base-content/40">
+                  {source}
+                </span>
+              )}
             </figcaption>
           </motion.figure>
         ))}

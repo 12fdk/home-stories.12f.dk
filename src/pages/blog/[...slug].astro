@@ -161,9 +161,10 @@ const articleSchema = {
 
     <InlineCTA
       heading="Ready to put this into practice?"
-      body="Home Stories is the free iPhone app that turns this kind of advice into one tappable project — budget, tasks, photos, and PDF reports included."
+      body="Renovation budgets drift. Home Stories puts spent, committed and remaining on one screen, so an overrun shows up while you can still act on it — free on the App Store."
       buttonText="Get Home Stories — Free on the App Store"
       slug={post.slug}
+      transitionalText={post.slug === "renovation-checklist-printable" ? null : undefined}
     />
 
     <FaqSection items={post.data.faq} />

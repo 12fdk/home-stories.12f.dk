@@ -27,7 +27,7 @@ faq:
   - question: "Should I use Notion or an app for my renovation?"
     answer: "Use Notion for the planning phase — research, mood boards, contractor shortlists, document storage — where its flexibility is a genuine advantage. Switch to (or add) a phone-first app like Home Stories for the execution phase, where the job is fast, repeated, on-site logging. Most people who try to run the whole project in Notion abandon the budget tracking around week three for exactly the same reason spreadsheets fail: the tool needs a desk, and the renovation is happening in a half-demolished room."
   - question: "Is Home Stories free?"
-    answer: "Yes — Home Stories is free on the App Store for iPhone, with an optional one-time Premium Lifetime upgrade. It's built specifically for renovations rather than being a general productivity tool, with budget tracking, a photo timeline, task management, and PDF export. It requires iOS 17 or later."
+    answer: "Yes — Home Stories is free on the App Store for iPhone, with an optional one-time Home Stories Pro upgrade. It's built specifically for renovations rather than being a general productivity tool, with budget tracking, a photo timeline, task management, and PDF export. It requires iOS 17 or later."
 relatedSlugs:
   - "how-to-track-home-improvement-expenses"
   - "renovation-spreadsheet-alternative"

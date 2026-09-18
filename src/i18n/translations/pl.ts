@@ -13,7 +13,6 @@ const pl: Translation = {
       "Blog",
       "FAQ",
       "O nas"
-    
     ]
   },
   "ui": {
@@ -56,38 +55,38 @@ const pl: Translation = {
     "footer": {
       "site": "Strona",
       "contact": "Kontakt",
-      "tagline": "Aplikacja do śledzenia remontu na iPhone'a. Stworzona w Danii przez Robert Jensen."
+      "tagline": "Budżety remontowe się rozjeżdżają. Home Stories pokazuje wydane, zarezerwowane i pozostałe na jednym ekranie, żeby przekroczenie było widać, póki da się jeszcze zareagować. Aplikacja do śledzenia remontu na iPhone'a, stworzona w Danii przez Roberta Jensena."
     }
   },
   "header": {
-    "headline": "Twój remont, zmierzony.",
-    "subtitle": "Home Stories to aplikacja do śledzenia remontu na iPhone'a. Budżety, które nie kłamią, zadania w odpowiedniej kolejności, zdjęcia, które dowodzą, co się wydarzyło — wyeksportowane jako PDF, który zrozumie Twój wykonawca.",
+    "headline": "Dokończ remont, zanim budżet wymknie ci się z rąk.",
+    "subtitle": "Remonty się rozjeżdżają, bo nikt nie widzi przekroczenia, dopóki pieniądze już nie znikną. Home Stories trzyma wydane, zarezerwowane i pozostałe na jednym ekranie, z zadaniami w dobrej kolejności i datowanymi zdjęciami, które dowodzą, co się wydarzyło.",
     "usersDescription": "Stworzona przez właściciela domu w trakcie remontu, dla właścicieli domów w trakcie remontu",
     "headlineMark": [
-      2,
-      3
+      3,
+      7
     ]
   },
   "facts": [
     {
       "label": "Cena",
-      "value": "Bezpłatnie"
+      "value": "Za darmo"
     },
     {
-      "label": "Offline",
-      "value": "W pełni"
+      "label": "Subskrypcja",
+      "value": "Brak"
     },
     {
       "label": "Konto",
       "value": "Brak"
     },
     {
-      "label": "Synchronizacja",
-      "value": "iCloud"
+      "label": "Offline",
+      "value": "Zawsze"
     },
     {
-      "label": "Wymaga",
-      "value": "iOS 17"
+      "label": "Twoje dane",
+      "value": "Na urządzeniu"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const pl: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Pięć kroków, od startu do przekazania",
+    "title": "Cztery kroki, od startu do odbioru",
     "subtitle": "Kolejność, jakiej oczekuje aplikacja, i kolejność, w jakiej naprawdę przebiega remont.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const pl: Translation = {
         "subtitle": "Podziel pracę na zadania, a następnie dodaj materiały, wyposażenie i wyceny, których każde z nich wymaga. Najpierw szacunki, potem paragony."
       },
       {
-        "title": "Zapisuj wydatki",
-        "subtitle": "Wprowadzaj koszty na bieżąco. Wykres dzieli je na wydane, zarezerwowane i pozostałe, więc przekroczenie ujawni się, gdy wciąż możesz zareagować."
-      },
-      {
-        "title": "Fotografuj postępy",
-        "subtitle": "Rób zdjęcia bezpośrednio w aplikacji. Zdjęcia są datowane i przypięte do projektu, dzięki czemu rozstrzygniesz, jak ściana wyglądała w marcu."
+        "title": "Zapisz wydatek, sfotografuj robotę",
+        "subtitle": "Wpisuj koszty, gdy się pojawiają, i rób zdjęcia prosto z aplikacji. Wykres dzieli wydane, zarezerwowane i pozostałe, więc przekroczenie widać, póki da się jeszcze zareagować — a każde zdjęcie dostaje datę i trafia do projektu."
       },
       {
         "title": "Wyeksportuj raport",
@@ -181,12 +176,10 @@ const pl: Translation = {
     ]
   },
   "testimonials": {
-    "title": "Co mówią właściciele domów",
-    "subtitle": "Od osób w trakcie remontu",
+    "title": "Wszystkie opinie do tej pory",
+    "subtitle": "Aplikacja jest nowa, więc nie ma ich jeszcze wiele. To każda opinia, jaka wpłynęła — bez zmian, przetłumaczona z duńskiego.",
     "comments": [
-      "Home Stories bardzo ułatwiło zarządzanie remontem naszej kuchni. Funkcja śledzenia budżetu pokazywała dokładnie, na co poszła każda korona, a oś czasu ze zdjęciami stała się wspaniałym zapisem tej metamorfozy.",
-      "Remontuję kilka pomieszczeń, a Home Stories utrzymuje wszystko w porządku. Każdy projekt ma własne zadania, budżet i zdjęcia. Eksport do PDF jest idealny do dzielenia się postępami z wykonawcami.",
-      "Wykresy budżetu są niesamowite. Na pierwszy rzut oka widzę, co zostało wydane, co pozostało i jakie są potencjalne koszty. Koniec z arkuszami kalkulacyjnymi — Home Stories ma wszystko w jednym miejscu."
+      "Ta aplikacja jest genialna, kiedy trzeba zaplanować i doprowadzić do końca projekty, duże i małe. Żałuję, że nie miałem jej parę lat temu, gdy remontowaliśmy mieszkanie. Bardzo by się przydała do zaplanowania i udokumentowania remontu, przepracowanych godzin i kupionych materiałów."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const pl: Translation = {
     "qa": [
       {
         "question": "Czy Home Stories jest bezpłatne?",
-        "answer": "Tak, jest bezpłatne! Oferujemy też ulepszenie Premium Lifetime z bardziej zaawansowanymi funkcjami dla wymagających remontujących."
+        "answer": "Tak – za darmo przez cały remont, z nieograniczoną liczbą projektów, zadań, etapów, zdjęć i wpisów wydatków. Jeden opcjonalny zakup w aplikacji, Home Stories Pro, odblokowuje cele budżetowe, wykres budżet kontra koszt, eksport do PDF i CSV oraz przypomnienia. To cena jednorazowa, nie subskrypcja."
       },
       {
         "question": "Czy aplikacja działa offline?",
-        "answer": "Oczywiście! Home Stories zostało zaprojektowane tak, aby działać w pełni offline, dzięki czemu masz dostęp do projektów, budżetów i zdjęć nawet bez połączenia z internetem — idealne na plac budowy."
+        "answer": "Całkowicie. Projekty, budżety i zdjęcia są na urządzeniu, więc aplikacja działa w piwnicy bez zasięgu i synchronizuje się później. Nic w niej nie wymaga bycia online."
       },
       {
         "question": "Czy mogę udostępniać projekty innym?",
-        "answer": "Tak! Dzięki synchronizacji iCloud Twoje projekty pozostają aktualne na wszystkich urządzeniach. Możesz też eksportować profesjonalne raporty PDF, aby udostępniać je wykonawcom, rodzinie lub zachować dla dokumentacji."
+        "answer": "Tak, na dwa sposoby. Udostępnij projekt przez iCloud, a będzie synchronizowany w czasie rzeczywistym z partnerem, kimś z rodziny albo wykonawcą. Albo wyeksportuj raport PDF – budżet, zadania, zdjęcia i notatki – dla kogoś, kto ma go tylko przeczytać."
       },
       {
         "question": "Jak eksportować raporty?",
-        "answer": "Po prostu otwórz projekt, dotknij przycisku eksportu i wybierz PDF. Home Stories wygeneruje profesjonalny raport z podsumowaniem budżetu, postępem zadań, zdjęciami i notatkami."
+        "answer": "Otwórz projekt, dotknij eksportu i wybierz PDF albo CSV. Raport wychodzi z podsumowaniem budżetu, postępem zadań, zdjęciami i notatkami już złożonymi, gotowy do wysłania wykonawcy albo ubezpieczycielowi. Eksport jest częścią Home Stories Pro."
       },
       {
         "question": "Jakie urządzenia są obsługiwane?",
-        "answer": "Home Stories jest obecnie dostępne na iPhone'a i wymaga systemu iOS 17.0 lub nowszego. Skupiamy się na dostarczeniu najlepszych możliwych wrażeń najpierw na iOS."
+        "answer": "iPhone z iOS 17.0 lub nowszym. Wersji na iPada ani na Androida jeszcze nie ma."
       },
       {
         "question": "Czy Home Stories ma widżety?",
@@ -247,8 +240,30 @@ const pl: Translation = {
     "title": "Cały remont za darmo",
     "subtitle": "Rdzeń jest darmowy, na zawsze. Jeden drobny jednorazowy zakup odblokowuje zaawansowane narzędzia budżetowe.",
     "plans": [
-      { "name": "Za darmo", "period": "na zawsze", "features": ["Nieograniczone projekty, zadania i etapy", "Oś czasu ze zdjęciami z datami", "Rejestr wydatków i ceny pozycji", "Działa całkowicie offline", "Synchronizacja iCloud między urządzeniami", "Widżety na ekranie głównym i blokady"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "zakup jednorazowy — bez subskrypcji", "features": ["Cele budżetowe i wykres budżet-koszty", "Zaawansowana analiza kosztów", "Eksport PDF i CSV raportów oraz dziennika czasu", "Przypomnienia o zadaniach i terminach"], "cta": "Pobierz aplikację — ulepszenie w środku" }
+      {
+        "name": "Za darmo",
+        "period": "na zawsze",
+        "features": [
+          "Nieograniczone projekty, zadania i etapy",
+          "Oś czasu ze zdjęciami z datami",
+          "Rejestr wydatków i ceny pozycji",
+          "Działa całkowicie offline",
+          "Synchronizacja iCloud między urządzeniami",
+          "Widżety na ekranie głównym i blokady"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "zakup jednorazowy — bez subskrypcji",
+        "features": [
+          "Cele budżetowe i wykres budżet-koszty",
+          "Zaawansowana analiza kosztów",
+          "Eksport PDF i CSV raportów oraz dziennika czasu",
+          "Przypomnienia o zadaniach i terminach"
+        ],
+        "cta": "Pobierz aplikację — ulepszenie w środku"
+      }
     ],
     "footnote": "Cena jednorazowa w App Store — różni się w zależności od kraju."
   },
@@ -256,20 +271,66 @@ const pl: Translation = {
     "label": "Kontra arkusz",
     "title": "Dlaczego nie zwykły arkusz kalkulacyjny?",
     "subtitle": "Działa — mniej więcej do trzeciego tygodnia. Uczciwe porównanie.",
-    "columns": { "them": "Arkusz kalkulacyjny", "us": "Home Stories" },
+    "columns": {
+      "them": "Arkusz kalkulacyjny",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Zdjęcia", "them": "W rolce aparatu albo folderze, bez opisów", "us": "Z datą, przypięte do osi czasu projektu" },
-      { "aspect": "Sumy", "them": "Formuły, które sam piszesz i utrzymujesz", "us": "Wydane, zadeklarowane i pozostałe — automatycznie" },
-      { "aspect": "Na budowie", "them": "Powiększanie komórek na telefonie", "us": "Stworzone dla iPhone'a, działa całkowicie offline" },
-      { "aspect": "Udostępnianie", "them": "Mailowanie budget_v7_final_FINAL.xlsx", "us": "Udostępnianie na żywo przez iCloud albo czytelny PDF" },
-      { "aspect": "Paragony", "them": "Pudełko po butach i dobre chęci", "us": "Sfotografowane i przechowywane razem z projektem" },
-      { "aspect": "Gdy coś pęka", "them": "Usunięta formuła zawodzi po cichu", "us": "Nie ma czego utrzymywać — struktura jest wbudowana" }
+      {
+        "aspect": "Zdjęcia",
+        "them": "W rolce aparatu albo folderze, bez opisów",
+        "us": "Z datą, przypięte do osi czasu projektu"
+      },
+      {
+        "aspect": "Sumy",
+        "them": "Formuły, które sam piszesz i utrzymujesz",
+        "us": "Wydane, zadeklarowane i pozostałe — automatycznie"
+      },
+      {
+        "aspect": "Na budowie",
+        "them": "Powiększanie komórek na telefonie",
+        "us": "Stworzone dla iPhone'a, działa całkowicie offline"
+      },
+      {
+        "aspect": "Udostępnianie",
+        "them": "Mailowanie budget_v7_final_FINAL.xlsx",
+        "us": "Udostępnianie na żywo przez iCloud albo czytelny PDF"
+      },
+      {
+        "aspect": "Paragony",
+        "them": "Pudełko po butach i dobre chęci",
+        "us": "Sfotografowane i przechowywane razem z projektem"
+      },
+      {
+        "aspect": "Gdy coś pęka",
+        "them": "Usunięta formuła zawodzi po cichu",
+        "us": "Nie ma czego utrzymywać — struktura jest wbudowana"
+      }
     ],
     "cta": "Przeczytaj, dlaczego arkusze przestają działać"
   },
   "appBanner": {
     "title": "Zmierz następny.",
     "subtitle": "Bezpłatnie w App Store. Działa offline, nie wymaga konta i synchronizuje się z iCloud, kiedy chcesz. Wymaga iPhone'a z systemem iOS 17 lub nowszym."
+  },
+  "stakes": {
+    "label": "Problem",
+    "title": "Przekroczenie budżetu się nie zapowiada",
+    "body": [
+      "Przychodzi jako kilkaset tutaj, dodatkowe zlecenie tam i paragon, który miałeś odłożyć. Każde z osobna jest na tyle małe, że da się machnąć ręką, i żadne nie jest momentem, w którym to zauważasz.",
+      "Arkusz powie ci dopiero wtedy, gdy płytki są już położone, a pieniądze wydane. A pół roku później, gdy ubezpieczyciel spyta, co było za tą ścianą, nikt nie ma zdjęcia."
+    ],
+    "stat": {
+      "value": "15–30%",
+      "caption": "przedział, o jaki remonty zwykle przekraczają budżet – szerszy w starszych domach i wszędzie tam, gdzie otwiera się ścianę.",
+      "linkText": "Zobacz, co mówią dane"
+    },
+    "success": {
+      "label": "Druga droga",
+      "title": "Albo docierasz do odbioru wciąż z paragonami w ręku",
+      "body": "Wydane, zarezerwowane i pozostałe są na jednym ekranie od pierwszego dnia. Każdy koszt, zdjęcie i notatka trafiają do projektu, do którego należą, jeszcze gdy stoisz w tym pomieszczeniu. W dniu odbioru cała robota to jeden PDF: liczby, oś czasu i dowód na to, co było za ścianą."
+    },
+    "cta": "Zacznij śledzić — za darmo"
   }
 };
 

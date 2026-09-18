@@ -11,7 +11,7 @@ This document is the authoritative, AI-friendly reference for Home Stories. It i
 - **Category**: Productivity, Lifestyle (home improvement / renovation project management)
 - **Platform**: iOS (iPhone). Compatible with iPad via iCloud sync.
 - **Minimum OS**: iOS 17.0
-- **Price**: Free. Optional one-time Premium Lifetime in-app purchase (no subscription).
+- **Price**: Free. Optional one-time "Home Stories Pro" in-app purchase (no subscription).
 - **Languages**: English (primary); additional Apple App Store locales supported.
 - **Developer / publisher**: Robert Jensen, trading as 12f, based in Denmark.
 - **Business model**: Paid upgrade only. No ads, no tracking, no data sales.
@@ -95,7 +95,7 @@ By keeping budget, tasks, and photos attached to the same project, homeowners al
 ## 6. Frequently asked questions
 
 ### Is Home Stories free to use?
-Yes. Home Stories is free to download and use. A one-time Premium Lifetime upgrade is available for advanced features — there is no subscription.
+Yes. Home Stories is free to download and use, for the whole job. A one-time "Home Stories Pro" purchase unlocks budget targets, the budget-vs-cost chart, PDF and CSV export, and task reminders — there is no subscription.
 
 ### Does the app work offline?
 Yes. Home Stories is built offline-first. Projects, budgets, tasks, and photos are fully available without an internet connection.
@@ -124,11 +124,12 @@ Yes. Each project is independent, with its own budget, tasks, and photo timeline
 ### How is Home Stories different from a spreadsheet?
 A spreadsheet only tracks numbers. Home Stories tracks budgets, tasks, and photos together, tied to the same project, with one-tap PDF export and mobile-first capture on the job site.
 
-## 7. Testimonials (user quotes)
+## 7. Reviews (published App Store reviews)
 
-- "Home Stories made our kitchen renovation so much easier to manage. The budget tracking feature showed exactly where every krone went, and the photo timeline became a fantastic record of the transformation." — Anders T.
-- "I'm renovating multiple rooms and Home Stories keeps everything organized. Each project has its own tasks, budget, and photos. The PDF export is perfect for sharing progress with contractors." — Maria S.
-- "The budget charts are incredible. I can see at a glance what's spent, what's remaining, and potential costs. No more spreadsheets — Home Stories has everything in one place." — Thomas H.
+The app is new and has one published review. Nothing here is written by us, and
+there are no other user quotes to cite.
+
+- "This app is brilliant when you have to plan and carry out projects, large and small. I wish I had had it a couple of years ago when we renovated a flat. It would have been very useful for planning and documenting the renovation, the hours spent and the materials bought." — Henrik Moenster, App Store (Denmark), 5 stars, v1.4.1, translated from Danish.
 
 ## 8. Comparable tools / positioning
 

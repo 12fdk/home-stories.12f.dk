@@ -6,6 +6,7 @@ import { ConfigContext } from "../../utils/configContext";
 import type { TemplateConfig } from "../../utils/configType";
 import Header from "./_components/header";
 import Facts from "./_components/facts";
+import Stakes from "./_components/stakes";
 import Features from "./_components/features";
 import Capabilities from "./_components/capabilities";
 import Comparison from "./_components/comparison";
@@ -30,6 +31,7 @@ function Home({ config, posts = [] }: Props) {
         <main>
           <Header />
           <Facts />
+          <Stakes />
           <Features />
           <Capabilities />
           <VideoDemo />

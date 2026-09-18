@@ -13,7 +13,6 @@ const sv: Translation = {
       "Blogg",
       "FAQ",
       "Om"
-    
     ]
   },
   "ui": {
@@ -56,16 +55,16 @@ const sv: Translation = {
     "footer": {
       "site": "Webbplats",
       "contact": "Kontakt",
-      "tagline": "Ett renoveringsverktyg för iPhone. Gjort i Danmark av Robert Jensen."
+      "tagline": "Renoveringsbudgetar skenar. Home Stories sätter spenderat, bundet och kvar på en och samma skärm, så att en överskridning syns medan du fortfarande kan göra något åt den. En renoveringsspårare för iPhone, gjord i Danmark av Robert Jensen."
     }
   },
   "header": {
-    "headline": "Din bostadsrenovering, uppmätt.",
-    "subtitle": "Home Stories är ett renoveringsverktyg för iPhone. Budgetar som håller sig ärliga, uppgifter i rätt ordning, foton som bevisar vad som hänt – exporterat som en PDF din hantverkare kan läsa.",
+    "headline": "Slutför renoveringen utan att budgeten skenar iväg.",
+    "subtitle": "Renoveringar spårar ur för att ingen ser överskridningen förrän pengarna redan är borta. Home Stories håller spenderat, bundet och kvar på en skärm – med uppgifter i rätt ordning och daterade bilder som bevisar vad som hände.",
     "usersDescription": "Byggd av en villaägare mitt i renoveringen, för villaägare mitt i renoveringen",
     "headlineMark": [
-      2,
-      3
+      4,
+      7
     ]
   },
   "facts": [
@@ -74,20 +73,20 @@ const sv: Translation = {
       "value": "Gratis"
     },
     {
-      "label": "Offline",
-      "value": "Helt"
+      "label": "Prenumeration",
+      "value": "Ingen"
     },
     {
       "label": "Konto",
       "value": "Inget"
     },
     {
-      "label": "Synk",
-      "value": "iCloud"
+      "label": "Offline",
+      "value": "Alltid"
     },
     {
-      "label": "Kräver",
-      "value": "iOS 17"
+      "label": "Dina data",
+      "value": "På enheten"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const sv: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Fem steg, från start till överlämning",
+    "title": "Fyra steg, från start till överlämning",
     "subtitle": "Ordningen som appen förväntar sig, och ordningen en renovering faktiskt löper i.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const sv: Translation = {
         "subtitle": "Dela upp jobbet i uppgifter och lägg sedan till material, inredning och offerter som var och en kräver. Uppskattningar nu, kvitton sen."
       },
       {
-        "title": "Registrera det du spenderar",
-        "subtitle": "Skriv in kostnader allteftersom de dyker upp. Diagrammet delar upp spenderat, bokfört och kvarvarande, så att ett överdrag syns medan du fortfarande kan agera på det."
-      },
-      {
-        "title": "Fotografera framstegen",
-        "subtitle": "Fotografera direkt i appen. Fotona dateras och kopplas till projektet, vilket är så du avgör hur väggen såg ut i mars."
+        "title": "Bokför utgiften, fotografera arbetet",
+        "subtitle": "Mata in kostnader allteftersom de kommer och fotografera direkt från appen. Diagrammet delar upp spenderat, bundet och kvar, så att en överskridning syns medan du fortfarande kan göra något åt den – och varje bild dateras och kopplas till projektet."
       },
       {
         "title": "Exportera rapporten",
@@ -181,12 +176,10 @@ const sv: Translation = {
     ]
   },
   "testimonials": {
-    "title": "Vad villaägare säger",
-    "subtitle": "Från människor mitt i renoveringen",
+    "title": "Alla omdömen hittills",
+    "subtitle": "Appen är ny, så det är inte många än. Det här är varje omdöme som kommit in – oredigerat, översatt från danska.",
     "comments": [
-      "Home Stories gjorde vår köksrenovering så mycket enklare att hantera. Budgetfunktionen visade exakt vart varje krona tog vägen, och fototidslinjen blev ett fantastiskt minne av förvandlingen.",
-      "Jag renoverar flera rum och Home Stories håller ordning på allt. Varje projekt har sina egna uppgifter, sin budget och sina foton. PDF-exporten är perfekt för att dela framstegen med hantverkare.",
-      "Budgetdiagrammen är otroliga. Jag ser i en överblick vad som är spenderat, vad som är kvar och möjliga kostnader. Inga fler kalkylblad – Home Stories har allt på ett ställe."
+      "Den här appen är genial när man ska planera och genomföra projekt, stora som små. Jag önskar att jag hade haft den för ett par år sedan när vi renoverade en lägenhet. Den hade varit mycket användbar för att planera och dokumentera renoveringen, timmarna som lagts ned och materialet som köpts in."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const sv: Translation = {
     "qa": [
       {
         "question": "Är Home Stories gratis att använda?",
-        "answer": "Ja, det är gratis! Vi erbjuder också en Premium Lifetime-uppgradering med mer avancerade funktioner för seriösa renoverare."
+        "answer": "Ja – gratis hela jobbet igenom, med obegränsat antal projekt, uppgifter, faser, bilder och utgiftsföring. Ett valfritt köp i appen, Home Stories Pro, låser upp budgetmål, budget-mot-kostnad-diagrammet, PDF- och CSV-export samt påminnelser. Det är ett engångspris, inte en prenumeration."
       },
       {
         "question": "Fungerar appen offline?",
-        "answer": "Absolut! Home Stories är byggt för att fungera helt offline så att du kommer åt dina projekt, budgetar och foton även utan internet – perfekt för byggarbetsplatsen."
+        "answer": "Helt och hållet. Projekt, budgetar och bilder ligger på enheten, så appen fungerar i en källare utan täckning och synkar sedan. Inget i den kräver att du är uppkopplad."
       },
       {
         "question": "Kan jag dela projekt med andra?",
-        "answer": "Ja! Med iCloud-synk hålls dina projekt uppdaterade på alla dina enheter. Du kan också exportera snygga PDF-rapporter att dela med hantverkare och familj eller spara för egna anteckningar."
+        "answer": "Ja, på två sätt. Dela ett projekt via iCloud så hålls det synkat i realtid med en partner, familjemedlem eller hantverkaren. Eller exportera en PDF-rapport – budget, uppgifter, bilder och anteckningar – till den som bara behöver läsa den."
       },
       {
         "question": "Hur exporterar jag rapporter?",
-        "answer": "Öppna bara ditt projekt, tryck på exportknappen och välj PDF. Home Stories skapar en snygg rapport med din budgetsammanfattning, uppgiftsstatus, foton och anteckningar."
+        "answer": "Öppna projektet, tryck på exportera och välj PDF eller CSV. Rapporten kommer ut med budgetsammanfattning, uppgiftsstatus, bilder och anteckningar redan uppställda, redo att skicka till hantverkaren eller försäkringsbolaget. Export ingår i Home Stories Pro."
       },
       {
         "question": "Vilka enheter stöds?",
-        "answer": "Home Stories finns för närvarande för iPhone och kräver iOS 17.0 eller senare. Vi fokuserar på att leverera bästa möjliga upplevelse på iOS först."
+        "answer": "iPhone med iOS 17.0 eller senare. Det finns ännu ingen version för iPad eller Android."
       },
       {
         "question": "Har Home Stories widgetar?",
@@ -247,8 +240,30 @@ const sv: Translation = {
     "title": "Gratis för hela bygget",
     "subtitle": "Kärnan är gratis, för alltid. Ett litet engångsköp låser upp de djupa budgetverktygen.",
     "plans": [
-      { "name": "Gratis", "period": "för alltid", "features": ["Obegränsade projekt, uppgifter och faser", "Fototidslinje med daterade foton", "Utgiftsloggning och artikelpriser", "Fungerar helt offline", "iCloud-synk mellan enheter", "Widgets för hem- och låsskärm"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "engångsköp — ingen prenumeration", "features": ["Budgetmål och budget-mot-kostnad-diagrammet", "Avancerad kostnadsanalys", "PDF- och CSV-export av rapporter och tidsloggar", "Uppgiftspåminnelser och deadline-notiser"], "cta": "Hämta appen — uppgradera i appen" }
+      {
+        "name": "Gratis",
+        "period": "för alltid",
+        "features": [
+          "Obegränsade projekt, uppgifter och faser",
+          "Fototidslinje med daterade foton",
+          "Utgiftsloggning och artikelpriser",
+          "Fungerar helt offline",
+          "iCloud-synk mellan enheter",
+          "Widgets för hem- och låsskärm"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "engångsköp — ingen prenumeration",
+        "features": [
+          "Budgetmål och budget-mot-kostnad-diagrammet",
+          "Avancerad kostnadsanalys",
+          "PDF- och CSV-export av rapporter och tidsloggar",
+          "Uppgiftspåminnelser och deadline-notiser"
+        ],
+        "cta": "Hämta appen — uppgradera i appen"
+      }
     ],
     "footnote": "Engångspris från App Store — det varierar mellan länder."
   },
@@ -256,20 +271,66 @@ const sv: Translation = {
     "label": "Mot kalkylarket",
     "title": "Varför inte bara ett kalkylark?",
     "subtitle": "Det funkar — till ungefär vecka tre. Den ärliga jämförelsen.",
-    "columns": { "them": "Ett kalkylark", "us": "Home Stories" },
+    "columns": {
+      "them": "Ett kalkylark",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Foton", "them": "I kamerarullen eller en mapp, omärkta", "us": "Daterade och fästa på projektets tidslinje" },
-      { "aspect": "Summor", "them": "Formler du skriver och underhåller själv", "us": "Spenderat, bundet och kvar — automatiskt" },
-      { "aspect": "På bygget", "them": "Nyp-zooma celler i telefonen", "us": "Byggt för iPhone, fungerar helt offline" },
-      { "aspect": "Delning", "them": "Mejla budget_v7_final_FINAL.xlsx", "us": "Live-delning via iCloud, eller en PDF alla kan läsa" },
-      { "aspect": "Kvitton", "them": "En skokartong och goda intentioner", "us": "Fotograferade och sparade med projektet" },
-      { "aspect": "När det går sönder", "them": "En raderad formel felar i tysthet", "us": "Inget att underhålla — strukturen är inbyggd" }
+      {
+        "aspect": "Foton",
+        "them": "I kamerarullen eller en mapp, omärkta",
+        "us": "Daterade och fästa på projektets tidslinje"
+      },
+      {
+        "aspect": "Summor",
+        "them": "Formler du skriver och underhåller själv",
+        "us": "Spenderat, bundet och kvar — automatiskt"
+      },
+      {
+        "aspect": "På bygget",
+        "them": "Nyp-zooma celler i telefonen",
+        "us": "Byggt för iPhone, fungerar helt offline"
+      },
+      {
+        "aspect": "Delning",
+        "them": "Mejla budget_v7_final_FINAL.xlsx",
+        "us": "Live-delning via iCloud, eller en PDF alla kan läsa"
+      },
+      {
+        "aspect": "Kvitton",
+        "them": "En skokartong och goda intentioner",
+        "us": "Fotograferade och sparade med projektet"
+      },
+      {
+        "aspect": "När det går sönder",
+        "them": "En raderad formel felar i tysthet",
+        "us": "Inget att underhålla — strukturen är inbyggd"
+      }
     ],
     "cta": "Läs varför kalkylark slutar fungera"
   },
   "appBanner": {
     "title": "Mät nästa projekt.",
     "subtitle": "Gratis på App Store. Fungerar offline, kräver inget konto och synkar med iCloud när du vill. Kräver iPhone med iOS 17 eller senare."
+  },
+  "stakes": {
+    "label": "Problemet",
+    "title": "Överskridningen anmäler sig inte",
+    "body": [
+      "Den kommer som några hundra här, en ändringsorder där, och ett kvitto du tänkte spara. Var och en är liten nog att vinka igenom, och ingen av dem är ögonblicket då du märker det.",
+      "Kalkylbladet berättar det först när klinkret ligger och pengarna är slut. Och ett halvår senare, när försäkringsbolaget frågar vad som fanns bakom den väggen, har ingen en bild på det."
+    ],
+    "stat": {
+      "value": "15–30 %",
+      "caption": "spannet som renoveringar vanligen överskrider budgeten med – bredare för äldre hus och för allt som öppnar en vägg.",
+      "linkText": "Se vad siffrorna säger"
+    },
+    "success": {
+      "label": "Den andra vägen",
+      "title": "Eller så når du överlämningen med kvittona i hand",
+      "body": "Spenderat, bundet och kvar står på en skärm från första dagen. Varje kostnad, bild och anteckning hamnar på det projekt den hör till, medan du fortfarande står i rummet. På överlämningsdagen är hela jobbet en PDF – siffrorna, tidslinjen och beviset på vad som fanns bakom väggen."
+    },
+    "cta": "Kom igång – gratis"
   }
 };
 

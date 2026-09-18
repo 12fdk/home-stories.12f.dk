@@ -24,7 +24,7 @@ faq:
   - question: "How does Home Stories compare to HomeZada for budgeting?"
     answer: "Both let you set up budget categories and log costs against them, but the experience is fundamentally different. HomeZada builds the budget on a desktop dashboard and expects you to update it from a desk. Home Stories builds the budget inside a phone app designed for on-site logging: tap to add a cost, type the amount, pick the category, and it's done in a few seconds. The HomeZada approach is fine for planning; the Home Stories approach works when you're standing in a builder's merchant paying for unexpected materials. If you need the budget to stay current on-site, phone-first matters."
   - question: "Is Home Stories free?"
-    answer: "Yes — Home Stories is free to download and use on the App Store for iPhone, with an optional one-time Premium Lifetime upgrade. There is no subscription and no monthly fee. The free version includes unlimited project budget tracking, a photo timeline with notes, task management, and PDF export. It requires iOS 17 or later."
+    answer: "Yes — Home Stories is free to download and use on the App Store for iPhone, with an optional one-time Home Stories Pro upgrade. There is no subscription and no monthly fee. The free version includes unlimited project budget tracking, a photo timeline with notes, task management, and PDF export. It requires iOS 17 or later."
   - question: "Should I use a renovation app at all, or just a spreadsheet?"
     answer: "A spreadsheet works for planning — building categories, estimating costs, and modelling scenarios at a desk. It fails the moment execution starts because spreadsheets are not designed for on-site logging: you need two hands, good lighting, and time you don't have while standing in a dusty room with a contractor waiting. A phone-first app like Home Stories solves that single problem by making logging take seconds. Every renovation tool review on this topic should start from that observation: the best tool is the one you actually use, and you'll only use what your phone can do in thirty seconds."
   - question: "What should I look for in a renovation app?"
@@ -110,7 +110,7 @@ The feature set is intentionally narrow:
 - **PDF export** — generate a clean report you can send to a contractor, your bank, or a tax adviser.
 - **Multi-project support** — manage a house renovation and a cottage on the go.
 
-It's free on the App Store for iPhone (requires iOS 17 or later), with an optional one-time Premium Lifetime upgrade for people who want the expanded features.
+It's free on the App Store for iPhone (requires iOS 17 or later), with an optional one-time Home Stories Pro upgrade for people who want the expanded features.
 
 ### What Home Stories does well
 

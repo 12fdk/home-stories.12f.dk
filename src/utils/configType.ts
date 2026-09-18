@@ -142,6 +142,29 @@ export type TemplateConfig = {
                 potential: number;
             } | undefined;
         };
+        /** Problem, cost of leaving it alone, and the opposite picture — the
+         *  part of the story the page used to skip straight past. */
+        stakes?: {
+            id?: string | undefined;
+            label: string;
+            title: string;
+            /** One paragraph per entry. */
+            body: string[];
+            /** A cited figure. Never a claim of our own — it links out. */
+            stat?: {
+                value: string;
+                caption: string;
+                linkText: string;
+                href: string;
+            } | undefined;
+            success: {
+                label: string;
+                title: string;
+                body: string;
+            };
+            /** Direct CTA label. The href is always the App Store link. */
+            cta: string;
+        } | undefined;
         /** Short, checkable facts. One line, mono, no marketing. */
         facts?: {
             label: string;
@@ -154,6 +177,9 @@ export type TemplateConfig = {
             cards: {
                 name: string;
                 comment: string;
+                /** Where the review is published, and whether it was translated.
+                 *  Rendered under the name so a quote can always be traced. */
+                source?: string | undefined;
             }[];
         } | undefined;
         faq?: {

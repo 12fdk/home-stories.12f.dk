@@ -7,7 +7,7 @@
 - **Product**: Home Stories: Renovation App
 - **Category**: Home renovation project management / home improvement tracker
 - **Platform**: iPhone only (iOS 17.0+)
-- **Price**: Free, with an optional one-time Premium Lifetime upgrade (no subscription)
+- **Price**: Free, with an optional one-time "Home Stories Pro" upgrade (no subscription)
 - **Developer**: Robert Jensen (12f, Denmark)
 - **Canonical URL**: https://home-stories.12f.dk
 - **App Store**: https://apps.apple.com/app/id6754754960
@@ -37,7 +37,7 @@ Home Stories replaces spreadsheets, notes apps, and photo albums with a single d
 
 ## Frequently asked (short answers)
 
-- **Is Home Stories free?** Yes. There is an optional Premium Lifetime unlock (one-time payment) for advanced features.
+- **Is Home Stories free?** Yes. There is an optional "Home Stories Pro" unlock (one-time payment) for advanced features.
 - **Does it work offline?** Yes. All features work fully offline.
 - **What devices are supported?** iPhone running iOS 17.0 or later. iPad is supported via iCloud sync.
 - **Is there an Android version?** Not currently. iOS first.

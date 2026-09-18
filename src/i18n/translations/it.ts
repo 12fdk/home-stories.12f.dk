@@ -13,7 +13,6 @@ const it: Translation = {
       "Blog",
       "FAQ",
       "Chi siamo"
-    
     ]
   },
   "ui": {
@@ -56,16 +55,16 @@ const it: Translation = {
     "footer": {
       "site": "Sito",
       "contact": "Contatti",
-      "tagline": "Un tracker per ristrutturazioni per iPhone. Realizzato in Danimarca da Robert Jensen."
+      "tagline": "I budget di ristrutturazione scivolano. Home Stories mette speso, impegnato e residuo su un solo schermo, così uno sforamento si vede finché puoi ancora intervenire. Un tracker per ristrutturazioni per iPhone, realizzato in Danimarca da Robert Jensen."
     }
   },
   "header": {
-    "headline": "La tua ristrutturazione, misurata.",
-    "subtitle": "Home Stories è un tracker per ristrutturazioni per iPhone. Budget sempre onesti, attività nell'ordine giusto, foto che dimostrano cosa è successo — esportate in un PDF che la tua impresa può leggere.",
+    "headline": "Finisci la ristrutturazione senza che il budget ti sfugga.",
+    "subtitle": "Le ristrutturazioni scivolano perché nessuno vede lo sforamento finché i soldi non sono già spesi. Home Stories tiene speso, impegnato e residuo su un solo schermo, con le attività nell'ordine giusto e foto datate che provano cosa è successo.",
     "usersDescription": "Creato da un proprietario di casa in piena ristrutturazione, per proprietari di casa in piena ristrutturazione",
     "headlineMark": [
-      3,
-      4
+      6,
+      9
     ]
   },
   "facts": [
@@ -74,20 +73,20 @@ const it: Translation = {
       "value": "Gratis"
     },
     {
-      "label": "Offline",
-      "value": "Totale"
+      "label": "Abbonamento",
+      "value": "Nessuno"
     },
     {
       "label": "Account",
       "value": "Nessuno"
     },
     {
-      "label": "Sync",
-      "value": "iCloud"
+      "label": "Offline",
+      "value": "Sempre"
     },
     {
-      "label": "Richiede",
-      "value": "iOS 17"
+      "label": "I tuoi dati",
+      "value": "Sul dispositivo"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const it: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Cinque passaggi, dall'inizio alla consegna",
+    "title": "Quattro passi, dall'inizio alla consegna",
     "subtitle": "L'ordine che l'app si aspetta, e l'ordine in cui una ristrutturazione procede davvero.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const it: Translation = {
         "subtitle": "Suddividi il lavoro in attività, poi aggiungi materiali, arredi e preventivi che ciascuna richiede. Stime ora, scontrini dopo."
       },
       {
-        "title": "Registra le spese",
-        "subtitle": "Inserisci i costi man mano che arrivano. Il grafico divide speso, impegnato e residuo, così uno sforamento si vede quando puoi ancora intervenire."
-      },
-      {
-        "title": "Fotografa i progressi",
-        "subtitle": "Scatta dall'interno dell'app. Le foto sono datate e ancorate al progetto: è così che stabilisci com'era il muro a marzo."
+        "title": "Registra la spesa, fotografa il lavoro",
+        "subtitle": "Inserisci i costi man mano che arrivano e fotografa direttamente dall'app. Il grafico divide speso, impegnato e residuo, così uno sforamento si vede finché puoi ancora intervenire — e ogni foto viene datata e agganciata al progetto."
       },
       {
         "title": "Esporta il report",
@@ -181,12 +176,10 @@ const it: Translation = {
     ]
   },
   "testimonials": {
-    "title": "Cosa dicono i proprietari di casa",
-    "subtitle": "Da persone in piena ristrutturazione",
+    "title": "Tutte le recensioni finora",
+    "subtitle": "L'app è nuova, quindi non sono ancora molte. Queste sono tutte le recensioni arrivate, non ritoccate, tradotte dal danese.",
     "comments": [
-      "Home Stories ha reso la ristrutturazione della nostra cucina molto più facile da gestire. Il monitoraggio del budget ci ha mostrato esattamente dove è finita ogni corona, e la cronologia fotografica è diventata un fantastico registro della trasformazione.",
-      "Sto ristrutturando più stanze e Home Stories tiene tutto organizzato. Ogni progetto ha le proprie attività, il proprio budget e le proprie foto. L'esportazione in PDF è perfetta per condividere i progressi con le imprese.",
-      "I grafici del budget sono incredibili. Vedo a colpo d'occhio cosa è stato speso, cosa resta e i costi potenziali. Niente più fogli di calcolo: Home Stories ha tutto in un unico posto."
+      "Questa app è geniale quando devi pianificare e portare avanti progetti, grandi o piccoli. Vorrei averla avuta un paio di anni fa, quando abbiamo ristrutturato un appartamento. Sarebbe stata molto utile per pianificare e documentare la ristrutturazione, le ore impiegate e i materiali acquistati."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const it: Translation = {
     "qa": [
       {
         "question": "Home Stories è gratuita?",
-        "answer": "Sì, è gratuita! Offriamo anche un upgrade Premium a vita con funzionalità più avanzate per chi ristruttura sul serio."
+        "answer": "Sì, gratis per tutto il lavoro, con progetti, attività, fasi, foto e registrazione delle spese illimitati. Un acquisto facoltativo in-app, Home Stories Pro, sblocca gli obiettivi di budget, il grafico budget/costo, l'esportazione in PDF e CSV e i promemoria. È un prezzo una tantum, non un abbonamento."
       },
       {
         "question": "L'app funziona offline?",
-        "answer": "Assolutamente! Home Stories è progettata per funzionare completamente offline, così puoi accedere a progetti, budget e foto anche senza connessione a internet — perfetta in cantiere."
+        "answer": "Completamente. Progetti, budget e foto stanno sul dispositivo, quindi l'app funziona in una cantina senza segnale e sincronizza dopo. Niente in essa richiede di essere online."
       },
       {
         "question": "Posso condividere i progetti con altri?",
-        "answer": "Sì! Con la sincronizzazione iCloud i tuoi progetti restano aggiornati su tutti i tuoi dispositivi. Puoi anche esportare report PDF professionali da condividere con le imprese, la famiglia o da conservare per archivio."
+        "answer": "Sì, in due modi. Condividi un progetto su iCloud e resta sincronizzato in tempo reale con il partner, un familiare o l'impresa. Oppure esporta un report PDF — budget, attività, foto e note — per chi deve solo leggerlo."
       },
       {
         "question": "Come esporto i report?",
-        "answer": "Apri semplicemente il tuo progetto, tocca il pulsante di esportazione e scegli PDF. Home Stories genera un report professionale con il riepilogo del budget, l'avanzamento delle attività, le foto e le note."
+        "answer": "Apri il progetto, tocca esporta e scegli PDF o CSV. Il report esce con il riepilogo del budget, lo stato delle attività, le foto e le note già impaginati, pronto da mandare all'impresa o all'assicurazione. L'esportazione fa parte di Home Stories Pro."
       },
       {
         "question": "Quali dispositivi sono supportati?",
-        "answer": "Home Stories è attualmente disponibile per iPhone e richiede iOS 17.0 o successivo. Ci concentriamo prima sull'offrire la migliore esperienza possibile su iOS."
+        "answer": "iPhone, con iOS 17.0 o successivo. Non esiste ancora una versione per iPad o Android."
       },
       {
         "question": "Home Stories ha i widget?",
@@ -247,8 +240,30 @@ const it: Translation = {
     "title": "Gratis per l'intero cantiere",
     "subtitle": "Il nucleo è gratuito, per sempre. Un piccolo acquisto una tantum sblocca gli strumenti di budget avanzati.",
     "plans": [
-      { "name": "Gratis", "period": "per sempre", "features": ["Progetti, attività e fasi illimitati", "Timeline fotografica con foto datate", "Registrazione spese e prezzi degli articoli", "Funziona completamente offline", "Sincronizzazione iCloud tra dispositivi", "Widget per schermata Home e di blocco"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "acquisto una tantum — nessun abbonamento", "features": ["Obiettivi di budget e grafico budget-costi", "Analisi dei costi avanzata", "Esportazione PDF e CSV di report e registri tempo", "Promemoria attività e notifiche di scadenza"], "cta": "Scarica l'app — upgrade all'interno" }
+      {
+        "name": "Gratis",
+        "period": "per sempre",
+        "features": [
+          "Progetti, attività e fasi illimitati",
+          "Timeline fotografica con foto datate",
+          "Registrazione spese e prezzi degli articoli",
+          "Funziona completamente offline",
+          "Sincronizzazione iCloud tra dispositivi",
+          "Widget per schermata Home e di blocco"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "acquisto una tantum — nessun abbonamento",
+        "features": [
+          "Obiettivi di budget e grafico budget-costi",
+          "Analisi dei costi avanzata",
+          "Esportazione PDF e CSV di report e registri tempo",
+          "Promemoria attività e notifiche di scadenza"
+        ],
+        "cta": "Scarica l'app — upgrade all'interno"
+      }
     ],
     "footnote": "Prezzo una tantum su App Store — varia da Paese a Paese."
   },
@@ -256,20 +271,66 @@ const it: Translation = {
     "label": "Contro il foglio di calcolo",
     "title": "Perché non un semplice foglio di calcolo?",
     "subtitle": "Funziona — fino alla terza settimana, più o meno. Il confronto onesto.",
-    "columns": { "them": "Un foglio di calcolo", "us": "Home Stories" },
+    "columns": {
+      "them": "Un foglio di calcolo",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Foto", "them": "Nel rullino o in una cartella, senza etichette", "us": "Datate e fissate alla timeline del progetto" },
-      { "aspect": "Totali", "them": "Formule che scrivi e mantieni da solo", "us": "Speso, impegnato e rimanente — automatico" },
-      { "aspect": "In cantiere", "them": "Zoom sulle celle dal telefono", "us": "Fatto per iPhone, funziona completamente offline" },
-      { "aspect": "Condivisione", "them": "Inviare budget_v7_final_FINAL.xlsx via mail", "us": "Condivisione iCloud in tempo reale, o un PDF leggibile da tutti" },
-      { "aspect": "Scontrini", "them": "Una scatola di scarpe e buone intenzioni", "us": "Fotografati e conservati con il progetto" },
-      { "aspect": "Quando si rompe", "them": "Una formula cancellata fallisce in silenzio", "us": "Niente da mantenere — la struttura è integrata" }
+      {
+        "aspect": "Foto",
+        "them": "Nel rullino o in una cartella, senza etichette",
+        "us": "Datate e fissate alla timeline del progetto"
+      },
+      {
+        "aspect": "Totali",
+        "them": "Formule che scrivi e mantieni da solo",
+        "us": "Speso, impegnato e rimanente — automatico"
+      },
+      {
+        "aspect": "In cantiere",
+        "them": "Zoom sulle celle dal telefono",
+        "us": "Fatto per iPhone, funziona completamente offline"
+      },
+      {
+        "aspect": "Condivisione",
+        "them": "Inviare budget_v7_final_FINAL.xlsx via mail",
+        "us": "Condivisione iCloud in tempo reale, o un PDF leggibile da tutti"
+      },
+      {
+        "aspect": "Scontrini",
+        "them": "Una scatola di scarpe e buone intenzioni",
+        "us": "Fotografati e conservati con il progetto"
+      },
+      {
+        "aspect": "Quando si rompe",
+        "them": "Una formula cancellata fallisce in silenzio",
+        "us": "Niente da mantenere — la struttura è integrata"
+      }
     ],
     "cta": "Perché i fogli di calcolo smettono di funzionare"
   },
   "appBanner": {
     "title": "Misura la prossima.",
     "subtitle": "Gratis sull'App Store. Funziona offline, non richiede alcun account e si sincronizza con iCloud quando vuoi. Richiede iPhone con iOS 17 o successivo."
+  },
+  "stakes": {
+    "label": "Il problema",
+    "title": "Lo sforamento non si annuncia",
+    "body": [
+      "Arriva come qualche centinaio qui, una variante là e una ricevuta che volevi archiviare. Ognuno è abbastanza piccolo da lasciar passare, e nessuno è il momento in cui te ne accorgi.",
+      "Il foglio di calcolo te lo dice solo quando le piastrelle sono posate e i soldi sono finiti. E sei mesi dopo, quando l'assicurazione chiede cosa c'era dietro quel muro, nessuno ne ha una foto."
+    ],
+    "stat": {
+      "value": "15–30%",
+      "caption": "la fascia entro cui le ristrutturazioni sforano di solito il budget: più ampia per le case vecchie e per tutto ciò che apre un muro.",
+      "linkText": "Guarda cosa dicono i dati"
+    },
+    "success": {
+      "label": "L'altra strada",
+      "title": "Oppure arrivi alla consegna con le ricevute in mano",
+      "body": "Speso, impegnato e residuo stanno su un solo schermo dal primo giorno. Ogni costo, foto e nota finisce nel progetto a cui appartiene, mentre sei ancora in piedi nella stanza. Il giorno della consegna tutto il lavoro è un PDF: i numeri, la cronologia e la prova di cosa c'era dietro il muro."
+    },
+    "cta": "Inizia a tenerne traccia — gratis"
   }
 };
 

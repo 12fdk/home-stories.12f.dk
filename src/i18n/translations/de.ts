@@ -13,7 +13,6 @@ const de: Translation = {
       "Blog",
       "FAQ",
       "Über"
-    
     ]
   },
   "ui": {
@@ -56,38 +55,38 @@ const de: Translation = {
     "footer": {
       "site": "Seite",
       "contact": "Kontakt",
-      "tagline": "Ein Renovierungs-Tracker fürs iPhone. Hergestellt in Dänemark von Robert Jensen."
+      "tagline": "Renovierungsbudgets laufen davon. Home Stories zeigt Ausgegeben, Gebunden und Rest auf einem Bildschirm, damit eine Überschreitung auffällt, solange du noch reagieren kannst. Ein Renovierungs-Tracker für iPhone, gemacht in Dänemark von Robert Jensen."
     }
   },
   "header": {
-    "headline": "Ihre Renovierung, gemessen.",
-    "subtitle": "Home Stories ist ein Renovierungs-Tracker fürs iPhone. Budgets, die ehrlich bleiben, Aufgaben in der richtigen Reihenfolge, Fotos, die belegen, was passiert ist – als PDF exportiert, das Ihr Handwerker lesen kann.",
+    "headline": "Bring die Renovierung zu Ende, ohne dass das Budget dir davonläuft.",
+    "subtitle": "Renovierungen laufen aus dem Ruder, weil niemand die Überschreitung sieht, bevor das Geld weg ist. Home Stories hält Ausgegeben, Gebunden und Rest auf einem Bildschirm – mit Aufgaben in der richtigen Reihenfolge und datierten Fotos, die belegen, was passiert ist.",
     "usersDescription": "Von einem Hausbesitzer mitten in der Renovierung entwickelt – für Hausbesitzer mitten in der Renovierung",
     "headlineMark": [
-      2,
-      3
+      8,
+      11
     ]
   },
   "facts": [
     {
       "label": "Preis",
-      "value": "Gratis"
+      "value": "Kostenlos"
     },
     {
-      "label": "Offline",
-      "value": "Komplett"
+      "label": "Abo",
+      "value": "Keins"
     },
     {
       "label": "Konto",
       "value": "Keins"
     },
     {
-      "label": "Sync",
-      "value": "iCloud"
+      "label": "Offline",
+      "value": "Immer"
     },
     {
-      "label": "Erfordert",
-      "value": "iOS 17"
+      "label": "Deine Daten",
+      "value": "Auf dem Gerät"
     }
   ],
   "features": {
@@ -155,7 +154,7 @@ const de: Translation = {
     ]
   },
   "howItWorks": {
-    "title": "Fünf Schritte, vom Start bis zur Übergabe",
+    "title": "Vier Schritte, von Anfang bis Übergabe",
     "subtitle": "Die Reihenfolge, die die App erwartet – und die Reihenfolge, in der eine Renovierung tatsächlich abläuft.",
     "steps": [
       {
@@ -167,12 +166,8 @@ const de: Translation = {
         "subtitle": "Zerlegen Sie das Projekt in Aufgaben und fügen Sie dann die Materialien, Einbauten und Angebote hinzu, die jede braucht. Erst Schätzungen, später Belege."
       },
       {
-        "title": "Erfassen, was Sie ausgeben",
-        "subtitle": "Tragen Sie Kosten ein, sobald sie anfallen. Das Diagramm teilt in ausgegeben, verplant und verbleibend auf, sodass eine Überschreitung auffällt, solange Sie noch handeln können."
-      },
-      {
-        "title": "Den Fortschritt fotografieren",
-        "subtitle": "Fotografieren Sie direkt aus der App. Fotos werden datiert und ans Projekt geheftet – so klären Sie, wie die Wand im März aussah."
+        "title": "Kosten erfassen, Arbeit fotografieren",
+        "subtitle": "Trage Kosten ein, sobald sie anfallen, und fotografiere direkt aus der App. Das Diagramm teilt in Ausgegeben, Gebunden und Rest, sodass eine Überschreitung auffällt, solange du noch reagieren kannst – und jedes Foto wird datiert und dem Projekt zugeordnet."
       },
       {
         "title": "Den Bericht exportieren",
@@ -181,12 +176,10 @@ const de: Translation = {
     ]
   },
   "testimonials": {
-    "title": "Was Hausbesitzer sagen",
-    "subtitle": "Von Menschen mitten in der Renovierung",
+    "title": "Alle Bewertungen bisher",
+    "subtitle": "Die App ist neu, es sind also noch nicht viele. Das hier ist jede Bewertung, die eingegangen ist – unbearbeitet, aus dem Dänischen übersetzt.",
     "comments": [
-      "Home Stories hat unsere Küchenrenovierung so viel leichter handhabbar gemacht. Die Budgetverfolgung zeigte genau, wohin jede Krone floss, und die Foto-Zeitleiste wurde zu einer fantastischen Aufzeichnung der Verwandlung.",
-      "Ich renoviere mehrere Räume, und Home Stories hält alles organisiert. Jedes Projekt hat seine eigenen Aufgaben, sein Budget und seine Fotos. Der PDF-Export ist perfekt, um Handwerkern den Fortschritt zu zeigen.",
-      "Die Budget-Diagramme sind großartig. Ich sehe auf einen Blick, was ausgegeben ist, was verbleibt und welche Kosten drohen. Keine Tabellen mehr – Home Stories hat alles an einem Ort."
+      "Diese App ist genial, wenn man Projekte planen und durchziehen muss, große wie kleine. Ich wünschte, ich hätte sie vor ein paar Jahren gehabt, als wir eine Wohnung renoviert haben. Sie wäre sehr nützlich gewesen, um die Renovierung zu dokumentieren und zu planen, die aufgewendeten Stunden und die gekauften Materialien."
     ]
   },
   "faq": {
@@ -194,23 +187,23 @@ const de: Translation = {
     "qa": [
       {
         "question": "Ist Home Stories kostenlos?",
-        "answer": "Ja, es ist kostenlos! Wir bieten außerdem ein Premium-Lifetime-Upgrade mit erweiterten Funktionen für ernsthafte Renovierer."
+        "answer": "Ja – kostenlos für das ganze Projekt, mit unbegrenzten Projekten, Aufgaben, Phasen, Fotos und Ausgabenerfassung. Ein optionaler In-App-Kauf, Home Stories Pro, schaltet Budgetziele, das Budget-gegen-Kosten-Diagramm, PDF- und CSV-Export sowie Erinnerungen frei. Das ist ein einmaliger Preis, kein Abo."
       },
       {
         "question": "Funktioniert die App offline?",
-        "answer": "Absolut! Home Stories ist so gebaut, dass es vollständig offline funktioniert, sodass Sie auch ohne Internetzugang auf Ihre Projekte, Budgets und Fotos zugreifen können – perfekt für die Baustelle."
+        "answer": "Vollständig. Projekte, Budgets und Fotos liegen auf dem Gerät, die App funktioniert also im Keller ohne Empfang und synchronisiert später. Nichts daran setzt voraus, dass du online bist."
       },
       {
         "question": "Kann ich Projekte mit anderen teilen?",
-        "answer": "Ja! Mit iCloud-Sync bleiben Ihre Projekte auf allen Geräten aktuell. Sie können außerdem professionelle PDF-Berichte exportieren, um sie mit Handwerkern und Familie zu teilen oder für die Unterlagen aufzubewahren."
+        "answer": "Ja, auf zwei Wegen. Teile ein Projekt über iCloud, dann bleibt es in Echtzeit mit Partner, Familie oder Handwerker synchron. Oder exportiere einen PDF-Bericht – Budget, Aufgaben, Fotos und Notizen – für alle, die ihn nur lesen müssen."
       },
       {
         "question": "Wie exportiere ich Berichte?",
-        "answer": "Öffnen Sie einfach Ihr Projekt, tippen Sie auf die Export-Schaltfläche und wählen Sie PDF. Home Stories erstellt einen professionellen Bericht mit Ihrer Budgetübersicht, dem Aufgabenfortschritt, Fotos und Notizen."
+        "answer": "Projekt öffnen, auf Exportieren tippen, PDF oder CSV wählen. Der Bericht kommt fertig gesetzt heraus, mit Budgetübersicht, Aufgabenstand, Fotos und Notizen – bereit für Handwerker oder Versicherung. Der Export gehört zu Home Stories Pro."
       },
       {
         "question": "Welche Geräte werden unterstützt?",
-        "answer": "Home Stories ist derzeit fürs iPhone verfügbar und erfordert iOS 17.0 oder neuer. Wir konzentrieren uns darauf, zuerst das bestmögliche Erlebnis auf iOS zu liefern."
+        "answer": "iPhone mit iOS 17.0 oder neuer. Eine Version für iPad oder Android gibt es noch nicht."
       },
       {
         "question": "Hat Home Stories Widgets?",
@@ -247,8 +240,30 @@ const de: Translation = {
     "title": "Kostenlos für das ganze Projekt",
     "subtitle": "Der Kern ist kostenlos, für immer. Ein kleiner Einmalkauf schaltet die tiefen Budget-Werkzeuge frei.",
     "plans": [
-      { "name": "Kostenlos", "period": "für immer", "features": ["Unbegrenzte Projekte, Aufgaben und Phasen", "Foto-Timeline mit datierten Fotos", "Ausgabenerfassung und Artikelpreise", "Funktioniert komplett offline", "iCloud-Sync über alle Geräte", "Widgets für Home- und Sperrbildschirm"], "cta": "" },
-      { "name": "Home Stories Pro", "period": "Einmalkauf — kein Abo", "features": ["Budgetziele und das Budget-Kosten-Diagramm", "Erweiterte Kostenanalyse", "PDF- & CSV-Export von Berichten und Zeitprotokollen", "Aufgaben-Erinnerungen und Termin-Benachrichtigungen"], "cta": "App laden — Upgrade in der App" }
+      {
+        "name": "Kostenlos",
+        "period": "für immer",
+        "features": [
+          "Unbegrenzte Projekte, Aufgaben und Phasen",
+          "Foto-Timeline mit datierten Fotos",
+          "Ausgabenerfassung und Artikelpreise",
+          "Funktioniert komplett offline",
+          "iCloud-Sync über alle Geräte",
+          "Widgets für Home- und Sperrbildschirm"
+        ],
+        "cta": ""
+      },
+      {
+        "name": "Home Stories Pro",
+        "period": "Einmalkauf — kein Abo",
+        "features": [
+          "Budgetziele und das Budget-Kosten-Diagramm",
+          "Erweiterte Kostenanalyse",
+          "PDF- & CSV-Export von Berichten und Zeitprotokollen",
+          "Aufgaben-Erinnerungen und Termin-Benachrichtigungen"
+        ],
+        "cta": "App laden — Upgrade in der App"
+      }
     ],
     "footnote": "Einmalpreis aus dem App Store — er variiert je nach Land."
   },
@@ -256,20 +271,66 @@ const de: Translation = {
     "label": "Gegen die Tabelle",
     "title": "Warum nicht einfach eine Tabelle?",
     "subtitle": "Sie funktioniert — bis etwa Woche drei. Der ehrliche Vergleich.",
-    "columns": { "them": "Eine Tabelle", "us": "Home Stories" },
+    "columns": {
+      "them": "Eine Tabelle",
+      "us": "Home Stories"
+    },
     "rows": [
-      { "aspect": "Fotos", "them": "In der Fotomediathek oder einem Ordner, unbeschriftet", "us": "Datiert und an die Projekt-Timeline geheftet" },
-      { "aspect": "Summen", "them": "Formeln, die du selbst schreibst und pflegst", "us": "Ausgegeben, gebunden und verbleibend — automatisch" },
-      { "aspect": "Auf der Baustelle", "them": "Zellen-Zoomen auf dem Handy", "us": "Für iPhone gebaut, funktioniert komplett offline" },
-      { "aspect": "Teilen", "them": "budget_v7_final_FINAL.xlsx per E-Mail", "us": "Live-iCloud-Freigabe oder ein PDF, das jeder lesen kann" },
-      { "aspect": "Belege", "them": "Ein Schuhkarton und gute Vorsätze", "us": "Fotografiert und beim Projekt gespeichert" },
-      { "aspect": "Wenn es bricht", "them": "Eine gelöschte Formel scheitert lautlos", "us": "Nichts zu pflegen — die Struktur ist eingebaut" }
+      {
+        "aspect": "Fotos",
+        "them": "In der Fotomediathek oder einem Ordner, unbeschriftet",
+        "us": "Datiert und an die Projekt-Timeline geheftet"
+      },
+      {
+        "aspect": "Summen",
+        "them": "Formeln, die du selbst schreibst und pflegst",
+        "us": "Ausgegeben, gebunden und verbleibend — automatisch"
+      },
+      {
+        "aspect": "Auf der Baustelle",
+        "them": "Zellen-Zoomen auf dem Handy",
+        "us": "Für iPhone gebaut, funktioniert komplett offline"
+      },
+      {
+        "aspect": "Teilen",
+        "them": "budget_v7_final_FINAL.xlsx per E-Mail",
+        "us": "Live-iCloud-Freigabe oder ein PDF, das jeder lesen kann"
+      },
+      {
+        "aspect": "Belege",
+        "them": "Ein Schuhkarton und gute Vorsätze",
+        "us": "Fotografiert und beim Projekt gespeichert"
+      },
+      {
+        "aspect": "Wenn es bricht",
+        "them": "Eine gelöschte Formel scheitert lautlos",
+        "us": "Nichts zu pflegen — die Struktur ist eingebaut"
+      }
     ],
     "cta": "Warum Tabellen irgendwann nicht mehr reichen"
   },
   "appBanner": {
     "title": "Messen Sie die nächste.",
     "subtitle": "Kostenlos im App Store. Funktioniert offline, braucht kein Konto und synchronisiert mit iCloud, wenn Sie es möchten. Erfordert ein iPhone mit iOS 17 oder neuer."
+  },
+  "stakes": {
+    "label": "Das Problem",
+    "title": "Die Überschreitung kündigt sich nicht an",
+    "body": [
+      "Sie kommt als ein paar hundert hier, eine Nachtragsrechnung dort und ein Beleg, den du ablegen wolltest. Jeder einzelne ist klein genug, um ihn durchzuwinken, und keiner davon ist der Moment, in dem du es merkst.",
+      "Die Tabelle sagt es dir erst, wenn die Fliesen liegen und das Geld weg ist. Und ein halbes Jahr später, wenn die Versicherung fragt, was hinter dieser Wand war, hat niemand ein Foto davon."
+    ],
+    "stat": {
+      "value": "15–30 %",
+      "caption": "die Spanne, um die Renovierungen typischerweise über Budget gehen – größer bei Altbauten und bei allem, das eine Wand öffnet.",
+      "linkText": "Sieh dir die Datenlage an"
+    },
+    "success": {
+      "label": "Der andere Weg",
+      "title": "Oder du stehst bei der Übergabe noch mit den Belegen da",
+      "body": "Ausgegeben, Gebunden und Rest stehen ab dem ersten Tag auf einem Bildschirm. Jede Ausgabe, jedes Foto und jede Notiz landet bei dem Projekt, zu dem sie gehört, während du noch im Raum stehst. Am Übergabetag ist die ganze Arbeit eine PDF – die Zahlen, der Zeitverlauf und der Beleg dafür, was hinter der Wand war."
+    },
+    "cta": "Jetzt starten – kostenlos"
   }
 };
 
