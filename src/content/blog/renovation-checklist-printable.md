@@ -165,7 +165,9 @@ A renovation isn't finished when the work stops — it's finished when the snags
 
 ## Print it, or carry it
 
-You can print this whole list straight from the page and tape it to the wall — that's genuinely useful for the at-a-glance, whole-project view, and crossing items off by hand is satisfying.
+**[Download the checklist as a PDF](/downloads/renovation-checklist.pdf)** — three A4 pages, every phase, with tick boxes. No email, no signup.
+
+You can also print this whole page and tape it to the wall — that's genuinely useful for the at-a-glance, whole-project view, and crossing items off by hand is satisfying.
 
 But a wall chart has one flaw: it isn't with you at the builder's merchant, on the scaffold, or standing in the half-stripped bathroom wondering whether the plumber's first fix is signed off. That's where the checklist needs to live. [Home Stories](https://apps.apple.com/app/id6754754960) keeps this same task list on your phone, alongside the budget and the photos, so each task carries its own receipt and its own pipe-run photo. Tick it, shoot it, log the cost — once, on the spot.
 

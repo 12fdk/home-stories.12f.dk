@@ -36,6 +36,23 @@ const formatDate = (d: Date) =>
 const canonicalPath = `/blog/${post.slug}/`;
 const canonicalURL = new URL(canonicalPath, Astro.site);
 const ogImage = post.data.ogImage ?? `/og/${post.slug}.png`;
+// The transitional CTA offers whichever free download actually matches what
+// the reader just read: the spreadsheet on a money post, the phase checklist
+// otherwise. A post never offers its own download twice, since the body of
+// those two already links it. Ungated — no form, no email. #119
+const transitional = (() => {
+  if (post.slug === "renovation-budget-template" || post.slug === "renovation-checklist-printable") {
+    return { transitionalText: null };
+  }
+  if (post.data.tags?.includes("budgeting")) {
+    return {
+      transitionalText: "Not starting yet? Download the free budget template (XLSX)",
+      transitionalHref: "/downloads/renovation-budget-template.xlsx",
+    };
+  }
+  return {};
+})();
+
 const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
 
 // Explicit relatedSlugs win. The fallback used to take the first three posts in the
@@ -164,7 +181,7 @@ const articleSchema = {
       body="Renovation budgets drift. Home Stories puts spent, committed and remaining on one screen, so an overrun shows up while you can still act on it — free on the App Store."
       buttonText="Get Home Stories — Free on the App Store"
       slug={post.slug}
-      transitionalText={post.slug === "renovation-checklist-printable" ? null : undefined}
+      {...transitional}
     />
 
     <FaqSection items={post.data.faq} />

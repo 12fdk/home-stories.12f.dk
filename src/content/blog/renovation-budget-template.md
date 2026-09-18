@@ -131,10 +131,17 @@ These look high. They are exactly the percentages by which the average renovatio
 
 The included template has a single cell for contingency percentage at the top. Change it once, every category updates. That's it.
 
+## Download the template
+
+All nine categories, pre-populated with the line items above, with the contingency cell already wired to the totals. No email, no signup — it just downloads.
+
+- **[Renovation budget template (XLSX)](/downloads/renovation-budget-template.xlsx)** — contingency cell drives the totals, plus a per-category summary sheet.
+- **[Same thing as a CSV](/downloads/renovation-budget-template.csv)** — plain, opens in anything, no formulas.
+
 ## How to use the template (5-minute setup)
 
-1. **Create the sheet.** Six columns: *Category, Item, Supplier, Low quote, Mid quote, High quote, Actual paid, Date paid, VAT*. One row per line item.
-2. **Add the 9 category headings** from above, with their typical line items underneath. Use the H2 lists in this post as your starting set — delete what doesn't apply to your project.
+1. **Open the sheet.** Nine columns: *Category, Item, Supplier, Low quote, Mid quote, High quote, Actual paid, Date paid, VAT*. One row per line item. If you would rather build your own, those columns are the whole structure.
+2. **Delete what doesn't apply.** The 9 categories above are already filled in with their typical line items. Most projects use maybe two-thirds of them — cut the rest.
 3. **Get three contractor quotes per major trade** and enter them in the Low / Mid / High columns. Use the Mid for your working budget; the range stays visible for negotiation.
 4. **Set your contingency** at the top of the sheet as a single percentage cell (e.g. cell B3 = 0.20 for 20%). Reference it in a "contingency budget" formula at the bottom: `=SUM(midQuotes) * B3`.
 5. **Log actuals as they happen.** Not weekly — *as they happen*. Every receipt, every transfer, every invoice. Three days of "I'll catch up Sunday" and you've lost the thread.

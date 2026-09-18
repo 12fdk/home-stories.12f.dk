@@ -46,6 +46,11 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Free downloads. Not hashed, and regenerated whenever the posts that describe
+# them change, so a day is the right ceiling — not the 1-year immutable above.
+/downloads/*
+  Cache-Control: public, max-age=86400
+
 # LLM/AI content files
 /llms.txt
   Cache-Control: public, max-age=86400

@@ -20,10 +20,16 @@ interface Props {
    * The transitional CTA: a lower-commitment next step for the reader who is
    * three weeks from starting and will not install an app today. Keeps them in
    * the story instead of dropping them at a download they are not ready for.
-   * Pass `null` to suppress it — a post must not offer a link to itself. #117
+   *
+   * It is an ungated direct download — no form, no email, no signup. There is
+   * no mailing list on this site and none is planned. #119
+   *
+   * Pass `null` to suppress it. #117
    */
   transitionalText?: string | null;
   transitionalHref?: string;
+  /** Set for a direct file download so the browser saves rather than navigates. */
+  transitionalDownload?: boolean;
 }
 
 const {
@@ -33,8 +39,9 @@ const {
   buttonText = "Get Home Stories — Free",
   slug,
   appStoreLink = "https://apps.apple.com/app/id6754754960",
-  transitionalText = "Not starting yet? Take the printable renovation checklist instead",
-  transitionalHref = "/blog/renovation-checklist-printable/",
+  transitionalText = "Not starting yet? Download the free phase checklist (PDF)",
+  transitionalHref = "/downloads/renovation-checklist.pdf",
+  transitionalDownload = true,
 } = Astro.props;
 
 const track = {
@@ -78,9 +85,10 @@ const track = {
           <p class="mb-0 mt-4 text-sm">
             <a
               href={transitionalHref}
+              download={transitionalDownload ? "" : undefined}
               class="text-base-content/60 underline-offset-4 hover:text-base-content"
             >
-              {transitionalText} →
+              {transitionalText} ↓
             </a>
           </p>
         )
