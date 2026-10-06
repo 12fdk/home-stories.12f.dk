@@ -26,7 +26,9 @@ function Comparison() {
           subtitle={comparison.subtitle}
         />
 
-        {/* Mobile: one stacked card per row — no horizontal scroll. */}
+        {/* Mobile: category, then each side with its label above the copy.
+            An inline label steals the first line, so longer locale strings
+            wrap into orphans ("timeline" alone, "contractor kept apart."). */}
         <motion.dl
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,20 +37,29 @@ function Comparison() {
           className="mt-10 divide-y divide-base-300 border-y border-base-300 md:hidden"
         >
           {comparison.rows.map((row) => (
-            <div key={row.aspect} className="py-5">
-              <dt className="tick-label text-base-content/45">{row.aspect}</dt>
-              <dd className="m-0 mt-2 text-sm leading-relaxed text-base-content/60">
-                <span className="tick-label mr-2 text-base-content/40">
+            <div key={row.aspect} className="py-6">
+              <dt className="tick-label !text-sm text-base-content/80">
+                {row.aspect}
+              </dt>
+              <dd className="m-0 mt-4">
+                <span className="tick-label block text-base-content/45">
                   {comparison.columns.them}
                 </span>
-                {row.them}
+                <p className="m-0 mt-1 text-balance text-sm leading-relaxed text-base-content/60">
+                  {row.them}
+                </p>
               </dd>
-              <dd className="m-0 mt-2 text-sm font-medium leading-relaxed text-base-content">
-                <span className="tick-label mr-2 flex-none text-base-content/40">
-                  <span className="mr-1 inline-block h-0.5 w-4 translate-y-[-3px] bg-accent" />
+              <dd className="m-0 mt-4">
+                <span className="tick-label flex items-center gap-2 text-base-content">
+                  <span
+                    className="inline-block h-0.5 w-4 shrink-0 bg-accent"
+                    aria-hidden="true"
+                  />
                   {comparison.columns.us}
                 </span>
-                {row.us}
+                <p className="m-0 mt-1 text-balance text-sm font-medium leading-relaxed text-base-content">
+                  {row.us}
+                </p>
               </dd>
             </div>
           ))}
@@ -65,7 +76,10 @@ function Comparison() {
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b border-base-300">
-                <th className="w-32 py-3 pr-4 text-left align-bottom md:w-40" aria-label="Aspect" />
+                <th
+                  className="w-32 py-3 pr-4 text-left align-bottom md:w-40"
+                  aria-label="Aspect"
+                />
                 <th className="py-3 pr-4 text-left align-bottom font-normal">
                   <span className="tick-label text-base-content/45">
                     {comparison.columns.them}
