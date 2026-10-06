@@ -61,7 +61,7 @@ export async function fetchAppStoreData(): Promise<AppStoreData | null> {
 export const fallbackAppStoreData: AppStoreData = {
   trackName: "Home Stories: Renovation App",
   description:
-    "Your complete project management tool for home renovations. Track budgets, organize tasks, document progress with photos, and export professional PDF reports.",
+    "Track a renovation on iPhone or iPad: a running total, tasks, photos, notes and documents. Free, works offline, no account. The budget chart, PDF export, iCloud sync and sharing are part of Pro.",
   version: "1.0.0",
   artworkUrl512: "/logo.svg",
   artworkUrl100: "/logo.svg",

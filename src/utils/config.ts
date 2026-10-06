@@ -18,10 +18,9 @@ const templateConfig: TemplateConfig = {
     },
     header: {
       eyebrow: "Renovation tracker for iPhone and iPad",
-      committedSuffix: "committed",
-      spent: "Spent",
-      committed: "Committed",
-      left: "Left",
+      runningTotal: "Running total",
+      budgetLabel: "Budget",
+      ofBudget: "of budget",
     },
     sectionLabels: {
       features: "Features",
@@ -142,7 +141,7 @@ const templateConfig: TemplateConfig = {
       success: {
         label: "The other way",
         title: "Or you reach handover still holding the receipts",
-        body: "Spent, committed and remaining sit on one screen from the first day. Every cost, photo and note lands on the project it belongs to, while you are still standing in the room. On handover day the whole job is one PDF — the figures, the timeline, and the proof of what was behind the wall.",
+        body: "A running total sits on the project from the first day, with materials, labour and contractor kept apart. Photos and notes land on the same project while you are still in the room.",
       },
       cta: "Start tracking — free",
     },
@@ -220,7 +219,7 @@ const templateConfig: TemplateConfig = {
         {
           aspect: "Totals",
           them: "Formulas you write and maintain yourself",
-          us: "Spent, committed, and remaining — automatic",
+          us: "A running total. Materials, labour and contractor kept apart.",
         },
         {
           aspect: "On site",
@@ -275,7 +274,7 @@ const templateConfig: TemplateConfig = {
           // stays a plan at four steps, not five. #117
           title: "Log the spend, shoot the work",
           subtitle:
-            "Enter costs as they land and photograph straight from the app. The chart splits spent, committed, and remaining, so an overrun shows up while you can still act on it — and every photo is dated and pinned to the project.",
+            "Log payments as they land and photograph from the app. Materials, labour and contractor stay apart, and the running total updates with them. Every photo is dated and pinned to the project.",
           image: "/stock/03.webp",
           imageAlt:
             "A pile of building-merchant receipts and invoices spread across a table next to a phone.",
@@ -283,7 +282,7 @@ const templateConfig: TemplateConfig = {
         {
           title: "Export the report",
           subtitle:
-            "One tap turns budget, tasks, photos, and notes into a PDF. Send it to the contractor, the insurer, or the folder you'll want next year.",
+            "Pro turns the project into a PDF: budget, tasks, photos and notes, or just the parts you need. Send it to the contractor, the insurer, or the folder you'll want next year.",
           image: "/stock/05.webp",
           imageAlt:
             "A printed project report on a worktop in a finished room, ready to hand to a contractor.",
@@ -300,7 +299,7 @@ const templateConfig: TemplateConfig = {
           label: "Budget",
           title: "See the overrun coming",
           subtitle:
-            "Spent, committed, and remaining on one chart. You find out you're over while there's still something you can do about it.",
+            "A running total as you log payments, split by materials, labour and contractor. The budget-vs-actual chart is part of Pro.",
           icon: "/icons/budget-tracking.png",
           screenshot: "/screenshots/budget-chart.webp",
           // Skip past the project photo to the budget donut itself.
@@ -326,7 +325,7 @@ const templateConfig: TemplateConfig = {
           label: "Export",
           title: "Hand over a PDF",
           subtitle:
-            "Budget, tasks, photos, and notes in one report your contractor, insurer, or future buyer can actually read.",
+            "A PDF of the whole project, or just the parts you need. Export is part of Pro.",
           icon: "/icons/pdf-export.png",
           screenshot: "/screenshots/export-pdf.webp",
         },
@@ -342,13 +341,13 @@ const templateConfig: TemplateConfig = {
           icon: "widget",
           title: "Widgets & Live Activities",
           subtitle:
-            "A budget ring on your Lock Screen, the next tasks at a glance, and a Dynamic Island timer while you work — without opening the app.",
+            "Home Screen widgets for budget progress and what is next, and a Lock Screen timer while you track time.",
         },
         {
           icon: "clock",
           title: "Time tracking",
           subtitle:
-            "Log hours against a project and see where the days actually went, broken down visually alongside the money.",
+            "Log hours against a project and see where the days went, next to the running total.",
         },
         {
           icon: "note",
@@ -360,7 +359,7 @@ const templateConfig: TemplateConfig = {
           icon: "tag",
           title: "Items & shopping lists",
           subtitle:
-            "Save purchases with prices and store details, organised by phase, so actual cost lands next to what you estimated.",
+            "Save purchases with a price and the shop, organised by phase, so each one adds to the running total.",
         },
         {
           icon: "search",
@@ -372,7 +371,7 @@ const templateConfig: TemplateConfig = {
           icon: "users",
           title: "Real-time collaboration",
           subtitle:
-            "Share a project over iCloud and keep it in sync with a partner, family, or the contractor doing the work.",
+            "Share a project with a partner, family or the contractor. Sharing and iCloud sync are part of Pro.",
         },
         {
           icon: "flag",
@@ -420,7 +419,7 @@ const templateConfig: TemplateConfig = {
         {
           question: "Does Home Stories have widgets?",
           answer:
-            "Yes. Add a budget progress ring and upcoming tasks to your Home Screen and Lock Screen, and use Live Activities with Dynamic Island to keep a project timer in view while you work — all without opening the app.",
+            "Yes. Home Screen widgets show budget progress and what's next. Time tracking has a Lock Screen timer, and Dynamic Island on iPhone 14 Pro and later.",
         },
         {
           question: "Can I collaborate with a partner or contractor?",
@@ -457,7 +456,7 @@ const templateConfig: TemplateConfig = {
     header: {
       headline: "Finish the renovation without the budget getting away from you.",
       subtitle:
-        "Renovations drift because nobody sees the overrun until the money is already spent. Home Stories keeps spent, committed and remaining on one screen — with tasks in the right order and dated photos that prove what happened.",
+        "Renovations drift because the overrun stays invisible until the money is gone. Home Stories keeps a running total on one screen, with tasks in order and dated photos of what happened.",
       screenshots: [
         "/screenshots/projects-list.webp",
         "/screenshots/budget-chart.webp",
@@ -473,14 +472,13 @@ const templateConfig: TemplateConfig = {
         currency: "$",
         budget: 25000,
         spent: 12950,
-        potential: 1430,
       },
     },
   },
   privacyPolicy: {
     seo: {
-      title: "Privacy Policy — Home Stories Renovation App for iPhone",
-      description: "How Home Stories handles your renovation data: stored on-device by default, synced only to your own iCloud, with no tracking and no advertising.",
+      title: "Privacy Policy — Home Stories",
+      description: "How Home Stories handles your renovation data: stored on the device by default. iCloud sync is optional, part of Pro, and off until you turn it on. Anonymous usage analytics can be switched off in Settings. No advertising.",
     },
     content: `# Privacy Policy
 
@@ -505,7 +503,7 @@ robert@12f.dk
   },
   cookiesPolicy: {
     seo: {
-      title: "Cookies Policy — Home Stories Renovation App for iPhone",
+      title: "Cookies Policy — Home Stories",
       description: "Which cookies home-stories.12f.dk sets, what the privacy-friendly analytics record, and how to opt out. No advertising or cross-site tracking cookies.",
     },
     content: `# Cookies Policy
@@ -520,7 +518,7 @@ If you have any questions, please contact us at robert@12f.dk
   termsAndConditions: {
     seo: {
       title: "Terms & Conditions — Home Stories Renovation App",
-      description: "The terms covering use of the Home Stories iPhone app and this website, including the one-time Pro purchase, acceptable use, and limits of liability.",
+      description: "The terms covering use of the Home Stories app for iPhone and iPad and this website, including the one-time Pro purchase, acceptable use, and limits of liability.",
     },
     content: `# Terms and Conditions
 

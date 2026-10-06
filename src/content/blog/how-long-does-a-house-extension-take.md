@@ -113,7 +113,7 @@ If you want the project to land at the shorter end of the range, these habits ma
 
 **Build in buffer.** Not as a luxury, as a structural necessity. Every phase in an extension has a minimum duration dictated by inspection cycles, material drying times, or the physical act of building. The buffer is the difference between a project that finishes on time and one that lingers for weeks past the expected completion. A sensible buffer is two to four weeks spread across the total schedule.
 
-If you're managing an extension, the complexity of tracking foundations, trades, material deliveries, and inspections across a twenty-week timeline is exactly why [a renovation checklist](/blog/renovation-checklist-printable/) and a structured budget — rather than a clipboard and hope — pay for themselves in the first month. Home Stories lets you track every trade and delivery in one place, with photos of each phase and a budget that tracks estimated versus actual as the work progresses. For an extension, where the gap between planning and reality is measured in weeks, having everything in one place saves hours of searching through text messages and supplier emails.
+If you're managing an extension, the complexity of tracking foundations, trades, material deliveries, and inspections across a twenty-week timeline is exactly why [a renovation checklist](/blog/renovation-checklist-printable/) and a structured budget — rather than a clipboard and hope — pay for themselves in the first month. Home Stories lets you track every trade and delivery in one place, with photos of each phase and a running total as the work progresses. The budget-vs-actual chart is part of Pro. For an extension, where the gap between planning and reality is measured in weeks, having everything in one place saves hours of searching through text messages and supplier emails.
 
 ## When an extension makes sense — and when it doesn't
 
@@ -125,7 +125,7 @@ If you're just expanding your living space, sometimes moving to a larger propert
 
 An extension is one of the most rewarding home improvements — you're literally creating space that didn't exist. But the timeline is governed by concrete, inspections, and trade sequences that move at their own pace, not yours. Plan for the longer end of the ranges, order materials early, get the ground checked, and lock your design before anything is dug. If you do that, your extension is more likely to finish with its budget and sanity intact than to become a construction site that lingers months past the expected completion date.
 
-If you're looking for a place to track the schedule, budget, trades, and photos of your extension from first sketch to final inspection, [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app that handles exactly that — project tracking, budget management, and a before-and-after photo log that makes the snugging-in phase at the end much clearer.
+If you're looking for a place to track the schedule, budget, trades, and photos of your extension from first sketch to final inspection, [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad that handles exactly that — project tracking, budget management, and a before-and-after photo log that makes the snugging-in phase at the end much clearer.
 
 ## Sources and further reading
 

@@ -25,10 +25,9 @@ const zh: Translation = {
     },
     "header": {
       "eyebrow": "iPhone 与 iPad 装修管理工具",
-      "committedSuffix": "已承诺",
-      "spent": "已花费",
-      "committed": "已承诺",
-      "left": "剩余"
+      "runningTotal": "累计",
+      "budgetLabel": "预算",
+      "ofBudget": "预算的"
     },
     "sectionLabels": {
       "features": "功能",
@@ -56,12 +55,12 @@ const zh: Translation = {
     "footer": {
       "site": "站点",
       "contact": "联系",
-      "tagline": "家装预算会跑偏。Home Stories 把已花、已定和剩余放在同一块屏幕上，让超支在你还能补救的时候就显出来。一款 iPhone 上的家装记账工具，由 Robert Jensen 在丹麦制作。"
+      "tagline": "家装预算会跑偏。Home Stories 把累计金额放在同一块屏幕上，让超支在你还能补救的时候就显出来。一款用于 iPhone 和 iPad 的家装记账工具，由 Robert Jensen 在丹麦制作。"
     }
   },
   "header": {
     "headline": "别让预算失控 把家装做完",
-    "subtitle": "家装之所以跑偏，是因为钱花光之前没人看见超支。Home Stories 把已花、已定和剩余留在同一块屏幕上，任务排在正确的顺序里，带日期的照片记下真正发生过什么。",
+    "subtitle": "家装会跑偏，是因为超支在钱花完之前一直看不见。Home Stories 把累计金额留在一块屏幕上，任务按顺序排，发生过的事有带日期的照片。",
     "usersDescription": "由一位正在装修的业主打造，献给同样正在装修的业主",
     "headlineMark": [
       0,
@@ -97,7 +96,7 @@ const zh: Translation = {
       {
         "label": "预算",
         "title": "提前看到超支",
-        "subtitle": "已花费、已承诺、剩余，一张图上一目了然。在还来得及补救时，就发现自己超了。"
+        "subtitle": "记下付款时更新的累计金额，材料、人工和承包商分开。预算与实际对比图是 Pro 的一部分。"
       },
       {
         "label": "任务",
@@ -112,7 +111,7 @@ const zh: Translation = {
       {
         "label": "导出",
         "title": "交付一份 PDF",
-        "subtitle": "预算、任务、照片和笔记汇成一份报告，承包商、保险公司或未来买家都能看明白。"
+        "subtitle": "整个项目的 PDF，或只要你需要的部分。导出是 Pro 的一部分。"
       }
     ]
   },
@@ -122,11 +121,11 @@ const zh: Translation = {
     "cards": [
       {
         "title": "小组件与 Live Activities",
-        "subtitle": "锁屏上的预算圆环，一眼看到接下来的任务，干活时还有 Dynamic Island 计时器——全都无需打开应用。"
+        "subtitle": "主屏幕小组件显示预算进度和接下来要做的事；记时间时，锁屏上有计时器。"
       },
       {
         "title": "时间追踪",
-        "subtitle": "把工时记在项目上，直观地看清时间到底花在了哪里，与金钱开销并列呈现。"
+        "subtitle": "把工时记在项目上，在累计金额旁边看这些天花在了哪里。"
       },
       {
         "title": "笔记与文档",
@@ -134,7 +133,7 @@ const zh: Translation = {
       },
       {
         "title": "物品与购物清单",
-        "subtitle": "保存采购记录，含价格和商家信息，按阶段整理，让实际花费紧挨着你的预估。"
+        "subtitle": "按阶段保存带价格和店铺的采购，每一笔都加进累计金额。"
       },
       {
         "title": "搜索与共享扩展",
@@ -142,7 +141,7 @@ const zh: Translation = {
       },
       {
         "title": "实时协作",
-        "subtitle": "通过 iCloud 共享项目，与伴侣、家人或施工的承包商保持同步。"
+        "subtitle": "与伴侣、家人或承包商共享项目。共享和 iCloud 同步是 Pro 的一部分。"
       },
       {
         "title": "项目优先级",
@@ -168,11 +167,11 @@ const zh: Translation = {
       },
       {
         "title": "记下开销，拍下现场",
-        "subtitle": "开销一来就录入，照片直接在应用里拍。图表把已花、已定和剩余分开，超支会在你还能补救的时候显出来——每张照片都带日期，并挂在对应的项目上。"
+        "subtitle": "付款一到就记下，并从应用里拍照。材料、人工和承包商分开，累计金额跟着更新。每张照片都有日期，并归到这个项目。"
       },
       {
         "title": "导出报告",
-        "subtitle": "一键把预算、任务、照片和笔记变成一份 PDF。发给承包商、保险公司，或者存进明年会用得上的文件夹。"
+        "subtitle": "Pro 把项目做成 PDF：预算、任务、照片和笔记，或只要你需要的部分。发给承包商、保险公司，或明年还会用到的文件夹。"
       }
     ]
   },
@@ -208,7 +207,7 @@ const zh: Translation = {
       },
       {
         "question": "Home Stories 有小组件吗？",
-        "answer": "有。把预算进度圆环和即将到来的任务添加到主屏幕和锁屏上，还能用 Live Activities 配合 Dynamic Island，让项目计时器在你干活时始终可见——全都无需打开应用。"
+        "answer": "有。主屏幕小组件显示预算进度和接下来要做的事。时间记录有锁屏计时器，在 iPhone 14 Pro 及更新机型上还有 Dynamic Island。"
       },
       {
         "question": "我可以和伴侣或承包商协作吗？",
@@ -250,7 +249,7 @@ const zh: Translation = {
           "支出记录与物品价格",
           "完全离线可用",
           "本地备份与数据导出",
-          "主屏幕和锁定屏幕小组件"
+          "任务、时间记录和主屏幕小组件"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const zh: Translation = {
       {
         "aspect": "汇总",
         "them": "公式要自己写、自己维护",
-        "us": "已花费、已承诺、剩余 — 自动计算"
+        "us": "一个累计金额。材料、人工和承包商分开。"
       },
       {
         "aspect": "在工地",
@@ -330,7 +329,7 @@ const zh: Translation = {
     "success": {
       "label": "另一条路",
       "title": "或者到交付那天，你手里还留着每一张收据",
-      "body": "从第一天起，已花、已定和剩余就在同一块屏幕上。每一笔开销、每一张照片、每一条备注，都在你还站在那个房间里的时候，落进它该去的项目。交付那天，整项工程就是一份 PDF：数字、时间线，以及墙后面到底是什么的证据。"
+      "body": "累计金额从第一天就在项目上，材料、人工和承包商分开。照片和笔记会在你还站在房间里时落到同一个项目。"
     },
     "cta": "免费开始记录"
   }

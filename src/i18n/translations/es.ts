@@ -25,10 +25,9 @@ const es: Translation = {
     },
     "header": {
       "eyebrow": "Gestor de reformas para iPhone y iPad",
-      "committedSuffix": "comprometido",
-      "spent": "Gastado",
-      "committed": "Comprometido",
-      "left": "Restante"
+      "runningTotal": "Total acumulado",
+      "budgetLabel": "Presupuesto",
+      "ofBudget": "del presupuesto"
     },
     "sectionLabels": {
       "features": "Funciones",
@@ -56,12 +55,12 @@ const es: Translation = {
     "footer": {
       "site": "Sitio",
       "contact": "Contacto",
-      "tagline": "Los presupuestos de reforma se desvían. Home Stories pone gastado, comprometido y restante en una sola pantalla, para que un sobrecoste aparezca cuando todavía puedes hacer algo. Un gestor de reformas para iPhone, hecho en Dinamarca por Robert Jensen."
+      "tagline": "Los presupuestos de reforma se desvían. Home Stories pone el total acumulado en una sola pantalla, para que un sobrecoste aparezca cuando todavía puedes hacer algo. Un gestor de reformas para iPhone y iPad, hecho en Dinamarca por Robert Jensen."
     }
   },
   "header": {
     "headline": "Termina la reforma sin que el presupuesto se te escape.",
-    "subtitle": "Las reformas se desvían porque nadie ve el sobrecoste hasta que el dinero ya está gastado. Home Stories mantiene gastado, comprometido y restante en una sola pantalla, con las tareas en el orden correcto y fotos fechadas que demuestran lo que pasó.",
+    "subtitle": "Las reformas se desvían porque el sobrecoste permanece invisible hasta que el dinero se ha ido. Home Stories mantiene un total acumulado en una sola pantalla, con las tareas en orden y fotos fechadas de lo que ocurrió.",
     "usersDescription": "Creado por un propietario en plena reforma, para propietarios en plena reforma",
     "headlineMark": [
       6,
@@ -97,7 +96,7 @@ const es: Translation = {
       {
         "label": "Presupuesto",
         "title": "Anticípate al sobrecoste",
-        "subtitle": "Gastado, comprometido y restante en un solo gráfico. Descubres que te pasas cuando aún puedes hacer algo al respecto."
+        "subtitle": "Un total acumulado a medida que registras pagos, separado en materiales, mano de obra y contratista. El gráfico de presupuesto frente a real es parte de Pro."
       },
       {
         "label": "Tareas",
@@ -112,7 +111,7 @@ const es: Translation = {
       {
         "label": "Exportar",
         "title": "Entrega un PDF",
-        "subtitle": "Presupuesto, tareas, fotos y notas en un solo informe que tu contratista, tu aseguradora o un futuro comprador pueden leer de verdad."
+        "subtitle": "Un PDF de todo el proyecto, o solo las partes que necesitas. La exportación es parte de Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const es: Translation = {
     "cards": [
       {
         "title": "Widgets y Live Activities",
-        "subtitle": "Un anillo de presupuesto en tu pantalla de bloqueo, las próximas tareas de un vistazo y un temporizador en la Dynamic Island mientras trabajas — sin abrir la app."
+        "subtitle": "Widgets de la pantalla de inicio para el avance del presupuesto y lo que sigue, y un temporizador en la pantalla de bloqueo mientras registras el tiempo."
       },
       {
         "title": "Control del tiempo",
-        "subtitle": "Registra las horas de un proyecto y ve a dónde fueron realmente los días, desglosado visualmente junto al dinero."
+        "subtitle": "Registra horas en un proyecto y ve a dónde fueron los días, junto al total acumulado."
       },
       {
         "title": "Notas y documentos",
@@ -134,7 +133,7 @@ const es: Translation = {
       },
       {
         "title": "Artículos y listas de la compra",
-        "subtitle": "Guarda las compras con precios y datos de la tienda, organizadas por fase, para que el coste real quede junto a lo que estimaste."
+        "subtitle": "Guarda compras con precio y tienda, organizadas por fase, para que cada una se sume al total acumulado."
       },
       {
         "title": "Búsqueda y extensión Compartir",
@@ -142,7 +141,7 @@ const es: Translation = {
       },
       {
         "title": "Colaboración en tiempo real",
-        "subtitle": "Comparte un proyecto por iCloud y mantenlo sincronizado con tu pareja, tu familia o el contratista que hace el trabajo."
+        "subtitle": "Comparte un proyecto con tu pareja, la familia o el contratista. Compartir y la sincronización con iCloud son parte de Pro."
       },
       {
         "title": "Prioridades de proyecto",
@@ -168,11 +167,11 @@ const es: Translation = {
       },
       {
         "title": "Anota el gasto, fotografía la obra",
-        "subtitle": "Introduce los costes según llegan y haz las fotos desde la propia app. El gráfico separa gastado, comprometido y restante, así un sobrecoste aparece cuando todavía puedes hacer algo — y cada foto queda fechada y asociada al proyecto."
+        "subtitle": "Registra los pagos a medida que llegan y fotografía desde la app. Materiales, mano de obra y contratista se mantienen aparte, y el total acumulado se actualiza con ellos. Cada foto queda fechada y vinculada al proyecto."
       },
       {
         "title": "Exporta el informe",
-        "subtitle": "Un toque convierte presupuesto, tareas, fotos y notas en un PDF. Envíalo al contratista, a la aseguradora o a la carpeta que querrás el año que viene."
+        "subtitle": "Pro convierte el proyecto en un PDF: presupuesto, tareas, fotos y notas, o solo las partes que necesitas. Envíalo al contratista, al seguro o a la carpeta que querrás el año que viene."
       }
     ]
   },
@@ -208,7 +207,7 @@ const es: Translation = {
       },
       {
         "question": "¿Home Stories tiene widgets?",
-        "answer": "Sí. Añade un anillo de progreso del presupuesto y las próximas tareas a tu pantalla de inicio y a tu pantalla de bloqueo, y usa las Live Activities con la Dynamic Island para tener a la vista un temporizador del proyecto mientras trabajas — todo sin abrir la app."
+        "answer": "Sí. Los widgets de la pantalla de inicio muestran el avance del presupuesto y lo que sigue. El registro de tiempo tiene un temporizador en la pantalla de bloqueo, y Dynamic Island en el iPhone 14 Pro y posteriores."
       },
       {
         "question": "¿Puedo colaborar con mi pareja o con un contratista?",
@@ -250,7 +249,7 @@ const es: Translation = {
           "Registro de gastos y precios de artículos",
           "Funciona totalmente sin conexión",
           "Copias locales y exportación de datos",
-          "Widgets de pantalla de inicio y de bloqueo"
+          "Tareas, registro de tiempo y widgets de la pantalla de inicio"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const es: Translation = {
       {
         "aspect": "Totales",
         "them": "Fórmulas que escribes y mantienes tú",
-        "us": "Gastado, comprometido y restante — automático"
+        "us": "Un total acumulado. Materiales, mano de obra y contratista, por separado."
       },
       {
         "aspect": "En la obra",
@@ -330,7 +329,7 @@ const es: Translation = {
     "success": {
       "label": "La otra vía",
       "title": "O llegas a la entrega con los recibos en la mano",
-      "body": "Gastado, comprometido y restante están en una sola pantalla desde el primer día. Cada coste, foto y nota cae en el proyecto al que pertenece, mientras sigues de pie en la habitación. El día de la entrega, toda la obra es un PDF: las cifras, la cronología y la prueba de lo que había detrás de la pared."
+      "body": "Un total acumulado está en el proyecto desde el primer día, con materiales, mano de obra y contratista por separado. Las fotos y las notas caen en el mismo proyecto mientras sigues en la habitación."
     },
     "cta": "Empieza a controlarlo — gratis"
   }

@@ -120,7 +120,7 @@ You can do everything above perfectly and still go over, because **a budget you 
 
 The rule: track **actual spend against your estimate, per line item, every week.** Per line item — not per room, not per category — because that's the only resolution fine enough to show you *where* a number started slipping.
 
-Home Stories tracks actual vs. estimated per line and shows the running total against your budget — so you can log a receipt at the merchant in ten seconds and see instantly whether you're still on plan. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
+Home Stories keeps a running total against your budget as you log payments — so you can log a receipt at the merchant in ten seconds and see whether you're still on plan. The budget-vs-actual chart is part of Pro. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
 
 Why weekly, and why per line:
 

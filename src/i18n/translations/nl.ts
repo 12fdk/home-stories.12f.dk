@@ -25,10 +25,9 @@ const nl: Translation = {
     },
     "header": {
       "eyebrow": "Verbouwingstracker voor iPhone en iPad",
-      "committedSuffix": "gereserveerd",
-      "spent": "Uitgegeven",
-      "committed": "Gereserveerd",
-      "left": "Resterend"
+      "runningTotal": "Lopend totaal",
+      "budgetLabel": "Budget",
+      "ofBudget": "van het budget"
     },
     "sectionLabels": {
       "features": "Functies",
@@ -56,12 +55,12 @@ const nl: Translation = {
     "footer": {
       "site": "Site",
       "contact": "Contact",
-      "tagline": "Verbouwingsbudgetten lopen weg. Home Stories zet uitgegeven, vastgelegd en resterend op één scherm, zodat een overschrijding opvalt terwijl je er nog iets aan kunt doen. Een verbouwingstracker voor iPhone, gemaakt in Denemarken door Robert Jensen."
+      "tagline": "Verbouwingsbudgetten lopen weg. Home Stories zet het lopende totaal op één scherm, zodat een overschrijding opvalt terwijl je er nog iets aan kunt doen. Een verbouwingstracker voor iPhone en iPad, gemaakt in Denemarken door Robert Jensen."
     }
   },
   "header": {
     "headline": "Maak de verbouwing af zonder dat het budget je ontglipt.",
-    "subtitle": "Verbouwingen lopen uit de hand omdat niemand de overschrijding ziet voordat het geld al op is. Home Stories houdt uitgegeven, vastgelegd en resterend op één scherm – met taken in de juiste volgorde en gedateerde foto's die bewijzen wat er gebeurd is.",
+    "subtitle": "Verbouwingen lopen weg omdat de overschrijding onzichtbaar blijft tot het geld op is. Home Stories houdt een lopend totaal op één scherm, met taken op volgorde en gedateerde foto's van wat er gebeurde.",
     "usersDescription": "Gebouwd door een huiseigenaar middenin een verbouwing, voor huiseigenaren middenin een verbouwing",
     "headlineMark": [
       7,
@@ -97,7 +96,7 @@ const nl: Translation = {
       {
         "label": "Budget",
         "title": "Zie de overschrijding aankomen",
-        "subtitle": "Uitgegeven, gereserveerd en resterend in één grafiek. Je merkt dat je eroverheen gaat terwijl je er nog iets aan kunt doen."
+        "subtitle": "Een lopend totaal terwijl je betalingen noteert, gesplitst in materialen, arbeid en aannemer. De grafiek budget versus werkelijk is onderdeel van Pro."
       },
       {
         "label": "Taken",
@@ -112,7 +111,7 @@ const nl: Translation = {
       {
         "label": "Export",
         "title": "Lever een PDF aan",
-        "subtitle": "Budget, taken, foto's en notities in één rapport dat je aannemer, verzekeraar of toekomstige koper echt kan lezen."
+        "subtitle": "Een pdf van het hele project, of alleen de delen die je nodig hebt. Export is onderdeel van Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const nl: Translation = {
     "cards": [
       {
         "title": "Widgets & Live Activities",
-        "subtitle": "Een budgetring op je toegangsscherm, de volgende taken in één oogopslag en een Dynamic Island-timer terwijl je werkt — zonder de app te openen."
+        "subtitle": "Widgets op het beginscherm voor de voortgang van het budget en wat er volgt, en een timer op het vergrendelscherm terwijl je tijd bijhoudt."
       },
       {
         "title": "Tijdregistratie",
-        "subtitle": "Registreer uren op een project en zie waar de dagen werkelijk naartoe gingen, visueel uitgesplitst naast het geld."
+        "subtitle": "Noteer uren op een project en zie waar de dagen heen gingen, naast het lopende totaal."
       },
       {
         "title": "Notities & documenten",
@@ -134,7 +133,7 @@ const nl: Translation = {
       },
       {
         "title": "Onderdelen & boodschappenlijsten",
-        "subtitle": "Bewaar aankopen met prijzen en winkelgegevens, geordend per fase, zodat de werkelijke kosten naast je schatting komen te staan."
+        "subtitle": "Bewaar aankopen met prijs en winkel, geordend per fase, zodat elk bij het lopende totaal komt."
       },
       {
         "title": "Zoeken & Deel-extensie",
@@ -142,7 +141,7 @@ const nl: Translation = {
       },
       {
         "title": "Realtime samenwerken",
-        "subtitle": "Deel een project via iCloud en houd het gesynchroniseerd met een partner, familie of de aannemer die het werk doet."
+        "subtitle": "Deel een project met een partner, familie of de aannemer. Delen en iCloud-synchronisatie zijn onderdeel van Pro."
       },
       {
         "title": "Projectprioriteiten",
@@ -168,11 +167,11 @@ const nl: Translation = {
       },
       {
         "title": "Noteer de uitgave, fotografeer het werk",
-        "subtitle": "Voer kosten in zodra ze binnenkomen en fotografeer rechtstreeks vanuit de app. De grafiek splitst uitgegeven, vastgelegd en resterend, zodat een overschrijding opvalt terwijl je er nog iets aan kunt doen – en elke foto wordt gedateerd en aan het project gekoppeld."
+        "subtitle": "Noteer betalingen zodra ze binnenkomen en fotografeer vanuit de app. Materialen, arbeid en aannemer blijven apart, en het lopende totaal werkt mee. Elke foto krijgt een datum en hoort bij het project."
       },
       {
         "title": "Exporteer het rapport",
-        "subtitle": "Eén tik maakt van budget, taken, foto's en notities een PDF. Stuur het naar de aannemer, de verzekeraar of de map die je volgend jaar nodig hebt."
+        "subtitle": "Pro maakt van het project een pdf: budget, taken, foto's en notities, of alleen de delen die je nodig hebt. Stuur het naar de aannemer, de verzekeraar of de map die je volgend jaar wilt hebben."
       }
     ]
   },
@@ -208,7 +207,7 @@ const nl: Translation = {
       },
       {
         "question": "Heeft Home Stories widgets?",
-        "answer": "Ja. Zet een budgetvoortgangsring en aankomende taken op je beginscherm en toegangsscherm, en gebruik Live Activities met Dynamic Island om een projecttimer in beeld te houden terwijl je werkt — allemaal zonder de app te openen."
+        "answer": "Ja. Widgets op het beginscherm tonen de voortgang van het budget en wat er volgt. Tijdregistratie heeft een timer op het vergrendelscherm, en Dynamic Island op iPhone 14 Pro en nieuwer."
       },
       {
         "question": "Kan ik samenwerken met een partner of aannemer?",
@@ -250,7 +249,7 @@ const nl: Translation = {
           "Uitgaven bijhouden en artikelprijzen",
           "Werkt volledig offline",
           "Lokale back-ups en gegevensexport",
-          "Widgets voor begin- en toegangsscherm"
+          "Taken, tijdregistratie en widgets voor het beginscherm"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const nl: Translation = {
       {
         "aspect": "Totalen",
         "them": "Formules die je zelf schrijft en onderhoudt",
-        "us": "Besteed, toegezegd en resterend — automatisch"
+        "us": "Een lopend totaal. Materialen, arbeid en aannemer apart gehouden."
       },
       {
         "aspect": "Op de bouwplaats",
@@ -330,7 +329,7 @@ const nl: Translation = {
     "success": {
       "label": "De andere weg",
       "title": "Of je haalt de oplevering mét de bonnen in handen",
-      "body": "Uitgegeven, vastgelegd en resterend staan vanaf dag één op één scherm. Elke kostenpost, foto en notitie belandt bij het project waar hij hoort, terwijl je nog in de kamer staat. Op de opleveringsdag is de hele klus één pdf – de cijfers, de tijdlijn en het bewijs van wat er achter de muur zat."
+      "body": "Een lopend totaal staat vanaf de eerste dag op het project, met materialen, arbeid en aannemer apart. Foto's en notities komen op hetzelfde project terecht terwijl je nog in de kamer staat."
     },
     "cta": "Begin met bijhouden – gratis"
   }

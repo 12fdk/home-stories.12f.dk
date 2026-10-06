@@ -36,9 +36,10 @@ export const INLINE_SURFACE = "blog-inline";
 export const END_SURFACE = "blog-end-cta";
 
 /**
- * Copy per topic. Every claim here is on the prompt.md §0 feature list —
- * budget spent/committed/left, tasks with due dates and reminders, dated
- * photos, receipts, notes with tags, PDF export, offline, no account. The
+ * Copy per topic. Every claim here matches the App Store listing: a running
+ * total with payments split by materials, labour and contractor; tasks; dated
+ * photos, receipts and notes; offline; no account. The budget-vs-actual chart,
+ * task reminders, PDF export, iCloud sync and project sharing are Pro. The
  * `inline` and `end` sentences differ on purpose (EDITORIAL_RULES §6: the body
  * CTA and the closing blurb must not repeat each other).
  */
@@ -46,32 +47,32 @@ export const TOPICS = {
   documentation: {
     label: "Keeping the record",
     inline:
-      "If you'd rather not assemble the record by hand, Home Stories keeps dated photos, receipts and notes on one project and exports the lot as a PDF.",
-    end: "A record only helps if it exists on the day someone asks for it. Home Stories keeps photos, receipts and notes dated on the project and exports a PDF report — free on the App Store.",
+      "If you'd rather not assemble the record by hand, Home Stories keeps dated photos, receipts and notes on one project.",
+    end: "A record only helps if it exists on the day someone asks for it. Home Stories keeps photos, receipts and notes dated on the project — free on the App Store. A PDF of the project is part of Pro.",
   },
   timeline: {
     label: "Keeping the schedule straight",
     inline:
-      "If you'd rather hold the schedule on your phone than in your head, Home Stories keeps each phase as tasks with due dates and reminders, next to the budget and photos.",
-    end: "Timelines slip one trade at a time. Home Stories keeps phases, tasks and due dates next to the budget and the photos, so you can see what is waiting on what — free on the App Store.",
+      "If you'd rather hold the schedule on your phone than in your head, Home Stories keeps each phase as tasks next to the budget and photos.",
+    end: "Timelines slip one trade at a time. Home Stories keeps phases and tasks next to the budget and the photos, so you can see what is waiting on what — free on the App Store.",
   },
   contractors: {
     label: "Keeping the paper trail",
     inline:
       "If you want the quotes, change notes and payments in one place, Home Stories keeps them on the project with a date on each, so the trail is on your phone when a question comes up.",
-    end: "Disagreements with a contractor are settled by whoever kept the paper trail. Home Stories keeps quotes, change notes, receipts and payments together on your iPhone — free on the App Store.",
+    end: "Disagreements with a contractor are settled by whoever kept the paper trail. Home Stories keeps quotes, change notes, receipts and payments together on your iPhone or iPad — free on the App Store.",
   },
   budget: {
     label: "Keeping the numbers live",
     inline:
-      "If you'd rather not keep this in a spreadsheet, Home Stories logs each cost with its receipt photo as it happens and shows spent, committed and left against your budget.",
-    end: "Renovation budgets drift. Home Stories puts spent, committed and remaining on one screen, so an overrun shows up while you can still act on it — free on the App Store.",
+      "If you'd rather not keep this in a spreadsheet, Home Stories logs each payment with its receipt photo and keeps materials, labour and contractor apart, with a running total.",
+    end: "Renovation budgets drift. Home Stories puts the running total on one screen, so an overrun shows up while you can still act on it — free on the App Store.",
   },
   general: {
     label: "One way to keep track",
     inline:
-      "If you'd rather not juggle a notebook, a spreadsheet and your camera roll, Home Stories keeps the budget, tasks, photos and receipts for a renovation in one place on your iPhone.",
-    end: "Most renovation stress comes from information scattered across five places. Home Stories keeps budget, tasks, photos and receipts in one project on your iPhone — free on the App Store, no account needed.",
+      "If you'd rather not juggle a notebook, a spreadsheet and your camera roll, Home Stories keeps the budget, tasks, photos and receipts for a renovation in one place on your iPhone or iPad.",
+    end: "Most renovation stress comes from information scattered across five places. Home Stories keeps budget, tasks, photos and receipts in one project on your iPhone or iPad — free on the App Store, no account needed.",
   },
 };
 

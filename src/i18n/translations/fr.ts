@@ -25,10 +25,9 @@ const fr: Translation = {
     },
     "header": {
       "eyebrow": "Suivi de rénovation pour iPhone et iPad",
-      "committedSuffix": "engagé",
-      "spent": "Dépensé",
-      "committed": "Engagé",
-      "left": "Restant"
+      "runningTotal": "Total en cours",
+      "budgetLabel": "Budget",
+      "ofBudget": "du budget"
     },
     "sectionLabels": {
       "features": "Fonctionnalités",
@@ -56,12 +55,12 @@ const fr: Translation = {
     "footer": {
       "site": "Site",
       "contact": "Contact",
-      "tagline": "Les budgets de rénovation dérivent. Home Stories affiche dépensé, engagé et restant sur un seul écran, pour qu'un dépassement apparaisse tant que vous pouvez encore agir. Un suivi de rénovation pour iPhone, conçu au Danemark par Robert Jensen."
+      "tagline": "Les budgets de rénovation dérivent. Home Stories affiche le total en cours sur un seul écran, pour qu'un dépassement apparaisse tant que vous pouvez encore agir. Un suivi de rénovation pour iPhone et iPad, conçu au Danemark par Robert Jensen."
     }
   },
   "header": {
     "headline": "Terminez la rénovation sans que le budget vous échappe.",
-    "subtitle": "Les rénovations dérivent parce que personne ne voit le dépassement avant que l'argent ne soit déjà parti. Home Stories garde dépensé, engagé et restant sur un seul écran, avec les tâches dans le bon ordre et des photos datées qui prouvent ce qui s'est passé.",
+    "subtitle": "Les rénovations dérivent parce que le dépassement reste invisible jusqu'à ce que l'argent soit parti. Home Stories garde un total en cours sur un seul écran, avec les tâches dans l'ordre et des photos datées de ce qui s'est passé.",
     "usersDescription": "Créé par un propriétaire en pleine rénovation, pour les propriétaires en pleine rénovation",
     "headlineMark": [
       6,
@@ -97,7 +96,7 @@ const fr: Translation = {
       {
         "label": "Budget",
         "title": "Voyez le dépassement arriver",
-        "subtitle": "Dépensé, engagé et restant sur un seul graphique. Vous découvrez le dépassement quand vous pouvez encore agir."
+        "subtitle": "Un total en cours à mesure que vous enregistrez les paiements, séparé entre matériaux, main-d'œuvre et artisan. Le graphique budget contre réel fait partie de Pro."
       },
       {
         "label": "Tâches",
@@ -112,7 +111,7 @@ const fr: Translation = {
       {
         "label": "Export",
         "title": "Remettez un PDF",
-        "subtitle": "Budget, tâches, photos et notes dans un seul rapport que votre artisan, votre assureur ou un futur acheteur peut vraiment lire."
+        "subtitle": "Un PDF de tout le projet, ou seulement des parties dont vous avez besoin. L'export fait partie de Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const fr: Translation = {
     "cards": [
       {
         "title": "Widgets et Live Activities",
-        "subtitle": "Un anneau de budget sur votre écran verrouillé, les prochaines tâches en un coup d'œil, et un minuteur dans la Dynamic Island pendant que vous travaillez — sans ouvrir l'app."
+        "subtitle": "Des widgets d'écran d'accueil pour l'avancement du budget et la suite, et un minuteur sur l'écran verrouillé pendant le suivi du temps."
       },
       {
         "title": "Suivi du temps",
-        "subtitle": "Enregistrez les heures sur un projet et voyez où sont réellement passées les journées, détaillées visuellement à côté de l'argent."
+        "subtitle": "Enregistrez les heures sur un projet et voyez où sont passés les jours, à côté du total en cours."
       },
       {
         "title": "Notes et documents",
@@ -134,7 +133,7 @@ const fr: Translation = {
       },
       {
         "title": "Articles et listes d'achats",
-        "subtitle": "Enregistrez vos achats avec prix et coordonnées du magasin, organisés par phase, pour que le coût réel s'affiche à côté de votre estimation."
+        "subtitle": "Enregistrez les achats avec le prix et le magasin, classés par phase, pour que chacun s'ajoute au total en cours."
       },
       {
         "title": "Recherche et extension de partage",
@@ -142,7 +141,7 @@ const fr: Translation = {
       },
       {
         "title": "Collaboration en temps réel",
-        "subtitle": "Partagez un projet via iCloud et gardez-le synchronisé avec votre conjoint, votre famille ou l'artisan sur le chantier."
+        "subtitle": "Partagez un projet avec un conjoint, la famille ou l'artisan. Le partage et la synchronisation iCloud font partie de Pro."
       },
       {
         "title": "Priorités de projet",
@@ -168,11 +167,11 @@ const fr: Translation = {
       },
       {
         "title": "Saisissez la dépense, photographiez le chantier",
-        "subtitle": "Entrez les coûts au fur et à mesure et photographiez directement depuis l'app. Le graphique sépare dépensé, engagé et restant, donc un dépassement apparaît tant que vous pouvez encore agir — et chaque photo est datée et rattachée au projet."
+        "subtitle": "Enregistrez les paiements au fur et à mesure et photographiez depuis l'app. Matériaux, main-d'œuvre et artisan restent séparés, et le total en cours se met à jour avec eux. Chaque photo est datée et rattachée au projet."
       },
       {
         "title": "Exportez le rapport",
-        "subtitle": "Un geste transforme budget, tâches, photos et notes en PDF. Envoyez-le à l'artisan, à l'assureur, ou au dossier que vous voudrez l'an prochain."
+        "subtitle": "Pro transforme le projet en PDF : budget, tâches, photos et notes, ou seulement les parties dont vous avez besoin. Envoyez-le à l'artisan, à l'assureur, ou dans le dossier dont vous aurez besoin l'an prochain."
       }
     ]
   },
@@ -208,7 +207,7 @@ const fr: Translation = {
       },
       {
         "question": "Home Stories propose-t-elle des widgets ?",
-        "answer": "Oui. Ajoutez un anneau de progression du budget et les tâches à venir sur votre écran d'accueil et votre écran verrouillé, et utilisez les Live Activities avec la Dynamic Island pour garder un minuteur de projet en vue pendant que vous travaillez — le tout sans ouvrir l'app."
+        "answer": "Oui. Les widgets de l'écran d'accueil montrent l'avancement du budget et la suite. Le suivi du temps a un minuteur sur l'écran verrouillé, et Dynamic Island sur iPhone 14 Pro et modèles plus récents."
       },
       {
         "question": "Puis-je collaborer avec un conjoint ou un artisan ?",
@@ -250,7 +249,7 @@ const fr: Translation = {
           "Saisie des dépenses et prix des articles",
           "Fonctionne entièrement hors ligne",
           "Sauvegardes locales et export des données",
-          "Widgets écran d'accueil et écran verrouillé"
+          "Tâches, suivi du temps et widgets d'écran d'accueil"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const fr: Translation = {
       {
         "aspect": "Totaux",
         "them": "Des formules à écrire et entretenir soi-même",
-        "us": "Dépensé, engagé et restant — automatique"
+        "us": "Un total en cours. Matériaux, main-d'œuvre et artisan restent séparés."
       },
       {
         "aspect": "Sur le chantier",
@@ -330,7 +329,7 @@ const fr: Translation = {
     "success": {
       "label": "L'autre voie",
       "title": "Ou vous arrivez à la réception, justificatifs en main",
-      "body": "Dépensé, engagé et restant tiennent sur un seul écran dès le premier jour. Chaque coût, photo et note se range dans le projet auquel il appartient, pendant que vous êtes encore dans la pièce. Le jour de la réception, tout le chantier tient dans un PDF : les chiffres, la chronologie et la preuve de ce qu'il y avait derrière le mur."
+      "body": "Un total en cours est sur le projet dès le premier jour, matériaux, main-d'œuvre et artisan séparés. Photos et notes arrivent sur le même projet pendant que vous êtes encore dans la pièce."
     },
     "cta": "Commencer le suivi — gratuit"
   }

@@ -25,10 +25,9 @@ const it: Translation = {
     },
     "header": {
       "eyebrow": "Tracker per ristrutturazioni per iPhone e iPad",
-      "committedSuffix": "impegnato",
-      "spent": "Speso",
-      "committed": "Impegnato",
-      "left": "Rimanente"
+      "runningTotal": "Totale progressivo",
+      "budgetLabel": "Budget",
+      "ofBudget": "del budget"
     },
     "sectionLabels": {
       "features": "Funzionalità",
@@ -56,12 +55,12 @@ const it: Translation = {
     "footer": {
       "site": "Sito",
       "contact": "Contatti",
-      "tagline": "I budget di ristrutturazione scivolano. Home Stories mette speso, impegnato e residuo su un solo schermo, così uno sforamento si vede finché puoi ancora intervenire. Un tracker per ristrutturazioni per iPhone, realizzato in Danimarca da Robert Jensen."
+      "tagline": "I budget di ristrutturazione scivolano. Home Stories mette il totale progressivo su un solo schermo, così uno sforamento si vede finché puoi ancora intervenire. Un tracker per ristrutturazioni per iPhone e iPad, realizzato in Danimarca da Robert Jensen."
     }
   },
   "header": {
     "headline": "Finisci la ristrutturazione senza che il budget ti sfugga.",
-    "subtitle": "Le ristrutturazioni scivolano perché nessuno vede lo sforamento finché i soldi non sono già spesi. Home Stories tiene speso, impegnato e residuo su un solo schermo, con le attività nell'ordine giusto e foto datate che provano cosa è successo.",
+    "subtitle": "Le ristrutturazioni scivolano perché lo sforamento resta invisibile finché i soldi non sono già andati. Home Stories tiene un totale progressivo su un solo schermo, con le attività in ordine e foto datate di ciò che è successo.",
     "usersDescription": "Creato da un proprietario di casa in piena ristrutturazione, per proprietari di casa in piena ristrutturazione",
     "headlineMark": [
       6,
@@ -97,7 +96,7 @@ const it: Translation = {
       {
         "label": "Budget",
         "title": "Vedi arrivare lo sforamento",
-        "subtitle": "Speso, impegnato e residuo in un unico grafico. Scopri di essere fuori budget quando puoi ancora farci qualcosa."
+        "subtitle": "Un totale progressivo mentre registri i pagamenti, diviso tra materiali, manodopera e impresa. Il grafico budget rispetto al consuntivo fa parte di Pro."
       },
       {
         "label": "Attività",
@@ -112,7 +111,7 @@ const it: Translation = {
       {
         "label": "Esporta",
         "title": "Consegna un PDF",
-        "subtitle": "Budget, attività, foto e note in un unico report che la tua impresa, l'assicurazione o il futuro acquirente possono davvero leggere."
+        "subtitle": "Un PDF dell'intero progetto, o solo delle parti che ti servono. L'esportazione fa parte di Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const it: Translation = {
     "cards": [
       {
         "title": "Widget e Live Activities",
-        "subtitle": "Un anello del budget sulla schermata di blocco, le prossime attività a colpo d'occhio e un timer nella Dynamic Island mentre lavori — senza aprire l'app."
+        "subtitle": "Widget della schermata Home per l'avanzamento del budget e per cosa viene dopo, e un timer sulla schermata di blocco mentre registri il tempo."
       },
       {
         "title": "Monitoraggio del tempo",
-        "subtitle": "Registra le ore su un progetto e scopri dove sono finite davvero le giornate, con una ripartizione visiva accanto ai soldi."
+        "subtitle": "Registra le ore su un progetto e vedi dove sono andati i giorni, accanto al totale progressivo."
       },
       {
         "title": "Note e documenti",
@@ -134,7 +133,7 @@ const it: Translation = {
       },
       {
         "title": "Articoli e liste della spesa",
-        "subtitle": "Salva gli acquisti con prezzi e dettagli del negozio, organizzati per fase, così il costo reale finisce accanto a quello stimato."
+        "subtitle": "Salva gli acquisti con prezzo e negozio, organizzati per fase, così ognuno si aggiunge al totale progressivo."
       },
       {
         "title": "Ricerca ed estensione Condividi",
@@ -142,7 +141,7 @@ const it: Translation = {
       },
       {
         "title": "Collaborazione in tempo reale",
-        "subtitle": "Condividi un progetto tramite iCloud e mantienilo sincronizzato con un partner, la famiglia o l'impresa che esegue il lavoro."
+        "subtitle": "Condividi un progetto con un partner, la famiglia o l'impresa. La condivisione e la sincronizzazione iCloud fanno parte di Pro."
       },
       {
         "title": "Priorità dei progetti",
@@ -168,11 +167,11 @@ const it: Translation = {
       },
       {
         "title": "Registra la spesa, fotografa il lavoro",
-        "subtitle": "Inserisci i costi man mano che arrivano e fotografa direttamente dall'app. Il grafico divide speso, impegnato e residuo, così uno sforamento si vede finché puoi ancora intervenire — e ogni foto viene datata e agganciata al progetto."
+        "subtitle": "Registra i pagamenti man mano che arrivano e fotografa dall'app. Materiali, manodopera e impresa restano separati, e il totale progressivo si aggiorna con loro. Ogni foto è datata e collegata al progetto."
       },
       {
         "title": "Esporta il report",
-        "subtitle": "Un tocco trasforma budget, attività, foto e note in un PDF. Invialo all'impresa, all'assicurazione o alla cartella che vorrai avere il prossimo anno."
+        "subtitle": "Pro trasforma il progetto in un PDF: budget, attività, foto e note, o solo le parti che ti servono. Invialo all'impresa, all'assicurazione o alla cartella che vorrai avere il prossimo anno."
       }
     ]
   },
@@ -208,7 +207,7 @@ const it: Translation = {
       },
       {
         "question": "Home Stories ha i widget?",
-        "answer": "Sì. Aggiungi un anello di avanzamento del budget e le attività imminenti alla schermata Home e alla schermata di blocco, e usa le Live Activities con la Dynamic Island per tenere in vista il timer di un progetto mentre lavori — tutto senza aprire l'app."
+        "answer": "Sì. I widget della schermata Home mostrano l'avanzamento del budget e cosa viene dopo. La registrazione del tempo ha un timer sulla schermata di blocco e Dynamic Island su iPhone 14 Pro e successivi."
       },
       {
         "question": "Posso collaborare con un partner o un'impresa?",
@@ -250,7 +249,7 @@ const it: Translation = {
           "Registrazione spese e prezzi degli articoli",
           "Funziona completamente offline",
           "Backup locali ed esportazione dei dati",
-          "Widget per schermata Home e di blocco"
+          "Attività, registrazione del tempo e widget della schermata Home"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const it: Translation = {
       {
         "aspect": "Totali",
         "them": "Formule che scrivi e mantieni da solo",
-        "us": "Speso, impegnato e rimanente — automatico"
+        "us": "Un totale progressivo. Materiali, manodopera e impresa tenuti separati."
       },
       {
         "aspect": "In cantiere",
@@ -330,7 +329,7 @@ const it: Translation = {
     "success": {
       "label": "L'altra strada",
       "title": "Oppure arrivi alla consegna con le ricevute in mano",
-      "body": "Speso, impegnato e residuo stanno su un solo schermo dal primo giorno. Ogni costo, foto e nota finisce nel progetto a cui appartiene, mentre sei ancora in piedi nella stanza. Il giorno della consegna tutto il lavoro è un PDF: i numeri, la cronologia e la prova di cosa c'era dietro il muro."
+      "body": "Un totale progressivo sta sul progetto dal primo giorno, con materiali, manodopera e impresa tenuti separati. Foto e note finiscono sullo stesso progetto mentre sei ancora nella stanza."
     },
     "cta": "Inizia a tenerne traccia — gratis"
   }

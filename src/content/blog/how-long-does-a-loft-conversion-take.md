@@ -123,7 +123,7 @@ This isn't incompetence or poor planning — it's how buildings work. Each phase
 
 Managing a loft conversion is information-heavy. You're comparing quotes, tracking material deliveries, remembering decisions about insulation types and stair materials, and keeping the before/during/after photos in order for insurance and future resale. The same things that derail budgets and timelines are the things a tracker helps with.
 
-[Home Stories](https://apps.apple.com/app/id6754754960) keeps all of that in one place — notes with tags, photo documentation with side-by-side comparison, a budget that shows spent versus committed versus remaining, and a PDF export when you need it. You can absolutely do all of this with a notebook and your camera roll, but the convenience of having everything attached to one project is hard to underestimate when you're four weeks in and trying to remember whether the insulation was rigid board or insulated plasterboard.
+[Home Stories](https://apps.apple.com/app/id6754754960) keeps all of that in one place — notes with tags, photo documentation with side-by-side comparison, a running total against the budget, and a PDF export (part of Pro) when you need it. You can absolutely do all of this with a notebook and your camera roll, but the convenience of having everything attached to one project is hard to underestimate when you're four weeks in and trying to remember whether the insulation was rigid board or insulated plasterboard.
 
 ## Start with a good plan, plan for the unexpected
 

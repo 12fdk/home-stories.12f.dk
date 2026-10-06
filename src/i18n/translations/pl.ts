@@ -25,10 +25,9 @@ const pl: Translation = {
     },
     "header": {
       "eyebrow": "Menedżer remontu na iPhone'a i iPada",
-      "committedSuffix": "zarezerwowane",
-      "spent": "Wydane",
-      "committed": "Zarezerwowane",
-      "left": "Pozostało"
+      "runningTotal": "Suma bieżąca",
+      "budgetLabel": "Budżet",
+      "ofBudget": "budżetu"
     },
     "sectionLabels": {
       "features": "Funkcje",
@@ -56,12 +55,12 @@ const pl: Translation = {
     "footer": {
       "site": "Strona",
       "contact": "Kontakt",
-      "tagline": "Budżety remontowe się rozjeżdżają. Home Stories pokazuje wydane, zarezerwowane i pozostałe na jednym ekranie, żeby przekroczenie było widać, póki da się jeszcze zareagować. Aplikacja do śledzenia remontu na iPhone'a, stworzona w Danii przez Roberta Jensena."
+      "tagline": "Budżety remontowe się rozjeżdżają. Home Stories pokazuje sumę bieżącą na jednym ekranie, żeby przekroczenie było widać, póki da się jeszcze zareagować. Aplikacja do śledzenia remontu na iPhone'a i iPada, stworzona w Danii przez Roberta Jensena."
     }
   },
   "header": {
     "headline": "Dokończ remont, zanim budżet wymknie ci się z rąk.",
-    "subtitle": "Remonty się rozjeżdżają, bo nikt nie widzi przekroczenia, dopóki pieniądze już nie znikną. Home Stories trzyma wydane, zarezerwowane i pozostałe na jednym ekranie, z zadaniami w dobrej kolejności i datowanymi zdjęciami, które dowodzą, co się wydarzyło.",
+    "subtitle": "Remonty się rozjeżdżają, bo przekroczenie zostaje niewidoczne, aż pieniądze znikną. Home Stories trzyma sumę bieżącą na jednym ekranie, z zadaniami po kolei i datowanymi zdjęciami tego, co się wydarzyło.",
     "usersDescription": "Stworzona przez właściciela domu w trakcie remontu, dla właścicieli domów w trakcie remontu",
     "headlineMark": [
       3,
@@ -97,7 +96,7 @@ const pl: Translation = {
       {
         "label": "Budżet",
         "title": "Zauważ przekroczenie w porę",
-        "subtitle": "Wydane, zarezerwowane i pozostałe na jednym wykresie. Dowiesz się, że przekraczasz budżet, gdy wciąż możesz coś z tym zrobić."
+        "subtitle": "Suma bieżąca w miarę zapisywania płatności, rozdzielona na materiały, robociznę i wykonawcę. Wykres budżet wobec faktu jest częścią Pro."
       },
       {
         "label": "Zadania",
@@ -112,7 +111,7 @@ const pl: Translation = {
       {
         "label": "Eksport",
         "title": "Przekaż plik PDF",
-        "subtitle": "Budżet, zadania, zdjęcia i notatki w jednym raporcie, który naprawdę zrozumie Twój wykonawca, ubezpieczyciel lub przyszły nabywca."
+        "subtitle": "PDF całego projektu albo tylko potrzebnych części. Eksport jest częścią Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const pl: Translation = {
     "cards": [
       {
         "title": "Widżety i Live Activities",
-        "subtitle": "Pierścień budżetu na ekranie blokady, najbliższe zadania na pierwszy rzut oka i licznik czasu w Dynamic Island podczas pracy — bez otwierania aplikacji."
+        "subtitle": "Widżety ekranu głównego z postępem budżetu i tym, co dalej, oraz minutnik na ekranie blokady podczas śledzenia czasu."
       },
       {
         "title": "Śledzenie czasu",
-        "subtitle": "Zapisuj godziny w ramach projektu i zobacz, na co naprawdę poszły dni, przedstawione wizualnie obok wydatków."
+        "subtitle": "Zapisuj godziny w projekcie i zobacz, na co poszły dni, obok sumy bieżącej."
       },
       {
         "title": "Notatki i dokumenty",
@@ -134,7 +133,7 @@ const pl: Translation = {
       },
       {
         "title": "Pozycje i listy zakupów",
-        "subtitle": "Zapisuj zakupy z cenami i danymi sklepu, uporządkowane według etapów, aby rzeczywisty koszt znalazł się obok tego, co oszacowałeś."
+        "subtitle": "Zapisuj zakupy z ceną i sklepem, ułożone według etapu, żeby każdy doliczał się do sumy bieżącej."
       },
       {
         "title": "Wyszukiwanie i rozszerzenie udostępniania",
@@ -142,7 +141,7 @@ const pl: Translation = {
       },
       {
         "title": "Współpraca w czasie rzeczywistym",
-        "subtitle": "Udostępnij projekt przez iCloud i utrzymuj go w synchronizacji z partnerem, rodziną lub wykonawcą prac."
+        "subtitle": "Udostępnij projekt partnerowi, rodzinie albo wykonawcy. Udostępnianie i synchronizacja iCloud są częścią Pro."
       },
       {
         "title": "Priorytety projektów",
@@ -168,11 +167,11 @@ const pl: Translation = {
       },
       {
         "title": "Zapisz wydatek, sfotografuj robotę",
-        "subtitle": "Wpisuj koszty, gdy się pojawiają, i rób zdjęcia prosto z aplikacji. Wykres dzieli wydane, zarezerwowane i pozostałe, więc przekroczenie widać, póki da się jeszcze zareagować — a każde zdjęcie dostaje datę i trafia do projektu."
+        "subtitle": "Zapisuj płatności w miarę jak wpływają i rób zdjęcia z aplikacji. Materiały, robocizna i wykonawca zostają osobno, a suma bieżąca aktualizuje się razem z nimi. Każde zdjęcie ma datę i jest przypięte do projektu."
       },
       {
         "title": "Wyeksportuj raport",
-        "subtitle": "Jedno dotknięcie zamienia budżet, zadania, zdjęcia i notatki w plik PDF. Wyślij go wykonawcy, ubezpieczycielowi lub do folderu, który przyda ci się za rok."
+        "subtitle": "Pro zamienia projekt w PDF: budżet, zadania, zdjęcia i notatki albo tylko potrzebne części. Wyślij go wykonawcy, ubezpieczycielowi albo do folderu, który przyda się za rok."
       }
     ]
   },
@@ -208,7 +207,7 @@ const pl: Translation = {
       },
       {
         "question": "Czy Home Stories ma widżety?",
-        "answer": "Tak. Dodaj pierścień postępu budżetu i nadchodzące zadania do ekranu głównego i ekranu blokady oraz korzystaj z Live Activities z Dynamic Island, aby mieć licznik czasu projektu na widoku podczas pracy — a wszystko to bez otwierania aplikacji."
+        "answer": "Tak. Widżety ekranu głównego pokazują postęp budżetu i to, co dalej. Śledzenie czasu ma minutnik na ekranie blokady oraz Dynamic Island na iPhonie 14 Pro i nowszych."
       },
       {
         "question": "Czy mogę współpracować z partnerem lub wykonawcą?",
@@ -250,7 +249,7 @@ const pl: Translation = {
           "Rejestr wydatków i ceny pozycji",
           "Działa całkowicie offline",
           "Lokalne kopie zapasowe i eksport danych",
-          "Widżety na ekranie głównym i blokady"
+          "Zadania, śledzenie czasu i widżety ekranu głównego"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const pl: Translation = {
       {
         "aspect": "Sumy",
         "them": "Formuły, które sam piszesz i utrzymujesz",
-        "us": "Wydane, zadeklarowane i pozostałe — automatycznie"
+        "us": "Suma bieżąca. Materiały, robocizna i wykonawca osobno."
       },
       {
         "aspect": "Na budowie",
@@ -330,7 +329,7 @@ const pl: Translation = {
     "success": {
       "label": "Druga droga",
       "title": "Albo docierasz do odbioru wciąż z paragonami w ręku",
-      "body": "Wydane, zarezerwowane i pozostałe są na jednym ekranie od pierwszego dnia. Każdy koszt, zdjęcie i notatka trafiają do projektu, do którego należą, jeszcze gdy stoisz w tym pomieszczeniu. W dniu odbioru cała robota to jeden PDF: liczby, oś czasu i dowód na to, co było za ścianą."
+      "body": "Suma bieżąca jest w projekcie od pierwszego dnia, a materiały, robocizna i wykonawca są rozdzielone. Zdjęcia i notatki trafiają do tego samego projektu, kiedy jeszcze jesteś w pomieszczeniu."
     },
     "cta": "Zacznij śledzić — za darmo"
   }

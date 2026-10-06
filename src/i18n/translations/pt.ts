@@ -25,10 +25,9 @@ const pt: Translation = {
     },
     "header": {
       "eyebrow": "Gestor de renovações para iPhone e iPad",
-      "committedSuffix": "comprometido",
-      "spent": "Gasto",
-      "committed": "Comprometido",
-      "left": "Restante"
+      "runningTotal": "Total acumulado",
+      "budgetLabel": "Orçamento",
+      "ofBudget": "do orçamento"
     },
     "sectionLabels": {
       "features": "Funcionalidades",
@@ -56,12 +55,12 @@ const pt: Translation = {
     "footer": {
       "site": "Site",
       "contact": "Contacto",
-      "tagline": "Os orçamentos de renovação derrapam. O Home Stories põe gasto, comprometido e restante num só ecrã, para que uma derrapagem apareça enquanto ainda pode agir. Um gestor de renovações para iPhone, feito na Dinamarca por Robert Jensen."
+      "tagline": "Os orçamentos de renovação derrapam. O Home Stories põe o total acumulado num só ecrã, para que uma derrapagem apareça enquanto ainda pode agir. Um gestor de renovações para iPhone e iPad, feito na Dinamarca por Robert Jensen."
     }
   },
   "header": {
     "headline": "Termine a renovação sem que o orçamento lhe fuja.",
-    "subtitle": "As renovações derrapam porque ninguém vê a derrapagem antes de o dinheiro já estar gasto. O Home Stories mantém gasto, comprometido e restante num só ecrã, com as tarefas pela ordem certa e fotografias datadas que provam o que aconteceu.",
+    "subtitle": "As renovações derrapam porque o desvio fica invisível até o dinheiro se ir. O Home Stories mantém um total acumulado num só ecrã, com as tarefas por ordem e fotos datadas do que aconteceu.",
     "usersDescription": "Criado por um proprietário a meio de uma renovação, para proprietários a meio de uma renovação",
     "headlineMark": [
       6,
@@ -97,7 +96,7 @@ const pt: Translation = {
       {
         "label": "Orçamento",
         "title": "Veja o excesso a chegar",
-        "subtitle": "Gasto, comprometido e restante num só gráfico. Descobre que passou do limite enquanto ainda pode fazer algo quanto a isso."
+        "subtitle": "Um total acumulado à medida que regista pagamentos, separado em materiais, mão de obra e empreiteiro. O gráfico de orçamento face ao real faz parte do Pro."
       },
       {
         "label": "Tarefas",
@@ -112,7 +111,7 @@ const pt: Translation = {
       {
         "label": "Exportar",
         "title": "Entregue um PDF",
-        "subtitle": "Orçamento, tarefas, fotos e notas num só relatório que o seu empreiteiro, seguradora ou futuro comprador conseguem mesmo ler."
+        "subtitle": "Um PDF de todo o projeto, ou só das partes de que precisa. A exportação faz parte do Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const pt: Translation = {
     "cards": [
       {
         "title": "Widgets e Live Activities",
-        "subtitle": "Um anel de orçamento no Ecrã Bloqueado, as próximas tarefas num relance e um cronómetro na Dynamic Island enquanto trabalha — sem abrir a app."
+        "subtitle": "Widgets do ecrã principal para o progresso do orçamento e o que vem a seguir, e um temporizador no ecrã de bloqueio enquanto regista o tempo."
       },
       {
         "title": "Registo de horas",
-        "subtitle": "Registe horas num projeto e veja para onde foram realmente os dias, apresentado visualmente lado a lado com o dinheiro."
+        "subtitle": "Registe horas num projeto e veja para onde foram os dias, ao lado do total acumulado."
       },
       {
         "title": "Notas e documentos",
@@ -134,7 +133,7 @@ const pt: Translation = {
       },
       {
         "title": "Itens e listas de compras",
-        "subtitle": "Guarde compras com preços e detalhes da loja, organizadas por fase, para que o custo real fique ao lado do que estimou."
+        "subtitle": "Guarde compras com preço e loja, organizadas por fase, para que cada uma se some ao total acumulado."
       },
       {
         "title": "Pesquisa e extensão de partilha",
@@ -142,7 +141,7 @@ const pt: Translation = {
       },
       {
         "title": "Colaboração em tempo real",
-        "subtitle": "Partilhe um projeto via iCloud e mantenha-o sincronizado com o parceiro, a família ou o empreiteiro que faz o trabalho."
+        "subtitle": "Partilhe um projeto com um parceiro, a família ou o empreiteiro. A partilha e a sincronização iCloud fazem parte do Pro."
       },
       {
         "title": "Prioridades de projeto",
@@ -168,11 +167,11 @@ const pt: Translation = {
       },
       {
         "title": "Registe a despesa, fotografe o trabalho",
-        "subtitle": "Introduza os custos à medida que surgem e fotografe diretamente da app. O gráfico separa gasto, comprometido e restante, por isso uma derrapagem aparece enquanto ainda pode agir — e cada fotografia fica datada e ligada ao projeto."
+        "subtitle": "Registe os pagamentos à medida que chegam e fotografe a partir da app. Materiais, mão de obra e empreiteiro ficam separados, e o total acumulado atualiza-se com eles. Cada foto fica datada e ligada ao projeto."
       },
       {
         "title": "Exporte o relatório",
-        "subtitle": "Um toque transforma orçamento, tarefas, fotos e notas num PDF. Envie-o ao empreiteiro, à seguradora ou para a pasta de que vai precisar no próximo ano."
+        "subtitle": "O Pro transforma o projeto num PDF: orçamento, tarefas, fotos e notas, ou só as partes de que precisa. Envie-o ao empreiteiro, à seguradora ou à pasta que vai querer no próximo ano."
       }
     ]
   },
@@ -208,7 +207,7 @@ const pt: Translation = {
       },
       {
         "question": "O Home Stories tem widgets?",
-        "answer": "Sim. Adicione um anel de progresso do orçamento e as próximas tarefas ao Ecrã Principal e ao Ecrã Bloqueado, e use as Live Activities com a Dynamic Island para manter um cronómetro de projeto à vista enquanto trabalha — tudo sem abrir a app."
+        "answer": "Sim. Os widgets do ecrã principal mostram o progresso do orçamento e o que vem a seguir. O registo de tempo tem um temporizador no ecrã de bloqueio, e Dynamic Island no iPhone 14 Pro e posteriores."
       },
       {
         "question": "Posso colaborar com um parceiro ou empreiteiro?",
@@ -250,7 +249,7 @@ const pt: Translation = {
           "Registo de despesas e preços de artigos",
           "Funciona totalmente offline",
           "Cópias locais e exportação de dados",
-          "Widgets de ecrã principal e de bloqueio"
+          "Tarefas, registo de tempo e widgets do ecrã principal"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const pt: Translation = {
       {
         "aspect": "Totais",
         "them": "Fórmulas que escreve e mantém sozinho",
-        "us": "Gasto, comprometido e restante — automático"
+        "us": "Um total acumulado. Materiais, mão de obra e empreiteiro separados."
       },
       {
         "aspect": "Na obra",
@@ -330,7 +329,7 @@ const pt: Translation = {
     "success": {
       "label": "O outro caminho",
       "title": "Ou chega à entrega ainda com os recibos na mão",
-      "body": "Gasto, comprometido e restante ficam num só ecrã desde o primeiro dia. Cada custo, fotografia e nota cai no projeto a que pertence, enquanto ainda está de pé na divisão. No dia da entrega a obra inteira é um PDF: os números, a cronologia e a prova do que estava atrás da parede."
+      "body": "Um total acumulado está no projeto desde o primeiro dia, com materiais, mão de obra e empreiteiro separados. Fotos e notas caem no mesmo projeto enquanto ainda está na divisão."
     },
     "cta": "Comece a registar — grátis"
   }

@@ -116,7 +116,7 @@ A straightforward kitchen refresh takes four to eight weeks on site, all else be
 
 The spread inside that range isn't random. It's determined by how much you move, how old the house is, and whether you order your cabinets before the demo crew walks in.
 
-If you're planning a kitchen renovation and want to keep track of budget, timeline, and decisions as the work progresses, [Home Stories](https://apps.apple.com/app/id6754754960) was built for exactly that kind of thing. It's free on iPhone, works offline, and keeps budget, tasks, photos, and notes attached to your project — so you're not hunting through emails and receipts when you need to check what's changed since last week.
+If you're planning a kitchen renovation and want to keep track of budget, timeline, and decisions as the work progresses, [Home Stories](https://apps.apple.com/app/id6754754960) was built for exactly that kind of thing. It's free on iPhone and iPad, works offline, and keeps budget, tasks, photos, and notes attached to your project — so you're not hunting through emails and receipts when you need to check what's changed since last week.
 
 ## Sources and further reading
 

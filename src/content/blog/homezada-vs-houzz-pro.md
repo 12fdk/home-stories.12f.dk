@@ -14,7 +14,7 @@ tags: ["comparison", "apps", "planning", "tools"]
 tldr:
   - "<strong>HomeZada</strong> is the most feature-rich option — asset tracking, warranty management, document storage, and project budgets — but it's a desktop-first product that assumes you'll log things from a desk. It also hasn't shipped an app update since <strong>May 2022</strong> and averages 2.9★ on the iOS App Store."
   - "<strong>Houzz Pro</strong> is designed for contractors and professionals, not homeowners. It includes lead management, invoicing, and CRM features that are irrelevant if you're running your own renovation. The consumer version (just \"Houzz\") is a design-idea app with no tracking at all."
-  - "<strong>Home Stories</strong> is a phone-first renovation tracker for one audience: homeowners who need to log costs, photos, and tasks from their phone while standing in a half-demolished room. It's free, it requires no setup, and it exports to PDF so you can show a contractor or tax adviser what you've tracked."
+  - "<strong>Home Stories</strong> is a phone-first renovation tracker for one audience: homeowners who need to log costs, photos, and tasks from their phone while standing in a half-demolished room. It's free on iPhone and iPad, it needs no account, and Pro adds a PDF you can show a contractor or tax adviser."
   - "<strong>The deciding factor</strong> isn't features — it's where and how you log. If your renovation app needs a desk, two hands, and thirty seconds of focus, you won't use it on-site. The only tool that survives a real build is the one you can tap in seconds."
 faq:
   - question: "What is HomeZada good for?"
@@ -24,7 +24,7 @@ faq:
   - question: "How does Home Stories compare to HomeZada for budgeting?"
     answer: "Both let you set up budget categories and log costs against them, but the experience is fundamentally different. HomeZada builds the budget on a desktop dashboard and expects you to update it from a desk. Home Stories builds the budget inside a phone app designed for on-site logging: tap to add a cost, type the amount, pick the category, and it's done in a few seconds. The HomeZada approach is fine for planning; the Home Stories approach works when you're standing in a builder's merchant paying for unexpected materials. If you need the budget to stay current on-site, phone-first matters."
   - question: "Is Home Stories free?"
-    answer: "Yes — Home Stories is free to download and use on the App Store for iPhone, with an optional one-time Home Stories Pro upgrade. There is no subscription and no monthly fee. The free version includes unlimited project budget tracking, a photo timeline with notes, task management, and PDF export. It requires iOS 17 or later."
+    answer: "Yes — Home Stories is free to download and use on the App Store for iPhone and iPad, with an optional one-time Home Stories Pro upgrade. There is no subscription and no monthly fee. The free version includes a running total, a photo timeline with notes, tasks, documents and data export. The budget-vs-actual chart, PDF export, iCloud sync and project sharing are part of Pro. It requires iOS 17 or later."
   - question: "Should I use a renovation app at all, or just a spreadsheet?"
     answer: "A spreadsheet works for planning — building categories, estimating costs, and modelling scenarios at a desk. It fails the moment execution starts because spreadsheets are not designed for on-site logging: you need two hands, good lighting, and time you don't have while standing in a dusty room with a contractor waiting. A phone-first app like Home Stories solves that single problem by making logging take seconds. Every renovation tool review on this topic should start from that observation: the best tool is the one you actually use, and you'll only use what your phone can do in thirty seconds."
   - question: "What should I look for in a renovation app?"
@@ -108,10 +108,10 @@ The feature set is intentionally narrow:
 - **Photo timeline** — take or upload photos of every stage, add notes and captions, build a chronological record.
 - **Task lists** — create tasks per room or phase, check them off as completed.
 - **Documents and receipts** — store quotes, contracts and receipts against the project.
-- **PDF export** — generate a clean report you can send to a contractor, your bank, or a tax adviser.
+- **PDF export (Pro)** — a report of the whole project, or just the parts you choose, to send to a contractor, your bank, or a tax adviser.
 - **Multi-project support** — manage a house renovation and a cottage on the go.
 
-It is free on the App Store for iPhone (requires iOS 17 or later), with an optional one-time Pro upgrade for expanded features such as iCloud sync, project sharing and PDF export.
+It is free on the App Store for iPhone and iPad (requires iOS 17 or later). Home Stories Pro is an optional one-time upgrade for the budget-vs-actual chart, task reminders, PDF export, iCloud sync and project sharing.
 
 ### What phone-first actually changes
 
@@ -121,7 +121,7 @@ Budget tracking looks like this: tap the + button, type the amount, pick a categ
 
 The photo timeline works the same way. You're standing in a room, the plumber has just opened the wall, you snap a photo, add a note, and it's in the timeline. No file management, no folder structure, no naming conventions. Just a photo with a timestamp and your notes.
 
-**PDF export** is the kicker. HomeZada exports too, but often into its own formats. A phone-first tracker that exports to standard PDF means you can hand a contractor or a tax adviser a universally readable document.
+**PDF export**, which is part of Pro, is the hand-off. HomeZada exports too, but often into its own formats. A PDF of the project means you can hand a contractor or a tax adviser a universally readable document.
 
 ## Feature comparison
 
@@ -134,7 +134,7 @@ Here's how the three stack up on the criteria that actually matter for a homeown
 | **On-site logging** | Cumbersome | N/A (not for homeowners) | Fast, one-handed |
 | **Photo timeline** | Yes, room-based | Portfolio-focused | Yes, chronological |
 | **Task management** | Yes | Yes (for clients) | Yes (per room/phase) |
-| **PDF export** | Yes | Invoicing format | Yes, universal PDF |
+| **PDF export** | Yes | Invoicing format | Yes, with Pro |
 | **Pricing** | ~$6/mo or ~$50/yr | Starts at ~$39.99/mo | Free (optional upgrade) |
 | **iOS app** | Exists, no update since May 2022 | Yes, professional | Yes, phone-first design |
 | **Setup time** | 30–60 minutes | 15–30 minutes | Under 2 minutes |
@@ -149,7 +149,7 @@ It depends on who you are and where you are in the renovation timeline. If you'r
 
 **Use the free Houzz app if:** You're looking for design inspiration. It's great for browsing and saving ideas. It's useless for anything that requires data entry.
 
-**Use a phone-first renovation tracker if:** You're a homeowner tracking your own renovation and you want a tool that you'll actually use on-site. It takes seconds to log a cost or take a photo, and it exports to PDF so you have a record you can share. You can usually start in under two minutes.
+**Use a phone-first renovation tracker if:** You're a homeowner tracking your own renovation and you want a tool that you'll actually use on-site. It takes seconds to log a cost or take a photo, and Pro adds a PDF so you have a record you can share. You can usually start in under two minutes.
 
 ## Why phone-first beats feature-rich for on-site use
 
@@ -173,7 +173,7 @@ You can compare the full details on each product's website:
 
 - [HomeZada](https://www.homezada.com) — home management platform with renovation features
 - [Houzz Pro](https://www.houzz.com/pro) — contractor and designer business tools
-- [App Store listing for a phone-first tracker](https://apps.apple.com/app/id6754754960) — free renovation tracking for iPhone
+- [App Store listing for a phone-first tracker](https://apps.apple.com/app/id6754754960) — free renovation tracking for iPhone and iPad
 
 The decision isn't about which app has the most features. It's about which tool you'll still be using in the third month of a renovation, when you're tired, the budget is tight, and you just need to log one more receipt before the invoice deadline.
 

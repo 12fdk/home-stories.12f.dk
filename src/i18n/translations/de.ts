@@ -25,10 +25,9 @@ const de: Translation = {
     },
     "header": {
       "eyebrow": "Renovierungs-Tracker für iPhone und iPad",
-      "committedSuffix": "verplant",
-      "spent": "Ausgegeben",
-      "committed": "Verplant",
-      "left": "Übrig"
+      "runningTotal": "Laufende Summe",
+      "budgetLabel": "Budget",
+      "ofBudget": "des Budgets"
     },
     "sectionLabels": {
       "features": "Funktionen",
@@ -56,12 +55,12 @@ const de: Translation = {
     "footer": {
       "site": "Seite",
       "contact": "Kontakt",
-      "tagline": "Renovierungsbudgets laufen davon. Home Stories zeigt Ausgegeben, Gebunden und Rest auf einem Bildschirm, damit eine Überschreitung auffällt, solange du noch reagieren kannst. Ein Renovierungs-Tracker für iPhone, gemacht in Dänemark von Robert Jensen."
+      "tagline": "Renovierungsbudgets laufen davon. Home Stories zeigt die laufende Summe auf einem Bildschirm, damit eine Überschreitung auffällt, solange du noch reagieren kannst. Ein Renovierungs-Tracker für iPhone und iPad, gemacht in Dänemark von Robert Jensen."
     }
   },
   "header": {
     "headline": "Bring die Renovierung zu Ende, ohne dass das Budget dir davonläuft.",
-    "subtitle": "Renovierungen laufen aus dem Ruder, weil niemand die Überschreitung sieht, bevor das Geld weg ist. Home Stories hält Ausgegeben, Gebunden und Rest auf einem Bildschirm – mit Aufgaben in der richtigen Reihenfolge und datierten Fotos, die belegen, was passiert ist.",
+    "subtitle": "Renovierungen laufen davon, weil die Überschreitung unsichtbar bleibt, bis das Geld weg ist. Home Stories hält eine laufende Summe auf einem Bildschirm, mit Aufgaben in der richtigen Reihenfolge und datierten Fotos dessen, was passiert ist.",
     "usersDescription": "Von einem Hausbesitzer mitten in der Renovierung entwickelt – für Hausbesitzer mitten in der Renovierung",
     "headlineMark": [
       8,
@@ -97,7 +96,7 @@ const de: Translation = {
       {
         "label": "Budget",
         "title": "Die Überschreitung kommen sehen",
-        "subtitle": "Ausgegeben, verplant und verbleibend in einem Diagramm. Sie merken, dass Sie drüber sind, solange Sie noch etwas dagegen tun können."
+        "subtitle": "Eine laufende Summe, während du Zahlungen erfasst, getrennt nach Material, Arbeit und Handwerker. Das Diagramm Budget gegen Ist ist Teil von Pro."
       },
       {
         "label": "Aufgaben",
@@ -112,7 +111,7 @@ const de: Translation = {
       {
         "label": "Export",
         "title": "Ein PDF übergeben",
-        "subtitle": "Budget, Aufgaben, Fotos und Notizen in einem Bericht, den Ihr Handwerker, Versicherer oder künftiger Käufer wirklich lesen kann."
+        "subtitle": "Ein PDF des ganzen Projekts oder nur der Teile, die du brauchst. Der Export ist Teil von Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const de: Translation = {
     "cards": [
       {
         "title": "Widgets & Live Activities",
-        "subtitle": "Ein Budget-Ring auf dem Sperrbildschirm, die nächsten Aufgaben auf einen Blick und ein Timer in der Dynamic Island während der Arbeit – ohne die App zu öffnen."
+        "subtitle": "Home-Bildschirm-Widgets für den Budgetfortschritt und das, was als Nächstes kommt, und ein Timer auf dem Sperrbildschirm, während du Zeit erfasst."
       },
       {
         "title": "Zeiterfassung",
-        "subtitle": "Erfassen Sie Stunden für ein Projekt und sehen Sie, wohin die Tage wirklich gegangen sind – visuell aufgeschlüsselt neben dem Geld."
+        "subtitle": "Erfasse Stunden zu einem Projekt und sieh, wohin die Tage gingen, neben der laufenden Summe."
       },
       {
         "title": "Notizen & Dokumente",
@@ -134,7 +133,7 @@ const de: Translation = {
       },
       {
         "title": "Posten & Einkaufslisten",
-        "subtitle": "Speichern Sie Einkäufe mit Preisen und Geschäftsdetails, nach Phase geordnet, sodass die tatsächlichen Kosten neben Ihrer Schätzung landen."
+        "subtitle": "Speichere Einkäufe mit Preis und Geschäft, nach Phase geordnet, sodass jeder zur laufenden Summe zählt."
       },
       {
         "title": "Suche & Teilen-Erweiterung",
@@ -142,7 +141,7 @@ const de: Translation = {
       },
       {
         "title": "Zusammenarbeit in Echtzeit",
-        "subtitle": "Teilen Sie ein Projekt über iCloud und halten Sie es mit Partner, Familie oder dem ausführenden Handwerker synchron."
+        "subtitle": "Teile ein Projekt mit Partner, Familie oder dem Handwerker. Teilen und iCloud-Sync sind Teil von Pro."
       },
       {
         "title": "Projektprioritäten",
@@ -168,11 +167,11 @@ const de: Translation = {
       },
       {
         "title": "Kosten erfassen, Arbeit fotografieren",
-        "subtitle": "Trage Kosten ein, sobald sie anfallen, und fotografiere direkt aus der App. Das Diagramm teilt in Ausgegeben, Gebunden und Rest, sodass eine Überschreitung auffällt, solange du noch reagieren kannst – und jedes Foto wird datiert und dem Projekt zugeordnet."
+        "subtitle": "Erfasse Zahlungen, sobald sie anfallen, und fotografiere aus der App. Material, Arbeit und Handwerker bleiben getrennt, und die laufende Summe aktualisiert sich mit. Jedes Foto wird datiert und dem Projekt zugeordnet."
       },
       {
         "title": "Den Bericht exportieren",
-        "subtitle": "Ein Tippen macht aus Budget, Aufgaben, Fotos und Notizen ein PDF. Schicken Sie es an den Handwerker, den Versicherer oder in den Ordner, den Sie nächstes Jahr brauchen werden."
+        "subtitle": "Pro macht aus dem Projekt ein PDF: Budget, Aufgaben, Fotos und Notizen, oder nur die Teile, die du brauchst. Schick es an den Handwerker, die Versicherung oder den Ordner, den du nächstes Jahr brauchst."
       }
     ]
   },
@@ -208,7 +207,7 @@ const de: Translation = {
       },
       {
         "question": "Hat Home Stories Widgets?",
-        "answer": "Ja. Fügen Sie einen Budget-Fortschrittsring und anstehende Aufgaben zu Ihrem Home-Bildschirm und Sperrbildschirm hinzu und nutzen Sie Live Activities mit der Dynamic Island, um einen Projekt-Timer während der Arbeit im Blick zu behalten – alles ohne die App zu öffnen."
+        "answer": "Ja. Widgets auf dem Home-Bildschirm zeigen den Budgetfortschritt und das, was als Nächstes kommt. Die Zeiterfassung hat einen Timer auf dem Sperrbildschirm und Dynamic Island auf dem iPhone 14 Pro und neuer."
       },
       {
         "question": "Kann ich mit einem Partner oder Handwerker zusammenarbeiten?",
@@ -250,7 +249,7 @@ const de: Translation = {
           "Ausgabenerfassung und Artikelpreise",
           "Funktioniert komplett offline",
           "Lokale Sicherungen und Datenexport",
-          "Widgets für Home- und Sperrbildschirm"
+          "Aufgaben, Zeiterfassung und Widgets für den Home-Bildschirm"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const de: Translation = {
       {
         "aspect": "Summen",
         "them": "Formeln, die du selbst schreibst und pflegst",
-        "us": "Ausgegeben, gebunden und verbleibend — automatisch"
+        "us": "Eine laufende Summe. Material, Arbeit und Handwerker bleiben getrennt."
       },
       {
         "aspect": "Auf der Baustelle",
@@ -330,7 +329,7 @@ const de: Translation = {
     "success": {
       "label": "Der andere Weg",
       "title": "Oder du stehst bei der Übergabe noch mit den Belegen da",
-      "body": "Ausgegeben, Gebunden und Rest stehen ab dem ersten Tag auf einem Bildschirm. Jede Ausgabe, jedes Foto und jede Notiz landet bei dem Projekt, zu dem sie gehört, während du noch im Raum stehst. Am Übergabetag ist die ganze Arbeit eine PDF – die Zahlen, der Zeitverlauf und der Beleg dafür, was hinter der Wand war."
+      "body": "Eine laufende Summe steht vom ersten Tag am Projekt, Material, Arbeit und Handwerker getrennt. Fotos und Notizen landen im selben Projekt, während du noch im Raum stehst."
     },
     "cta": "Jetzt starten – kostenlos"
   }

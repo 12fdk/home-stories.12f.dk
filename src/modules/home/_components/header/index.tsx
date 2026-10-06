@@ -17,18 +17,15 @@ function BudgetRail({
   currency,
   budget,
   spent,
-  potential,
   labels,
 }: {
   project: string;
   currency: string;
   budget: number;
   spent: number;
-  potential: number;
-  labels: { committedSuffix: string; spent: string; committed: string; left: string };
+  labels: { runningTotal: string; budgetLabel: string; ofBudget: string };
 }) {
   const spentRatio = Math.min(spent / budget, 1);
-  const potentialRatio = Math.min(potential / budget, 1 - spentRatio);
   const format = (n: number) => `${currency}${n.toLocaleString("en-US")}`;
 
   return (
@@ -36,11 +33,11 @@ function BudgetRail({
       <div className="flex items-baseline justify-between text-base-content/60">
         <span className="tick-label">{project}</span>
         <span className="tick-label">
-          {Math.round((spentRatio + potentialRatio) * 100)}% {labels.committedSuffix}
+          {Math.round(spentRatio * 100)}% {labels.ofBudget}
         </span>
       </div>
 
-      {/* The bar: spent solid, committed hatched behind it */}
+      {/* One bar: running total against the budget */}
       <div className="relative mt-3 flex h-3 overflow-hidden rounded-[3px] bg-base-300">
         <motion.div
           initial={{ scaleX: 0 }}
@@ -49,16 +46,6 @@ function BudgetRail({
           style={{ transformOrigin: "left", width: `${spentRatio * 100}%` }}
           className="h-full bg-accent"
         />
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.6, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
-          style={{
-            transformOrigin: "left",
-            width: `${potentialRatio * 100}%`,
-          }}
-          className="h-full bg-accent/40"
-        />
         <div
           aria-hidden="true"
           className="ticks absolute inset-x-0 -bottom-2 text-base-content"
@@ -66,11 +53,10 @@ function BudgetRail({
       </div>
 
       {/* The dimension callouts */}
-      <div className="mt-5 grid grid-cols-3 gap-4 font-mono">
+      <div className="mt-5 grid grid-cols-2 gap-4 font-mono">
         {[
-          { k: labels.spent, v: format(spent) },
-          { k: labels.committed, v: format(potential) },
-          { k: labels.left, v: format(budget - spent - potential) },
+          { k: labels.runningTotal, v: format(spent) },
+          { k: labels.budgetLabel, v: format(budget) },
         ].map(({ k, v }) => (
           // Static: hero text must be visible in the SSR paint (LCP). #23
           <div key={k}>
@@ -215,12 +201,14 @@ function Header() {
 
           {header.sample && (
             <BudgetRail
-              {...header.sample}
+              project={header.sample.project}
+              currency={header.sample.currency}
+              budget={header.sample.budget}
+              spent={header.sample.spent}
               labels={{
-                committedSuffix: ui.header.committedSuffix,
-                spent: ui.header.spent,
-                committed: ui.header.committed,
-                left: ui.header.left,
+                runningTotal: ui.header.runningTotal,
+                budgetLabel: ui.header.budgetLabel,
+                ofBudget: ui.header.ofBudget,
               }}
             />
           )}

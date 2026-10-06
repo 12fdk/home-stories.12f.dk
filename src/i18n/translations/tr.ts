@@ -25,10 +25,9 @@ const tr: Translation = {
     },
     "header": {
       "eyebrow": "iPhone ve iPad için tadilat takibi",
-      "committedSuffix": "taahhüt edildi",
-      "spent": "Harcanan",
-      "committed": "Taahhüt edilen",
-      "left": "Kalan"
+      "runningTotal": "Güncel toplam",
+      "budgetLabel": "Bütçe",
+      "ofBudget": "bütçenin"
     },
     "sectionLabels": {
       "features": "Özellikler",
@@ -56,12 +55,12 @@ const tr: Translation = {
     "footer": {
       "site": "Site",
       "contact": "İletişim",
-      "tagline": "Tadilat bütçeleri kayar. Home Stories harcanan, bağlanan ve kalanı tek ekranda tutar; böylece bir aşım, hâlâ müdahale edebilecekken görünür. iPhone için bir tadilat takipçisi, Danimarka'da Robert Jensen tarafından yapıldı."
+      "tagline": "Tadilat bütçeleri kayar. Home Stories güncel toplamı tek ekranda tutar; böylece bir aşım, hâlâ müdahale edebilecekken görünür. iPhone ve iPad için bir tadilat takipçisi, Danimarka'da Robert Jensen tarafından yapıldı."
     }
   },
   "header": {
     "headline": "Tadilatı bütçe elinizden kaçmadan bitirin.",
-    "subtitle": "Tadilatlar kayar, çünkü para çoktan gitmeden kimse aşımı görmez. Home Stories harcanan, bağlanan ve kalanı tek ekranda tutar — işler doğru sırayla, ne olduğunu kanıtlayan tarihli fotoğraflarla.",
+    "subtitle": "Tadilatlar kayar, çünkü aşım para bitene kadar görünmez kalır. Home Stories güncel toplamı tek ekranda tutar; görevler sıradadır, olan biten tarihli fotoğraflardadır.",
     "usersDescription": "Tadilatın ortasındaki bir ev sahibi tarafından, tadilatın ortasındaki ev sahipleri için yapıldı",
     "headlineMark": [
       1,
@@ -97,7 +96,7 @@ const tr: Translation = {
       {
         "label": "Bütçe",
         "title": "Bütçe aşımını önceden görün",
-        "subtitle": "Harcanan, taahhüt edilen ve kalan tek bir grafikte. Bütçeyi aştığınızı, hâlâ bir şeyler yapabilecekken öğrenirsiniz."
+        "subtitle": "Ödemeleri kaydettikçe güncel bir toplam. Malzeme, işçilik ve yüklenici ayrı durur. Bütçe ve gerçekleşen grafiği Pro'nun parçasıdır."
       },
       {
         "label": "Görevler",
@@ -112,7 +111,7 @@ const tr: Translation = {
       {
         "label": "Dışa aktarma",
         "title": "Bir PDF teslim edin",
-        "subtitle": "Bütçe, görevler, fotoğraflar ve notlar; müteahhitinizin, sigortacınızın ya da gelecekteki alıcının gerçekten okuyabileceği tek bir raporda."
+        "subtitle": "Tüm projenin ya da yalnızca gereken bölümlerin PDF'i. Dışa aktarma Pro'nun parçasıdır."
       }
     ]
   },
@@ -122,11 +121,11 @@ const tr: Translation = {
     "cards": [
       {
         "title": "Widget'lar ve Live Activities",
-        "subtitle": "Kilit Ekranınızda bir bütçe halkası, bir bakışta sıradaki görevler ve çalışırken bir Dynamic Island zamanlayıcısı — hem de uygulamayı açmadan."
+        "subtitle": "Bütçe ilerlemesi ve sırada ne olduğu için Ana Ekran widget'ları, süre tutarken de kilit ekranında bir zamanlayıcı."
       },
       {
         "title": "Zaman takibi",
-        "subtitle": "Bir projeye saatlerinizi kaydedin ve günlerin gerçekte nereye gittiğini, para ile birlikte görsel olarak ayrıştırılmış şekilde görün."
+        "subtitle": "Bir projeye saat kaydedin ve günlerin nereye gittiğini güncel toplamın yanında görün."
       },
       {
         "title": "Notlar ve belgeler",
@@ -134,7 +133,7 @@ const tr: Translation = {
       },
       {
         "title": "Kalemler ve alışveriş listeleri",
-        "subtitle": "Satın alımları fiyatları ve mağaza bilgileriyle, aşamalara göre düzenlenmiş şekilde kaydedin; böylece gerçek maliyet, tahmin ettiğinizin hemen yanına gelsin."
+        "subtitle": "Alışverişleri fiyat ve mağazayla, aşamaya göre kaydedin; her biri güncel toplama eklenir."
       },
       {
         "title": "Arama ve Paylaş uzantısı",
@@ -142,7 +141,7 @@ const tr: Translation = {
       },
       {
         "title": "Gerçek zamanlı iş birliği",
-        "subtitle": "Bir projeyi iCloud üzerinden paylaşın ve eşinizle, ailenizle ya da işi yapan müteahhitle eşitlenmiş halde tutun."
+        "subtitle": "Bir projeyi eşinizle, ailenizle veya yükleniciyle paylaşın. Paylaşım ve iCloud eşitleme Pro'nun parçasıdır."
       },
       {
         "title": "Proje öncelikleri",
@@ -168,11 +167,11 @@ const tr: Translation = {
       },
       {
         "title": "Harcamayı yazın, işi fotoğraflayın",
-        "subtitle": "Masrafları geldikçe girin ve doğrudan uygulamadan fotoğraflayın. Grafik harcanan, bağlanan ve kalanı ayırır; böylece bir aşım, hâlâ müdahale edebilecekken görünür — ve her fotoğraf tarihlenip projeye iliştirilir."
+        "subtitle": "Ödemeler geldikçe kaydedin ve uygulamadan fotoğraf çekin. Malzeme, işçilik ve yüklenici ayrı kalır, güncel toplam da onlarla güncellenir. Her fotoğraf tarih alır ve projeye bağlanır."
       },
       {
         "title": "Raporu dışa aktarın",
-        "subtitle": "Tek dokunuş; bütçeyi, görevleri, fotoğrafları ve notları bir PDF'e dönüştürür. Onu müteahhite, sigortacıya ya da gelecek yıl ihtiyaç duyacağınız klasöre gönderin."
+        "subtitle": "Pro projeyi PDF'e çevirir: bütçe, görevler, fotoğraflar ve notlar ya da yalnızca gereken bölümler. Onu yükleniciye, sigortacıya veya gelecek yıl lazım olacak klasöre gönderin."
       }
     ]
   },
@@ -208,7 +207,7 @@ const tr: Translation = {
       },
       {
         "question": "Home Stories'in widget'ları var mı?",
-        "answer": "Evet. Ana Ekranınıza ve Kilit Ekranınıza bir bütçe ilerleme halkası ve yaklaşan görevleri ekleyin; çalışırken bir proje zamanlayıcısını görünür tutmak için Dynamic Island ile Live Activities'i kullanın — hepsi de uygulamayı açmadan."
+        "answer": "Evet. Ana Ekran widget'ları bütçe ilerlemesini ve sırada ne olduğunu gösterir. Süre takibinin kilit ekranında bir zamanlayıcısı vardır; iPhone 14 Pro ve sonrasında Dynamic Island'da da görünür."
       },
       {
         "question": "Bir eş veya müteahhitle iş birliği yapabilir miyim?",
@@ -250,7 +249,7 @@ const tr: Translation = {
           "Harcama kaydı ve ürün fiyatları",
           "Tamamen çevrimdışı çalışır",
           "Yerel yedekler ve veri dışa aktarma",
-          "Ana ekran ve kilit ekranı widget'ları"
+          "Görevler, süre takibi ve Ana Ekran widget'ları"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const tr: Translation = {
       {
         "aspect": "Toplamlar",
         "them": "Kendi yazıp koruduğun formüller",
-        "us": "Harcanan, taahhüt edilen ve kalan — otomatik"
+        "us": "Güncel bir toplam. Malzeme, işçilik ve yüklenici ayrı tutulur."
       },
       {
         "aspect": "Şantiyede",
@@ -330,7 +329,7 @@ const tr: Translation = {
     "success": {
       "label": "Diğer yol",
       "title": "Ya da teslime hâlâ fişler elinizdeyken varırsınız",
-      "body": "Harcanan, bağlanan ve kalan ilk günden tek ekranda durur. Her masraf, fotoğraf ve not, siz hâlâ o odada dururken ait olduğu projeye düşer. Teslim günü bütün iş tek bir PDF'tir: rakamlar, zaman çizelgesi ve duvarın arkasında ne olduğunun kanıtı."
+      "body": "Güncel toplam ilk günden projede durur; malzeme, işçilik ve yüklenici ayrıdır. Fotoğraflar ve notlar, siz hâlâ odadayken aynı projeye düşer."
     },
     "cta": "Takibe başlayın — ücretsiz"
   }

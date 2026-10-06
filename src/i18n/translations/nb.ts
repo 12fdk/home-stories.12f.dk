@@ -25,10 +25,9 @@ const nb: Translation = {
     },
     "header": {
       "eyebrow": "Renoveringssporing for iPhone og iPad",
-      "committedSuffix": "bundet",
-      "spent": "Brukt",
-      "committed": "Bundet",
-      "left": "Igjen"
+      "runningTotal": "Løpende total",
+      "budgetLabel": "Budsjett",
+      "ofBudget": "av budsjettet"
     },
     "sectionLabels": {
       "features": "Funksjoner",
@@ -56,12 +55,12 @@ const nb: Translation = {
     "footer": {
       "site": "Nettsted",
       "contact": "Kontakt",
-      "tagline": "Oppussingsbudsjetter skrider ut. Home Stories setter brukt, bundet og igjen på én skjerm, slik at en overskridelse dukker opp mens du fortsatt kan gjøre noe med den. En oppussingssporer for iPhone, laget i Danmark av Robert Jensen."
+      "tagline": "Oppussingsbudsjetter skrider ut. Home Stories setter den løpende totalen på én skjerm, slik at en overskridelse dukker opp mens du fortsatt kan gjøre noe med den. En oppussingssporer for iPhone og iPad, laget i Danmark av Robert Jensen."
     }
   },
   "header": {
     "headline": "Fullfør oppussingen uten at budsjettet løper fra deg.",
-    "subtitle": "Oppussinger sklir ut fordi ingen ser overskridelsen før pengene allerede er brukt. Home Stories holder brukt, bundet og igjen på én skjerm – med oppgaver i riktig rekkefølge og daterte bilder som beviser hva som skjedde.",
+    "subtitle": "Oppussinger skrider ut fordi overskridelsen blir usynlig til pengene er borte. Home Stories holder en løpende total på én skjerm, med oppgaver i rekkefølge og daterte bilder av det som skjedde.",
     "usersDescription": "Laget av en huseier midt i en renovering, for huseiere midt i en renovering",
     "headlineMark": [
       4,
@@ -97,7 +96,7 @@ const nb: Translation = {
       {
         "label": "Budsjett",
         "title": "Se overskridelsen komme",
-        "subtitle": "Brukt, bundet og gjenstående i ett diagram. Du oppdager at du er over mens det fortsatt er noe du kan gjøre med det."
+        "subtitle": "En løpende total mens du fører betalinger, delt i materialer, arbeid og håndverker. Diagrammet budsjett mot faktisk er en del av Pro."
       },
       {
         "label": "Oppgaver",
@@ -112,7 +111,7 @@ const nb: Translation = {
       {
         "label": "Eksport",
         "title": "Lever fra deg en PDF",
-        "subtitle": "Budsjett, oppgaver, bilder og notater i én rapport håndverkeren, forsikringsselskapet eller en fremtidig kjøper faktisk kan lese."
+        "subtitle": "En PDF av hele prosjektet, eller bare delene du trenger. Eksport er en del av Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const nb: Translation = {
     "cards": [
       {
         "title": "Widgets og Live Activities",
-        "subtitle": "En budsjettring på låseskjermen, de neste oppgavene i et øyekast, og en Dynamic Island-timer mens du jobber – uten å åpne appen."
+        "subtitle": "Widgeter på hjemskjermen for budsjettfremdrift og det som er neste, og en timer på låseskjermen mens du registrerer tid."
       },
       {
         "title": "Tidssporing",
-        "subtitle": "Loggfør timer på et prosjekt og se hvor dagene faktisk tok veien, brutt visuelt ned side om side med pengene."
+        "subtitle": "Før timer på et prosjekt og se hvor dagene gikk, ved siden av den løpende totalen."
       },
       {
         "title": "Notater og dokumenter",
@@ -134,7 +133,7 @@ const nb: Translation = {
       },
       {
         "title": "Varer og handlelister",
-        "subtitle": "Lagre kjøp med priser og butikkdetaljer, organisert per fase, slik at faktisk kostnad havner ved siden av det du estimerte."
+        "subtitle": "Lagre kjøp med pris og butikk, organisert etter fase, slik at hvert enkelt legges til den løpende totalen."
       },
       {
         "title": "Søk og delingsutvidelse",
@@ -142,7 +141,7 @@ const nb: Translation = {
       },
       {
         "title": "Samarbeid i sanntid",
-        "subtitle": "Del et prosjekt over iCloud og hold det synkronisert med en partner, familie eller håndverkeren som gjør arbeidet."
+        "subtitle": "Del et prosjekt med en partner, familie eller håndverkeren. Deling og iCloud-synkronisering er en del av Pro."
       },
       {
         "title": "Prosjektprioriteringer",
@@ -168,11 +167,11 @@ const nb: Translation = {
       },
       {
         "title": "Før utgiften, fotografer arbeidet",
-        "subtitle": "Legg inn kostnader etter hvert som de kommer, og fotografer rett fra appen. Diagrammet deler opp brukt, bundet og igjen, slik at en overskridelse dukker opp mens du fortsatt kan gjøre noe med den – og hvert bilde dateres og knyttes til prosjektet."
+        "subtitle": "Før betalinger etter hvert som de kommer, og ta bilder fra appen. Materialer, arbeid og håndverker holdes fra hverandre, og den løpende totalen oppdateres med dem. Hvert bilde dateres og knyttes til prosjektet."
       },
       {
         "title": "Eksporter rapporten",
-        "subtitle": "Ett trykk gjør budsjett, oppgaver, bilder og notater om til en PDF. Send den til håndverkeren, forsikringsselskapet, eller mappen du vil ha neste år."
+        "subtitle": "Pro gjør prosjektet til en PDF: budsjett, oppgaver, bilder og notater, eller bare delene du trenger. Send den til håndverkeren, forsikringen eller mappen du vil ha neste år."
       }
     ]
   },
@@ -208,7 +207,7 @@ const nb: Translation = {
       },
       {
         "question": "Har Home Stories widgets?",
-        "answer": "Ja. Legg til en budsjettfremdriftsring og kommende oppgaver på hjemskjermen og låseskjermen, og bruk Live Activities med Dynamic Island for å holde en prosjekttimer synlig mens du jobber – alt uten å åpne appen."
+        "answer": "Ja. Widgeter på hjemskjermen viser budsjettfremdrift og det som er neste. Tidsregistrering har en timer på låseskjermen, og Dynamic Island på iPhone 14 Pro og nyere."
       },
       {
         "question": "Kan jeg samarbeide med en partner eller håndverker?",
@@ -250,7 +249,7 @@ const nb: Translation = {
           "Utgiftsføring og varepriser",
           "Fungerer helt offline",
           "Lokale sikkerhetskopier og dataeksport",
-          "Widgeter for hjem- og låseskjerm"
+          "Oppgaver, tidsregistrering og widgeter på hjemskjermen"
         ],
         "cta": ""
       },
@@ -286,7 +285,7 @@ const nb: Translation = {
       {
         "aspect": "Summer",
         "them": "Formler du skriver og vedlikeholder selv",
-        "us": "Brukt, bundet og gjenstående — automatisk"
+        "us": "En løpende total. Materialer, arbeid og håndverker holdes fra hverandre."
       },
       {
         "aspect": "På byggeplassen",
@@ -330,7 +329,7 @@ const nb: Translation = {
     "success": {
       "label": "Den andre veien",
       "title": "Eller du når overleveringen med kvitteringene i hånd",
-      "body": "Brukt, bundet og igjen står på én skjerm fra første dag. Hver utgift, hvert bilde og hvert notat havner på prosjektet det hører til, mens du fortsatt står i rommet. På overleveringsdagen er hele jobben én PDF – tallene, tidslinjen og beviset på hva som var bak veggen."
+      "body": "En løpende total ligger på prosjektet fra første dag, med materialer, arbeid og håndverker holdt fra hverandre. Bilder og notater lander på samme prosjekt mens du fortsatt står i rommet."
     },
     "cta": "Kom i gang – gratis"
   }

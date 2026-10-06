@@ -109,4 +109,4 @@ You are not going to finish the fixer-upper in the first month. You are not goin
 
 If you are at the very start and have not yet built the two lists, the [where-to-start order for a house you just bought](/blog/where-to-start-renovating-new-house/) is the natural next read — the same thinking, a little earlier, for the moment before the first month even begins. And the [planning sequence for a whole project](/blog/how-to-plan-a-home-renovation-step-by-step/) is how the must-do list becomes a plan once you have it.
 
-If you want the first month's findings, quotes, and receipts kept in one place with a date on each — so the next decision is made against the last one, not against a memory — [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app for exactly that.
+If you want the first month's findings, quotes, and receipts kept in one place with a date on each — so the next decision is made against the last one, not against a memory — [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad for exactly that.

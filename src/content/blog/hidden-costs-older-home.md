@@ -26,7 +26,7 @@ faq:
   - question: "What about asbestos or lead paint in older homes?"
     answer: "Homes built before the 1980s may contain asbestos (insulation, flooring tiles, pipe wrap) or lead paint (almost all pre-1980 paint). Neither is an immediate danger as long as it's undisturbed. Abatement — removing or encapsulating it — is expensive, typically several thousand dollars, but only required if you're removing materials. If you're renovating around it, keep it in place and sealed."
   - question: "How do I track unexpected costs as they come up?"
-    answer: "Log them the same way you log your planned budget: as committed costs the moment you agree to them, and as spent costs when you pay. If you don't have a separate line item for surprises, you won't realize your budget is bleeding. Home Stories keeps these numbers visible in one place so you can always see whether you're still in the clear."
+    answer: "Log a surprise as soon as you agree to it, and again when you pay, so it is in the running total before it feels like a surprise. If you don't have a line for it, you won't see the budget moving. Home Stories keeps that running total in one place so you can see whether you still have room."
 relatedSlugs:
   - "how-to-budget-a-home-renovation"
   - "renovation-contingency-budget"
@@ -104,7 +104,7 @@ You can't eliminate surprises in an older home. But you can reduce them enough t
 
 **Document everything.** This is the part that separates renovators who understand their budgets from renovators who don't. Every surprise you find, every extra quote you get, every change you approve — log it. Put it in your budget tracker. The moment you approve an extra, it belongs in the numbers. Not tomorrow. Not when the invoice arrives. The moment you say yes.
 
-That's what a proper renovation tracker does: it keeps spent, committed, and remaining as three visible numbers so you always know where you stand. When a new cost appears — and it will — you can see immediately whether you have room for it or whether you need to reduce the scope elsewhere. The [contingency budget guide](/blog/renovation-contingency-budget/) goes deeper into how to structure that safety net so you're not scrambling when the walls open.
+That's what a proper renovation tracker does: it keeps a running total against the budget so you always know where you stand. When a new cost appears — and it will — you can see immediately whether you have room for it or whether you need to reduce the scope elsewhere. The [contingency budget guide](/blog/renovation-contingency-budget/) goes deeper into how to structure that safety net so you're not scrambling when the walls open.
 
 ![A renovation budget spreadsheet on a tablet, with categories for different rooms and line items tracked](/stock/10.webp)
 
