@@ -203,7 +203,7 @@ const aggregateRating = hasRealRatings
       "@context": "https://schema.org",
       "@type": ["SoftwareApplication", "MobileApplication"],
       "name": "Home Stories: Renovation App",
-      "operatingSystem": "iOS 17.0+",
+      "operatingSystem": "iOS 17.0 or later (iPhone and iPad)",
       "applicationCategory": "LifestyleApplication",
       "applicationSubCategory": "Productivity",
       // The app is free to download and carries one optional non-consumable
@@ -260,7 +260,7 @@ const aggregateRating = hasRealRatings
         new URL("/screenshots/tasks.webp", Astro.site).href
       ],
       "image": logo.startsWith("http") ? logo : new URL(logo, Astro.site).href,
-      "featureList": "Budget Tracking, Photo Timeline, Task Management, PDF Export, Offline Support, iCloud Sync, Real-time Project Sharing, Home Screen & Lock Screen Widgets, Live Activities, Time Tracking, Notes & Document Storage, Item & Shopping List Tracking, Search & Share Extension, Project Priorities, 51 Languages, VoiceOver Accessibility",
+      "featureList": "Free: projects with a budget and running total, items with prices, payments split by materials labour and contractor, photos, notes, documents, tasks, time tracking, Home Screen widgets, local backups, data export, offline use, no account, 50 languages. Pro (one-time, no subscription): budget vs actual chart, task reminders, PDF export, iCloud sync, project sharing. iPhone and iPad. No Android app.",
       "softwareVersion": appStore?.version ?? "1.0.0",
       "datePublished": appStore?.lastUpdated ?? undefined,
       "inLanguage": htmlLang,

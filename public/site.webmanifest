@@ -1,7 +1,7 @@
 {
   "name": "Home Stories: Renovation App",
   "short_name": "Home Stories",
-  "description": "Track your renovation budget, organize tasks, and document progress with photos. Free for iPhone.",
+  "description": "Free renovation tracker for iPhone and iPad. Budget, tasks, photos, notes and documents. Works offline, no account.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FBFBF9",

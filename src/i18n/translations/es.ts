@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const es: Translation = {
   "seo": {
-    "title": "Home Stories - Gestor de reformas gratis para iPhone",
-    "description": "Controla el presupuesto de tu reforma, organiza tareas y documenta el progreso con fotos. Exporta informes PDF. Gratis para iPhone: ¡descárgala ya!"
+    "title": "Home Stories - Gestor de reformas gratis para iPhone y iPad",
+    "description": "Sigue una reforma en iPhone o iPad: presupuesto, tareas, fotos, notas y documentos. Gratis, sin conexión, sin cuenta. iOS 17 o posterior."
   },
   "nav": {
     "cta": "Descarga la app",
@@ -24,7 +24,7 @@ const es: Translation = {
       "language": "Idioma"
     },
     "header": {
-      "eyebrow": "Gestor de reformas para iPhone",
+      "eyebrow": "Gestor de reformas para iPhone y iPad",
       "committedSuffix": "comprometido",
       "spent": "Gastado",
       "committed": "Comprometido",
@@ -149,8 +149,8 @@ const es: Translation = {
         "subtitle": "Marca cada proyecto como Baja, Media o Alta y ordena tu lista — por prioridad, fecha o nombre — para que el siguiente trabajo esté arriba."
       },
       {
-        "title": "51 idiomas, accesible",
-        "subtitle": "Totalmente traducida a 51 idiomas, con soporte de VoiceOver y Dynamic Type en toda la app. Funciona 100% sin conexión."
+        "title": "50 idiomas, accesible",
+        "subtitle": "Totalmente traducida a 50 idiomas, con soporte de VoiceOver y Dynamic Type en toda la app. Funciona 100% sin conexión."
       }
     ]
   },
@@ -188,23 +188,23 @@ const es: Translation = {
     "qa": [
       {
         "question": "¿Home Stories es gratis?",
-        "answer": "Sí, gratis para toda la obra, con proyectos, tareas, fases, fotos y registro de gastos ilimitados. Una compra opcional dentro de la app, Home Stories Pro, desbloquea los objetivos de presupuesto, el gráfico de presupuesto frente a coste, la exportación a PDF y CSV, y los recordatorios. Es un pago único, no una suscripción."
+        "answer": "Sí. Proyectos, artículos, fotos, notas, documentos, tareas, registro de tiempo, widgets, copias locales y exportación de datos son gratis e ilimitados. Home Stories Pro es una compra única opcional, no una suscripción. Añade el gráfico de presupuesto frente a real, recordatorios de tareas, exportación PDF, sincronización iCloud y compartir el proyecto."
       },
       {
         "question": "¿La app funciona sin conexión?",
-        "answer": "Por completo. Los proyectos, presupuestos y fotos viven en el dispositivo, así que la app funciona en un sótano sin cobertura y sincroniza después. Nada en ella depende de estar conectado."
+        "answer": "Sí. Proyectos, fotos y pagos viven en el dispositivo, así que la app funciona sin cobertura. La sincronización iCloud forma parte de Pro, permanece apagada hasta que la actives y se pone al día cuando vuelves a tener conexión."
       },
       {
         "question": "¿Puedo compartir proyectos con otras personas?",
-        "answer": "Sí, de dos maneras. Comparte un proyecto por iCloud y se mantiene sincronizado en tiempo real con tu pareja, un familiar o el contratista. O exporta un informe en PDF —presupuesto, tareas, fotos y notas— para quien solo necesite leerlo."
+        "answer": "Compartir el proyecto forma parte de Home Stories Pro. Invitas a una pareja, un familiar o un contratista, y ven las mismas tareas, artículos y fotos por iCloud. Un informe PDF, también de Pro, es la versión para quien solo necesita leerlo."
       },
       {
         "question": "¿Cómo exporto los informes?",
-        "answer": "Abre el proyecto, pulsa exportar y elige PDF o CSV. El informe sale con el resumen del presupuesto, el avance de las tareas, las fotos y las notas ya maquetados, listo para enviar al contratista o al seguro. La exportación forma parte de Home Stories Pro."
+        "answer": "La exportación PDF forma parte de Home Stories Pro: un informe con foto de portada, de todo el proyecto o solo de las partes que elijas. La exportación completa de datos es gratis."
       },
       {
         "question": "¿Qué dispositivos son compatibles?",
-        "answer": "iPhone con iOS 17.0 o posterior. Todavía no hay versión para iPad ni para Android."
+        "answer": "iPhone y iPad con iOS 17.0 o posterior. La app de iPad es nativa. No hay versión para Android."
       },
       {
         "question": "¿Home Stories tiene widgets?",
@@ -212,27 +212,27 @@ const es: Translation = {
       },
       {
         "question": "¿Puedo colaborar con mi pareja o con un contratista?",
-        "answer": "Sí. Comparte un proyecto por iCloud y se mantiene sincronizado en tiempo real en los dispositivos de todos, para que tu pareja, un familiar o un contratista puedan seguir el presupuesto, las tareas y las fotos a medida que cambian."
+        "answer": "Sí, con Home Stories Pro. Comparte un proyecto por iCloud y las personas invitadas ven las mismas tareas, artículos y fotos."
       },
       {
         "question": "¿En qué idiomas está disponible Home Stories?",
-        "answer": "Home Stories está totalmente traducida a 51 idiomas, incluidos inglés, alemán, francés, español, italiano, danés, neerlandés, portugués, japonés, chino, coreano y muchos más, con soporte completo de accesibilidad de VoiceOver y Dynamic Type."
+        "answer": "Home Stories está totalmente traducida a 50 idiomas, incluidos inglés, alemán, francés, español, italiano, danés, neerlandés, portugués, japonés, chino, coreano y muchos más, con soporte completo de accesibilidad de VoiceOver y Dynamic Type."
       },
       {
         "question": "¿Puedo registrar los costes por categoría, como materiales y mano de obra?",
-        "answer": "Sí — los costes viven donde está el trabajo. Divide el proyecto en fases y tareas, y adjunta a cada una los materiales, accesorios, partidas de mano de obra y presupuestos que necesite. El gráfico de presupuesto lo suma todo como gastado, comprometido y restante, y el informe PDF lo detalla."
+        "answer": "Sí. Registra pagos y separa materiales, mano de obra y contratista. El precio de cada artículo se suma al total acumulado. El gráfico de presupuesto frente a real forma parte de Home Stories Pro."
       },
       {
         "question": "¿Cómo gestiono varios contratistas?",
-        "answer": "Agrupa el trabajo en fases y tareas para que cada gremio sepa qué ocurre y cuándo — el electricista antes que el yesero. Comparte el proyecto por iCloud para que un contratista siga el presupuesto, las tareas y las fotos en directo, o exporta un PDF solo con las secciones que necesite."
+        "answer": "Separa los pagos de cada oficio de los materiales y la mano de obra, y guarda presupuestos y contratos como documentos del proyecto. Compartir el proyecto en vivo o exportar un PDF forma parte de Home Stories Pro."
       },
       {
         "question": "¿Cómo evito pasarme del presupuesto?",
-        "answer": "El gráfico de presupuesto muestra lo gastado, comprometido y restante de un vistazo, así que un sobrecoste aparece cuando aún hay tiempo de reaccionar. Añade el widget a la pantalla de inicio o de bloqueo para tener el anillo del presupuesto a la vista sin abrir la app."
+        "answer": "La app gratuita mantiene un total acumulado a medida que registras artículos y pagos. Home Stories Pro añade un gráfico de presupuesto frente a real. Un widget de la pantalla de inicio puede mostrar el presupuesto sin abrir la app."
       },
       {
         "question": "¿Se hace copia de seguridad de mis datos?",
-        "answer": "Sí — con la sincronización de iCloud activada, tus proyectos viven en tu cuenta de iCloud y te acompañan a un iPhone nuevo. Además, todo funciona completamente sin conexión; los cambios se sincronizan cuando vuelves a estar en línea."
+        "answer": "Las copias locales son gratis, y también la exportación completa de datos. La sincronización iCloud, que guarda el proyecto en tus otros dispositivos, forma parte de Home Stories Pro y permanece apagada hasta que la actives."
       }
     ]
   },
@@ -249,7 +249,7 @@ const es: Translation = {
           "Cronología fotográfica con fotos fechadas",
           "Registro de gastos y precios de artículos",
           "Funciona totalmente sin conexión",
-          "Sincronización iCloud entre dispositivos",
+          "Copias locales y exportación de datos",
           "Widgets de pantalla de inicio y de bloqueo"
         ],
         "cta": ""
@@ -258,10 +258,11 @@ const es: Translation = {
         "name": "Home Stories Pro",
         "period": "pago único — sin suscripción",
         "features": [
-          "Objetivos de presupuesto y gráfico presupuesto-coste",
-          "Análisis de costes avanzado",
-          "Exportación PDF y CSV de informes y registros de tiempo",
-          "Recordatorios de tareas y avisos de plazos"
+          "Gráfico de presupuesto frente a real",
+          "Recordatorios de tareas",
+          "Exportación PDF",
+          "Sincronización iCloud",
+          "Compartir el proyecto"
         ],
         "cta": "Descarga la app — mejora dentro"
       }
@@ -290,12 +291,12 @@ const es: Translation = {
       {
         "aspect": "En la obra",
         "them": "Haciendo zoom en celdas desde el móvil",
-        "us": "Hecho para iPhone, funciona totalmente sin conexión"
+        "us": "Hecho para iPhone y iPad, funciona totalmente sin conexión"
       },
       {
         "aspect": "Compartir",
         "them": "Enviar budget_v7_final_FINAL.xlsx por correo",
-        "us": "Compartir por iCloud en directo, o un PDF que cualquiera lee"
+        "us": "Compartir por iCloud o un PDF — ambos son Pro"
       },
       {
         "aspect": "Recibos",
@@ -312,7 +313,7 @@ const es: Translation = {
   },
   "appBanner": {
     "title": "Mide la próxima.",
-    "subtitle": "Gratis en la App Store. Funciona sin conexión, no necesita cuenta y se sincroniza con iCloud cuando tú quieras. Requiere iPhone con iOS 17 o posterior."
+    "subtitle": "Gratis en la App Store para iPhone y iPad. Funciona sin conexión y no necesita cuenta. Requiere iOS 17 o posterior."
   },
   "stakes": {
     "label": "El problema",

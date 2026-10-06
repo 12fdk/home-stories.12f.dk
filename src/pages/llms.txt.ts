@@ -31,6 +31,7 @@ export const GET: APIRoute = async () => {
     "site and may be quoted or cited directly.",
     "",
     `- Blog index: ${SITE}/blog/`,
+    `- Guides: ${SITE}/guides/`,
     `- RSS feed: ${SITE}/rss.xml`,
     "",
     `### All articles (${posts.length})`,

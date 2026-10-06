@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const tr: Translation = {
   "seo": {
-    "title": "Home Stories - iPhone için Ücretsiz Ev Tadilatı Takip Uygulaması",
-    "description": "Tadilat bütçenizi takip edin, görevleri düzenleyin ve ilerlemeyi fotoğraflarla belgeleyin. PDF raporları dışa aktarın. iPhone için ücretsiz!"
+    "title": "Home Stories - iPhone ve iPad için ücretsiz tadilat takibi",
+    "description": "Tadilatı iPhone veya iPad'de izleyin: bütçe, görevler, fotoğraflar, notlar ve belgeler. Ücretsiz, çevrimdışı, hesap yok. iOS 17 veya sonrası."
   },
   "nav": {
     "cta": "Uygulamayı indir",
@@ -24,7 +24,7 @@ const tr: Translation = {
       "language": "Dil"
     },
     "header": {
-      "eyebrow": "iPhone için tadilat takibi",
+      "eyebrow": "iPhone ve iPad için tadilat takibi",
       "committedSuffix": "taahhüt edildi",
       "spent": "Harcanan",
       "committed": "Taahhüt edilen",
@@ -149,8 +149,8 @@ const tr: Translation = {
         "subtitle": "Her projeyi Düşük, Orta ya da Yüksek olarak işaretleyin ve listenizi önceliğe, tarihe ya da ada göre sıralayın; böylece sıradaki iş en üstte olsun."
       },
       {
-        "title": "51 dil, erişilebilir",
-        "subtitle": "VoiceOver ve Dynamic Type desteğiyle baştan sona 51 dile tam olarak çevrildi. %100 çevrimdışı çalışır."
+        "title": "50 dil, erişilebilir",
+        "subtitle": "VoiceOver ve Dynamic Type desteğiyle baştan sona 50 dile tam olarak çevrildi. %100 çevrimdışı çalışır."
       }
     ]
   },
@@ -188,23 +188,23 @@ const tr: Translation = {
     "qa": [
       {
         "question": "Home Stories'i kullanmak ücretsiz mi?",
-        "answer": "Evet — işin tamamı boyunca ücretsiz; sınırsız proje, görev, aşama, fotoğraf ve masraf kaydıyla. İsteğe bağlı tek bir uygulama içi satın alma olan Home Stories Pro, bütçe hedeflerini, bütçe-maliyet grafiğini, PDF ve CSV dışa aktarmayı ve hatırlatıcıları açar. Bu tek seferlik bir fiyattır, abonelik değil."
+        "answer": "Evet. Sınırsız proje, kalem, fotoğraf, not, belge, görev, süre takibi, widget, yerel yedek ve veri dışa aktarma ücretsizdir. Home Stories Pro isteğe bağlı tek seferlik bir satın almadır, abonelik değildir. Bütçe ve gerçekleşen grafiğini, görev hatırlatıcılarını, PDF dışa aktarmayı, iCloud eşitlemeyi ve proje paylaşımını ekler."
       },
       {
         "question": "Uygulama çevrimdışı çalışır mı?",
-        "answer": "Tamamen. Projeler, bütçeler ve fotoğraflar cihazda durur; uygulama çekmeyen bir bodrumda da çalışır, sonra eşitler. Hiçbir yanı çevrimiçi olmanızı gerektirmez."
+        "answer": "Evet. Projeler, fotoğraflar ve ödemeler cihazda durur, bu yüzden uygulama sinyal olmadan çalışır. iCloud eşitleme Pro'nun parçasıdır, siz açana kadar kapalı kalır ve yeniden çevrimiçi olunca değişiklikleri yakalar."
       },
       {
         "question": "Projeleri başkalarıyla paylaşabilir miyim?",
-        "answer": "Evet, iki şekilde. Projeyi iCloud üzerinden paylaşın; eşiniz, bir aile üyeniz ya da müteahhitle gerçek zamanlı eşitlenir. Ya da yalnızca okuması gerekenler için PDF rapor alın — bütçe, görevler, fotoğraflar ve notlar."
+        "answer": "Proje paylaşımı Home Stories Pro'nun parçasıdır. Bir eşi, bir aile üyesini veya yükleniciyi davet edersiniz; aynı görevleri, kalemleri ve fotoğrafları iCloud üzerinden görürler. PDF raporu da Pro'dadır ve yalnızca okuması gereken kişi içindir."
       },
       {
         "question": "Raporları nasıl dışa aktarırım?",
-        "answer": "Projeyi açın, dışa aktara dokunun, PDF ya da CSV seçin. Rapor bütçe özeti, görev ilerlemesi, fotoğraflar ve notlar yerleşmiş hâlde çıkar; müteahhide ya da sigortaya göndermeye hazırdır. Dışa aktarma Home Stories Pro'ya dahildir."
+        "answer": "PDF dışa aktarma Home Stories Pro'nun parçasıdır: kapak fotoğraflı bir rapor, tüm proje ya da yalnızca seçtiğiniz bölümler için. Verinin tamamını dışa aktarmak ücretsizdir."
       },
       {
         "question": "Hangi cihazlar destekleniyor?",
-        "answer": "iOS 17.0 veya sonrasını çalıştıran iPhone. Henüz iPad ya da Android sürümü yok."
+        "answer": "iOS 17.0 veya sonrası yüklü iPhone ve iPad. iPad uygulaması yereldir. Android sürümü yoktur."
       },
       {
         "question": "Home Stories'in widget'ları var mı?",
@@ -212,27 +212,27 @@ const tr: Translation = {
       },
       {
         "question": "Bir eş veya müteahhitle iş birliği yapabilir miyim?",
-        "answer": "Evet. Bir projeyi iCloud üzerinden paylaşın; herkesin cihazında gerçek zamanlı olarak eşitlenmiş kalır, böylece bir eş, aile üyesi ya da müteahhit; bütçeyi, görevleri ve fotoğrafları değiştikçe takip edebilir."
+        "answer": "Evet, Home Stories Pro ile. Bir projeyi iCloud üzerinden paylaşın; davet ettikleriniz aynı görevleri, kalemleri ve fotoğrafları görür."
       },
       {
         "question": "Home Stories hangi dillerde mevcut?",
-        "answer": "Home Stories; İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Danca, Felemenkçe, Portekizce, Japonca, Çince, Korece ve daha birçok dil dahil olmak üzere 51 dile tam olarak çevrildi ve tam VoiceOver ve Dynamic Type erişilebilirlik desteğine sahip."
+        "answer": "Home Stories; İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Danca, Felemenkçe, Portekizce, Japonca, Çince, Korece ve daha birçok dil dahil olmak üzere 50 dile tam olarak çevrildi ve tam VoiceOver ve Dynamic Type erişilebilirlik desteğine sahip."
       },
       {
         "question": "Malzeme ve işçilik gibi kategorilere göre maliyet takibi yapabilir miyim?",
-        "answer": "Evet — maliyetler işin olduğu yerde durur. Projeyi aşamalara ve görevlere bölün, her birine gereken malzemeleri, armatürleri, işçilik kalemlerini ve teklifleri ekleyin. Bütçe grafiği her şeyi harcanan, taahhüt edilen ve kalan olarak toplar; PDF raporu kalem kalem döker."
+        "answer": "Evet. Ödemeleri kaydedin ve malzemeyi, işçiliği ve yükleniciyi ayrı tutun. Her kalemin fiyatı projenin yürüyen toplamına eklenir. Bütçe ve gerçekleşen grafiği Home Stories Pro'nun parçasıdır."
       },
       {
         "question": "Birden fazla ustayı nasıl yönetirim?",
-        "answer": "İşi aşamalara ve görevlere ayırın; böylece her zanaat ne zaman ne yapılacağını bilir — sıvacıdan önce elektrikçi. Projeyi iCloud üzerinden paylaşın, usta bütçeyi, görevleri ve fotoğrafları canlı izlesin; ya da yalnızca gereken bölümleri içeren bir PDF dışa aktarın."
+        "answer": "Her ekibin ödemelerini malzeme ve işçilikten ayrı tutun, teklif ve sözleşmeleri projenin belgeleri olarak saklayın. Projeyi canlı paylaşmak veya PDF dışa aktarmak Home Stories Pro'nun parçasıdır."
       },
       {
         "question": "Bütçeyi aşmaktan nasıl kaçınırım?",
-        "answer": "Bütçe grafiği harcanan, taahhüt edilen ve kalanı tek bakışta gösterir; aşım, henüz müdahale şansı varken görünür olur. Ana ekrana veya kilit ekranına widget ekleyerek uygulamayı açmadan bütçe halkasını gözünüzün önünde tutun."
+        "answer": "Ücretsiz uygulama, kalem ve ödeme kaydettikçe yürüyen bir toplam tutar. Home Stories Pro bütçe ve gerçekleşen grafiğini ekler. Bir Ana Ekran widget'ı uygulamayı açmadan bütçeyi gösterebilir."
       },
       {
         "question": "Proje verilerim yedekleniyor mu?",
-        "answer": "Evet — iCloud eşitleme açıkken projeleriniz iCloud hesabınızda durur ve yeni bir iPhone'a sizinle gelir. Her şey tamamen çevrimdışı da çalışır; değişiklikler yeniden çevrimiçi olduğunuzda eşitlenir."
+        "answer": "Yerel yedekler ücretsizdir, verinin tamamını dışa aktarmak da. Projeyi diğer cihazlarınıza koyan iCloud eşitleme Home Stories Pro'nun parçasıdır ve siz açana kadar kapalıdır."
       }
     ]
   },
@@ -249,7 +249,7 @@ const tr: Translation = {
           "Tarihli fotoğraflarla zaman çizelgesi",
           "Harcama kaydı ve ürün fiyatları",
           "Tamamen çevrimdışı çalışır",
-          "Cihazlar arası iCloud eşitleme",
+          "Yerel yedekler ve veri dışa aktarma",
           "Ana ekran ve kilit ekranı widget'ları"
         ],
         "cta": ""
@@ -258,10 +258,11 @@ const tr: Translation = {
         "name": "Home Stories Pro",
         "period": "tek seferlik — abonelik yok",
         "features": [
-          "Bütçe hedefleri ve bütçe-maliyet grafiği",
-          "Gelişmiş maliyet analizi",
-          "Rapor ve zaman kayıtlarının PDF ve CSV dışa aktarımı",
-          "Görev hatırlatıcıları ve son tarih bildirimleri"
+          "Bütçe ve gerçekleşen grafik",
+          "Görev hatırlatıcıları",
+          "PDF dışa aktarma",
+          "iCloud eşitleme",
+          "Proje paylaşımı"
         ],
         "cta": "Uygulamayı edinin — yükseltme içeride"
       }
@@ -290,12 +291,12 @@ const tr: Translation = {
       {
         "aspect": "Şantiyede",
         "them": "Telefonda hücreleri yakınlaştırmak",
-        "us": "iPhone için yapıldı, tamamen çevrimdışı çalışır"
+        "us": "iPhone ve iPad için yapıldı, tamamen çevrimdışı çalışır"
       },
       {
         "aspect": "Paylaşım",
         "them": "budget_v7_final_FINAL.xlsx dosyasını e-postayla göndermek",
-        "us": "iCloud ile canlı paylaşım ya da herkesin okuyabildiği bir PDF"
+        "us": "iCloud paylaşımı veya PDF — ikisi de Pro"
       },
       {
         "aspect": "Fişler",
@@ -312,7 +313,7 @@ const tr: Translation = {
   },
   "appBanner": {
     "title": "Sıradakini ölçün.",
-    "subtitle": "App Store'da ücretsiz. Çevrimdışı çalışır, hesap gerektirmez ve istediğinizde iCloud ile eşitlenir. iOS 17 veya sonrasına sahip bir iPhone gerektirir."
+    "subtitle": "App Store'da iPhone ve iPad için ücretsiz. Çevrimdışı çalışır, hesap gerektirmez. iOS 17 veya sonrası gerekir."
   },
   "stakes": {
     "label": "Sorun",

@@ -33,18 +33,25 @@ these too, not just hardcore renovators:
 - Interior refresh, decluttering, maintenance, energy retrofits
 
 **The app, factually (never claim more than this):**
-Home Stories is a **free iPhone app (iOS 17+)** for planning and tracking a home
-renovation. It does: budget tracking (spent / committed / left), tasks with
-reminders and due dates, built-in time tracking, before/during/after photo
-documentation with side-by-side compare and timelines, notes with tags, storage
-for receipts and documents, item/purchase tracking (estimated vs actual),
-professional **PDF export/reports**, project sharing with live iCloud sync,
-Home-Screen widgets and Lock-Screen/Dynamic-Island Live Activities, a Safari/
-Amazon/IKEA share extension, search across all projects, and 50 languages. It
-**works fully offline, needs no account, and syncs via iCloud when you want it.**
-Free, with an optional one-time Premium Lifetime unlock. Made in Denmark by
-Robert Jensen. App Store:
+Home Stories is a **free native app for iPhone and iPad (iOS 17+)**. There is
+no Android version. Made in Denmark by Robert Jensen. App Store:
 `https://apps.apple.com/app/id6754754960`
+
+Free, and it stays free: projects with a budget and a running total; items with
+a price; payments logged with materials, labour and contractor kept apart;
+photos (timeline, before/after); notes; documents (quotes, contracts, receipts);
+tasks; time tracking; Home Screen widgets; local backups; data export; works
+fully offline; no account; 50 languages; share a product in from Safari, Amazon
+or IKEA.
+
+Pro is an optional **one-time** purchase (about $9.99 in the US, no
+subscription). It adds only: the budget-vs-actual chart, task reminders, PDF
+export, iCloud sync, and project sharing.
+
+Do not describe PDF export, iCloud sync, or project sharing as free. Do not say
+the app is iPhone-only. Do not name three budget columns "spent, committed and
+remaining" — the App Store wording is a running total, a budget-vs-actual chart
+(Pro), and payments split by materials, labour and contractor.
 
 Do **not** invent features (no Android app, no web app, no AI features, no bank
 integration, no cloud account). If you are unsure a feature exists, don't mention it.
@@ -259,6 +266,7 @@ actually fetch this run. When in doubt, cut it — a purely qualitative post is
 - **1,500–2,200 words.** Skimmable and genuinely complete, not padded.
 - **No `<h1>` in the body** — the Astro template renders the H1 from `title`.
 - Use `##` (H2) sections and `###` (H3) where useful. Descriptive, not clever-only.
+  Where a section answers a question people search, make the H2 that question and answer it in the first sentence.
 - Open with the reader's real problem (often straight from a Reddit thread), not a
   dictionary definition.
 - Use short lists and the occasional bold lead-in. Include at least one concrete

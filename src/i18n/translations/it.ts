@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const it: Translation = {
   "seo": {
-    "title": "Home Stories - Tracker gratuito per ristrutturazioni di casa per iPhone",
-    "description": "Tieni sotto controllo il budget della ristrutturazione, organizza le attività e documenta i progressi con foto. Esporta report PDF. Gratis su iPhone!"
+    "title": "Home Stories - Tracker gratuito per ristrutturazioni per iPhone e iPad",
+    "description": "Segui la ristrutturazione su iPhone o iPad: budget, attività, foto, note e documenti. Gratis, offline, senza account. iOS 17 o successivo."
   },
   "nav": {
     "cta": "Scarica l'app",
@@ -24,7 +24,7 @@ const it: Translation = {
       "language": "Lingua"
     },
     "header": {
-      "eyebrow": "Tracker per ristrutturazioni per iPhone",
+      "eyebrow": "Tracker per ristrutturazioni per iPhone e iPad",
       "committedSuffix": "impegnato",
       "spent": "Speso",
       "committed": "Impegnato",
@@ -149,8 +149,8 @@ const it: Translation = {
         "subtitle": "Assegna a ogni progetto priorità Bassa, Media o Alta e ordina la tua lista — per priorità, data o nome — così il prossimo lavoro è sempre in cima."
       },
       {
-        "title": "51 lingue, accessibile",
-        "subtitle": "Completamente tradotta in 51 lingue, con supporto per VoiceOver e Dynamic Type ovunque. Funziona al 100% offline."
+        "title": "50 lingue, accessibile",
+        "subtitle": "Completamente tradotta in 50 lingue, con supporto per VoiceOver e Dynamic Type ovunque. Funziona al 100% offline."
       }
     ]
   },
@@ -188,23 +188,23 @@ const it: Translation = {
     "qa": [
       {
         "question": "Home Stories è gratuita?",
-        "answer": "Sì, gratis per tutto il lavoro, con progetti, attività, fasi, foto e registrazione delle spese illimitati. Un acquisto facoltativo in-app, Home Stories Pro, sblocca gli obiettivi di budget, il grafico budget/costo, l'esportazione in PDF e CSV e i promemoria. È un prezzo una tantum, non un abbonamento."
+        "answer": "Sì. Progetti, voci, foto, note, documenti, attività, registrazione del tempo, widget, backup locali ed esportazione dei dati sono gratis, senza limiti. Home Stories Pro è un acquisto una tantum facoltativo, non un abbonamento. Aggiunge il grafico budget rispetto al consuntivo, i promemoria delle attività, l'esportazione PDF, la sincronizzazione iCloud e la condivisione del progetto."
       },
       {
         "question": "L'app funziona offline?",
-        "answer": "Completamente. Progetti, budget e foto stanno sul dispositivo, quindi l'app funziona in una cantina senza segnale e sincronizza dopo. Niente in essa richiede di essere online."
+        "answer": "Sì. Progetti, foto e pagamenti restano sul dispositivo, quindi l'app funziona senza segnale. La sincronizzazione iCloud fa parte di Pro, resta spenta finché non la attivi e recupera le modifiche quando torni online."
       },
       {
         "question": "Posso condividere i progetti con altri?",
-        "answer": "Sì, in due modi. Condividi un progetto su iCloud e resta sincronizzato in tempo reale con il partner, un familiare o l'impresa. Oppure esporta un report PDF — budget, attività, foto e note — per chi deve solo leggerlo."
+        "answer": "La condivisione del progetto fa parte di Home Stories Pro. Invitate un partner, un familiare o un'impresa, e vedono le stesse attività, voci e foto tramite iCloud. Un report PDF, anch'esso di Pro, è la versione per chi deve solo leggerlo."
       },
       {
         "question": "Come esporto i report?",
-        "answer": "Apri il progetto, tocca esporta e scegli PDF o CSV. Il report esce con il riepilogo del budget, lo stato delle attività, le foto e le note già impaginati, pronto da mandare all'impresa o all'assicurazione. L'esportazione fa parte di Home Stories Pro."
+        "answer": "L'esportazione PDF fa parte di Home Stories Pro: un report con foto di copertina, per l'intero progetto o solo le parti che scegli. L'esportazione completa dei dati è gratis."
       },
       {
         "question": "Quali dispositivi sono supportati?",
-        "answer": "iPhone, con iOS 17.0 o successivo. Non esiste ancora una versione per iPad o Android."
+        "answer": "iPhone e iPad, con iOS 17.0 o successivo. L'app per iPad è nativa. Non esiste una versione Android."
       },
       {
         "question": "Home Stories ha i widget?",
@@ -212,27 +212,27 @@ const it: Translation = {
       },
       {
         "question": "Posso collaborare con un partner o un'impresa?",
-        "answer": "Sì. Condividi un progetto tramite iCloud e resta sincronizzato in tempo reale su tutti i dispositivi, così un partner, un familiare o l'impresa possono seguire budget, attività e foto man mano che cambiano."
+        "answer": "Sì, con Home Stories Pro. Condividi un progetto tramite iCloud e le persone invitate vedono le stesse attività, voci e foto."
       },
       {
         "question": "In quali lingue è disponibile Home Stories?",
-        "answer": "Home Stories è completamente tradotta in 51 lingue, tra cui inglese, tedesco, francese, spagnolo, italiano, danese, olandese, portoghese, giapponese, cinese, coreano e molte altre, con pieno supporto all'accessibilità VoiceOver e Dynamic Type."
+        "answer": "Home Stories è completamente tradotta in 50 lingue, tra cui inglese, tedesco, francese, spagnolo, italiano, danese, olandese, portoghese, giapponese, cinese, coreano e molte altre, con pieno supporto all'accessibilità VoiceOver e Dynamic Type."
       },
       {
         "question": "Posso registrare i costi per categoria, come materiali e manodopera?",
-        "answer": "Sì — i costi vivono dove c'è il lavoro. Dividi il progetto in fasi e attività, poi collega a ciascuna i materiali, gli accessori, le voci di manodopera e i preventivi necessari. Il grafico del budget somma tutto come speso, impegnato e rimanente, e il report PDF lo dettaglia."
+        "answer": "Sì. Registra i pagamenti e tieni separati materiali, manodopera e impresa. Il prezzo di ogni voce si somma al totale progressivo. Il grafico budget rispetto al consuntivo fa parte di Home Stories Pro."
       },
       {
         "question": "Come gestisco più artigiani?",
-        "answer": "Raggruppa il lavoro in fasi e attività così ogni mestiere sa cosa succede e quando — l'elettricista prima dell'intonacatore. Condividi il progetto via iCloud perché un artigiano segua budget, attività e foto in tempo reale, oppure esporta un PDF con solo le sezioni che gli servono."
+        "answer": "Tieni i pagamenti di ogni mestiere separati da materiali e manodopera, e conserva preventivi e contratti come documenti del progetto. Condividere il progetto in tempo reale o esportare un PDF fa parte di Home Stories Pro."
       },
       {
         "question": "Come evito di sforare il budget?",
-        "answer": "Il grafico del budget mostra speso, impegnato e rimanente a colpo d'occhio, così uno sforamento emerge quando c'è ancora tempo per agire. Aggiungi il widget alla schermata Home o di blocco per tenere d'occhio l'anello del budget senza aprire l'app."
+        "answer": "L'app gratuita tiene un totale progressivo mentre registri voci e pagamenti. Home Stories Pro aggiunge un grafico budget rispetto al consuntivo. Un widget della schermata Home può mostrare il budget senza aprire l'app."
       },
       {
         "question": "I dati del mio progetto vengono salvati?",
-        "answer": "Sì — con la sincronizzazione iCloud attiva, i tuoi progetti vivono nel tuo account iCloud e ti seguono su un nuovo iPhone. Tutto funziona anche completamente offline; le modifiche si sincronizzano quando torni online."
+        "answer": "I backup locali sono gratis, come l'esportazione completa dei dati. La sincronizzazione iCloud, che porta il progetto sugli altri dispositivi, fa parte di Home Stories Pro e resta spenta finché non la attivi."
       }
     ]
   },
@@ -249,7 +249,7 @@ const it: Translation = {
           "Timeline fotografica con foto datate",
           "Registrazione spese e prezzi degli articoli",
           "Funziona completamente offline",
-          "Sincronizzazione iCloud tra dispositivi",
+          "Backup locali ed esportazione dei dati",
           "Widget per schermata Home e di blocco"
         ],
         "cta": ""
@@ -258,10 +258,11 @@ const it: Translation = {
         "name": "Home Stories Pro",
         "period": "acquisto una tantum — nessun abbonamento",
         "features": [
-          "Obiettivi di budget e grafico budget-costi",
-          "Analisi dei costi avanzata",
-          "Esportazione PDF e CSV di report e registri tempo",
-          "Promemoria attività e notifiche di scadenza"
+          "Grafico budget rispetto al consuntivo",
+          "Promemoria delle attività",
+          "Esportazione PDF",
+          "Sincronizzazione iCloud",
+          "Condivisione del progetto"
         ],
         "cta": "Scarica l'app — upgrade all'interno"
       }
@@ -290,12 +291,12 @@ const it: Translation = {
       {
         "aspect": "In cantiere",
         "them": "Zoom sulle celle dal telefono",
-        "us": "Fatto per iPhone, funziona completamente offline"
+        "us": "Fatto per iPhone e iPad, funziona completamente offline"
       },
       {
         "aspect": "Condivisione",
         "them": "Inviare budget_v7_final_FINAL.xlsx via mail",
-        "us": "Condivisione iCloud in tempo reale, o un PDF leggibile da tutti"
+        "us": "Condivisione iCloud o un PDF — entrambi fanno parte di Pro"
       },
       {
         "aspect": "Scontrini",
@@ -312,7 +313,7 @@ const it: Translation = {
   },
   "appBanner": {
     "title": "Misura la prossima.",
-    "subtitle": "Gratis sull'App Store. Funziona offline, non richiede alcun account e si sincronizza con iCloud quando vuoi. Richiede iPhone con iOS 17 o successivo."
+    "subtitle": "Gratis sull'App Store per iPhone e iPad. Funziona offline e non richiede un account. Richiede iOS 17 o successivo."
   },
   "stakes": {
     "label": "Il problema",

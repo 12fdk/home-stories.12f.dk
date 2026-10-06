@@ -1,0 +1,164 @@
+---
+import { getCollection } from "astro:content";
+import { isPublished } from "../../utils/posts";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { guides } from "../../data/guides";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => isPublished(data));
+  const bySlug = new Map(posts.map((post) => [post.slug, post]));
+
+  return guides.map((guide) => {
+    const missing = guide.posts.filter((slug) => !bySlug.has(slug));
+    if (missing.length) {
+      throw new Error(`Guide "${guide.slug}" links missing posts: ${missing.join(", ")}`);
+    }
+    return {
+      params: { slug: guide.slug },
+      props: {
+        guide,
+        posts: guide.posts.map((slug) => bySlug.get(slug)!),
+      },
+    };
+  });
+}
+
+interface Props {
+  guide: (typeof guides)[number];
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
+}
+
+const { guide, posts } = Astro.props as Props;
+const path = `/guides/${guide.slug}/`;
+const url = new URL(path, Astro.site).href;
+const siblings = guides.filter((item) => item.slug !== guide.slug);
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: guide.h1,
+  description: guide.metaDescription,
+  url,
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "[data-speakable]"],
+  },
+  mainEntity: { "@id": `${url}#articles` },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${url}#articles`,
+  name: guide.h1,
+  numberOfItems: posts.length,
+  itemListElement: posts.map((post, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/blog/${post.slug}/`, Astro.site).href,
+    name: post.data.title,
+  })),
+};
+---
+
+<BlogLayout
+  title={guide.metaTitle}
+  description={guide.metaDescription}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, itemListSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Guides", path: "/guides/" },
+    { name: guide.label, path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="mx-auto max-w-screen-lg px-4 py-12 md:py-20">
+    <nav aria-label="Breadcrumb" class="mb-8 text-sm text-base-content/60">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <a href="/guides/" class="hover:text-primary">Guides</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>{guide.label}</span>
+    </nav>
+
+    <header class="mb-12 max-w-3xl">
+      <p class="tick-label m-0 flex items-center gap-3 text-base-content/50">
+        <span class="inline-block h-0.5 w-8 bg-accent"></span>
+        Guide
+      </p>
+      <h1 class="mb-5 mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-5xl">
+        {guide.h1}
+      </h1>
+      <div class="space-y-4 text-lg leading-relaxed text-base-content/80" data-speakable>
+        {guide.intro.map((paragraph) => <p class="m-0">{paragraph}</p>)}
+      </div>
+    </header>
+
+    <ol class="m-0 grid list-none gap-4 p-0">
+      {
+        posts.map((post, index) => (
+          <li class="m-0">
+            <a
+              href={`/blog/${post.slug}/`}
+              class="group flex gap-4 rounded-box border border-base-300 bg-base-100 p-5 transition-colors hover:border-base-content/30 sm:p-6"
+            >
+              <span class="tick-label mt-1 w-8 shrink-0 text-base-content/40">{index + 1}</span>
+              <span>
+                <span class="block font-display text-xl font-bold leading-snug tracking-tight text-base-content group-hover:text-primary">
+                  {post.data.title}
+                </span>
+                <span class="mt-2 block text-base leading-relaxed text-base-content/70">
+                  {post.data.description}
+                </span>
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+
+    <aside class="mt-14 rounded-box border border-base-300 bg-base-200 p-6 sm:p-8">
+      <h2 class="m-0 font-display text-2xl font-bold tracking-tight">Other guides</h2>
+      <ul class="mb-0 mt-4 list-none space-y-2 p-0">
+        {
+          siblings.map((item) => (
+            <li class="m-0">
+              <a href={`/guides/${item.slug}/`} class="font-semibold text-primary hover:underline">
+                {item.h1}
+              </a>
+            </li>
+          ))
+        }
+        <li class="m-0">
+          <a href="/blog/" class="font-semibold text-primary hover:underline">
+            All renovation articles
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <aside class="mt-6 rounded-box border border-base-300 bg-base-100 p-6 sm:p-8">
+      <h2 class="m-0 font-display text-2xl font-bold tracking-tight">Keep the running total on the project</h2>
+      <p class="mt-3 max-w-2xl text-base leading-relaxed text-base-content/75">
+        Home Stories is a free renovation tracker for iPhone and iPad. It works offline and needs no account.
+        The budget-vs-actual chart, PDF export and iCloud sync are an optional one-time upgrade, not a subscription.
+      </p>
+      <a
+        href="https://apps.apple.com/app/id6754754960"
+        class="btn btn-primary mt-5 font-semibold normal-case"
+        data-umami-event="appstore-click"
+        data-umami-event-surface="guide-footer"
+        data-umami-event-slug={guide.slug}
+      >
+        Get Home Stories — free on the App Store
+      </a>
+    </aside>
+  </main>
+</BlogLayout>

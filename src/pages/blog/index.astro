@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { isPublished } from "../../utils/posts";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { readingTime } from "../../utils/readingTime";
+import { guides } from "../../data/guides";
 
 const allPosts = (await getCollection("blog", ({ data }) => isPublished(data))).sort(
   (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
@@ -93,6 +94,34 @@ const itemListSchema = {
         fluff.
       </p>
     </header>
+
+    <section aria-labelledby="guides-heading" class="mb-14">
+      <h2 id="guides-heading" class="m-0 font-display text-2xl font-bold tracking-tight">
+        Guides by topic
+      </h2>
+      <p class="mt-2 max-w-2xl text-base leading-relaxed text-base-content/70">
+        The same articles, grouped by the job: the budget, the contractor, the timeline, and the tool.
+      </p>
+      <ul class="mt-5 grid list-none gap-3 p-0 sm:grid-cols-2">
+        {
+          guides.map((guide) => (
+            <li class="m-0">
+              <a
+                href={`/guides/${guide.slug}/`}
+                class="block rounded-box border border-base-300 bg-base-100 px-5 py-4 transition-colors hover:border-base-content/30"
+              >
+                <span class="block font-display text-lg font-bold leading-snug text-base-content hover:text-primary">
+                  {guide.label}
+                </span>
+                <span class="mt-1 block text-sm leading-relaxed text-base-content/65">
+                  {guide.posts.length} articles
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
 
     {
       postsWithMeta.length === 0 ? (

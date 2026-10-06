@@ -9,6 +9,7 @@ import RelatedPosts from "../../components/blog/RelatedPosts.astro";
 import AuthorBio from "../../components/blog/AuthorBio.astro";
 import { readingTime } from "../../utils/readingTime";
 import { TOPICS, topicFor } from "../../utils/blogCta.mjs";
+import { guidesForSlug } from "../../data/guides";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => isPublished(data));
@@ -67,6 +68,8 @@ const topic = TOPICS[topicFor({ slug: post.slug, keyword: post.data.keyword, tag
 // lands in the right cluster instead of being effectively orphaned. (#96)
 const byTag = (a: (typeof allPosts)[number]) =>
   a.data.tags.filter((t) => post.data.tags.includes(t)).length;
+
+const topicGuides = guidesForSlug(post.slug);
 
 const related = (
   post.data.relatedSlugs.length > 0
@@ -150,6 +153,16 @@ const articleSchema = {
       <a href="/" class="hover:text-primary">Home</a>
       <span class="mx-1.5" aria-hidden="true">/</span>
       <a href="/blog/" class="hover:text-primary">Blog</a>
+      {
+        topicGuides.map((guide) => (
+          <>
+            <span class="mx-1.5" aria-hidden="true">/</span>
+            <a href={`/guides/${guide.slug}/`} class="hover:text-primary">
+              {guide.label}
+            </a>
+          </>
+        ))
+      }
     </nav>
 
     <header class="mb-8">

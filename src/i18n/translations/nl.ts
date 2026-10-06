@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const nl: Translation = {
   "seo": {
-    "title": "Home Stories - Gratis verbouwingstracker voor iPhone",
-    "description": "Houd je verbouwingsbudget bij, organiseer taken en leg de voortgang vast met foto's. Exporteer professionele PDF-rapporten. Gratis voor iPhone - download nu!"
+    "title": "Home Stories - Gratis verbouwingstracker voor iPhone en iPad",
+    "description": "Volg een verbouwing op iPhone of iPad: budget, taken, foto's, notities en documenten. Gratis, offline, geen account. iOS 17 of nieuwer."
   },
   "nav": {
     "cta": "Download de app",
@@ -24,7 +24,7 @@ const nl: Translation = {
       "language": "Taal"
     },
     "header": {
-      "eyebrow": "Verbouwingstracker voor iPhone",
+      "eyebrow": "Verbouwingstracker voor iPhone en iPad",
       "committedSuffix": "gereserveerd",
       "spent": "Uitgegeven",
       "committed": "Gereserveerd",
@@ -149,8 +149,8 @@ const nl: Translation = {
         "subtitle": "Markeer elk project als Laag, Middel of Hoog en sorteer je lijst — op prioriteit, datum of naam — zodat de volgende klus bovenaan staat."
       },
       {
-        "title": "51 talen, toegankelijk",
-        "subtitle": "Volledig vertaald in 51 talen, met overal ondersteuning voor VoiceOver en Dynamic Type. Werkt 100% offline."
+        "title": "50 talen, toegankelijk",
+        "subtitle": "Volledig vertaald in 50 talen, met overal ondersteuning voor VoiceOver en Dynamic Type. Werkt 100% offline."
       }
     ]
   },
@@ -188,23 +188,23 @@ const nl: Translation = {
     "qa": [
       {
         "question": "Is Home Stories gratis te gebruiken?",
-        "answer": "Ja – gratis voor de hele klus, met onbeperkt projecten, taken, fases, foto's en uitgaven bijhouden. Eén optionele aankoop in de app, Home Stories Pro, ontgrendelt budgetdoelen, de budget-versus-kosten-grafiek, pdf- en csv-export en herinneringen. Het is een eenmalige prijs, geen abonnement."
+        "answer": "Ja. Onbeperkte projecten, items, foto's, notities, documenten, taken, tijdregistratie, widgets, lokale back-ups en gegevensexport zijn gratis. Home Stories Pro is een optionele eenmalige aankoop, geen abonnement. Het voegt de grafiek budget versus werkelijk toe, plus taakherinneringen, PDF-export, iCloud-synchronisatie en project delen."
       },
       {
         "question": "Werkt de app offline?",
-        "answer": "Volledig. Projecten, budgetten en foto's staan op het toestel, dus de app werkt in een kelder zonder bereik en synchroniseert later. Niets eraan vereist dat je online bent."
+        "answer": "Ja. Projecten, foto's en betalingen staan op het apparaat, dus de app werkt zonder bereik. iCloud-synchronisatie hoort bij Pro, blijft uit tot je hem aanzet, en haalt wijzigingen in zodra je weer online bent."
       },
       {
         "question": "Kan ik projecten met anderen delen?",
-        "answer": "Ja, op twee manieren. Deel een project via iCloud en het blijft in realtime synchroon met een partner, familielid of de aannemer. Of exporteer een pdf-rapport – budget, taken, foto's en notities – voor wie het alleen hoeft te lezen."
+        "answer": "Project delen hoort bij Home Stories Pro. Je nodigt een partner, familielid of aannemer uit, en zij zien dezelfde taken, items en foto's via iCloud. Een PDF-rapport, ook onderdeel van Pro, is de versie voor iemand die alleen hoeft te lezen."
       },
       {
         "question": "Hoe exporteer ik rapporten?",
-        "answer": "Open het project, tik op exporteren en kies pdf of csv. Het rapport komt eruit met budgetoverzicht, taakvoortgang, foto's en notities al opgemaakt, klaar om naar de aannemer of verzekeraar te sturen. Exporteren hoort bij Home Stories Pro."
+        "answer": "PDF-export hoort bij Home Stories Pro: een rapport met omslagfoto, voor het hele project of alleen de delen die je kiest. Een volledige gegevensexport is gratis."
       },
       {
         "question": "Welke apparaten worden ondersteund?",
-        "answer": "iPhone met iOS 17.0 of nieuwer. Er is nog geen versie voor iPad of Android."
+        "answer": "iPhone en iPad met iOS 17.0 of nieuwer. De iPad-app is native. Er is geen Android-versie."
       },
       {
         "question": "Heeft Home Stories widgets?",
@@ -212,27 +212,27 @@ const nl: Translation = {
       },
       {
         "question": "Kan ik samenwerken met een partner of aannemer?",
-        "answer": "Ja. Deel een project via iCloud en het blijft realtime gesynchroniseerd op ieders apparaten, zodat een partner, familielid of aannemer het budget, de taken en de foto's kan volgen terwijl ze veranderen."
+        "answer": "Ja, met Home Stories Pro. Deel een project via iCloud en de genodigden zien dezelfde taken, items en foto's."
       },
       {
         "question": "In welke talen is Home Stories beschikbaar?",
-        "answer": "Home Stories is volledig vertaald in 51 talen, waaronder Engels, Duits, Frans, Spaans, Italiaans, Deens, Nederlands, Portugees, Japans, Chinees, Koreaans en nog veel meer, met volledige toegankelijkheidsondersteuning voor VoiceOver en Dynamic Type."
+        "answer": "Home Stories is volledig vertaald in 50 talen, waaronder Engels, Duits, Frans, Spaans, Italiaans, Deens, Nederlands, Portugees, Japans, Chinees, Koreaans en nog veel meer, met volledige toegankelijkheidsondersteuning voor VoiceOver en Dynamic Type."
       },
       {
         "question": "Kan ik kosten per categorie bijhouden, zoals materiaal en arbeidsloon?",
-        "answer": "Ja — kosten wonen waar het werk is. Verdeel het project in fases en taken en koppel aan elk de materialen, armaturen, arbeidsposten en offertes die nodig zijn. De budgetgrafiek telt alles op als besteed, toegezegd en resterend, en het PDF-rapport specificeert het."
+        "answer": "Ja. Noteer betalingen en houd materialen, arbeid en aannemer uit elkaar. De prijs van elk item telt mee in het lopende totaal. De grafiek budget versus werkelijk hoort bij Home Stories Pro."
       },
       {
         "question": "Hoe beheer ik meerdere aannemers?",
-        "answer": "Groepeer het werk in fases en taken zodat elk vak weet wat wanneer gebeurt — de elektricien vóór de stukadoor. Deel het project via iCloud zodat een aannemer budget, taken en foto's live kan volgen, of exporteer een PDF met alleen de secties die hij nodig heeft."
+        "answer": "Houd de betalingen van elk vak gescheiden van materialen en arbeid, en bewaar offertes en contracten als documenten bij het project. Het project live delen of een PDF exporteren hoort bij Home Stories Pro."
       },
       {
         "question": "Hoe voorkom ik dat ik over het budget ga?",
-        "answer": "De budgetgrafiek toont besteed, toegezegd en resterend in één oogopslag, zodat een overschrijding zichtbaar wordt terwijl er nog tijd is om bij te sturen. Voeg de widget toe aan het begin- of toegangsscherm om de budgetring in beeld te houden zonder de app te openen."
+        "answer": "De gratis app houdt een lopend totaal bij terwijl je items en betalingen noteert. Home Stories Pro voegt een grafiek budget versus werkelijk toe. Een widget op het beginscherm kan het budget tonen zonder de app te openen."
       },
       {
         "question": "Wordt er een back-up van mijn projectgegevens gemaakt?",
-        "answer": "Ja — met iCloud-synchronisatie aan staan je projecten in je iCloud-account en verhuizen ze mee naar een nieuwe iPhone. Alles werkt ook volledig offline; wijzigingen synchroniseren zodra je weer online bent."
+        "answer": "Lokale back-ups zijn gratis, en een volledige gegevensexport ook. iCloud-synchronisatie, die het project op je andere apparaten zet, hoort bij Home Stories Pro en blijft uit tot je hem aanzet."
       }
     ]
   },
@@ -249,7 +249,7 @@ const nl: Translation = {
           "Fototijdlijn met gedateerde foto's",
           "Uitgaven bijhouden en artikelprijzen",
           "Werkt volledig offline",
-          "iCloud-synchronisatie tussen apparaten",
+          "Lokale back-ups en gegevensexport",
           "Widgets voor begin- en toegangsscherm"
         ],
         "cta": ""
@@ -258,10 +258,11 @@ const nl: Translation = {
         "name": "Home Stories Pro",
         "period": "eenmalige aankoop — geen abonnement",
         "features": [
-          "Budgetdoelen en de budget-versus-kosten-grafiek",
-          "Geavanceerde kostenanalyse",
-          "PDF- en CSV-export van rapporten en tijdlogs",
-          "Taakherinneringen en deadline-meldingen"
+          "Grafiek budget versus werkelijk",
+          "Taakherinneringen",
+          "PDF-export",
+          "iCloud-synchronisatie",
+          "Project delen"
         ],
         "cta": "Download de app — upgrade in de app"
       }
@@ -290,12 +291,12 @@ const nl: Translation = {
       {
         "aspect": "Op de bouwplaats",
         "them": "Cellen knijp-zoomen op je telefoon",
-        "us": "Gemaakt voor iPhone, werkt volledig offline"
+        "us": "Gemaakt voor iPhone en iPad, werkt volledig offline"
       },
       {
         "aspect": "Delen",
         "them": "budget_v7_final_FINAL.xlsx mailen",
-        "us": "Live delen via iCloud, of een PDF die iedereen kan lezen"
+        "us": "Delen via iCloud of een PDF — allebei Pro"
       },
       {
         "aspect": "Bonnetjes",
@@ -312,7 +313,7 @@ const nl: Translation = {
   },
   "appBanner": {
     "title": "Meet de volgende.",
-    "subtitle": "Gratis in de App Store. Werkt offline, vereist geen account en synchroniseert met iCloud wanneer jij dat wilt. Vereist een iPhone met iOS 17 of nieuwer."
+    "subtitle": "Gratis in de App Store voor iPhone en iPad. Werkt offline en heeft geen account nodig. Vereist iOS 17 of nieuwer."
   },
   "stakes": {
     "label": "Het probleem",

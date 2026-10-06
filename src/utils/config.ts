@@ -3,9 +3,9 @@ import type { TemplateConfig } from "./configType";
 const templateConfig: TemplateConfig = {
   name: "Home Stories",
   seo: {
-    title: "Home Stories - Free Home Renovation Tracker for iPhone",
+    title: "Home Stories - Free Home Renovation Tracker for iPhone and iPad",
     description:
-      "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
+      "Track a renovation on iPhone or iPad: budget, tasks, photos, notes and documents. Free, works offline, no account. iOS 17 or later.",
   },
   locale: "en",
   // English micro-copy. Other locales override this via src/i18n/translations.
@@ -17,7 +17,7 @@ const templateConfig: TemplateConfig = {
       language: "Language",
     },
     header: {
-      eyebrow: "Renovation tracker for iPhone",
+      eyebrow: "Renovation tracker for iPhone and iPad",
       committedSuffix: "committed",
       spent: "Spent",
       committed: "Committed",
@@ -49,7 +49,7 @@ const templateConfig: TemplateConfig = {
       // The one-liner: problem + solution + result. Reused in the About lede
       // and the blog CTA so the same sentence works everywhere. #117
       tagline:
-        "Renovation budgets drift. Home Stories puts spent, committed and remaining on one screen, so an overrun shows up while you can still act on it. A renovation tracker for iPhone, made in Denmark by Robert Jensen.",
+        "Renovation budgets drift. Home Stories puts the running total on one screen, so an overrun shows up while you can still act on it. A renovation tracker for iPhone and iPad, made in Denmark by Robert Jensen.",
     },
   },
   // Draws grid behind main container
@@ -99,7 +99,7 @@ const templateConfig: TemplateConfig = {
     id: "app-banner",
     title: "Measure the next one.",
     subtitle:
-      "Free on the App Store. Works offline, needs no account, and syncs with iCloud when you want it to. Requires iPhone with iOS 17 or later.",
+      "Free on the App Store for iPhone and iPad. Works offline and needs no account. Requires iOS 17 or later.",
     screenshots: [
       "/screenshots/projects-list.webp",
       "/screenshots/budget-chart.webp",
@@ -108,9 +108,9 @@ const templateConfig: TemplateConfig = {
   },
   home: {
     seo: {
-      title: "Home Stories - Free Home Renovation Tracker for iPhone",
+      title: "Home Stories - Free Home Renovation Tracker for iPhone and iPad",
       description:
-        "Track your renovation budget, organize tasks, and document progress with photos. Export professional PDF reports. Free for iPhone - download now!",
+        "Track a renovation on iPhone or iPad: budget, tasks, photos, notes and documents. Free, works offline, no account. iOS 17 or later.",
     },
     // StoryBrand agreement plan: the same facts, phrased as the commitments
     // that remove the fear of downloading. #117
@@ -179,12 +179,12 @@ const templateConfig: TemplateConfig = {
           price: "$0.00",
           period: "forever",
           features: [
-            "Unlimited projects, tasks, and phases",
-            "Photo timeline with dated photos",
-            "Expense logging and item prices",
-            "Works fully offline",
-            "iCloud sync across your devices",
-            "Home Screen & Lock Screen widgets",
+            "Unlimited projects, photos, notes, and documents",
+            "Items with prices, and a running total",
+            "Payments split by materials, labour, and contractor",
+            "Tasks, time tracking, and Home Screen widgets",
+            "Local backups and data export",
+            "Works fully offline, no account",
           ],
         },
         {
@@ -193,10 +193,11 @@ const templateConfig: TemplateConfig = {
           period: "one-time — no subscription",
           highlight: true,
           features: [
-            "Budget targets and the budget-vs-cost chart",
-            "Advanced cost analysis",
-            "PDF & CSV export of reports and time logs",
-            "Task reminders and deadline notifications",
+            "Budget vs actual chart",
+            "Task reminders",
+            "PDF export",
+            "iCloud sync",
+            "Project sharing",
           ],
           cta: "Get the app — upgrade inside",
         },
@@ -224,12 +225,12 @@ const templateConfig: TemplateConfig = {
         {
           aspect: "On site",
           them: "Pinch-zooming cells on your phone",
-          us: "Built for iPhone, works fully offline",
+          us: "Built for iPhone and iPad, works fully offline",
         },
         {
           aspect: "Sharing",
           them: "Emailing budget_v7_final_FINAL.xlsx",
-          us: "Live iCloud sharing, or a PDF anyone can read",
+          us: "iCloud sharing or a PDF — both part of Pro",
         },
         {
           aspect: "Receipts",
@@ -381,9 +382,9 @@ const templateConfig: TemplateConfig = {
         },
         {
           icon: "globe",
-          title: "51 languages, accessible",
+          title: "50 languages, accessible",
           subtitle:
-            "Fully translated into 51 languages, with VoiceOver and Dynamic Type support throughout. Works 100% offline.",
+            "Fully translated into 50 languages, with VoiceOver and Dynamic Type support throughout. Works 100% offline.",
         },
       ],
     },
@@ -394,27 +395,27 @@ const templateConfig: TemplateConfig = {
         {
           question: "Is Home Stories free to use?",
           answer:
-            "Yes — free for the whole job, with unlimited projects, tasks, phases, photos and expense logging. One optional in-app purchase, Home Stories Pro, unlocks budget targets, the budget-vs-cost chart, PDF and CSV export, and task reminders. It is a one-time price, not a subscription.",
+            "Yes. Unlimited projects, items, photos, notes, documents, tasks, time tracking, Home Screen widgets, local backups and data export are free. Home Stories Pro is an optional one-time purchase, not a subscription. It adds the budget-vs-actual chart, task reminders, PDF export, iCloud sync and project sharing.",
         },
         {
           question: "Does the app work offline?",
           answer:
-            "Fully. Projects, budgets and photos all live on the device, so the app works in a basement with no signal and syncs later. Nothing about it depends on being online.",
+            "Yes. Projects, photos and payments live on the device, so it works with no signal. iCloud sync is part of Pro, stays off until you turn it on, and catches up when you are back online.",
         },
         {
           question: "Can I share projects with others?",
           answer:
-            "Yes, two ways. Share a project over iCloud and it stays in sync in real time with a partner, family member or contractor. Or export a PDF report — budget, tasks, photos and notes — for anyone who just needs to read it.",
+            "Project sharing is part of Home Stories Pro. You invite a partner, family member or contractor, and they see the same tasks, items and photos over iCloud. A PDF report, also part of Pro, is the version for someone who only needs to read it.",
         },
         {
           question: "How do I export reports?",
           answer:
-            "Open the project, tap export, and choose PDF or CSV. The report comes out with the budget summary, task progress, photos and notes already laid out, ready to send to a contractor or an insurer. Export is part of Home Stories Pro.",
+            "PDF export is part of Home Stories Pro: a report with a cover photo, for the whole project or just the parts you choose. A full data export of the project is included free.",
         },
         {
           question: "What devices are supported?",
           answer:
-            "iPhone, running iOS 17.0 or later. There is no iPad or Android version yet.",
+            "iPhone and iPad, running iOS 17.0 or later. The iPad app is native. There is no Android version.",
         },
         {
           question: "Does Home Stories have widgets?",
@@ -424,32 +425,32 @@ const templateConfig: TemplateConfig = {
         {
           question: "Can I collaborate with a partner or contractor?",
           answer:
-            "Yes. Share a project over iCloud and it stays in sync in real time across everyone's devices, so a partner, family member, or contractor can follow the budget, tasks, and photos as they change.",
+            "Yes, with Home Stories Pro. Share a project over iCloud and the people you invite see the same tasks, items and photos.",
         },
         {
           question: "What languages is Home Stories available in?",
           answer:
-            "Home Stories is fully translated into 51 languages, including English, German, French, Spanish, Italian, Danish, Dutch, Portuguese, Japanese, Chinese, Korean, and many more, with full VoiceOver and Dynamic Type accessibility support.",
+            "Home Stories is available in 50 languages, including English, German, French, Spanish, Italian, Danish, Dutch, Portuguese, Japanese, Chinese, Korean and many more, with VoiceOver and Dynamic Type support.",
         },
         {
           question: "Can I track costs by category, like materials and labour?",
           answer:
-            "Yes — costs live where the work is. Break the project into phases and tasks, then attach the materials, fixtures, labour items, and quotes each one needs. The budget chart rolls it all up as spent, committed, and remaining, and the PDF report itemizes it.",
+            "Yes. Log payments and keep materials, labour and contractor costs apart. Each item's price adds to the project's running total. The budget-vs-actual chart, which compares that total with the budget, is part of Home Stories Pro.",
         },
         {
           question: "How do I manage multiple contractors?",
           answer:
-            "Group the work into phases and tasks so each trade knows what happens when — electrician before plasterer. Share the project over iCloud so a contractor can follow the budget, tasks, and photos live, or export a PDF with just the sections they need.",
+            "Keep each trade's payments apart from materials and labour, and keep their quotes and contracts as documents on the project. Sharing the live project, or exporting a PDF, is part of Home Stories Pro.",
         },
         {
           question: "How do I avoid going over budget?",
           answer:
-            "The budget chart shows spent, committed, and remaining at a glance, so an overrun shows up while there's still time to act. Add the Home Screen or Lock Screen widget to keep the budget ring in view without opening the app.",
+            "The free app keeps a running total as you log items and payments. Home Stories Pro adds a budget-vs-actual chart so the gap is visible while you can still change the plan. A Home Screen widget can show budget progress without opening the app.",
         },
         {
           question: "Is my project data backed up?",
           answer:
-            "Yes — with iCloud sync on, your projects live in your iCloud account and follow you to a new iPhone. Everything also works fully offline; changes sync when you're back online.",
+            "Local backups are included free, and so is a full data export. iCloud sync, which keeps the project on your other devices, is part of Home Stories Pro and stays off until you turn it on.",
         },
       ],
     },

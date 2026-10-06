@@ -1,0 +1,107 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { guides } from "../../data/guides";
+
+const path = "/guides/";
+const title = "Home Renovation Guides by Topic";
+const description =
+  "Guides that group the Home Stories articles: budgeting and contingency, hiring contractors, timelines and sequencing, and the apps and tools people actually use.";
+
+const url = new URL(path, Astro.site).href;
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url,
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "[data-speakable]"],
+  },
+  mainEntity: { "@id": `${url}#guides` },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${url}#guides`,
+  name: "Home renovation guides",
+  numberOfItems: guides.length,
+  itemListElement: guides.map((guide, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/guides/${guide.slug}/`, Astro.site).href,
+    name: guide.h1,
+  })),
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, itemListSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Guides", path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="mx-auto max-w-screen-lg px-4 py-12 md:py-20">
+    <nav aria-label="Breadcrumb" class="mb-8 text-sm text-base-content/60">
+      <a href="/" class="hover:text-primary">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <a href="/blog/" class="hover:text-primary">Blog</a>
+    </nav>
+
+    <header class="mb-12 max-w-3xl">
+      <p class="tick-label m-0 flex items-center gap-3 text-base-content/50">
+        <span class="inline-block h-0.5 w-8 bg-accent"></span>
+        Guides
+      </p>
+      <h1 class="mb-5 mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-5xl">
+        Renovation guides, grouped by the job
+      </h1>
+      <p class="text-lg leading-relaxed text-base-content/80" data-speakable>
+        The articles are written to answer one question each. These four guides
+        pull the related ones together: the money, the contractor, the timeline,
+        and the tool you keep the record in.
+      </p>
+    </header>
+
+    <ol class="m-0 grid list-none gap-4 p-0">
+      {
+        guides.map((guide, index) => (
+          <li class="m-0">
+            <a
+              href={`/guides/${guide.slug}/`}
+              class="group flex gap-4 rounded-box border border-base-300 bg-base-100 p-5 transition-colors hover:border-base-content/30 sm:p-6"
+            >
+              <span class="tick-label mt-1 w-8 shrink-0 text-base-content/40">{index + 1}</span>
+              <span>
+                <span class="block font-display text-xl font-bold leading-snug tracking-tight text-base-content group-hover:text-primary">
+                  {guide.h1}
+                </span>
+                <span class="mt-2 block text-base leading-relaxed text-base-content/70">
+                  {guide.metaDescription}
+                </span>
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+
+    <p class="mt-10 text-base text-base-content/70">
+      Prefer the full list?
+      <a href="/blog/" class="font-semibold text-primary hover:underline">Every article, newest first</a>.
+    </p>
+  </main>
+</BlogLayout>
