@@ -3,10 +3,10 @@ title: "Hidden Costs in an Older Home: The Surprises That Blow Budgets"
 description: "Older homes hide expenses that catch renovators off guard — old wiring, rot, structural surprises, and more. What to budget for and how to avoid budget shock."
 lede: "You can walk through an old house and see charm. You can even budget for the kitchen and the new bathrooms. What rarely shows up in any plan is the thing behind the drywall that makes the builder's estimate a best-case scenario."
 keyword: "unexpected renovation costs older home"
-cover: "/stock/29.png"
+cover: "/stock/29.webp"
 coverAlt: "An open wall cavity in an older house, revealing outdated wiring and old pipes behind the plasterboard"
 publishDate: 2026-08-05
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "older-homes", "planning", "surprises", "hidden-costs"]
 tldr:
@@ -56,7 +56,7 @@ The cost of a full electrical upgrade — new panel, rewiring, updated outlets a
 
 Many insurance companies won't cover a house with knob-and-tube wiring at all, or will charge a significant surcharge. Some municipalities require upgrades before a renovation permit is issued. Whatever your situation, you need to know early.
 
-![An electrician working at an open wall socket in an older room, with old cabling exposed in the opened wall](/stock/20.png)
+![An electrician working at an open wall socket in an older room, with old cabling exposed in the opened wall](/stock/20.webp)
 
 ### 2. Plumbing that has outlived its purpose
 
@@ -106,7 +106,7 @@ You can't eliminate surprises in an older home. But you can reduce them enough t
 
 That's what a proper renovation tracker does: it keeps spent, committed, and remaining as three visible numbers so you always know where you stand. When a new cost appears — and it will — you can see immediately whether you have room for it or whether you need to reduce the scope elsewhere. The [contingency budget guide](/blog/renovation-contingency-budget/) goes deeper into how to structure that safety net so you're not scrambling when the walls open.
 
-![A renovation budget spreadsheet on a tablet, with categories for different rooms and line items tracked](/stock/10.png)
+![A renovation budget spreadsheet on a tablet, with categories for different rooms and line items tracked](/stock/10.webp)
 
 ## What a realistic older-home budget looks like
 
@@ -153,6 +153,14 @@ Plan for it. Budget for it. Log every dollar that goes into the unknown. The hou
 Older homes are worth the surprises. They're solid, they're repairable, and they reward patience with spaces that new construction can't match. Just plan for the surprises — because they'll arrive whether you planned for them or not.
 
 If you're managing a renovation in an older home and want to keep the hidden costs visible, [Home Stories](https://apps.apple.com/app/id6754754960) has a budget feature built for exactly this: track each surprise as it comes up, see it against your contingency in real time, and know whether you still have room or need to trim elsewhere. Free on the App Store, no account needed.
+
+Older-home surprises pair with a living-through-it plan — the [fixer-upper first month](/blog/moving-into-a-fixer-upper/) guide sequences what to do before cosmetics.
+
+Hidden older-home costs are one driver of overruns; [renovation cost overrun patterns](/blog/renovation-cost-overrun-statistics/) puts them next to scope creep and sequencing mistakes.
+
+Roof fabric is a classic surprise line — [how long a roof replacement takes](/blog/how-long-does-a-roof-replacement-take/) covers weather delays and second-fix costs.
+
+Window replacement schedules are mostly lead times — [how long it takes to replace windows](/blog/how-long-does-it-take-to-replace-windows/).
 
 ## Sources and further reading
 

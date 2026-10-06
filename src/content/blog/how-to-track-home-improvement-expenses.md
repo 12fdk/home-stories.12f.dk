@@ -8,7 +8,7 @@ keyword: "how to track home improvement expenses"
 cover: "/stock/05.webp"
 coverAlt: "A homeowner and a contractor in a hard hat looking at a phone together on site"
 publishDate: 2026-07-13
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:
@@ -43,7 +43,7 @@ The question isn't which method has the most features. It's which method will yo
 
 Here's an honest comparison of the four methods I've actually used (or seen fail) for tracking home improvement expenses.
 
-![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.png)
+![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.webp)
 
 ## Method 1: Spreadsheet
 
@@ -69,7 +69,7 @@ Notion has become the default renovation planning tool for a generation that gre
 
 **What works:**
 
-- A budget database in Notion can be flexible and beautiful. You can build custom properties, rollups, and views that make the numbers feel satisfying. The [Notion vs Home Stories comparison](/blog/notion-for-home-renovation/) walks through this in detail.
+- A budget database in Notion can be flexible and beautiful. You can build custom properties, rollups, and views that make the numbers feel satisfying. The [Notion for home renovation comparison](/blog/notion-for-home-renovation/) walks through this in detail.
 - It's connected to your planning artefacts. Your budget lives in the same workspace as your contractor database, your permits folder, your room pages. That's nice, but it's a planning benefit, not an execution one.
 
 **What doesn't:**
@@ -82,7 +82,7 @@ Notion has become the default renovation planning tool for a generation that gre
 
 ## Method 3: Dedicated renovation app
 
-This is where things get interesting. A dedicated renovation app — [Home Stories](https://apps.apple.com/app/id6754754960), HomeZada, Houzz Pro, or similar — is purpose-built for the execution phase. It does one thing: make capturing a cost, a photo, and a category take seconds on your phone.
+This is where things get interesting. A dedicated renovation app — a phone-first tracker, HomeZada, or a contractor platform with a client portal — is purpose-built for the execution phase. It does one thing: make capturing a cost, a photo, and a category take seconds on your phone.
 
 **What works:**
 
@@ -95,9 +95,9 @@ This is where things get interesting. A dedicated renovation app — [Home Stori
 
 - Less flexibility. You can't customise every field or build custom views. The app gives you a structure and you use it. If you're used to tweaking your spreadsheet columns daily, this feels limiting — until you realise the structure is there so you don't have to maintain it on a phone at 5pm on a Friday.
 - Vendor lock-in. Your data lives in the app. Exporting a PDF or CSV is usually possible, but you're tied to the app for the duration of the build. If the app shuts down, your data goes with it. Most dedicated apps are built by companies that own the data problem — they have a strong incentive to keep you as a customer, and they export cleanly.
-- iOS only (for Home Stories). If you're on Android, the options are more limited. Most renovation apps target iOS first.
+- iOS-first. If you're on Android, the options are more limited. Most renovation apps target iOS first.
 
-**Verdict:** This is the method I use and recommend for anyone doing a medium-to-large renovation. The time savings per entry add up to hours over a 12-week build, and the real-time accuracy is what makes the budget useful. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960).
+**Verdict:** This is the method I use and recommend for anyone doing a medium-to-large renovation. Pair it with [what to track during a renovation](/blog/what-to-track-during-a-renovation/) so the categories match the habits that actually prevent overruns. The time savings per entry add up to hours over a 12-week build, and the real-time accuracy is what makes the budget useful. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960).
 
 ## Method 4: The receipts-in-a-jar method (no digital tracking)
 
@@ -142,6 +142,12 @@ The method with the shallowest decay curve is the one that saves your budget. No
 
 ## Putting it together
 
+Two names that come up constantly are compared in depth in [HomeZada vs Houzz Pro](/blog/homezada-vs-houzz-pro/).
+
+
+If you want the wider landscape first — design apps, measuring tools, contractor portals — see [the renovation apps worth installing](/blog/best-home-improvement-apps/).
+
+
 Tracking home improvement expenses isn't a technical problem — it's a discipline problem. The method is secondary to the habit: log on the day the expense happens, and log against the right category so the numbers mean something.
 
 If you're planning this post, set up a [budget template](/blog/renovation-budget-template/) first so your tracking categories match your planned ones. If you're in the execution phase, [keep your contingency ring-fenced](/blog/renovation-contingency-budget/) and watch it drain in real time. The [nine-category structure](/blog/renovation-budget-template/) and the contingency guidance from the [budgeting guide](/blog/how-to-budget-a-home-renovation/) cover the setup; the app handles the running balance while the dust flies.
@@ -157,7 +163,7 @@ Already covered in the FAQ section above — four practical questions on the bes
 - [Renovation Budget Template (Free PDF + Google Sheet)](/blog/renovation-budget-template/)
 - [How to Budget a Home Renovation Without Going Over](/blog/how-to-budget-a-home-renovation/)
 - [Renovation Contingency Budget: How Much to Set Aside](/blog/renovation-contingency-budget/)
-- [Notion vs Home Stories for Renovation Planning](/blog/notion-for-home-renovation/)
+- [Notion for home renovation planning](/blog/notion-for-home-renovation/)
 
 ## Ready to track expenses without the spreadsheet headache?
 

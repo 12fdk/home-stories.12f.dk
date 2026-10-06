@@ -3,9 +3,10 @@ title: "How to Compare Contractor Quotes (and Spot the Sign-Today Discount)"
 description: "How to compare contractor quotes line by line — put every bid on the same scope, find what's missing, and see through the sign-today discount."
 lede: "Three quotes for the same bathroom can differ by thousands and still not describe the same job. Before you compare the totals, make every bid answer the same questions — and treat any price that only exists if you sign tonight as information, not a deal."
 keyword: "how to compare contractor quotes"
-cover: "/stock/33.png"
+cover: "/stock/33.webp"
 coverAlt: "Three stapled paper quotes fanned out on a worn wooden kitchen table beside a tape measure and a pencil, in grey afternoon window light"
 publishDate: 2026-10-06
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["contractor", "budgeting", "quotes", "hiring", "bids"]
 tldr:
@@ -40,7 +41,7 @@ Home-improvement forums are full of the same kitchen-table pattern: a long sales
 
 Dollar figures below are illustrative. The method is the same whatever currency you pay in.
 
-![Three printed quotes laid side by side on a kitchen table with a highlighter, calculator and tape measure](/stock/34.png)
+![Three printed quotes laid side by side on a kitchen table with a highlighter, calculator and tape measure](/stock/34.webp)
 
 ## Why do three contractor quotes almost never match?
 
@@ -107,7 +108,7 @@ Three of those lines deserve a closer look.
 
 **Payment schedule.** A sensible schedule ties payments to finished stages, so you never pay far ahead of the work. The [FTC's consumer guidance](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) warns against paying the full amount up front and notes that some US states cap how big a down payment can be. Check your local rules. How a contractor wants to be paid also tells you a lot about how they run their business.
 
-![A gutted bathroom with bare walls, capped pipes and a worn floor, ready to be measured for quotes](/stock/35.png)
+![A gutted bathroom with bare walls, capped pipes and a worn floor, ready to be measured for quotes](/stock/35.webp)
 
 ## A worked example: three bathroom quotes, normalized
 
@@ -167,7 +168,7 @@ It is the wrong choice when the low total depends on gaps, vague lines or allowa
 
 Whichever bid you choose, the gap between it and the next one is useful information. If the cheaper quote wins by less than your contingency, the [contingency budget guide](/blog/renovation-contingency-budget/) is the way to think about whether that saving is worth the extra risk.
 
-![A clipboard with handwritten notes, a tape measure and a pencil resting on boxes of floor tiles in an unfinished room](/stock/36.png)
+![A clipboard with handwritten notes, a tape measure and a pencil resting on boxes of floor tiles in an unfinished room](/stock/36.webp)
 
 ## What questions should you ask before you pick?
 
@@ -189,6 +190,9 @@ The comparison is only useful if you can find it later. The scope page, three PD
 Once you sign, the winning quote stops being a quote. It becomes committed money, and your budget should show it that way from that day, not when the first invoice lands.
 
 ## Wrapping up
+
+Quotes only help once you know which trades you are hiring — [DIY versus hiring a contractor](/blog/diy-vs-hire-contractor/) is the upstream decision.
+
 
 Comparing contractor quotes is less about finding the lowest number and more about making three documents describe one job. Write the scope once. Make everyone price it. Put the quotes side by side line by line, and price what is missing. Ask the awkward questions in writing. And let any number that only exists tonight go.
 

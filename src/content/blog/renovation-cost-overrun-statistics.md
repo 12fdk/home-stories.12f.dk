@@ -5,10 +5,10 @@ description: "Renovation cost overrun statistics — why 70%+ of renovations exc
 
 lede: "Renovations regularly go 15–30% over budget, and that isn't a bug — it's a structural feature of how renovations are planned. The overrun isn't randomness; it's the gap between optimistic pre-project estimates and the inevitable surprises that surface once the walls open. Size your contingency to the evidence, not the folklore."
 keyword: "renovation cost overrun statistics"
-cover: "/stock/10.png"
+cover: "/stock/10.webp"
 coverAlt: "A close-up of a renovator's hand resting on stripped, unfinished floorboards in a sunlit room"
 publishDate: 2026-07-13
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "statistics", "planning"]
 tldr:
@@ -34,7 +34,7 @@ relatedSlugs:
   - "renovation-spreadsheet-alternative"
 ---
 
-![A finished renovated kitchen with modern white cabinets, marble countertops, and stainless steel appliances — the result of a project that went 20% over budget](/stock/15.png)
+![A finished renovated kitchen with modern white cabinets, marble countertops, and stainless steel appliances — the result of a project that went 20% over budget](/stock/15.webp)
 
 If you've ever been in a renovation, you've heard the sentence: \"It's only 5% over budget.\" The 5% over budget was the third time someone said it. By the end of the project, the number was 28%.
 
@@ -146,7 +146,7 @@ The statistics above aren't predictions for your specific project — they're di
 
 2. **Set a personal hard cap.** Decide in advance what maximum overrun you can absorb without refinancing or selling. That number becomes your budget, not the contractor's quote. If the quote plus contingency exceeds your hard cap, either reduce scope or increase the timeline so you can fund it in stages.
 
-3. **Log every overrun in real time.** The difference between surprise and managed overrun is almost always *timing.* If you discover a $3,000 issue in week one, you can cut scope. If you discover it in week eight, you can't. Home Stories logs costs as they happen and shows your running contingency balance in real time, so you always know exactly where you stand. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
+3. **Log every overrun in real time.** The difference between surprise and managed overrun is almost always *timing.* If you discover a $3,000 issue in week one, you can cut scope. If you discover it in week eight, you can't. Log costs as they happen and watch your running contingency balance in real time, so you always know exactly where you stand.
 
 4. **Invest in diagnostics before demolition.** A structural engineer's report, a thermal imaging scan for moisture, or even a small exploratory opening in a wall can reduce the \"hidden damage\" category from a surprise to a known cost. This is the single most effective pre-project investment for reducing overruns on older homes.
 
@@ -167,7 +167,6 @@ The [renovation contingency budget guide](/blog/renovation-contingency-budget/) 
 
 The statistics in this post tell you what *can* happen. [Home Stories](https://apps.apple.com/app/id6754754960) shows you what *is* happening — every overrun logged in real time, your remaining contingency balance visible at a glance, and a running budget that tells you whether you're on track every single day. Set it up before the first wall comes down so your baseline numbers are already there.
 
-*Home Stories is free on the App Store.*
 
 ## Sources and further reading
 

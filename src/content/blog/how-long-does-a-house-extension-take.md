@@ -3,7 +3,7 @@ title: "How Long Does a House Extension Take? A Realistic Build Timeline"
 description: "How long does a house extension take? Realistic timelines for single and two-storey extensions, plus the delays that actually matter."
 lede: "A single-storey extension takes twelve to twenty weeks from first sketch to final inspection; a two-storey or structurally complex one takes twenty to thirty-two. Four to eight of those weeks are design, planning permission and building regulations, before ground is broken — the phase almost everyone under-counts."
 keyword: "how long does a house extension take"
-cover: "/stock/26.png"
+cover: "/stock/26.webp"
 coverAlt: "A timber-framed single-storey house extension under construction against a clear sky"
 publishDate: 2026-08-02
 updatedDate: 2026-08-27
@@ -59,7 +59,7 @@ Neither of these includes the design and permitting phase that happens *before* 
 
 If you're planning an extension and want a step-by-step overview of the whole renovation process, [a step-by-step home renovation planning guide](/blog/how-to-plan-a-home-renovation-step-by-step/) walks through the decisions you need to make and in what order — before you even think about contractors or foundations.
 
-![A timber-framed house extension with brickwork started at ground level, a construction site in clear daylight](/stock/18.png)
+![A timber-framed house extension with brickwork started at ground level, a construction site in clear daylight](/stock/18.webp)
 
 *The visible transformation of an extension happens in the middle weeks — but the foundation and structural phases, which nobody sees, determine whether everything else proceeds on schedule.*
 
@@ -83,7 +83,7 @@ An extension follows a strict sequence of phases. You cannot meaningfully overla
 
 If you already know the sequence and want to see what a realistic week-by-week schedule looks like for a comparable renovation, [a practical kitchen renovation timeline](/blog/kitchen-renovation-timeline/) works through one in detail — the same principles of sequencing and lead times apply to an extension, just on a bigger scale.
 
-![A finished single-storey house extension with large glazed doors leading into a kitchen, the brickwork clean and pointed](/stock/20.png)
+![A finished single-storey house extension with large glazed doors leading into a kitchen, the brickwork clean and pointed](/stock/20.webp)
 
 *The end result looks simple — but the timeline from empty ground to finished room involves at least twenty weeks of tightly sequenced trade work.*
 

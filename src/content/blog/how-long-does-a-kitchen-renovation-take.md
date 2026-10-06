@@ -3,7 +3,7 @@ title: "How Long Does a Kitchen Renovation Take? Realistic Time Ranges"
 description: "How long does a kitchen renovation take? Realistic time ranges for a refresh through a full remodel, plus the delays that always creep in."
 lede: "A kitchen renovation takes four to eight weeks on site for a straightforward refresh that keeps the existing layout, or ten to sixteen weeks for a full gut with walls and services moved. Add four to eight weeks of design, permits and ordering first. Cabinet delivery, at eight to twelve weeks, usually sets the real finish date."
 keyword: "how long does a kitchen renovation take"
-cover: "/stock/16.png"
+cover: "/stock/16.webp"
 coverAlt: "A kitchen with exposed wall framing and an unfinished countertop, tools on the floor"
 publishDate: 2026-07-27
 updatedDate: 2026-08-27
@@ -58,7 +58,7 @@ Neither of these numbers includes the design and permitting phase that happens *
 
 If you're new to managing a home renovation at all, a [step-by-step planning guide](/blog/how-to-plan-a-home-renovation-step-by-step/) walks through the full process from initial sketch to the first day of demolition, including the decisions you need to make and in what order.
 
-![A kitchen with new white cabinets and stone worktops fitted, the floor still unfinished](/stock/07.png)
+![A kitchen with new white cabinets and stone worktops fitted, the floor still unfinished](/stock/07.webp)
 
 *The visible transformation happens during the middle weeks — but what happens before and after often takes longer than the installation itself.*
 
@@ -74,7 +74,7 @@ A kitchen renovation timeline isn't one continuous block of hammering and screwi
 
 This is where [our renovation checklist](/blog/renovation-checklist-printable/) comes in handy: going through the room systematically at the end so you're not relying on memory.
 
-![A woman standing in a partly renovated room, looking at notes pinned to the bare wall](/stock/15.png)
+![A woman standing in a partly renovated room, looking at notes pinned to the bare wall](/stock/15.webp)
 
 *Keeping a running list of what needs to be finished — the snag list — is the difference between a renovation that ends and one that lingers.*
 

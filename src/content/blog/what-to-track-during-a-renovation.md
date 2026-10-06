@@ -5,10 +5,10 @@ description: "The 11 things renovators wish they'd tracked from day one — phot
 
 lede: "Ask anyone who's finished a renovation what they'd do differently and you rarely hear about tile choices. You hear about information: the photo they didn't take, the receipt they can't find, the verbal quote that grew 40% between the handshake and the invoice. This is the list I'd hand my past self on day one."
 keyword: "what to track during a renovation"
-cover: "/stock/15.png"
+cover: "/stock/15.webp"
 coverAlt: "A woman standing in a partly renovated room, looking at notes pinned to the bare wall"
 publishDate: 2026-07-16
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "tracking", "lessons"]
 tldr:
@@ -31,9 +31,12 @@ relatedSlugs:
   - "how-to-organize-renovation-receipts"
   - "renovation-checklist-printable"
   - "how-to-plan-a-home-renovation-step-by-step"
+  - "how-to-compare-contractor-quotes"
 ---
 
 There's a specific kind of regret that only shows up months after a renovation ends. It isn't about the work — the work is usually fine. It's about the *record* of the work: the thing you didn't photograph, the number you didn't write down, the conversation that lives only in two people's increasingly different memories.
+
+None of these take skill to avoid. Every one of them takes less than a minute in the moment. If you are searching for what to track during a renovation, start here — eleven habits that cover almost every regret I have heard from people who finished a project and then needed a number, a photo, or a date they no longer had.
 
 None of these take skill to avoid. Every one of them takes less than a minute in the moment. Here are the eleven that come up again and again — from my own projects and from every renovator I've compared notes with.
 
@@ -60,6 +63,9 @@ The kitchen is ordered. The electrician is booked. Nothing has left your account
 This is the single most common way renovators end up "suddenly" over budget: spent and committed were never tracked as separate numbers. The moment you sign anything, it belongs in the total. Watching **spent, committed, and remaining** as three numbers is the whole trick to [not going over](/blog/how-to-budget-a-home-renovation/).
 
 ## 5. The small stuff
+
+For the money side in more depth — spreadsheets versus apps versus notebooks — see [how to track home improvement expenses](/blog/how-to-track-home-improvement-expenses/).
+
 
 Nobody's budget is killed by the kitchen. It's killed by screws, silicone, another brush, two more meters of cable, the parking, the skip that needed emptying twice. Individually invisible, collectively a four-figure line item that appears in no plan.
 
@@ -99,6 +105,34 @@ The last 5% of a renovation is a fog of almosts: the door that doesn't quite clo
 
 Write the list *before* the final walkthrough, walk it with the contractor, and date every item as it clears. The project ends when the list is empty, not when everyone is tired.
 
+
+## How do these eleven fit a normal week?
+
+A useful way to think about what to track during a renovation is by *when* the capture happens, not by category alone.
+
+**At the merchant or on site (seconds):** receipts, small purchases, open-wall photos, a one-line note after a contractor conversation. If it does not happen in the moment, it usually does not happen.
+
+**At the kitchen table that evening (minutes):** quote-versus-invoice comparisons, updating committed money when you signed something, checking contingency burn against how far along the phase is.
+
+**At phase boundaries (a short review):** trade sequence, whether "done" for this room still matches the snag list, and whether decisions you made last month still hold when a finish arrives looking different from the sample.
+
+Worked example — illustrative numbers only. Say your contingency is $8,000 on a $40,000 project. By the end of demolition you have spent $2,400 of contingency on asbestos sampling and a surprise waste load. The project is roughly 15% done by calendar, but you have already used 30% of the contingency buffer ($2,400 ÷ $8,000). That is not a crisis yet; it is a signal to pause before the next change order. If you only look at "money left in the bank" you might feel fine. If you track contingency burn against phase progress, you see the mismatch early enough to cut scope or renegotiate.
+
+That same discipline shows up when quotes drift. Keep the original quote next to the invoice, and when extras appear, treat them like the [change-order process](/blog/managing-contractor-change-orders/) — written, dated, approved — not like a shrug at the final walkthrough. If you are still gathering bids, [how to compare contractor quotes](/blog/how-to-compare-contractor-quotes/) is the upstream habit that makes item 3 (quote next to invoice) possible later.
+
+## A lightweight weekly review
+
+Once a week, for fifteen minutes:
+
+1. Open the project record and check **spent / committed / remaining**.
+2. Scroll photos from the last seven days — any open wall that closed without a shot?
+3. Skim notes for verbal agreements that never became a written line.
+4. Update the snag list for rooms that are "almost done".
+5. Glance at contingency burn versus phase progress.
+
+If that review takes longer than fifteen minutes, your system is too heavy. The point of tracking during a renovation is not a perfect archive on day one — it is a habit light enough that you still do it in week twelve.
+
+
 ---
 
 Every one of these eleven is a seconds-long habit in the moment and a genuine loss when skipped. The pattern behind them all: **a renovation generates evidence continuously, and the evidence has to be caught live or reconstructed painfully.**
@@ -109,9 +143,7 @@ Start it before the first wall opens. Your future self — standing in a finishe
 
 ## Sources and further reading
 
-The ranges and guidance above are drawn from direct project experience and
-from the bodies below, which publish the underlying standards, rules and
-market data. They are worth reading directly before you commit money.
+Consumer-protection and insurance documentation guidance worth reading before you need it mid-project.
 
 - [Facts + statistics: homeowners and renters insurance](https://www.iii.org/fact-statistic/facts-statistics-homeowners-and-renters-insurance) — Insurance Information Institute
 - [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

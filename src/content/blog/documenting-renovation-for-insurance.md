@@ -3,7 +3,7 @@ title: "How to Document Your Home Renovation for Insurance"
 description: "What a renovation insurance claim actually needs: the photo timeline, the paper trail, and the honest disclosure most people forget — all before you need it."
 lede: "The renovation photos you'd want if the pipe burst or the fire took the kitchen are the same ones you'd want to take anyway. The difference between a settled claim and a dispute is usually a habit you built in month one — not a sprint in the week the roof leaks."
 keyword: "how to document home renovation for insurance"
-cover: "/stock/30.png"
+cover: "/stock/30.webp"
 coverAlt: "A rolled insurance document and a stack of receipts sitting on a bare floorboard in a mid-renovation kitchen, a camera on the workbench behind"
 publishDate: 2026-08-07
 updatedDate: 2026-08-27
@@ -73,7 +73,7 @@ Take the before-photos the day before the plasterer or screed crew arrives. Wide
 
 The same logic applies to every floor and ceiling you cover. Photograph the old floor before the new one goes down. Photograph the old ceiling before the new one goes up. You're not documenting for nostalgia. You're documenting for the day when something under or behind it goes wrong and the insurer asks what was there.
 
-![A close-up of a renovator's hand resting on stripped, unfinished floorboards in a sunlit room](/stock/10.png)
+![A close-up of a renovator's hand resting on stripped, unfinished floorboards in a sunlit room](/stock/10.webp)
 
 ## The timeline: one photo per stage, dated
 
@@ -140,7 +140,7 @@ This summary is the cover sheet for the whole record. When the insurer asks for 
 
 The good news: if you've been taking the baseline photos, the timeline, and keeping the paper trail, the summary writes itself in ten minutes. If you haven't, it's a lot harder to reconstruct, and that's the cost of skipping the habit.
 
-![Floor plans on a desk with a calculator, tape measure, notebook and pen](/stock/09.png)
+![Floor plans on a desk with a calculator, tape measure, notebook and pen](/stock/09.webp)
 
 ## The system, in practice
 

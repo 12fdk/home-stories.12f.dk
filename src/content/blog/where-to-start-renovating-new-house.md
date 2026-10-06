@@ -3,10 +3,10 @@ title: "Where to Start When Renovating a House You Just Bought"
 description: "Where to start renovating a house you just bought — the first-90-day order that keeps chaos from turning into costly mistakes."
 lede: "You bought the house. The keys are in your pocket. The contractor you're going to hire doesn't exist yet, the budget is a guess, and every room looks like it needs something different. Before you pick up a paint roller, here's the order that keeps the first ninety days from becoming the most expensive part of the project."
 keyword: "where to start renovating a house"
-cover: "/stock/18.png"
+cover: "/stock/18.webp"
 coverAlt: "An empty room in a newly purchased older house with soft morning light, bare walls, and a single cardboard box near a window"
 publishDate: 2026-07-17
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "getting-started", "renovation-order"]
 tldr:
@@ -64,7 +64,7 @@ Bucket A items are also the ones worth checking the clock on before you commit, 
 
 The reason this distinction matters is simple: renovation energy is finite. If you spend your enthusiasm, your weekends, and your money on Bucket B while Bucket A is still sitting there, you end up with a pretty room in a house that still has problems. And those problems will eventually come knocking.
 
-![A cardboard box sitting in an empty room with bare walls and a window letting in soft daylight, the kind of space waiting for a new owner to imagine what comes next](/stock/08.png)
+![A cardboard box sitting in an empty room with bare walls and a window letting in soft daylight, the kind of space waiting for a new owner to imagine what comes next](/stock/08.webp)
 
 ## Step three: inspect before you interrupt
 
@@ -82,13 +82,13 @@ A finished room — flooring, paint, fixtures, trim, lighting, the small stuff n
 
 Pick a room that's in Bucket B — something that would make you happy every day but won't sink the project if it takes longer than expected. A guest bedroom. A home office. The kitchen if it's small and the scope is manageable. The key is finishing it, not making it perfect.
 
-![A partially renovated room with a ladder, some paint cans, and bare tools on the floor — the in-between phase that every renovation passes through](/stock/11.png)
+![A partially renovated room with a ladder, some paint cans, and bare tools on the floor — the in-between phase that every renovation passes through](/stock/11.webp)
 
 ## Step six: write down everything you decide
 
 You pick a paint color. You order a faucet. You tell the plumber you want the shower on the left wall. Three months later, when the drywall is up and you need to know what paint code you used, you will not remember.
 
-Write it down. One place. With dates. Paint codes, fixture model numbers, tile specs, the reason you chose the gas range over induction, the trade you talked to but didn't hire. These seem trivial until you need them — and they come up more than you expect. Consistency matters more than the tool: notebook, spreadsheet, or app. If you want everything in your pocket, [Home Stories](https://apps.apple.com/app/id6754754960) keeps all of it attached to one project.
+Write it down. One place. With dates. Paint codes, fixture model numbers, tile specs, the reason you chose the gas range over induction, the trade you talked to but didn't hire. These seem trivial until you need them — and they come up more than you expect. Consistency matters more than the tool: notebook, spreadsheet, or app. If you want everything in your pocket, a purpose-built app keeps all of it attached to one project.
 
 ## Step seven: set up a budget that you'll actually look at
 
@@ -96,7 +96,7 @@ Not a dream budget. An honest one. List every Bucket A and B item with a number 
 
 Track what you've committed (signed a quote, placed an order) separately from what you've actually spent. That gap is where most first-time renovators get surprised. A [budget template](/blog/renovation-budget-template/) or simple spreadsheet works. Check it weekly. The act of looking at it is what prevents small purchases from becoming a silent drain.
 
-![Tools and materials laid out on a workbench — tape measure, level, a roll of painter's tape, some hardware — the quiet preparation before the real work begins](/stock/14.png)
+![Tools and materials laid out on a workbench — tape measure, level, a roll of painter's tape, some hardware — the quiet preparation before the real work begins](/stock/14.webp)
 
 ## Step eight: live in the house for a while
 
@@ -109,6 +109,20 @@ There's a moment in every renovation when the excitement fades and what's left i
 Walk the rooms. Separate essential from desirable. Fix what's broken before making things pretty. Write everything down. Check your budget weekly. Live in the house for a bit. Then pick one room and finish it. The rest follows.
 
 ---
+
+
+## Where should you start renovating a new house first?
+
+If the search query is literally "where to start renovating a new house", the honest answer is usually: **live in it briefly, fix safety and weatherproofing, then sequence wet rooms and kitchens before cosmetic rooms.** Cosmetic first feels good and often creates rework when plumbing or electrics move later.
+
+A practical first-month order for many households:
+
+1. Safety and weathertightness (locks, smoke/CO alarms, roof leaks, trips).
+2. Services you cannot live without (heating, hot water, a working bathroom).
+3. One "clean base" room so the household has a place to retreat.
+4. Then structural or layout decisions that affect many rooms — before buying finishes for those rooms.
+
+Write that order down. The [printable renovation checklist](/blog/renovation-checklist-printable/) is useful as a fridge list; the [fixer-upper first month](/blog/moving-into-a-fixer-upper/) guide is the deeper version once keys are in hand.
 
 If this was useful, the best next step is the [renovation checklist](/blog/renovation-checklist-printable/) — a printable one-page summary you can tape to the fridge and update as you go. And once you have the keys and the house is actually yours, the [first-month order for a fixer-upper](/blog/moving-into-a-fixer-upper/) is where that list becomes a plan you can live in. And if you want to track your budget and every decision in one place, [Home Stories](https://apps.apple.com/app/id6754754960) is free on the App Store and works fully offline. No account needed.
 

@@ -5,10 +5,10 @@ description: "Kitchen renovation timeline — 8 realistic phases from design thr
 
 lede: "Most kitchen renovation timelines are optimistic by 30–40%. They assume everything arrives on time, inspections pass first try, and your contractor has no other jobs bleeding into yours. This timeline shows what actually happens on a real kitchen renovation in 2026 — the weeks you plan for and the ones you don't."
 keyword: "renovation project timeline example"
-cover: "/stock/06.png"
+cover: "/stock/06.webp"
 coverAlt: "A kitchen with new white cabinets and stone worktops fitted, the floor still unfinished"
 publishDate: 2026-07-13
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["kitchen", "planning", "timeline", "how-to"]
 tldr:
@@ -64,7 +64,7 @@ Before the first hammer swings, you need:
 
 **What's happening now:** You're still living in your house, still using your kitchen. This is the last peaceful phase. It's also where the real decisions happen — the ones that determine whether your renovation finishes on time or gets stretched by mid-project change orders.
 
-![A bright modern kitchen mid-renovation, cabinets partially installed, granite countertops being fitted, sunlight streaming through the doorway, realistic candid moment of renovation in progress](/stock/06.png)
+![A bright modern kitchen mid-renovation, cabinets partially installed, granite countertops being fitted, sunlight streaming through the doorway, realistic candid moment of renovation in progress](/stock/06.webp)
 
 
 ## Week 1: Demo and tear-out
@@ -206,7 +206,7 @@ There are two things the week-by-week breakdown above never captures, and they m
 
 **The decision fatigue.** By week four, you've made 200 decisions about this kitchen. Cabinet handle style, which outlet to put where, whether the island needs an overhang, what colour grout goes with the tile. Each one seems small. Cumulatively, they exhaust you. The timeline above assumes you've already made all these decisions before week one. That's the right way to plan — but the fatigue is real even if you planned well.
 
-**The budget creep.** This timeline gives you the duration, but the financial timeline is its own animal. Each week that passes with a partially demolished kitchen is money you're spending without getting anything back. The contractors are on site, the permits are paid, the demolition happened. And the cabinet order is paid but the cabinets aren't installed. The budget tracking you set up [before you started](/blog/how-to-budget-a-home-renovation/) is what keeps this from spiralling — but you need to be logging every expense *as it happens*, which is exactly the problem [Home Stories](https://apps.apple.com/app/id6754754960) is designed for.
+**The budget creep.** This timeline gives you the duration, but the financial timeline is its own animal. Each week that passes with a partially demolished kitchen is money you're spending without getting anything back. The contractors are on site, the permits are paid, the demolition happened. And the cabinet order is paid but the cabinets aren't installed. The budget tracking you set up [before you started](/blog/how-to-budget-a-home-renovation/) is what keeps this from spiralling — but you need to be logging every expense *as it happens* — a phone-first tracker exists for exactly that job.
 
 ## The timeline at a glance
 

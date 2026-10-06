@@ -5,10 +5,10 @@ description: "Renovation checklist printable — a complete step-by-step renovat
 
 lede: "A renovation isn't one big job; it's a few hundred small ones, and the ones that get forgotten are always the cheap, boring tasks that turn expensive later. This printable checklist lists every task, grouped by room and by phase, so you can tick your way through a renovation without anything slipping through the cracks."
 keyword: "renovation checklist printable"
-cover: "/stock/11.png"
+cover: "/stock/11.webp"
 coverAlt: "An empty room freshly painted white, with a paint tray and roller left on the floor"
 publishDate: 2026-06-15
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "checklists", "templates"]
 tldr:
@@ -37,9 +37,12 @@ A renovation looks like one decision — "we're doing the kitchen" — but it's 
 
 A checklist is the cheapest insurance you can buy against that. Below is a complete, printable renovation checklist — organised the way the work actually happens — that you can copy, print, or rebuild in any app. Print it for the wall, or [keep the same list on your phone](https://apps.apple.com/app/id6754754960) so it's with you when it matters.
 
-![Interior painting in progress — fresh white paint on bare walls, paint rollers and trays on a drop cloth, painter's tape along the edges, realistic scene of a room being painted during renovation](/stock/11.png)
+![Interior painting in progress — fresh white paint on bare walls, paint rollers and trays on a drop cloth, painter's tape along the edges, realistic scene of a room being painted during renovation](/stock/11.webp)
 
 ## How to use this checklist
+
+For a bathroom-only project, pair this list with the [bathroom renovation sequence](/blog/bathroom-renovation-sequence/) so waterproofing and fixture order stay ahead of finishes.
+
 
 Two rules make the difference between a checklist that helps and one that becomes wallpaper:
 
@@ -172,6 +175,8 @@ You can also print this whole page and tape it to the wall — that's genuinely 
 But a wall chart has one flaw: it isn't with you at the builder's merchant, on the scaffold, or standing in the half-stripped bathroom wondering whether the plumber's first fix is signed off. That's where the checklist needs to live. [Home Stories](https://apps.apple.com/app/id6754754960) keeps this same task list on your phone, alongside the budget and the photos, so each task carries its own receipt and its own pipe-run photo. Tick it, shoot it, log the cost — once, on the spot.
 
 Print the master list for the wall, run the working copy on your phone, and the boring, cheap, easily-forgotten tasks — the ones that actually derail renovations — stop falling through the cracks. It's free on the App Store, and it's built to carry a project from the first strip-out to the final signed-off snag.
+
+Moving in while you renovate? Use the [fixer-upper first-month guide](/blog/moving-into-a-fixer-upper/) alongside this checklist.
 
 ## Sources and further reading
 

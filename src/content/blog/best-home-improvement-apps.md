@@ -8,7 +8,7 @@ keyword: "best home improvement apps 2026"
 cover: "/stock/02.webp"
 coverAlt: "A renovator kneeling on a bare concrete floor, checking a phone beside stacked tile and flooring samples"
 publishDate: 2026-07-13
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["apps", "tools", "planning", "reviews"]
 tldr:
@@ -42,7 +42,7 @@ Here's how you can tell: **HomeZada appears on nearly every one of those lists.*
 
 So this list is built differently. Every app below was checked against the App Store in July 2026 — rating, review count, and last update date. And it's organised by *job*, because that's the thing the round-ups get most wrong. A renovation isn't one task. It's four, they happen in sequence, and no app is good at all of them.
 
-![Hardwood floor installation in progress, worker placing engineered planks, tools visible nearby](/stock/10.png)
+![Hardwood floor installation in progress, worker placing engineered planks, tools visible nearby](/stock/10.webp)
 
 ## The four jobs, and why one app can't do them all
 
@@ -141,7 +141,7 @@ Houzz stops at hiring. Polycam and magicplan capture the building, not the proje
 
 That gap is not an accident, and it's not a small one. It's where renovations actually fail. Not in the design — in the slow accumulation of unrecorded costs, forgotten decisions, and receipts that faded in a drawer. The average renovation goes over budget, and it rarely happens in one dramatic moment. It happens fifty pounds at a time, invisibly, because nothing was writing it down.
 
-Home Stories does one job: it keeps an honest record while the work is happening. Log a cost in seconds at the till. Photograph the wall before it's closed up. Keep [receipts captured at the point of sale](/blog/how-to-organize-renovation-receipts/) instead of in a shoebox. See a live running balance against your budget rather than discovering the damage at the end. It's phone-first because that's where you are — not at a desk with a spreadsheet, which is [precisely why spreadsheets stop working halfway through](/blog/renovation-spreadsheet-alternative/).
+It does one job: it keeps an honest record while the work is happening. Log a cost in seconds at the till. Photograph the wall before it's closed up. Keep [receipts captured at the point of sale](/blog/how-to-organize-renovation-receipts/) instead of in a shoebox. See a live running balance against your budget rather than discovering the damage at the end. It's phone-first because that's where you are — not at a desk with a spreadsheet, which is [precisely why spreadsheets stop working halfway through](/blog/renovation-spreadsheet-alternative/).
 
 It deliberately does *less* than most apps here. It won't design your kitchen or find you a builder — the apps above already do that well, and you should use them.
 
@@ -153,6 +153,9 @@ It deliberately does *less* than most apps here. It won't design your kitchen or
 
 ## What to actually install
 
+Building your own tracker in a notes tool? Read [Notion for home renovation](/blog/notion-for-home-renovation/) before you invest a weekend in a template.
+
+
 Six apps is a list, not a recommendation. Here's the honest version:
 
 | If you're… | Install |
@@ -161,7 +164,7 @@ Six apps is a list, not a recommendation. Here's the honest version:
 | Needing dimensions of what you've got | **Polycam** (or **magicplan** if a pro needs the plan) |
 | Deciding whether a layout works | **Planner 5D** |
 | Working with a contractor who uses it | **Buildertrend** — ask for portal access |
-| About to start work, or already building | **Home Stories** |
+| About to start work, or already building | **A phone-first tracker** |
 | Wanting a whole-home document vault | HomeZada on the **web** — not the iPhone app |
 
 Most people need **two**: one from the top half of that table, and one from the bottom. The top half is the enjoyable part, and it's where the entire app market has concentrated its effort. The bottom half is the part that decides whether your renovation finishes on budget.
@@ -172,9 +175,7 @@ Install for the phase you're actually in. And when work starts, make sure *somet
 
 ## Sources and further reading
 
-The ranges and guidance above are drawn from direct project experience and
-from the bodies below, which publish the underlying standards, rules and
-market data. They are worth reading directly before you commit money.
+Consumer guidance worth reading alongside the App Store listings above.
 
 - [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission
 - [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
