@@ -40,6 +40,7 @@ const APP_STORE_URL = "https://apps.apple.com/app/id6754754960";
  */
 const VERIFIED_CITATIONS = new Set([
   "https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam",
+  "https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help",
   "https://consumer.ftc.gov/shopping-and-donating/for-the-home",
   "https://www.hud.gov/topics/home_improvements",
   "https://www.nahb.org/news-and-economics/housing-economics",
