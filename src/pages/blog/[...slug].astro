@@ -76,7 +76,7 @@ const related = (
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": ["Article", "BlogPosting"],
   headline: post.data.title,
   description: post.data.description,
   image: new URL(ogImage, Astro.site).href,

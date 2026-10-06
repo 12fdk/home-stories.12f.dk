@@ -37,7 +37,7 @@ function Footer() {
             <img
               className="h-10 rounded-[22%]"
               src={withBase(logo)}
-              alt=""
+              alt={`${name} app icon`}
               width={40}
               height={40}
             />

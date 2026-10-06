@@ -173,7 +173,12 @@ const STAT_PATTERNS = [
   { re: new RegExp(`\\b\\d{1,3}(?:\\.\\d+)?\\s?%\\s+of\\s+(?:all\\s+|US\\s+|UK\\s+)?(?:${POPULATION})\\b`, "gi"), why: "percentage-of-population claim" },
   { re: /\b(?:studies|research|surveys?|data)\s+(?:show|shows|found|suggest|indicate)/gi, why: "unsourced research claim" },
   { re: /\baccording to\s+(?:a\s+)?(?:the\s+)?[A-Z]/g, why: "attributed citation" },
-  { re: /\b(?:Cost\s*vs\.?\s*Value|NAR\b|NARI\b|Houzz\b|Remodeling Magazine|Angi\b|HomeAdvisor)/g, why: "named report/organisation" },
+  { re: /\b(?:Cost\s*vs\.?\s*Value|NAR\b|NARI\b|Remodeling Magazine|Angi\b|HomeAdvisor)/g, why: "named report/organisation" },
+  // Bare "Houzz" is a real product name used in tool-comparison posts (and
+  // VERIFIED_CITATIONS already allowlists houzz.com URLs). Flag research-style
+  // attributions only — "Houzz study/survey/report" and "according to Houzz".
+  { re: /\bHouzz\s+(?:and\s+Home\s+)?(?:Stud(?:y|ies)|Survey|Report|Index)\b/gi, why: "named report/organisation" },
+  { re: /\baccording to\s+(?:a\s+)?(?:the\s+)?Houzz\b/gi, why: "named report/organisation" },
   { re: /\b(?:on average|the average)\s+(?:homeowner|renovation|project|kitchen|bathroom)s?\s+\w+\s+\$?\d/gi, why: "averaged figure presented as fact" },
   { re: /\b\d{1,3}(?:\.\d+)?\s?%\s+(?:cost recovery|return|ROI|recoup)/gi, why: "ROI statistic" },
 ];
