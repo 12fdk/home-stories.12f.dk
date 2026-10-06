@@ -27,6 +27,14 @@ const blog = defineCollection({
       .default([]),
     relatedSlugs: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    // Mid-article App Store card (src/plugins/rehype-inline-cta.mjs). All
+    // optional: by default the plugin places it from the post's structure,
+    // inside the two-mention body budget. `inlineCta: false` turns it off,
+    // `inlineCtaAfter` names the H2 to put it after, `inlineCtaText` replaces
+    // the topic sentence on an inserted card.
+    inlineCta: z.boolean().optional(),
+    inlineCtaAfter: z.string().optional(),
+    inlineCtaText: z.string().max(240).optional(),
   }),
 });
 

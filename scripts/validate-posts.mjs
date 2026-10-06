@@ -20,6 +20,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { planInlineCta, sectionsFromMarkdown } from "../src/utils/blogCta.mjs";
 
 const BLOG_DIR = "src/content/blog";
 const APP_STORE_URL = "https://apps.apple.com/app/id6754754960";
@@ -292,9 +293,30 @@ function checkPost(file) {
   if (/apps\.apple\.com\/[a-z]{2}\//.test(raw)) E("App Store link uses a country storefront — use the neutral form (#97)");
 
   /* --- nudge budget (prompt.md §2) --- */
-  const bodyMentions = (prose(body).match(/Home Stories/g) || []).length;
+  const proseMentions = (prose(body).match(/Home Stories/g) || []).length;
+  // The mid-article App Store card (src/plugins/rehype-inline-cta.mjs) is
+  // planned with the same function the build uses. An *upgraded* card is an
+  // existing prose mention re-rendered, so it adds nothing; an *inserted* card
+  // is a new mention and counts. planInlineCta only inserts when prose has ≤ 1,
+  // so the card never pushes a post over budget — this keeps it honest if the
+  // rule is ever loosened.
+  const cta = planInlineCta({
+    sections: sectionsFromMarkdown(body),
+    proseMentions,
+    frontmatter: {
+      inlineCta: data.inlineCta,
+      inlineCtaAfter: data.inlineCtaAfter,
+      inlineCtaText: data.inlineCtaText,
+    },
+  });
+  const bodyMentions = proseMentions + (cta.mode === "insert" ? 1 : 0);
   if (bodyMentions > 3) E(`"Home Stories" appears ${bodyMentions}× in the body (max 2 + one CTA)`);
   else if (bodyMentions === 3) W(`"Home Stories" appears 3× — allowed only if one is the closing CTA`);
+  if (data.inlineCtaAfter && cta.mode !== "insert") E(`inlineCtaAfter can't be honoured: ${cta.reason}`);
+  if (data.inlineCtaText && !/Home Stories/.test(data.inlineCtaText)) W("inlineCtaText doesn't name Home Stories — the card's sentence should say what it is");
+  if (data.inlineCtaText) {
+    for (const h of HYPE) if (data.inlineCtaText.toLowerCase().includes(h)) E(`banned hype phrase in inlineCtaText: "${h}"`);
+  }
   const lowerAll = raw.toLowerCase();
   for (const h of HYPE) {
     if (lowerAll.includes(h)) E(`banned hype phrase: "${h}"`);
@@ -316,13 +338,15 @@ function checkPost(file) {
     for (const h of [...new Set(hits)]) E(`possible fabricated ${why}: "${h}"`);
   }
 
-  return { slug, errors, warns, words, publishDate: data.publishDate, keyword: data.keyword };
+  return { slug, errors, warns, words, publishDate: data.publishDate, keyword: data.keyword, cta };
 }
 
 /* --------------------------------------------------------------------- main */
 
 const argv = process.argv.slice(2);
 const setOnly = argv.includes("--set");
+// --cta prints where the mid-article App Store card lands on each post.
+const showCta = argv.includes("--cta");
 const named = argv.filter((a) => !a.startsWith("--"));
 
 let files = fs
@@ -353,6 +377,7 @@ for (const f of files) {
   totalErrors += r.errors.length;
   totalWarns += r.warns.length;
 
+  if (showCta) console.log(`  cta: ${r.cta.mode.padEnd(7)} ${r.slug} — ${r.cta.reason}`);
   if (r.errors.length || r.warns.length) {
     console.log(`${r.errors.length ? "✗" : "!"} ${r.slug}  (${r.words} words)`);
     for (const e of r.errors) console.log(`    ERROR  ${e}`);

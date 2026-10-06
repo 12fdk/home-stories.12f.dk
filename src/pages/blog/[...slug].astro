@@ -8,6 +8,7 @@ import FaqSection from "../../components/blog/FaqSection.astro";
 import RelatedPosts from "../../components/blog/RelatedPosts.astro";
 import AuthorBio from "../../components/blog/AuthorBio.astro";
 import { readingTime } from "../../utils/readingTime";
+import { TOPICS, topicFor } from "../../utils/blogCta.mjs";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => isPublished(data));
@@ -54,6 +55,11 @@ const transitional = (() => {
 })();
 
 const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
+
+// End-of-post copy follows the post's topic instead of one budget sentence on
+// all 31 posts (a roof-timeline post was being sold "spent vs committed").
+// Deliberately different wording from the mid-article card (EDITORIAL_RULES §6).
+const topic = TOPICS[topicFor({ slug: post.slug, keyword: post.data.keyword, tags: post.data.tags })];
 
 // Explicit relatedSlugs win. The fallback used to take the first three posts in the
 // collection, which is arbitrary — it linked a roof-timeline post to whatever happened
@@ -178,7 +184,7 @@ const articleSchema = {
 
     <InlineCTA
       heading="Ready to put this into practice?"
-      body="Renovation budgets drift. Home Stories puts spent, committed and remaining on one screen, so an overrun shows up while you can still act on it — free on the App Store."
+      body={topic.end}
       buttonText="Get Home Stories — Free on the App Store"
       slug={post.slug}
       {...transitional}
@@ -224,10 +230,15 @@ const articleSchema = {
       // its data-umami-event targets when the tracker loads, and these are
       // stamped after that, so a delegated binding would silently miss them.
       document.querySelectorAll('a[href*="apps.apple.com/app/id"]').forEach((link) => {
-        if (link.hasAttribute("data-umami-event")) return; // an InlineCTA — already counted
+        if (link.hasAttribute("data-umami-event")) return; // a CTA card/box — already counted
         link.addEventListener("click", () => {
           if (window.umami && typeof window.umami.track === "function") {
-            window.umami.track("appstore-click", { surface: "blog-prose", slug });
+            window.umami.track("appstore-click", {
+              surface: "blog-prose",
+              slug,
+              path: location.pathname,
+              "page-type": "blog-post",
+            });
           }
         });
       });

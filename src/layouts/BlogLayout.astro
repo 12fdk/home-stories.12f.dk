@@ -197,6 +197,31 @@ const speakableSchema = articleSchema
         document.documentElement.setAttribute("data-theme", theme);
     </script>
 
+    <script is:inline>
+      // Page attribution for every App Store click on blog-layout pages.
+      // The navbar, sticky bar and app banner are shared with the homepage and
+      // report the same `surface` there, so without this a blog-driven click
+      // was indistinguishable in the event's property breakdown. Stamped at
+      // click time on `window` (capture), which runs before Umami's own
+      // document-level capture listener reads the data-umami-event-*
+      // attributes — so it also covers React islands that hydrate late.
+      (function () {
+        var p = location.pathname;
+        var type = /^\/blog\/[^/]+\/?$/.test(p) ? "blog-post" : /^\/blog\/?$/.test(p) ? "blog-index" : "page";
+        var slug = type === "blog-post" ? p.replace(/^\/blog\//, "").replace(/\/$/, "") : "";
+        window.addEventListener(
+          "click",
+          function (e) {
+            var el = e.target && e.target.closest && e.target.closest('[data-umami-event="appstore-click"]');
+            if (!el) return;
+            el.setAttribute("data-umami-event-path", p);
+            el.setAttribute("data-umami-event-page-type", type);
+            if (slug && !el.hasAttribute("data-umami-event-slug")) el.setAttribute("data-umami-event-slug", slug);
+          },
+          true
+        );
+      })();
+    </script>
     <script defer src="https://umami.robert-jensen.dk/script.js" data-website-id="330ddb96-95c9-43cd-b9fe-485c0d114b33"></script>
   </head>
   <body class={`relative ${bodyClass}`}>
@@ -204,6 +229,6 @@ const speakableSchema = articleSchema
     <slot />
     {!hideAppBanner && <BlogAppBanner client:visible config={config} />}
     <BlogFooter client:visible config={config} />
-    <BlogStickyDownload client:visible config={config} />
+    <BlogStickyDownload client:visible config={config} context="blog" />
   </body>
 </html>

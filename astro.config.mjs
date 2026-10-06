@@ -5,6 +5,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import { rehypeImageAttrs } from "./src/plugins/rehype-image-attrs.mjs";
+import { rehypeInlineCta } from "./src/plugins/rehype-inline-cta.mjs";
 
 const SITE = "https://home-stories.12f.dk";
 const BLOG_DIR = "src/content/blog";
@@ -63,7 +64,9 @@ export default defineConfig({
     // Markdown images render as a bare <img>: no dimensions, no loading hint.
     // This stamps intrinsic width/height (so the article stops reflowing as
     // photos arrive) and marks the first image as the LCP candidate.
-    rehypePlugins: [rehypeImageAttrs],
+    // rehypeInlineCta renders the mid-article App Store card on blog posts,
+    // inside the editorial mention budget (see src/utils/blogCta.mjs).
+    rehypePlugins: [rehypeImageAttrs, rehypeInlineCta],
   },
   image: {
     // Enable image optimization with sharp

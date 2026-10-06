@@ -12,6 +12,11 @@
  * Deliberately one event name: the headline question is "how many people went
  * from the site to the App Store", and that should be readable in Umami's
  * Events panel without summing eight rows. `surface` carries the breakdown.
+ *
+ * On pages rendered by BlogLayout every App Store click additionally carries
+ * `path` (location.pathname) and `page-type` (blog-post / blog-index / page),
+ * stamped at click time by the layout — so the shared chrome (navbar, sticky,
+ * app-banner) can be split blog vs. homepage without a separate surface name.
  */
 export const APP_STORE_CLICK_EVENT = "appstore-click";
 
@@ -26,7 +31,12 @@ export type AppStoreSurface =
   | "app-banner"
   | "sticky"
   | "404"
-  | "blog-inline-cta"
+  /** Mid-article card on a blog post (rehype-inline-cta). Carries `slug`. */
+  | "blog-inline"
+  /** The "Ready to put this into practice?" box at the end of a post. */
+  | "blog-end-cta"
+  /** A plain App Store link inside post prose. Carries `slug`. */
+  | "blog-prose"
   /** The /app redirect stub, which forwards straight to the store. */
   | "app-redirect"
   /**

@@ -1,5 +1,6 @@
 ---
 import { APP_STORE_CLICK_EVENT, downloadClick } from "../../utils/tracking";
+import { END_SURFACE } from "../../utils/blogCta.mjs";
 
 type Variant = "inline" | "callout";
 
@@ -46,7 +47,10 @@ const {
 
 const track = {
   "data-umami-event": APP_STORE_CLICK_EVENT,
-  "data-umami-event-surface": "blog-inline-cta",
+  // The end-of-post box. Was "blog-inline-cta" until the mid-article card
+  // arrived; renamed so "inline" means the mid-article card only. The old
+  // name never recorded a click (2026-10-06 baseline), so no history is lost.
+  "data-umami-event-surface": END_SURFACE,
   ...(slug ? { "data-umami-event-slug": slug } : {}),
 };
 
@@ -74,7 +78,7 @@ const trackDownload = transitionalDownload
   ) : (
     <aside
       class="not-prose my-10 rounded-2xl border border-base-300 bg-base-200 p-6 sm:p-8"
-      data-cta-id={slug ? `blog-cta-end-${slug}` : "blog-inline-cta"}
+      data-cta-id={slug ? `blog-cta-end-${slug}` : "blog-cta-end"}
     >
       <h3 class="mb-2 text-xl font-bold text-base-content sm:text-2xl">{heading}</h3>
       <p class="mb-5 text-base-content/80">{body}</p>
