@@ -52,6 +52,8 @@ The single most important document in a renovation isn't a budget spreadsheet or
 
 If it's not in the scope, it doesn't happen. That's not pedantry; it's the only thing that keeps a project from gradually morphing into something neither of you originally agreed to.
 
+The same written scope is what makes bids comparable in the first place. The [guide to comparing contractor quotes](/blog/how-to-compare-contractor-quotes/) shows how to use it before you sign anything.
+
 A good scope of work includes:
 
 - **What will be done** — specific tasks, not vague intentions. "Replace kitchen floor" means something very different from "make the kitchen floor better"
