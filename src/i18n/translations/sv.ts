@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const sv: Translation = {
   "seo": {
-    "title": "Home Stories – Gratis renoveringsverktyg för iPhone",
-    "description": "Håll koll på renoveringsbudgeten, organisera uppgifter och dokumentera framstegen med foton. Exportera snygga PDF-rapporter. Gratis för iPhone – ladda ner nu!"
+    "title": "Home Stories – Gratis renoveringsverktyg för iPhone och iPad",
+    "description": "Följ renoveringen på iPhone eller iPad: budget, uppgifter, foton, anteckningar och dokument. Gratis, offline, inget konto. iOS 17 eller senare."
   },
   "nav": {
     "cta": "Hämta appen",
@@ -24,11 +24,10 @@ const sv: Translation = {
       "language": "Språk"
     },
     "header": {
-      "eyebrow": "Renoveringsverktyg för iPhone",
-      "committedSuffix": "bokfört",
-      "spent": "Spenderat",
-      "committed": "Bokfört",
-      "left": "Kvar"
+      "eyebrow": "Renoveringsverktyg för iPhone och iPad",
+      "runningTotal": "Löpande total",
+      "budgetLabel": "Budget",
+      "ofBudget": "av budgeten"
     },
     "sectionLabels": {
       "features": "Funktioner",
@@ -56,12 +55,12 @@ const sv: Translation = {
     "footer": {
       "site": "Webbplats",
       "contact": "Kontakt",
-      "tagline": "Renoveringsbudgetar skenar. Home Stories sätter spenderat, bundet och kvar på en och samma skärm, så att en överskridning syns medan du fortfarande kan göra något åt den. En renoveringsspårare för iPhone, gjord i Danmark av Robert Jensen."
+      "tagline": "Renoveringsbudgetar skenar. Home Stories sätter den löpande totalen på en och samma skärm, så att en överskridning syns medan du fortfarande kan göra något åt den. En renoveringsspårare för iPhone och iPad, gjord i Danmark av Robert Jensen."
     }
   },
   "header": {
     "headline": "Slutför renoveringen utan att budgeten skenar iväg.",
-    "subtitle": "Renoveringar spårar ur för att ingen ser överskridningen förrän pengarna redan är borta. Home Stories håller spenderat, bundet och kvar på en skärm – med uppgifter i rätt ordning och daterade bilder som bevisar vad som hände.",
+    "subtitle": "Renoveringar skenar för att överskridningen förblir osynlig tills pengarna är borta. Home Stories håller en löpande total på en skärm, med uppgifter i ordning och daterade foton av det som hände.",
     "usersDescription": "Byggd av en villaägare mitt i renoveringen, för villaägare mitt i renoveringen",
     "headlineMark": [
       4,
@@ -97,7 +96,7 @@ const sv: Translation = {
       {
         "label": "Budget",
         "title": "Se överdraget komma",
-        "subtitle": "Spenderat, bokfört och kvarvarande i ett och samma diagram. Du märker att du är över medan det fortfarande går att göra något åt det."
+        "subtitle": "En löpande total medan du för in betalningar, uppdelad i material, arbete och hantverkare. Diagrammet budget mot faktiskt ingår i Pro."
       },
       {
         "label": "Uppgifter",
@@ -112,7 +111,7 @@ const sv: Translation = {
       {
         "label": "Export",
         "title": "Lämna över en PDF",
-        "subtitle": "Budget, uppgifter, foton och anteckningar i en rapport som din hantverkare, ditt försäkringsbolag eller en framtida köpare faktiskt kan läsa."
+        "subtitle": "En PDF av hela projektet, eller bara de delar du behöver. Export ingår i Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const sv: Translation = {
     "cards": [
       {
         "title": "Widgetar och Live Activities",
-        "subtitle": "En budgetring på låsskärmen, nästa uppgifter i en överblick och en Dynamic Island-timer medan du jobbar – utan att öppna appen."
+        "subtitle": "Widgetar på hemskärmen för budgetens framsteg och vad som är näst, och en timer på låsskärmen medan du registrerar tid."
       },
       {
         "title": "Tidsregistrering",
-        "subtitle": "Registrera timmar på ett projekt och se vart dagarna faktiskt tog vägen, visuellt uppdelat vid sidan av pengarna."
+        "subtitle": "För timmar på ett projekt och se vart dagarna tog vägen, bredvid den löpande totalen."
       },
       {
         "title": "Anteckningar och dokument",
@@ -134,7 +133,7 @@ const sv: Translation = {
       },
       {
         "title": "Poster och inköpslistor",
-        "subtitle": "Spara inköp med priser och butiksuppgifter, ordnade per fas, så att den faktiska kostnaden hamnar bredvid det du uppskattade."
+        "subtitle": "Spara köp med pris och butik, ordnade efter fas, så att varje köp läggs till den löpande totalen."
       },
       {
         "title": "Sök- och Dela-tillägg",
@@ -142,15 +141,15 @@ const sv: Translation = {
       },
       {
         "title": "Samarbete i realtid",
-        "subtitle": "Dela ett projekt via iCloud och håll det synkat med en partner, familjen eller hantverkaren som utför jobbet."
+        "subtitle": "Dela ett projekt med en partner, familjen eller hantverkaren. Delning och iCloud-synk ingår i Pro."
       },
       {
         "title": "Projektprioriteringar",
         "subtitle": "Markera varje projekt som Låg, Medel eller Hög och sortera listan – efter prioritet, datum eller namn – så att nästa jobb ligger överst."
       },
       {
-        "title": "51 språk, tillgängligt",
-        "subtitle": "Fullt översatt till 51 språk, med stöd för VoiceOver och Dynamic Type genomgående. Fungerar 100 % offline."
+        "title": "50 språk, tillgängligt",
+        "subtitle": "Fullt översatt till 50 språk, med stöd för VoiceOver och Dynamic Type genomgående. Fungerar 100 % offline."
       }
     ]
   },
@@ -168,11 +167,11 @@ const sv: Translation = {
       },
       {
         "title": "Bokför utgiften, fotografera arbetet",
-        "subtitle": "Mata in kostnader allteftersom de kommer och fotografera direkt från appen. Diagrammet delar upp spenderat, bundet och kvar, så att en överskridning syns medan du fortfarande kan göra något åt den – och varje bild dateras och kopplas till projektet."
+        "subtitle": "För in betalningar allt eftersom de kommer och fotografera från appen. Material, arbete och hantverkare hålls isär, och den löpande totalen uppdateras med dem. Varje foto dateras och knyts till projektet."
       },
       {
         "title": "Exportera rapporten",
-        "subtitle": "Ett tryck förvandlar budget, uppgifter, foton och anteckningar till en PDF. Skicka den till hantverkaren, försäkringsbolaget eller mappen du kommer vilja ha nästa år."
+        "subtitle": "Pro gör projektet till en PDF: budget, uppgifter, foton och anteckningar, eller bara de delar du behöver. Skicka den till hantverkaren, försäkringsbolaget eller mappen du vill ha nästa år."
       }
     ]
   },
@@ -188,51 +187,51 @@ const sv: Translation = {
     "qa": [
       {
         "question": "Är Home Stories gratis att använda?",
-        "answer": "Ja – gratis hela jobbet igenom, med obegränsat antal projekt, uppgifter, faser, bilder och utgiftsföring. Ett valfritt köp i appen, Home Stories Pro, låser upp budgetmål, budget-mot-kostnad-diagrammet, PDF- och CSV-export samt påminnelser. Det är ett engångspris, inte en prenumeration."
+        "answer": "Ja. Obegränsade projekt, poster, foton, anteckningar, dokument, uppgifter, tidsregistrering, widgetar, lokala säkerhetskopior och dataexport är gratis. Home Stories Pro är ett valfritt engångsköp, inte en prenumeration. Det lägger till diagrammet budget mot faktiskt, uppgiftspåminnelser, PDF-export, iCloud-synk och projektdelning."
       },
       {
         "question": "Fungerar appen offline?",
-        "answer": "Helt och hållet. Projekt, budgetar och bilder ligger på enheten, så appen fungerar i en källare utan täckning och synkar sedan. Inget i den kräver att du är uppkopplad."
+        "answer": "Ja. Projekt, foton och betalningar ligger på enheten, så appen fungerar utan täckning. iCloud-synk ingår i Pro, är av tills du slår på den och hämtar in ändringar när du är online igen."
       },
       {
         "question": "Kan jag dela projekt med andra?",
-        "answer": "Ja, på två sätt. Dela ett projekt via iCloud så hålls det synkat i realtid med en partner, familjemedlem eller hantverkaren. Eller exportera en PDF-rapport – budget, uppgifter, bilder och anteckningar – till den som bara behöver läsa den."
+        "answer": "Projektdelning ingår i Home Stories Pro. Du bjuder in en partner, en familjemedlem eller en hantverkare, och de ser samma uppgifter, poster och foton via iCloud. En PDF-rapport, också en del av Pro, är versionen för den som bara ska läsa."
       },
       {
         "question": "Hur exporterar jag rapporter?",
-        "answer": "Öppna projektet, tryck på exportera och välj PDF eller CSV. Rapporten kommer ut med budgetsammanfattning, uppgiftsstatus, bilder och anteckningar redan uppställda, redo att skicka till hantverkaren eller försäkringsbolaget. Export ingår i Home Stories Pro."
+        "answer": "PDF-export ingår i Home Stories Pro: en rapport med omslagsbild, för hela projektet eller bara de delar du väljer. En full dataexport är gratis."
       },
       {
         "question": "Vilka enheter stöds?",
-        "answer": "iPhone med iOS 17.0 eller senare. Det finns ännu ingen version för iPad eller Android."
+        "answer": "iPhone och iPad med iOS 17.0 eller senare. iPad-appen är inbyggd. Det finns ingen Android-version."
       },
       {
         "question": "Har Home Stories widgetar?",
-        "answer": "Ja. Lägg till en budgetring och kommande uppgifter på hemskärmen och låsskärmen, och använd Live Activities med Dynamic Island för att ha en projekttimer i sikte medan du jobbar – allt utan att öppna appen."
+        "answer": "Ja. Widgetar på hemskärmen visar budgetens framsteg och vad som är näst. Tidsregistrering har en timer på låsskärmen, och Dynamic Island på iPhone 14 Pro och senare."
       },
       {
         "question": "Kan jag samarbeta med en partner eller hantverkare?",
-        "answer": "Ja. Dela ett projekt via iCloud så hålls det synkat i realtid på allas enheter, så att en partner, familjemedlem eller hantverkare kan följa budget, uppgifter och foton allteftersom de ändras."
+        "answer": "Ja, med Home Stories Pro. Dela ett projekt via iCloud så ser de du bjuder in samma uppgifter, poster och foton."
       },
       {
         "question": "Vilka språk finns Home Stories på?",
-        "answer": "Home Stories är fullt översatt till 51 språk, inklusive engelska, tyska, franska, spanska, italienska, danska, nederländska, portugisiska, japanska, kinesiska, koreanska och många fler, med fullt tillgänglighetsstöd för VoiceOver och Dynamic Type."
+        "answer": "Home Stories är fullt översatt till 50 språk, inklusive engelska, tyska, franska, spanska, italienska, danska, nederländska, portugisiska, japanska, kinesiska, koreanska och många fler, med fullt tillgänglighetsstöd för VoiceOver och Dynamic Type."
       },
       {
         "question": "Kan jag följa kostnader per kategori, som material och arbetskostnad?",
-        "answer": "Ja — kostnaderna bor där arbetet finns. Dela upp projektet i faser och uppgifter och koppla material, armaturer, arbetsposter och offerter till var och en. Budgetdiagrammet summerar allt som spenderat, bundet och kvar, och PDF-rapporten specificerar det."
+        "answer": "Ja. För in betalningar och håll material, arbete och hantverkare isär. Varje posts pris läggs till projektets löpande total. Diagrammet budget mot faktiskt ingår i Home Stories Pro."
       },
       {
         "question": "Hur hanterar jag flera hantverkare?",
-        "answer": "Gruppera arbetet i faser och uppgifter så att varje yrke vet vad som händer när — elektrikern före putsaren. Dela projektet via iCloud så att en hantverkare kan följa budget, uppgifter och foton live, eller exportera en PDF med precis de avsnitt de behöver."
+        "answer": "Håll varje yrkes betalningar skilda från material och arbete, och spara offerter och avtal som dokument på projektet. Att dela projektet live eller exportera en PDF ingår i Home Stories Pro."
       },
       {
         "question": "Hur undviker jag att spräcka budgeten?",
-        "answer": "Budgetdiagrammet visar spenderat, bundet och kvar med en blick, så ett överdrag syns medan det fortfarande finns tid att agera. Lägg till widgeten på hemskärmen eller låsskärmen för att hålla budgetringen i sikte utan att öppna appen."
+        "answer": "Den gratis appen håller en löpande total medan du för in poster och betalningar. Home Stories Pro lägger till ett diagram för budget mot faktiskt. En widget på hemskärmen kan visa budgeten utan att öppna appen."
       },
       {
         "question": "Säkerhetskopieras mina projektdata?",
-        "answer": "Ja — med iCloud-synkronisering på ligger dina projekt i ditt iCloud-konto och följer med till en ny iPhone. Allt fungerar dessutom helt offline; ändringar synkas när du är online igen."
+        "answer": "Lokala säkerhetskopior är gratis, och det är en full dataexport också. iCloud-synk, som lägger projektet på dina andra enheter, ingår i Home Stories Pro och är av tills du slår på den."
       }
     ]
   },
@@ -249,8 +248,8 @@ const sv: Translation = {
           "Fototidslinje med daterade foton",
           "Utgiftsloggning och artikelpriser",
           "Fungerar helt offline",
-          "iCloud-synk mellan enheter",
-          "Widgets för hem- och låsskärm"
+          "Lokala säkerhetskopior och dataexport",
+          "Uppgifter, tidsregistrering och widgetar på hemskärmen"
         ],
         "cta": ""
       },
@@ -258,10 +257,11 @@ const sv: Translation = {
         "name": "Home Stories Pro",
         "period": "engångsköp — ingen prenumeration",
         "features": [
-          "Budgetmål och budget-mot-kostnad-diagrammet",
-          "Avancerad kostnadsanalys",
-          "PDF- och CSV-export av rapporter och tidsloggar",
-          "Uppgiftspåminnelser och deadline-notiser"
+          "Diagram för budget mot faktiskt",
+          "Uppgiftspåminnelser",
+          "PDF-export",
+          "iCloud-synk",
+          "Projektdelning"
         ],
         "cta": "Hämta appen — uppgradera i appen"
       }
@@ -285,17 +285,17 @@ const sv: Translation = {
       {
         "aspect": "Summor",
         "them": "Formler du skriver och underhåller själv",
-        "us": "Spenderat, bundet och kvar — automatiskt"
+        "us": "En löpande total. Material, arbete och hantverkare hålls isär."
       },
       {
         "aspect": "På bygget",
         "them": "Nyp-zooma celler i telefonen",
-        "us": "Byggt för iPhone, fungerar helt offline"
+        "us": "Byggt för iPhone och iPad, fungerar helt offline"
       },
       {
         "aspect": "Delning",
         "them": "Mejla budget_v7_final_FINAL.xlsx",
-        "us": "Live-delning via iCloud, eller en PDF alla kan läsa"
+        "us": "Delning via iCloud eller en PDF — båda ingår i Pro"
       },
       {
         "aspect": "Kvitton",
@@ -312,7 +312,7 @@ const sv: Translation = {
   },
   "appBanner": {
     "title": "Mät nästa projekt.",
-    "subtitle": "Gratis på App Store. Fungerar offline, kräver inget konto och synkar med iCloud när du vill. Kräver iPhone med iOS 17 eller senare."
+    "subtitle": "Gratis på App Store för iPhone och iPad. Fungerar offline och kräver inget konto. Kräver iOS 17 eller senare."
   },
   "stakes": {
     "label": "Problemet",
@@ -329,7 +329,7 @@ const sv: Translation = {
     "success": {
       "label": "Den andra vägen",
       "title": "Eller så når du överlämningen med kvittona i hand",
-      "body": "Spenderat, bundet och kvar står på en skärm från första dagen. Varje kostnad, bild och anteckning hamnar på det projekt den hör till, medan du fortfarande står i rummet. På överlämningsdagen är hela jobbet en PDF – siffrorna, tidslinjen och beviset på vad som fanns bakom väggen."
+      "body": "En löpande total finns på projektet från första dagen, med material, arbete och hantverkare åtskilda. Foton och anteckningar hamnar på samma projekt medan du fortfarande står i rummet."
     },
     "cta": "Kom igång – gratis"
   }

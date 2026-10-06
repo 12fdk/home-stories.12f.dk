@@ -203,7 +203,7 @@ const aggregateRating = hasRealRatings
       "@context": "https://schema.org",
       "@type": ["SoftwareApplication", "MobileApplication"],
       "name": "Home Stories: Renovation App",
-      "operatingSystem": "iOS 17.0+",
+      "operatingSystem": "iOS 17.0 or later (iPhone and iPad)",
       "applicationCategory": "LifestyleApplication",
       "applicationSubCategory": "Productivity",
       // The app is free to download and carries one optional non-consumable
@@ -260,7 +260,7 @@ const aggregateRating = hasRealRatings
         new URL("/screenshots/tasks.webp", Astro.site).href
       ],
       "image": logo.startsWith("http") ? logo : new URL(logo, Astro.site).href,
-      "featureList": "Budget Tracking, Photo Timeline, Task Management, PDF Export, Offline Support, iCloud Sync, Real-time Project Sharing, Home Screen & Lock Screen Widgets, Live Activities, Time Tracking, Notes & Document Storage, Item & Shopping List Tracking, Search & Share Extension, Project Priorities, 51 Languages, VoiceOver Accessibility",
+      "featureList": "Free: projects with a budget and running total, items with prices, payments split by materials labour and contractor, photos, notes, documents, tasks, time tracking, Home Screen widgets, local backups, data export, offline use, no account, 50 languages. Pro (one-time, no subscription): budget vs actual chart, task reminders, PDF export, iCloud sync, project sharing. iPhone and iPad. No Android app.",
       "softwareVersion": appStore?.version ?? "1.0.0",
       "datePublished": appStore?.lastUpdated ?? undefined,
       "inLanguage": htmlLang,
@@ -370,10 +370,10 @@ const aggregateRating = hasRealRatings
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "How to manage a home renovation with Home Stories",
-      "description": "Plan, track, and document a home renovation end-to-end using the Home Stories iPhone app.",
+      "description": "Plan, track, and document a home renovation end-to-end using Home Stories on iPhone or iPad.",
       "totalTime": "PT10M",
       "supply": [
-        { "@type": "HowToSupply", "name": "iPhone running iOS 17.0 or later" },
+        { "@type": "HowToSupply", "name": "iPhone or iPad running iOS 17.0 or later" },
         { "@type": "HowToSupply", "name": "Home Stories app (free on the App Store)" }
       ],
       "tool": [
@@ -398,7 +398,7 @@ const aggregateRating = hasRealRatings
           "@type": "HowToStep",
           "position": 3,
           "name": "Track your budget",
-          "text": "Log costs as they happen. The visual chart shows spent, potential, and remaining at a glance.",
+          "text": "Log payments as they happen. Materials, labour and contractor stay apart, and the running total updates with them. The budget-vs-actual chart is part of Pro.",
           "url": canonicalURL.href + "#how-it-works"
         },
         {
@@ -411,8 +411,8 @@ const aggregateRating = hasRealRatings
         {
           "@type": "HowToStep",
           "position": 5,
-          "name": "Export and share a PDF report",
-          "text": "Tap export and choose PDF. Home Stories generates a professional report with budget, tasks, photos, and notes you can share with a contractor or keep for records.",
+          "name": "Export a PDF report with Pro",
+          "text": "Pro turns the project into a PDF: budget, tasks, photos and notes, or just the parts you choose. A full data export of the project is included free.",
           "url": canonicalURL.href + "#how-it-works"
         }
       ]

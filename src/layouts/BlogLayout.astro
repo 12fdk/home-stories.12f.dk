@@ -24,6 +24,11 @@ interface Props {
   tags?: string[];
   bodyClass?: string;
   hideAppBanner?: boolean;
+  /**
+   * Override the default Home → Blog trail. Paths are site-relative
+   * ("/guides/budgeting-a-renovation/"). Used by the topic hubs.
+   */
+  breadcrumbs?: { name: string; path: string }[];
 }
 
 const {
@@ -39,6 +44,7 @@ const {
   tags = [],
   bodyClass = "",
   hideAppBanner = false,
+  breadcrumbs,
 } = Astro.props;
 
 const appStoreData = await fetchAppStoreData() ?? fallbackAppStoreData;
@@ -69,28 +75,37 @@ const websiteSchema = {
   },
 };
 
-const breadcrumbItems = [
-  {
-    "@type": "ListItem",
-    position: 1,
-    name: "Home",
-    item: siteUrl,
-  },
-  {
-    "@type": "ListItem",
-    position: 2,
-    name: "Blog",
-    item: new URL("/blog/", Astro.site).href,
-  },
-];
-if (Astro.url.pathname !== "/blog/" && Astro.url.pathname !== "/blog") {
-  breadcrumbItems.push({
-    "@type": "ListItem",
-    position: 3,
-    name: title,
-    item: canonicalURL.href,
-  });
-}
+const breadcrumbItems = breadcrumbs
+  ? breadcrumbs.map((crumb, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: crumb.name,
+      item: new URL(crumb.path, Astro.site).href,
+    }))
+  : [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: new URL("/blog/", Astro.site).href,
+      },
+      ...(Astro.url.pathname !== "/blog/" && Astro.url.pathname !== "/blog"
+        ? [
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: title,
+              item: canonicalURL.href,
+            },
+          ]
+        : []),
+    ];
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

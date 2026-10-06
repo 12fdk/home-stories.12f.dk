@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const pl: Translation = {
   "seo": {
-    "title": "Home Stories – bezpłatna aplikacja do śledzenia remontu na iPhone'a",
-    "description": "Śledź budżet remontu, organizuj zadania i dokumentuj postępy zdjęciami. Eksportuj profesjonalne raporty PDF. Bezpłatnie na iPhone'a – pobierz teraz!"
+    "title": "Home Stories – bezpłatna aplikacja do remontu na iPhone'a i iPada",
+    "description": "Prowadź remont na iPhonie lub iPadzie: budżet, zadania, zdjęcia, notatki i dokumenty. Za darmo, offline, bez konta. iOS 17 lub nowszy."
   },
   "nav": {
     "cta": "Pobierz aplikację",
@@ -24,11 +24,10 @@ const pl: Translation = {
       "language": "Język"
     },
     "header": {
-      "eyebrow": "Menedżer remontu na iPhone'a",
-      "committedSuffix": "zarezerwowane",
-      "spent": "Wydane",
-      "committed": "Zarezerwowane",
-      "left": "Pozostało"
+      "eyebrow": "Menedżer remontu na iPhone'a i iPada",
+      "runningTotal": "Suma bieżąca",
+      "budgetLabel": "Budżet",
+      "ofBudget": "budżetu"
     },
     "sectionLabels": {
       "features": "Funkcje",
@@ -56,12 +55,12 @@ const pl: Translation = {
     "footer": {
       "site": "Strona",
       "contact": "Kontakt",
-      "tagline": "Budżety remontowe się rozjeżdżają. Home Stories pokazuje wydane, zarezerwowane i pozostałe na jednym ekranie, żeby przekroczenie było widać, póki da się jeszcze zareagować. Aplikacja do śledzenia remontu na iPhone'a, stworzona w Danii przez Roberta Jensena."
+      "tagline": "Budżety remontowe się rozjeżdżają. Home Stories pokazuje sumę bieżącą na jednym ekranie, żeby przekroczenie było widać, póki da się jeszcze zareagować. Aplikacja do śledzenia remontu na iPhone'a i iPada, stworzona w Danii przez Roberta Jensena."
     }
   },
   "header": {
     "headline": "Dokończ remont, zanim budżet wymknie ci się z rąk.",
-    "subtitle": "Remonty się rozjeżdżają, bo nikt nie widzi przekroczenia, dopóki pieniądze już nie znikną. Home Stories trzyma wydane, zarezerwowane i pozostałe na jednym ekranie, z zadaniami w dobrej kolejności i datowanymi zdjęciami, które dowodzą, co się wydarzyło.",
+    "subtitle": "Remonty się rozjeżdżają, bo przekroczenie zostaje niewidoczne, aż pieniądze znikną. Home Stories trzyma sumę bieżącą na jednym ekranie, z zadaniami po kolei i datowanymi zdjęciami tego, co się wydarzyło.",
     "usersDescription": "Stworzona przez właściciela domu w trakcie remontu, dla właścicieli domów w trakcie remontu",
     "headlineMark": [
       3,
@@ -97,7 +96,7 @@ const pl: Translation = {
       {
         "label": "Budżet",
         "title": "Zauważ przekroczenie w porę",
-        "subtitle": "Wydane, zarezerwowane i pozostałe na jednym wykresie. Dowiesz się, że przekraczasz budżet, gdy wciąż możesz coś z tym zrobić."
+        "subtitle": "Suma bieżąca w miarę zapisywania płatności, rozdzielona na materiały, robociznę i wykonawcę. Wykres budżet wobec faktu jest częścią Pro."
       },
       {
         "label": "Zadania",
@@ -112,7 +111,7 @@ const pl: Translation = {
       {
         "label": "Eksport",
         "title": "Przekaż plik PDF",
-        "subtitle": "Budżet, zadania, zdjęcia i notatki w jednym raporcie, który naprawdę zrozumie Twój wykonawca, ubezpieczyciel lub przyszły nabywca."
+        "subtitle": "PDF całego projektu albo tylko potrzebnych części. Eksport jest częścią Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const pl: Translation = {
     "cards": [
       {
         "title": "Widżety i Live Activities",
-        "subtitle": "Pierścień budżetu na ekranie blokady, najbliższe zadania na pierwszy rzut oka i licznik czasu w Dynamic Island podczas pracy — bez otwierania aplikacji."
+        "subtitle": "Widżety ekranu głównego z postępem budżetu i tym, co dalej, oraz minutnik na ekranie blokady podczas śledzenia czasu."
       },
       {
         "title": "Śledzenie czasu",
-        "subtitle": "Zapisuj godziny w ramach projektu i zobacz, na co naprawdę poszły dni, przedstawione wizualnie obok wydatków."
+        "subtitle": "Zapisuj godziny w projekcie i zobacz, na co poszły dni, obok sumy bieżącej."
       },
       {
         "title": "Notatki i dokumenty",
@@ -134,7 +133,7 @@ const pl: Translation = {
       },
       {
         "title": "Pozycje i listy zakupów",
-        "subtitle": "Zapisuj zakupy z cenami i danymi sklepu, uporządkowane według etapów, aby rzeczywisty koszt znalazł się obok tego, co oszacowałeś."
+        "subtitle": "Zapisuj zakupy z ceną i sklepem, ułożone według etapu, żeby każdy doliczał się do sumy bieżącej."
       },
       {
         "title": "Wyszukiwanie i rozszerzenie udostępniania",
@@ -142,15 +141,15 @@ const pl: Translation = {
       },
       {
         "title": "Współpraca w czasie rzeczywistym",
-        "subtitle": "Udostępnij projekt przez iCloud i utrzymuj go w synchronizacji z partnerem, rodziną lub wykonawcą prac."
+        "subtitle": "Udostępnij projekt partnerowi, rodzinie albo wykonawcy. Udostępnianie i synchronizacja iCloud są częścią Pro."
       },
       {
         "title": "Priorytety projektów",
         "subtitle": "Oznacz każdy projekt jako niski, średni lub wysoki priorytet i sortuj listę — według priorytetu, daty lub nazwy — aby następne zadanie było na górze."
       },
       {
-        "title": "51 języków i pełna dostępność",
-        "subtitle": "W pełni przetłumaczona na 51 języków, z obsługą VoiceOver i Dynamic Type w całej aplikacji. Działa w 100% offline."
+        "title": "50 języków i pełna dostępność",
+        "subtitle": "W pełni przetłumaczona na 50 języków, z obsługą VoiceOver i Dynamic Type w całej aplikacji. Działa w 100% offline."
       }
     ]
   },
@@ -168,11 +167,11 @@ const pl: Translation = {
       },
       {
         "title": "Zapisz wydatek, sfotografuj robotę",
-        "subtitle": "Wpisuj koszty, gdy się pojawiają, i rób zdjęcia prosto z aplikacji. Wykres dzieli wydane, zarezerwowane i pozostałe, więc przekroczenie widać, póki da się jeszcze zareagować — a każde zdjęcie dostaje datę i trafia do projektu."
+        "subtitle": "Zapisuj płatności w miarę jak wpływają i rób zdjęcia z aplikacji. Materiały, robocizna i wykonawca zostają osobno, a suma bieżąca aktualizuje się razem z nimi. Każde zdjęcie ma datę i jest przypięte do projektu."
       },
       {
         "title": "Wyeksportuj raport",
-        "subtitle": "Jedno dotknięcie zamienia budżet, zadania, zdjęcia i notatki w plik PDF. Wyślij go wykonawcy, ubezpieczycielowi lub do folderu, który przyda ci się za rok."
+        "subtitle": "Pro zamienia projekt w PDF: budżet, zadania, zdjęcia i notatki albo tylko potrzebne części. Wyślij go wykonawcy, ubezpieczycielowi albo do folderu, który przyda się za rok."
       }
     ]
   },
@@ -188,51 +187,51 @@ const pl: Translation = {
     "qa": [
       {
         "question": "Czy Home Stories jest bezpłatne?",
-        "answer": "Tak – za darmo przez cały remont, z nieograniczoną liczbą projektów, zadań, etapów, zdjęć i wpisów wydatków. Jeden opcjonalny zakup w aplikacji, Home Stories Pro, odblokowuje cele budżetowe, wykres budżet kontra koszt, eksport do PDF i CSV oraz przypomnienia. To cena jednorazowa, nie subskrypcja."
+        "answer": "Tak. Nieograniczone projekty, pozycje, zdjęcia, notatki, dokumenty, zadania, rejestr czasu, widżety, lokalne kopie zapasowe i eksport danych są bezpłatne. Home Stories Pro to opcjonalny jednorazowy zakup, nie subskrypcja. Dodaje wykres budżet kontra rzeczywiste, przypomnienia o zadaniach, eksport PDF, synchronizację iCloud i udostępnianie projektu."
       },
       {
         "question": "Czy aplikacja działa offline?",
-        "answer": "Całkowicie. Projekty, budżety i zdjęcia są na urządzeniu, więc aplikacja działa w piwnicy bez zasięgu i synchronizuje się później. Nic w niej nie wymaga bycia online."
+        "answer": "Tak. Projekty, zdjęcia i płatności są na urządzeniu, więc aplikacja działa bez zasięgu. Synchronizacja iCloud należy do Pro, pozostaje wyłączona, dopóki jej nie włączysz, i nadrabia zmiany po powrocie do sieci."
       },
       {
         "question": "Czy mogę udostępniać projekty innym?",
-        "answer": "Tak, na dwa sposoby. Udostępnij projekt przez iCloud, a będzie synchronizowany w czasie rzeczywistym z partnerem, kimś z rodziny albo wykonawcą. Albo wyeksportuj raport PDF – budżet, zadania, zdjęcia i notatki – dla kogoś, kto ma go tylko przeczytać."
+        "answer": "Udostępnianie projektu należy do Home Stories Pro. Zapraszasz partnera, rodzinę albo wykonawcę, a oni widzą te same zadania, pozycje i zdjęcia przez iCloud. Raport PDF, również w Pro, jest wersją dla kogoś, kto ma tylko przeczytać."
       },
       {
         "question": "Jak eksportować raporty?",
-        "answer": "Otwórz projekt, dotknij eksportu i wybierz PDF albo CSV. Raport wychodzi z podsumowaniem budżetu, postępem zadań, zdjęciami i notatkami już złożonymi, gotowy do wysłania wykonawcy albo ubezpieczycielowi. Eksport jest częścią Home Stories Pro."
+        "answer": "Eksport PDF należy do Home Stories Pro: raport ze zdjęciem na okładce, dla całego projektu albo tylko wybranych części. Pełny eksport danych jest bezpłatny."
       },
       {
         "question": "Jakie urządzenia są obsługiwane?",
-        "answer": "iPhone z iOS 17.0 lub nowszym. Wersji na iPada ani na Androida jeszcze nie ma."
+        "answer": "iPhone i iPad z iOS 17.0 lub nowszym. Aplikacja na iPada jest natywna. Nie ma wersji na Androida."
       },
       {
         "question": "Czy Home Stories ma widżety?",
-        "answer": "Tak. Dodaj pierścień postępu budżetu i nadchodzące zadania do ekranu głównego i ekranu blokady oraz korzystaj z Live Activities z Dynamic Island, aby mieć licznik czasu projektu na widoku podczas pracy — a wszystko to bez otwierania aplikacji."
+        "answer": "Tak. Widżety ekranu głównego pokazują postęp budżetu i to, co dalej. Śledzenie czasu ma minutnik na ekranie blokady oraz Dynamic Island na iPhonie 14 Pro i nowszych."
       },
       {
         "question": "Czy mogę współpracować z partnerem lub wykonawcą?",
-        "answer": "Tak. Udostępnij projekt przez iCloud, a pozostanie on zsynchronizowany w czasie rzeczywistym na urządzeniach wszystkich osób, dzięki czemu partner, członek rodziny lub wykonawca może śledzić budżet, zadania i zdjęcia w miarę ich zmian."
+        "answer": "Tak, z Home Stories Pro. Udostępnij projekt przez iCloud, a zaproszone osoby widzą te same zadania, pozycje i zdjęcia."
       },
       {
         "question": "W jakich językach dostępne jest Home Stories?",
-        "answer": "Home Stories jest w pełni przetłumaczone na 51 języków, w tym angielski, niemiecki, francuski, hiszpański, włoski, duński, holenderski, portugalski, japoński, chiński, koreański i wiele innych, z pełną obsługą dostępności VoiceOver i Dynamic Type."
+        "answer": "Home Stories jest w pełni przetłumaczone na 50 języków, w tym angielski, niemiecki, francuski, hiszpański, włoski, duński, holenderski, portugalski, japoński, chiński, koreański i wiele innych, z pełną obsługą dostępności VoiceOver i Dynamic Type."
       },
       {
         "question": "Czy mogę śledzić koszty według kategorii, np. materiały i robociznę?",
-        "answer": "Tak — koszty mieszkają tam, gdzie jest praca. Podziel projekt na etapy i zadania, a do każdego dołącz materiały, armaturę, pozycje robocizny i wyceny. Wykres budżetu sumuje wszystko jako wydane, zadeklarowane i pozostałe, a raport PDF wyszczególnia każdą pozycję."
+        "answer": "Tak. Zapisuj płatności i trzymaj materiały, robociznę i wykonawcę osobno. Cena każdej pozycji dodaje się do bieżącej sumy. Wykres budżet kontra rzeczywiste należy do Home Stories Pro."
       },
       {
         "question": "Jak zarządzać kilkoma wykonawcami?",
-        "answer": "Pogrupuj pracę w etapy i zadania, aby każda ekipa wiedziała, co i kiedy robi — elektryk przed tynkarzem. Udostępnij projekt przez iCloud, aby wykonawca na bieżąco widział budżet, zadania i zdjęcia, albo wyeksportuj PDF tylko z potrzebnymi sekcjami."
+        "answer": "Trzymaj płatności każdej ekipy osobno od materiałów i robocizny, a oferty i umowy zapisuj jako dokumenty projektu. Udostępnianie projektu na żywo i eksport PDF należą do Home Stories Pro."
       },
       {
         "question": "Jak nie przekroczyć budżetu?",
-        "answer": "Wykres budżetu pokazuje wydane, zadeklarowane i pozostałe na pierwszy rzut oka, więc przekroczenie widać, póki jest jeszcze czas na reakcję. Dodaj widżet na ekran główny lub ekran blokady, aby mieć pierścień budżetu w zasięgu wzroku bez otwierania aplikacji."
+        "answer": "Darmowa aplikacja prowadzi bieżącą sumę, gdy zapisujesz pozycje i płatności. Home Stories Pro dodaje wykres budżet kontra rzeczywiste. Widżet na ekranie początkowym może pokazać budżet bez otwierania aplikacji."
       },
       {
         "question": "Czy dane mojego projektu mają kopię zapasową?",
-        "answer": "Tak — przy włączonej synchronizacji iCloud projekty przechowywane są na Twoim koncie iCloud i przenoszą się na nowego iPhone'a. Wszystko działa też całkowicie offline; zmiany synchronizują się po powrocie do sieci."
+        "answer": "Lokalne kopie zapasowe są bezpłatne, tak samo pełny eksport danych. Synchronizacja iCloud, która przenosi projekt na inne urządzenia, należy do Home Stories Pro i pozostaje wyłączona, dopóki jej nie włączysz."
       }
     ]
   },
@@ -249,8 +248,8 @@ const pl: Translation = {
           "Oś czasu ze zdjęciami z datami",
           "Rejestr wydatków i ceny pozycji",
           "Działa całkowicie offline",
-          "Synchronizacja iCloud między urządzeniami",
-          "Widżety na ekranie głównym i blokady"
+          "Lokalne kopie zapasowe i eksport danych",
+          "Zadania, śledzenie czasu i widżety ekranu głównego"
         ],
         "cta": ""
       },
@@ -258,10 +257,11 @@ const pl: Translation = {
         "name": "Home Stories Pro",
         "period": "zakup jednorazowy — bez subskrypcji",
         "features": [
-          "Cele budżetowe i wykres budżet-koszty",
-          "Zaawansowana analiza kosztów",
-          "Eksport PDF i CSV raportów oraz dziennika czasu",
-          "Przypomnienia o zadaniach i terminach"
+          "Wykres budżet kontra rzeczywiste",
+          "Przypomnienia o zadaniach",
+          "Eksport PDF",
+          "Synchronizacja iCloud",
+          "Udostępnianie projektu"
         ],
         "cta": "Pobierz aplikację — ulepszenie w środku"
       }
@@ -285,17 +285,17 @@ const pl: Translation = {
       {
         "aspect": "Sumy",
         "them": "Formuły, które sam piszesz i utrzymujesz",
-        "us": "Wydane, zadeklarowane i pozostałe — automatycznie"
+        "us": "Suma bieżąca. Materiały, robocizna i wykonawca osobno."
       },
       {
         "aspect": "Na budowie",
         "them": "Powiększanie komórek na telefonie",
-        "us": "Stworzone dla iPhone'a, działa całkowicie offline"
+        "us": "Stworzone dla iPhone'a i iPada, działa całkowicie offline"
       },
       {
         "aspect": "Udostępnianie",
         "them": "Mailowanie budget_v7_final_FINAL.xlsx",
-        "us": "Udostępnianie na żywo przez iCloud albo czytelny PDF"
+        "us": "Udostępnianie przez iCloud albo PDF — oba w Pro"
       },
       {
         "aspect": "Paragony",
@@ -312,7 +312,7 @@ const pl: Translation = {
   },
   "appBanner": {
     "title": "Zmierz następny.",
-    "subtitle": "Bezpłatnie w App Store. Działa offline, nie wymaga konta i synchronizuje się z iCloud, kiedy chcesz. Wymaga iPhone'a z systemem iOS 17 lub nowszym."
+    "subtitle": "Bezpłatnie w App Store na iPhone'a i iPada. Działa offline i nie wymaga konta. Wymaga iOS 17 lub nowszego."
   },
   "stakes": {
     "label": "Problem",
@@ -329,7 +329,7 @@ const pl: Translation = {
     "success": {
       "label": "Druga droga",
       "title": "Albo docierasz do odbioru wciąż z paragonami w ręku",
-      "body": "Wydane, zarezerwowane i pozostałe są na jednym ekranie od pierwszego dnia. Każdy koszt, zdjęcie i notatka trafiają do projektu, do którego należą, jeszcze gdy stoisz w tym pomieszczeniu. W dniu odbioru cała robota to jeden PDF: liczby, oś czasu i dowód na to, co było za ścianą."
+      "body": "Suma bieżąca jest w projekcie od pierwszego dnia, a materiały, robocizna i wykonawca są rozdzielone. Zdjęcia i notatki trafiają do tego samego projektu, kiedy jeszcze jesteś w pomieszczeniu."
     },
     "cta": "Zacznij śledzić — za darmo"
   }

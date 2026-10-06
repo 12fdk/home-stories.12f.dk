@@ -12,11 +12,12 @@ export interface UiStrings {
     };
     header: {
         eyebrow: string;
-        /** Suffix in the rail's "42% committed" readout. */
-        committedSuffix: string;
-        spent: string;
-        committed: string;
-        left: string;
+        /** Callout under the running-total figure on the hero rail. */
+        runningTotal: string;
+        /** Callout under the budget figure on the hero rail. */
+        budgetLabel: string;
+        /** Suffix in the rail's "52% of budget" readout. */
+        ofBudget: string;
     };
     sectionLabels: {
         features: string;
@@ -137,9 +138,8 @@ export type TemplateConfig = {
                 project: string;
                 currency: string;
                 budget: number;
+                /** Payments logged so far — the running total. */
                 spent: number;
-                /** Committed but not yet paid — the app calls this "potential". */
-                potential: number;
             } | undefined;
         };
         /** Problem, cost of leaving it alone, and the opposite picture — the

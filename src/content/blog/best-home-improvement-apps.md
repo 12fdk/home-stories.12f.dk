@@ -133,7 +133,7 @@ If HomeZada is genuinely on your shortlist, [HomeZada vs Houzz Pro](/blog/homeza
 
 ## 6. Home Stories — for the part that actually goes wrong
 
-**Free, optional one-off Premium · iOS 17+ · Disclosure: this is our app**
+**Free, optional one-off Pro · iPhone and iPad · iOS 17+ · Disclosure: this is our app**
 
 Let's be straight about the bias: we make this one. You should weigh what follows accordingly. But it's on the list for a specific and defensible reason — go back through the other five and notice what none of them do.
 

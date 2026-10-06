@@ -27,7 +27,7 @@ faq:
   - question: "Should I use Notion or an app for my renovation?"
     answer: "Use Notion for the planning phase — research, mood boards, contractor shortlists, document storage — where its flexibility is a genuine advantage. Switch to (or add) a phone-first app like Home Stories for the execution phase, where the job is fast, repeated, on-site logging. Most people who try to run the whole project in Notion abandon the budget tracking around week three for exactly the same reason spreadsheets fail: the tool needs a desk, and the renovation is happening in a half-demolished room."
   - question: "Is Home Stories free?"
-    answer: "Yes — Home Stories is free on the App Store for iPhone, with an optional one-time Home Stories Pro upgrade. It's built specifically for renovations rather than being a general productivity tool, with budget tracking, a photo timeline, task management, and PDF export. It requires iOS 17 or later."
+    answer: "Yes — Home Stories is free on the App Store for iPhone and iPad, with an optional one-time Home Stories Pro upgrade. It's built specifically for renovations rather than being a general productivity tool, with a running total, a photo timeline and task management. PDF export is part of Pro. It requires iOS 17 or later."
 relatedSlugs:
   - "how-to-track-home-improvement-expenses"
   - "renovation-spreadsheet-alternative"
@@ -88,10 +88,10 @@ For the broader field (design, measuring, contractor portals), [best home improv
 What that buys you in the execution phase:
 
 - **One-handed logging.** A cost is a couple of taps and a photo of the receipt — fast enough that you actually do it at the merchant's counter, not "later." Because you log in the moment, the data stays accurate.
-- **A budget that's already structured for renovations.** Planned versus actual, category totals, and a [contingency buffer](/blog/renovation-contingency-budget/) you can watch drain in real time — no formulas to build or maintain. Log a surprise cost and the remaining buffer updates instantly.
+- **A budget that's already structured for renovations.** A running total, with materials, labour and contractor kept apart, and a [contingency buffer](/blog/renovation-contingency-budget/) you can watch in the numbers — no formulas to build or maintain. The budget-vs-actual chart is part of Pro.
 - **A photo timeline by default.** Photos land in a dated, chronological record — the visual history of the project — without you organising anything.
 - **Task tracking that lives where the work is.** Tick things off from the site, not from a desk you're rarely at during a build.
-- **PDF export.** A clean summary for your records, your accountant, or your own sanity at handover.
+- **PDF export (Pro).** A summary for your records, your accountant, or your own sanity at handover.
 
 The point isn't that the tracker has more features than Notion — it deliberately has fewer. It's that the features it has are pointed at the exact task Notion makes hardest, and removing the friction from that task is what keeps the data honest for the whole build.
 

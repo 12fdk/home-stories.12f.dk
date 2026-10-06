@@ -20,7 +20,7 @@ faq:
   - question: "What's wrong with using a spreadsheet for a renovation?"
     answer: "Nothing — for planning. The problems start at execution. Spreadsheets need a desk, a laptop, two hands, and 30 seconds of focus per entry. Renovations need one-handed logging on a phone while standing in a dusty kitchen. The mismatch causes people to skip logging, and once logging stops the spreadsheet stops being a tracker and starts being a relic."
   - question: "Is there a free renovation tracker app?"
-    answer: "Yes — Home Stories is free on the App Store for iPhone, with an optional one-time Premium upgrade. It's specifically built for renovations (not a generic project manager), with budget tracking, photo timelines, task management, and PDF export."
+    answer: "Yes — Home Stories is free on the App Store for iPhone and iPad, with an optional one-time Pro upgrade. It's specifically built for renovations (not a generic project manager), with a running total, photo timelines and task management. PDF export is part of Pro."
   - question: "Can I import my renovation spreadsheet into an app?"
     answer: "Most renovation-specific apps don't have CSV import yet (the category is too small). The practical workaround: keep your spreadsheet as the planning artefact (line items, contractor quotes), then start fresh in the app on day one of execution. The 9 standard categories transfer in your head."
   - question: "What about using Notion or Airtable for a renovation?"
@@ -86,7 +86,7 @@ You want to share the project status with your contractor. Or your insurer. Or, 
 
 A spreadsheet shares as a spreadsheet — which assumes the recipient knows what they're looking at. Half the contractors I've worked with don't routinely open Excel files; they want a PDF. So you screenshot. Or export. Or describe what's in there over the phone.
 
-**An app fixes this with a one-tap PDF export that includes budget, tasks, photos, and notes — formatted for a human reader.**
+**An app built for the site keeps the record in one project. A PDF of that record — budget, tasks, photos and notes — is part of Pro.**
 
 ### 5. The "is this current?" problem
 
@@ -106,9 +106,9 @@ Concretely, here's what changes with a renovation-specific app:
 |---|---|---|
 | Log a receipt at the shop | 60+ seconds, two-handed | 10 seconds, one-handed, photo attached |
 | Mark a task done | Find row, tap cell, type "done" | Tap the checkbox |
-| Check budget remaining | Open file, find tab, find row, do mental math | Open app, see chart |
+| Check budget remaining | Open file, find tab, find row, do mental math | Open app, see the running total |
 | Attach a defect photo | Take photo, switch app, find row, paste link | Tap "+ photo" on the task |
-| Share status with contractor | Export, screenshot, email, explain | Tap PDF, AirDrop, done |
+| Share status with contractor | Export, screenshot, email, explain | With Pro, a PDF you can hand over |
 
 The total time saved per logging event is small — maybe 30 seconds. But it's the *threshold* that matters. A 10-second logging task gets done. A 60-second one gets postponed.
 

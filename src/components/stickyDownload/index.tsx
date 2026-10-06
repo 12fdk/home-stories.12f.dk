@@ -113,7 +113,7 @@ function BlogSticky() {
     >
       <div className="flex items-center gap-3">
         <p className="m-0 flex-1 text-sm leading-tight text-base-content/80">
-          Track this project on your iPhone
+          Track this project on your iPhone or iPad
           <span className="block text-xs text-base-content/55">Free · works offline · no account</span>
         </p>
         <a

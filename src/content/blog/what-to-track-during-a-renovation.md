@@ -26,7 +26,7 @@ faq:
   - question: "Is it worth tracking DIY hours on a renovation?"
     answer: "Yes, for two reasons. It makes the DIY-versus-contractor decision honest — 40 hours of your evenings is not free. And if you ever sell, a record of the work done, when, and by whom is part of the story of the house."
   - question: "What's the easiest way to keep all of this in one place?"
-    answer: "One project, one tool, on the device that's already in your pocket. Home Stories keeps budget, photos, tasks, receipts, time, and notes attached to the project itself — and exports the lot as a PDF when someone official asks."
+    answer: "One project, one tool, on the device that's already in your pocket. Home Stories keeps budget, photos, tasks, receipts, time, and notes attached to the project itself. A full data export is included. A PDF, when someone official asks, is part of Pro."
 relatedSlugs:
   - "how-to-organize-renovation-receipts"
   - "renovation-checklist-printable"
@@ -60,7 +60,7 @@ Keep every quote, and when the invoice lands, put the two numbers side by side w
 
 The kitchen is ordered. The electrician is booked. Nothing has left your account, and your spreadsheet says you're fine. You are not fine — that money is spoken for.
 
-This is the single most common way renovators end up "suddenly" over budget: spent and committed were never tracked as separate numbers. The moment you sign anything, it belongs in the total. Watching **spent, committed, and remaining** as three numbers is the whole trick to [not going over](/blog/how-to-budget-a-home-renovation/).
+This is the single most common way renovators end up "suddenly" over budget: money you have already agreed to spend never made it into the total. The moment you sign anything, it belongs in the running total. Watching that total against the budget is the whole trick to [not going over](/blog/how-to-budget-a-home-renovation/).
 
 ## 5. The small stuff
 
@@ -124,7 +124,7 @@ That same discipline shows up when quotes drift. Keep the original quote next to
 
 Once a week, for fifteen minutes:
 
-1. Open the project record and check **spent / committed / remaining**.
+1. Open the project record and check the **running total against the budget**.
 2. Scroll photos from the last seven days — any open wall that closed without a shot?
 3. Skim notes for verbal agreements that never became a written line.
 4. Update the snag list for rooms that are "almost done".

@@ -120,7 +120,7 @@ The gap between the installer leaving and the house feeling done is almost alway
 
 A [renovation contingency budget](/blog/renovation-contingency-budget/) is the other piece of practical advice that applies here: the budget line that exists for when the installer finds rot behind the old frame or the decorator's reveal work turns out to be more extensive than expected. It's not a failure to have one. It's planning for the reality that older homes always have surprises.
 
-If you're managing a renovation at all — whether it's ten windows or ten rooms — a single place to keep track of decisions, budgets, and tasks makes the whole process considerably less stressful. [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app that does exactly that: budget tracking, task lists, before-and-after photos, and PDF reports, all synced across your devices. No account needed, works fully offline.
+If you're managing a renovation at all — whether it's ten windows or ten rooms — a single place to keep track of decisions, budgets, and tasks makes the whole process considerably less stressful. [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad that does exactly that: a running total, task lists, and before-and-after photos. It works fully offline and needs no account. A PDF, and sync across your devices, are part of Pro.
 
 ## Sources and further reading
 

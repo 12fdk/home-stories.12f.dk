@@ -198,7 +198,7 @@ Comparing contractor quotes is less about finding the lowest number and more abo
 
 Do that and the decision usually becomes obvious. You end up picking a contractor, not a sales script.
 
-If you want the scope, the quotes and the payments kept together from the first estimate to the final invoice, [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app built for exactly that.
+If you want the scope, the quotes and the payments kept together from the first estimate to the final invoice, [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad built for exactly that.
 
 ## Sources and further reading
 

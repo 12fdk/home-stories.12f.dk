@@ -28,7 +28,8 @@ export const GET: APIRoute = async () => {
 # Last updated: ${today}
 
 Site: ${SITE}
-Product: Home Stories: Renovation App (iOS)
+Product: Home Stories: Renovation App (iPhone and iPad, iOS 17 or later; no Android app)
+Price: Free. Optional one-time Pro (about $9.99 in the US, no subscription): budget vs actual chart, task reminders, PDF export, iCloud sync, project sharing.
 Developer: Robert Jensen (12f)
 Contact: robert@12f.dk
 Canonical: ${SITE}/
@@ -50,6 +51,11 @@ Attribution: ${SITE}/
 Primary: ${SITE}/llms-full.txt
 Summary: ${SITE}/llms.txt
 Blog-index: ${SITE}/blog/
+Guides: ${SITE}/guides/
+Guide-budgeting: ${SITE}/guides/budgeting-a-renovation/
+Guide-contractors: ${SITE}/guides/hiring-contractors/
+Guide-timelines: ${SITE}/guides/renovation-timelines/
+Guide-apps: ${SITE}/guides/renovation-apps/
 Articles: ${posts.length}
 Feed: ${SITE}/rss.xml
 Sitemap: ${SITE}/sitemap-index.xml
@@ -64,7 +70,7 @@ Sitemap: ${SITE}/sitemap-index.xml
 # - WebPage + SpeakableSpecification
 #
 # Structured data on each blog article
-# - Article (author, publisher, dates)
+# - Article + BlogPosting (author, publisher, dates)
 # - FAQPage
 # - BreadcrumbList
 # - WebPage + SpeakableSpecification

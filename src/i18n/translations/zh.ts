@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const zh: Translation = {
   "seo": {
-    "title": "Home Stories - iPhone 免费家庭装修管理工具",
-    "description": "追踪装修预算、整理任务，用照片记录进度。导出专业 PDF 报告。iPhone 免费使用，立即下载！"
+    "title": "Home Stories - iPhone 与 iPad 免费家装管理工具",
+    "description": "在 iPhone 或 iPad 上记录装修：预算、任务、照片、笔记和文件。免费，可离线，无需账户。需要 iOS 17 或更高版本。"
   },
   "nav": {
     "cta": "获取应用",
@@ -24,11 +24,10 @@ const zh: Translation = {
       "language": "语言"
     },
     "header": {
-      "eyebrow": "iPhone 装修管理工具",
-      "committedSuffix": "已承诺",
-      "spent": "已花费",
-      "committed": "已承诺",
-      "left": "剩余"
+      "eyebrow": "iPhone 与 iPad 装修管理工具",
+      "runningTotal": "累计",
+      "budgetLabel": "预算",
+      "ofBudget": "预算的"
     },
     "sectionLabels": {
       "features": "功能",
@@ -56,12 +55,12 @@ const zh: Translation = {
     "footer": {
       "site": "站点",
       "contact": "联系",
-      "tagline": "家装预算会跑偏。Home Stories 把已花、已定和剩余放在同一块屏幕上，让超支在你还能补救的时候就显出来。一款 iPhone 上的家装记账工具，由 Robert Jensen 在丹麦制作。"
+      "tagline": "家装预算会跑偏。Home Stories 把累计金额放在同一块屏幕上，让超支在你还能补救的时候就显出来。一款用于 iPhone 和 iPad 的家装记账工具，由 Robert Jensen 在丹麦制作。"
     }
   },
   "header": {
     "headline": "别让预算失控 把家装做完",
-    "subtitle": "家装之所以跑偏，是因为钱花光之前没人看见超支。Home Stories 把已花、已定和剩余留在同一块屏幕上，任务排在正确的顺序里，带日期的照片记下真正发生过什么。",
+    "subtitle": "家装会跑偏，是因为超支在钱花完之前一直看不见。Home Stories 把累计金额留在一块屏幕上，任务按顺序排，发生过的事有带日期的照片。",
     "usersDescription": "由一位正在装修的业主打造，献给同样正在装修的业主",
     "headlineMark": [
       0,
@@ -97,7 +96,7 @@ const zh: Translation = {
       {
         "label": "预算",
         "title": "提前看到超支",
-        "subtitle": "已花费、已承诺、剩余，一张图上一目了然。在还来得及补救时，就发现自己超了。"
+        "subtitle": "记下付款时更新的累计金额，材料、人工和承包商分开。预算与实际对比图是 Pro 的一部分。"
       },
       {
         "label": "任务",
@@ -112,7 +111,7 @@ const zh: Translation = {
       {
         "label": "导出",
         "title": "交付一份 PDF",
-        "subtitle": "预算、任务、照片和笔记汇成一份报告，承包商、保险公司或未来买家都能看明白。"
+        "subtitle": "整个项目的 PDF，或只要你需要的部分。导出是 Pro 的一部分。"
       }
     ]
   },
@@ -122,11 +121,11 @@ const zh: Translation = {
     "cards": [
       {
         "title": "小组件与 Live Activities",
-        "subtitle": "锁屏上的预算圆环，一眼看到接下来的任务，干活时还有 Dynamic Island 计时器——全都无需打开应用。"
+        "subtitle": "主屏幕小组件显示预算进度和接下来要做的事；记时间时，锁屏上有计时器。"
       },
       {
         "title": "时间追踪",
-        "subtitle": "把工时记在项目上，直观地看清时间到底花在了哪里，与金钱开销并列呈现。"
+        "subtitle": "把工时记在项目上，在累计金额旁边看这些天花在了哪里。"
       },
       {
         "title": "笔记与文档",
@@ -134,7 +133,7 @@ const zh: Translation = {
       },
       {
         "title": "物品与购物清单",
-        "subtitle": "保存采购记录，含价格和商家信息，按阶段整理，让实际花费紧挨着你的预估。"
+        "subtitle": "按阶段保存带价格和店铺的采购，每一笔都加进累计金额。"
       },
       {
         "title": "搜索与共享扩展",
@@ -142,15 +141,15 @@ const zh: Translation = {
       },
       {
         "title": "实时协作",
-        "subtitle": "通过 iCloud 共享项目，与伴侣、家人或施工的承包商保持同步。"
+        "subtitle": "与伴侣、家人或承包商共享项目。共享和 iCloud 同步是 Pro 的一部分。"
       },
       {
         "title": "项目优先级",
         "subtitle": "为每个项目标上低、中、高优先级，再按优先级、日期或名称排序——让下一件要做的事排在最前。"
       },
       {
-        "title": "51 种语言，无障碍",
-        "subtitle": "完整翻译为 51 种语言，全程支持 VoiceOver 和 Dynamic Type。100% 离线可用。"
+        "title": "50 种语言，无障碍",
+        "subtitle": "完整翻译为 50 种语言，全程支持 VoiceOver 和 Dynamic Type。100% 离线可用。"
       }
     ]
   },
@@ -168,11 +167,11 @@ const zh: Translation = {
       },
       {
         "title": "记下开销，拍下现场",
-        "subtitle": "开销一来就录入，照片直接在应用里拍。图表把已花、已定和剩余分开，超支会在你还能补救的时候显出来——每张照片都带日期，并挂在对应的项目上。"
+        "subtitle": "付款一到就记下，并从应用里拍照。材料、人工和承包商分开，累计金额跟着更新。每张照片都有日期，并归到这个项目。"
       },
       {
         "title": "导出报告",
-        "subtitle": "一键把预算、任务、照片和笔记变成一份 PDF。发给承包商、保险公司，或者存进明年会用得上的文件夹。"
+        "subtitle": "Pro 把项目做成 PDF：预算、任务、照片和笔记，或只要你需要的部分。发给承包商、保险公司，或明年还会用到的文件夹。"
       }
     ]
   },
@@ -188,51 +187,51 @@ const zh: Translation = {
     "qa": [
       {
         "question": "Home Stories 是免费使用的吗？",
-        "answer": "是的，整个工程都免费，项目、任务、阶段、照片和开销记录都不限量。一次可选的应用内购买 Home Stories Pro，会解锁预算目标、预算对比成本图表、PDF 与 CSV 导出，以及任务提醒。它是一次性价格，不是订阅。"
+        "answer": "是的。无限的项目、条目、照片、笔记、文档、任务、时间记录、小组件、本地备份和数据导出都是免费的。Home Stories Pro 是可选的一次买断，不是订阅。它增加预算与实际对比图、任务提醒、PDF 导出、iCloud 同步和项目共享。"
       },
       {
         "question": "应用能离线使用吗？",
-        "answer": "完全可以。项目、预算和照片都存在设备上，所以在没有信号的地下室里也能用，之后再同步。它没有任何一处需要你在线。"
+        "answer": "可以。项目、照片和付款都在设备上，所以没有信号也能用。iCloud 同步属于 Pro，在你打开之前保持关闭，重新联网后会补上更改。"
       },
       {
         "question": "我可以和别人共享项目吗？",
-        "answer": "可以，有两种方式。通过 iCloud 共享项目，它会和伴侣、家人或施工方实时保持同步。或者导出一份 PDF 报告——预算、任务、照片和备注——给只需要读一读的人。"
+        "answer": "项目共享属于 Home Stories Pro。你可以邀请伴侣、家人或承包商，他们通过 iCloud 看到相同的任务、条目和照片。PDF 报告也属于 Pro，给只需要阅读的人。"
       },
       {
         "question": "我该如何导出报告？",
-        "answer": "打开项目，点导出，选 PDF 或 CSV。报告出来时预算摘要、任务进度、照片和备注都已排好版，可以直接发给施工方或保险公司。导出属于 Home Stories Pro。"
+        "answer": "PDF 导出属于 Home Stories Pro：一份带封面照片的报告，可以是整个项目，也可以只是你选中的部分。完整的数据导出是免费的。"
       },
       {
         "question": "支持哪些设备？",
-        "answer": "运行 iOS 17.0 或更高版本的 iPhone。目前还没有 iPad 版和 Android 版。"
+        "answer": "运行 iOS 17.0 或更高版本的 iPhone 和 iPad。iPad 应用是原生界面。没有 Android 版。"
       },
       {
         "question": "Home Stories 有小组件吗？",
-        "answer": "有。把预算进度圆环和即将到来的任务添加到主屏幕和锁屏上，还能用 Live Activities 配合 Dynamic Island，让项目计时器在你干活时始终可见——全都无需打开应用。"
+        "answer": "有。主屏幕小组件显示预算进度和接下来要做的事。时间记录有锁屏计时器，在 iPhone 14 Pro 及更新机型上还有 Dynamic Island。"
       },
       {
         "question": "我可以和伴侣或承包商协作吗？",
-        "answer": "可以。通过 iCloud 共享项目，它会在每个人的设备上实时同步，让伴侣、家人或承包商随时跟进预算、任务和照片的变化。"
+        "answer": "可以，通过 Home Stories Pro。用 iCloud 共享项目后，被邀请的人会看到相同的任务、条目和照片。"
       },
       {
         "question": "Home Stories 支持哪些语言？",
-        "answer": "Home Stories 完整翻译为 51 种语言，包括英语、德语、法语、西班牙语、意大利语、丹麦语、荷兰语、葡萄牙语、日语、中文、韩语等众多语言，并全面支持 VoiceOver 和 Dynamic Type 无障碍功能。"
+        "answer": "Home Stories 完整翻译为 50 种语言，包括英语、德语、法语、西班牙语、意大利语、丹麦语、荷兰语、葡萄牙语、日语、中文、韩语等众多语言，并全面支持 VoiceOver 和 Dynamic Type 无障碍功能。"
       },
       {
         "question": "我可以按类别（如材料和人工）记录费用吗？",
-        "answer": "可以 — 费用就记录在工作发生的地方。把项目拆分为阶段和任务，再为每项任务附上所需的材料、设备、人工项目和报价。预算图表会把一切汇总为已花费、已承诺和剩余，PDF 报告则逐项列明。"
+        "answer": "可以。记录付款，并把材料、人工和承包商分开。每个条目的价格会计入项目的累计金额。预算与实际对比图属于 Home Stories Pro。"
       },
       {
         "question": "如何管理多个施工方？",
-        "answer": "把工作按阶段和任务分组，让每个工种都清楚何时做什么 — 先电工，后抹灰。通过 iCloud 共享项目，施工方就能实时查看预算、任务和照片；也可以导出只包含所需部分的 PDF。"
+        "answer": "把每个工种的付款与材料和人工分开，并把报价和合同作为项目文档保存。实时共享项目或导出 PDF 属于 Home Stories Pro。"
       },
       {
         "question": "怎样避免超出预算？",
-        "answer": "预算图表一眼就能看到已花费、已承诺和剩余金额，超支苗头在还来得及处理时就会显现。把小组件添加到主屏幕或锁定屏幕，无需打开应用即可随时查看预算圆环。"
+        "answer": "免费应用会在你记录条目和付款时维护一个累计金额。Home Stories Pro 增加预算与实际对比图。主屏幕小组件可以不打开应用就看到预算进度。"
       },
       {
         "question": "我的项目数据会备份吗？",
-        "answer": "会 — 开启 iCloud 同步后，项目保存在你的 iCloud 账户中，换新 iPhone 也能随行。所有功能均可完全离线使用，恢复联网后更改会自动同步。"
+        "answer": "本地备份是免费的，完整的数据导出也是。把项目放到其他设备上的 iCloud 同步属于 Home Stories Pro，在你打开之前保持关闭。"
       }
     ]
   },
@@ -249,8 +248,8 @@ const zh: Translation = {
           "带日期照片的时间线",
           "支出记录与物品价格",
           "完全离线可用",
-          "跨设备 iCloud 同步",
-          "主屏幕和锁定屏幕小组件"
+          "本地备份与数据导出",
+          "任务、时间记录和主屏幕小组件"
         ],
         "cta": ""
       },
@@ -258,10 +257,11 @@ const zh: Translation = {
         "name": "Home Stories Pro",
         "period": "一次买断 — 无订阅",
         "features": [
-          "预算目标与预算-成本对比图",
-          "高级成本分析",
-          "报告与工时记录的 PDF 和 CSV 导出",
-          "任务提醒与截止日期通知"
+          "预算与实际对比图",
+          "任务提醒",
+          "PDF 导出",
+          "iCloud 同步",
+          "项目共享"
         ],
         "cta": "获取应用 — 在应用内升级"
       }
@@ -285,17 +285,17 @@ const zh: Translation = {
       {
         "aspect": "汇总",
         "them": "公式要自己写、自己维护",
-        "us": "已花费、已承诺、剩余 — 自动计算"
+        "us": "一个累计金额。材料、人工和承包商分开。"
       },
       {
         "aspect": "在工地",
         "them": "在手机上捏合缩放单元格",
-        "us": "为 iPhone 打造，完全离线可用"
+        "us": "为 iPhone 和 iPad 打造，完全离线可用"
       },
       {
         "aspect": "共享",
         "them": "邮件发送 budget_v7_final_FINAL.xlsx",
-        "us": "iCloud 实时共享，或导出人人能读的 PDF"
+        "us": "iCloud 共享或 PDF — 两者都属于 Pro"
       },
       {
         "aspect": "收据",
@@ -312,7 +312,7 @@ const zh: Translation = {
   },
   "appBanner": {
     "title": "量化你的下一个项目。",
-    "subtitle": "在 App Store 免费下载。离线可用，无需账户，需要时还能通过 iCloud 同步。需要搭载 iOS 17 或更高版本的 iPhone。"
+    "subtitle": "在 App Store 免费下载，支持 iPhone 和 iPad。可离线使用，无需账户。需要 iOS 17 或更高版本。"
   },
   "stakes": {
     "label": "问题",
@@ -329,7 +329,7 @@ const zh: Translation = {
     "success": {
       "label": "另一条路",
       "title": "或者到交付那天，你手里还留着每一张收据",
-      "body": "从第一天起，已花、已定和剩余就在同一块屏幕上。每一笔开销、每一张照片、每一条备注，都在你还站在那个房间里的时候，落进它该去的项目。交付那天，整项工程就是一份 PDF：数字、时间线，以及墙后面到底是什么的证据。"
+      "body": "累计金额从第一天就在项目上，材料、人工和承包商分开。照片和笔记会在你还站在房间里时落到同一个项目。"
     },
     "cta": "免费开始记录"
   }

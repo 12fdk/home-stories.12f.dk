@@ -2,8 +2,8 @@ import type { Translation } from "../translation";
 
 const pt: Translation = {
   "seo": {
-    "title": "Home Stories - Gestor de Renovações Grátis para iPhone",
-    "description": "Controle o orçamento da sua reforma, organize tarefas e documente o progresso com fotos. Exporte relatórios em PDF. Grátis para iPhone: baixe agora!"
+    "title": "Home Stories - Gestor de renovações grátis para iPhone e iPad",
+    "description": "Acompanhe a reforma no iPhone ou iPad: orçamento, tarefas, fotos, notas e documentos. Grátis, offline, sem conta. iOS 17 ou posterior."
   },
   "nav": {
     "cta": "Obter a app",
@@ -24,11 +24,10 @@ const pt: Translation = {
       "language": "Idioma"
     },
     "header": {
-      "eyebrow": "Gestor de renovações para iPhone",
-      "committedSuffix": "comprometido",
-      "spent": "Gasto",
-      "committed": "Comprometido",
-      "left": "Restante"
+      "eyebrow": "Gestor de renovações para iPhone e iPad",
+      "runningTotal": "Total acumulado",
+      "budgetLabel": "Orçamento",
+      "ofBudget": "do orçamento"
     },
     "sectionLabels": {
       "features": "Funcionalidades",
@@ -56,12 +55,12 @@ const pt: Translation = {
     "footer": {
       "site": "Site",
       "contact": "Contacto",
-      "tagline": "Os orçamentos de renovação derrapam. O Home Stories põe gasto, comprometido e restante num só ecrã, para que uma derrapagem apareça enquanto ainda pode agir. Um gestor de renovações para iPhone, feito na Dinamarca por Robert Jensen."
+      "tagline": "Os orçamentos de renovação derrapam. O Home Stories põe o total acumulado num só ecrã, para que uma derrapagem apareça enquanto ainda pode agir. Um gestor de renovações para iPhone e iPad, feito na Dinamarca por Robert Jensen."
     }
   },
   "header": {
     "headline": "Termine a renovação sem que o orçamento lhe fuja.",
-    "subtitle": "As renovações derrapam porque ninguém vê a derrapagem antes de o dinheiro já estar gasto. O Home Stories mantém gasto, comprometido e restante num só ecrã, com as tarefas pela ordem certa e fotografias datadas que provam o que aconteceu.",
+    "subtitle": "As renovações derrapam porque o desvio fica invisível até o dinheiro se ir. O Home Stories mantém um total acumulado num só ecrã, com as tarefas por ordem e fotos datadas do que aconteceu.",
     "usersDescription": "Criado por um proprietário a meio de uma renovação, para proprietários a meio de uma renovação",
     "headlineMark": [
       6,
@@ -97,7 +96,7 @@ const pt: Translation = {
       {
         "label": "Orçamento",
         "title": "Veja o excesso a chegar",
-        "subtitle": "Gasto, comprometido e restante num só gráfico. Descobre que passou do limite enquanto ainda pode fazer algo quanto a isso."
+        "subtitle": "Um total acumulado à medida que regista pagamentos, separado em materiais, mão de obra e empreiteiro. O gráfico de orçamento face ao real faz parte do Pro."
       },
       {
         "label": "Tarefas",
@@ -112,7 +111,7 @@ const pt: Translation = {
       {
         "label": "Exportar",
         "title": "Entregue um PDF",
-        "subtitle": "Orçamento, tarefas, fotos e notas num só relatório que o seu empreiteiro, seguradora ou futuro comprador conseguem mesmo ler."
+        "subtitle": "Um PDF de todo o projeto, ou só das partes de que precisa. A exportação faz parte do Pro."
       }
     ]
   },
@@ -122,11 +121,11 @@ const pt: Translation = {
     "cards": [
       {
         "title": "Widgets e Live Activities",
-        "subtitle": "Um anel de orçamento no Ecrã Bloqueado, as próximas tarefas num relance e um cronómetro na Dynamic Island enquanto trabalha — sem abrir a app."
+        "subtitle": "Widgets do ecrã principal para o progresso do orçamento e o que vem a seguir, e um temporizador no ecrã de bloqueio enquanto regista o tempo."
       },
       {
         "title": "Registo de horas",
-        "subtitle": "Registe horas num projeto e veja para onde foram realmente os dias, apresentado visualmente lado a lado com o dinheiro."
+        "subtitle": "Registe horas num projeto e veja para onde foram os dias, ao lado do total acumulado."
       },
       {
         "title": "Notas e documentos",
@@ -134,7 +133,7 @@ const pt: Translation = {
       },
       {
         "title": "Itens e listas de compras",
-        "subtitle": "Guarde compras com preços e detalhes da loja, organizadas por fase, para que o custo real fique ao lado do que estimou."
+        "subtitle": "Guarde compras com preço e loja, organizadas por fase, para que cada uma se some ao total acumulado."
       },
       {
         "title": "Pesquisa e extensão de partilha",
@@ -142,15 +141,15 @@ const pt: Translation = {
       },
       {
         "title": "Colaboração em tempo real",
-        "subtitle": "Partilhe um projeto via iCloud e mantenha-o sincronizado com o parceiro, a família ou o empreiteiro que faz o trabalho."
+        "subtitle": "Partilhe um projeto com um parceiro, a família ou o empreiteiro. A partilha e a sincronização iCloud fazem parte do Pro."
       },
       {
         "title": "Prioridades de projeto",
         "subtitle": "Marque cada projeto como Baixa, Média ou Alta e ordene a sua lista — por prioridade, data ou nome — para que o próximo trabalho fique no topo."
       },
       {
-        "title": "51 idiomas, acessível",
-        "subtitle": "Totalmente traduzida para 51 idiomas, com suporte para VoiceOver e Dynamic Type em toda a app. Funciona 100% offline."
+        "title": "50 idiomas, acessível",
+        "subtitle": "Totalmente traduzida para 50 idiomas, com suporte para VoiceOver e Dynamic Type em toda a app. Funciona 100% offline."
       }
     ]
   },
@@ -168,11 +167,11 @@ const pt: Translation = {
       },
       {
         "title": "Registe a despesa, fotografe o trabalho",
-        "subtitle": "Introduza os custos à medida que surgem e fotografe diretamente da app. O gráfico separa gasto, comprometido e restante, por isso uma derrapagem aparece enquanto ainda pode agir — e cada fotografia fica datada e ligada ao projeto."
+        "subtitle": "Registe os pagamentos à medida que chegam e fotografe a partir da app. Materiais, mão de obra e empreiteiro ficam separados, e o total acumulado atualiza-se com eles. Cada foto fica datada e ligada ao projeto."
       },
       {
         "title": "Exporte o relatório",
-        "subtitle": "Um toque transforma orçamento, tarefas, fotos e notas num PDF. Envie-o ao empreiteiro, à seguradora ou para a pasta de que vai precisar no próximo ano."
+        "subtitle": "O Pro transforma o projeto num PDF: orçamento, tarefas, fotos e notas, ou só as partes de que precisa. Envie-o ao empreiteiro, à seguradora ou à pasta que vai querer no próximo ano."
       }
     ]
   },
@@ -188,51 +187,51 @@ const pt: Translation = {
     "qa": [
       {
         "question": "O Home Stories é gratuito?",
-        "answer": "Sim, grátis para a obra toda, com projetos, tarefas, fases, fotografias e registo de despesas ilimitados. Uma compra opcional na app, o Home Stories Pro, desbloqueia as metas de orçamento, o gráfico de orçamento versus custo, a exportação para PDF e CSV e os lembretes. É um preço único, não uma subscrição."
+        "answer": "Sim. Projetos, itens, fotos, notas, documentos, tarefas, registo de tempo, widgets, cópias locais e exportação de dados são grátis, sem limite. O Home Stories Pro é uma compra única opcional, não uma subscrição. Acrescenta o gráfico de orçamento face ao real, lembretes de tarefas, exportação PDF, sincronização iCloud e partilha do projeto."
       },
       {
         "question": "A app funciona offline?",
-        "answer": "Totalmente. Os projetos, orçamentos e fotografias vivem no dispositivo, por isso a app funciona numa cave sem rede e sincroniza depois. Nada nela depende de estar online."
+        "answer": "Sim. Projetos, fotos e pagamentos ficam no dispositivo, por isso a app funciona sem rede. A sincronização iCloud faz parte do Pro, fica desligada até a ativar e apanha as alterações quando volta a estar online."
       },
       {
         "question": "Posso partilhar projetos com outras pessoas?",
-        "answer": "Sim, de duas formas. Partilhe um projeto pelo iCloud e fica sincronizado em tempo real com o companheiro, um familiar ou o empreiteiro. Ou exporte um relatório em PDF — orçamento, tarefas, fotografias e notas — para quem só precisa de o ler."
+        "answer": "A partilha do projeto faz parte do Home Stories Pro. Convida um parceiro, um familiar ou um empreiteiro, e eles veem as mesmas tarefas, itens e fotos via iCloud. Um relatório PDF, também do Pro, é a versão para quem só precisa de ler."
       },
       {
         "question": "Como exporto relatórios?",
-        "answer": "Abra o projeto, toque em exportar e escolha PDF ou CSV. O relatório sai com o resumo do orçamento, o progresso das tarefas, as fotografias e as notas já compostos, pronto a enviar ao empreiteiro ou à seguradora. A exportação faz parte do Home Stories Pro."
+        "answer": "A exportação PDF faz parte do Home Stories Pro: um relatório com foto de capa, do projeto inteiro ou só das partes que escolher. A exportação completa dos dados é grátis."
       },
       {
         "question": "Que dispositivos são suportados?",
-        "answer": "iPhone, com iOS 17.0 ou posterior. Ainda não há versão para iPad nem para Android."
+        "answer": "iPhone e iPad, com iOS 17.0 ou posterior. A app para iPad é nativa. Não há versão para Android."
       },
       {
         "question": "O Home Stories tem widgets?",
-        "answer": "Sim. Adicione um anel de progresso do orçamento e as próximas tarefas ao Ecrã Principal e ao Ecrã Bloqueado, e use as Live Activities com a Dynamic Island para manter um cronómetro de projeto à vista enquanto trabalha — tudo sem abrir a app."
+        "answer": "Sim. Os widgets do ecrã principal mostram o progresso do orçamento e o que vem a seguir. O registo de tempo tem um temporizador no ecrã de bloqueio, e Dynamic Island no iPhone 14 Pro e posteriores."
       },
       {
         "question": "Posso colaborar com um parceiro ou empreiteiro?",
-        "answer": "Sim. Partilhe um projeto via iCloud e ele mantém-se sincronizado em tempo real nos dispositivos de todos, para que um parceiro, familiar ou empreiteiro possa acompanhar o orçamento, as tarefas e as fotos à medida que mudam."
+        "answer": "Sim, com o Home Stories Pro. Partilhe um projeto via iCloud e as pessoas convidadas veem as mesmas tarefas, itens e fotos."
       },
       {
         "question": "Em que idiomas está disponível o Home Stories?",
-        "answer": "O Home Stories está totalmente traduzido para 51 idiomas, incluindo inglês, alemão, francês, espanhol, italiano, dinamarquês, neerlandês, português, japonês, chinês, coreano e muitos mais, com suporte total de acessibilidade VoiceOver e Dynamic Type."
+        "answer": "O Home Stories está totalmente traduzido para 50 idiomas, incluindo inglês, alemão, francês, espanhol, italiano, dinamarquês, neerlandês, português, japonês, chinês, coreano e muitos mais, com suporte total de acessibilidade VoiceOver e Dynamic Type."
       },
       {
         "question": "Posso acompanhar os custos por categoria, como materiais e mão de obra?",
-        "answer": "Sim — os custos vivem onde está o trabalho. Divida o projeto em fases e tarefas e associe a cada uma os materiais, acessórios, itens de mão de obra e orçamentos necessários. O gráfico de orçamento soma tudo como gasto, comprometido e restante, e o relatório PDF discrimina cada item."
+        "answer": "Sim. Registe pagamentos e separe materiais, mão de obra e empreiteiro. O preço de cada item soma-se ao total acumulado. O gráfico de orçamento face ao real faz parte do Home Stories Pro."
       },
       {
         "question": "Como faço a gestão de vários empreiteiros?",
-        "answer": "Agrupe o trabalho em fases e tarefas para que cada ofício saiba o que acontece e quando — o eletricista antes do estucador. Partilhe o projeto por iCloud para que um empreiteiro acompanhe orçamento, tarefas e fotos em direto, ou exporte um PDF apenas com as secções de que precisa."
+        "answer": "Mantenha os pagamentos de cada ofício separados dos materiais e da mão de obra, e guarde orçamentos e contratos como documentos do projeto. Partilhar o projeto em tempo real ou exportar um PDF faz parte do Home Stories Pro."
       },
       {
         "question": "Como evito ultrapassar o orçamento?",
-        "answer": "O gráfico de orçamento mostra o gasto, o comprometido e o restante num relance, por isso um excesso aparece enquanto ainda há tempo para agir. Adicione o widget ao ecrã principal ou de bloqueio para manter o anel do orçamento à vista sem abrir a app."
+        "answer": "A app gratuita mantém um total acumulado à medida que regista itens e pagamentos. O Home Stories Pro acrescenta um gráfico de orçamento face ao real. Um widget do ecrã principal pode mostrar o orçamento sem abrir a app."
       },
       {
         "question": "Os dados do meu projeto têm cópia de segurança?",
-        "answer": "Sim — com a sincronização iCloud ativa, os seus projetos vivem na sua conta iCloud e acompanham-no para um iPhone novo. Tudo também funciona totalmente offline; as alterações sincronizam quando voltar a estar online."
+        "answer": "As cópias locais são grátis, tal como a exportação completa dos dados. A sincronização iCloud, que põe o projeto nos outros dispositivos, faz parte do Home Stories Pro e fica desligada até a ativar."
       }
     ]
   },
@@ -249,8 +248,8 @@ const pt: Translation = {
           "Cronologia fotográfica com fotos datadas",
           "Registo de despesas e preços de artigos",
           "Funciona totalmente offline",
-          "Sincronização iCloud entre dispositivos",
-          "Widgets de ecrã principal e de bloqueio"
+          "Cópias locais e exportação de dados",
+          "Tarefas, registo de tempo e widgets do ecrã principal"
         ],
         "cta": ""
       },
@@ -258,10 +257,11 @@ const pt: Translation = {
         "name": "Home Stories Pro",
         "period": "compra única — sem subscrição",
         "features": [
-          "Metas de orçamento e gráfico orçamento-custos",
-          "Análise de custos avançada",
-          "Exportação PDF e CSV de relatórios e registos de tempo",
-          "Lembretes de tarefas e notificações de prazos"
+          "Gráfico de orçamento face ao real",
+          "Lembretes de tarefas",
+          "Exportação PDF",
+          "Sincronização iCloud",
+          "Partilha do projeto"
         ],
         "cta": "Obter a app — atualize lá dentro"
       }
@@ -285,17 +285,17 @@ const pt: Translation = {
       {
         "aspect": "Totais",
         "them": "Fórmulas que escreve e mantém sozinho",
-        "us": "Gasto, comprometido e restante — automático"
+        "us": "Um total acumulado. Materiais, mão de obra e empreiteiro separados."
       },
       {
         "aspect": "Na obra",
         "them": "Ampliar células no telemóvel",
-        "us": "Feito para iPhone, funciona totalmente offline"
+        "us": "Feito para iPhone e iPad, funciona totalmente offline"
       },
       {
         "aspect": "Partilha",
         "them": "Enviar budget_v7_final_FINAL.xlsx por e-mail",
-        "us": "Partilha iCloud em direto, ou um PDF que todos leem"
+        "us": "Partilha iCloud ou um PDF — ambos fazem parte do Pro"
       },
       {
         "aspect": "Recibos",
@@ -312,7 +312,7 @@ const pt: Translation = {
   },
   "appBanner": {
     "title": "Meça a próxima.",
-    "subtitle": "Grátis na App Store. Funciona offline, não precisa de conta e sincroniza com o iCloud quando quiser. Requer um iPhone com iOS 17 ou posterior."
+    "subtitle": "Grátis na App Store para iPhone e iPad. Funciona offline e não precisa de conta. Requer iOS 17 ou posterior."
   },
   "stakes": {
     "label": "O problema",
@@ -329,7 +329,7 @@ const pt: Translation = {
     "success": {
       "label": "O outro caminho",
       "title": "Ou chega à entrega ainda com os recibos na mão",
-      "body": "Gasto, comprometido e restante ficam num só ecrã desde o primeiro dia. Cada custo, fotografia e nota cai no projeto a que pertence, enquanto ainda está de pé na divisão. No dia da entrega a obra inteira é um PDF: os números, a cronologia e a prova do que estava atrás da parede."
+      "body": "Um total acumulado está no projeto desde o primeiro dia, com materiais, mão de obra e empreiteiro separados. Fotos e notas caem no mesmo projeto enquanto ainda está na divisão."
     },
     "cta": "Comece a registar — grátis"
   }

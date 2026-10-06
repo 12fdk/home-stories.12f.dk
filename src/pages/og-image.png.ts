@@ -99,7 +99,7 @@ export async function GET(_context: APIContext) {
                       opacity: 0.9,
                       letterSpacing: "-0.3px",
                     },
-                    children: "Free renovation tracker for iPhone · home-stories.12f.dk",
+                    children: "Free renovation tracker for iPhone and iPad · home-stories.12f.dk",
                   },
                 },
               ],

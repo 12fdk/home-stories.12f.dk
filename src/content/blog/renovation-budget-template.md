@@ -154,12 +154,12 @@ I'll be honest: this template is great until about week four of a real renovatio
 
 Then the dust starts. Decisions multiply. You're at a tile shop, you're at the builder's merchant, you're approving a contractor invoice on your phone while standing in your half-demolished kitchen. The spreadsheet — even on your phone — is too clumsy to update in real time. So you stop. Then the budget stops being accurate. Then it stops being useful. It's a common enough pattern that it's worth reading about [why renovation spreadsheets break down](/blog/renovation-spreadsheet-alternative/) before you rely on one for a long project.
 
-This is the exact problem I was trying to solve when I built [Home Stories](/) — a free iPhone app that does what the spreadsheet does, plus:
+This is the exact problem I was trying to solve when I built [Home Stories](/) — a free app for iPhone and iPad that does what the spreadsheet does, plus:
 
 - Adds line items by typing or voice in 5 seconds (vs. opening a sheet, finding the row, tapping the cell)
 - Attaches a receipt photo to every cost as you log it (essential for tax and warranty claims)
-- Shows budget vs. actual on a visual chart updated in real time
-- Exports the whole thing as a PDF when you're done
+- Keeps a running total as you log. The budget-vs-actual chart is part of Pro
+- Exports a PDF of the project when you're done — that export is part of Pro
 
 It uses the same 9-category structure as the template. If you start on the spreadsheet and migrate to the app at week 4, your categories carry across.
 

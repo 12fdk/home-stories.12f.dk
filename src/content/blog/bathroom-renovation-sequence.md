@@ -136,7 +136,7 @@ A simple task list organized by phase helps. You can't order the vanity until we
 
 Budget tracking helps too. You have a number in your head for the project, and somewhere along the way, you need to know: how much have we spent, how much is committed (on order but not yet installed), and how much is left? A simple budget tracker — whether it's a spreadsheet or a purpose-built tool — lets you see whether you're still inside your spread. [How to budget a home renovation](/blog/how-to-budget-a-home-renovation/) has a fuller breakdown of where money goes and how to plan it out.
 
-Home Stories is built for this kind of thing. It lets you break a renovation into phases, set tasks with dates, and track what you've spent against what you committed. It's free on iOS, works offline, and exports PDF reports so you can share progress with contractors or just have a record for your own files. But you can absolutely do this with a notebook or a spreadsheet. The system matters more than the tool.
+Home Stories is built for this kind of thing. It lets you break a renovation into phases, keep tasks, and track a running total as you log payments. It's free on iPhone and iPad, works offline, and Pro adds a PDF report so you can share progress with contractors or keep a record. But you can absolutely do this with a notebook or a spreadsheet. The system matters more than the tool.
 
 ## Wrapping up
 
@@ -149,7 +149,7 @@ If you're planning one, start with the sequence, not the tile. Figure out the or
 
 ---
 
-Home Stories is free on the App Store and works fully offline on iPhone. If you're planning a renovation and want a simple way to keep tasks, budget, and photos organized in one place, you can find it at [the App Store](https://apps.apple.com/app/id6754754960).
+Home Stories is free on the App Store and works fully offline on iPhone and iPad. If you're planning a renovation and want a simple way to keep tasks, budget, and photos organized in one place, you can find it at [the App Store](https://apps.apple.com/app/id6754754960).
 
 ## Sources and further reading
 
