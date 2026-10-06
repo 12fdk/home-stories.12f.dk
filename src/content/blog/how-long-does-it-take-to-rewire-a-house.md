@@ -3,10 +3,10 @@ title: "How Long Does It Take to Rewire a House? Realistic Time by Size"
 description: "How long does it take to rewire a house? The realistic timeline, what makes it run long, and how to plan around the delays."
 lede: "A full rewire of an average home takes one to three weeks of active on-site work, but six to eight weeks from first quote to a house you can decorate. The electrician is rarely the bottleneck: permits, the consumer unit arriving, the inspection slot and the decorator's calendar are what stretch it."
 keyword: "how long does it take to rewire a house"
-cover: "/stock/20.png"
+cover: "/stock/20.webp"
 coverAlt: "An electrician working at an open wall socket in a partly renovated room, with new cables visible"
 publishDate: 2026-07-29
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["electrical", "planning", "timeline", "safety"]
 tldr:
@@ -66,7 +66,7 @@ That's about 1.5 to 3 weeks, assuming the electrician is working Monday to Frida
 
 The electrician will typically work room by room. You lose power in one room at a time. The most disorienting moment is usually the consumer-unit swap — the old board comes out, the new one isn't yet live, and for a couple of days the entire house is dark. A good electrician will schedule this for a weekend or a week when you don't need much power.
 
-![An open consumer unit (fuse box) on a wall in a utility room, with new circuit breakers installed and cables running into new trunking](/stock/21.png)
+![An open consumer unit (fuse box) on a wall in a utility room, with new circuit breakers installed and cables running into new trunking](/stock/21.webp)
 
 ## The hidden weeks: before and after the electrician
 
@@ -82,7 +82,7 @@ The on-site work is only part of the timeline. If you count from the first phone
 
 This make-good phase is often longer than the electrician's actual work, and it's the single most common reason people say a rewire "went longer than expected."
 
-![A corridor in a house during a rewire, with holes in the wall where cables have been pulled, patched plaster waiting to be sanded, and new cable channels on the floor](/stock/22.png)
+![A corridor in a house during a rewire, with holes in the wall where cables have been pulled, patched plaster waiting to be sanded, and new cable channels on the floor](/stock/22.webp)
 
 ## What makes a rewire run long
 
@@ -106,7 +106,7 @@ You can absolutely live in your house during a rewire. Most people do. But here'
 
 **The noise is concentrated but real.** A rewire is nothing like a full renovation — there's no jackhammering, no demolition. But chasing into walls, drilling through floors, and stripping old cable can be noisy, especially in the first few days when the electrician is opening up the old installation.
 
-![A home office setup on a folding table in a hallway, with a laptop, coffee, and extension cords — the temporary workspace during a house rewire](/stock/23.png)
+![A home office setup on a folding table in a hallway, with a laptop, coffee, and extension cords — the temporary workspace during a house rewire](/stock/23.webp)
 
 ## Where Home Stories fits in
 
@@ -141,11 +141,13 @@ A full house rewire takes about **1 to 3 weeks of on-site work** and **3 to 6 we
 
 The things that reliably stretch the timeline are not the electrician's pace but the things outside their control: permit wait times, inspector availability, decorator calendars, and what the walls turn out to contain once they open them. If you plan for those gaps — book the decorator early, ask the electrician about inspection timelines, and leave room for surprises — the rewire runs smoother than most people expect.
 
-![A finished new consumer unit neatly installed, all circuits labelled, cables properly terminated, and the cover plate screwed on — the clean result after a house rewire](/stock/24.png)
+![A finished new consumer unit neatly installed, all circuits labelled, cables properly terminated, and the cover plate screwed on — the clean result after a house rewire](/stock/24.webp)
 
 The best time to do a full rewire is when you're already opening the walls for something else. A kitchen or bathroom renovation is the obvious choice — but any project that involves chasing into walls is a good time to also get the electrics right. You pay for opening walls once; don't pay twice because you decided the wiring was "probably fine."
 
 If you're planning a rewire, the first step is a professional assessment. Most electricians will walk through the house, look at what you've got, and tell you whether a full rewire is needed or if a targeted update will do. That assessment takes an hour, costs almost nothing, and saves you from making a decision in the dark — which, in an electrical project, is exactly the kind of dark spot you want to avoid.
+
+Rewires often uncover the wider [hidden costs of an older home](/blog/hidden-costs-older-home/) — budget the discovery, not just the cable.
 
 ## Sources and further reading
 

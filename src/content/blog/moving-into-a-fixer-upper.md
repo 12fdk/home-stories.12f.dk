@@ -3,7 +3,7 @@ title: "Moving Into a Fixer-Upper: The First Month, in Order"
 description: "Moving into a fixer upper? The first-month must-do order — what to fix before you live in it, what to inspect, and what to leave for later."
 lede: "You can fix the peeling paint, but you cannot live with a dripping ceiling. The first month in a fixer-upper is about sorting the house into two lists — must-happen-before-we-move-in, and safe-to-live-with — in that order."
 keyword: "moving into a fixer upper first steps"
-cover: "/stock/32.png"
+cover: "/stock/32.webp"
 coverAlt: "A wide shot of an older fixer-up living room on moving-in day: worn hardwood floors, patched bare plaster walls, a few unpacked cardboard boxes, warm late-afternoon light through the window"
 publishDate: 2026-08-08
 author: "Robert Jensen"
@@ -39,7 +39,7 @@ A fixer-upper is not a project you do once and leave. It is a house you have to 
 
 Here is the order I would use, and the thinking behind each step.
 
-![Floor plans on a desk with a calculator, tape measure, notebook and pen](/stock/09.png)
+![Floor plans on a desk with a calculator, tape measure, notebook and pen](/stock/09.webp)
 
 ## Before you unpack a single box
 
@@ -63,7 +63,7 @@ Once you have the list, you do the first column in a fixed order, and the order 
 
 **3. Electricity.** The breaker box, any outlet that is warm or does nothing, any wiring that is not what it should be. An electrical problem is not a cosmetic problem and not one you defer, because the house you are about to live in is one you will sleep in. In many places an upgrade on an older house needs a licensed electrician to sign off the work — check your local rules rather than assuming you can wire it yourself.
 
-![An electrician working at an open wall socket in a partly renovated room, with new cables visible](/stock/20.png)
+![An electrician working at an open wall socket in a partly renovated room, with new cables visible](/stock/20.webp)
 
 **4. Heating and the envelope.** Heating that will not work in winter is a must-do *before* winter, not after you have moved in and found out. The envelope — roof, windows, doors, drains, the places the weather gets in — is the same: a leaking roof is a must-do before you spend a cent on the room under it, because that is the room you will be re-doing.
 
@@ -71,7 +71,7 @@ Once you have the list, you do the first column in a fixed order, and the order 
 
 The reason the order is fixed is that each layer above protects the layer below. You do not tile a bathroom that will be re-opened because of a pipe behind the wall. You do not paint a ceiling that will be re-screeded because of a leak above it. Do the work that can survive the next layer first, and the work that cannot survive it last.
 
-![Workers installing new asphalt shingles on a residential roof under clear daylight](/stock/25.png)
+![Workers installing new asphalt shingles on a residential roof under clear daylight](/stock/25.webp)
 
 ## What you can live with, and what you are allowed to leave
 
@@ -87,7 +87,7 @@ Everything else in the first month is variation. Two mistakes show up again and 
 
 **Cosmetic work before structural work.** This is the one that wastes the most money, because the work you did is real work that is now wasted. The new floor under the leaking pipe. The painted wall over the damp. The finished bathroom behind the pipe that is going to be moved. Every one of these is a version of the same error, and the fix is the order above: the must-do list first, the can-wait list after, and the can-wait list only in the order that does not put it in the way of the must-do list.
 
-![An empty room freshly painted white, with a paint tray and roller left on the floor](/stock/11.png)
+![An empty room freshly painted white, with a paint tray and roller left on the floor](/stock/11.webp)
 
 **Signing a contractor for the whole project before you have the list.** A contractor who is given a fixer-upper and told "do the house" will give you a number that is not a number — it is a guess about a house he has not opened up. A contractor who is given a written list of specific, dated, photographed problems will give you a number that is a number. The [way to deal with a contractor on a job like this](/blog/managing-contractor-change-orders/) starts with the list, because the list is the contract, and without it you are negotiating against your own guess. If you are doing the must-do work as a sequence of separate jobs — which is usually the right shape for a fixer-upper, because each trade does one specific thing — the written list is what lets you compare one trade's quote against the next one's, and it is what keeps the project from becoming one big unexplained invoice.
 

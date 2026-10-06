@@ -5,10 +5,10 @@ description: "Renovation contingency budget — why you need 15-20% extra, where
 
 lede: "A renovation contingency budget isn't padding or pessimism — it's a funded line item for the surprises you can't see yet. Size it to the home (15–25%, not the builder's-folklore 10%), ring-fence it so it isn't spent on upgrades by week three, and draw it down visibly so you always know how much runway is left."
 keyword: "renovation contingency budget"
-cover: "/stock/07.png"
+cover: "/stock/07.webp"
 coverAlt: "A gutted bathroom with patched, pockmarked walls and a basin balanced on a timber trestle"
 publishDate: 2026-06-22
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:
@@ -40,7 +40,7 @@ Almost every renovation that goes over budget had a contingency — on paper. Th
 
 This post is the dedicated deep-dive promised in [how to budget a home renovation](/blog/how-to-budget-a-home-renovation/): how much contingency to set aside, what it's genuinely for, when it's fair to dip in, and how to keep it honest while the dust is flying.
 
-![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.png)
+![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.webp)
 
 ## What a contingency actually is (and isn't)
 
@@ -133,6 +133,15 @@ The sequencing matters. The riskiest moments in a renovation are demolition, str
 So the rule is simply about timing: don't treat the buffer as spare until the surprises it insures against can no longer happen.
 
 ## Putting it together
+
+Weather-sensitive trades eat contingency and calendar together; see [how long a roof replacement takes](/blog/how-long-does-a-roof-replacement-take/).
+
+
+For why overruns cluster the way they do, [renovation cost overrun patterns](/blog/renovation-cost-overrun-statistics/) pairs with the contingency percentage you just chose.
+
+
+Loft work often burns contingency on structure and insulation surprises; [how long a loft conversion takes](/blog/how-long-does-a-loft-conversion-take/) explains where time (and money) usually stretch.
+
 
 A renovation contingency budget that actually protects you comes down to four things:
 

@@ -44,7 +44,7 @@ function Navbar() {
           <img
             className="h-9 rounded-[22%] md:h-10"
             src={withBase(logo)}
-            alt=""
+            alt={`${name} app icon`}
             width={40}
             height={40}
           />

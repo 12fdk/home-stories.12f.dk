@@ -5,10 +5,10 @@ description: "How to budget a home renovation — 7 steps to build an honest bud
 
 lede: "To budget a home renovation without going over, build it from itemised quotes (not a single lump sum), add a 15–25% contingency, and track actual vs. estimated per line item from day one. The overrun almost always comes from costs nobody listed, not from prices that rose."
 keyword: "how to budget a home renovation"
-cover: "/stock/09.png"
+cover: "/stock/09.webp"
 coverAlt: "Floor plans on a desk with a calculator, tape measure, notebook and pen"
 publishDate: 2026-06-01
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "planning", "how-to"]
 tldr:
@@ -40,7 +40,7 @@ Most renovations don't blow the budget because prices rose 40% overnight. They b
 
 This is the method I've used across my own projects and watched work for friends: build the number from the ground up, protect it with the right contingency, and keep it alive while the work happens. It takes a couple of hours to set up and about five minutes a week to maintain.
 
-![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.png)
+![A home renovation budget spread out on a wooden table, open calculator, tape measure, notebook with handwritten notes, pens, and renovation planning documents spread across the surface](/stock/09.webp)
 
 ## Step 1: Define the scope before you touch a number
 
@@ -159,6 +159,21 @@ Say your kitchen-and-bathroom project has construction quotes totalling **$40,00
 The $40,000 quote was real — but the true number to plan and finance around is nearly **$68,000**. People who budgeted $40k didn't overspend by 70%; they under-budgeted by the hidden third and the contingency from the start.
 
 ## Putting it together
+
+Flooring often looks cheap until drying time and underlay appear — [how long it takes to install flooring](/blog/how-long-does-it-take-to-install-flooring/).
+
+
+Extension budgets need a long runway; [how long a house extension takes](/blog/how-long-does-a-house-extension-take/) explains the waiting that is not on the quote.
+
+
+Budgets fail in predictable ways — [renovation cost overrun statistics](/blog/renovation-cost-overrun-statistics/) (as patterns, not fake precision) shows where to watch.
+
+
+After the budget categories exist, [comparing contractor quotes line by line](/blog/how-to-compare-contractor-quotes/) is how you keep those categories honest.
+
+
+Wet-room budgets also need a sequence: the [bathroom renovation sequence](/blog/bathroom-renovation-sequence/) shows where costs land relative to waterproofing and second-fix visits.
+
 
 Budgeting a renovation without going over isn't about predicting the future perfectly. It's about:
 

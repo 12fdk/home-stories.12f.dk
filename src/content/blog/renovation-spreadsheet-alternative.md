@@ -8,7 +8,7 @@ keyword: "renovation spreadsheet alternative"
 cover: "/stock/04.webp"
 coverAlt: "A man photographing a half-painted wall with his phone to document the progress"
 publishDate: 2026-05-25
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]
 tldr:
@@ -31,6 +31,7 @@ relatedSlugs:
   - "renovation-budget-template"
   - "how-to-track-home-improvement-expenses"
   - "renovation-checklist-printable"
+  - "what-to-track-during-a-renovation"
 ---
 
 There's a quiet pattern in every renovation project. It goes like this.
@@ -122,6 +123,12 @@ If you've started with a spreadsheet (and you should — for planning), it's not
 
 ## When a spreadsheet is the right answer
 
+Notion sits in the same planning-strong / site-weak camp — [Notion for home renovation](/blog/notion-for-home-renovation/) spells out the trade-off.
+
+
+When it stops being the right answer, [how to track home improvement expenses](/blog/how-to-track-home-improvement-expenses/) compares the methods people actually sustain.
+
+
 Three cases where I'd stick with a spreadsheet:
 
 1. **Planning-only phase.** Before contractors are hired and demolition starts, you're in research mode. A spreadsheet — or Notion, or Airtable — is great for that.
@@ -130,11 +137,28 @@ Three cases where I'd stick with a spreadsheet:
 
 For everything else — multi-week, multi-trade, mobile-life, on-site decisions — the app comparison wins on logging speed alone, and the cascade of consequences (current data, attached photos, easier handoff) compounds from there.
 
+
+## What should a renovation spreadsheet alternative actually cover?
+
+If you are shopping for a renovation spreadsheet alternative, ignore feature lists that sound like a full ERP. You need a short list that maps to the moments where spreadsheets die:
+
+1. **Budget vs actual** with categories you already use (design, demolition, structure, MEP, finishes, fixtures, contingency).
+2. **Committed money** separate from spent — signed quotes and deposits that have not left the account yet.
+3. **Photos and documents** attached to the same project as the money (quotes, contracts, receipts).
+4. **Tasks and a rough sequence** so a slipped trade date is visible.
+5. **Export** — a PDF or shareable summary for a contractor, insurer, or future you.
+
+Anything beyond that is optional. Warranty databases and whole-home asset inventories are useful for some households; they are not what saves a mid-renovation budget.
+
+A worked example of the logging threshold (illustrative): logging twelve line items from a merchant run takes about twelve minutes in a spreadsheet if you are careful with categories, and about two minutes in a phone form with a receipt photo. Over a twelve-week project with three merchant runs a week, that is roughly seven hours versus under two hours — and more importantly, the spreadsheet version is the one people skip. The skipped hours are where "$847 miscellaneous" comes from.
+
+If your project is still in planning, keep the spreadsheet. Use the [renovation budget template](/blog/renovation-budget-template/) to force the category structure once. When execution starts, move the open line items into whatever tool you will actually open on site. For the habits that matter once walls open, [what to track during a renovation](/blog/what-to-track-during-a-renovation/) is the companion checklist.
+
 ## How to make the switch (15 minutes)
 
 If you're already two weeks into a spreadsheet and want to migrate:
 
-1. **Download Home Stories** (free, App Store).
+1. **Download a phone-first renovation tracker** (for example the free App Store listing linked below).
 2. **Create a project** with your total budget. Use the same name as your spreadsheet file.
 3. **Add the 9 categories** as phases (Design & permits, Demolition, Structural, MEP, Finishes, Fixtures, Furniture, Finance, Contingency).
 4. **Copy in active line items only.** Don't re-enter completed ones — those live in the spreadsheet as a historical record. Just bring forward what's still open.
@@ -150,9 +174,7 @@ If that moment happens at a kitchen tile shop with one free hand, the right tool
 
 ## Sources and further reading
 
-The ranges and guidance above are drawn from direct project experience and
-from the bodies below, which publish the underlying standards, rules and
-market data. They are worth reading directly before you commit money.
+Consumer guidance and housing-economics pages worth reading if you are deciding how formal your tracking needs to be.
 
 - [Housing economics and remodeling market data](https://www.nahb.org/news-and-economics/housing-economics) — National Association of Home Builders
 - [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission

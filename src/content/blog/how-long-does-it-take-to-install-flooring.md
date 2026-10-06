@@ -3,7 +3,7 @@ title: "How Long Does It Take to Install Flooring? Realistic Ranges by Type"
 description: "How long does it take to install flooring? Realistic timelines for laminate, LVP, hardwood, tile — plus the hidden delays that push projects past the quote."
 lede: "Most flooring takes one to three days of actual installation per room, but anywhere from four days to five weeks from order to walking on it. The gap is acclimation, removing the old floor, levelling the subfloor and cure time. Laminate and LVP are quickest; solid hardwood is slowest by a wide margin."
 keyword: "how long does it take to install flooring"
-cover: "/stock/22.png"
+cover: "/stock/22.webp"
 coverAlt: "An open living room with subfloor exposed and several types of flooring samples laid out in a row"
 publishDate: 2026-07-31
 updatedDate: 2026-08-27
@@ -75,7 +75,7 @@ Then there's acclimation. Laminate specifically needs to sit in the room for for
 
 **[The kitchen renovation timeline](/blog/kitchen-renovation-timeline/)** covers how flooring fits into the broader sequence of a renovation. Flooring often comes at the end of the hard trades — after demo, after plumbing and electrical work, after plaster and paint. Knowing when your flooring fits into that sequence matters more than the install time itself.
 
-![A room with underlayment fully laid out and rolls of laminate flooring stacked against the wall, tools ready at the doorway](/stock/23.png)
+![A room with underlayment fully laid out and rolls of laminate flooring stacked against the wall, tools ready at the doorway](/stock/23.webp)
 
 ## Tile: two active days spread across a week
 
@@ -101,7 +101,7 @@ Finishing is where the timeline stretches out. Most hardwood floors get two to t
 
 **Total elapsed time from order to walking-on-floor: three to five weeks.** Most of that is waiting — waiting for the wood to acclimate, waiting for finish to dry, waiting between coats. The actual hands-on labour is maybe four days total.
 
-![Close-up of a hardwood floor being sanded, with fine dust in the air and the sander mid-pass](/stock/24.png)
+![Close-up of a hardwood floor being sanded, with fine dust in the air and the sander mid-pass](/stock/24.webp)
 
 ## Engineered wood: the middle ground
 

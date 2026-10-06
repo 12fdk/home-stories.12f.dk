@@ -5,10 +5,10 @@ description: "How to plan a home renovation — 6 phases from inspiration to han
 
 lede: "Planning a home renovation doesn't have to mean spreadsheets, anxiety, and surprises that blow your budget. The right approach breaks the entire process into discrete, manageable steps — each with a clear start, a clear deliverable, and a clear next step. This guide walks you through every phase of a home renovation, from the very first decision to the final walkthrough, with realistic timelines and costs so you know exactly what comes next."
 keyword: "how to plan a home renovation step by step"
-cover: "/stock/13.png"
+cover: "/stock/13.webp"
 coverAlt: "Two hands tracing a line across architectural drawings spread over a table"
 publishDate: 2026-07-14
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "step-by-step", "first-timer", "guide"]
 tldr:
@@ -36,7 +36,7 @@ relatedSlugs:
   - "what-to-track-during-a-renovation"
 ---
 
-![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.png)
+![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.webp)
 
 If you're planning a home renovation for the first time, the sheer number of decisions can feel overwhelming. Which comes first — the design or the budget? How do you compare contractor quotes? What happens if things go over budget mid-project?
 
@@ -59,7 +59,7 @@ Walk through the space you want to renovate and write down every issue:
 
 Don't filter anything yet. Get the full list on paper. This is your raw material.
 
-### 1.2. Prioritise: must-have vs nice-to-have
+### 1.2. Prioritise: essential vs nice-to-have
 
 Now categorise every item:
 
@@ -75,7 +75,7 @@ This prioritisation is your first filter. When budget realities hit (and they al
 
 At this stage, you're just building taste and setting expectations:
 
-- Look at inspiration photos (Pinterest, Instagram, Houzz)
+- Look at inspiration photos (Pinterest, Instagram, design directories)
 - Visit showrooms to touch materials
 - Browse supplier websites for pricing
 - Read forums and Reddit threads about renovation experiences
@@ -132,9 +132,12 @@ Once you have your scope and your research, build a budget with every line item:
 - Contingency
 - Temporary living arrangements (if needed)
 
-Home Stories does this automatically — you enter your budget, log every expense as it happens, and the app shows you your remaining buffer in real time. You always know whether you're on track or in trouble. [It's free on the App Store](https://apps.apple.com/app/id6754754960).
+A dedicated budget tracker does this automatically — you enter your budget, log every expense as it happens, and see your remaining buffer in real time. You always know whether you're on track or in trouble. The [budget guide](/blog/how-to-budget-a-home-renovation/) walks through the structure; [comparing contractor quotes line by line](/blog/how-to-compare-contractor-quotes/) comes next once numbers are locked.
 
 ## Phase 3: Design the scope
+
+If the project is a wet room, the [bathroom renovation sequence](/blog/bathroom-renovation-sequence/) matters as much as the drawings — waterproofing and fixture order are where DIY schedules usually break.
+
 
 Now that you know what you want and what you can afford, it's time to design.
 
@@ -176,13 +179,16 @@ The drawings serve two purposes: they get your permits approved, and they give c
 Most structural, electrical, and plumbing work requires permits. The process varies by municipality but generally involves:
 
 1. Submitting your drawings and application
-2. Paying a permit fee (usually 0.5–1.5% of project cost)
+2. Paying a permit fee (often a small fraction of one percent of the build cost — confirm locally)
 3. Waiting for review (1–4 weeks)
 4. Scheduling inspections as work progresses
 
 Your contractor should handle permits for you, but confirm this upfront. Unpermitted work can affect your home insurance, your ability to sell, and your ability to get financing for future projects.
 
 ## Phase 4: Select your contractor
+
+Before you hire anyone, be honest about [DIY versus hiring a contractor](/blog/diy-vs-hire-contractor/) for each trade — the decision changes both budget and timeline.
+
 
 ### 4.1. Get at least three quotes
 
@@ -211,7 +217,7 @@ Before hiring:
 
 - Ask for 3–5 recent client references and actually call them
 - Ask to see completed projects similar to yours
-- Check online reviews (Google, Houzz, local forums)
+- Check online reviews (Google, trade directories, local forums)
 - Verify the contractor is licensed and insured
 
 ### 4.4. Sign a detailed contract
@@ -230,7 +236,7 @@ Never start work without a signed contract. Period.
 
 ## Phase 5: Manage the construction
 
-This is where Home Stories becomes your best friend.
+This is where a single project record becomes your best friend.
 
 ### 5.1. Set up your tracking system
 
@@ -241,7 +247,7 @@ Before the first wall comes down:
 - Save your contractor's contact information and schedule
 - Take baseline photos of the space from every angle
 
-Home Stories lets you do all of this in one place. Create a project, add rooms, set budgets per room, and start logging expenses and photos from day one.
+A phone-first renovation app lets you do all of this in one place. Create a project, add rooms, set budgets per room, and start logging expenses and photos from day one.
 
 ### 5.2. Log expenses as they happen
 
@@ -250,7 +256,7 @@ Every invoice, receipt, and change order goes into your tracker. The key is real
 - If you discover a $2,000 issue in week one, you can adjust scope or contingency while there's still time.
 - If you discover it in week eight, the money is already spent and there's nothing you can do about it.
 
-Home Stories shows your remaining buffer update the moment a new expense hits, so you always know where you stand.
+The remaining buffer updates the moment a new expense hits, so you always know where you stand.
 
 ### 5.3. Track progress photos
 
@@ -346,7 +352,7 @@ Planning a home renovation is a process — not a single decision or a single da
 
 Skip a phase and you pay for it. Follow them in order and you end up with exactly what you wanted, on budget, and with far less stress than most people experience.
 
-The [renovation budget template](/blog/renovation-budget-template/) gives you a starting point for your budget. The [7 phases of a home renovation](/blog/home-renovation-phases/) guide shows you what happens during each phase. And [Home Stories](https://apps.apple.com/app/id6754754960) tracks every step of the process from your first decision to your final walkthrough — so you're never guessing where you stand.
+The [renovation budget template](/blog/renovation-budget-template/) gives you a starting point for your budget. The [7 phases of a home renovation](/blog/home-renovation-phases/) guide shows you what happens during each phase. And a phone-first tracker keeps every step of the process from your first decision to your final walkthrough — so you're never guessing where you stand.
 
 ## Related posts
 
@@ -362,13 +368,17 @@ Understanding how to plan a home renovation step by step is only half the equati
 
 [Home Stories](https://apps.apple.com/app/id6754754960) does all of that automatically. Set up a project, define your rooms and budgets, and start logging expenses and photos from the first decision to the final walkthrough. It's free on the App Store, and it replaces the chaos of spreadsheets, notebooks, and scattered photos.
 
-*Home Stories is free on the App Store.*
+Vertical projects have their own clocks — [how long a loft conversion takes](/blog/how-long-does-a-loft-conversion-take/) is a useful reality check before you promise a finish date.
+
+If you just got the keys to a rough house, the [fixer-upper first-month order](/blog/moving-into-a-fixer-upper/) is a tighter starting list than a full renovation plan.
+
+Keep an insurance-ready trail while you build: [documenting a renovation for insurance](/blog/documenting-renovation-for-insurance/).
+
+Brand-new keys and no idea which room first? Start with [where to start renovating a new house](/blog/where-to-start-renovating-new-house/).
 
 ## Sources and further reading
 
-The ranges and guidance above are drawn from direct project experience and
-from the bodies below, which publish the underlying standards, rules and
-market data. They are worth reading directly before you commit money.
+Regulatory and consumer-protection pages worth reading before you commit money on a full renovation plan.
 
 - [Home improvements and repairs](https://www.hud.gov/topics/home_improvements) — US Dept. of Housing and Urban Development
 - [How To Avoid a Home Improvement Scam](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) — US Federal Trade Commission

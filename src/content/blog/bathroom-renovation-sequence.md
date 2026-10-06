@@ -3,10 +3,10 @@ title: "Bathroom Renovation Order: The Sequence That Saves Time and Money"
 description: "Bathroom renovation order of work — the step-by-step sequence that keeps trades on schedule, avoids rework, and protects your budget."
 lede: "There's a right order to renovate a bathroom and a wrong one. Get it wrong and you'll be tearing tiles off to fix a pipe. Get it right and the whole thing runs itself."
 keyword: "bathroom renovation order of work"
-cover: "/stock/29.png"
+cover: "/stock/29.webp"
 coverAlt: "A mid-reno bathroom showing exposed wall studs, plumbing rough-ins, and a partially tiled wall — the look of a project in the middle of its sequence"
 publishDate: 2026-08-06
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["bathroom", "renovation", "sequence", "project planning", "phasing"]
 tldr:
@@ -40,7 +40,7 @@ That's the hardest part. A bathroom renovation isn't a list of tasks — it's a 
 
 The sequence is well-known: tear everything out, run the new infrastructure, seal it, put the surfaces on, install the fixtures, and wrap up. The hard part isn't knowing the steps — it's managing them and making sure nothing gets forgotten.
 
-![An old bathroom mid-demolition, with vanity removed and wall tiles being pried off — dust and debris covering the floor](/stock/06.png)
+![An old bathroom mid-demolition, with vanity removed and wall tiles being pried off — dust and debris covering the floor](/stock/06.webp)
 
 ## The phases, in order
 
@@ -96,7 +96,7 @@ This phase is where the bathroom starts looking like a bathroom again. It's also
 
 Any painting that hasn't been done happens now. Then a final walkthrough — a loose tile, a caulk bead that needs reworking, a paint splatter on the new faucet.
 
-![A bathroom with newly installed vanity and tile, fixtures in place but grout still fresh — the moment before the space becomes functional again](/stock/11.png)
+![A bathroom with newly installed vanity and tile, fixtures in place but grout still fresh — the moment before the space becomes functional again](/stock/11.webp)
 
 ## Where the timeline goes off the rails
 
@@ -130,7 +130,7 @@ Most projects run in the six-to-eight-week range. A spread of a few weeks either
 
 The sequence isn't complicated. What makes bathroom renovations hard is keeping track of thirty separate decisions happening in the right order, some of which need to be made four weeks before the trade actually needs them.
 
-![A bathroom wall with cement backer board and mesh tape at the joints, waterproofing membrane applied — the infrastructure that makes a tiled bathroom last](/stock/15.png)
+![A bathroom wall with cement backer board and mesh tape at the joints, waterproofing membrane applied — the infrastructure that makes a tiled bathroom last](/stock/15.webp)
 
 A simple task list organized by phase helps. You can't order the vanity until week one. You can't grout tile until it's all set. You can't install the toilet until the floor is tiled. A task list that reflects the actual sequence keeps you from booking the next phase before the last one is done.
 
@@ -139,6 +139,9 @@ Budget tracking helps too. You have a number in your head for the project, and s
 Home Stories is built for this kind of thing. It lets you break a renovation into phases, set tasks with dates, and track what you've spent against what you committed. It's free on iOS, works offline, and exports PDF reports so you can share progress with contractors or just have a record for your own files. But you can absolutely do this with a notebook or a spreadsheet. The system matters more than the tool.
 
 ## Wrapping up
+
+Floor finishes usually wait until wet work is stable — [how long flooring installation takes](/blog/how-long-does-it-take-to-install-flooring/) sets expectations for drying and acclimation.
+
 
 A bathroom renovation is a sequence, not a shopping list. The right order — demo, rough-ins, waterproofing, tile, fixtures — is known. The hard part is managing it: ordering long-lead items early, catching inspections in time, not rushing the cure phases, and keeping track of what's been spent versus what's left.
 

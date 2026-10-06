@@ -6,10 +6,10 @@ description: "Managing a contractor — how to handle change orders, stop scope 
 lede: "The most expensive conversation in a renovation rarely happens before the first hammer swings. It happens three weeks in, when the plumber opens a wall and says the quote is about to change. Here's how to handle that conversation — and the ones like it — without the relationship imploding."
 
 keyword: "how to deal with contractor change orders"
-cover: "/stock/28.png"
+cover: "/stock/28.webp"
 coverAlt: "A homeowner standing in an open kitchen space, talking with a tradesperson who is pointing at plans on a tablet"
 publishDate: 2026-08-04
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["contractor", "budgeting", "communication", "planning"]
 tldr:
@@ -158,6 +158,9 @@ All of this — scopes, change orders, daily notes, photo documentation of work 
 [Home Stories](https://apps.apple.com/app/id6754754960) is a free iPhone app built specifically for this kind of thing. It keeps your budget, your change-order notes, your before-and-after photos, and your receipt scans all attached to the same project. There's also a PDF export if you need to share everything with a partner, accountant, or insurance company. But the principle matters more than the tool — whatever system you choose, make it centralised, date-stamped, and hard to lose.
 
 ## Wrapping up
+
+Change orders mostly appear when you hire; if you are still deciding what to keep in-house, read [DIY vs hire a contractor](/blog/diy-vs-hire-contractor/) first.
+
 
 Managing a contractor isn't about control. It's about clarity.
 

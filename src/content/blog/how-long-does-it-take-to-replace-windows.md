@@ -3,7 +3,7 @@ title: "How Long Does It Take to Replace Windows? Realistic Ranges"
 description: "How long does it take to replace windows? Realistic time ranges for a single window through a full-house job, plus the delays that always creep in."
 lede: "A single like-for-like window replacement takes one day. A full-house job across ten to fifteen windows takes one to three weeks on site. Elapsed time is far longer: fabrication runs three to eight weeks before anyone arrives, and patching and painting the reveals afterwards adds another one to two weeks."
 keyword: "how long does it take to replace windows"
-cover: "/stock/21.png"
+cover: "/stock/21.webp"
 coverAlt: "A worker fitting a new double-glazed window into an exposed wall opening on a residential property"
 publishDate: 2026-07-30
 updatedDate: 2026-08-27
@@ -56,7 +56,7 @@ The honest answer depends on how many windows you're talking about, how old the 
 
 Neither of these numbers includes the time between ordering and delivery, which is the biggest source of delay by far. Windows are often fabricated to your exact size, colour, and glass specification — and that takes time. Add two to six weeks for ordering, depending on the supplier.
 
-![A new window frame fitted into an exposed wall opening, with insulation visible around the edges and tools nearby](/stock/06.png)
+![A new window frame fitted into an exposed wall opening, with insulation visible around the edges and tools nearby](/stock/06.webp)
 
 *The installation itself is only part of the timeline. What happens before and after — ordering, make-good, and decoration — often takes longer than the install.*
 
@@ -88,7 +88,7 @@ Every project has its own delay profile, but there are some that show up again a
 
 The [bathroom renovation timeline](/blog/how-long-does-a-bathroom-renovation-take/) and the [rewiring guide](/blog/how-long-does-it-take-to-rewire-a-house/) both cover the same theme: the visible work is only part of the project, and the invisible gaps between trades are where delays accumulate. Window replacement follows the same pattern.
 
-![A close-up of a new window handle and locking mechanism installed in a freshly fitted frame](/stock/10.png)
+![A close-up of a new window handle and locking mechanism installed in a freshly fitted frame](/stock/10.webp)
 
 *Even the details — handles, locks, hinges — need to be specified and ordered before the install starts. They're small things that can stop the entire project if you forget them.*
 

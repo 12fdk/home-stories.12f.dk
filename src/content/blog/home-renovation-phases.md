@@ -5,10 +5,10 @@ description: "The 6 home renovation phases you can't skip, from planning to snag
 
 lede: "Every home renovation moves through the same seven phases, whether it's a single bathroom or a whole house. Knowing the sequence — and the one or two things that actually matter to track in each phase — is what separates a project that stays on plan from one that drifts."
 keyword: "home renovation phases"
-cover: "/stock/08.png"
+cover: "/stock/08.webp"
 coverAlt: "A room stripped back to timber studs and ceiling joists, with wiring run and windows unfinished"
 publishDate: 2026-06-08
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "phases", "how-to"]
 tldr:
@@ -38,7 +38,7 @@ Ask ten homeowners how a renovation works and you'll get ten different stories. 
 
 Knowing those phases does two things. It tells you what's coming next, so you're never blindsided. And it tells you the one or two things actually worth tracking at each stage — because the metric that matters in week one (have I defined the scope?) is not the one that matters in week ten (am I drawing down contingency too fast?). Track the wrong thing at the wrong time and the project drifts while your spreadsheet looks fine.
 
-![Open floor renovation in progress, structural beams exposed, walls removed to merge two rooms into one open space](/stock/08.png)
+![Open floor renovation in progress, structural beams exposed, walls removed to merge two rooms into one open space](/stock/08.webp)
 
 Here are the seven phases, in order, and what to keep your eye on in each.
 
@@ -116,6 +116,8 @@ The first: **problems are created early and revealed late.** Overruns and delays
 The second: **the thing worth tracking changes as you go.** Scope and decisions early. Itemised budget and contingency once costs are known. Actual-vs-estimate, change orders, and photos during the build. Defects and documents at the end. A tool that only does one of these — a planning spreadsheet, a contractor's email thread, a shoebox of receipts — leaves the others uncovered.
 
 That's the case for keeping the whole arc in one place. [Home Stories](https://apps.apple.com/app/id6754754960) holds all seven phases in a single project — scope, budget, line-item tracking, change orders, photos, and a PDF report at the end — so nothing falls into the gap between phases. It's free on the App Store, and it's built to carry a renovation from the first sketch to the final signed-off snag.
+
+Phases assume you already know the starting room — [where to start renovating a new house](/blog/where-to-start-renovating-new-house/) covers that first cut.
 
 ## Sources and further reading
 

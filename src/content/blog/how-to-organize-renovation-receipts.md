@@ -8,7 +8,7 @@ keyword: "how to organize renovation receipts"
 cover: "/stock/03.webp"
 coverAlt: "A man at a kitchen table reading a paper receipt, more receipts and a phone spread in front of him"
 publishDate: 2026-07-13
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "organization", "tax", "insurance"]
 tldr:
@@ -41,7 +41,7 @@ The shoebox represents thousands of dollars in evidence that no longer works. An
 
 Getting this right isn't about being tidy. It's about the fact that a renovation receipt is a financial instrument with a very long fuse.
 
-![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.png)
+![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.webp)
 
 ## Why renovation receipts are worth real money
 
@@ -116,6 +116,10 @@ That's the whole thing. It takes ten seconds per receipt during the project, and
 The alternative isn't chaos, exactly. It's a shoebox — which looks like a system right up until the day you need it, and then quietly isn't one.
 
 If you'd rather not keep a shoebox at all, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Log each cost with its receipt photo and room as it happens, and export a complete, dated record of the whole renovation whenever your accountant, your insurer, or your buyer asks for one.
+
+Receipt capture is one job; if you also need measuring or design tools, [the renovation apps round-up](/blog/best-home-improvement-apps/) separates those categories cleanly.
+
+Receipts are half the story — [documenting a renovation for insurance](/blog/documenting-renovation-for-insurance/) covers the photo and valuation side.
 
 ## Sources and further reading
 

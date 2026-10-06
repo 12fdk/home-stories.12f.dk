@@ -8,7 +8,7 @@ keyword: "renovation budget template"
 cover: "/stock/01.webp"
 coverAlt: "A couple standing in a stripped room, looking at a tablet together, paint swatches taped to the wall"
 publishDate: 2026-05-18
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["budgeting", "templates", "planning"]
 tldr:
@@ -35,7 +35,7 @@ relatedSlugs:
 
 The full template — categories, line items, and a contingency formula — is laid out in this post so you can recreate it in any spreadsheet tool (Google Sheets, Excel, Numbers) in about 10 minutes. A polished printable PDF and pre-built Google Sheet copy are coming shortly and will be linked here.
 
-If you'd rather skip the spreadsheet entirely, the same structure is built into [Home Stories](/) — free on the App Store — so you can track it from your phone on-site instead.
+If you'd rather skip the spreadsheet entirely, the same category structure belongs in whatever phone-first tool you will actually open on site.
 
 ## Why most renovation budget templates fail
 
@@ -182,6 +182,8 @@ Polished PDF and Google Sheet copies of this template are in preparation and wil
 If you'd rather skip the spreadsheet entirely, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Same 9 categories, same contingency logic, but you can log a receipt in 5 seconds at the builder's merchant.
 
 Either way: get the structure right, get the contingency right, and log actuals the day they happen. That's 80% of the battle.
+
+A template is the plan; [how to track home improvement expenses](/blog/how-to-track-home-improvement-expenses/) is the day-to-day method once money starts moving.
 
 ## Sources and further reading
 

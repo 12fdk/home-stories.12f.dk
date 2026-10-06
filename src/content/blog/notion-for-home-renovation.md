@@ -5,10 +5,10 @@ description: "When Notion works as a home renovation tracker, where it falls apa
 
 lede: "Notion is genuinely excellent for the planning half of a renovation: research, mood boards, contractor notes, a flexible database you can shape however you think. It's just as genuinely frustrating for the execution half — logging a receipt one-handed in a dusty kitchen — because it was never built for a phone on a building site. This is an honest map of where each tool wins."
 keyword: "notion for home renovation"
-cover: "/stock/12.png"
+cover: "/stock/12.webp"
 coverAlt: "Power tools, tape measures and a hammer laid out across a worn workbench"
 publishDate: 2026-06-29
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "tools", "comparison"]
 tldr:
@@ -38,7 +38,7 @@ If you spend any time in renovation forums, you'll find two camps that talk past
 
 Both camps are right. They're just describing different halves of a renovation. Notion is a genuinely excellent tool for one half and a genuinely frustrating one for the other, and the line between them is sharp enough to be worth drawing carefully. This isn't a hit piece on Notion — I like Notion, and there's a specific phase where it beats almost everything. It's a map of where it wins, where it doesn't, and why "where" turns out to matter more than "features."
 
-![A collection of professional renovation tools laid out on a workbench — drill, level, tape measure, stud finder, and other equipment, realistic photo of renovation equipment](/stock/12.png)
+![A collection of professional renovation tools laid out on a workbench — drill, level, tape measure, stud finder, and other equipment, realistic photo of renovation equipment](/stock/12.webp)
 
 ## The two halves of a renovation
 
@@ -78,7 +78,10 @@ The trouble starts the day the work does. The same flexibility that makes Notion
 
 None of these is a flaw in Notion as a product. They're the cost of generality. A tool that can be anything isn't optimised for the one repetitive thing a live renovation demands.
 
-## Where Home Stories wins: the on-site logging job
+## Where a phone-first tracker wins: the on-site logging job
+
+For the broader field (design, measuring, contractor portals), [best home improvement apps](/blog/best-home-improvement-apps/) maps which tool fits which phase.
+
 
 [Home Stories](https://apps.apple.com/app/id6754754960) is the opposite trade-off. It can't be a contractor CRM or a mood board, and it doesn't try. It does one job: make capturing a cost, a photo, a task, or a note take seconds on your phone while you're standing in the room.
 
@@ -90,11 +93,11 @@ What that buys you in the execution phase:
 - **Task tracking that lives where the work is.** Tick things off from the site, not from a desk you're rarely at during a build.
 - **PDF export.** A clean summary for your records, your accountant, or your own sanity at handover.
 
-The point isn't that Home Stories has more features than Notion — it deliberately has fewer. It's that the features it has are pointed at the exact task Notion makes hardest, and removing the friction from that task is what keeps the data honest for the whole build.
+The point isn't that the tracker has more features than Notion — it deliberately has fewer. It's that the features it has are pointed at the exact task Notion makes hardest, and removing the friction from that task is what keeps the data honest for the whole build.
 
 ## Side by side
 
-| | **Notion** | **Home Stories** |
+| | **Notion** | **Phone-first tracker** |
 |---|---|---|
 | Planning hub & free-form pages | Excellent | Not its job |
 | Contractor research database | Excellent | Limited |
@@ -117,9 +120,11 @@ This isn't a "switch to the app and delete Notion" post. The genuinely useful se
 
 The two don't really compete; they hand off. Notion holds the static planning artefacts you'll refer back to. The app holds the live, fast-moving record of what's actually happening on-site. The handoff point is roughly the day the first wall comes down.
 
-And if you only want *one* new tool — if you've already got planning handled in Notion, a spreadsheet, or your head — then add the one for the part that actually breaks. The part that breaks is never the planning. It's keeping the budget honest while the work is underway, logging one-handed in a room full of dust. That's the part Notion handles worst, and the part [Home Stories was built for](/blog/how-to-budget-a-home-renovation/).
+And if you only want *one* new tool — if you've already got planning handled in Notion, a spreadsheet, or your head — then add the one for the part that actually breaks. The part that breaks is never the planning. It's keeping the budget honest while the work is underway, logging one-handed in a room full of dust. That's the part Notion handles worst, and the part a dedicated renovation budget tool was built for — see [how to budget a home renovation](/blog/how-to-budget-a-home-renovation/).
 
 [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960) — keep your Notion hub for planning, and let a phone-first tracker carry the budget through the months when a desk tool can't.
+
+If your shortlist is platforms rather than Notion, read [HomeZada vs Houzz Pro](/blog/homezada-vs-houzz-pro/) next.
 
 ## Sources and further reading
 

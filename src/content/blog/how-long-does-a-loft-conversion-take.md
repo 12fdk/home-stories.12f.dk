@@ -3,7 +3,7 @@ title: "How Long Does a Loft Conversion Take? Realistic Timeline by Type"
 description: "How long does a loft conversion take? Realistic timelines from planning permission to the last coat of paint, with the delays that actually matter."
 lede: "A dormer loft conversion takes six to ten weeks on site; a mansard takes ten to sixteen. Add four to eight weeks of planning permission, structural engineering and building regulations first. Where the staircase lands is the decision that shapes everything else, and getting it wrong restarts the design."
 keyword: "how long does a loft conversion take"
-cover: "/stock/27.png"
+cover: "/stock/27.webp"
 coverAlt: "A timber-framed loft conversion under construction, showing exposed roof trusses and new floor joists"
 publishDate: 2026-08-03
 updatedDate: 2026-08-27

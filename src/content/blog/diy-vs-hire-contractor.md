@@ -3,10 +3,10 @@ title: "DIY vs. Contractor: The Five-Minute Test That Saves You Money"
 description: "How to decide between DIY and hiring a contractor — a simple framework based on your time, risk tolerance, and the real cost of mistakes."
 lede: "Every renovator eventually reaches the same fork: do I tackle this myself, or call in a professional? The answer isn't about skill level or pride. It's about a few practical questions most people never think to ask before they've already bought the materials."
 keyword: "should I DIY or hire a contractor"
-cover: "/stock/19.png"
+cover: "/stock/19.webp"
 coverAlt: "A person in casual work clothes holding a drill, standing in a room mid-renovation with tools laid out on a sawhorse, natural window light"
 publishDate: 2026-07-20
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["planning", "contractors", "budget"]
 tldr:
@@ -65,7 +65,7 @@ This is where DIY projects usually go off the rails. You find yourself watching 
 
 This isn't a rant against DIY. It's about scope. Every project has hidden steps that nobody films a video about because they're obvious to people who do this for a living. But they're not obvious to you, and they're not free.
 
-![A workbench covered with tools, measuring tape, and building supplies next to an open notebook with project notes](/stock/07.png)
+![A workbench covered with tools, measuring tape, and building supplies next to an open notebook with project notes](/stock/07.webp)
 
 **The test:** Write down every step the project requires — including the prep, the cleanup, and the tools you'd need. Then compare that list to what you've actually planned for. The gap is usually where the budget and the timeline both die.
 
@@ -82,7 +82,7 @@ The most honest mistake homeowners make is not about skill or consequence. It's 
 
 This is the part nobody wants to hear because it makes DIY sound expensive. But "free" DIY is only free if you're willing to give the hours away without charging yourself. The moment you put a dollar figure on your own time — even a modest one — the cost comparison usually tilts toward hiring someone who does this every day.
 
-![A close-up of a phone screen showing a project tracking app with a list of hours logged and expenses tracked](/stock/08.png)
+![A close-up of a phone screen showing a project tracking app with a list of hours logged and expenses tracked](/stock/08.webp)
 
 ### 4. Can you see the finished result in your head?
 
@@ -136,9 +136,17 @@ The DIY or contractor decision is rarely about skill. It's about three things:
 - **Scope** — how many hidden steps are there that nobody mentions until you're in the middle of them?
 - **Time** — what are your hours actually worth, when you count every minute?
 
-![A finished kitchen with new cabinets and counters, natural light coming through the windows](/stock/10.png)
+![A finished kitchen with new cabinets and counters, natural light coming through the windows](/stock/10.webp)
 
 Run through those four questions. If the numbers surprise you (and they probably will), you've saved yourself a lot of potential pain. And if the answer is still "I think I can handle this" — well, nobody's stopping you. Just know exactly what you're signing up for.
+
+Loft conversions are rarely weekend DIY — [how long a loft conversion takes](/blog/how-long-does-a-loft-conversion-take/) shows why the calendar is mostly waiting on structure and inspections.
+
+Once you decide to hire, [how to compare contractor quotes](/blog/how-to-compare-contractor-quotes/) stops you picking on headline price alone.
+
+Extensions are almost always hire territory — [how long a house extension takes](/blog/how-long-does-a-house-extension-take/) shows where the calendar actually goes.
+
+Most homeowners hire window crews; [how long window replacement takes](/blog/how-long-does-it-take-to-replace-windows/) is mostly manufacturing and making-good, not the fit day.
 
 ## Sources and further reading
 

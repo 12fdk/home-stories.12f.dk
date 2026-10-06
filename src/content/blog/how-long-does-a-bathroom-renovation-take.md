@@ -3,7 +3,7 @@ title: "How Long Does a Bathroom Renovation Take? Realistic Ranges by Scope"
 description: "How long does a bathroom renovation take? Realistic time ranges for a refresh through a full gut, plus the delays that always creep in."
 lede: "A bathroom renovation takes three to six weeks on site for a refresh that keeps the existing plumbing, or eight to twelve weeks for a full gut with fixtures relocated. Add two to four weeks of design and permitting first. Custom shower pan fabrication and tile cure time are the delays early estimates miss."
 keyword: "how long does a bathroom renovation take"
-cover: "/stock/17.png"
+cover: "/stock/17.webp"
 coverAlt: "A bathroom mid-renovation with exposed wall framing, visible plumbing pipes, and tools on the floor"
 publishDate: 2026-07-28
 updatedDate: 2026-08-27
@@ -57,7 +57,7 @@ Neither of these numbers includes the design and permitting phase that happens *
 
 If you're new to managing a home renovation at all, a [step-by-step planning guide](/blog/how-to-plan-a-home-renovation-step-by-step/) walks through the full process from initial sketch to the first day of demolition, including the decisions you need to make and in what order.
 
-![A bathroom with the old vanity and tile removed, exposing the bare wall and floor, tools on the ground](/stock/08.png)
+![A bathroom with the old vanity and tile removed, exposing the bare wall and floor, tools on the ground](/stock/08.webp)
 
 *The visible transformation happens during the middle weeks — but what happens before and after often takes longer than the installation itself.*
 
@@ -107,7 +107,7 @@ The [kitchen renovation duration post](/blog/how-long-does-a-kitchen-renovation-
 
 **Days 36–42: punch list and final cleanup.** Something's never quite right. A tile edge that looks crooked in the light. A caulk line that's too thick. The vanity drawer that sticks. These are the small things that matter to you but are invisible to anyone else. The punch list exists so they get fixed before the contractor walks away.
 
-![A finished bathroom with a new vanity, mounted mirror, and tiled floor, soft natural lighting from the window](/stock/09.png)
+![A finished bathroom with a new vanity, mounted mirror, and tiled floor, soft natural lighting from the window](/stock/09.webp)
 
 *The last two weeks are always about small things — the things you notice the most once the room stops looking like a construction site.*
 

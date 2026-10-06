@@ -5,10 +5,10 @@ description: "HomeZada vs Houzz Pro — comparing two popular renovation tools: 
 
 lede: "HomeZada is the feature-heavy veteran, Houzz Pro targets contractors rather than homeowners, and Home Stories is the lean phone-first tracker built for one job. If you're a homeowner tracking your own renovation, Home Stories is the only one of the three that fits the way you actually work on-site."
 keyword: "homezada vs houzz pro"
-cover: "/stock/14.png"
+cover: "/stock/14.webp"
 coverAlt: "A tradesman fitting a white tiled backsplash above a kitchen worktop"
 publishDate: 2026-07-06
-updatedDate: 2026-08-27
+updatedDate: 2026-10-06
 author: "Robert Jensen"
 tags: ["comparison", "apps", "planning", "tools"]
 tldr:
@@ -37,20 +37,20 @@ relatedSlugs:
 
 You're planning a renovation and you've probably landed here by searching for one of two things: *HomeZada alternatives* or *Houzz Pro vs HomeZada*. You want a tool — or maybe two — to keep your renovation from spiralling into chaos. That's a reasonable instinct. The real question is which tool fits the way you actually work.
 
-This post compares **HomeZada**, **Houzz Pro**, and **Home Stories** across the dimensions that matter for a homeowner running their own renovation: budget tracking, on-site logging, photo management, tasks, export, pricing, and — crucially — whether the app actually gets used once the dust starts flying.
+This post compares **HomeZada**, **Houzz Pro**, and a phone-first renovation tracker across the dimensions that matter for a homeowner running their own renovation: budget tracking, on-site logging, photo management, tasks, export, pricing, and — crucially — whether the app actually gets used once the dust starts flying.
 
-I'm Robert Jensen, and I've been researching renovation planning tools since we launched Home Stories. This isn't an ad — it's a feature-by-feature breakdown from someone who's compared every option and built the tool they didn't want to see exist.
+I'm Robert Jensen. I've compared the main renovation planning tools as both a renovator and an app builder. This is a feature-by-feature breakdown of who each product is actually for — not a feature laundry list.
 
 ## TL;DR
 
 - **HomeZada** is the most feature-rich option — asset tracking, warranty management, budgets, document storage — but it's a desktop-first product. Its iOS app hasn't shipped an update since May 2022 and averages 2.9★ on the App Store.
 - **Houzz Pro** is a contractor business platform. It includes CRM, invoicing, and lead management designed for people running a trade business. Homeowners don't need any of those features.
-- **Home Stories** is a phone-first renovation tracker for one audience: homeowners who need to log costs, photos, and tasks from their phone while standing in a half-demolished room. It's free and requires no setup.
+- **A phone-first renovation tracker** is for homeowners who need to log costs, photos, and tasks from their phone while standing in a half-demolished room. Free options exist; setup is usually under two minutes.
 - The deciding factor isn't features — it's whether you can actually use the tool on-site. Desktop-first tools quietly abandon you once demolition starts.
 
 ## HomeZada: the feature-heavy veteran
 
-HomeZada has been around since 2006 and bills itself as the *ultimate home management system.* It's not just renovation — it covers the entire home: asset tracking, warranty management, maintenance scheduling, document storage, room-by-room photos, and project budgets for renovations and additions.
+HomeZada has been around since 2006 and bills itself as a complete home management system. It's not just renovation — it covers the entire home: asset tracking, warranty management, maintenance scheduling, document storage, room-by-room photos, and project budgets for renovations and additions.
 
 If your home is your biggest project and you want one place to manage everything about it, HomeZada has genuine appeal. The renovation features include:
 
@@ -73,7 +73,7 @@ The bigger problem is the workflow. HomeZada's strength is comprehensive data en
 
 **Bottom line:** HomeZada is a great home-management system for planning and record-keeping from a desk. It's a poor renovation companion once work starts on-site.
 
-![Kitchen backsplash tile installation in progress, white subway tiles being laid, a trowel and grout visible, realistic photo of backsplash work](/stock/14.png)
+![Kitchen backsplash tile installation in progress, white subway tiles being laid, a trowel and grout visible, realistic photo of backsplash work](/stock/14.webp)
 
 ## Houzz Pro: built for professionals, not homeowners
 
@@ -98,35 +98,36 @@ There is a separate, free consumer version of Houzz — just "Houzz" — which i
 
 **Bottom line:** Neither Houzz Pro nor the consumer Houzz app is designed for homeowners tracking their own renovation. Skip both if you need budget, photo, and task tracking.
 
-## Home Stories: built for one job
+## A phone-first alternative: built for one job
 
-Home Stories was built for a different audience entirely: homeowners who are planning or executing their own renovation and need a tool that works on a phone, in a dusty room, one-handed, with bad lighting.
+There is a third option aimed at a different audience entirely: homeowners who are planning or executing their own renovation and need a tool that works on a phone, in a dusty room, one-handed, with bad lighting.
 
 The feature set is intentionally narrow:
 
 - **Budget tracking** — set up room-by-room budgets with categories, log costs, see remaining balances.
 - **Photo timeline** — take or upload photos of every stage, add notes and captions, build a chronological record.
 - **Task lists** — create tasks per room or phase, check them off as completed.
+- **Documents and receipts** — store quotes, contracts and receipts against the project.
 - **PDF export** — generate a clean report you can send to a contractor, your bank, or a tax adviser.
 - **Multi-project support** — manage a house renovation and a cottage on the go.
 
-It's free on the App Store for iPhone (requires iOS 17 or later), with an optional one-time Home Stories Pro upgrade for people who want the expanded features.
+It is free on the App Store for iPhone (requires iOS 17 or later), with an optional one-time Pro upgrade for expanded features such as iCloud sync, project sharing and PDF export.
 
-### What Home Stories does well
+### What phone-first actually changes
 
-What makes Home Stories different isn't that it has more features than HomeZada — it doesn't. It's that it has **the right features, in the right interface, for the right moment.**
+What makes this approach different is not that it has more features than HomeZada — it doesn't. It has **the right features, in the right interface, for the right moment.**
 
-Budget tracking on Home Stories looks like this: tap the + button, type the amount, pick a category, and it's logged. Your remaining balance updates instantly. You can do that in a builder's merchant in three seconds. On a desktop tool, that same action requires opening the app, navigating to the budget screen, opening the right project, finding the right category, typing the amount, and saving. By the time you've done it, you've lost the motivation to do it again.
+Budget tracking looks like this: tap the + button, type the amount, pick a category, and it's logged. Your remaining balance updates instantly. You can do that in a builder's merchant in three seconds. On a desktop tool, that same action requires opening the app, navigating to the budget screen, opening the right project, finding the right category, typing the amount, and saving. By the time you've done it, you've lost the motivation to do it again.
 
-The photo timeline works the same way. You're standing in a room, the plumber has just opened the wall, you snap a photo, add a note, and it's in the timeline. No file management, no folder structure, no naming conventions. Just a photo with a timestamp and your notes. That's it. That's the tool.
+The photo timeline works the same way. You're standing in a room, the plumber has just opened the wall, you snap a photo, add a note, and it's in the timeline. No file management, no folder structure, no naming conventions. Just a photo with a timestamp and your notes.
 
-**PDF export** is the kicker. HomeZada exports too, but it exports to HomeZada-specific formats. Home Stories exports to standard PDF — so when you need to show a contractor what's been tracked, or a tax adviser what's been spent, you can hand them a universally readable document.
+**PDF export** is the kicker. HomeZada exports too, but often into its own formats. A phone-first tracker that exports to standard PDF means you can hand a contractor or a tax adviser a universally readable document.
 
 ## Feature comparison
 
 Here's how the three stack up on the criteria that actually matter for a homeowner:
 
-| Feature | HomeZada | Houzz Pro | Home Stories |
+| Feature | HomeZada | Houzz Pro | Phone-first tracker |
 |---|---|---|---|
 | **Primary audience** | Homeowners (desk) | Contractors (business) | Homeowners (phone) |
 | **Budget tracking** | Yes, desktop-first | Project management, not personal budget | Yes, phone-first |
@@ -140,7 +141,7 @@ Here's how the three stack up on the criteria that actually matter for a homeown
 
 ## So which should you use?
 
-It depends on who you are and where you are in the renovation timeline. If you're still deciding what you need a tool to do at all, [what to track during a renovation](/blog/what-to-track-during-a-renovation/) is the better starting point — the shortlist gets much easier once you know which four or five things actually need recording.
+It depends on who you are and where you are in the renovation timeline. If you're still deciding what you need a tool to do at all, [what to track during a renovation](/blog/what-to-track-during-a-renovation/) is the better starting point — the shortlist gets much easier once you know which four or five things actually need recording. For quote-heavy projects, [how to compare contractor quotes](/blog/how-to-compare-contractor-quotes/) pairs well with whichever tracker you pick.
 
 **Use HomeZada if:** You already manage your home's assets, warranties, and maintenance in it from a desk. It's a home-management system with renovation features. If the whole house is your project and you want one platform for everything, it has the breadth. Just accept that it's going to be a planning tool, not an on-site companion.
 
@@ -148,7 +149,7 @@ It depends on who you are and where you are in the renovation timeline. If you'r
 
 **Use the free Houzz app if:** You're looking for design inspiration. It's great for browsing and saving ideas. It's useless for anything that requires data entry.
 
-**Use Home Stories if:** You're a homeowner tracking your own renovation and you want a tool that you'll actually use on-site. It's phone-first, it takes seconds to log a cost or take a photo, and it exports to PDF so you have a record you can share. It's free, and you can start using it in under two minutes.
+**Use a phone-first renovation tracker if:** You're a homeowner tracking your own renovation and you want a tool that you'll actually use on-site. It takes seconds to log a cost or take a photo, and it exports to PDF so you have a record you can share. You can usually start in under two minutes.
 
 ## Why phone-first beats feature-rich for on-site use
 
@@ -160,19 +161,19 @@ HomeZada has more features than either of the other two. That's its strength for
 
 Houzz Pro has zero features relevant to a homeowner's renovation. It's not a matter of friction — it's a matter of being the wrong tool for the job entirely.
 
-Home Stories has exactly the features a homeowner needs for execution: budget, photo, task, and report. Nothing more, nothing less. And it runs on the device you already carry into the room.
+A phone-first tracker has exactly the features a homeowner needs for execution: budget, photo, task, and report. Nothing more, nothing less. And it runs on the device you already carry into the room.
 
 ## Putting it together
 
 If you want to plan from a desk and log from your phone, you might use HomeZada for the planning phase and then switch to something phone-first when execution starts. That's a perfectly reasonable approach — just accept that the switching cost is real, and that most people abandon the planning tool entirely once work begins. The same trade-off shows up with general-purpose tools: [Notion for a home renovation](/blog/notion-for-home-renovation/) and [the spreadsheet approach](/blog/renovation-spreadsheet-alternative/) both plan well and both get abandoned around the point the dust starts.
 
-If you want one tool from start to finish, and that tool needs to survive on-site conditions, Home Stories is the only option on this list designed for that from the ground up. It's free to try, takes two minutes to set up, and exports to a format a contractor or accountant will actually open.
+If you want one tool from start to finish, and that tool needs to survive on-site conditions, pick the option designed for that from the ground up. Free to try, minutes to set up, and a format a contractor or accountant will actually open.
 
 You can compare the full details on each product's website:
 
 - [HomeZada](https://www.homezada.com) — home management platform with renovation features
 - [Houzz Pro](https://www.houzz.com/pro) — contractor and designer business tools
-- [Home Stories](https://apps.apple.com/app/id6754754960) — free renovation tracking for iPhone
+- [App Store listing for a phone-first tracker](https://apps.apple.com/app/id6754754960) — free renovation tracking for iPhone
 
 The decision isn't about which app has the most features. It's about which tool you'll still be using in the third month of a renovation, when you're tired, the budget is tight, and you just need to log one more receipt before the invoice deadline.
 
@@ -182,9 +183,7 @@ The decision isn't about which app has the most features. It's about which tool 
 
 ## Sources and further reading
 
-The ranges and guidance above are drawn from direct project experience and
-from the bodies below, which publish the underlying standards, rules and
-market data. They are worth reading directly before you commit money.
+Product pages and consumer guidance linked above are worth reading directly before you commit money. The Houzz study is listed only as further reading on industry scope patterns — this article does not rely on its statistics.
 
 - [Houzz & Home study — renovation spend and scope data](https://www.houzz.com/magazine/2024-us-houzz-and-home-study-stsetivw-vs~171833394) — Houzz
 - [For the Home — consumer guidance](https://consumer.ftc.gov/shopping-and-donating/for-the-home) — US Federal Trade Commission
