@@ -33,10 +33,13 @@ export function BlogAppBanner({ config }: Props) {
   );
 }
 
-export function BlogStickyDownload({ config }: Props) {
+export function BlogStickyDownload({
+  config,
+  context,
+}: Props & { context?: "blog" }) {
   return (
     <ConfigContext.Provider value={config}>
-      <StickyDownload />
+      <StickyDownload context={context} />
     </ConfigContext.Provider>
   );
 }
