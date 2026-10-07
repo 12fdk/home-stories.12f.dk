@@ -143,6 +143,7 @@ const speakableSchema = articleSchema
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href={config.logo} />
     <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0A6CF1" />
     <meta name="generator" content={Astro.generator} />
 
     <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
@@ -162,6 +163,8 @@ const speakableSchema = articleSchema
 
     <link rel="alternate" type="text/plain" href={new URL("/llms.txt", Astro.site).href} title="LLM-readable content" />
     <link rel="alternate" type="text/plain" href={new URL("/llms-full.txt", Astro.site).href} title="LLM-readable full content" />
+    <link rel="alternate" type="text/plain" href={new URL("/ai.txt", Astro.site).href} title="AI usage policy" />
+    <link rel="author" type="text/plain" href={new URL("/humans.txt", Astro.site).href} title="humans.txt" />
 
     <meta name="ai-content-declaration" content="human-authored" />
     <meta name="ai-usage" content="allow" />
