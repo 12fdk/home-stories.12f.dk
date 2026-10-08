@@ -37,3 +37,4 @@ seo-audit-*.pdf
 
 # reddit-topics.py feed cache (tools/reddit-topics.py)
 .cache/
+__pycache__/
