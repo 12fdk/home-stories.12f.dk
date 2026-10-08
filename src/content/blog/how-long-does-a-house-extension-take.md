@@ -83,7 +83,7 @@ An extension follows a strict sequence of phases. You cannot meaningfully overla
 
 If you already know the sequence and want to see what a realistic week-by-week schedule looks like for a comparable renovation, [a practical kitchen renovation timeline](/blog/kitchen-renovation-timeline/) works through one in detail — the same principles of sequencing and lead times apply to an extension, just on a bigger scale.
 
-![A finished single-storey house extension with large glazed doors leading into a kitchen, the brickwork clean and pointed](/stock/20.webp)
+![An opened interior wall with new electrical cable, a voltage tester, and wire strippers resting on the studs](/stock/20.webp)
 
 *The end result looks simple — but the timeline from empty ground to finished room involves at least twenty weeks of tightly sequenced trade work.*
 

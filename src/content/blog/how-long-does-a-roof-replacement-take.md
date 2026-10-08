@@ -4,7 +4,7 @@ description: "How long a roof replacement takes, from tear-off to cleanup, with 
 lede: "A full roof replacement on an average house takes one to three days of active work, but two to four weeks from signing the quote to the final walkthrough. The crew is fast. Ordering materials, waiting for a dry-weather window and scheduling the inspection are what fill the calendar."
 keyword: "how long does a roof replacement take"
 cover: "/stock/25.webp"
-coverAlt: "Workers installing new asphalt shingles on a residential roof under clear daylight"
+coverAlt: "Fresh asphalt shingles on a residential roof, with a roofing nailer, chalk line, and a bundle of shingles on the deck"
 publishDate: 2026-08-01
 updatedDate: 2026-08-27
 author: "Robert Jensen"

@@ -63,7 +63,7 @@ Once you have the list, you do the first column in a fixed order, and the order 
 
 **3. Electricity.** The breaker box, any outlet that is warm or does nothing, any wiring that is not what it should be. An electrical problem is not a cosmetic problem and not one you defer, because the house you are about to live in is one you will sleep in. In many places an upgrade on an older house needs a licensed electrician to sign off the work — check your local rules rather than assuming you can wire it yourself.
 
-![An electrician working at an open wall socket in a partly renovated room, with new cables visible](/stock/20.webp)
+![An opened interior wall with new electrical cable, a voltage tester, and wire strippers resting on the studs](/stock/20.webp)
 
 **4. Heating and the envelope.** Heating that will not work in winter is a must-do *before* winter, not after you have moved in and found out. The envelope — roof, windows, doors, drains, the places the weather gets in — is the same: a leaking roof is a must-do before you spend a cent on the room under it, because that is the room you will be re-doing.
 
@@ -71,7 +71,7 @@ Once you have the list, you do the first column in a fixed order, and the order 
 
 The reason the order is fixed is that each layer above protects the layer below. You do not tile a bathroom that will be re-opened because of a pipe behind the wall. You do not paint a ceiling that will be re-screeded because of a leak above it. Do the work that can survive the next layer first, and the work that cannot survive it last.
 
-![Workers installing new asphalt shingles on a residential roof under clear daylight](/stock/25.webp)
+![Fresh asphalt shingles on a residential roof, with a roofing nailer, chalk line, and a bundle of shingles on the deck](/stock/25.webp)
 
 ## What you can live with, and what you are allowed to leave
 

@@ -6,7 +6,7 @@ description: "How to plan a home renovation — 6 phases from inspiration to han
 lede: "Planning a home renovation doesn't have to mean spreadsheets, anxiety, and surprises that blow your budget. The right approach breaks the entire process into discrete, manageable steps — each with a clear start, a clear deliverable, and a clear next step. This guide walks you through every phase of a home renovation, from the very first decision to the final walkthrough, with realistic timelines and costs so you know exactly what comes next."
 keyword: "how to plan a home renovation step by step"
 cover: "/stock/13.webp"
-coverAlt: "Two hands tracing a line across architectural drawings spread over a table"
+coverAlt: "Architectural drawings spread on plywood over a sawhorse, with a pencil, a scale ruler, and a coffee cup"
 publishDate: 2026-07-14
 updatedDate: 2026-10-06
 author: "Robert Jensen"
@@ -36,7 +36,7 @@ relatedSlugs:
   - "what-to-track-during-a-renovation"
 ---
 
-![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.webp)
+![Architectural drawings spread on plywood over a sawhorse, with a pencil, a scale ruler, and a coffee cup](/stock/13.webp)
 
 If you're planning a home renovation for the first time, the sheer number of decisions can feel overwhelming. Which comes first — the design or the budget? How do you compare contractor quotes? What happens if things go over budget mid-project?
 

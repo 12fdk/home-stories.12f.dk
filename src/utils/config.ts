@@ -259,7 +259,7 @@ const templateConfig: TemplateConfig = {
             "Name the project, put a number on it, and give it a deadline. That number is what everything else is measured against.",
           image: "/stock/01.webp",
           imageAlt:
-            "A notebook and calculator on a kitchen worktop beside a tape measure, with a renovation budget written out by hand.",
+            "An open notebook, a calculator, and a coiled tape measure on a worn oak kitchen worktop in morning light.",
         },
         {
           title: "List the work",
@@ -267,7 +267,7 @@ const templateConfig: TemplateConfig = {
             "Break the job into tasks, then add the materials, fixtures, and quotes each one needs. Estimates now, receipts later.",
           image: "/stock/02.webp",
           imageAlt:
-            "Timber studs and boxed fixtures stacked in a stripped-back room waiting to be fitted.",
+            "Stacks of wood-look flooring planks and ceramic tile samples leaning on a bare concrete floor, with a phone lying face-down.",
         },
         {
           // Costs and photos are one habit on site, not two steps: a plan
@@ -277,7 +277,7 @@ const templateConfig: TemplateConfig = {
             "Log payments as they land and photograph from the app. Materials, labour and contractor stay apart, and the running total updates with them. Every photo is dated and pinned to the project.",
           image: "/stock/03.webp",
           imageAlt:
-            "A pile of building-merchant receipts and invoices spread across a table next to a phone.",
+            "A loose pile of blurred receipts and invoices on a wooden table beside a face-down phone and a pen.",
         },
         {
           title: "Export the report",
@@ -285,7 +285,7 @@ const templateConfig: TemplateConfig = {
             "Pro turns the project into a PDF: budget, tasks, photos and notes, or just the parts you need. Send it to the contractor, the insurer, or the folder you'll want next year.",
           image: "/stock/05.webp",
           imageAlt:
-            "A printed project report on a worktop in a finished room, ready to hand to a contractor.",
+            "A clipped stack of printed report pages on a pale quartz worktop in a finished kitchen.",
         },
       ],
     },

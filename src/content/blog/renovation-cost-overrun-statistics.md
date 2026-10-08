@@ -6,7 +6,7 @@ description: "Renovation cost overrun statistics — why 70%+ of renovations exc
 lede: "Renovations regularly go 15–30% over budget, and that isn't a bug — it's a structural feature of how renovations are planned. The overrun isn't randomness; it's the gap between optimistic pre-project estimates and the inevitable surprises that surface once the walls open. Size your contingency to the evidence, not the folklore."
 keyword: "renovation cost overrun statistics"
 cover: "/stock/10.webp"
-coverAlt: "A close-up of a renovator's hand resting on stripped, unfinished floorboards in a sunlit room"
+coverAlt: "Stripped unfinished pine floorboards in a sunbeam, with a tape measure and a carpenter's pencil resting on them"
 publishDate: 2026-07-13
 updatedDate: 2026-10-06
 author: "Robert Jensen"

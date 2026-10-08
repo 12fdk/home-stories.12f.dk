@@ -6,7 +6,7 @@ description: "HomeZada vs Houzz Pro — comparing two popular renovation tools: 
 lede: "HomeZada is the feature-heavy veteran, Houzz Pro targets contractors rather than homeowners, and Home Stories is the lean phone-first tracker built for one job. If you're a homeowner tracking your own renovation, Home Stories is the only one of the three that fits the way you actually work on-site."
 keyword: "homezada vs houzz pro"
 cover: "/stock/14.webp"
-coverAlt: "A tradesman fitting a white tiled backsplash above a kitchen worktop"
+coverAlt: "A partly installed white subway-tile backsplash with a notched trowel and grout float resting on the worktop"
 publishDate: 2026-07-06
 updatedDate: 2026-10-06
 author: "Robert Jensen"
@@ -73,7 +73,7 @@ The bigger problem is the workflow. HomeZada's strength is comprehensive data en
 
 **Bottom line:** HomeZada is a great home-management system for planning and record-keeping from a desk. It's a poor renovation companion once work starts on-site.
 
-![Kitchen backsplash tile installation in progress, white subway tiles being laid, a trowel and grout visible, realistic photo of backsplash work](/stock/14.webp)
+![A partly installed white subway-tile backsplash with a notched trowel and grout float resting on the worktop](/stock/14.webp)
 
 ## Houzz Pro: built for professionals, not homeowners
 

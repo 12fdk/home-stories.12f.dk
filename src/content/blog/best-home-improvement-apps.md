@@ -6,7 +6,7 @@ description: "Best home improvement apps 2026 — six iPhone apps that are activ
 lede: "There is no single best home improvement app, because a renovation isn't a single job. Finding a contractor, measuring a room, designing a layout, and keeping the budget honest while the dust flies are four different problems, and the apps that are brilliant at one are usually hopeless at the others. Here are six iPhone apps worth your home screen in 2026 — checked against the App Store, not copied from other lists."
 keyword: "best home improvement apps 2026"
 cover: "/stock/02.webp"
-coverAlt: "A renovator kneeling on a bare concrete floor, checking a phone beside stacked tile and flooring samples"
+coverAlt: "Stacks of wood-look flooring planks and ceramic tile samples leaning on a bare concrete floor, with a phone lying face-down"
 publishDate: 2026-07-13
 updatedDate: 2026-10-06
 author: "Robert Jensen"
@@ -42,7 +42,7 @@ Here's how you can tell: **HomeZada appears on nearly every one of those lists.*
 
 So this list is built differently. Every app below was checked against the App Store in July 2026 — rating, review count, and last update date. And it's organised by *job*, because that's the thing the round-ups get most wrong. A renovation isn't one task. It's four, they happen in sequence, and no app is good at all of them.
 
-![Hardwood floor installation in progress, worker placing engineered planks, tools visible nearby](/stock/10.webp)
+![Stripped unfinished pine floorboards in a sunbeam, with a tape measure and a carpenter's pencil resting on them](/stock/10.webp)
 
 ## The four jobs, and why one app can't do them all
 

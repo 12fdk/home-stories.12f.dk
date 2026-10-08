@@ -4,7 +4,7 @@ description: "How to decide between DIY and hiring a contractor — a simple fra
 lede: "Every renovator eventually reaches the same fork: do I tackle this myself, or call in a professional? The answer isn't about skill level or pride. It's about a few practical questions most people never think to ask before they've already bought the materials."
 keyword: "should I DIY or hire a contractor"
 cover: "/stock/19.webp"
-coverAlt: "A person in casual work clothes holding a drill, standing in a room mid-renovation with tools laid out on a sawhorse, natural window light"
+coverAlt: "A cordless drill, driver bits, and screws resting on a sawhorse in a room with one wall half painted"
 publishDate: 2026-07-20
 updatedDate: 2026-10-06
 author: "Robert Jensen"
@@ -136,7 +136,7 @@ The DIY or contractor decision is rarely about skill. It's about three things:
 - **Scope** — how many hidden steps are there that nobody mentions until you're in the middle of them?
 - **Time** — what are your hours actually worth, when you count every minute?
 
-![A finished kitchen with new cabinets and counters, natural light coming through the windows](/stock/10.webp)
+![Stripped unfinished pine floorboards in a sunbeam, with a tape measure and a carpenter's pencil resting on them](/stock/10.webp)
 
 Run through those four questions. If the numbers surprise you (and they probably will), you've saved yourself a lot of potential pain. And if the answer is still "I think I can handle this" — well, nobody's stopping you. Just know exactly what you're signing up for.
 
