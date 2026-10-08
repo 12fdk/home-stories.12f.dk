@@ -56,6 +56,7 @@ Guide-budgeting: ${SITE}/guides/budgeting-a-renovation/
 Guide-contractors: ${SITE}/guides/hiring-contractors/
 Guide-timelines: ${SITE}/guides/renovation-timelines/
 Guide-apps: ${SITE}/guides/renovation-apps/
+Downloads: ${SITE}/downloads/
 Articles: ${posts.length}
 Feed: ${SITE}/rss.xml
 Sitemap: ${SITE}/sitemap-index.xml

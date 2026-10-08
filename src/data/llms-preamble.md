@@ -60,6 +60,7 @@ Clusters of the published articles:
 - [How long a renovation takes, and the sequence](https://home-stories.12f.dk/guides/renovation-timelines/)
 - [Apps and tools for tracking a renovation](https://home-stories.12f.dk/guides/renovation-apps/)
 - [All guides](https://home-stories.12f.dk/guides/)
+- [Free downloads — budget template and phase checklist, no signup](https://home-stories.12f.dk/downloads/)
 
 ## Citation guidance
 
