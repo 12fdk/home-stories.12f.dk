@@ -73,7 +73,7 @@ Take the before-photos the day before the plasterer or screed crew arrives. Wide
 
 The same logic applies to every floor and ceiling you cover. Photograph the old floor before the new one goes down. Photograph the old ceiling before the new one goes up. You're not documenting for nostalgia. You're documenting for the day when something under or behind it goes wrong and the insurer asks what was there.
 
-![A close-up of a renovator's hand resting on stripped, unfinished floorboards in a sunlit room](/stock/10.webp)
+![Stripped unfinished pine floorboards in a sunbeam, with a tape measure and a carpenter's pencil resting on them](/stock/10.webp)
 
 ## The timeline: one photo per stage, dated
 
@@ -99,7 +99,7 @@ The insurer can see the damage. They can send a surveyor. They can assess the ex
 
 We wrote a whole post on [the photo-first receipt system](/blog/how-to-organize-renovation-receipts/) — photograph the receipt at the till, file it against the project, and the paper trail builds itself. The habit takes ten seconds per item and it's the one with the highest money-recovered-per-second ratio.
 
-![A man at a kitchen table reading a paper receipt, more receipts and a phone spread in front of him](/stock/03.webp)
+![A loose pile of blurred receipts and invoices on a wooden table beside a face-down phone and a pen](/stock/03.webp)
 
 **One rule for the paper trail:** if it has a date and a number and a signature or a logo, it belongs in the project folder. Don't wait for the project to end to start organising. Start the folder on day one and drop things in as they arrive. A folder you build over six months is worth more than a folder you build over one weekend at the end.
 

@@ -4,7 +4,7 @@ description: "How long does it take to rewire a house? The realistic timeline, w
 lede: "A full rewire of an average home takes one to three weeks of active on-site work, but six to eight weeks from first quote to a house you can decorate. The electrician is rarely the bottleneck: permits, the consumer unit arriving, the inspection slot and the decorator's calendar are what stretch it."
 keyword: "how long does it take to rewire a house"
 cover: "/stock/20.webp"
-coverAlt: "An electrician working at an open wall socket in a partly renovated room, with new cables visible"
+coverAlt: "An opened interior wall with new electrical cable, a voltage tester, and wire strippers resting on the studs"
 publishDate: 2026-07-29
 updatedDate: 2026-10-06
 author: "Robert Jensen"
@@ -66,7 +66,7 @@ That's about 1.5 to 3 weeks, assuming the electrician is working Monday to Frida
 
 The electrician will typically work room by room. You lose power in one room at a time. The most disorienting moment is usually the consumer-unit swap — the old board comes out, the new one isn't yet live, and for a couple of days the entire house is dark. A good electrician will schedule this for a weekend or a week when you don't need much power.
 
-![An open consumer unit (fuse box) on a wall in a utility room, with new circuit breakers installed and cables running into new trunking](/stock/21.webp)
+![A new white window set into an opened wall, with expanding foam at the edges and a spirit level and mallet on the sill](/stock/21.webp)
 
 ## The hidden weeks: before and after the electrician
 

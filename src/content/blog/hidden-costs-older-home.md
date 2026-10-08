@@ -56,7 +56,7 @@ The cost of a full electrical upgrade — new panel, rewiring, updated outlets a
 
 Many insurance companies won't cover a house with knob-and-tube wiring at all, or will charge a significant surcharge. Some municipalities require upgrades before a renovation permit is issued. Whatever your situation, you need to know early.
 
-![An electrician working at an open wall socket in an older room, with old cabling exposed in the opened wall](/stock/20.webp)
+![An opened interior wall with new electrical cable, a voltage tester, and wire strippers resting on the studs](/stock/20.webp)
 
 ### 2. Plumbing that has outlived its purpose
 
@@ -106,7 +106,7 @@ You can't eliminate surprises in an older home. But you can reduce them enough t
 
 That's what a proper renovation tracker does: it keeps a running total against the budget so you always know where you stand. When a new cost appears — and it will — you can see immediately whether you have room for it or whether you need to reduce the scope elsewhere. The [contingency budget guide](/blog/renovation-contingency-budget/) goes deeper into how to structure that safety net so you're not scrambling when the walls open.
 
-![A renovation budget spreadsheet on a tablet, with categories for different rooms and line items tracked](/stock/10.webp)
+![Stripped unfinished pine floorboards in a sunbeam, with a tape measure and a carpenter's pencil resting on them](/stock/10.webp)
 
 ## What a realistic older-home budget looks like
 

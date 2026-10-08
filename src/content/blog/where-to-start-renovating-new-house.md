@@ -96,7 +96,7 @@ Not a dream budget. An honest one. List every Bucket A and B item with a number 
 
 Track what you've committed (signed a quote, placed an order) separately from what you've actually spent. That gap is where most first-time renovators get surprised. A [budget template](/blog/renovation-budget-template/) or simple spreadsheet works. Check it weekly. The act of looking at it is what prevents small purchases from becoming a silent drain.
 
-![Tools and materials laid out on a workbench — tape measure, level, a roll of painter's tape, some hardware — the quiet preparation before the real work begins](/stock/14.webp)
+![A partly installed white subway-tile backsplash with a notched trowel and grout float resting on the worktop](/stock/14.webp)
 
 ## Step eight: live in the house for a while
 

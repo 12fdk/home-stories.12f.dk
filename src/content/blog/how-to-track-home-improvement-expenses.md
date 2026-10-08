@@ -6,7 +6,7 @@ description: "How to track home improvement expenses — comparing apps vs sprea
 lede: "Tracking home improvement expenses only matters if you're doing it on-site, where the money actually leaks. This post compares four methods on the single metric that matters: will you still be logging after three weeks of dust, decision fatigue, and contractor delays?"
 keyword: "how to track home improvement expenses"
 cover: "/stock/05.webp"
-coverAlt: "A homeowner and a contractor in a hard hat looking at a phone together on site"
+coverAlt: "A clipped stack of printed report pages on a pale quartz worktop in a finished kitchen"
 publishDate: 2026-07-13
 updatedDate: 2026-10-06
 author: "Robert Jensen"

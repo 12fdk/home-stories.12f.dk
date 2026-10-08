@@ -6,7 +6,7 @@ description: "Renovation budget template — a free spreadsheet breakdown for ev
 lede: "Most renovation budgets fail in the same three ways: missing line items, no contingency, and a spreadsheet that nobody opens after week two. This template fixes all three — and it's free."
 keyword: "renovation budget template"
 cover: "/stock/01.webp"
-coverAlt: "A couple standing in a stripped room, looking at a tablet together, paint swatches taped to the wall"
+coverAlt: "An open notebook, a calculator, and a coiled tape measure on a worn oak kitchen worktop in morning light"
 publishDate: 2026-05-18
 updatedDate: 2026-10-06
 author: "Robert Jensen"

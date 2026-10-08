@@ -4,7 +4,7 @@ description: "How long does it take to replace windows? Realistic time ranges fo
 lede: "A single like-for-like window replacement takes one day. A full-house job across ten to fifteen windows takes one to three weeks on site. Elapsed time is far longer: fabrication runs three to eight weeks before anyone arrives, and patching and painting the reveals afterwards adds another one to two weeks."
 keyword: "how long does it take to replace windows"
 cover: "/stock/21.webp"
-coverAlt: "A worker fitting a new double-glazed window into an exposed wall opening on a residential property"
+coverAlt: "A new white window set into an opened wall, with expanding foam at the edges and a spirit level and mallet on the sill"
 publishDate: 2026-07-30
 updatedDate: 2026-08-27
 author: "Robert Jensen"
@@ -88,7 +88,7 @@ Every project has its own delay profile, but there are some that show up again a
 
 The [bathroom renovation timeline](/blog/how-long-does-a-bathroom-renovation-take/) and the [rewiring guide](/blog/how-long-does-it-take-to-rewire-a-house/) both cover the same theme: the visible work is only part of the project, and the invisible gaps between trades are where delays accumulate. Window replacement follows the same pattern.
 
-![A close-up of a new window handle and locking mechanism installed in a freshly fitted frame](/stock/10.webp)
+![Stripped unfinished pine floorboards in a sunbeam, with a tape measure and a carpenter's pencil resting on them](/stock/10.webp)
 
 *Even the details — handles, locks, hinges — need to be specified and ordered before the install starts. They're small things that can stop the entire project if you forget them.*
 

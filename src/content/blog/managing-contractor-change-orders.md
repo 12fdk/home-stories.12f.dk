@@ -7,7 +7,7 @@ lede: "The most expensive conversation in a renovation rarely happens before the
 
 keyword: "how to deal with contractor change orders"
 cover: "/stock/28.webp"
-coverAlt: "A homeowner standing in an open kitchen space, talking with a tradesperson who is pointing at plans on a tablet"
+coverAlt: "A plywood kitchen island in an unfinished kitchen, with a face-down tablet, a clipped stack of papers, and a pencil"
 publishDate: 2026-08-04
 updatedDate: 2026-10-06
 author: "Robert Jensen"

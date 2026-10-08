@@ -6,7 +6,7 @@ description: "How to organize renovation receipts — a photo-first system that 
 lede: "Your renovation receipts are worth real money — but only if you can still find them, read them, and prove what they were for, years after the dust settles. Capital improvements can reduce the tax you owe when you sell, and an insurance claim is only ever as good as the evidence behind it. This is a practical, capture-once system for keeping every cost provable long after the project ends."
 keyword: "how to organize renovation receipts"
 cover: "/stock/03.webp"
-coverAlt: "A man at a kitchen table reading a paper receipt, more receipts and a phone spread in front of him"
+coverAlt: "A loose pile of blurred receipts and invoices on a wooden table beside a face-down phone and a pen"
 publishDate: 2026-07-13
 updatedDate: 2026-10-06
 author: "Robert Jensen"
@@ -41,7 +41,7 @@ The shoebox represents thousands of dollars in evidence that no longer works. An
 
 Getting this right isn't about being tidy. It's about the fact that a renovation receipt is a financial instrument with a very long fuse.
 
-![A homeowner pointing at architectural blueprints spread across a kitchen table, coffee cup nearby, sunlight from a window, realistic candid moment of renovation planning](/stock/13.webp)
+![Architectural drawings spread on plywood over a sawhorse, with a pencil, a scale ruler, and a coffee cup](/stock/13.webp)
 
 ## Why renovation receipts are worth real money
 
