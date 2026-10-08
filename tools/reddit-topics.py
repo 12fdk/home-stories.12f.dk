@@ -154,7 +154,7 @@ THEMES: dict[str, tuple[str, list[str]]] = {
         "floor", "flooring", "lvp", "laminate", "hardwood", "subfloor",
         "carpet", "refinish"]),
     "walls-paint": ("Walls: drywall, patching and paint", [
-        "drywall", "paint", "painting", "primer", "patch", "skim coat",
+        "drywall", "paint", "painting", "primer", "patching", "drywall patch", "skim coat",
         "wallpaper", "texture"]),
     "electrical-plumbing": ("Electrical and plumbing (and when it's a pro job)", [
         "electrical", "electrician", "wiring", "rewire", "outlet", "breaker",
