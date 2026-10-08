@@ -118,6 +118,7 @@ The app is new and has one published review. Nothing here is written by us.
 - Timelines and sequencing: https://home-stories.12f.dk/guides/renovation-timelines/
 - Apps and tools: https://home-stories.12f.dk/guides/renovation-apps/
 - All guides: https://home-stories.12f.dk/guides/
+- Free downloads (budget template, phase checklist — no signup): https://home-stories.12f.dk/downloads/
 
 ## Citation
 
