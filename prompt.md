@@ -58,7 +58,19 @@ integration, no cloud account). If you are unsure a feature exists, don't mentio
 
 ---
 
-## 1. Topic selection — the page-set queue first, then the topic bank
+## 1. Topic selection — the page-set queue, then the live Reddit digest, then the topic bank
+
+Three sources, in this order. Take the topic from the first one that gives you one.
+
+1. **§1a, the page-set queue**, while it has unwritten rows. (Page set 1 is finished;
+   the queue stays here so the next set can be added the same way.)
+2. **§1b, the live Reddit digest** from `tools/reddit-topics.py`. This is the normal
+   source of a topic.
+3. **§1c, the ranked topic bank.** This is the fallback, for a failed scrape or a
+   digest with nothing that fits.
+
+`BLOG_CONTENT_PLAN.md` is the maintainer's strategy document, not a source for this
+job. If it and this brief disagree, this brief wins.
 
 ### 1a. Page-set queue (WORK THIS FIRST while it has unwritten rows)
 
@@ -78,7 +90,7 @@ whole question space instead of a single query. Issue #95 tracks this.
    A future-dated post correctly does not appear on the site until that day; that is
    the design, not a bug (see `src/utils/posts.ts`). **Never change a row's date to
    today.**
-4. If every row is written, the set is done — fall through to §1b (the topic bank).
+4. If every row is written, the set is done — fall through to §1b (the live digest).
 
 **The set: "how long does <task> take"** — duration questions people actually type.
 Each row must be genuinely its own article: the honest answer, what the days are
@@ -125,70 +137,97 @@ actually spent on, and what makes it run long. Same shape, different substance.
 
   These are on top of the usual 2–3 pillar links, not instead of them.
 
-### 1b. Topic bank — pick from the Reddit-derived topic bank (stable-first)
+### 1b. Live Reddit digest (the normal source of a topic)
 
-Topics are **grounded in real Reddit + search demand**, but the job does NOT depend
-on a live network scrape at run time (Reddit rate-limits and blocks server IPs, which
-crashed earlier runs). Instead, the demand research is **baked into the ranked topic
-bank below** and refreshed by a human/Claude when it needs updating. This is the
-stable pattern used by the sister Event Stories blog — mirror it.
+`tools/reddit-topics.py` reads the monthly top posts of the subreddits this
+audience uses (r/HomeImprovement, r/Renovations, r/homeowners, r/FirstTimeHomeBuyer,
+r/HomeMaintenance, r/DIY, r/centuryhomes, r/OldHouses, r/Landlord, r/Homebuilding,
+r/Contractor). It keeps only titles that ask a real question, sorts them into
+themes, and marks the themes an existing post already owns. It prints a short
+digest (about 60 lines): `UNCOVERED THEMES` (strongest demand first, each with
+verbatim example titles), `ALREADY COVERED` (with the slugs that cover them), and
+`TOP QUESTION TITLES VERBATIM`. It is slow by design (about one feed a minute,
+Reddit rate-limits) and caches feeds in `.cache/reddit-topics/` (git-ignored).
 
-### How to choose (do this, in order)
+**How to choose from the digest (do this, in order):**
 
-1. Run `ls src/content/blog/` and, if useful, `grep -h '^keyword:' src/content/blog/*.md`
-   to see what already exists. Read only slugs/keywords, not whole posts (save context).
-2. From the **Ranked topic bank** below, pick the **highest-ranked topic that is NOT
-   already covered** by an existing post. Higher = stronger demand × app fit.
-3. Adapt the exact title for SEO (≤70 chars, includes the keyword). The bracketed
+1. Read the digest from its log with `head`/`tail`. Never read the raw feeds or the
+   cache files.
+2. Take the **highest-ranked theme under `UNCOVERED THEMES`** that this site can
+   serve honestly: a question our reader (§0) has, where planning, budgeting,
+   documenting or keeping track is part of the answer. Skip a theme only for a
+   reason you can say in one line in the report (for example "pure how-to for a
+   licensed trade, no planning angle").
+3. **Safety-critical trades (electrical, gas, structural, roofing at height): write
+   the decision and planning angle, never a how-to.** "Do I need an electrician for
+   this, and what does the quote cover?" is our post; "how to wire a sub-panel" is
+   not. Say plainly where the right answer is a licensed professional.
+4. **The verbatim titles are the brief.** Use the readers' own phrasing for the
+   `keyword`, the question H2s and the FAQ questions. Generalise the pattern behind
+   the titles; never present one Reddit poster's story as fact (§3).
+5. Confirm the angle is new: `ls src/content/blog/` and
+   `grep -h '^keyword:' src/content/blog/*.md`. A theme under `ALREADY COVERED`
+   is allowed only with a clearly different angle from the slugs it lists.
+6. If the theme you chose matches an entry in the §1c bank, that bank entry is now
+   used: mark it in the same commit (see §1c).
+
+**When to fall back to §1c, the topic bank:**
+
+- The tool exited `2` (every feed failed). That is a normal outcome, not a fault.
+- The digest has no uncovered theme that passes step 2.
+- The digest is thin (fewer than about 3 feeds read, or no theme with 2 or more
+  posts). Then use the bank, and use any digest titles that fit for phrasing.
+
+### 1c. Ranked topic bank (fallback)
+
+The bank is Reddit + search demand that was researched by hand from the same
+subreddits, ranked by demand × Home-Stories-feature fit. Each entry maps to a real
+app feature, so the app becomes the natural (unforced) answer.
+
+**How to use it:**
+
+1. Pick the **highest-ranked entry that is not marked ✅ and not already covered**
+   by an existing post (check with `ls src/content/blog/`).
+2. Adapt the exact title for SEO (≤70 chars, includes the keyword). The bracketed
    phrase is roughly what people actually google — use it as the `keyword`.
-4. **Optional live confirmation (never required):** if you want, try ONE quick,
-   time-boxed Reddit check to confirm phrasing — but treat failure as normal and move
-   on immediately. Do NOT block, retry in a loop, or read raw JSON (it blows context):
-   ```
-   UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/125.0 Safari/537.36"
-   curl -s -m 12 -A "$UA" "https://www.reddit.com/r/HomeImprovement/top.json?t=week&limit=12" \
-     | python3 -c "import sys,json;[print(p['data']['title'][:100]) for p in json.load(sys.stdin)['data']['children']]" 2>/dev/null \
-     | head -12 || echo "(reddit unavailable — using the topic bank, which is fine)"
-   ```
-   If it returns titles, skim them for fresher phrasing; if not, just use the bank.
+3. **Mark the entry you used in the same commit as the post:** append
+   ` — ✅ \`<slug>\`` to its line in this file, and stage `prompt.md` with the post.
 
-### Ranked topic bank (Reddit-demand × Home-Stories-feature fit)
+**Ranked topic bank (Reddit-demand × Home-Stories-feature fit):**
 
-Each entry maps to a real app feature, so the app becomes the natural (unforced)
-answer. Pick the highest one not yet covered:
-
-1. **Where to start on a house you just bought** — the first-90-days project order · *"where to start renovating a house"* · (projects + task checklist + photos)
-2. **DIY vs. hiring a pro** — an honest decide-in-five-minutes framework · *"should I DIY or hire a contractor"* · (time tracking + budget)
-3. **Hidden costs in an older home** — the surprises that blow budgets, and how to brace for them · *"unexpected renovation costs older home"* · (committed vs spent budget + contingency)
-4. **Managing a contractor** — change orders, scope creep, and keeping it civil · *"how to deal with contractor change orders"* · (notes log + committed budget + documents)
-5. **Documenting a renovation for insurance** — the photo + receipt trail that pays off later · *"how to document home renovation for insurance"* · (photos + receipts + PDF export)
+1. **Where to start on a house you just bought** — the first-90-days project order · *"where to start renovating a house"* · (projects + task checklist + photos) — ✅ `where-to-start-renovating-new-house`
+2. **DIY vs. hiring a pro** — an honest decide-in-five-minutes framework · *"should I DIY or hire a contractor"* · (time tracking + budget) — ✅ `diy-vs-hire-contractor`
+3. **Hidden costs in an older home** — the surprises that blow budgets, and how to brace for them · *"unexpected renovation costs older home"* · (running total + contingency) — ✅ `hidden-costs-older-home`
+4. **Managing a contractor** — change orders, scope creep, and keeping it civil · *"how to deal with contractor change orders"* · (notes log + payments + documents) — ✅ `managing-contractor-change-orders`
+5. **Documenting a renovation for insurance** — the photo + receipt trail that pays off later · *"how to document home renovation for insurance"* · (photos + receipts + PDF export) — ✅ `documenting-renovation-for-insurance`
 6. **Living through a renovation** — staying sane (and organized) while the house is a building site · *"living in your house during a renovation"* · (tasks + timeline + shared project)
-7. **Bathroom renovation order** — the sequence that avoids redoing work · *"bathroom renovation order of work"* · (phases + task checklist)
+7. **Bathroom renovation order** — the sequence that avoids redoing work · *"bathroom renovation order of work"* · (phases + task checklist) — ✅ `bathroom-renovation-sequence`
 8. **Where the renovation money actually goes** — a realistic breakdown of a project's line items · *"where does renovation money go"* · (budget categories + item tracking)
 9. **Renovation mistakes people regret** — the ones that are cheap to avoid up front · *"biggest home renovation mistakes"* · (planning + photos + notes)
 10. **Do I need a permit?** — how to tell, and why skipping it costs more later · *"do I need a permit for home renovation"* · (documents + notes)
-11. **Keeping renovation decisions straight** — paint codes, model numbers, why you chose what · *"how to keep track of renovation decisions"* · (notes with tags + item tracking)
+11. **Keeping renovation decisions straight** — paint codes, model numbers, why you chose what · *"how to keep track of renovation decisions"* · (notes + item tracking)
 12. **Renovating room by room vs. all at once** — how to sequence a whole-house project · *"should I renovate one room at a time"* · (multiple projects + phases)
 13. **The end-of-project snag list** — defining "done" so the last 5% actually finishes · *"renovation snag list punch list"* · (task checklist + photos)
 14. **Energy-efficiency upgrades worth doing** — what actually pays back vs. what's hype · *"are energy efficient home upgrades worth it"* · (budget + notes)
 15. **Renovating a first home on a tight budget** — the frugal-but-not-cheap playbook · *"renovating first home on a budget"* · (budget charts + task checklist)
-16. **Moving into a fixer-upper** — the first month's must-dos before the fun stuff · *"moving into a fixer upper first steps"* · (projects + checklist + photos)
+16. **Moving into a fixer-upper** — the first month's must-dos before the fun stuff · *"moving into a fixer upper first steps"* · (projects + checklist + photos) — ✅ `moving-into-a-fixer-upper`
 
-If every bank topic is already covered, write a sharper/fresher take on the
-highest-demand cluster (budgeting, contractor management, documentation, getting
-started) from a new angle — and add a note in your report suggesting the bank be
-refreshed. Never repeat an existing post's angle.
+If every bank topic is used and the digest failed, write a sharper/fresher take on
+the highest-demand cluster (budgeting, contractor management, documentation, getting
+started) from a new angle — and say in your report that the bank needs a refresh.
+Never repeat an existing post's angle.
 
-**Keeping the bank fresh (human/maintainer task, not the cron's):** periodically
-re-derive this list from live demand and edit it here. From a machine that isn't
-rate-limited, that's e.g.
-`curl -s -A "<browser UA>" "https://www.reddit.com/r/HomeImprovement/top.json?t=month&limit=25"`
-across r/HomeImprovement, r/DIY, r/Renovations, r/HomeMaintenance, r/FirstTimeHomeBuyer,
-plus Google keyword checks — then rank by demand × app-feature fit.
+**Keeping the bank fresh (maintainer task, not the cron's):** run
+`python3 tools/reddit-topics.py --windows month,year --max-seconds 1800` from a
+machine that is not rate-limited, add the strongest uncovered themes here as new
+entries, and rank them by demand × app-feature fit. The theme buckets the tool uses
+live in `THEMES` in `tools/reddit-topics.py`; its tests run with
+`npm test` (stdlib `unittest`, no dependencies).
 
 ---
 
-## 2. Voice, tone, and the subtle-nudge rule (this is the important part)
+## 2. Voice
+, tone, and the subtle-nudge rule (this is the important part)
 
 Every post must read like it was written by an experienced, honest person who has
 renovated and wants to save you the pain — **not like marketing.** The bar: a
@@ -300,7 +339,7 @@ title: "..."            # ≤ 70 chars, includes the primary keyword, no clickba
 description: "..."       # ≤ 160 chars, includes the keyword, reads like a real summary
 lede: "..."             # 1–3 sentence hook shown under the title; concrete, no fluff
 keyword: "..."          # the primary SEO keyword/phrase (the reader's own words)
-cover: "/stock/NN.png"  # next available number — see §6, never overwrite an existing file
+cover: "/stock/NN.webp" # next available number — see §6, never overwrite an existing file
 coverAlt: "..."         # describes the photograph itself (it's read aloud); not decoration
 publishDate: YYYY-MM-DD # queue row → its assigned date. Otherwise → next free date (below).
 author: "Robert Jensen"
@@ -336,17 +375,24 @@ Rules:
 
 ## 6. Cover & inline images (ComfyUI)
 
-- Images live in `public/stock/` and are referenced as `/stock/NN.png`. Run
-  `ls public/stock/` and **use the next unused number** — never overwrite an
-  existing image.
-- Generate a **photorealistic** cover with ComfyUI: `comfy-gen --prompt "DESCRIPTION" --style photoreal`
-  (real homes, real renovation scenes, natural light — no text, no logos, no UI
-  screenshots, no cartoon style). Save to `public/stock/NN.png`.
-- Reference inline images in the body as `![meaningful alt text](/stock/NN.png)`.
-  You may reuse relevant existing `/stock/*` images for inline breaks if a fresh
-  generation isn't warranted, but the **cover must be new**.
-- If ComfyUI is unavailable, retry once; if it still fails, reuse the most fitting
-  existing `/stock/*` image rather than blocking the post — and note it in the report.
+- Images live in `public/stock/` and are referenced as `/stock/NN.webp`. Every
+  stock image is WebP since #129 (PNG photographs were ~15× larger and the cover is
+  the page's LCP element). Run `ls public/stock/` and **use the next unused number**
+  — never overwrite an existing image.
+- Generate a **photorealistic** cover with ComfyUI:
+  `comfy-gen --prompt "DESCRIPTION" --style photoreal --width 1024 --height 768 --prefix home --copy-to /tmp > /tmp/home-comfy.log 2>&1; tail -3 /tmp/home-comfy.log`
+  (real homes, real renovation scenes, natural light — **no people**, no text, no
+  logos, no UI screenshots, no cartoon style). The last lines print the PNG path.
+- **Convert the PNG to WebP into the stock folder**, then use the `.webp` path:
+  `ffmpeg -loglevel error -y -i <png path> -c:v libwebp -quality 80 public/stock/NN.webp && ls -l public/stock/NN.webp`
+  Never commit the PNG. A cover over ~300 KB means the conversion did not happen.
+- Reference inline images in the body as `![meaningful alt text](/stock/NN.webp)`.
+  You may reuse relevant existing `/stock/*.webp` images for inline breaks if a fresh
+  generation isn't warranted, but the **cover must be new** when ComfyUI works.
+- **Image fallback.** If `comfy-gen` fails, retry once. If it fails again, or it has
+  not returned after a couple of minutes, stop waiting: reuse the most fitting
+  existing `/stock/*.webp` image as the cover (`ls public/stock/`), finish the post,
+  and say in the report that the cover is a reused image.
 
 ---
 
@@ -359,11 +405,11 @@ tail, and only on failure.
 
 1. Install deps only if missing, silently:
    ```
-   [ -d node_modules ] || npm install --silent --no-progress > /tmp/hs_install.log 2>&1 || tail -20 /tmp/hs_install.log
+   [ -d node_modules ] || npm install --silent --no-progress > /tmp/home-install.log 2>&1 || tail -20 /tmp/home-install.log
    ```
 2. Build to a log; surface only pass/fail:
    ```
-   npm run build > /tmp/hs_build.log 2>&1 && echo "BUILD OK" || { echo "BUILD FAILED — last lines:"; tail -30 /tmp/hs_build.log; }
+   npm run build > /tmp/home-build.log 2>&1 && echo "BUILD OK" || { echo "BUILD FAILED — last lines:"; tail -30 /tmp/home-build.log; }
    ```
    The build MUST print `BUILD OK` before you push — it validates the frontmatter
    schema. If it failed, read only the tail, fix the frontmatter/markdown, rebuild.
@@ -384,11 +430,12 @@ tail, and only on failure.
    If you genuinely cannot get it to pass after a few attempts, do NOT push a failing
    post. Say so plainly in your report and stop — an unpublished post costs nothing,
    a wrong one costs the site's credibility.
-4. Commit ONLY the post and its images — never scratch/helper scripts or logs you
-   created this run. Run `git status` first; if you wrote any helper files (e.g.
-   `scrape_*.py`, `*.log`, temp scripts), delete them before committing. Then stage
-   explicitly:
-   `git add src/content/blog/<slug>.md public/stock/ && git commit -m "Blog: <title>"`
+4. Commit ONLY the post, its new image, the one existing post you edited for the
+   inbound link (§4), and `prompt.md` if you marked a §1c bank entry — never
+   scratch/helper scripts, logs, the PNG from ComfyUI, or `.cache/`. Run `git status`
+   first; if you wrote any helper files (e.g. `scrape_*.py`, `*.log`, temp scripts),
+   delete them before committing. Then stage explicitly:
+   `git add src/content/blog/<slug>.md src/content/blog/<linking-post>.md public/stock/NN.webp [prompt.md] && git commit -m "Blog: <title>"`
    (Avoid `git add -A`, which sweeps in stray files. `.gitignore` covers common ones,
    but stage deliberately anyway.)
 5. Push to main: `git push origin main 2>&1 | tail -5` (GitHub Pages deploys from `main`).
@@ -397,21 +444,53 @@ Same discipline everywhere: pipe any command that could be verbose (`comfy-gen`,
 `git log`, `npm`, long `cat`) through a file or `tail`. Read files with `head`/
 `grep`, never dump a whole large file into context.
 
+## Site-specific review checks
+
+Run these in the review pass before `git commit`, on top of the generic checks. Each
+one has failed on this site before or is enforced by the validator.
+
+1. **`node scripts/validate-posts.mjs <slug>` prints `VALIDATE OK`** (§7 step 3),
+   after your last edit, not before it.
+2. **App facts match §0 word for word in meaning.** iPhone **and iPad**, never
+   "iPhone-only"; no Android or web app; PDF export, iCloud sync, project sharing,
+   reminders and the budget-vs-actual chart are **Pro** (one-time purchase, no
+   subscription), never "free"; never the three columns "spent, committed and
+   remaining".
+3. **No statistic dressed as research and no named source you did not fetch this
+   run** (§3). Grep the file for `%`, `study`, `survey`, `report`, `according to`.
+4. **Every internal link exists:** each `/blog/<slug>/` and each `relatedSlugs`
+   entry has a file in `src/content/blog/`. At least 3 inline links, at least one to
+   a pillar (§4).
+5. **The post is reachable:** one existing post links to it, and that edit is staged
+   (§4).
+6. **`publishDate` is free:** no other post uses it, and a §1a queue row keeps its
+   own date (§5).
+7. **The cover is a new `/stock/NN.webp`** that did not exist before this run (or a
+   reused image, named as such in the report), and no image shows people (§6).
+8. **Page-set rules, if the post came from §1a:** the sibling link requirements in
+   §1a are met.
+
 ## 8. Final report (your last message)
 
 Report concisely:
 - The new post: title, slug, file path, primary keyword, word count, cover image.
-- **Where the topic came from:** the §1a page-set queue (say which row number, and how
-  many rows remain unwritten) or, if the queue is finished, the §1b topic bank (say
-  which rank and why it was the highest uncovered one). If you ran the optional live
-  Reddit check, say whether it worked and whether it changed the phrasing.
+- **Where the topic came from**, one of:
+  - the §1a page-set queue: which row number, and how many rows remain unwritten;
+  - the §1b live digest: how many feeds it read, the theme key and its rank under
+    `UNCOVERED THEMES`, the 1–3 verbatim Reddit titles the post answers, and any
+    higher-ranked theme you skipped with the one-line reason;
+  - the §1c topic bank: why you fell back (exit `2`, nothing fitting, or a thin
+    digest), which rank you took, and confirmation you marked it ✅ in `prompt.md`.
 - Confirmation the build passed (`BUILD OK`), the validator passed (`VALIDATE OK`),
   and the push to `main` succeeded. List any `warn`s the validator printed, and any
   `ERROR` you had to fix and how you fixed it — that feedback is what improves this
   brief over time.
 - Confirm you did the factual-accuracy self-check (§3): no invented statistics, no
   unfetched report names, no unverified external URLs.
-- Anything that fell back or is worth a human glance (e.g. "topic bank is running low").
+- The cover: new ComfyUI image (`/stock/NN.webp`, size in KB) or a reused image (§6 fallback).
+- Which existing post now links to the new one (§4).
+- Anything that fell back or is worth a human glance (e.g. "topic bank is running low",
+  "the digest kept surfacing a theme no post can serve").
 
 If — and only if — there is genuinely nothing new worth publishing, reply with
 exactly `[SILENT]`. Otherwise always ship a post.
