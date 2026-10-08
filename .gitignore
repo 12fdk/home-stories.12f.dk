@@ -34,3 +34,7 @@ scrape_*.py
 # Audit reports are deliverables, not source — kept locally.
 seo-audit-*.docx
 seo-audit-*.pdf
+
+# reddit-topics.py feed cache (tools/reddit-topics.py)
+.cache/
+__pycache__/
