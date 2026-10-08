@@ -141,7 +141,7 @@ actually spent on, and what makes it run long. Same shape, different substance.
 
 `tools/reddit-topics.py` reads the monthly top posts of the subreddits this
 audience uses (r/HomeImprovement, r/Renovations, r/homeowners, r/FirstTimeHomeBuyer,
-r/HomeMaintenance, r/DIY, r/centuryhomes, r/OldHouses, r/Landlord, r/Homebuilding,
+r/HomeMaintenance, r/DIY, r/centuryhomes, r/OldHouses, r/Homebuilding,
 r/Contractor). It keeps only titles that ask a real question, sorts them into
 themes, and marks the themes an existing post already owns. It prints a short
 digest (about 60 lines): `UNCOVERED THEMES` (strongest demand first, each with

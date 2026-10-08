@@ -20,7 +20,7 @@ served, so that is what this uses. It is rate-limited though — measured
 x-ratelimit-remaining 0 and a ~54s reset, so the real budget is about one feed
 a minute. That is why requests are paced at 50s, retried with backoff, and
 cached to .cache/ for most of a day. The 600s budget therefore buys the first
-~11 subreddits, which is what SUBREDDITS is ordered for.
+~10 subreddits, which is what SUBREDDITS is ordered for.
 
 WHY A SCRIPT AND NOT A FEW CURL COMMANDS IN THE BRIEF: the Hermes agent's
 terminal blocks `-c` / `-e` flags, so `python3 -c '...'` and clever one-liners
@@ -59,16 +59,20 @@ ATOM = {"a": "http://www.w3.org/2005/Atom"}
 # r/Renovations are the core audience (people mid-project asking what to do
 # next); r/homeowners and r/FirstTimeHomeBuyer are the "just bought a place,
 # where do I start" readers; r/HomeMaintenance is the keep-it-running crowd. The
-# old-house subs carry the hidden-cost and permit stories; r/Landlord is the
-# small-landlord audience prompt.md §0 names; r/Homebuilding brings extensions
+# old-house subs carry the hidden-cost and permit stories; r/Homebuilding brings extensions
 # and new builds; r/Contractor is the other side of the change-order argument
 # and the one we can most afford to lose.
+#
+# NOT r/Landlord: measured 2026-10-08 it exists, but its /top is flair-tagged
+# tenant-law disputes ("[Landlord US-CA] security deposit...") — 12 of them in one
+# feed, enough to put a legal-advice theme at #1 of the digest. Small landlords
+# doing up a flat still surface through r/HomeImprovement and r/Renovations.
 SUBREDDITS = [
     "HomeImprovement", "Renovations", "homeowners", "FirstTimeHomeBuyer",
-    "HomeMaintenance", "DIY", "centuryhomes", "OldHouses", "Landlord",
-    "Homebuilding", "Contractor",
+    "HomeMaintenance", "DIY", "centuryhomes", "OldHouses", "Homebuilding",
+    "Contractor",
 ]
-# Month only by default: at about one feed a minute, 11 subs x 2 windows cannot
+# Month only by default: at about one feed a minute, 10 subs x 2 windows cannot
 # finish inside a scheduled run. Pass --windows month,year by hand when you
 # want the deeper corpus and can wait.
 WINDOWS = ["month"]
@@ -173,7 +177,7 @@ THEMES: dict[str, tuple[str, list[str]]] = {
         "punch list", "snag list", "snagging", "final walkthrough", "walkthrough",
         "never finished", "unfinished", "last 10%", "almost done"]),
     "rental": ("Doing up a rental or a flat", [
-        "landlord", "rental", "tenant", "rental property", "airbnb", "flip",
+        "rental", "rental property", "doing up a flat", "airbnb", "flip",
         "flipping", "condo", "apartment"]),
     "apps-tools": ("Apps, spreadsheets and tools for planning a project", [
         "app for", "apps for", "what app", "which app", "software", "spreadsheet",
