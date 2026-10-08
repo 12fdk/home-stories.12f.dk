@@ -65,6 +65,7 @@ export const GET: APIRoute = async () => {
     `- Contractors guide: ${SITE}/guides/hiring-contractors/`,
     `- Timelines guide: ${SITE}/guides/renovation-timelines/`,
     `- Apps guide: ${SITE}/guides/renovation-apps/`,
+    `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
     `- RSS feed: ${SITE}/rss.xml`,
     `- Privacy Policy: ${SITE}/privacy-policy/`,
     `- Terms and Conditions: ${SITE}/terms-and-conditions/`,

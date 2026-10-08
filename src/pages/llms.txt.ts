@@ -32,6 +32,7 @@ export const GET: APIRoute = async () => {
     "",
     `- Blog index: ${SITE}/blog/`,
     `- Guides: ${SITE}/guides/`,
+    `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
     `- RSS feed: ${SITE}/rss.xml`,
     "",
     `### All articles (${posts.length})`,
