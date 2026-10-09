@@ -2,6 +2,7 @@
 import BlogLayout from "../layouts/BlogLayout.astro";
 import { getCollection } from "astro:content";
 import { isPublished } from "../utils/posts";
+import { appStoreClick } from "utils/tracking";
 
 // The site had no About page at all: no page explaining who builds the app or
 // why they are worth trusting on renovation. That is the weakest E-E-A-T
@@ -148,7 +149,7 @@ const aboutSchema = {
         <li><strong>Elsewhere</strong>:
           <a href="https://www.robert-jensen.dk" rel="me">robert-jensen.dk</a>,
           <a href="https://github.com/12fdk" rel="me">GitHub</a>,
-          <a href="https://apps.apple.com/developer/id1786807724" rel="me">App Store</a>
+          <a href="https://apps.apple.com/developer/id1786807724" rel="me" {...appStoreClick("developer")}>App Store</a>
         </li>
       </ul>
     </div>

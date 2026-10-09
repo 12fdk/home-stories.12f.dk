@@ -45,7 +45,9 @@ export type AppStoreSurface =
    * install this site sees: they are not evaluating the app, they are trying to
    * open something a person they know already made.
    */
-  | "share-invite";
+  | "share-invite"
+  /** The developer storefront link on the about page. */
+  | "developer";
 
 /**
  * Attributes to spread onto an `<a>` that leaves for the App Store. Umami's
