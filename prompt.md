@@ -204,7 +204,7 @@ app feature, so the app becomes the natural (unforced) answer.
 7. **Bathroom renovation order** — the sequence that avoids redoing work · *"bathroom renovation order of work"* · (phases + task checklist) — ✅ `bathroom-renovation-sequence`
 8. **Where the renovation money actually goes** — a realistic breakdown of a project's line items · *"where does renovation money go"* · (budget categories + item tracking)
 9. **Renovation mistakes people regret** — the ones that are cheap to avoid up front · *"biggest home renovation mistakes"* · (planning + photos + notes)
-10. **Do I need a permit?** — how to tell, and why skipping it costs more later · *"do I need a permit for home renovation"* · (documents + notes)
+10. **Do I need a permit?** — how to tell, and why skipping it costs more later · *"do I need a permit for home renovation"* · (documents + notes) — ✅ `do-i-need-a-permit-for-a-home-renovation`
 11. **Keeping renovation decisions straight** — paint codes, model numbers, why you chose what · *"how to keep track of renovation decisions"* · (notes + item tracking)
 12. **Renovating room by room vs. all at once** — how to sequence a whole-house project · *"should I renovate one room at a time"* · (multiple projects + phases)
 13. **The end-of-project snag list** — defining "done" so the last 5% actually finishes · *"renovation snag list punch list"* · (task checklist + photos)

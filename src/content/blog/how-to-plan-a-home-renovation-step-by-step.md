@@ -183,7 +183,7 @@ Most structural, electrical, and plumbing work requires permits. The process var
 3. Waiting for review (1–4 weeks)
 4. Scheduling inspections as work progresses
 
-Your contractor should handle permits for you, but confirm this upfront. Unpermitted work can affect your home insurance, your ability to sell, and your ability to get financing for future projects.
+Your contractor should handle permits for you, but confirm this upfront. Unpermitted work can affect your home insurance, your ability to sell, and your ability to get financing for future projects. The full picture of what a permit does, what triggers one, and what skipping costs is in [do I need a permit for a home renovation?](/blog/do-i-need-a-permit-for-a-home-renovation/).
 
 ## Phase 4: Select your contractor
 
