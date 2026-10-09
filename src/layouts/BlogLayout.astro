@@ -240,7 +240,20 @@ const speakableSchema = articleSchema
         );
       })();
     </script>
-    <script defer src="https://umami.robert-jensen.dk/script.js" data-website-id="330ddb96-95c9-43cd-b9fe-485c0d114b33"></script>
+    <!-- Umami Analytics: production-hostname guard (see Layout.astro) -->
+    <script is:inline>
+      (function () {
+        var H = "home-stories.12f.dk",
+          d = document;
+        if (location.hostname === H || location.hostname === "www." + H) {
+          var s = d.createElement("script");
+          s.defer = true;
+          s.src = "https://umami.robert-jensen.dk/script.js";
+          s.dataset.websiteId = "330ddb96-95c9-43cd-b9fe-485c0d114b33";
+          d.head.appendChild(s);
+        }
+      })();
+    </script>
   </head>
   <body class={`relative ${bodyClass}`}>
     <BlogNavbar client:load config={config} />
