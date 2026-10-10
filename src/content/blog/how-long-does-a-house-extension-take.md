@@ -125,7 +125,7 @@ If you're just expanding your living space, sometimes moving to a larger propert
 
 An extension is one of the most rewarding home improvements — you're literally creating space that didn't exist. But the timeline is governed by concrete, inspections, and trade sequences that move at their own pace, not yours. Plan for the longer end of the ranges, order materials early, get the ground checked, and lock your design before anything is dug. If you do that, your extension is more likely to finish with its budget and sanity intact than to become a construction site that lingers months past the expected completion date.
 
-If you're looking for a place to track the schedule, budget, trades, and photos of your extension from first sketch to final inspection, [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad that handles exactly that — project tracking, budget management, and a before-and-after photo log that makes the snugging-in phase at the end much clearer.
+If you're looking for a place to track the schedule, budget, trades, and photos of your extension from first sketch to final inspection, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-how-long-does-a-house-extension-tak&mt=8) is a free app for iPhone and iPad that handles exactly that — project tracking, budget management, and a before-and-after photo log that makes the snugging-in phase at the end much clearer.
 
 ## Sources and further reading
 

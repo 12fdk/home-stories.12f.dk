@@ -149,7 +149,7 @@ If you're planning one, start with the sequence, not the tile. Figure out the or
 
 ---
 
-Home Stories is free on the App Store and works fully offline on iPhone and iPad. If you're planning a renovation and want a simple way to keep tasks, budget, and photos organized in one place, you can find it at [the App Store](https://apps.apple.com/app/id6754754960).
+Home Stories is free on the App Store and works fully offline on iPhone and iPad. If you're planning a renovation and want a simple way to keep tasks, budget, and photos organized in one place, you can find it at [the App Store](https://apps.apple.com/app/id6754754960?ct=blog-bathroom-renovation-sequence&mt=8).
 
 ## Sources and further reading
 

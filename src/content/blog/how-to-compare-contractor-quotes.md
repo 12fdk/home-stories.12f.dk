@@ -185,7 +185,7 @@ The answers matter, and so does how you get them. A contractor who replies clear
 
 ## Keep the comparison where you'll find it again
 
-The comparison is only useful if you can find it later. The scope page, three PDFs, a table of normalized totals and a few emailed answers will matter again in week four, when someone says the shower valve "was never in the quote". Keep them together, dated, attached to the project. A folder and a spreadsheet do the job. If you would rather keep quotes, notes and payments in one place on your phone, [Home Stories](https://apps.apple.com/app/id6754754960) keeps quotes and contracts as documents in the project, next to your notes and logged payments.
+The comparison is only useful if you can find it later. The scope page, three PDFs, a table of normalized totals and a few emailed answers will matter again in week four, when someone says the shower valve "was never in the quote". Keep them together, dated, attached to the project. A folder and a spreadsheet do the job. If you would rather keep quotes, notes and payments in one place on your phone, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-how-to-compare-contractor-quotes&mt=8) keeps quotes and contracts as documents in the project, next to your notes and logged payments.
 
 Once you sign, the winning quote stops being a quote. It becomes committed money, and your budget should show it that way from that day, not when the first invoice lands.
 
@@ -198,7 +198,7 @@ Comparing contractor quotes is less about finding the lowest number and more abo
 
 Do that and the decision usually becomes obvious. You end up picking a contractor, not a sales script.
 
-If you want the scope, the quotes and the payments kept together from the first estimate to the final invoice, [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad built for exactly that.
+If you want the scope, the quotes and the payments kept together from the first estimate to the final invoice, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-how-to-compare-contractor-quotes&mt=8) is a free app for iPhone and iPad built for exactly that.
 
 ## Sources and further reading
 

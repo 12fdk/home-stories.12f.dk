@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import { LLMS_CAMPAIGN, appStoreUrl } from "../utils/appStoreLink.mjs";
 import { isPublished } from "../utils/posts";
 import preamble from "../data/llms-full-preamble.md?raw";
 
@@ -58,7 +59,7 @@ export const GET: APIRoute = async () => {
     "## 12. Official links",
     "",
     `- Website: ${SITE}`,
-    "- App Store: https://apps.apple.com/app/id6754754960",
+    `- App Store: ${appStoreUrl(LLMS_CAMPAIGN)}`,
     `- Blog index: ${SITE}/blog/`,
     `- Guides: ${SITE}/guides/`,
     `- Budgeting guide: ${SITE}/guides/budgeting-a-renovation/`,

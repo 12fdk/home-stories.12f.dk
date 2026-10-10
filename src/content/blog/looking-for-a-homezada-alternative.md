@@ -84,7 +84,7 @@ Lay a renovation out end to end and it is four jobs in sequence: planning it, me
 
 Execution is different. It runs for months, in dusty rooms, and it generates a constant trickle of costs, receipts, decisions and photos. The tool for that phase has one hard requirement: it has to work from a phone, in seconds, while something else is demanding your attention. A live budget split into materials, labour and contractor; a dated record of photos and receipts; a task list that survives the weekend.
 
-If that is your situation, a phone-first tracker is the honest answer. [Home Stories](https://apps.apple.com/app/id6754754960) is built for exactly that phase — it keeps the budget, tasks, dated photos and receipts in one project on your iPhone or iPad, free on the App Store.
+If that is your situation, a phone-first tracker is the honest answer. [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-looking-for-a-homezada-alternative&mt=8) is built for exactly that phase — it keeps the budget, tasks, dated photos and receipts in one project on your iPhone or iPad, free on the App Store.
 
 ![The Home Stories budget screen: a running total split across materials, labour and contractor](/screenshots/budget-chart-840.webp)
 
@@ -94,7 +94,7 @@ If that is your situation, a phone-first tracker is the honest answer. [Home Sto
 
 **2. A spreadsheet or a document workspace.** A spreadsheet is still the best planning tool on the market, and the [how-to-budget guide](/blog/how-to-budget-a-home-renovation/) covers the structure. It fails at execution: it wants two hands, a desk, and a version of the file you believe is current. A document workspace like Notion is more flexible, but you build the structure yourself, and it is organised around documents, not around a live project with a running total. Fine for notes; wrong shape for a budget that moves every day.
 
-**3. A phone-first tracker.** This is the option most "HomeZada alternative" searches are really asking for. The head-to-head against the big two names is in [HomeZada vs Houzz Pro](/blog/homezada-vs-houzz-pro/), and the wider field is covered in the [2026 round-up of home improvement apps](/blog/best-home-improvement-apps/). The deciding question in this category is not features — it is friction. A log that takes seconds, from one screen, with the receipt photo attached, is the one that survives to month six. [Home Stories](https://apps.apple.com/app/id6754754960) is what that looks like in practice: a running total, dated photos and receipts and tasks, all on one project, free to install.
+**3. A phone-first tracker.** This is the option most "HomeZada alternative" searches are really asking for. The head-to-head against the big two names is in [HomeZada vs Houzz Pro](/blog/homezada-vs-houzz-pro/), and the wider field is covered in the [2026 round-up of home improvement apps](/blog/best-home-improvement-apps/). The deciding question in this category is not features — it is friction. A log that takes seconds, from one screen, with the receipt photo attached, is the one that survives to month six. [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-looking-for-a-homezada-alternative&mt=8) is what that looks like in practice: a running total, dated photos and receipts and tasks, all on one project, free to install.
 
 ## Switching without losing what you've already logged
 

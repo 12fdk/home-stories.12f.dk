@@ -1,3 +1,4 @@
+import { appStoreUrl, blogCampaign } from "../utils/appStoreLink.mjs";
 import {
   APP_STORE_URL,
   INLINE_SURFACE,
@@ -75,7 +76,7 @@ function card({ label, paragraph, slug }) {
         el(
           "a",
           {
-            href: APP_STORE_URL,
+            href: appStoreUrl(blogCampaign(slug)),
             target: "_blank",
             rel: "noopener",
             className: ["btn", "btn-primary", "btn-sm", "normal-case"],

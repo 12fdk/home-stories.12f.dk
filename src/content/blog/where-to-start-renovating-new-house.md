@@ -50,7 +50,7 @@ Write down three things for each room:
 
 This sounds like the least exciting part of renovation. It is, in fact, the most important. Every budget blown and every timeline extended traces back to a mismatch between what the renovator *thought* the project was and what it *actually* was.
 
-There's a reason you'd want a system for this. You can absolutely do it with a notebook in your back pocket. But if you want to carry that notebook around in your pocket — literally — a purpose-built app keeps every note, every photo, and every decision attached to the same project. That's one of the reasons people end up using [Home Stories](https://apps.apple.com/app/id6754754960) for their first walkthrough — it turns what could become thirty pages of scribbled notes into something organized and searchable by the end of the day.
+There's a reason you'd want a system for this. You can absolutely do it with a notebook in your back pocket. But if you want to carry that notebook around in your pocket — literally — a purpose-built app keeps every note, every photo, and every decision attached to the same project. That's one of the reasons people end up using [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-where-to-start-renovating-new-house&mt=8) for their first walkthrough — it turns what could become thirty pages of scribbled notes into something organized and searchable by the end of the day.
 
 ## Step two: separate "essential" from "desirable"
 
@@ -124,7 +124,7 @@ A practical first-month order for many households:
 
 Write that order down. The [printable renovation checklist](/blog/renovation-checklist-printable/) is useful as a fridge list; the [fixer-upper first month](/blog/moving-into-a-fixer-upper/) guide is the deeper version once keys are in hand.
 
-If this was useful, the best next step is the [renovation checklist](/blog/renovation-checklist-printable/) — a printable one-page summary you can tape to the fridge and update as you go. And once you have the keys and the house is actually yours, the [first-month order for a fixer-upper](/blog/moving-into-a-fixer-upper/) is where that list becomes a plan you can live in. And if you want to track your budget and every decision in one place, [Home Stories](https://apps.apple.com/app/id6754754960) is free on the App Store and works fully offline. No account needed.
+If this was useful, the best next step is the [renovation checklist](/blog/renovation-checklist-printable/) — a printable one-page summary you can tape to the fridge and update as you go. And once you have the keys and the house is actually yours, the [first-month order for a fixer-upper](/blog/moving-into-a-fixer-upper/) is where that list becomes a plan you can live in. And if you want to track your budget and every decision in one place, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-where-to-start-renovating-new-house&mt=8) is free on the App Store and works fully offline. No account needed.
 
 ## Sources and further reading
 

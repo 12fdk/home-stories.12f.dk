@@ -97,7 +97,7 @@ This is where things get interesting. A dedicated renovation app — a phone-fir
 - Vendor lock-in. Your data lives in the app. Exporting a PDF or CSV is usually possible, but you're tied to the app for the duration of the build. If the app shuts down, your data goes with it. Most dedicated apps are built by companies that own the data problem — they have a strong incentive to keep you as a customer, and they export cleanly.
 - iOS-first. If you're on Android, the options are more limited. Most renovation apps target iOS first.
 
-**Verdict:** This is the method I use and recommend for anyone doing a medium-to-large renovation. Pair it with [what to track during a renovation](/blog/what-to-track-during-a-renovation/) so the categories match the habits that actually prevent overruns. The time savings per entry add up to hours over a 12-week build, and the real-time accuracy is what makes the budget useful. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960).
+**Verdict:** This is the method I use and recommend for anyone doing a medium-to-large renovation. Pair it with [what to track during a renovation](/blog/what-to-track-during-a-renovation/) so the categories match the habits that actually prevent overruns. The time savings per entry add up to hours over a 12-week build, and the real-time accuracy is what makes the budget useful. [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960?ct=blog-how-to-track-home-improvement-expen&mt=8).
 
 ## Method 4: The receipts-in-a-jar method (no digital tracking)
 
@@ -167,7 +167,7 @@ Already covered in the FAQ section above — four practical questions on the bes
 
 ## Ready to track expenses without the spreadsheet headache?
 
-[Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Set your budget once, log costs and receipt photos as they happen, and always know — to the line item — how much of your budget is left. No Sunday catch-up, no stale spreadsheets. Just current numbers, wherever the work takes you.
+[Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960?ct=blog-how-to-track-home-improvement-expen&mt=8). Set your budget once, log costs and receipt photos as they happen, and always know — to the line item — how much of your budget is left. No Sunday catch-up, no stale spreadsheets. Just current numbers, wherever the work takes you.
 
 ## Sources and further reading
 

@@ -139,7 +139,7 @@ Budget two to four weeks from quote to done, expect one to three days of active 
 
 ---
 
-If you're juggling multiple renovation projects and want a single place to track the roof replacement alongside everything else — photos of the deck condition, receipts for materials, the contractor's schedule — [Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad designed exactly for that. It's one tool for all of it, not just the roof.
+If you're juggling multiple renovation projects and want a single place to track the roof replacement alongside everything else — photos of the deck condition, receipts for materials, the contractor's schedule — [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-how-long-does-a-roof-replacement-ta&mt=8) is a free app for iPhone and iPad designed exactly for that. It's one tool for all of it, not just the roof.
 
 ## Sources and further reading
 

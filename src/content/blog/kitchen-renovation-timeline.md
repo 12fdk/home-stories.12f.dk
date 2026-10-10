@@ -28,7 +28,7 @@ faq:
   - question: "Should I order cabinets before the renovation starts?"
     answer: "Yes. Cabinet lead times are the single longest lead item on any kitchen renovation timeline. Order as soon as your kitchen layout is finalised — ideally during the design phase, before demolition begins. If you order stock cabinets, they may arrive in 1–2 weeks. Semi-custom takes 6–8 weeks. Custom can take 12 weeks or more. If your contractor starts demolition before your cabinets arrive, you're paying for idle labour or sitting in a partially demolished kitchen that you can't use — both expensive."
   - question: "What should I do before a kitchen renovation starts?"
-    answer: "Lock in your design, get permits approved, and order your cabinets and any long-lead appliances (range hoods, built-in ovens, specialty sinks) before the first demo day. Clear your kitchen of small appliances and pantry items. Decide on every finish — faucet, handles, backsplash tile, paint colour — before work starts, because changing your mind mid-project costs time and money. Make a temporary cooking plan for the weeks you'll lack a working kitchen. If you have kids, plan where they'll do homework and homework snacks during a noisy, dusty construction zone. Set up a budget tracker like <a href='https://apps.apple.com/app/id6754754960'>Home Stories</a> so you're logging expenses in real time from day one, not catching up at the end."
+    answer: "Lock in your design, get permits approved, and order your cabinets and any long-lead appliances (range hoods, built-in ovens, specialty sinks) before the first demo day. Clear your kitchen of small appliances and pantry items. Decide on every finish — faucet, handles, backsplash tile, paint colour — before work starts, because changing your mind mid-project costs time and money. Make a temporary cooking plan for the weeks you'll lack a working kitchen. If you have kids, plan where they'll do homework and homework snacks during a noisy, dusty construction zone. Set up a budget tracker like <a href='https://apps.apple.com/app/id6754754960?ct=blog-kitchen-renovation-timeline&mt=8'>Home Stories</a> so you're logging expenses in real time from day one, not catching up at the end."
 relatedSlugs:
   - "how-to-plan-a-home-renovation-step-by-step"
   - "renovation-contingency-budget"
@@ -253,7 +253,7 @@ But even with both of those, 8 weeks is the floor for a full kitchen reno. Anyth
 
 ## Ready to track your renovation from day one?
 
-The schedule above gives you the shape of the project. [Home Stories](https://apps.apple.com/app/id6754754960) gives you the record — every expense logged on the day it happens, every photo of what's behind the walls saved before it's closed up, and a running budget that tells you whether you're on track every single week. Set it up before demo starts so week one numbers are already there.
+The schedule above gives you the shape of the project. [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-kitchen-renovation-timeline&mt=8) gives you the record — every expense logged on the day it happens, every photo of what's behind the walls saved before it's closed up, and a running budget that tells you whether you're on track every single week. Set it up before demo starts so week one numbers are already there.
 
 *Home Stories is free on the App Store.*
 
