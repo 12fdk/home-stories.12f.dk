@@ -148,7 +148,7 @@ None of this requires a dedicated tool. A folder on your phone, a dated photo ha
 
 What matters is that the record is attached to the project, not to a generic photo album or a shoebox. Every photo, every receipt, every note belongs to the renovation, and when you need it, you find it in one place.
 
-If you'd rather not build the system by hand, a purpose-built renovation tracker does this for you: the photos, receipts, quotes, and notes all live on the project itself, and Pro can export the lot as a PDF when someone official asks. [Home Stories](https://apps.apple.com/app/id6754754960) is one such tool — free on iPhone and iPad, works offline, no account needed — and it's the one I'd use. But the habit is the same whether you use an app or a notebook: take the before-photo, keep the receipts, date everything, and write the summary at the end.
+If you'd rather not build the system by hand, a purpose-built renovation tracker does this for you: the photos, receipts, quotes, and notes all live on the project itself, and Pro can export the lot as a PDF when someone official asks. [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-documenting-renovation-for-insuranc&mt=8) is one such tool — free on iPhone and iPad, works offline, no account needed — and it's the one I'd use. But the habit is the same whether you use an app or a notebook: take the before-photo, keep the receipts, date everything, and write the summary at the end.
 
 ## The wrap-up
 

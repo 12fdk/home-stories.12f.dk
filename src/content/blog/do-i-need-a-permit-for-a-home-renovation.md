@@ -140,7 +140,7 @@ What to do when you buy into that history:
 
 A permit file is not one document. It is the application, the approval, every inspection note, the receipts for the corrective work, and the photos of what the inspector looked at. Scatter it across a drawer and an email and it is not a file; it is a search you will do in a bad mood, at sale time or claim time.
 
-The practical version is the same as every other renovation document: one place, dated, attached to the project. A shoebox with the papers in order works. A folder on your phone with the photos in date order works. A purpose-built project tool keeps the permits, the inspection notes, the receipts, and the photos of the corrected work in one place, tied to the project itself — which is exactly the sort of thing [Home Stories](https://apps.apple.com/app/id6754754960) keeps, alongside the budget and the task list, with documents and notes on the project itself.
+The practical version is the same as every other renovation document: one place, dated, attached to the project. A shoebox with the papers in order works. A folder on your phone with the photos in date order works. A purpose-built project tool keeps the permits, the inspection notes, the receipts, and the photos of the corrected work in one place, tied to the project itself — which is exactly the sort of thing [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-do-i-need-a-permit-for-a-home-renov&mt=8) keeps, alongside the budget and the task list, with documents and notes on the project itself.
 
 The file you want to have at sale time is the one that answers the buyer's surveyor in one paragraph: what was done, when it was approved, and what the inspections signed off on. That paragraph is cheap to write when the file is clean and expensive to reconstruct when it is not.
 
@@ -157,4 +157,4 @@ If you are about to start something, run this before the first call to a contrac
 
 None of this is a reason not to renovate. It is the reason the renovation stays yours, stays insurable, and stays saleable — and the reason the version of the project that gets inspected is the one you actually built.
 
-If you want one place for the budget, the task list, the permit documents, the inspection notes, and the photos of everything you fixed, [Home Stories](https://apps.apple.com/app/id6754754960) is a free iOS app built for exactly that — and the free version keeps the whole file, offline, without an account.
+If you want one place for the budget, the task list, the permit documents, the inspection notes, and the photos of everything you fixed, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-do-i-need-a-permit-for-a-home-renov&mt=8) is a free iOS app built for exactly that — and the free version keeps the whole file, offline, without an account.

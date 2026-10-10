@@ -16,7 +16,7 @@ tldr:
   - "<strong>Capture at the point of sale, not at the kitchen table.</strong> A receipt photographed in the car park is a receipt you have; one you 'file properly later' is one you've already lost."
   - "<strong>A receipt on its own is nearly useless.</strong> It needs four things attached: date, amount, what it was for, and which room or project it belongs to."
   - "<strong>Learn the split between improvements and repairs.</strong> In most tax systems only the first kind adds to your home's cost basis — so tag it at capture time, while you still remember."
-  - "<strong>Digital, backed up, and exportable.</strong> Thermal paper fades within a year or two; a folder in a drawer doesn't survive a house fire. Home Stories captures the photo, cost, and room in one step. <a href='https://apps.apple.com/app/id6754754960'>A full data export is included</a>; a PDF of the record is part of Pro."
+  - "<strong>Digital, backed up, and exportable.</strong> Thermal paper fades within a year or two; a folder in a drawer doesn't survive a house fire. Home Stories captures the photo, cost, and room in one step. <a href='https://apps.apple.com/app/id6754754960?ct=blog-how-to-organize-renovation-receipts&mt=8'>A full data export is included</a>; a PDF of the record is part of Pro."
 faq:
   - question: "Should I keep renovation receipts for taxes?"
     answer: "In most tax systems, yes — money you spend on capital improvements (work that adds value or extends the life of the property, like a new kitchen, an extension, or a new roof) is typically added to your home's cost basis, which can reduce the taxable gain when you sell. Routine repairs and maintenance usually aren't. Rules vary significantly by country and change over time, so treat this as a reason to keep good records rather than as tax advice — and check the specifics with a qualified tax professional for your jurisdiction."
@@ -94,7 +94,7 @@ Three failure modes kill renovation records, and any system worth using has to s
 
 **Paper doesn't survive the disaster it's meant to prove.** The receipts for your kitchen are stored... in your kitchen. A fire or a flood destroys the evidence and the thing it was evidence for, in one go. The record has to live somewhere else — synced, backed up, off-site.
 
-This is exactly the gap Home Stories was built for. You log the cost, snap the receipt, and tag the room in a single action at the till — no separate filing step, nothing to catch up on at the weekend. Everything stays attached to the project, and when your accountant or your insurer asks, Pro can [export the record as a PDF](https://apps.apple.com/app/id6754754960) instead of tipping out a shoebox. The app itself is free on the App Store, for iPhone and iPad.
+This is exactly the gap Home Stories was built for. You log the cost, snap the receipt, and tag the room in a single action at the till — no separate filing step, nothing to catch up on at the weekend. Everything stays attached to the project, and when your accountant or your insurer asks, Pro can [export the record as a PDF](https://apps.apple.com/app/id6754754960?ct=blog-how-to-organize-renovation-receipts&mt=8) instead of tipping out a shoebox. The app itself is free on the App Store, for iPhone and iPad.
 
 ## How long to keep it all
 
@@ -115,7 +115,7 @@ That's the whole thing. It takes ten seconds per receipt during the project, and
 
 The alternative isn't chaos, exactly. It's a shoebox — which looks like a system right up until the day you need it, and then quietly isn't one.
 
-If you'd rather not keep a shoebox at all, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960). Log each cost with its receipt photo and room as it happens, and export a complete, dated record of the whole renovation whenever your accountant, your insurer, or your buyer asks for one.
+If you'd rather not keep a shoebox at all, [Home Stories is free on the App Store](https://apps.apple.com/app/id6754754960?ct=blog-how-to-organize-renovation-receipts&mt=8). Log each cost with its receipt photo and room as it happens, and export a complete, dated record of the whole renovation whenever your accountant, your insurer, or your buyer asks for one.
 
 Receipt capture is one job; if you also need measuring or design tools, [the renovation apps round-up](/blog/best-home-improvement-apps/) separates those categories cleanly.
 

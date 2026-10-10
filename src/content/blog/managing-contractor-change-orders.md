@@ -83,7 +83,7 @@ The solution is mechanically simple and requires zero trust:
 
 Two hundred words. That's it. No forms, no lawyers, no drama. A text message saying *"Just to confirm — we're adding under-cabinet lighting at £180. Let me know if that's wrong"* is a legally defensible change order if both sides are honest.
 
-Keep these notes somewhere organized. [Home Stories](https://apps.apple.com/app/id6754754960) has a notes section with tags that's built exactly for this — date-stamped, project-specific, and easy to search later. But a folder of screenshots in your phone works too. The medium doesn't matter; the habit of writing things down does.
+Keep these notes somewhere organized. [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-managing-contractor-change-orders&mt=8) has a notes section with tags that's built exactly for this — date-stamped, project-specific, and easy to search later. But a folder of screenshots in your phone works too. The medium doesn't matter; the habit of writing things down does.
 
 ## Scope creep: the silent budget killer
 
@@ -155,7 +155,7 @@ The people who finish renovations with their sanity mostly intact tend to be the
 
 All of this — scopes, change orders, daily notes, photo documentation of work as it progresses, receipts for extra materials — works best when it lives in one place instead of across three notebooks, a shoebox of thermal receipts, and whatever's on your phone home screen.
 
-[Home Stories](https://apps.apple.com/app/id6754754960) is a free app for iPhone and iPad built specifically for this kind of thing. It keeps your budget, your change-order notes, your before-and-after photos, and your receipt scans all attached to the same project. A PDF of the project, if you need to share it with a partner, accountant, or insurance company, is part of Pro. But the principle matters more than the tool — whatever system you choose, make it centralised, date-stamped, and hard to lose.
+[Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-managing-contractor-change-orders&mt=8) is a free app for iPhone and iPad built specifically for this kind of thing. It keeps your budget, your change-order notes, your before-and-after photos, and your receipt scans all attached to the same project. A PDF of the project, if you need to share it with a partner, accountant, or insurance company, is part of Pro. But the principle matters more than the tool — whatever system you choose, make it centralised, date-stamped, and hard to lose.
 
 ## Wrapping up
 

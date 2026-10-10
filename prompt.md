@@ -34,8 +34,10 @@ these too, not just hardcore renovators:
 
 **The app, factually (never claim more than this):**
 Home Stories is a **free native app for iPhone and iPad (iOS 17+)**. There is
-no Android version. Made in Denmark by Robert Jensen. App Store:
-`https://apps.apple.com/app/id6754754960`
+no Android version. Made in Denmark by Robert Jensen. App Store — every link in
+this post uses this exact form, with this post's slug (`ct` is `blog-` plus the
+slug, truncated to 40 characters; never add `pt=`):
+`https://apps.apple.com/app/id6754754960?ct=blog-<slug>&mt=8`
 
 Free, and it stays free: projects with a budget and a running total; items with
 a price; payments logged with materials, labour and contractor kept apart;
@@ -469,6 +471,8 @@ one has failed on this site before or is enforced by the validator.
    reused image, named as such in the report), and no image shows people (§6).
 8. **Page-set rules, if the post came from §1a:** the sibling link requirements in
    §1a are met.
+9. **Every App Store link uses the §0 form** for this post's slug (`ct=blog-<slug>`,
+   truncated to 40 characters, plus `mt=8`). The validator rejects any other form.
 
 ## 8. Final report (your last message)
 

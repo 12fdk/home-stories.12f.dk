@@ -1,4 +1,5 @@
 import type { TemplateConfig } from "./configType";
+import { SITE_CAMPAIGN, appStoreUrl } from "./appStoreLink.mjs";
 
 const templateConfig: TemplateConfig = {
   name: "Home Stories",
@@ -59,8 +60,8 @@ const templateConfig: TemplateConfig = {
   forceTheme: false,
   // Shows switch to toggle between dark and light modes
   showThemeSwitch: true,
-  appStoreLink:
-    "https://apps.apple.com/app/id6754754960",
+  // `ct` attributes navbar, hero, pricing, sticky bar and the 404 to site chrome. #112
+  appStoreLink: appStoreUrl(SITE_CAMPAIGN),
   googlePlayLink: "",
   footer: {
     legalLinks: {

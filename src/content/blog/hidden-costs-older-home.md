@@ -152,7 +152,7 @@ Plan for it. Budget for it. Log every dollar that goes into the unknown. The hou
 
 Older homes are worth the surprises. They're solid, they're repairable, and they reward patience with spaces that new construction can't match. Just plan for the surprises — because they'll arrive whether you planned for them or not.
 
-If you're managing a renovation in an older home and want to keep the hidden costs visible, [Home Stories](https://apps.apple.com/app/id6754754960) has a budget feature built for exactly this: track each surprise as it comes up, see it against your contingency in real time, and know whether you still have room or need to trim elsewhere. Free on the App Store, no account needed.
+If you're managing a renovation in an older home and want to keep the hidden costs visible, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-hidden-costs-older-home&mt=8) has a budget feature built for exactly this: track each surprise as it comes up, see it against your contingency in real time, and know whether you still have room or need to trim elsewhere. Free on the App Store, no account needed.
 
 Older-home surprises pair with a living-through-it plan — the [fixer-upper first month](/blog/moving-into-a-fixer-upper/) guide sequences what to do before cosmetics.
 

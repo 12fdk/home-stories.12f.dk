@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { isPublished } from "../../utils/posts";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { guides } from "../../data/guides";
+import { SITE_CAMPAIGN, appStoreUrl } from "../../utils/appStoreLink.mjs";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => isPublished(data));
@@ -151,7 +152,7 @@ const itemListSchema = {
         The budget-vs-actual chart, PDF export and iCloud sync are an optional one-time upgrade, not a subscription.
       </p>
       <a
-        href="https://apps.apple.com/app/id6754754960"
+        href={appStoreUrl(SITE_CAMPAIGN)}
         class="btn btn-primary mt-5 font-semibold normal-case"
         data-umami-event="appstore-click"
         data-umami-event-surface="guide-footer"
