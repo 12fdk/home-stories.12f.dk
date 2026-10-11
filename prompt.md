@@ -492,6 +492,12 @@ Report concisely:
 - Confirm you did the factual-accuracy self-check (§3): no invented statistics, no
   unfetched report names, no unverified external URLs.
 - The cover: new ComfyUI image (`/stock/NN.webp`, size in KB) or a reused image (§6 fallback).
+- Traffic check: after the deploy is green, run
+  `python3 /opt/data/profiles/blogger/scripts/umami_post_views.py
+  330ddb96-95c9-43cd-b9fe-485c0d114b33 /blog/<slug>/ 12` and report the number
+  as a **traffic line** (0 in the first hours is normal — real traffic and
+  indexing take time; never fail or retry a publish because of it, the
+  publish proof is the deploy + the HTTP 200).
 - Which existing post now links to the new one (§4).
 - Anything that fell back or is worth a human glance (e.g. "topic bank is running low",
   "the digest kept surfacing a theme no post can serve").
