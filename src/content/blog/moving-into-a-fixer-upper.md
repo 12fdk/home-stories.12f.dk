@@ -107,6 +107,8 @@ By the end of the first month, the must-do list should be mostly done or contrac
 
 You are not going to finish the fixer-upper in the first month. You are not going to do all of the work, and you are not going to do it in the order the problems appeared. You are going to do the work that protects the work, in the order that protects the work, and you are going to live in the rest of it, and that is the plan. The house is going to take a while. You, and your money, are going to be much better off for the order.
 
+Once the must-do list is closed, the job changes from fixing to keeping, and a [home maintenance schedule](/blog/home-maintenance-schedule/) is what stops the problem list refilling itself.
+
 If you are at the very start and have not yet built the two lists, the [where-to-start order for a house you just bought](/blog/where-to-start-renovating-new-house/) is the natural next read — the same thinking, a little earlier, for the moment before the first month even begins. And the [planning sequence for a whole project](/blog/how-to-plan-a-home-renovation-step-by-step/) is how the must-do list becomes a plan once you have it.
 
 If you want the first month's findings, quotes, and receipts kept in one place with a date on each — so the next decision is made against the last one, not against a memory — [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-moving-into-a-fixer-upper&mt=8) is a free app for iPhone and iPad for exactly that.
