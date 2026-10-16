@@ -1,6 +1,6 @@
 # Home Stories — Marketing Plan (living doc)
 
-Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-10-15
+Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-10-16
 
 ## 1. What this is & how it's updated
 
@@ -337,7 +337,7 @@ or any statistic.
 | Week of | # | Format | Series | Feature / message | Hook (first 1–2 s) | Reel skin · music | Look / scene (start point; must differ from recent looks) | Status |
 |---|---|---|---|---|---|---|---|---|
 | Oct 19 | 1 | Carousel | In Order | Tasks per phase | "Guest bathroom done before Thanksgiving? The order the trades need." | — | 1950s bathroom stripped to the studs, tiles stacked by the door, overcast north-window light, cool greys | built 2026-10-15 6ad0ae0918e5f5564886 |
-| Oct 19 | 2 | Reel | Behind the Wall | Photo timeline (dated photos) | "Kitchen wall open, pipes showing? Photograph it before the plasterboard goes up." | Tape · v3 e-min | opened kitchen wall with copper pipes and cable runs, raking morning sun on pink plaster, straight-on | queued |
+| Oct 19 | 2 | Reel | Behind the Wall | Photo timeline (dated photos) | "Kitchen wall open, pipes showing? Photograph it before the plasterboard goes up." | Tape · v3 e-min | opened kitchen wall with copper pipes and cable runs, raking morning sun on pink plaster, straight-on | built 2026-10-16 6ad1ad4e342b4b90aa3c |
 | Oct 26 | 1 | Reel | Running Total | Running total + payments split | "Kitchen budget $25,000. The overrun doesn't announce itself." | Blueprint · v0 c-major | kitchen mid-install, unpainted cabinet carcasses, dust sheet on the floor, low late-afternoon sun | queued |
 | Oct 26 | 2 | Carousel | Paper Trail | Quotes kept as documents | "Three quotes for one bathroom, and no two cover the same work." | — | overhead flat-lay on plywood: three paper sheets (no legible text), a carpenter's pencil, tile offcuts | queued |
 | Oct 26 | 3 | Carousel | Season | Tasks (maintenance checklist) | "First frost is weeks away: the house checks to do before it." | — | gutter and eaves with wet autumn leaves, grey drizzle, a ladder foot on brick paving | queued |
@@ -491,6 +491,7 @@ Append-only. Newest at bottom. Never edit or delete rows.
 |---|---|---|---|---|
 | 2026-10-15 | CREATED: this file (spark#140) | no baseline: look ledger empty, platform history not read | — | §1–§9 written; §6 = 71 queued rows, week of Oct 19, 2026 – week of Feb 22, 2027 (34 reels, 37 carousels). First §7 review due the Monday after the first post is 7 days old. |
 | 2026-10-15 | 6ad0ae0918e5f5564886 "Guest bathroom done before Thanksgiving? The order the trades need." (carousel, In Order) | built and scheduled 2026-10-21T22:00:00Z; 9 slides (2 fresh photos + 7 text); Gate 1 pass; Claude design task 20261015-1226 + review PASS round 1 | built | First post of the new plan. Angle = sequence, not budget (every backfilled 2026-08 post is a budget/scope angle). Photo A needed 5 re-renders: Flux kept adding a toilet/sink and a legible "0" on an outlet plate; final take is an empty stud-walled room. Funnel 7d flat (0 landings, 1 store tap) — post kept product-focused. |
+| 2026-10-16 | 6ad1ad4e342b4b90aa3c "Kitchen wall open, pipes showing? Photograph it before the plasterboard goes up." (reel, Behind the Wall) | built and scheduled 2026-10-21T22:00:00Z; 20 s five-scene cut (real photo-timeline footage grid + week view, 2 fresh LTX clips); Tape skin, Archivo 800, music v3 e-min, clips low; TPK -1.5 dBTP / -14.6 LUFS; Gate 1 pass; Claude design 20261016-0611 + review PASS round 1. Angle = proof/insurance, product-focused (funnel 7d flat: 0 social landings, 1 store tap). Note: 6ad0ae09 (Oct 19 #1 built) is gone from Appwrite (404) — superseded by published 6ad0e248, so no slot clash. Fresh-shoot rule held (new stills/clips, different light/mood); no --allow-similar. |
 
 ## 9. Open questions & watch items
 
