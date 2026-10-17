@@ -4,6 +4,23 @@ import type { AppStoreMetadata } from "./appStoreData";
  *  every visible string is translatable in one place. English values equal the
  *  literals the components used before i18n, so the English page is unchanged. */
 export interface UiStrings {
+    /** The homepage's poster lines and the hero's live running total. */
+    poster: {
+        /** The hero sentence, as its two lines. Short: it is set at 9.5vw. */
+        headline: [string, string];
+        /** One line under the live total, telling the reader what to tap. */
+        tryIt: string;
+        /** Names of the sample costs, index-parallel with header.sample.costs. */
+        costs: string[];
+        /** "{amount} left" under budget; "{amount}" is the formatted figure. */
+        left: string;
+        /** "{amount} over budget" once the running total passes the budget. */
+        over: string;
+        /** A verbatim excerpt of the review, broken by hand into its lines. */
+        quote: string[];
+        /** The offer as one sentence on two lines; "{price}" is the Pro price. */
+        price: [string, string];
+    };
     nav: {
         openMenu: string;
         closeMenu: string;
@@ -140,6 +157,9 @@ export type TemplateConfig = {
                 budget: number;
                 /** Payments logged so far — the running total. */
                 spent: number;
+                /** Costs the reader can log on the hero, in order. Together
+                 *  they take the sample just past its budget, on purpose. */
+                costs?: number[] | undefined;
             } | undefined;
         };
         /** Problem, cost of leaving it alone, and the opposite picture — the

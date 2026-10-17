@@ -1,165 +1,120 @@
-import { motion } from "framer-motion";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useMemo, useState, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import { withBase } from "../../../../utils/basePath";
 import { appStoreClick } from "../../../../utils/tracking";
-import AppStoreRating from "../../../../components/appStoreRating";
-
-const SCREENSHOT_INTERVAL = 3800;
+import { longest, measure } from "../../../../utils/measure";
 
 /**
- * The dimension rail: the app's budget bar drawn the way a measurement is
- * called out on a construction drawing. The figures are the sample kitchen
- * project shown in the screenshot beside it — not a claim about anyone's spend.
+ * The hero is the sample kitchen's running total, drawn as a level. Graphite
+ * above, signal orange below, and the seam sits exactly where the spend sits
+ * against the budget: $12,950 of $25,000 puts it at 52% of the screen. The
+ * headline straddles the seam and changes ink where it crosses.
+ *
+ * The reader can log the next costs from the list beside it. Each one raises
+ * the field; the last one takes the kitchen past its budget and the orange
+ * fills the screen. The figures are the sample project in the app's own
+ * screenshots, not a claim about anyone's spend.
  */
-function BudgetRail({
-  project,
-  currency,
-  budget,
-  spent,
-  labels,
-}: {
-  project: string;
-  currency: string;
-  budget: number;
-  spent: number;
-  labels: { runningTotal: string; budgetLabel: string; ofBudget: string };
-}) {
-  const spentRatio = Math.min(spent / budget, 1);
-  const format = (n: number) => `${currency}${n.toLocaleString("en-US")}`;
 
-  return (
-    <div className="not-prose mt-7 max-w-md">
-      <div className="flex items-baseline justify-between text-base-content/60">
-        <span className="tick-label">{project}</span>
-        <span className="tick-label">
-          {Math.round(spentRatio * 100)}% {labels.ofBudget}
-        </span>
-      </div>
+const format = (currency: string, n: number) =>
+  `${currency}${Math.round(n).toLocaleString("en-US")}`;
 
-      {/* One bar: running total against the budget */}
-      <div className="relative mt-3 flex h-3 overflow-hidden rounded-[3px] bg-base-300">
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          style={{ transformOrigin: "left", width: `${spentRatio * 100}%` }}
-          className="h-full bg-accent"
-        />
-        <div
-          aria-hidden="true"
-          className="ticks absolute inset-x-0 -bottom-2 text-base-content"
-        />
-      </div>
-
-      {/* The dimension callouts */}
-      <div className="mt-5 grid grid-cols-2 gap-4 font-mono">
-        {[
-          { k: labels.runningTotal, v: format(spent) },
-          { k: labels.budgetLabel, v: format(budget) },
-        ].map(({ k, v }) => (
-          // Static: hero text must be visible in the SSR paint (LCP). #23
-          <div key={k}>
-            <div
-              aria-hidden="true"
-              className="rail text-base-content"
-            />
-            <div className="mt-2 text-base font-medium tabular-nums text-base-content">
-              {v}
-            </div>
-            <div className="tick-label text-base-content/50">{k}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+function fill(template: string, amount: string) {
+  return template.replace("{amount}", amount);
 }
 
 function Header() {
   const {
-    googlePlayLink,
     appStoreLink,
     ui,
     home: { header },
   } = useContext(ConfigContext)!;
 
-  const [index, setIndex] = useState(0);
-  const shots = header.screenshots;
+  const sample = header.sample!;
+  const costs = sample.costs ?? [];
+  const [logged, setLogged] = useState<boolean[]>(() => costs.map(() => false));
 
-  useEffect(() => {
-    if (shots.length < 2) return;
-    const timer = setInterval(
-      () => setIndex((current) => (current + 1) % shots.length),
-      SCREENSHOT_INTERVAL
-    );
-    return () => clearInterval(timer);
-  }, [shots.length]);
+  const spent = useMemo(
+    () => sample.spent + costs.reduce((sum, c, i) => sum + (logged[i] ? c : 0), 0),
+    [logged, costs, sample.spent],
+  );
+  const ratio = spent / sample.budget;
+  const over = spent > sample.budget;
+  // The field is literal up to the budget; past it, the screen is all orange.
+  const level = Math.min(ratio, 1);
 
-  const words = header.headline.split(" ");
-  const mark = header.headlineMark;
+  const [line1, line2] = ui.poster.headline;
+  const chars = longest([measure(line1) + 4 > measure(line2) ? `${line1}xxxx` : line2]); // + the clip in line one
+  const money = (n: number) => format(sample.currency, n);
+
+  const status = over
+    ? fill(ui.poster.over, money(spent - sample.budget))
+    : fill(ui.poster.left, money(sample.budget - spent));
+
+  const heroStyle = {
+    "--level": level,
+    // Where the seam starts: the headline is placed on it once and stays put.
+    "--seam": Math.min(sample.spent / sample.budget, 1),
+    "--chars": chars,
+    "--chars-text": longest([line1, line2]),
+  } as CSSProperties;
+
+  // The same two lines, twice: the real h1 in mist on the graphite above the
+  // seam, and a painted copy in graphite on the orange below it. The copy's
+  // letters come from CSS (data-text), so it adds no second headline to the
+  // page for readers, crawlers or assistive tech.
+  const lines = (real: boolean) =>
+    [line1, line2].map((line, i) => (
+      <span key={i} className="hs-hero__line" data-text={real ? undefined : line}>
+        {real && line}
+        {i === 0 && (
+          <span className="hs-hero__clip" aria-hidden="true">
+            {real && (
+              <video
+                src={withBase("/videos/hero-reveal.mp4")}
+                poster={withBase("/videos/hero-reveal.webp")}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            )}
+          </span>
+        )}
+      </span>
+    ));
 
   return (
-    <section
-      id={header.id}
-      className="relative overflow-hidden border-b border-base-300"
-    >
-      {/* Drafting grid, barely there */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.05] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:32px_32px]"
-      />
+    <>
+      <section
+        id={header.id}
+        data-field={over ? "signal" : "dark"}
+        className="hs-hero hs-dark"
+        style={heroStyle}
+      >
+        <div aria-hidden="true" className="hs-hero__field" />
 
-      <div className="mx-auto grid max-w-screen-lg gap-12 px-4 pb-16 pt-8 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-8 md:pb-20 md:pt-10">
-        <div className="prose max-w-none">
-          {/* Hero text is static: SSR must paint it immediately — entrance
-              animations here hid the LCP element until hydration (#23). */}
-          <p className="tick-label not-prose m-0 flex items-center gap-3 text-base-content/50">
-            <span className="inline-block h-0.5 w-8 bg-accent" />
-            {ui.header.eyebrow}
-          </p>
+        <div aria-hidden="true" className="hs-hero__type hs-hero__type--below">
+          <p className="hs-hero__h1 hs-display">{lines(false)}</p>
+        </div>
+        <div className="hs-hero__type hs-hero__type--above">
+          <h1 className="hs-hero__h1 hs-display">{lines(true)}</h1>
+        </div>
 
-          <h1 className="mb-0 mt-4 text-[2.5rem] font-extrabold leading-[1.04] tracking-tightest md:text-[3.5rem]">
-            {words.map((word, wordIndex) => {
-              const highlighted =
-                mark && wordIndex >= mark[0] && wordIndex < mark[1];
-              return (
-                <span key={wordIndex} className="inline-block">
-                  <span
-                    className={
-                      highlighted
-                        ? "relative inline-block"
-                        : "inline-block"
-                    }
-                  >
-                    {word}
-                    {highlighted && (
-                      <motion.span
-                        aria-hidden="true"
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        transition={{ delay: 0.9, duration: 0.5 }}
-                        style={{ transformOrigin: "left" }}
-                        className="absolute -bottom-1 left-0 right-0 h-[6px] bg-accent"
-                      />
-                    )}
-                  </span>
-                  {wordIndex < words.length - 1 && " "}
-                </span>
-              );
-            })}
-          </h1>
-
-          <p className="mb-0 mt-5 max-w-lg text-base leading-relaxed text-base-content/70 md:text-lg">
-            {header.subtitle}
-          </p>
-
-          <div className="not-prose mt-7 flex flex-wrap items-center gap-x-5 gap-y-4">
+        <div className="hs-hero__foot hs-wrap hs-grid">
+          <div className="col-span-12 md:col-span-4">
+            <p className="hs-lead hs-rise m-0 max-w-[20ch] font-medium">
+              {ui.header.eyebrow}.
+            </p>
             {appStoreLink && (
               <a
                 href={appStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex"
+                className="hs-badge hs-rise mt-5"
+                
+                style={{ "--d": "80ms" } as CSSProperties}
                 {...appStoreClick("hero")}
               >
                 <img
@@ -171,84 +126,154 @@ function Header() {
                 />
               </a>
             )}
-            {googlePlayLink && (
-              <a href={googlePlayLink} className="inline-flex">
-                <img
-                  className="h-[52px]"
-                  alt="Get Home Stories on Google Play"
-                  src={withBase("/stores/google-play.svg")}
-                  width={156}
-                  height={52}
-                />
-              </a>
-            )}
-            <AppStoreRating size="md" showReviewCount={false} />
           </div>
 
-          {/* The guide, in one line. This string has been in the config (and
-              translated into 15 locales) since i18n landed without ever being
-              rendered — it is the strongest empathy+authority sentence the
-              page has, so it now sits next to the CTA. #117 */}
-          {header.usersDescription && (
-            <p className="not-prose mt-5 flex items-start gap-3 text-sm leading-relaxed text-base-content/60">
-              <span
-                aria-hidden="true"
-                className="mt-2 inline-block h-0.5 w-6 flex-none bg-accent"
-              />
-              {header.usersDescription}
-            </p>
-          )}
-
-          {header.sample && (
-            <BudgetRail
-              project={header.sample.project}
-              currency={header.sample.currency}
-              budget={header.sample.budget}
-              spent={header.sample.spent}
-              labels={{
-                runningTotal: ui.header.runningTotal,
-                budgetLabel: ui.header.budgetLabel,
-                ofBudget: ui.header.ofBudget,
-              }}
+          <div className="hidden md:col-span-8 md:col-start-5 md:block lg:col-span-7 lg:col-start-6">
+            <LiveTotal
+              project={sample.project}
+              budget={money(sample.budget)}
+              spent={money(spent)}
+              percent={Math.round(ratio * 100)}
+              ofBudget={ui.header.ofBudget}
+              status={status}
+              tryIt={ui.poster.tryIt}
+              costs={costs.map((amount, i) => ({
+                name: ui.poster.costs[i] ?? "",
+                amount: `+${money(amount)}`,
+                logged: logged[i],
+              }))}
+              onToggle={(i) =>
+                setLogged((current) => current.map((v, j) => (j === i ? !v : v)))
+              }
             />
-          )}
-        </div>
-
-        {/* The real thing */}
-        <div className="flex justify-center md:justify-end">
-          {/* Static: the phone screenshot is the desktop LCP candidate — it
-              must be visible in the SSR paint, not gated on hydration. #23 */}
-          <div className="iphone-frame">
-            <div className="iphone-device">
-              <div className="iphone-dynamic-island" />
-              <div className="iphone-screen">
-                {shots.map((src, shotIndex) => (
-                  <img
-                    key={src}
-                    src={withBase(src)}
-                    // The frame renders at 280px; the source files are 1206px.
-                    // Right-sized variants keep the LCP image small (#23).
-                    srcSet={`${withBase(src.replace(".webp", "-560.webp"))} 560w, ${withBase(src.replace(".webp", "-840.webp"))} 840w, ${withBase(src)} 1206w`}
-                    sizes="280px"
-                    alt={`Home Stories on iPhone, screen ${shotIndex + 1}`}
-                    className="iphone-screenshot absolute inset-0 transition-opacity duration-700"
-                    style={{ opacity: shotIndex === index ? 1 : 0 }}
-                    width={280}
-                    height={608}
-                    loading={shotIndex === 0 ? "eager" : "lazy"}
-                    fetchPriority={shotIndex === 0 ? "high" : "auto"}
-                  />
-                ))}
-              </div>
-              <div className="iphone-button-left iphone-button-silent" />
-              <div className="iphone-button-left iphone-button-volume-up" />
-              <div className="iphone-button-left iphone-button-volume-down" />
-              <div className="iphone-button-right iphone-button-power" />
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* The orange runs on past the fold, as if the spend kept rising */}
+      <div data-field="signal" className="hs-signal">
+        <div className="hs-wrap hs-grid gap-y-14 pb-20 pt-10 md:pb-28 md:pt-16">
+          <div className="col-span-12 md:hidden">
+            <LiveTotal
+              project={sample.project}
+              budget={money(sample.budget)}
+              spent={money(spent)}
+              percent={Math.round(ratio * 100)}
+              ofBudget={ui.header.ofBudget}
+              status={status}
+              tryIt={ui.poster.tryIt}
+              costs={costs.map((amount, i) => ({
+                name: ui.poster.costs[i] ?? "",
+                amount: `+${money(amount)}`,
+                logged: logged[i],
+              }))}
+              onToggle={(i) =>
+                setLogged((current) => current.map((v, j) => (j === i ? !v : v)))
+              }
+            />
+          </div>
+
+          <p
+            className="hs-lead col-span-12 m-0 max-w-[34ch] font-medium md:col-span-7"
+            data-reveal
+          >
+            {header.subtitle}
+          </p>
+
+          <Facts />
         </div>
       </div>
-    </section>
+    </>
+  );
+}
+
+/** The plain facts, the things a person wants to know before they tap. */
+function Facts() {
+  const {
+    ui,
+    home: { facts },
+  } = useContext(ConfigContext)!;
+  if (!facts?.length) return null;
+
+  return (
+    <dl
+      aria-label={ui.sectionLabels.atAGlance}
+      className="col-span-12 m-0 grid grid-cols-2 gap-x-6 gap-y-5 self-end sm:grid-cols-3 md:col-span-5 md:col-start-8 md:grid-cols-2"
+    >
+      {facts.map(({ label, value }, i) => (
+        <div
+          key={label}
+          data-reveal
+          style={{ "--d": `${i * 70}ms` } as CSSProperties}
+        >
+          <dt className="hs-soft">{label}</dt>
+          <dd className="hs-lead m-0 font-semibold">{value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+interface LiveTotalProps {
+  project: string;
+  budget: string;
+  spent: string;
+  percent: number;
+  ofBudget: string;
+  status: string;
+  tryIt: string;
+  costs: { name: string; amount: string; logged: boolean }[];
+  onToggle: (index: number) => void;
+}
+
+/**
+ * The app's running total, at true size. It is a real control: each cost is
+ * a toggle button, and the figures and the hero's field follow it. With no
+ * script it shows the sample as it stands, which is still true.
+ */
+function LiveTotal({
+  project,
+  budget,
+  spent,
+  percent,
+  ofBudget,
+  status,
+  tryIt,
+  costs,
+  onToggle,
+}: LiveTotalProps) {
+  return (
+    <div data-ui className="hs-live hs-rise" style={{ "--d": "220ms" } as CSSProperties}>
+      <div className="flex items-baseline justify-between gap-4">
+        <span className="font-medium">{project}</span>
+        <span className="tabular-nums">
+          {percent}% {ofBudget}
+        </span>
+      </div>
+      <p className="m-0 mt-1 flex flex-wrap items-baseline gap-x-3">
+        <span className="hs-head tabular-nums">{spent}</span>
+        <span className="hs-lead tabular-nums">/ {budget}</span>
+        <span className="ml-auto font-semibold" aria-live="polite">
+          {status}
+        </span>
+      </p>
+      <ul className="m-0 mt-4 flex list-none flex-wrap gap-2 p-0">
+        {costs.map((cost, i) => (
+          <li key={cost.name} className="m-0 p-0">
+            <button
+              type="button"
+              aria-pressed={cost.logged}
+              onClick={() => onToggle(i)}
+              className="hs-cost"
+            >
+              <span>{cost.name}</span>
+              <span className="tabular-nums">{cost.amount}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+      <p className="hs-small m-0 mt-3">{tryIt}</p>
+    </div>
   );
 }
 

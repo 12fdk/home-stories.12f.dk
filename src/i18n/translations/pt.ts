@@ -17,6 +17,30 @@ const pt: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Veja o",
+        "total subir."
+      ],
+      "tryIt": "Toque numa despesa para a registar na cozinha de exemplo.",
+      "costs": [
+        "Bancada de carvalho",
+        "Eletricista",
+        "Azulejos",
+        "Canalizador",
+        "Podridão atrás da parede"
+      ],
+      "left": "Faltam {amount}",
+      "over": "{amount} acima do orçamento",
+      "quote": [
+        "«Quem me dera tê-la",
+        "tido há uns anos.»"
+      ],
+      "price": [
+        "Grátis para usar.",
+        "Pro: {price}, uma vez."
+      ]
+    },
     "nav": {
       "openMenu": "Abrir menu",
       "closeMenu": "Fechar menu",

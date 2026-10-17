@@ -33,11 +33,11 @@ const schema = {
       </h2>
       <div class="space-y-3">
         {items.map((item) => (
-          <details class="rounded-xl border border-base-300 bg-base-100 p-4 open:bg-base-200">
+          <details class="bg-base-200 px-5 py-4 transition-colors open:bg-base-300">
             <summary class="cursor-pointer text-base font-semibold sm:text-lg">
               {item.question}
             </summary>
-            <p class="faq-answer mt-3 text-base-content/80">{item.answer}</p>
+            <p class="faq-answer mt-3">{item.answer}</p>
           </details>
         ))}
       </div>

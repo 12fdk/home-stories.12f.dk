@@ -1,0 +1,56 @@
+---
+// Entrances for every [data-reveal] element, shared by both layouts.
+//
+// The `js` class goes on <html> before first paint, so the hidden state in
+// styles.scss only exists when this script runs; with script off, or on a
+// browser without IntersectionObserver, everything is simply visible. Nodes
+// that React adds or replaces after hydration are picked up by the
+// MutationObserver, so nothing can be left hidden by a re-render.
+---
+
+<script is:inline>
+  (function () {
+    var d = document.documentElement;
+    if (!("IntersectionObserver" in window)) return;
+    d.classList.add("js");
+
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.setAttribute("data-shown", "");
+          io.unobserve(e.target);
+        });
+      },
+      { rootMargin: "0px 0px -4% 0px", threshold: 0.01 }
+    );
+
+    function scan() {
+      document.querySelectorAll("[data-reveal]:not([data-seen])").forEach(function (el) {
+        el.setAttribute("data-seen", "");
+        io.observe(el);
+      });
+    }
+
+    var queued = false;
+    function queue() {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        queued = false;
+        scan();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Article bodies come from markdown, so their blocks are marked here.
+      document
+        .querySelectorAll(".hs-prose > h2, .hs-prose > h3, .hs-prose > p, .hs-prose > ul, .hs-prose > ol, .hs-prose > figure, .hs-prose > table, .hs-prose > aside")
+        .forEach(function (el) {
+          if (el.getBoundingClientRect().top > innerHeight) el.setAttribute("data-reveal", "");
+        });
+      scan();
+      new MutationObserver(queue).observe(document.body, { childList: true, subtree: true });
+    });
+  })();
+</script>

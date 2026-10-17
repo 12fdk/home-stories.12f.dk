@@ -17,6 +17,30 @@ const it: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Il totale",
+        "in vista."
+      ],
+      "tryIt": "Tocca una spesa per registrarla nella cucina di esempio.",
+      "costs": [
+        "Piano in rovere",
+        "Elettricista",
+        "Piastrelle",
+        "Idraulico",
+        "Marcio dietro il muro"
+      ],
+      "left": "Restano {amount}",
+      "over": "{amount} oltre il budget",
+      "quote": [
+        "«Vorrei averla avuta",
+        "un paio di anni fa.»"
+      ],
+      "price": [
+        "Gratis da usare.",
+        "Pro: {price}, una volta."
+      ]
+    },
     "nav": {
       "openMenu": "Apri il menu",
       "closeMenu": "Chiudi il menu",

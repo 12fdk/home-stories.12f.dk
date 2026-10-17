@@ -60,27 +60,39 @@ const aboutSchema = {
   canonicalPath={canonicalPath}
   extraSchema={[personSchema, aboutSchema]}
 >
-  <main class="mx-auto max-w-3xl px-4 py-10 md:py-16">
-    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-base-content/60">
-      <a href="/" class="hover:text-primary">Home</a>
+  <main class="pb-24 pt-10 md:pb-36 md:pt-16">
+    <div class="hs-wrap">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
       <span class="mx-1.5" aria-hidden="true">/</span>
       <span>About</span>
     </nav>
 
-    <header class="mb-10">
-      <h1 class="mb-4 text-3xl font-bold leading-tight md:text-5xl">
+    <header class="hs-grid gap-y-10">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 19" data-reveal>
         About Home Stories
       </h1>
-      <p class="text-lg leading-relaxed text-base-content/80" data-speakable>
+      <p class="hs-lead col-span-12 m-0 max-w-[40ch] md:col-span-6" data-speakable data-reveal style="--d: 80ms">
         Home Stories is a renovation tracker for iPhone and iPad, built and maintained by
         one person: Robert Jensen, a Danish software developer who renovated a
         kitchen, a bathroom and an attic before writing a line of it. The app
         exists because every tool he tried — spreadsheets, Notion, generic
         project managers — stopped being useful somewhere around week two.
       </p>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src="/stock/16.webp"
+          alt="A kitchen mid-renovation: the room stripped back to its studs, with the new cabinet carcasses going in."
+          width={1200}
+          height={900}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
     </header>
+    </div>
 
-    <div class="prose prose-lg max-w-none">
+    <div class="hs-prose prose prose-lg mx-auto mt-20 max-w-[46rem] px-5 md:mt-28">
       <h2>Who writes the guides</h2>
       <p>
         Every article on this site is written by Robert Jensen. They are not

@@ -1,105 +1,77 @@
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import { withBase } from "../../utils/basePath";
 import { appStoreClick } from "../../utils/tracking";
-import { motion } from "framer-motion";
-import AppStoreRating from "../appStoreRating";
+import { longest, twoLines } from "../../utils/measure";
 
-/** The closing ask. Ink section, one action, no second thought to have. */
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
+
+/**
+ * The close. The page's colours flip: graphite becomes the ink and the light
+ * grey the ground. One sentence at poster size, one line under it, one action.
+ */
 function AppBanner() {
-  const { googlePlayLink, appStoreLink, appBanner } =
-    useContext(ConfigContext)!;
-
+  const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext)!;
   if (!appBanner) return null;
+
+  const lines = twoLines(appBanner.title);
 
   return (
     <section
       id={appBanner.id}
-      className="relative overflow-hidden border-t border-base-300 bg-neutral text-neutral-content"
+      data-field="light"
+      className="hs-light flex min-h-[80svh] flex-col justify-between gap-20 pb-10 pt-24 md:min-h-[90svh] md:pt-32"
     >
-      {/* Tape edge across the top: the one place the accent runs full width */}
-      <div aria-hidden="true" className="h-1 w-full bg-accent" />
-      <div
-        aria-hidden="true"
-        className="ticks absolute inset-x-0 top-1 text-neutral-content"
-      />
+      <div className="hs-wrap w-full">
+        <h2 className="hs-display m-0" style={{ "--chars": longest(lines) } as CSSProperties}>
+          {lines.map((line, i) => (
+            <span key={line} className="block whitespace-nowrap" data-reveal style={d(i * 90)}>
+              {line}
+            </span>
+          ))}
+        </h2>
+      </div>
 
-      <div className="mx-auto grid max-w-screen-lg items-center gap-10 px-4 py-20 md:grid-cols-2 md:gap-8 md:py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      <div className="hs-wrap hs-grid w-full items-end gap-y-8">
+        <p className="hs-lead col-span-12 m-0 max-w-[34ch] md:col-span-6" data-reveal style={d(160)}>
+          {appBanner.subtitle}
+        </p>
+        <div
+          className="col-span-12 flex flex-wrap items-center gap-4 md:col-span-4 md:col-start-9 md:justify-end"
+          data-reveal
+          style={d(220)}
         >
-          <h2 className="m-0 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-[3.25rem]">
-            {appBanner.title}
-          </h2>
-          <p className="mt-5 max-w-md leading-relaxed text-neutral-content/70">
-            {appBanner.subtitle}
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-5">
-            {appStoreLink && (
-              <a
-                href={appStoreLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex"
-                {...appStoreClick("app-banner")}
-              >
-                <img
-                  className="h-[52px]"
-                  alt="Download Home Stories on the App Store"
-                  src={withBase("/stores/app-store.svg")}
-                  width={156}
-                  height={52}
-                  loading="lazy"
-                />
-              </a>
-            )}
-            {googlePlayLink && (
-              <a href={googlePlayLink} className="inline-flex">
-                <img
-                  className="h-[52px]"
-                  alt="Get Home Stories on Google Play"
-                  src={withBase("/stores/google-play.svg")}
-                  width={156}
-                  height={52}
-                  loading="lazy"
-                />
-              </a>
-            )}
-            <AppStoreRating size="md" showReviewCount={false} />
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex justify-center md:justify-end"
-        >
-          <div className="iphone-frame">
-            <div className="iphone-device">
-              <div className="iphone-dynamic-island" />
-              <div className="iphone-screen">
-                <img
-                  className="iphone-screenshot"
-                  src={withBase(appBanner.screenshots[0])}
-                  alt="Home Stories project list on iPhone"
-                  loading="lazy"
-                  width={288}
-                  height={625}
-                />
-              </div>
-              <div className="iphone-button-left iphone-button-silent" />
-              <div className="iphone-button-left iphone-button-volume-up" />
-              <div className="iphone-button-left iphone-button-volume-down" />
-              <div className="iphone-button-right iphone-button-power" />
-            </div>
-          </div>
-        </motion.div>
+          {appStoreLink && (
+            <a
+              href={appStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hs-badge"
+              {...appStoreClick("app-banner")}
+            >
+              <img
+                className="h-[56px]"
+                alt="Download Home Stories on the App Store"
+                src={withBase("/stores/app-store.svg")}
+                width={168}
+                height={56}
+                loading="lazy"
+              />
+            </a>
+          )}
+          {googlePlayLink && (
+            <a href={googlePlayLink} className="hs-badge">
+              <img
+                className="h-[56px]"
+                alt="Get Home Stories on Google Play"
+                src={withBase("/stores/google-play.svg")}
+                width={168}
+                height={56}
+                loading="lazy"
+              />
+            </a>
+          )}
+        </div>
       </div>
     </section>
   );

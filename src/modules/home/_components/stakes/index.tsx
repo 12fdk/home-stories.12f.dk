@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
+import { withBase } from "../../../../utils/basePath";
 import { appStoreClick } from "../../../../utils/tracking";
-import SectionHeading from "../../../../components/sectionHeading";
+import { measure } from "../../../../utils/measure";
+
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 /**
  * The stakes. The page used to run hero -> features, which skips the reason
@@ -20,83 +22,106 @@ function Stakes() {
   } = useContext(ConfigContext)!;
   if (!stakes) return null;
 
-  return (
-    <section id={stakes.id} className="border-b border-base-300">
-      <div className="mx-auto max-w-screen-lg px-4 py-20 md:py-28">
-        <SectionHeading label={stakes.label} title={stakes.title} />
+  const stat = stakes.stat;
 
-        <div className="mt-10 grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+  return (
+    <>
+      <section id={stakes.id} data-field="light" className="hs-light hs-section">
+        <div className="hs-wrap hs-grid gap-y-12">
+          <h2
+            className={`${measure(stakes.title) > 40 ? "hs-title" : "hs-head"} col-span-12 m-0 max-w-[22ch] lg:col-span-10`}
+            data-reveal
           >
-            {stakes.body.map((paragraph) => (
+            {stakes.title}
+          </h2>
+
+          <div className="col-span-12 md:col-span-6 lg:col-span-5">
+            {stakes.body.map((paragraph, i) => (
               <p
                 key={paragraph}
-                className="mt-0 max-w-xl text-base leading-relaxed text-base-content/70 [&+p]:mt-4 md:text-lg"
+                className="m-0 max-w-[52ch] [&+p]:mt-5"
+                data-reveal
+                style={d(80 + i * 80)}
               >
                 {paragraph}
               </p>
             ))}
+          </div>
 
-            {stakes.stat && (
-              <div className="mt-10 border-t-2 border-accent pt-5">
-                <p className="m-0 font-display text-4xl font-extrabold tracking-tightest text-base-content md:text-5xl">
-                  {stakes.stat.value}
-                </p>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-base-content/60">
-                  {stakes.stat.caption}
-                </p>
-                <p className="mt-4">
-                  <a
-                    href={stakes.stat.href}
-                    className="tick-label inline-flex items-center gap-2 border-b-2 border-accent pb-0.5 text-base-content no-underline hover:opacity-70"
-                  >
-                    {stakes.stat.linkText}
-                    <span aria-hidden="true">→</span>
-                  </a>
-                </p>
-              </div>
-            )}
-          </motion.div>
+          {stat && (
+            <div className="col-span-12 md:col-span-6 md:col-start-7 lg:col-start-8 lg:col-span-5">
+              <p
+                className="hs-display m-0 tabular-nums"
+                style={{ ...d(120), "--chars": measure(stat.value) + 1 } as CSSProperties}
+                data-reveal
+              >
+                {stat.value}
+              </p>
+              <p className="m-0 mt-5 max-w-[40ch]" data-reveal style={d(200)}>
+                {stat.caption}
+              </p>
+              <p className="m-0 mt-4" data-reveal style={d(260)}>
+                <a href={stat.href} className="hs-link">
+                  {stat.linkText}
+                </a>
+              </p>
+            </div>
+          )}
 
-          {/* The turn: same drawing conventions, but this is the side you want
-              to be standing on. */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-box border border-base-300 bg-base-200 p-7 md:p-8"
-          >
-            <p className="tick-label m-0 flex items-center gap-3 text-base-content/50">
-              <span className="inline-block h-0.5 w-8 bg-accent" />
-              {stakes.success.label}
-            </p>
-            <h3 className="mt-4 font-display text-2xl font-extrabold leading-[1.15] tracking-tightest text-base-content md:text-3xl">
+          {/* What nobody photographed: the inside of the wall. */}
+          <figure className="col-span-12 m-0 mt-6 overflow-hidden" data-reveal>
+            <img
+              src={withBase("/stock/20.webp")}
+              alt="An opened stud wall in a stripped room, with yellow cables running through the gap before the plasterboard goes back on."
+              loading="lazy"
+              width={1600}
+              height={900}
+              className="hs-drift aspect-[4/3] w-full object-cover md:aspect-[21/9]"
+            />
+          </figure>
+        </div>
+      </section>
+
+      {/* The turn: the side you want to be standing on. */}
+      <section data-field="dark" className="hs-dark hs-section">
+        <div className="hs-wrap hs-grid items-end gap-y-12">
+          <div className="col-span-12 lg:col-span-7">
+            <h3
+              className={`${measure(stakes.success.title) > 40 ? "hs-title" : "hs-head"} m-0 max-w-[26ch]`}
+              data-reveal
+            >
               {stakes.success.title}
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-base-content/70">
+            <p className="m-0 mt-6 max-w-[52ch]" data-reveal style={d(80)}>
               {stakes.success.body}
             </p>
-
             {appStoreLink && (
               <a
                 href={appStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-accent mt-7 rounded-btn border-0 font-display text-base font-bold tracking-tight"
+                className="hs-btn mt-9"
+                data-reveal
+                style={d(160)}
                 {...appStoreClick("stakes")}
               >
                 {stakes.cta}
               </a>
             )}
-          </motion.div>
+          </div>
+          <img
+            src={withBase("/stock/15.webp")}
+            alt="A finished white kitchen with a stone worktop, pendant lights and a steel fridge, everything installed and clean."
+            loading="lazy"
+            width={800}
+            height={1000}
+            className="col-span-12 aspect-[4/5] w-full object-cover sm:col-span-8 lg:col-span-5 lg:col-start-8"
+            data-reveal
+            style={d(120)}
+          />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

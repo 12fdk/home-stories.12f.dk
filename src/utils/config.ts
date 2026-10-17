@@ -10,6 +10,22 @@ const templateConfig: TemplateConfig = {
   locale: "en",
   // English micro-copy. Other locales override this via src/i18n/translations.
   ui: {
+    poster: {
+      headline: ["Watch it", "add up."],
+      tryIt: "Tap a cost to log it against the sample kitchen.",
+      costs: [
+        "Oak worktop",
+        "Electrician",
+        "Floor tiles",
+        "Plumber",
+        "Rot behind the wall",
+      ],
+      left: "{amount} left",
+      over: "{amount} over budget",
+      // Verbatim from the one real review (testimonials.cards[0]).
+      quote: ["“I wish I had had it", "a couple of years ago.”"],
+      price: ["Free to use.", "Pro is {price}, once."],
+    },
     nav: {
       openMenu: "Open menu",
       closeMenu: "Close menu",
@@ -157,7 +173,7 @@ const templateConfig: TemplateConfig = {
       cards: [
         {
           name: "Henrik Moenster",
-          source: "App Store · Denmark · 5★ · translated from Danish",
+          source: "App Store, Denmark · Rated 5 of 5 · Translated from Danish",
           comment:
             "This app is brilliant when you have to plan and carry out projects, large and small. I wish I had had it a couple of years ago when we renovated a flat. It would have been very useful for planning and documenting the renovation, the hours spent and the materials bought.",
         },
@@ -472,6 +488,9 @@ const templateConfig: TemplateConfig = {
         currency: "$",
         budget: 25000,
         spent: 12950,
+        // $1,450 oak worktop is the cost logged in demo-2.mp4. The five sum
+        // to $12,640, which lands the kitchen $590 over: the point of the demo.
+        costs: [1450, 2300, 890, 3200, 4800],
       },
     },
   },

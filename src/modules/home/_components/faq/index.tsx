@@ -1,72 +1,52 @@
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import { useContext, useState } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
-import SectionHeading from "../../../../components/sectionHeading";
 
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
+
+/**
+ * A wide heading and the questions indented beneath it, so the left third
+ * under the heading stays empty. Native <details>: every answer is in the
+ * markup (and in the FAQPage schema) and opens without script.
+ */
 function Faq() {
   const {
     home: { faq },
   } = useContext(ConfigContext)!;
-  const [activeIndex, setActiveIndex] = useState<number>();
-
   if (!faq) return null;
 
   return (
-    <section
-      id={faq.id}
-      className="border-t border-base-300 bg-base-200 py-20 md:py-28"
-    >
-      <div className="mx-auto grid max-w-screen-lg gap-12 px-4 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
-        <SectionHeading label="FAQ" title={faq.title} />
+    <section id={faq.id} data-field="dark" className="hs-dark hs-section">
+      <div className="hs-wrap hs-grid gap-y-14 md:gap-y-20">
+        <h2 className="hs-head col-span-12 m-0" data-reveal>
+          {faq.title}
+        </h2>
 
-        <div className="divide-y divide-base-300 border-y border-base-300">
-          {faq.qa.map((qa, index) => {
-            const isOpen = activeIndex === index;
-            return (
-              <motion.div
-                key={qa.question}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-              >
-                <h3 className="m-0">
-                  <button
-                    onClick={() =>
-                      setActiveIndex((current) =>
-                        current === index ? undefined : index
-                      )
-                    }
-                    aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 py-5 text-left font-display text-lg font-bold tracking-tight text-base-content"
-                  >
-                    {qa.question}
-                    <span
-                      aria-hidden="true"
-                      className={clsx(
-                        "relative h-4 w-4 shrink-0 text-base-content/40 transition-transform duration-300",
-                        { "rotate-45": isOpen }
-                      )}
-                    >
-                      <span className="absolute left-0 top-1/2 h-px w-4 -translate-y-1/2 bg-current" />
-                      <span className="absolute left-1/2 top-0 h-4 w-px -translate-x-1/2 bg-current" />
-                    </span>
-                  </button>
+        <div className="col-span-12 space-y-3 md:col-span-8 md:col-start-5">
+          {faq.qa.map((qa, index) => (
+            <details
+              key={qa.question}
+              className="hs-faq group"
+              data-reveal
+              style={d((index % 6) * 50)}
+            >
+              <summary className="hs-lead flex cursor-pointer list-none items-start justify-between gap-6 py-3 [&::-webkit-details-marker]:hidden">
+                <h3 className="m-0 text-[length:inherit] font-normal leading-[inherit] tracking-normal">
+                  {qa.question}
                 </h3>
-                <div
-                  className={clsx(
-                    "grid grid-rows-[0fr] transition-[grid-template-rows,padding] duration-300",
-                    { "grid-rows-[1fr] pb-6": isOpen }
-                  )}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="mt-1 h-6 w-6 shrink-0 transition-transform duration-300 group-open:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
                 >
-                  <p className="faq-answer m-0 overflow-hidden pr-8 leading-relaxed text-base-content/70">
-                    {qa.answer}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+                  <path d="M5 9l7 7 7-7" />
+                </svg>
+              </summary>
+              <p className="faq-answer m-0 max-w-[52ch] pb-4">{qa.answer}</p>
+            </details>
+          ))}
         </div>
       </div>
     </section>

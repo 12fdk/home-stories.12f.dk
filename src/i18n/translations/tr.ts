@@ -17,6 +17,30 @@ const tr: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Toplamı",
+        "anlık gör."
+      ],
+      "tryIt": "Örnek mutfağa eklemek için bir harcamaya dokun.",
+      "costs": [
+        "Meşe tezgâh",
+        "Elektrikçi",
+        "Yer karosu",
+        "Tesisatçı",
+        "Duvar arkasında çürük"
+      ],
+      "left": "{amount} kaldı",
+      "over": "Bütçe {amount} aşıldı",
+      "quote": [
+        "“Keşke birkaç yıl önce, bir",
+        "daireyi yenilerken elimde olsaydı.”"
+      ],
+      "price": [
+        "Ücretsiz kullan.",
+        "Pro: {price}, tek sefer."
+      ]
+    },
     "nav": {
       "openMenu": "Menüyü aç",
       "closeMenu": "Menüyü kapat",

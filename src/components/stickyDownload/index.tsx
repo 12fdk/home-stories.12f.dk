@@ -33,17 +33,17 @@ function HomeSticky() {
   return (
     <motion.div
       style={{ opacity, y }}
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-base-300 bg-base-100/95 p-3 backdrop-blur-md md:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 bg-graphite p-3 md:hidden"
     >
       <a
         href={appStoreLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn btn-primary w-full text-base font-semibold normal-case"
+        className="hs-btn w-full"
         {...appStoreClick("sticky")}
       >
         Download free
-        <span className="tick-label opacity-70">iOS 17+</span>
+        <span className="font-normal">· iOS 17 or later</span>
       </a>
     </motion.div>
   );
@@ -107,21 +107,21 @@ function BlogSticky() {
   return (
     <div
       aria-hidden={!show}
-      className={`fixed inset-x-0 bottom-0 z-50 border-t border-base-300 bg-base-100/95 px-3 py-2 backdrop-blur-md transition-all duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-50 bg-graphite px-3 py-2 text-mist transition-all duration-300 md:hidden ${
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-full opacity-0"
       }`}
     >
       <div className="flex items-center gap-3">
-        <p className="m-0 flex-1 text-sm leading-tight text-base-content/80">
+        <p className="m-0 flex-1 text-sm leading-tight">
           Track this project on your iPhone or iPad
-          <span className="block text-xs text-base-content/55">Free · works offline · no account</span>
+          <span className="block opacity-75">Free · works offline · no account</span>
         </p>
         <a
           href={appStoreLink}
           target="_blank"
           rel="noopener noreferrer"
           tabIndex={show ? 0 : -1}
-          className="btn btn-primary btn-sm font-semibold normal-case"
+          className="hs-btn min-h-[44px] px-4"
           {...appStoreClick("sticky")}
         >
           Get it free
@@ -131,7 +131,7 @@ function BlogSticky() {
           onClick={dismiss}
           tabIndex={show ? 0 : -1}
           aria-label="Hide this bar"
-          className="btn btn-ghost btn-sm btn-square text-base-content/60"
+          className="flex h-11 w-11 items-center justify-center text-xl"
         >
           ×
         </button>

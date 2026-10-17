@@ -17,6 +17,30 @@ const pl: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Patrz, jak",
+        "rośnie suma."
+      ],
+      "tryIt": "Stuknij wydatek, aby dopisać go do przykładowej kuchni.",
+      "costs": [
+        "Blat dębowy",
+        "Elektryk",
+        "Płytki podłogowe",
+        "Hydraulik",
+        "Zgnilizna za ścianą"
+      ],
+      "left": "Zostało {amount}",
+      "over": "{amount} ponad budżet",
+      "quote": [
+        "„Żałuję, że nie miałem",
+        "jej parę lat temu.”"
+      ],
+      "price": [
+        "Za darmo.",
+        "Pro: {price}, jednorazowo."
+      ]
+    },
     "nav": {
       "openMenu": "Otwórz menu",
       "closeMenu": "Zamknij menu",

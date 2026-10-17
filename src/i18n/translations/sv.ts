@@ -17,6 +17,30 @@ const sv: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Se summan",
+        "växa."
+      ],
+      "tryIt": "Tryck på en kostnad för att föra in den på exempelköket.",
+      "costs": [
+        "Bänkskiva i ek",
+        "Elektriker",
+        "Golvplattor",
+        "Rörmokare",
+        "Röta bakom väggen"
+      ],
+      "left": "{amount} kvar",
+      "over": "{amount} över budget",
+      "quote": [
+        "”Jag önskar att jag hade haft",
+        "den för ett par år sedan.”"
+      ],
+      "price": [
+        "Gratis att använda.",
+        "Pro kostar {price}, en gång."
+      ]
+    },
     "nav": {
       "openMenu": "Öppna meny",
       "closeMenu": "Stäng meny",

@@ -17,6 +17,30 @@ const nl: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Zie het",
+        "optellen."
+      ],
+      "tryIt": "Tik op een uitgave om die in de voorbeeldkeuken te boeken.",
+      "costs": [
+        "Eiken werkblad",
+        "Elektricien",
+        "Vloertegels",
+        "Loodgieter",
+        "Rot achter de muur"
+      ],
+      "left": "{amount} over",
+      "over": "{amount} boven budget",
+      "quote": [
+        "„Ik wou dat ik hem een paar",
+        "jaar geleden had gehad.”"
+      ],
+      "price": [
+        "Gratis te gebruiken.",
+        "Pro: {price}, eenmalig."
+      ]
+    },
     "nav": {
       "openMenu": "Menu openen",
       "closeMenu": "Menu sluiten",

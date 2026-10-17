@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
-import SectionHeading from "../../../../components/sectionHeading";
 
 export interface BlogTeaser {
   slug: string;
@@ -15,67 +13,54 @@ interface Props {
   posts: BlogTeaser[];
 }
 
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
+
 /**
  * The homepage links straight into the blog cluster. Without this every post
  * hangs off a single index page, which is a thin path for both readers and
- * crawlers.
+ * crawlers. Set as a reading list: the title large, what it answers beside it.
  */
 function FromTheBlog({ posts }: Props) {
   const { ui } = useContext(ConfigContext)!;
   if (!posts.length) return null;
 
   return (
-    <section
-      id="writing"
-      className="mx-auto max-w-screen-lg px-4 py-20 md:py-28"
-    >
-      <div className="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading
-          label={ui.sectionLabels.writing}
-          title={ui.blog.title}
-          subtitle={ui.blog.subtitle}
-        />
-        <a
-          href="/blog/"
-          className="tick-label shrink-0 border-b-2 border-accent pb-1 text-base-content transition-colors hover:text-primary"
-        >
-          {ui.blog.allPosts}
-        </a>
-      </div>
+    <section id="writing" data-field="light" className="hs-light hs-section">
+      <div className="hs-wrap">
+        <div className="hs-grid items-end gap-y-6">
+          <div className="col-span-12 md:col-span-8">
+            <h2 className="hs-head m-0 max-w-[20ch]" data-reveal>
+              {ui.blog.title}
+            </h2>
+            <p className="hs-lead m-0 mt-5 max-w-[36ch]" data-reveal style={d(80)}>
+              {ui.blog.subtitle}
+            </p>
+          </div>
+          <p className="col-span-12 m-0 md:col-span-4 md:justify-self-end" data-reveal style={d(120)}>
+            <a href="/blog/" className="hs-link">
+              {ui.blog.allPosts}
+            </a>
+          </p>
+        </div>
 
-      <ul className="mt-12 list-none divide-y divide-base-300 border-y border-base-300 p-0">
-        {posts.map((post, index) => (
-          <motion.li
-            key={post.slug}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{
-              duration: 0.45,
-              delay: index * 0.06,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="m-0 p-0"
-          >
-            <a
-              href={`/blog/${post.slug}/`}
-              className="group flex flex-col gap-2 py-6 md:flex-row md:items-baseline md:gap-8"
-            >
-              <span className="tick-label shrink-0 text-base-content/40 md:w-40">
-                {post.date} · {post.minutes} min
-              </span>
-              <span className="flex-1">
-                <span className="block font-display text-xl font-bold tracking-tight text-base-content transition-colors group-hover:text-primary md:text-2xl">
+        <ul className="m-0 mt-16 list-none space-y-4 p-0 md:mt-24">
+          {posts.map((post, index) => (
+            <li key={post.slug} className="m-0 p-0" data-reveal style={d(index * 80)}>
+              <a href={`/blog/${post.slug}/`} className="hs-post hs-grid gap-y-2 px-0 py-6 md:py-8">
+                <span className="hs-lead col-span-12 font-semibold md:col-span-6">
                   {post.title}
                 </span>
-                <span className="mt-1 block text-base-content/70">
+                <span className="col-span-12 md:col-span-5 md:col-start-8">
                   {post.description}
+                  <span className="hs-soft mt-2 block">
+                    {post.date} · {post.minutes} min
+                  </span>
                 </span>
-              </span>
-            </a>
-          </motion.li>
-        ))}
-      </ul>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
