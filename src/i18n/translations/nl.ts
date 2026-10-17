@@ -10,6 +10,7 @@ const nl: Translation = {
     "links": [
       "Functies",
       "Hoe het werkt",
+      "Toepassingen",
       "Blog",
       "Downloads",
       "FAQ",

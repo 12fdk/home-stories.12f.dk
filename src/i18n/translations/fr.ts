@@ -10,6 +10,7 @@ const fr: Translation = {
     "links": [
       "Fonctionnalités",
       "Comment ça marche",
+      "Cas d'usage",
       "Blog",
       "Téléchargements",
       "FAQ",

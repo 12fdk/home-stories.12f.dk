@@ -10,6 +10,7 @@ const de: Translation = {
     "links": [
       "Funktionen",
       "So funktioniert's",
+      "Anwendungsfälle",
       "Blog",
       "Downloads",
       "FAQ",

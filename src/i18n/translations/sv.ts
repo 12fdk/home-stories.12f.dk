@@ -10,6 +10,7 @@ const sv: Translation = {
     "links": [
       "Funktioner",
       "Så fungerar det",
+      "Användningsområden",
       "Blogg",
       "Nedladdningar",
       "FAQ",

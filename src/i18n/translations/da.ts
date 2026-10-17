@@ -10,6 +10,7 @@ const da: Translation = {
     "links": [
       "Funktioner",
       "Sådan virker det",
+      "Anvendelser",
       "Blog",
       "Downloads",
       "FAQ",
