@@ -11,7 +11,7 @@
 - **Languages**: 50
 - **Developer**: Robert Jensen (12f, Denmark)
 - **Canonical URL**: https://home-stories.12f.dk
-- **App Store**: https://apps.apple.com/app/id6754754960
+- **App Store**: https://apps.apple.com/app/id6754754960?ct=llms-home-stories&mt=8
 - **Contact**: robert@12f.dk
 - **Privacy**: No account and no sign-up. Projects stay on the device unless you turn on iCloud sync or share a project (both Pro). No ads. Anonymous usage analytics can be switched off in Settings.
 

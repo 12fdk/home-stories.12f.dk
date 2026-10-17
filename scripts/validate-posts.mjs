@@ -21,9 +21,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { planInlineCta, sectionsFromMarkdown } from "../src/utils/blogCta.mjs";
+import { APP_STORE_URL, appStoreUrl, blogCampaign } from "../src/utils/appStoreLink.mjs";
 
 const BLOG_DIR = "src/content/blog";
-const APP_STORE_URL = "https://apps.apple.com/app/id6754754960";
 
 /**
  * Citations the blog is allowed to link out to (prompt.md §3).
@@ -284,11 +284,18 @@ function checkPost(file) {
   }
 
   /* --- external links: App Store link + the verified citation allowlist (prompt.md §3) --- */
+  const expectedStore = appStoreUrl(blogCampaign(slug));
   const external = [...body.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map((m) => m[1]);
   for (const u of external) {
     if (u.startsWith(APP_STORE_URL)) continue;
     if (VERIFIED_CITATIONS.has(u)) continue;
     E(`unverified external URL: ${u} — fetch it, confirm it resolves, then add it to VERIFIED_CITATIONS`);
+  }
+  // Markdown links and frontmatter <a href> both count. `ct` is how a download
+  // is attributed to this post; an untagged link is invisible in App Store Connect. #112
+  const storeLinks = [...raw.matchAll(/https:\/\/apps\.apple\.com\/app\/id\d+(?:\?[^)\s'"<>]*)?/g)].map((m) => m[0]);
+  for (const u of storeLinks) {
+    if (u !== expectedStore) E(`App Store link must be ${expectedStore} — ct campaign token, truncated to 40 characters (#112)`);
   }
   if (/apps\.apple\.com\/[a-z]{2}\//.test(raw)) E("App Store link uses a country storefront — use the neutral form (#97)");
 

@@ -34,8 +34,10 @@ these too, not just hardcore renovators:
 
 **The app, factually (never claim more than this):**
 Home Stories is a **free native app for iPhone and iPad (iOS 17+)**. There is
-no Android version. Made in Denmark by Robert Jensen. App Store:
-`https://apps.apple.com/app/id6754754960`
+no Android version. Made in Denmark by Robert Jensen. App Store — every link in
+this post uses this exact form, with this post's slug (`ct` is `blog-` plus the
+slug, truncated to 40 characters; never add `pt=`):
+`https://apps.apple.com/app/id6754754960?ct=blog-<slug>&mt=8`
 
 Free, and it stays free: projects with a budget and a running total; items with
 a price; payments logged with materials, labour and contractor kept apart;
@@ -469,6 +471,8 @@ one has failed on this site before or is enforced by the validator.
    reused image, named as such in the report), and no image shows people (§6).
 8. **Page-set rules, if the post came from §1a:** the sibling link requirements in
    §1a are met.
+9. **Every App Store link uses the §0 form** for this post's slug (`ct=blog-<slug>`,
+   truncated to 40 characters, plus `mt=8`). The validator rejects any other form.
 
 ## 8. Final report (your last message)
 
@@ -488,6 +492,17 @@ Report concisely:
 - Confirm you did the factual-accuracy self-check (§3): no invented statistics, no
   unfetched report names, no unverified external URLs.
 - The cover: new ComfyUI image (`/stock/NN.webp`, size in KB) or a reused image (§6 fallback).
+- Traffic check: after the deploy is green, run
+  `python3 /opt/data/profiles/blogger/scripts/umami_post_views.py
+  330ddb96-95c9-43cd-b9fe-485c0d114b33 /blog/<slug>/ 12` and report the number
+  as a **traffic line** (0 in the first hours is normal — real traffic and
+  indexing take time; never fail or retry a publish because of it, the
+  publish proof is the deploy + the HTTP 200).
+- Search line: `python3 /opt/data/profiles/blogger/scripts/gsc.py page-views
+  https://home-stories.12f.dk/ /blog/<slug>/ 14` and report its output (e.g.
+  `GSC_SEARCH 12 impressions, 2 clicks, position 5.3`). Google indexes new posts
+  over days, so `0 impressions … no position yet` is normal for a fresh post —
+  never fail a publish on it; the publish proof is the deploy + the HTTP 200.
 - Which existing post now links to the new one (§4).
 - Anything that fell back or is worth a human glance (e.g. "topic bank is running low",
   "the digest kept surfacing a theme no post can serve").

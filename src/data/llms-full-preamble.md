@@ -18,7 +18,7 @@ This document is the authoritative, AI-friendly reference for Home Stories. It f
 - **App ID**: 6754754960
 - **Bundle ID**: 12f.home-stories
 - **Canonical site**: https://home-stories.12f.dk
-- **App Store**: https://apps.apple.com/app/id6754754960
+- **App Store**: https://apps.apple.com/app/id6754754960?ct=llms-home-stories&mt=8
 - **Support email**: robert@12f.dk
 
 ## 2. Who it is for

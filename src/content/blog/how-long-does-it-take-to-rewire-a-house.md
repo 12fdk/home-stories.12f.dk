@@ -112,7 +112,7 @@ You can absolutely live in your house during a rewire. Most people do. But here'
 
 A house rewire is a project that looks small on paper and large in practice. It involves an electrician, a permit office, an inspector, a decorator, several suppliers, and a lot of waiting. The kind of information that gets lost during a rewire — quotes, decisions about what circuit goes where, the date each room was finished, the model of the consumer unit — is exactly the kind of thing that becomes painful to track once the electrician has left.
 
-If you're planning a rewire, a simple project note with dates, costs, and photos of the work-in-progress is worth its weight. [Home Stories](https://apps.apple.com/app/id6754754960) is one way to keep that information attached to the project, and Pro can export it as a PDF when someone official asks. But even a notebook and a folder of photos works. The tool doesn't matter; the habit does.
+If you're planning a rewire, a simple project note with dates, costs, and photos of the work-in-progress is worth its weight. [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-how-long-does-it-take-to-rewire-a-h&mt=8) is one way to keep that information attached to the project, and Pro can export it as a PDF when someone official asks. But even a notebook and a folder of photos works. The tool doesn't matter; the habit does.
 
 ## When a rewire is worth it — and when it isn't
 

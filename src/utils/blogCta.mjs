@@ -1,3 +1,5 @@
+import { APP_STORE_URL } from "./appStoreLink.mjs";
+
 /**
  * Blog App Store CTAs: topic-aware copy and the mid-article placement rule.
  *
@@ -28,7 +30,7 @@
  *   inlineCtaText: "…"      — custom sentence for an inserted card
  */
 
-export const APP_STORE_URL = "https://apps.apple.com/app/id6754754960";
+export { APP_STORE_URL };
 
 /** Event surface for the mid-article card (Umami `surface` property). */
 export const INLINE_SURFACE = "blog-inline";

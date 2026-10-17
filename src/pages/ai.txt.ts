@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import { LLMS_CAMPAIGN, appStoreUrl } from "../utils/appStoreLink.mjs";
 import { isPublished } from "../utils/posts";
 
 const SITE = "https://home-stories.12f.dk";
@@ -33,7 +34,7 @@ Price: Free. Optional one-time Pro (about $9.99 in the US, no subscription): bud
 Developer: Robert Jensen (12f)
 Contact: robert@12f.dk
 Canonical: ${SITE}/
-App Store: https://apps.apple.com/app/id6754754960
+App Store: ${appStoreUrl(LLMS_CAMPAIGN)}
 
 # Policy
 # We explicitly welcome AI crawlers, answer engines, and retrieval systems to
