@@ -89,6 +89,7 @@ const templateConfig: TemplateConfig = {
     links: [
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
+      { href: "/use-cases/", title: "Use cases" },
       { href: "/blog/", title: "Blog" },
       { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },
@@ -103,6 +104,7 @@ const templateConfig: TemplateConfig = {
     links: [
       { href: "/#features", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
+      { href: "/use-cases/", title: "Use cases" },
       { href: "/blog/", title: "Blog" },
       { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },

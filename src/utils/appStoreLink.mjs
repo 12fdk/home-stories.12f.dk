@@ -28,6 +28,11 @@ export function blogCampaign(slug) {
   return `blog-${slug}`.slice(0, CT_MAX);
 }
 
+/** `uc-<slug>` for the /use-cases/ pages, truncated like `blogCampaign`. */
+export function useCaseCampaign(slug) {
+  return `uc-${slug}`.slice(0, CT_MAX);
+}
+
 export function appStoreUrl(token) {
   const ct = String(token).slice(0, CT_MAX);
   return `${APP_STORE_URL}?ct=${ct}&mt=8`;

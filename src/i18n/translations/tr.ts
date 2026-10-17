@@ -10,6 +10,7 @@ const tr: Translation = {
     "links": [
       "Özellikler",
       "Nasıl çalışır",
+      "Kullanım alanları",
       "Blog",
       "İndirilenler",
       "SSS",

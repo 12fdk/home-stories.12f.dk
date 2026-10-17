@@ -1,0 +1,114 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { useCases } from "../../data/useCases";
+
+const path = "/use-cases/";
+const title = "What You Can Track with Home Stories";
+const description =
+  "Home Stories use cases: kitchens, bathrooms, lofts, garages, gardens, rentals, house flips, repairs and more. One free iPhone and iPad app for each project.";
+
+const url = new URL(path, Astro.site).href;
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url,
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "[data-speakable]"],
+  },
+  mainEntity: { "@id": `${url}#use-cases` },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${url}#use-cases`,
+  name: "Home Stories use cases",
+  numberOfItems: useCases.length,
+  itemListElement: useCases.map((useCase, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/use-cases/${useCase.slug}/`, Astro.site).href,
+    name: useCase.h1,
+  })),
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, itemListSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Use cases", path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+    </nav>
+
+    <header class="hs-grid items-end gap-y-10">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 17" data-reveal>
+        <span class="block">One app,</span>
+        <span class="block">every home project</span>
+      </h1>
+      <div class="col-span-12 md:col-span-6">
+        <p class="hs-lead m-0 mt-6 max-w-[38ch]" data-speakable data-reveal style="--d: 80ms">
+          Home Stories keeps the budget, tasks, photos, notes and documents for a project in one place.
+          A project can be a kitchen, a garage, a garden, a rental flat or the long list of small repairs.
+          Pick the job you have.
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src="/stock/13.webp"
+          alt="Architectural drawings spread on plywood over a sawhorse, with a pencil, a scale ruler and a coffee cup"
+          width={1024}
+          height={768}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <ul class="hs-grid m-0 mt-20 list-none gap-y-12 p-0 md:mt-28">
+      {
+        useCases.map((useCase, i) => (
+          <li class="col-span-12 m-0 sm:col-span-6 lg:col-span-4" data-reveal style={`--d: ${(i % 3) * 60}ms`}>
+            <a href={`/use-cases/${useCase.slug}/`} class="group block">
+              <span class="block overflow-hidden">
+                <img
+                  src={useCase.image}
+                  alt=""
+                  width={640}
+                  height={480}
+                  loading={i < 3 ? "eager" : "lazy"}
+                  decoding="async"
+                  class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </span>
+              <span class="hs-lead mt-4 block font-semibold group-hover:underline">{useCase.label}</span>
+              <span class="mt-2 block">{useCase.metaDescription}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="m-0 mt-16">
+      Looking for advice rather than the app? <a href="/guides/" class="hs-link">Renovation guides by topic</a>.
+    </p>
+  </main>
+</BlogLayout>

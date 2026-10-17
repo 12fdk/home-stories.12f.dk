@@ -10,6 +10,7 @@ const it: Translation = {
     "links": [
       "Funzionalità",
       "Come funziona",
+      "Casi d'uso",
       "Blog",
       "Download",
       "FAQ",

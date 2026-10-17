@@ -4,4 +4,5 @@ export const APP_STORE_URL: string;
 export const SITE_CAMPAIGN: string;
 export const LLMS_CAMPAIGN: string;
 export function blogCampaign(slug: string): string;
+export function useCaseCampaign(slug: string): string;
 export function appStoreUrl(token: string): string;

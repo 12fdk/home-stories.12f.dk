@@ -10,6 +10,7 @@ const nb: Translation = {
     "links": [
       "Funksjoner",
       "Slik fungerer det",
+      "Bruksområder",
       "Blogg",
       "Nedlastinger",
       "FAQ",
