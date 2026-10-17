@@ -1,12 +1,13 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
-import SectionHeading from "../../../../components/sectionHeading";
+
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 /**
  * The spreadsheet is the real competitor. One honest table: what each aspect
- * of the job looks like in a spreadsheet vs in the app. Same drawing
- * conventions as the rest of the page — hairlines, mono labels, no drama.
+ * of the job looks like in a spreadsheet vs in the app. The app's column is
+ * in the full ink and the spreadsheet's in the soft one; nothing else marks
+ * the winner.
  */
 function Comparison() {
   const {
@@ -15,112 +16,70 @@ function Comparison() {
   if (!comparison) return null;
 
   return (
-    <section
-      id={comparison.id}
-      className="border-y border-base-300 bg-base-200"
-    >
-      <div className="mx-auto max-w-screen-lg px-4 py-20 md:py-28">
-        <SectionHeading
-          label={comparison.label}
-          title={comparison.title}
-          subtitle={comparison.subtitle}
-        />
+    <section id={comparison.id} data-field="light" className="hs-light hs-section">
+      <div className="hs-wrap">
+        <div className="hs-grid gap-y-5">
+          <h2 className="hs-head col-span-12 m-0 md:col-span-8" data-reveal>
+            {comparison.title}
+          </h2>
+          {comparison.subtitle && (
+            <p className="hs-lead col-span-12 m-0 max-w-[36ch] md:col-span-6" data-reveal style={d(80)}>
+              {comparison.subtitle}
+            </p>
+          )}
+        </div>
 
-        {/* Mobile: category, then each side with its label above the copy.
-            An inline label steals the first line, so longer locale strings
-            wrap into orphans ("timeline" alone, "contractor kept apart."). */}
-        <motion.dl
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 divide-y divide-base-300 border-y border-base-300 md:hidden"
-        >
-          {comparison.rows.map((row) => (
-            <div key={row.aspect} className="py-6">
-              <dt className="tick-label !text-sm text-base-content/80">
-                {row.aspect}
-              </dt>
-              <dd className="m-0 mt-4">
-                <span className="tick-label block text-base-content/45">
-                  {comparison.columns.them}
-                </span>
-                <p className="m-0 mt-1 text-balance text-sm leading-relaxed text-base-content/60">
-                  {row.them}
-                </p>
+        {/* Phone: each aspect, then each side with its name above the copy */}
+        <dl className="m-0 mt-14 space-y-10 md:hidden">
+          {comparison.rows.map((row, i) => (
+            <div key={row.aspect} data-reveal style={d(i * 50)}>
+              <dt className="hs-lead font-semibold">{row.aspect}</dt>
+              <dd className="m-0 mt-3">
+                <span className="hs-soft block">{comparison.columns.them}</span>
+                <span className="hs-soft block">{row.them}</span>
               </dd>
-              <dd className="m-0 mt-4">
-                <span className="tick-label flex items-center gap-2 text-base-content">
-                  <span
-                    className="inline-block h-0.5 w-4 shrink-0 bg-accent"
-                    aria-hidden="true"
-                  />
-                  {comparison.columns.us}
-                </span>
-                <p className="m-0 mt-1 text-balance text-sm font-medium leading-relaxed text-base-content">
-                  {row.us}
-                </p>
+              <dd className="m-0 mt-3">
+                <span className="block font-semibold">{comparison.columns.us}</span>
+                <span className="block">{row.us}</span>
               </dd>
             </div>
           ))}
-        </motion.dl>
+        </dl>
 
-        {/* Desktop: the honest three-column table. */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 hidden md:block"
-        >
-          <table className="w-full border-collapse text-sm">
+        {/* Desktop: the three-column table */}
+        <div className="mt-20 hidden md:block" data-reveal style={d(120)}>
+          <table className="hs-table w-full border-collapse">
             <thead>
-              <tr className="border-b border-base-300">
-                <th
-                  className="w-32 py-3 pr-4 text-left align-bottom md:w-40"
-                  aria-label="Aspect"
-                />
-                <th className="py-3 pr-4 text-left align-bottom font-normal">
-                  <span className="tick-label text-base-content/45">
-                    {comparison.columns.them}
-                  </span>
+              <tr>
+                <th scope="col" className="w-[22%]">
+                  <span className="sr-only">Aspect</span>
                 </th>
-                <th className="py-3 text-left align-bottom font-normal">
-                  <span className="tick-label flex items-center gap-2 text-base-content">
-                    <span className="inline-block h-0.5 w-4 bg-accent" />
-                    {comparison.columns.us}
-                  </span>
+                <th scope="col" className="hs-soft w-[36%] font-medium">
+                  {comparison.columns.them}
+                </th>
+                <th scope="col" className="font-semibold">
+                  {comparison.columns.us}
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-base-300">
+            <tbody>
               {comparison.rows.map((row) => (
                 <tr key={row.aspect}>
-                  <td className="py-4 pr-4 align-top">
-                    <span className="tick-label text-base-content/45">
-                      {row.aspect}
-                    </span>
-                  </td>
-                  <td className="py-4 pr-4 align-top leading-relaxed text-base-content/60">
-                    {row.them}
-                  </td>
-                  <td className="py-4 align-top font-medium leading-relaxed text-base-content">
-                    {row.us}
-                  </td>
+                  <th scope="row" className="hs-lead font-semibold">
+                    {row.aspect}
+                  </th>
+                  <td className="hs-soft">{row.them}</td>
+                  <td className="font-medium">{row.us}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
         {comparison.cta && (
-          <p className="mt-8">
-            <a
-              href={comparison.cta.href}
-              className="tick-label inline-flex items-center gap-2 border-b-2 border-accent pb-0.5 text-base-content no-underline hover:opacity-70"
-            >
+          <p className="m-0 mt-12" data-reveal>
+            <a href={comparison.cta.href} className="hs-link">
               {comparison.cta.text}
-              <span aria-hidden="true">→</span>
             </a>
           </p>
         )}

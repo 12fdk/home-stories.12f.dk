@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 ---
 
-<aside class="not-prose my-12 flex flex-col items-start gap-4 rounded-2xl border border-base-300 bg-base-200 p-6 sm:flex-row sm:items-center sm:p-8">
+<aside class="not-prose my-14 flex flex-col items-start gap-5 bg-base-200 p-6 sm:flex-row sm:items-center sm:p-8">
   {
     avatarUrl && (
       <img
@@ -21,15 +21,15 @@ const {
         width="72"
         height="72"
         loading="lazy"
-        class="h-18 w-18 flex-shrink-0 rounded-full object-cover ring-2 ring-base-300"
+        class="h-18 w-18 flex-shrink-0 rounded-full object-cover"
       />
     )
   }
   <div>
-    <p class="mb-1 text-sm font-semibold uppercase tracking-wide text-base-content/60">
+    <p class="hs-soft mb-1">
       Written by
     </p>
     <p class="text-lg font-bold">{name}</p>
-    <p class="mt-1 text-sm text-base-content/80">{bio}</p>
+    <p class="mt-1">{bio}</p>
   </div>
 </aside>

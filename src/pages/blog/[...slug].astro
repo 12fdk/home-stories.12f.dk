@@ -148,16 +148,17 @@ const articleSchema = {
   author={post.data.author}
   tags={[post.data.keyword, ...post.data.tags]}
 >
-  <article class="max-w-3xl mx-auto px-4 py-10 md:py-16">
-    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-base-content/60">
-      <a href="/" class="hover:text-primary">Home</a>
+  <article class="pb-20 pt-10 md:pb-28 md:pt-16">
+    <div class="hs-wrap">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
       <span class="mx-1.5" aria-hidden="true">/</span>
-      <a href="/blog/" class="hover:text-primary">Blog</a>
+      <a href="/blog/" class="hover:underline">Blog</a>
       {
         topicGuides.map((guide) => (
           <>
             <span class="mx-1.5" aria-hidden="true">/</span>
-            <a href={`/guides/${guide.slug}/`} class="hover:text-primary">
+            <a href={`/guides/${guide.slug}/`} class="hover:underline">
               {guide.label}
             </a>
           </>
@@ -165,33 +166,39 @@ const articleSchema = {
       }
     </nav>
 
-    <header class="mb-8">
-      <h1 class="mb-4 text-3xl font-bold leading-tight md:text-5xl">
+    <header class="hs-grid gap-y-6">
+      <h1 class="hs-title col-span-12 m-0 max-w-[34ch] lg:col-span-11" data-reveal>
         {post.data.title}
       </h1>
-      <div class="flex flex-wrap items-center gap-2 text-sm text-base-content/60">
-        <span>By {post.data.author}</span>
-        <span aria-hidden="true">•</span>
-        <time datetime={post.data.publishDate.toISOString()}>
-          {formatDate(post.data.publishDate)}
-        </time>
-        {post.data.updatedDate && (
-          <>
-            <span aria-hidden="true">•</span>
-            <span>Updated {formatDate(post.data.updatedDate)}</span>
-          </>
-        )}
-        <span aria-hidden="true">•</span>
-        <span>{minutes} min read</span>
-      </div>
-      <p class="mt-6 text-lg leading-relaxed text-base-content/85 md:text-xl" data-speakable>
+      <p class="hs-soft col-span-12 m-0" data-reveal style="--d: 60ms">
+        By {post.data.author} · <time datetime={post.data.publishDate.toISOString()}>{formatDate(post.data.publishDate)}</time>
+        {post.data.updatedDate && <> · Updated {formatDate(post.data.updatedDate)}</>}
+        {" · "}{minutes} min read
+      </p>
+      <p class="hs-lead col-span-12 m-0 max-w-[44ch] md:col-span-9" data-speakable data-reveal style="--d: 120ms">
         {post.data.lede}
       </p>
     </header>
 
+    {post.data.cover && (
+      <figure class="m-0 mt-12 overflow-hidden md:mt-16" data-reveal style="--d: 160ms">
+        <img
+          src={post.data.cover}
+          alt={post.data.coverAlt ?? ""}
+          width={1600}
+          height={900}
+          loading="eager"
+          decoding="async"
+          class="aspect-[16/9] w-full object-cover md:aspect-[21/9]"
+        />
+      </figure>
+    )}
+    </div>
+
+    <div class="hs-post-body mx-auto mt-14 max-w-[46rem] px-5 md:mt-20">
     <TldrBox items={post.data.tldr} />
 
-    <div class="prose prose-lg max-w-none prose-headings:font-bold prose-h2:mt-12 prose-h2:text-3xl prose-h3:text-xl prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl">
+    <div class="hs-prose prose prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:mt-14 prose-h2:text-3xl prose-h3:text-xl">
       <Content />
     </div>
 
@@ -208,6 +215,7 @@ const articleSchema = {
     <AuthorBio name={post.data.author} />
 
     <RelatedPosts posts={related} />
+    </div>
   </article>
 
   <script

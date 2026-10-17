@@ -17,6 +17,30 @@ const fr: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Le total",
+        "en direct."
+      ],
+      "tryIt": "Touchez une dépense pour l'ajouter à la cuisine d'exemple.",
+      "costs": [
+        "Plan de travail en chêne",
+        "Électricien",
+        "Carrelage",
+        "Plombier",
+        "Pourriture derrière le mur"
+      ],
+      "left": "{amount} restants",
+      "over": "{amount} au-delà du budget",
+      "quote": [
+        "« J'aurais aimé l'avoir",
+        "il y a deux ans. »"
+      ],
+      "price": [
+        "Gratuit à l'usage.",
+        "Pro : {price}, une fois."
+      ]
+    },
     "nav": {
       "openMenu": "Ouvrir le menu",
       "closeMenu": "Fermer le menu",

@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
-import SectionHeading from "../../../../components/sectionHeading";
+
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 /**
- * Real reviews only. The section used to carry three invented ones; there is
- * exactly one genuine review, so the grid has to read well at a length of one
- * rather than pad itself back up to three. #117
+ * Real reviews only. There is exactly one, so it is set as one: a verbatim
+ * excerpt at poster size, who said it and where, and the whole review beside
+ * it, unedited. #117
  */
 function Testimonials() {
   const {
@@ -15,64 +15,51 @@ function Testimonials() {
   } = useContext(ConfigContext)!;
   if (!testimonials?.cards.length) return null;
 
-  const single = testimonials.cards.length === 1;
+  const [first, ...rest] = testimonials.cards;
+  const quote = ui.poster.quote;
 
   return (
-    <section
-      id={testimonials.id}
-      className="mx-auto max-w-screen-lg px-4 py-20 md:py-28"
-    >
-      <SectionHeading
-        label={ui.sectionLabels.reviews}
-        title={testimonials.title}
-        subtitle={testimonials.subtitle}
-      />
+    <section id={testimonials.id} data-field="light" className="hs-light hs-section">
+      <div className="hs-wrap">
+        <h2 className="hs-lead m-0 font-semibold" data-reveal>
+          {testimonials.title}
+        </h2>
 
-      <div
-        className={`mt-14 grid gap-6 ${
-          single ? "max-w-2xl" : "md:grid-cols-3"
-        }`}
-      >
-        {testimonials.cards.map(({ name, comment, source }, index) => (
-          <motion.figure
-            key={name}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.08,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="m-0 flex flex-col rounded-box border border-base-300 bg-base-100 p-6"
-          >
-            <div className="flex gap-0.5 text-accent" aria-label="Rated 5 out of 5">
-              {Array.from({ length: 5 }).map((_, star) => (
-                <svg
-                  key={star}
-                  className="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8L12 2.5z" />
-                </svg>
-              ))}
-            </div>
+        <figure className="m-0 mt-12 md:mt-16">
+          <blockquote className="hs-head m-0 !leading-[1.02]">
+            {quote.map((line, i) => (
+              <span key={line} className="block whitespace-nowrap" data-reveal style={d(i * 90)}>
+                {line}
+              </span>
+            ))}
+          </blockquote>
 
-            <blockquote className="mt-4 flex-1 text-base leading-relaxed text-base-content/80">
-              {comment}
-            </blockquote>
-
-            <figcaption className="mt-6 border-t border-base-300 pt-4">
-              <span className="tick-label text-base-content/50">{name}</span>
-              {source && (
-                <span className="mt-1 block text-xs text-base-content/40">
-                  {source}
-                </span>
-              )}
+          <div className="hs-grid mt-14 gap-y-6">
+            <figcaption className="col-span-12 md:col-span-4" data-reveal style={d(180)}>
+              <span className="hs-lead block font-semibold">{first.name}</span>
+              {first.source && <span className="hs-soft mt-1 block">{first.source}</span>}
             </figcaption>
-          </motion.figure>
+            <div className="col-span-12 space-y-4 md:col-span-7 md:col-start-6">
+              <p className="m-0 max-w-[60ch]" data-reveal style={d(220)}>
+                {first.comment}
+              </p>
+              {testimonials.subtitle && (
+                <p className="hs-soft m-0 max-w-[60ch]" data-reveal style={d(260)}>
+                  {testimonials.subtitle}
+                </p>
+              )}
+            </div>
+          </div>
+        </figure>
+
+        {rest.map(({ name, comment, source }) => (
+          <blockquote key={name} className="m-0 mt-10 max-w-[60ch] md:ml-[41.66%]">
+            <p className="m-0">{comment}</p>
+            <footer className="hs-soft mt-2">
+              {name}
+              {source ? `, ${source}` : ""}
+            </footer>
+          </blockquote>
         ))}
       </div>
     </section>

@@ -17,6 +17,30 @@ const da: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Se det",
+        "løbe op."
+      ],
+      "tryIt": "Tryk på en udgift for at føre den på eksempelkøkkenet.",
+      "costs": [
+        "Egetræsbordplade",
+        "Elektriker",
+        "Gulvfliser",
+        "VVS'er",
+        "Råd bag væggen"
+      ],
+      "left": "{amount} tilbage",
+      "over": "{amount} over budget",
+      "quote": [
+        "»Jeg ville ønske at jeg havde",
+        "haft den for et par år siden.«"
+      ],
+      "price": [
+        "Gratis at bruge.",
+        "Pro koster {price} én gang."
+      ]
+    },
     "nav": {
       "openMenu": "Åbn menu",
       "closeMenu": "Luk menu",

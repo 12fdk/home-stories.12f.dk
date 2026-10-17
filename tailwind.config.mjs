@@ -12,19 +12,23 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Archivo: industrial grotesque, used for display sizes only
-        display: ["Archivo", "Inter", ...defaultTheme.fontFamily.sans],
-        sans: ["Inter", "SF Pro Text", ...defaultTheme.fontFamily.sans],
-        // IBM Plex Mono: labels, figures, dimension annotations
-        mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
+        // One family does all the work. Inter covers the scripts General Sans
+        // lacks (Cyrillic for /ru/); CJK falls through to the system face.
+        display: ["General Sans", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["General Sans", "Inter", ...defaultTheme.fontFamily.sans],
       },
       letterSpacing: {
         tightest: "-0.035em",
         label: "0.12em",
       },
       colors: {
-        // The one signature colour: tape-measure yellow
-        tape: "#FFC300",
+        // The homepage fields, as utilities for the components that paint them
+        graphite: "#18191B",
+        "graphite-2": "#222427",
+        mist: "#EBEBE7",
+        "mist-2": "#DEDEDA",
+        ply: "#DCC095",
+        signal: "#FF4A1F",
       },
       keyframes: {
         "rail-fill": {
@@ -40,29 +44,31 @@ export default {
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
     themes: [
-      // "Measured" — drafting ink on paper, App Store blue for actions,
-      // tape yellow reserved for the dimension rail.
+      // "Graphite and orange" — the app icon's orange on a cool graphite and a
+      // cool light grey. Orange is for the action; everything else is ink on
+      // ground. The homepage paints its own fields (styles.scss, --hs-*), so
+      // these two themes are what the blog, guides and legal pages read.
       {
         home: {
-          primary: "#0A6CF1",
-          "primary-content": "#FFFFFF",
-          secondary: "#1F7A5C",
-          "secondary-content": "#FFFFFF",
-          accent: "#FFC300",
-          "accent-content": "#14181C",
-          neutral: "#14181C",
-          "neutral-content": "#FBFBF9",
-          "base-100": "#FBFBF9",
-          "base-200": "#F2F2EF",
-          "base-300": "#E3E3DE",
-          "base-content": "#14181C",
-          info: "#0A6CF1",
+          primary: "#FF4A1F",
+          "primary-content": "#18191B",
+          secondary: "#18191B",
+          "secondary-content": "#EBEBE7",
+          accent: "#FF4A1F",
+          "accent-content": "#18191B",
+          neutral: "#18191B",
+          "neutral-content": "#EBEBE7",
+          "base-100": "#EBEBE7",
+          "base-200": "#DEDEDA",
+          "base-300": "#CFCFCA",
+          "base-content": "#18191B",
+          info: "#2F6FDE",
           success: "#1F7A5C",
-          warning: "#E08600",
-          error: "#D9342B",
-          "--rounded-box": "0.75rem",
-          "--rounded-btn": "0.5rem",
-          "--rounded-badge": "0.375rem",
+          warning: "#C2410C",
+          error: "#C8261B",
+          "--rounded-box": "0",
+          "--rounded-btn": "0",
+          "--rounded-badge": "0",
           "--animation-btn": "0.2s",
           "--animation-input": "0.2s",
           "--btn-focus-scale": "0.98",
@@ -71,25 +77,25 @@ export default {
       },
       {
         "home-dark": {
-          primary: "#4C93FF",
-          "primary-content": "#08111F",
-          secondary: "#3FBF8F",
-          "secondary-content": "#08150F",
-          accent: "#FFC300",
-          "accent-content": "#14181C",
-          neutral: "#1A1F24",
-          "neutral-content": "#F0F0EC",
-          "base-100": "#0F1215",
-          "base-200": "#171B1F",
-          "base-300": "#252B31",
-          "base-content": "#F0F0EC",
-          info: "#4C93FF",
+          primary: "#FF4A1F",
+          "primary-content": "#18191B",
+          secondary: "#EBEBE7",
+          "secondary-content": "#18191B",
+          accent: "#FF4A1F",
+          "accent-content": "#18191B",
+          neutral: "#222427",
+          "neutral-content": "#EBEBE7",
+          "base-100": "#18191B",
+          "base-200": "#222427",
+          "base-300": "#303236",
+          "base-content": "#EBEBE7",
+          info: "#7AA7FF",
           success: "#3FBF8F",
-          warning: "#FFA92E",
+          warning: "#FF8A5C",
           error: "#FF6B60",
-          "--rounded-box": "0.75rem",
-          "--rounded-btn": "0.5rem",
-          "--rounded-badge": "0.375rem",
+          "--rounded-box": "0",
+          "--rounded-btn": "0",
+          "--rounded-badge": "0",
           "--animation-btn": "0.2s",
           "--animation-input": "0.2s",
           "--btn-focus-scale": "0.98",

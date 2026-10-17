@@ -71,24 +71,24 @@ const trackDownload = transitionalDownload
         target="_blank"
         rel="noopener"
         {...track}
-        class="link link-primary font-semibold"
+        class="hs-link"
       >
         {body}
       </a>
     </p>
   ) : (
     <aside
-      class="not-prose my-10 rounded-2xl border border-base-300 bg-base-200 p-6 sm:p-8"
+      class="hs-signal not-prose my-12 p-7 sm:p-10"
       data-cta-id={slug ? `blog-cta-end-${slug}` : "blog-cta-end"}
     >
-      <h3 class="mb-2 text-xl font-bold text-base-content sm:text-2xl">{heading}</h3>
-      <p class="mb-5 text-base-content/80">{body}</p>
+      <h3 class="hs-lead mb-3 font-semibold">{heading}</h3>
+      <p class="mb-6">{body}</p>
       <a
         href={appStoreLink}
         target="_blank"
         rel="noopener"
         {...track}
-        class="btn btn-primary"
+        class="hs-btn hs-btn--ink"
       >
         {buttonText}
       </a>
@@ -99,7 +99,7 @@ const trackDownload = transitionalDownload
               href={transitionalHref}
               download={transitionalDownload ? "" : undefined}
               {...trackDownload}
-              class="text-base-content/60 underline-offset-4 hover:text-base-content"
+              class="underline underline-offset-4"
             >
               {transitionalText} ↓
             </a>

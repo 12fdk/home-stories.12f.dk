@@ -17,6 +17,30 @@ const es: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Mira cómo",
+        "se suma."
+      ],
+      "tryIt": "Toca un gasto para anotarlo en la cocina de ejemplo.",
+      "costs": [
+        "Encimera de roble",
+        "Electricista",
+        "Baldosas",
+        "Fontanero",
+        "Podredumbre tras la pared"
+      ],
+      "left": "Quedan {amount}",
+      "over": "{amount} por encima del presupuesto",
+      "quote": [
+        "«Ojalá la hubiera tenido",
+        "hace un par de años.»"
+      ],
+      "price": [
+        "Gratis para usar.",
+        "Pro: {price}, una vez."
+      ]
+    },
     "nav": {
       "openMenu": "Abrir menú",
       "closeMenu": "Cerrar menú",

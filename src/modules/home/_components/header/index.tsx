@@ -1,254 +1,227 @@
-import { motion } from "framer-motion";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useMemo, useState, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import { withBase } from "../../../../utils/basePath";
 import { appStoreClick } from "../../../../utils/tracking";
-import AppStoreRating from "../../../../components/appStoreRating";
-
-const SCREENSHOT_INTERVAL = 3800;
+import { longest } from "../../../../utils/measure";
 
 /**
- * The dimension rail: the app's budget bar drawn the way a measurement is
- * called out on a construction drawing. The figures are the sample kitchen
- * project shown in the screenshot beside it — not a claim about anyone's spend.
+ * The hero: the claim on the left, the proof on the right. The proof is the
+ * app's own before/after slider wiping an old kitchen into the finished one
+ * (cut from demo-3.mp4), and under the claim the sample kitchen's running
+ * total, which the reader can push past its budget by logging the next costs.
+ * The figures are the sample project in the app's screenshots, not a claim
+ * about anyone's spend.
  */
-function BudgetRail({
-  project,
-  currency,
-  budget,
-  spent,
-  labels,
-}: {
-  project: string;
-  currency: string;
-  budget: number;
-  spent: number;
-  labels: { runningTotal: string; budgetLabel: string; ofBudget: string };
-}) {
-  const spentRatio = Math.min(spent / budget, 1);
-  const format = (n: number) => `${currency}${n.toLocaleString("en-US")}`;
 
-  return (
-    <div className="not-prose mt-7 max-w-md">
-      <div className="flex items-baseline justify-between text-base-content/60">
-        <span className="tick-label">{project}</span>
-        <span className="tick-label">
-          {Math.round(spentRatio * 100)}% {labels.ofBudget}
-        </span>
-      </div>
+const format = (currency: string, n: number) =>
+  `${currency}${Math.round(n).toLocaleString("en-US")}`;
 
-      {/* One bar: running total against the budget */}
-      <div className="relative mt-3 flex h-3 overflow-hidden rounded-[3px] bg-base-300">
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          style={{ transformOrigin: "left", width: `${spentRatio * 100}%` }}
-          className="h-full bg-accent"
-        />
-        <div
-          aria-hidden="true"
-          className="ticks absolute inset-x-0 -bottom-2 text-base-content"
-        />
-      </div>
-
-      {/* The dimension callouts */}
-      <div className="mt-5 grid grid-cols-2 gap-4 font-mono">
-        {[
-          { k: labels.runningTotal, v: format(spent) },
-          { k: labels.budgetLabel, v: format(budget) },
-        ].map(({ k, v }) => (
-          // Static: hero text must be visible in the SSR paint (LCP). #23
-          <div key={k}>
-            <div
-              aria-hidden="true"
-              className="rail text-base-content"
-            />
-            <div className="mt-2 text-base font-medium tabular-nums text-base-content">
-              {v}
-            </div>
-            <div className="tick-label text-base-content/50">{k}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 function Header() {
   const {
-    googlePlayLink,
     appStoreLink,
     ui,
     home: { header },
   } = useContext(ConfigContext)!;
 
-  const [index, setIndex] = useState(0);
-  const shots = header.screenshots;
+  const sample = header.sample!;
+  const costs = sample.costs ?? [];
+  const [logged, setLogged] = useState<boolean[]>(() => costs.map(() => false));
 
-  useEffect(() => {
-    if (shots.length < 2) return;
-    const timer = setInterval(
-      () => setIndex((current) => (current + 1) % shots.length),
-      SCREENSHOT_INTERVAL
-    );
-    return () => clearInterval(timer);
-  }, [shots.length]);
+  const spent = useMemo(
+    () => sample.spent + costs.reduce((sum, c, i) => sum + (logged[i] ? c : 0), 0),
+    [logged, costs, sample.spent],
+  );
+  const over = spent > sample.budget;
+  const money = (n: number) => format(sample.currency, n);
+  const status = over
+    ? ui.poster.over.replace("{amount}", money(spent - sample.budget))
+    : ui.poster.left.replace("{amount}", money(sample.budget - spent));
 
-  const words = header.headline.split(" ");
-  const mark = header.headlineMark;
+  const [line1, line2] = ui.poster.headline;
 
   return (
-    <section
-      id={header.id}
-      className="relative overflow-hidden border-b border-base-300"
-    >
-      {/* Drafting grid, barely there */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.05] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:32px_32px]"
-      />
-
-      <div className="mx-auto grid max-w-screen-lg gap-12 px-4 pb-16 pt-8 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-8 md:pb-20 md:pt-10">
-        <div className="prose max-w-none">
-          {/* Hero text is static: SSR must paint it immediately — entrance
-              animations here hid the LCP element until hydration (#23). */}
-          <p className="tick-label not-prose m-0 flex items-center gap-3 text-base-content/50">
-            <span className="inline-block h-0.5 w-8 bg-accent" />
-            {ui.header.eyebrow}
-          </p>
-
-          <h1 className="mb-0 mt-4 text-[2.5rem] font-extrabold leading-[1.04] tracking-tightest md:text-[3.5rem]">
-            {words.map((word, wordIndex) => {
-              const highlighted =
-                mark && wordIndex >= mark[0] && wordIndex < mark[1];
-              return (
-                <span key={wordIndex} className="inline-block">
-                  <span
-                    className={
-                      highlighted
-                        ? "relative inline-block"
-                        : "inline-block"
-                    }
-                  >
-                    {word}
-                    {highlighted && (
-                      <motion.span
-                        aria-hidden="true"
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        transition={{ delay: 0.9, duration: 0.5 }}
-                        style={{ transformOrigin: "left" }}
-                        className="absolute -bottom-1 left-0 right-0 h-[6px] bg-accent"
-                      />
-                    )}
-                  </span>
-                  {wordIndex < words.length - 1 && " "}
-                </span>
-              );
-            })}
+    <section id={header.id} data-field="dark" className="hs-dark overflow-hidden">
+      <div className="hs-wrap hs-grid gap-y-12 pb-16 pt-12 md:pb-24 md:pt-16">
+        <div className="col-span-12 flex flex-col md:col-span-6">
+          <h1
+            className="hs-display hs-display--half hs-rise m-0"
+            style={{ "--chars": longest([line1, line2]) } as CSSProperties}
+          >
+            <span className="block whitespace-nowrap">{line1}</span>
+            <span className="block whitespace-nowrap">{line2}</span>
           </h1>
 
-          <p className="mb-0 mt-5 max-w-lg text-base leading-relaxed text-base-content/70 md:text-lg">
-            {header.subtitle}
+          <p className="hs-lead hs-rise m-0 mt-8 max-w-[30ch]" style={d(80)}>
+            {ui.header.eyebrow}. {header.usersDescription}.
           </p>
 
-          <div className="not-prose mt-7 flex flex-wrap items-center gap-x-5 gap-y-4">
-            {appStoreLink && (
-              <a
-                href={appStoreLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex"
-                {...appStoreClick("hero")}
-              >
-                <img
-                  className="h-[52px]"
-                  alt="Download Home Stories on the App Store"
-                  src={withBase("/stores/app-store.svg")}
-                  width={156}
-                  height={52}
-                />
-              </a>
-            )}
-            {googlePlayLink && (
-              <a href={googlePlayLink} className="inline-flex">
-                <img
-                  className="h-[52px]"
-                  alt="Get Home Stories on Google Play"
-                  src={withBase("/stores/google-play.svg")}
-                  width={156}
-                  height={52}
-                />
-              </a>
-            )}
-            <AppStoreRating size="md" showReviewCount={false} />
-          </div>
-
-          {/* The guide, in one line. This string has been in the config (and
-              translated into 15 locales) since i18n landed without ever being
-              rendered — it is the strongest empathy+authority sentence the
-              page has, so it now sits next to the CTA. #117 */}
-          {header.usersDescription && (
-            <p className="not-prose mt-5 flex items-start gap-3 text-sm leading-relaxed text-base-content/60">
-              <span
-                aria-hidden="true"
-                className="mt-2 inline-block h-0.5 w-6 flex-none bg-accent"
+          {appStoreLink && (
+            <a
+              href={appStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hs-badge hs-rise mt-8 self-start"
+              style={d(140)}
+              {...appStoreClick("hero")}
+            >
+              <img
+                className="h-[54px]"
+                alt="Download Home Stories on the App Store"
+                src={withBase("/stores/app-store.svg")}
+                width={162}
+                height={54}
               />
-              {header.usersDescription}
-            </p>
+            </a>
           )}
 
-          {header.sample && (
-            <BudgetRail
-              project={header.sample.project}
-              currency={header.sample.currency}
-              budget={header.sample.budget}
-              spent={header.sample.spent}
-              labels={{
-                runningTotal: ui.header.runningTotal,
-                budgetLabel: ui.header.budgetLabel,
-                ofBudget: ui.header.ofBudget,
-              }}
-            />
-          )}
+          <LiveTotal
+            project={sample.project}
+            budget={money(sample.budget)}
+            spent={money(spent)}
+            ratio={spent / sample.budget}
+            ofBudget={ui.header.ofBudget}
+            status={status}
+            over={over}
+            tryIt={ui.poster.tryIt}
+            costs={costs.map((amount, i) => ({
+              name: ui.poster.costs[i] ?? "",
+              amount: `+${money(amount)}`,
+              logged: logged[i],
+            }))}
+            onToggle={(i) =>
+              setLogged((current) => current.map((v, j) => (j === i ? !v : v)))
+            }
+          />
         </div>
 
-        {/* The real thing */}
-        <div className="flex justify-center md:justify-end">
-          {/* Static: the phone screenshot is the desktop LCP candidate — it
-              must be visible in the SSR paint, not gated on hydration. #23 */}
-          <div className="iphone-frame">
-            <div className="iphone-device">
-              <div className="iphone-dynamic-island" />
-              <div className="iphone-screen">
-                {shots.map((src, shotIndex) => (
-                  <img
-                    key={src}
-                    src={withBase(src)}
-                    // The frame renders at 280px; the source files are 1206px.
-                    // Right-sized variants keep the LCP image small (#23).
-                    srcSet={`${withBase(src.replace(".webp", "-560.webp"))} 560w, ${withBase(src.replace(".webp", "-840.webp"))} 840w, ${withBase(src)} 1206w`}
-                    sizes="280px"
-                    alt={`Home Stories on iPhone, screen ${shotIndex + 1}`}
-                    className="iphone-screenshot absolute inset-0 transition-opacity duration-700"
-                    style={{ opacity: shotIndex === index ? 1 : 0 }}
-                    width={280}
-                    height={608}
-                    loading={shotIndex === 0 ? "eager" : "lazy"}
-                    fetchPriority={shotIndex === 0 ? "high" : "auto"}
-                  />
-                ))}
-              </div>
-              <div className="iphone-button-left iphone-button-silent" />
-              <div className="iphone-button-left iphone-button-volume-up" />
-              <div className="iphone-button-left iphone-button-volume-down" />
-              <div className="iphone-button-right iphone-button-power" />
-            </div>
-          </div>
-        </div>
+        {/* The proof: a real recording from the app, large */}
+        <figure className="hs-hero-media hs-rise col-span-12 m-0 md:col-span-6" style={d(60)}>
+          <video
+            src={withBase("/videos/hero-reveal.mp4")}
+            poster={withBase("/videos/hero-reveal.webp")}
+            aria-label="The Home Stories before and after slider wiping an old oak kitchen into the finished white one."
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            width={720}
+            height={900}
+          />
+        </figure>
+      </div>
+
+      <div className="hs-wrap hs-grid gap-y-10 pb-20 md:pb-28">
+        <p className="hs-lead col-span-12 m-0 max-w-[40ch] md:col-span-6" data-reveal>
+          {header.subtitle}
+        </p>
+        <Facts />
       </div>
     </section>
+  );
+}
+
+/** The plain facts, the things a person wants to know before they tap. */
+function Facts() {
+  const {
+    ui,
+    home: { facts },
+  } = useContext(ConfigContext)!;
+  if (!facts?.length) return null;
+
+  return (
+    <dl
+      aria-label={ui.sectionLabels.atAGlance}
+      className="col-span-12 m-0 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3 md:col-span-6 md:grid-cols-3"
+    >
+      {facts.map(({ label, value }, i) => (
+        <div key={label} data-reveal style={d(i * 60)}>
+          <dt className="hs-soft">{label}</dt>
+          <dd className="hs-lead m-0 font-semibold">{value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+interface LiveTotalProps {
+  project: string;
+  budget: string;
+  spent: string;
+  ratio: number;
+  ofBudget: string;
+  status: string;
+  over: boolean;
+  tryIt: string;
+  costs: { name: string; amount: string; logged: boolean }[];
+  onToggle: (index: number) => void;
+}
+
+/**
+ * The app's running total at true size, and a real control: each cost is a
+ * toggle button and the bar follows it. With no script it shows the sample as
+ * it stands, which is still true.
+ */
+function LiveTotal({
+  project,
+  budget,
+  spent,
+  ratio,
+  ofBudget,
+  status,
+  over,
+  tryIt,
+  costs,
+  onToggle,
+}: LiveTotalProps) {
+  return (
+    <div data-ui className="hs-live hs-rise mt-14 md:mt-auto md:pt-16" style={d(220)}>
+      <div className="flex items-baseline justify-between gap-4">
+        <span className="font-semibold">{project}</span>
+        <span className="tabular-nums">
+          {Math.round(ratio * 100)}% {ofBudget}
+        </span>
+      </div>
+      <p className="m-0 mt-2 flex flex-wrap items-baseline gap-x-3">
+        <span className="hs-head tabular-nums">{spent}</span>
+        <span className="hs-lead hs-soft tabular-nums">/ {budget}</span>
+      </p>
+
+      <div
+        className="hs-bar mt-4"
+        role="meter"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(ratio * 100)}
+        aria-label={`${project}: ${Math.round(ratio * 100)}% ${ofBudget}`}
+        style={{ "--fill": Math.min(ratio, 1) } as CSSProperties}
+        data-over={over || undefined}
+      >
+        <div className="hs-bar__fill" />
+      </div>
+      <p className={`m-0 mt-3 font-semibold ${over ? "hs-over" : ""}`} aria-live="polite">
+        {status}
+      </p>
+
+      <ul className="m-0 mt-6 flex list-none flex-wrap gap-2 p-0">
+        {costs.map((cost, i) => (
+          <li key={cost.name} className="m-0 p-0">
+            <button
+              type="button"
+              aria-pressed={cost.logged}
+              onClick={() => onToggle(i)}
+              className="hs-cost"
+            >
+              <span>{cost.name}</span>
+              <span className="tabular-nums">{cost.amount}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+      <p className="hs-soft m-0 mt-3">{tryIt}</p>
+    </div>
   );
 }
 

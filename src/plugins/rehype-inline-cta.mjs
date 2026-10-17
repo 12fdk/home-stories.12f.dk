@@ -65,12 +65,12 @@ function card({ label, paragraph, slug }) {
   return el(
     "aside",
     {
-      className: ["blog-inline-cta", "my-10", "rounded-2xl", "border", "border-base-300", "bg-base-200/60", "px-5", "py-5", "sm:px-6"],
+      className: ["blog-inline-cta", "my-10", "bg-base-200", "px-6", "py-6", "sm:px-8"],
       dataCtaId: slug ? `blog-inline-${slug}` : "blog-inline",
       ariaLabel: "About the Home Stories app",
     },
     [
-      el("p", { className: ["not-prose", "mb-2", "font-mono", "text-xs", "uppercase", "tracking-label", "text-base-content/60"] }, [t(label)]),
+      el("p", { className: ["not-prose", "mb-2", "font-semibold", "text-base-content"] }, [t(label)]),
       { ...paragraph, properties: { ...(paragraph.properties ?? {}), className: ["!my-0", "text-base"] } },
       el("div", { className: ["not-prose", "mt-4", "flex", "flex-wrap", "items-center", "gap-x-4", "gap-y-2"] }, [
         el(
@@ -79,12 +79,12 @@ function card({ label, paragraph, slug }) {
             href: appStoreUrl(blogCampaign(slug)),
             target: "_blank",
             rel: "noopener",
-            className: ["btn", "btn-primary", "btn-sm", "normal-case"],
+            className: ["hs-btn", "!no-underline"],
             ...track(slug),
           },
           [t("Free on the App Store")],
         ),
-        el("span", { className: ["text-xs", "text-base-content/60"] }, [t("iPhone · works offline · no account")]),
+        el("span", { className: ["hs-soft"] }, [t("iPhone · works offline · no account")]),
       ]),
     ],
   );

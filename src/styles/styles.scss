@@ -1,4 +1,38 @@
-/* Body: Inter, self-hosted */
+/* One family does the work: General Sans, self-hosted (ITF Free Font License) */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter is the fallback for the scripts General Sans does not cover (Cyrillic
+   on /ru/). The browser only fetches it when a page actually needs a glyph. */
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff2") format("woff2");
@@ -17,36 +51,49 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
   src: url("/fonts/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Display: Archivo variable — industrial grotesque, display sizes only */
-@font-face {
-  font-family: "Archivo";
-  src: url("/fonts/Archivo-var.woff2") format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+/* ---- Tokens --------------------------------------------------------------- */
+/* The homepage paints its own fields from these, whatever the daisy theme. */
+:root {
+  --hs-graphite: #18191b;
+  --hs-graphite-2: #222427;
+  /* Fresh plaster and a skim-coat step, not paper */
+  --hs-mist: #ebebe7;
+  --hs-mist-2: #dededa;
+  /* Birch plywood, the sheet on every site floor */
+  --hs-ply: #dcc095;
+  --hs-signal: #ff4a1f;
+  /* Soft ink, for secondary notes only. Running text stays in full ink. */
+  --hs-soft-on-dark: #a9abb0;
+  --hs-soft-on-light: #55575c;
+
+  --hs-gutter: 20px;
+  --hs-section: 128px;
+
+  /* Five sizes do the visible work */
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(1.625rem, 1rem + 2.6vw, 3.5rem);
+  /* Display is sized to the longest line it has to hold (--chars), so a long
+     word in German or Polish shrinks the line instead of breaking it. */
+  --display-max: 15vw;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Utility: IBM Plex Mono — labels, figures, dimension annotations */
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("/fonts/IBMPlexMono-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+@media (min-width: 768px) {
+  :root {
+    --hs-gutter: 28px;
+    --hs-section: 144px;
+    /* Statements (the stat, the price, the close) share one size */
+    --display-max: min(7.6vw, 110px);
+  }
 }
 
 html {
@@ -54,211 +101,261 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    sans-serif;
+  font-family: "General Sans", "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: var(--step-body);
+  line-height: 1.5;
 }
 
-/* Display type is set tight; body stays comfortable */
 h1,
 h2,
+h3,
 .font-display {
-  font-family: "Archivo", "Inter", sans-serif;
-  letter-spacing: -0.03em;
+  font-family: "General Sans", "Inter", sans-serif;
+  letter-spacing: -0.025em;
 }
 
 /* Anchor targets clear the sticky navbar */
 section[id] {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 4.5rem;
 }
 
 /* Keyboard focus is always visible */
-:where(a, button, input, summary):focus-visible {
-  outline: 2px solid hsl(var(--p));
+:where(a, button, input, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--hs-signal);
   outline-offset: 3px;
-  border-radius: 4px;
 }
 
-/* ---- Signature: the dimension rail ----------------------------------- */
-/* A hairline rule with end ticks, the way a measurement is called out on a
-   drawing. Used only where the number underneath it is real. */
-.rail {
-  position: relative;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.35;
+::selection {
+  background: var(--hs-signal);
+  color: var(--hs-graphite);
 }
 
-.rail::before,
-.rail::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  width: 1px;
-  height: 9px;
-  background: currentColor;
-}
-
-.rail::before {
-  left: 0;
-}
-
-.rail::after {
-  right: 0;
-}
-
-/* Small caps label used above sections and beside figures */
+/* Old helpers, kept as plain text so the blog posts that still carry the
+   classes read as sentences instead of drawing labels. */
 .tick-label {
-  font-family: "IBM Plex Mono", monospace;
+  font-size: var(--step-small);
   font-weight: 500;
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
-/* Tick strip: the edge of a tape measure. Decorative, so hidden from AT. */
+.rail,
 .ticks {
-  background-image: repeating-linear-gradient(
-    to right,
-    currentColor 0 1px,
-    transparent 1px 8px
+  display: none;
+}
+
+/* ---- Homepage fields ------------------------------------------------------ */
+.hs-dark {
+  background: var(--hs-graphite);
+  color: var(--hs-mist);
+  --soft: var(--hs-soft-on-dark);
+  --tone: var(--hs-graphite-2);
+  --ink: var(--hs-mist);
+}
+
+.hs-dark-2 {
+  background: var(--hs-graphite-2);
+  color: var(--hs-mist);
+  --soft: var(--hs-soft-on-dark);
+  --tone: #2e3034;
+  --ink: var(--hs-mist);
+}
+
+.hs-light {
+  background: var(--hs-mist);
+  color: var(--hs-graphite);
+  --soft: var(--hs-soft-on-light);
+  --tone: var(--hs-mist-2);
+  --ink: var(--hs-graphite);
+}
+
+.hs-ply {
+  background: var(--hs-ply);
+  color: var(--hs-graphite);
+  --soft: #4d3f2a;
+  --tone: #cfb283;
+  --ink: var(--hs-graphite);
+}
+
+.hs-signal {
+  background: var(--hs-signal);
+  color: var(--hs-graphite);
+  --soft: #4a1406;
+  --tone: #ff6a45;
+  --ink: var(--hs-graphite);
+}
+
+.hs-soft {
+  color: var(--soft);
+}
+
+.hs-wrap {
+  margin-inline: auto;
+  max-width: 1600px;
+  padding-inline: var(--hs-gutter);
+}
+
+/* The 12-column grid every section hangs from */
+.hs-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .hs-grid {
+    column-gap: 28px;
+  }
+}
+
+.hs-section {
+  padding-block: var(--hs-section);
+}
+
+.hs-display {
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  font-size: min(
+    var(--display-max),
+    calc((100vw - 2 * var(--hs-gutter)) / (var(--chars, 10) * 0.61))
   );
-  height: 6px;
-  opacity: 0.25;
 }
 
-.backgroundGrid {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -9;
-  background-size: 50px 50px;
-  background-image: linear-gradient(
-      rgba(200, 200, 200, 0.1) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+.hs-head {
+  font-size: var(--step-head);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
 }
 
-/* iPhone 16 Pro CSS frame */
-.iphone-frame {
-  --iphone-width: 280px;
-  --iphone-height: calc(var(--iphone-width) * 2.17);
-  --iphone-bezel: 10px;
-  --iphone-radius: 44px;
-  --iphone-screen-radius: 38px;
-  --iphone-color: #1a1a1a;
-  --iphone-border-color: #2a2a2a;
-
-  display: inline-block;
-  width: var(--iphone-width);
-  height: var(--iphone-height);
+/* Long titles (article names, translated sentences) step down so they
+   still hold two lines at every width */
+.hs-title {
+  font-size: clamp(1.375rem, 0.95rem + 1.8vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
 }
 
-.iphone-device {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--iphone-color) 0%, #0a0a0a 100%);
-  border-radius: var(--iphone-radius);
-  box-shadow:
-    0 0 0 2px var(--iphone-border-color),
-    0 0 0 4px #3a3a3a,
-    0 30px 60px -20px rgba(0, 0, 0, 0.45),
-    inset 0 0 2px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+.hs-lead {
+  font-size: var(--step-lead);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
-.iphone-dynamic-island {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
-  height: 28px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 20;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.8);
+.hs-small {
+  font-size: var(--step-small);
+  line-height: 1.45;
 }
 
-.iphone-screen {
-  position: absolute;
-  top: var(--iphone-bezel);
-  left: var(--iphone-bezel);
-  right: var(--iphone-bezel);
-  bottom: var(--iphone-bezel);
-  background: #000;
-  border-radius: var(--iphone-screen-radius);
-  overflow: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
+/* One button shape for the whole site: square, flat, one fill */
+.hs-btn {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  padding: 0 1.4em;
+  font-size: var(--step-body);
+  font-weight: 600;
+  line-height: 1.1;
+  background: var(--hs-signal);
+  color: var(--hs-graphite);
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 160ms var(--ease-out);
 }
 
-.iphone-screenshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
+.hs-btn:hover {
+  background: #ff6a45;
 }
 
-.iphone-button-left {
-  position: absolute;
-  left: -3px;
-  width: 3px;
-  background: linear-gradient(90deg, #2a2a2a, #1a1a1a);
-  border-radius: 2px 0 0 2px;
+.hs-btn:active {
+  transform: scale(0.97);
 }
 
-.iphone-button-silent {
-  top: 100px;
-  height: 24px;
+.hs-btn--ink {
+  background: var(--ink);
+  color: var(--hs-graphite);
 }
 
-.iphone-button-volume-up {
-  top: 140px;
-  height: 44px;
+.hs-dark .hs-btn--ink,
+.hs-dark-2 .hs-btn--ink {
+  color: var(--hs-graphite);
 }
 
-.iphone-button-volume-down {
-  top: 195px;
-  height: 44px;
+.hs-light .hs-btn--ink,
+.hs-ply .hs-btn--ink,
+.hs-signal .hs-btn--ink {
+  color: var(--hs-mist);
 }
 
-.iphone-button-right {
-  position: absolute;
-  right: -3px;
-  width: 3px;
-  background: linear-gradient(270deg, #2a2a2a, #1a1a1a);
-  border-radius: 0 2px 2px 0;
+.hs-btn--ink:hover {
+  background: var(--soft);
 }
 
-.iphone-button-power {
-  top: 150px;
-  height: 70px;
+/* A text link that reads as a link: underlined in the ink, signal on hover */
+.hs-link {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+  transition: color 160ms var(--ease-out);
 }
 
-@media (min-width: 640px) {
-  .iphone-frame {
-    --iphone-width: 300px;
-  }
+.hs-link:hover {
+  color: var(--hs-signal);
 }
 
-@media (min-width: 1024px) {
-  .iphone-frame {
-    --iphone-width: 288px;
-  }
+.hs-signal .hs-link:hover {
+  color: var(--hs-mist);
 }
 
-/* Anyone who asked for less motion gets none of it */
+/* App Store badge: lifts a little under the pointer */
+.hs-badge {
+  display: inline-flex;
+  transition: transform 160ms var(--ease-out);
+}
+
+.hs-badge:hover {
+  transform: translateY(-2px);
+}
+
+.hs-badge:active {
+  transform: scale(0.97);
+}
+
+/* ---- Entrances ------------------------------------------------------------ */
+/* `js` is set on <html> by an inline script before first paint, so without
+   script nothing is ever hidden. The observer in Layout.astro sets
+   data-shown once the element enters. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 900ms var(--ease-out);
+  transition-delay: var(--d, 0ms);
+}
+
+.js [data-reveal][data-shown] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Anyone who asked for less motion keeps the content and loses the travel */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .js [data-reveal] {
+    transform: none;
+    transition: opacity 200ms linear;
   }
 
   *,
@@ -266,6 +363,456 @@ section[id] {
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Hero ----------------------------------------------------------------- */
+/* The headline shares the screen with the picture, so it is sized to half. */
+@media (min-width: 768px) {
+  .hs-display--half {
+    font-size: min(
+      8.5vw,
+      150px,
+      calc((50vw - 2 * var(--hs-gutter)) / (var(--chars, 10) * 0.58))
+    );
+  }
+}
+
+.hs-hero-media {
+  overflow: hidden;
+  background: var(--hs-graphite-2);
+}
+
+.hs-hero-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .hs-hero-media {
+    min-height: min(calc(100svh - 72px - 64px), 900px);
+    margin-right: calc(-1 * var(--hs-gutter));
+  }
+}
+
+/* The budget bar: the app's running total against the budget */
+.hs-bar {
+  position: relative;
+  height: 14px;
+  background: #34363b;
+  overflow: hidden;
+}
+
+.hs-bar__fill {
+  height: 100%;
+  background: var(--hs-signal);
+  transform-origin: left;
+  transform: scaleX(var(--fill, 0));
+  transition: transform 700ms var(--ease-out);
+}
+
+.hs-over {
+  color: var(--hs-signal);
+}
+
+.hs-cost {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0 14px;
+  background: #2c2e32;
+  color: var(--hs-mist);
+  font-weight: 500;
+  text-align: left;
+  transition:
+    background-color 160ms var(--ease-out),
+    color 160ms var(--ease-out),
+    transform 160ms var(--ease-out);
+}
+
+.hs-cost:hover {
+  background: #3a3c41;
+}
+
+.hs-cost:active {
+  transform: scale(0.96);
+}
+
+.hs-cost[aria-pressed="true"] {
+  background: var(--hs-mist);
+  color: var(--hs-graphite);
+}
+
+/* ---- Nav: the bar takes the field under it -------------------------------- */
+.hs-nav {
+  background: var(--hs-mist);
+  color: var(--hs-graphite);
+  transition:
+    background-color 300ms var(--ease-out),
+    color 300ms var(--ease-out);
+}
+
+.hs-nav a:not(.hs-btn),
+.hs-nav summary {
+  color: inherit;
+}
+
+.hs-nav[data-on="dark"] {
+  background: var(--hs-graphite);
+  color: var(--hs-mist);
+}
+
+.hs-nav[data-on="dark-2"] {
+  background: var(--hs-graphite-2);
+  color: var(--hs-mist);
+}
+
+.hs-nav[data-on="theme"] {
+  background: oklch(var(--b1));
+  color: oklch(var(--bc));
+}
+
+/* One slow move on a photograph: a drift in, held, and back */
+.hs-drift {
+  animation: hs-drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes hs-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07) translate3d(-1.5%, 0, 0);
+  }
+}
+
+/* ---- How it works: two fields, one slider ---------------------------------- */
+@media (min-width: 768px) {
+  .hs-split::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 50%;
+    background: var(--hs-graphite-2);
+  }
+}
+
+.hs-range {
+  position: relative;
+  height: 40px;
+}
+
+.hs-range__track {
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  height: 8px;
+  margin-top: -4px;
+  background: #3a3c41;
+  overflow: hidden;
+}
+
+.hs-range__fill {
+  height: 100%;
+  background: var(--hs-mist);
+  transform-origin: left;
+  transform: scaleX(var(--progress, 0));
+  transition: transform 300ms var(--ease-out);
+}
+
+.hs-range input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.hs-range input::-webkit-slider-runnable-track {
+  height: 40px;
+  background: transparent;
+}
+
+.hs-range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+  background: var(--hs-signal);
+  transition: transform 160ms var(--ease-out);
+}
+
+.hs-range input::-moz-range-thumb {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 0;
+  background: var(--hs-signal);
+}
+
+.hs-range input:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+
+@media (max-width: 767px) {
+  .hs-range input::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+  }
+}
+
+/* The demo index: the names are the control */
+.hs-index-button:hover,
+.hs-index-button:focus-visible {
+  transform: translateX(10px);
+}
+
+/* ---- Comparison: a real table, so it keeps its row rules ------------------- */
+.hs-table th,
+.hs-table td {
+  padding: 22px 24px 22px 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.hs-table thead th {
+  padding-bottom: 14px;
+}
+
+.hs-table tbody tr {
+  border-top: 1px solid #c9cbcf;
+}
+
+/* ---- The review: every line pushed to both margins ------------------------- */
+.hs-spread {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.25em;
+  white-space: nowrap;
+}
+
+blockquote .hs-spread + .hs-spread {
+  margin-top: 0.12em;
+}
+
+@media (max-width: 1023px) {
+  figcaption.hs-spread {
+    flex-direction: column;
+    white-space: normal;
+  }
+}
+
+/* ---- Pricing: the price is an object in the line -------------------------- */
+.hs-price {
+  display: inline-block;
+  padding: 0 0.15em;
+  background: var(--hs-signal);
+  color: var(--hs-graphite);
+}
+
+/* ---- FAQ: the open row gets one tone step behind it ------------------------ */
+.hs-faq {
+  margin-inline: -20px;
+  padding: 6px 20px;
+  transition: background-color 200ms var(--ease-out);
+}
+
+.hs-faq[open] {
+  background: var(--tone);
+  padding-block: 14px;
+}
+
+.hs-faq summary:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+/* ---- Blog teasers ----------------------------------------------------------- */
+.hs-post {
+  transition:
+    background-color 200ms var(--ease-out),
+    padding 200ms var(--ease-out);
+}
+
+.hs-post:hover {
+  background: var(--tone);
+  padding-inline: 20px;
+}
+
+/* ---- Footer: the name, cut by the bottom edge ------------------------------ */
+.hs-wordmark {
+  display: block;
+  margin-top: 8px;
+  padding-inline: var(--hs-gutter);
+  font-size: 15.5vw;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  transform: translateY(12%);
+  margin-bottom: -0.1em;
+}
+
+@media (max-width: 767px) {
+  .hs-wordmark {
+    font-size: 30vw;
+  }
+}
+
+/* Themed pages (blog, guides, legal) get the same soft ink and tone step */
+[data-theme="home"] {
+  --soft: var(--hs-soft-on-light);
+  --tone: var(--hs-mist-2);
+  --ink: var(--hs-graphite);
+}
+
+[data-theme="home-dark"] {
+  --soft: var(--hs-soft-on-dark);
+  --tone: var(--hs-graphite-2);
+  --ink: var(--hs-mist);
+}
+
+/* List rows that are links: one tone step under the pointer, no outline */
+.hs-row,
+.hs-feature {
+  transition:
+    background-color 200ms var(--ease-out),
+    padding 200ms var(--ease-out);
+}
+
+.hs-row:hover {
+  background: var(--tone);
+  padding-inline: 16px;
+}
+
+.hs-row img,
+.hs-feature img {
+  transition: transform 600ms var(--ease-out);
+}
+
+.hs-row:hover img,
+.hs-feature:hover img {
+  transform: scale(1.04);
+}
+
+.hs-feature:hover .hs-lead {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.15em;
+}
+
+/* Article prose: links in the ink, underlined in signal orange */
+.hs-prose {
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-links: var(--ink);
+  --tw-prose-bullets: var(--soft);
+  --tw-prose-counters: var(--soft);
+  --tw-prose-quotes: var(--ink);
+  --tw-prose-quote-borders: var(--hs-signal);
+  --tw-prose-hr: var(--tone);
+  --tw-prose-th-borders: var(--soft);
+  --tw-prose-td-borders: var(--tone);
+}
+
+.hs-prose a {
+  font-weight: 500;
+  text-decoration-color: var(--hs-signal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.hs-prose a:hover {
+  text-decoration-thickness: 3px;
+}
+
+.hs-prose img {
+  border-radius: 0;
+}
+
+/* Daisy buttons left on the long tail of pages take the house shape */
+.btn {
+  box-shadow: none !important;
+  border-radius: 0;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--hs-signal);
+  color: var(--hs-graphite);
+}
+
+.hs-prose hr {
+  height: 8px;
+  border: 0;
+  background: var(--tone);
+}
+
+/* Above the fold the entrance runs on load, with no script involved */
+.hs-rise {
+  animation: hs-rise 800ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes hs-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+/* ---- Features: the app screen in front of the moment on site --------------- */
+.hs-scene {
+  position: relative;
+  overflow: hidden;
+}
+
+.hs-scene__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 900ms var(--ease-out);
+}
+
+.hs-scene:hover .hs-scene__photo {
+  transform: scale(1.03);
+}
+
+/* The phone screen rises from the bottom edge of the photo and is cut by it */
+.hs-scene__screen {
+  position: absolute;
+  right: 7%;
+  bottom: 0;
+  width: 40%;
+  height: 84%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hs-scene__screen--left {
+  right: auto;
+  left: 7%;
+}
+
+.hs-scene__screen img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hs-scene__screen {
+    width: 36%;
   }
 }

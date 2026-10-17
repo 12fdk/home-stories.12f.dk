@@ -3,6 +3,7 @@ import Footer from "../../components/footer";
 import { ConfigContext } from "../../utils/configContext";
 import { appStoreClick } from "../../utils/tracking";
 import type { TemplateConfig } from "../../utils/configType";
+import type { CSSProperties } from "react";
 
 interface Props {
   config: TemplateConfig;
@@ -16,36 +17,47 @@ function NotFound({ config }: Props) {
   return (
     <ConfigContext.Provider value={config}>
       <Navbar />
-      <main className="flex min-h-[60vh] items-center px-4 py-24">
-        <div className="mx-auto w-full max-w-screen-lg">
-          <p className="tick-label m-0 flex items-center gap-3 text-base-content/50">
-            <span className="inline-block h-0.5 w-8 bg-accent" />
-            404 — PAGE NOT FOUND
-          </p>
-          <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.1] tracking-tightest md:text-6xl">
-            That wall isn't there anymore.
+      <main data-field="light" className="hs-light pb-24 pt-16 md:pb-36 md:pt-24">
+        <div className="hs-wrap hs-grid gap-y-10">
+          <h1
+            className="hs-display col-span-12 m-0"
+            style={{ "--chars": 16 } as CSSProperties}
+          >
+            <span className="block">That wall isn't</span>
+            <span className="block">there anymore.</span>
           </h1>
-          <p className="mt-6 max-w-xl leading-relaxed text-base-content/70">
-            The page you're after was moved, renamed, or never built. The rest
-            of the site is still standing.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <a href="/" className="btn btn-primary">
-              Back to the homepage
-            </a>
-            <a href="/blog/" className="link text-base-content/70">
-              Read the blog
-            </a>
-            <a
-              href={config.appStoreLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link text-base-content/70"
-              {...appStoreClick("404")}
-            >
-              Get the app
-            </a>
+          <div className="col-span-12 md:col-span-5">
+            <p className="hs-lead m-0 max-w-[30ch]">
+              Page not found (404). It was moved, renamed, or never built. The
+              rest of the site is still standing.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
+              <a href="/" className="hs-btn">
+                Back to the homepage
+              </a>
+              <a href="/blog/" className="hs-link">
+                Read the blog
+              </a>
+              <a
+                href={config.appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hs-link"
+                {...appStoreClick("404")}
+              >
+                Get the app
+              </a>
+            </div>
           </div>
+          <figure className="col-span-12 m-0 overflow-hidden md:col-span-7">
+            <img
+              src="/stock/31.webp"
+              alt="An opened wall with the plaster cut back to show the pipes behind it."
+              width={1200}
+              height={900}
+              className="hs-drift aspect-[4/3] w-full object-cover"
+            />
+          </figure>
         </div>
       </main>
       <Footer />

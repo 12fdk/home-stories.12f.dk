@@ -17,6 +17,30 @@ const de: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Die Summe",
+        "im Blick."
+      ],
+      "tryIt": "Tippe auf eine Ausgabe, um sie in der Beispielküche zu buchen.",
+      "costs": [
+        "Eichen-Arbeitsplatte",
+        "Elektriker",
+        "Bodenfliesen",
+        "Installateur",
+        "Fäulnis hinter der Wand"
+      ],
+      "left": "{amount} übrig",
+      "over": "{amount} über Budget",
+      "quote": [
+        "„Ich wünschte, ich hätte sie",
+        "vor ein paar Jahren gehabt.“"
+      ],
+      "price": [
+        "Kostenlos nutzbar.",
+        "Pro: {price}, einmalig."
+      ]
+    },
     "nav": {
       "openMenu": "Menü öffnen",
       "closeMenu": "Menü schließen",

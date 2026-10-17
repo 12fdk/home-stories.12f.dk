@@ -32,13 +32,13 @@ function LanguageSwitcher() {
   return (
     <details className="dropdown dropdown-end">
       <summary
-        className="btn btn-ghost btn-sm h-9 min-h-0 gap-1.5 px-2 font-medium normal-case text-base-content/70 hover:text-base-content"
+        className="btn btn-ghost btn-sm h-10 min-h-0 gap-1.5 px-2 font-medium normal-case text-current hover:bg-current/10"
         aria-label={ui.nav.language}
       >
         <GlobeIcon />
-        <span className="text-sm">{current.label}</span>
+        <span className="text-base">{current.label}</span>
       </summary>
-      <ul className="menu dropdown-content z-[60] mt-2 max-h-80 w-44 flex-nowrap overflow-y-auto rounded-box border border-base-300 bg-base-100 p-2 shadow-xl">
+      <ul className="menu dropdown-content z-[60] mt-2 max-h-80 w-48 flex-nowrap overflow-y-auto bg-base-200 p-2 text-base text-base-content">
         {LOCALES.map((l) => (
           <li key={l.code}>
             <a

@@ -1,65 +1,122 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import { withBase } from "../../../../utils/basePath";
-import SectionHeading from "../../../../components/sectionHeading";
+import { measure } from "../../../../utils/measure";
 
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
+
+/**
+ * The moment on site each screen is for, in the same order as the cards in
+ * config: the money on the table, the room being built, what is behind the
+ * wall, and the report on the worktop at handover.
+ */
+const SCENES = [
+  {
+    src: "/stock/34.webp",
+    alt: "Printed budget sheets with highlighted figures, a calculator and a tape measure on a table.",
+  },
+  {
+    src: "/stock/16.webp",
+    alt: "A kitchen mid-build: stud walls, a bare floor and the first cabinet carcasses going in.",
+  },
+  {
+    src: "/stock/31.webp",
+    alt: "An opened wall with the plaster cut back to show the pipes behind it.",
+  },
+  {
+    src: "/stock/05.webp",
+    alt: "A clipped stack of printed report pages on a pale stone worktop in a finished kitchen.",
+  },
+];
+
+/**
+ * Four screens, four rows. Each claim sits beside the real screen from the
+ * app, set in front of a photograph of the moment on site it is for. Rows
+ * alternate sides so the page reads down, not across.
+ */
 function Features() {
   const {
-    ui,
     home: { features },
   } = useContext(ConfigContext)!;
   if (!features) return null;
 
   return (
-    <section
-      id={features.id}
-      className="mx-auto max-w-screen-lg px-4 py-20 md:py-28"
-    >
-      <SectionHeading
-        label={ui.sectionLabels.features}
-        title={features.title}
-        subtitle={features.subtitle}
-      />
+    <section id={features.id} data-field="light" className="hs-light hs-section">
+      <div className="hs-wrap">
+        <div className="hs-grid gap-y-5">
+          <h2 className="hs-head col-span-12 m-0 md:col-span-8" data-reveal>
+            {features.title}
+          </h2>
+          {features.subtitle && (
+            <p className="hs-lead col-span-12 m-0 max-w-[36ch] md:col-span-6" data-reveal style={d(80)}>
+              {features.subtitle}
+            </p>
+          )}
+        </div>
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2">
-        {features.cards.map((feat, index) => (
-          <motion.article
-            key={feat.title}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.5,
-              delay: (index % 2) * 0.08,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="group flex flex-col overflow-hidden rounded-box border border-base-300 bg-base-100"
-          >
-            {/* Show the real screen, cropped to the top where the data lives */}
-            <div className="relative h-56 overflow-hidden bg-base-200 md:h-64">
-              <img
-                src={withBase(feat.screenshot ?? feat.icon)}
-                alt={`${feat.title} — Home Stories on iPhone`}
-                loading="lazy"
-                width={600}
-                height={1300}
-                style={{ marginTop: feat.crop ?? "0%" }}
-                className="absolute inset-x-0 top-8 mx-auto w-[58%] rounded-t-2xl border border-b-0 border-base-300 shadow-2xl transition-transform duration-500 ease-out group-hover:-translate-y-3"
-              />
-            </div>
+        <div className="mt-20 space-y-28 md:mt-28 md:space-y-36">
+          {features.cards.map((feat, index) => {
+            const scene = SCENES[index % SCENES.length];
+            const flip = index % 2 === 1;
+            return (
+              <article key={feat.title} className="hs-grid items-center gap-y-10">
+                <div
+                  className={`col-span-12 lg:col-span-5 ${flip ? "lg:order-2 lg:col-start-8" : ""}`}
+                >
+                  <h3 className={`${measure(feat.title) > 24 ? "hs-title" : "hs-head"} m-0 max-w-[16ch]`} data-reveal>
+                    {feat.title}
+                  </h3>
+                  <p className="hs-lead m-0 mt-6 max-w-[30ch]" data-reveal style={d(80)}>
+                    {feat.subtitle}
+                  </p>
+                </div>
 
-            <div className="border-t border-base-300 p-6 md:p-7">
-              {feat.label && (
-                <p className="tick-label m-0 text-primary">{feat.label}</p>
-              )}
-              <h3 className="mt-2 font-display text-xl font-bold tracking-tight text-base-content md:text-2xl">
-                {feat.title}
-              </h3>
-              <p className="mt-2 text-base-content/70">{feat.subtitle}</p>
-            </div>
-          </motion.article>
-        ))}
+                <figure
+                  className={`hs-scene col-span-12 m-0 lg:col-span-7 ${flip ? "lg:order-1 lg:col-start-1" : "lg:col-start-6"}`}
+                  data-reveal
+                  style={d(120)}
+                >
+                  <img
+                    src={withBase(scene.src)}
+                    alt={scene.alt}
+                    loading="lazy"
+                    width={1200}
+                    height={900}
+                    className="hs-scene__photo"
+                  />
+                  <span className={`hs-scene__screen ${flip ? "hs-scene__screen--left" : ""}`}>
+                    <img
+                      src={withBase(feat.screenshot ?? feat.icon)}
+                      srcSet={
+                        feat.screenshot
+                          ? `${withBase(feat.screenshot.replace(".webp", "-560.webp"))} 560w, ${withBase(feat.screenshot.replace(".webp", "-840.webp"))} 840w`
+                          : undefined
+                      }
+                      sizes="(min-width: 768px) 280px, 46vw"
+                      alt={`${feat.title}: the ${feat.label ?? ""} screen in Home Stories on iPhone`}
+                      loading="lazy"
+                      width={560}
+                      height={1217}
+                      style={{ marginTop: feat.crop ?? "0%" }}
+                    />
+                  </span>
+                </figure>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* The room itself, stripped to the studs: what all four screens are for */}
+      <div className="mt-28 overflow-hidden md:mt-36">
+        <img
+          src={withBase("/stock/08.webp")}
+          alt="A stripped room mid-renovation: bare stud walls, open ceiling joists and a dusty floor in low sunlight."
+          loading="lazy"
+          width={1600}
+          height={900}
+          className="hs-drift block h-[56svh] w-full object-cover md:h-[78svh]"
+        />
       </div>
     </section>
   );

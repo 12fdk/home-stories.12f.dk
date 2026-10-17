@@ -1,80 +1,117 @@
-import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, useId, useState, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import { withBase } from "../../../../utils/basePath";
-import SectionHeading from "../../../../components/sectionHeading";
+
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 /**
- * The steps run down a single measured rail. The numbers earn their place here:
- * a renovation is a sequence, and doing step 4 before step 2 costs money.
+ * A renovation is a sequence, and doing the fourth thing before the second
+ * costs money. So the steps are a slider: one control drives both halves,
+ * the stage in words on the left and a picture of that stage on the right.
+ * Every step's text is in the markup; only the current one is shown.
  */
 function HowItWorks() {
   const {
-    ui,
     home: { howItWorks },
   } = useContext(ConfigContext)!;
+  const [stage, setStage] = useState(0);
+  const sliderId = useId();
 
   if (!howItWorks) return null;
+  const steps = howItWorks.steps;
+  const last = steps.length - 1;
+  const progress = last > 0 ? stage / last : 1;
 
   return (
     <section
       id={howItWorks.id}
-      className="border-y border-base-300 bg-base-200 py-20 md:py-28"
+      data-field="dark"
+      className="hs-dark hs-split relative"
+      style={{ "--progress": progress } as CSSProperties}
     >
-      <div className="mx-auto max-w-screen-lg px-4">
-        <SectionHeading
-          label={ui.sectionLabels.howItWorks}
-          title={howItWorks.title}
-          subtitle={howItWorks.subtitle}
-        />
-
-        <ol className="relative mt-16 list-none space-y-16 pl-0 md:space-y-20">
-          {/* The rail itself */}
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 left-[11px] top-2 w-px bg-base-300 md:left-[15px]"
-          />
-
-          {howItWorks.steps.map((step, index) => (
-            <motion.li
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="relative grid gap-6 pl-10 md:grid-cols-2 md:items-center md:gap-12 md:pl-16"
-            >
-              {/* Tick on the rail */}
-              <span
-                aria-hidden="true"
-                className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full border border-base-300 bg-base-100 md:h-8 md:w-8"
-              >
-                <span className="h-2 w-2 rounded-full bg-accent" />
-              </span>
-
-              <div>
-                <p className="tick-label m-0 text-base-content/40">
-                  Step {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-base-content md:text-[1.75rem]">
-                  {step.title}
-                </h3>
-                <p className="mt-3 max-w-md text-base-content/70">
-                  {step.subtitle}
-                </p>
-              </div>
-
+      <div className="hs-wrap relative z-[1] grid min-h-[88svh] grid-cols-1 gap-y-10 pb-12 pt-24 md:grid-cols-2 md:gap-x-14 md:pt-32">
+        {/* The stage in pictures: first on a phone, the right half on desktop */}
+        <div className="order-1 flex items-center justify-center md:order-2" data-reveal style={d(120)}>
+          <div className="grid w-full max-w-[460px] overflow-hidden">
+            {steps.map((step, i) => (
               <img
-                className="w-full rounded-box border border-base-300 object-cover shadow-sm md:aspect-[4/3]"
+                key={step.image}
                 src={withBase(step.image)}
                 alt={step.imageAlt ?? ""}
+                aria-hidden={i !== stage}
                 loading="lazy"
-                width={480}
-                height={360}
+                width={920}
+                height={1150}
+                className="aspect-[4/5] w-full object-cover transition-opacity duration-200 [grid-area:1/1]"
+                style={{ opacity: i === stage ? 1 : 0 }}
               />
-            </motion.li>
-          ))}
-        </ol>
+            ))}
+          </div>
+        </div>
+
+        {/* The stage in words */}
+        <div className="order-3 md:order-1">
+          <h2 className="hs-lead m-0 font-semibold" data-reveal>
+            {howItWorks.title}
+          </h2>
+          {howItWorks.subtitle && (
+            <p className="hs-soft m-0 mt-2 max-w-[44ch]" data-reveal style={d(60)}>
+              {howItWorks.subtitle}
+            </p>
+          )}
+
+          <div className="mt-14 grid md:mt-24" data-reveal style={d(120)}>
+            {steps.map((step, i) => (
+              <div
+                key={step.title}
+                aria-hidden={i !== stage}
+                className="transition-opacity duration-200 [grid-area:1/1]"
+                style={{
+                  opacity: i === stage ? 1 : 0,
+                  visibility: i === stage ? "visible" : "hidden",
+                }}
+              >
+                <h3 className="hs-head m-0 max-w-[16ch]">{step.title}</h3>
+                <p className="m-0 mt-6 max-w-[46ch]">{step.subtitle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* One control drives both halves */}
+        <div className="order-2 md:order-3 md:col-span-2" data-reveal style={d(180)}>
+          <label htmlFor={sliderId} className="sr-only">
+            {howItWorks.title}
+          </label>
+          <div className="hs-range">
+            <div aria-hidden="true" className="hs-range__track">
+              <div className="hs-range__fill" />
+            </div>
+            <input
+              id={sliderId}
+              type="range"
+              min={0}
+              max={last}
+              step={1}
+              value={stage}
+              aria-valuetext={steps[stage]?.title}
+              onChange={(e) => setStage(Number(e.target.value))}
+            />
+          </div>
+          <ol className="m-0 mt-5 grid list-none grid-cols-2 gap-x-6 gap-y-3 p-0 md:grid-cols-4">
+            {steps.map((step, i) => (
+              <li key={step.title} className="m-0 p-0">
+                <button
+                  type="button"
+                  onClick={() => setStage(i)}
+                  className={`hs-lead text-left transition-colors hover:text-[color:var(--ink)] ${i === stage ? "font-semibold" : "hs-soft"}`}
+                >
+                  {step.title}
+                </button>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

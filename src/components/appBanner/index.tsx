@@ -1,105 +1,80 @@
-import { useContext } from "react";
+import { useContext, type CSSProperties } from "react";
 import { ConfigContext } from "../../utils/configContext";
 import { withBase } from "../../utils/basePath";
 import { appStoreClick } from "../../utils/tracking";
-import { motion } from "framer-motion";
-import AppStoreRating from "../appStoreRating";
+import { longest, twoLines } from "../../utils/measure";
 
-/** The closing ask. Ink section, one action, no second thought to have. */
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
+
+/**
+ * The close: one sentence at poster size, one line under it, one action, and
+ * the empty room the next project starts in.
+ */
 function AppBanner() {
-  const { googlePlayLink, appStoreLink, appBanner } =
-    useContext(ConfigContext)!;
-
+  const { googlePlayLink, appStoreLink, appBanner } = useContext(ConfigContext)!;
   if (!appBanner) return null;
 
-  return (
-    <section
-      id={appBanner.id}
-      className="relative overflow-hidden border-t border-base-300 bg-neutral text-neutral-content"
-    >
-      {/* Tape edge across the top: the one place the accent runs full width */}
-      <div aria-hidden="true" className="h-1 w-full bg-accent" />
-      <div
-        aria-hidden="true"
-        className="ticks absolute inset-x-0 top-1 text-neutral-content"
-      />
+  const lines = twoLines(appBanner.title);
 
-      <div className="mx-auto grid max-w-screen-lg items-center gap-10 px-4 py-20 md:grid-cols-2 md:gap-8 md:py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <h2 className="m-0 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-[3.25rem]">
-            {appBanner.title}
+  return (
+    <section id={appBanner.id} data-field="light" className="hs-light hs-section">
+      <div className="hs-wrap hs-grid items-end gap-y-12">
+        <div className="col-span-12 md:col-span-6">
+          <h2 className="hs-display hs-display--half m-0" style={{ "--chars": longest(lines) } as CSSProperties}>
+            {lines.map((line, i) => (
+              <span key={line} className="block whitespace-nowrap" data-reveal style={d(i * 90)}>
+                {line}
+              </span>
+            ))}
           </h2>
-          <p className="mt-5 max-w-md leading-relaxed text-neutral-content/70">
+          <p className="hs-lead m-0 mt-8 max-w-[30ch]" data-reveal style={d(160)}>
             {appBanner.subtitle}
           </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-5">
+          <div className="mt-10 flex flex-wrap items-center gap-4" data-reveal style={d(220)}>
             {appStoreLink && (
               <a
                 href={appStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex"
+                className="hs-badge"
                 {...appStoreClick("app-banner")}
               >
                 <img
-                  className="h-[52px]"
+                  className="h-[56px]"
                   alt="Download Home Stories on the App Store"
                   src={withBase("/stores/app-store.svg")}
-                  width={156}
-                  height={52}
+                  width={168}
+                  height={56}
                   loading="lazy"
                 />
               </a>
             )}
             {googlePlayLink && (
-              <a href={googlePlayLink} className="inline-flex">
+              <a href={googlePlayLink} className="hs-badge">
                 <img
-                  className="h-[52px]"
+                  className="h-[56px]"
                   alt="Get Home Stories on Google Play"
                   src={withBase("/stores/google-play.svg")}
-                  width={156}
-                  height={52}
+                  width={168}
+                  height={56}
                   loading="lazy"
                 />
               </a>
             )}
-            <AppStoreRating size="md" showReviewCount={false} />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex justify-center md:justify-end"
-        >
-          <div className="iphone-frame">
-            <div className="iphone-device">
-              <div className="iphone-dynamic-island" />
-              <div className="iphone-screen">
-                <img
-                  className="iphone-screenshot"
-                  src={withBase(appBanner.screenshots[0])}
-                  alt="Home Stories project list on iPhone"
-                  loading="lazy"
-                  width={288}
-                  height={625}
-                />
-              </div>
-              <div className="iphone-button-left iphone-button-silent" />
-              <div className="iphone-button-left iphone-button-volume-up" />
-              <div className="iphone-button-left iphone-button-volume-down" />
-              <div className="iphone-button-right iphone-button-power" />
-            </div>
-          </div>
-        </motion.div>
+        {/* The next one: an empty room, primed and waiting */}
+        <figure className="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style={d(120)}>
+          <img
+            src={withBase("/stock/11.webp")}
+            alt="An empty room with fresh white walls and a paint tray on the floor, ready for the next job."
+            loading="lazy"
+            width={1200}
+            height={900}
+            className="hs-drift aspect-[4/3] w-full object-cover"
+          />
+        </figure>
       </div>
     </section>
   );

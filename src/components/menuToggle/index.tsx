@@ -16,11 +16,11 @@ const Path = (props: SVGMotionProps<SVGElement>) => (
 );
 
 const MenuToggle = ({ toggle, isOpen }: Props) => (
-  <button onClick={toggle} aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen}>
+  <button onClick={toggle} className="-mr-2.5 p-2.5" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen}>
     <motion.svg
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="text-base-content"
+      className="text-current"
       width="23"
       height="23"
       viewBox="0 0 23 23"

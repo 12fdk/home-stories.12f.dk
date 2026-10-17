@@ -9,17 +9,17 @@ const { items } = Astro.props;
 {
   items.length > 0 && (
     <aside
-      class="not-prose my-8 rounded-2xl border-l-4 border-primary bg-base-200 p-5 sm:p-6"
+      class="not-prose my-10 bg-base-200 p-6 sm:p-8"
       data-speakable
       aria-label="Article summary"
     >
-      <p class="mb-3 text-sm font-bold uppercase tracking-wide text-primary">
+      <p class="hs-lead mb-4 font-semibold text-base-content">
         TL;DR
       </p>
       <ul class="space-y-2 text-base-content">
         {items.map((item) => (
           <li class="flex gap-2">
-            <span class="text-primary" aria-hidden="true">
+            <span class="text-base-content" aria-hidden="true">
               ▸
             </span>
             <span set:html={item} />

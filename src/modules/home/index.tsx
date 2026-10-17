@@ -5,7 +5,6 @@ import AppBanner from "../../components/appBanner";
 import { ConfigContext } from "../../utils/configContext";
 import type { TemplateConfig } from "../../utils/configType";
 import Header from "./_components/header";
-import Facts from "./_components/facts";
 import Stakes from "./_components/stakes";
 import Features from "./_components/features";
 import Capabilities from "./_components/capabilities";
@@ -25,18 +24,19 @@ interface Props {
 
 function Home({ config, posts = [] }: Props) {
   return (
-    <ConfigContext.Provider value={config}>
+    // The homepage paints its own fields, so a light/dark switch would do
+    // nothing here; the blog and the other pages keep it.
+    <ConfigContext.Provider value={{ ...config, showThemeSwitch: false }}>
       <MotionConfig reducedMotion="user">
         <Navbar />
         <main>
           <Header />
-          <Facts />
           <Stakes />
           <Features />
-          <Capabilities />
           <VideoDemo />
           <HowItWorks />
           <Comparison />
+          <Capabilities />
           <Testimonials />
           <Pricing />
           <FromTheBlog posts={posts} />

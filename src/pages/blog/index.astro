@@ -16,6 +16,8 @@ const postsWithMeta = await Promise.all(
   })),
 );
 
+const [latest, ...rest] = postsWithMeta;
+
 const formatDate = (d: Date) =>
   d.toLocaleDateString("en-US", {
     year: "numeric",
@@ -79,43 +81,57 @@ const itemListSchema = {
   extraSchema={[blogSchema, itemListSchema]}
   hideAppBanner={true}
 >
-  <main class="max-w-screen-lg mx-auto px-4 py-12 md:py-20">
-    <header class="mb-14 max-w-3xl">
-      <p class="tick-label m-0 flex items-center gap-3 text-base-content/50">
-        <span class="inline-block h-0.5 w-8 bg-accent"></span>
-        Home Stories Blog
-      </p>
-      <h1 class="mb-4 mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-5xl">
-        Plan, budget, and survive your renovation.
+  <main class="hs-wrap pb-24 pt-16 md:pb-36 md:pt-24">
+    <header class="hs-grid gap-y-8">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 21" data-reveal>
+        The renovation blog.
       </h1>
-      <p class="text-lg leading-relaxed text-base-content/70">
-        Practical guides for homeowners who'd rather track a renovation in
-        something better than a spreadsheet. Real numbers, real templates, no
-        fluff.
+      <p class="hs-lead col-span-12 m-0 max-w-[40ch] md:col-span-7" data-reveal style="--d: 80ms">
+        Plan, budget, and survive your renovation. Practical guides for homeowners
+        who'd rather track it in something better than a spreadsheet. Real
+        numbers, real templates, no fluff.
       </p>
     </header>
 
-    <section aria-labelledby="guides-heading" class="mb-14">
-      <h2 id="guides-heading" class="m-0 font-display text-2xl font-bold tracking-tight">
-        Guides by topic
-      </h2>
-      <p class="mt-2 max-w-2xl text-base leading-relaxed text-base-content/70">
-        The same articles, grouped by the job: the budget, the contractor, the timeline, and the tool.
-      </p>
-      <ul class="mt-5 grid list-none gap-3 p-0 sm:grid-cols-2">
+    {latest && (
+      <a href={`/blog/${latest.post.slug}/`} class="hs-feature hs-grid mt-16 gap-y-8 md:mt-24" data-reveal style="--d: 140ms">
+        {latest.post.data.cover && (
+          <span class="col-span-12 block overflow-hidden md:col-span-6">
+            <img
+              src={latest.post.data.cover}
+              alt={latest.post.data.coverAlt ?? ""}
+              width={1280}
+              height={720}
+              loading="eager"
+              decoding="async"
+              class="aspect-[16/10] w-full object-cover"
+            />
+          </span>
+        )}
+        <span class="col-span-12 self-end md:col-span-6">
+          <p class="hs-lead m-0 max-w-[30ch] font-semibold">{latest.post.data.title}</p>
+          <p class="m-0 mt-4 max-w-[46ch]">{latest.post.data.description}</p>
+          <p class="hs-soft m-0 mt-3">
+            Newest article, {formatDate(latest.post.data.publishDate)} · {latest.minutes} min
+          </p>
+        </span>
+      </a>
+    )}
+
+    <section aria-labelledby="guides-heading" class="hs-grid mt-24 gap-y-8 md:mt-36">
+      <div class="col-span-12 md:col-span-4">
+        <h2 id="guides-heading" class="hs-head m-0" data-reveal>Guides by topic</h2>
+        <p class="m-0 mt-4 max-w-[34ch]" data-reveal style="--d: 80ms">
+          The same articles, grouped by the job: the budget, the contractor, the timeline, and the tool.
+        </p>
+      </div>
+      <ul class="col-span-12 m-0 grid list-none gap-x-7 gap-y-2 p-0 sm:grid-cols-2 md:col-span-8">
         {
-          guides.map((guide) => (
-            <li class="m-0">
-              <a
-                href={`/guides/${guide.slug}/`}
-                class="block rounded-box border border-base-300 bg-base-100 px-5 py-4 transition-colors hover:border-base-content/30"
-              >
-                <span class="block font-display text-lg font-bold leading-snug text-base-content hover:text-primary">
-                  {guide.label}
-                </span>
-                <span class="mt-1 block text-sm leading-relaxed text-base-content/65">
-                  {guide.posts.length} articles
-                </span>
+          guides.map((guide, i) => (
+            <li class="m-0" data-reveal style={`--d: ${(i % 4) * 60}ms`}>
+              <a href={`/guides/${guide.slug}/`} class="hs-row block py-4">
+                <span class="hs-lead block font-semibold">{guide.label}</span>
+                <span class="hs-soft block">{guide.posts.length} articles</span>
               </a>
             </li>
           ))
@@ -123,56 +139,43 @@ const itemListSchema = {
       </ul>
     </section>
 
-    {
-      postsWithMeta.length === 0 ? (
-        <p class="text-base-content/60">No posts yet — coming soon.</p>
-      ) : (
-        <ul class="grid list-none gap-8 p-0 md:grid-cols-2">
-          {postsWithMeta.map(({ post, minutes }, index) => (
-            <li class="group m-0 overflow-hidden rounded-box border border-base-300 bg-base-100 p-0 transition-colors hover:border-base-content/30">
-              <a href={`/blog/${post.slug}/`} class="flex h-full flex-col">
-                {post.data.cover && (
-                  <div class="overflow-hidden border-b border-base-300 bg-base-200">
-                    <img
-                      src={post.data.cover}
-                      alt={post.data.coverAlt ?? ""}
-                      width={640}
-                      height={360}
-                      loading={index < 2 ? "eager" : "lazy"}
-                      decoding="async"
-                      class="aspect-[16/9] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                    />
-                  </div>
-                )}
-                <div class="flex flex-1 flex-col p-6 sm:p-7">
-                  <div class="tick-label flex flex-wrap items-center gap-x-2 gap-y-1 text-base-content/40">
-                    <time datetime={post.data.publishDate.toISOString()}>
-                      {formatDate(post.data.publishDate)}
-                    </time>
-                    <span aria-hidden="true">·</span>
-                    <span>{minutes} min</span>
-                    {post.data.tags.slice(0, 2).map((tag) => (
-                      <>
-                        <span aria-hidden="true">·</span>
-                        <span>{tag}</span>
-                      </>
-                    ))}
-                  </div>
-                  <h2 class="mb-0 mt-3 font-display text-xl font-bold leading-snug tracking-tight text-base-content transition-colors group-hover:text-primary sm:text-2xl">
-                    {post.data.title}
-                  </h2>
-                  <p class="mt-3 text-base leading-relaxed text-base-content/70">
-                    {post.data.description}
-                  </p>
-                  <span class="tick-label mt-5 inline-block self-start border-b-2 border-accent pb-1 text-base-content">
-                    Read more
+    <section aria-labelledby="all-heading" class="mt-24 md:mt-36">
+      <h2 id="all-heading" class="hs-head m-0" data-reveal>Every article</h2>
+      {
+        rest.length === 0 && !latest ? (
+          <p class="hs-soft mt-6">No posts yet — coming soon.</p>
+        ) : (
+          <ul class="m-0 mt-12 list-none space-y-3 p-0">
+            {rest.map(({ post, minutes }) => (
+              <li class="m-0 p-0" data-reveal>
+                <a href={`/blog/${post.slug}/`} class="hs-row hs-grid items-center gap-y-4 py-5">
+                  {post.data.cover && (
+                    <span class="col-span-12 block overflow-hidden sm:col-span-4 md:col-span-3">
+                      <img
+                        src={post.data.cover}
+                        alt={post.data.coverAlt ?? ""}
+                        width={640}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="aspect-[16/10] w-full object-cover transition-transform duration-500 ease-out"
+                      />
+                    </span>
+                  )}
+                  <span class="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-6">
+                    <span class="hs-lead block font-semibold">{post.data.title}</span>
+                    <span class="mt-2 block">{post.data.description}</span>
+                    <span class="hs-soft mt-2 block">
+                      <time datetime={post.data.publishDate.toISOString()}>{formatDate(post.data.publishDate)}</time>
+                      {" · "}{minutes} min{post.data.tags.length ? ` · ${post.data.tags.slice(0, 2).join(", ")}` : ""}
+                    </span>
                   </span>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )
-    }
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
   </main>
 </BlogLayout>

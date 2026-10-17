@@ -1,14 +1,17 @@
 import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
-import { withBase } from "../../utils/basePath";
 import InstagramLogo from "./svgs/instagram";
 import FacebookLogo from "./svgs/facebook";
 import TwitterLogo from "./svgs/twitter";
 
+/**
+ * The footer is a close, not a sitemap: the one-liner, the links in two short
+ * columns, and the name across the bottom at a size the screen cannot hold,
+ * cut by the bottom edge.
+ */
 function Footer() {
   const {
     name,
-    logo,
     ui,
     homeHref = "/",
     footer: { links, legalLinks, socials },
@@ -29,113 +32,75 @@ function Footer() {
     },
   ].filter(Boolean) as { href: string; title: string }[];
 
+  const linkClass = "hover:underline underline-offset-[0.3em]";
+
   return (
-    <footer className="border-t border-base-300 bg-base-100 px-4 pb-24 pt-16 md:pb-16">
-      <div className="mx-auto flex max-w-screen-lg flex-col gap-10 md:flex-row md:justify-between">
-        <div>
-          <a href={homeHref} className="flex items-center gap-2">
-            <img
-              className="h-10 rounded-[22%]"
-              src={withBase(logo)}
-              alt={`${name} app icon`}
-              width={40}
-              height={40}
-            />
-            <span className="font-display text-lg font-bold tracking-tight">
-              {name}
-            </span>
-          </a>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-base-content/60">
-            {ui.footer.tagline}
-          </p>
+    <footer data-field="dark" className="hs-dark relative overflow-hidden pt-24 md:pt-32">
+      <div className="hs-wrap hs-grid gap-y-14">
+        <p className="hs-lead col-span-12 m-0 max-w-[38ch] md:col-span-6">
+          {ui.footer.tagline}
+        </p>
+
+        <nav aria-label={ui.footer.site} className="col-span-6 md:col-span-2 md:col-start-9">
+          <p className="hs-soft m-0">{ui.footer.site}</p>
+          <ul className="m-0 mt-4 list-none space-y-2.5 p-0">
+            {links.map(({ title, href }) => (
+              <li key={href} className="m-0 p-0">
+                <a className={linkClass} href={href}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="col-span-6 md:col-span-2">
+          <p className="hs-soft m-0">{ui.footer.contact}</p>
+          <ul className="m-0 mt-4 list-none space-y-2.5 p-0">
+            <li className="m-0 p-0">
+              <a className={linkClass} href="mailto:robert@12f.dk">
+                robert@12f.dk
+              </a>
+            </li>
+            {legal.map(({ title, href }) => (
+              <li key={href} className="m-0 p-0">
+                <a className={linkClass} href={href}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
           {(socials?.facebook || socials?.instagram || socials?.twitter) && (
-            <div className="mt-5 flex items-center gap-4 text-base-content/60">
+            <div className="mt-5 flex items-center gap-4">
               {socials?.facebook && (
-                <a
-                  className="h-5 w-5 hover:text-base-content"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={socials.facebook}
-                  aria-label="Home Stories on Facebook"
-                >
+                <a className="h-5 w-5" target="_blank" rel="noopener noreferrer" href={socials.facebook} aria-label="Home Stories on Facebook">
                   <FacebookLogo />
                 </a>
               )}
               {socials?.instagram && (
-                <a
-                  className="h-5 w-5 hover:text-base-content"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={socials.instagram}
-                  aria-label="Home Stories on Instagram"
-                >
+                <a className="h-5 w-5" target="_blank" rel="noopener noreferrer" href={socials.instagram} aria-label="Home Stories on Instagram">
                   <InstagramLogo />
                 </a>
               )}
               {socials?.twitter && (
-                <a
-                  className="h-5 w-5 hover:text-base-content"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={socials.twitter}
-                  aria-label="Home Stories on X"
-                >
+                <a className="h-5 w-5" target="_blank" rel="noopener noreferrer" href={socials.twitter} aria-label="Home Stories on X">
                   <TwitterLogo />
                 </a>
               )}
             </div>
           )}
         </div>
-
-        <div className="grid grid-cols-2 gap-10 md:gap-16">
-          <nav aria-label={ui.footer.site}>
-            <p className="tick-label m-0 text-base-content/40">{ui.footer.site}</p>
-            <ul className="mt-4 list-none space-y-3 p-0">
-              {links.map(({ title, href }) => (
-                <li key={href} className="m-0 p-0">
-                  <a
-                    className="text-sm text-base-content/70 hover:text-base-content"
-                    href={href}
-                  >
-                    {title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div>
-            <p className="tick-label m-0 text-base-content/40">{ui.footer.contact}</p>
-            <ul className="mt-4 list-none space-y-3 p-0">
-              <li className="m-0 p-0">
-                <a
-                  className="text-sm text-base-content/70 hover:text-base-content"
-                  href="mailto:robert@12f.dk"
-                >
-                  robert@12f.dk
-                </a>
-              </li>
-              {legal.map(({ title, href }) => (
-                <li key={href} className="m-0 p-0">
-                  <a
-                    className="text-sm text-base-content/70 hover:text-base-content"
-                    href={href}
-                  >
-                    {title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-screen-lg items-center justify-between border-t border-base-300 pt-6">
-        <span className="tick-label text-base-content/40">
-          © {new Date().getFullYear()} 12f
-        </span>
-        <span className="tick-label text-base-content/40">iOS 17+</span>
+      <div className="hs-wrap hs-soft hs-small mt-24 flex flex-wrap justify-between gap-x-6 gap-y-1 md:mt-36">
+        <span>© {new Date().getFullYear()} 12f · Made in Denmark</span>
+        <span>iPhone and iPad · iOS 17 or later</span>
       </div>
+
+      {/* The name, cut by the bottom edge. Recognisable from its upper part. */}
+      <a href={homeHref} aria-label={name} className="hs-wordmark" tabIndex={-1}>
+        <span aria-hidden="true">{name}</span>
+      </a>
     </footer>
   );
 }

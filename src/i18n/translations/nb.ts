@@ -17,6 +17,30 @@ const nb: Translation = {
     ]
   },
   "ui": {
+    "poster": {
+      "headline": [
+        "Se summen",
+        "vokse."
+      ],
+      "tryIt": "Trykk på en utgift for å føre den på eksempelkjøkkenet.",
+      "costs": [
+        "Benkeplate i eik",
+        "Elektriker",
+        "Gulvfliser",
+        "Rørlegger",
+        "Råte bak veggen"
+      ],
+      "left": "{amount} igjen",
+      "over": "{amount} over budsjett",
+      "quote": [
+        "«Jeg skulle ønske jeg hadde",
+        "hatt den for et par år siden.»"
+      ],
+      "price": [
+        "Gratis å bruke.",
+        "Pro koster {price}, én gang."
+      ]
+    },
     "nav": {
       "openMenu": "Åpne meny",
       "closeMenu": "Lukk meny",

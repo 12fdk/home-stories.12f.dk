@@ -96,91 +96,102 @@ const collectionSchema = {
   canonicalPath={canonicalPath}
   extraSchema={[collectionSchema]}
 >
-  <main class="mx-auto max-w-3xl px-4 py-10 md:py-16">
-    <nav aria-label="Breadcrumb" class="mb-6 text-sm text-base-content/60">
-      <a href="/" class="hover:text-primary">Home</a>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
       <span class="mx-1.5" aria-hidden="true">/</span>
       <span>Downloads</span>
     </nav>
 
-    <header class="mb-12">
-      <h1 class="mb-4 text-3xl font-bold leading-tight md:text-5xl">
-        Free downloads
-      </h1>
-      <p class="text-lg leading-relaxed text-base-content/80" data-speakable>
-        Two files, built from the guides on this site. No email address, no
-        signup, no form — the link downloads the file. Both say plainly where
-        they stop working, because every planning tool does.
-      </p>
+    <header class="hs-grid items-end gap-y-10">
+      <div class="col-span-12 md:col-span-7">
+        <h1 class="hs-display m-0" style="--chars: 15" data-reveal>Free downloads</h1>
+        <p class="hs-lead m-0 mt-8 max-w-[38ch]" data-speakable data-reveal style="--d: 80ms">
+          Two files, built from the guides on this site. No email address, no
+          signup, no form — the link downloads the file. Both say plainly where
+          they stop working, because every planning tool does.
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-5" data-reveal style="--d: 140ms">
+        <img
+          src="/stock/36.webp"
+          alt="A printed checklist on a clipboard with a tape measure, resting on a cardboard box on site."
+          width={1000}
+          height={750}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
     </header>
 
-    <div class="space-y-10">
+    <div class="mt-20 space-y-4 md:mt-28">
       {
-        assets.map((asset) => (
+        assets.map((asset, i) => (
           <article
             id={asset.slug}
-            class="rounded-2xl border border-base-300 bg-base-200 p-6 sm:p-8"
+            class="hs-grid gap-y-6 bg-base-200 p-6 sm:p-10"
+            data-reveal
           >
-            <h2 class="mb-4 text-2xl font-bold text-base-content">
-              {asset.title}
-            </h2>
-
-            <ul class="mb-6 space-y-2 text-base-content/80">
-              {asset.contains.map((line) => (
-                <li class="flex gap-3">
-                  <span
-                    aria-hidden="true"
-                    class="mt-2.5 inline-block h-0.5 w-3 flex-none bg-accent"
-                  />
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div class="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3">
-              {asset.files.map((file) => (
-                <a
-                  href={file.href}
-                  download
-                  {...downloadClick("downloads-page", file.href.split("/").pop()!)}
-                  class={
-                    file.primary
-                      ? "btn btn-primary"
-                      : "text-sm text-base-content/60 underline-offset-4 hover:text-base-content"
-                  }
-                >
-                  {file.label} ↓
-                </a>
-              ))}
+            <div class="col-span-12 md:col-span-6">
+              <h2 class="hs-head m-0 max-w-[18ch]">{asset.title}</h2>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {asset.files.map((file) => (
+                  <a
+                    href={file.href}
+                    download
+                    {...downloadClick("downloads-page", file.href.split("/").pop()!)}
+                    class={file.primary ? "hs-btn" : "hs-link"}
+                  >
+                    {file.label} ↓
+                  </a>
+                ))}
+              </div>
             </div>
-
-            <p class="mb-3 text-sm leading-relaxed text-base-content/60">
-              {asset.limit}
-            </p>
-
-            <p class="m-0 text-sm">
-              <a href={asset.post.href} class="text-primary hover:underline">
-                {asset.post.label} →
-              </a>
-            </p>
+            <div class="col-span-12 md:col-span-6">
+              <img
+                src={i === 0 ? "/stock/34.webp" : "/stock/13.webp"}
+                alt={i === 0 ? "Printed budget sheets with highlighted figures, a calculator and a tape measure." : "Printed plans and a notebook spread on a worktop, with a ruler and pencil."}
+                width={900}
+                height={600}
+                loading="lazy"
+                class="mb-8 aspect-[3/2] w-full object-cover"
+              />
+              <ul class="m-0 list-disc space-y-2 pl-5">
+                {asset.contains.map((line) => <li>{line}</li>)}
+              </ul>
+              <p class="m-0 mt-6">{asset.limit}</p>
+              <p class="m-0 mt-4">
+                <a href={asset.post.href} class="hs-link">{asset.post.label}</a>
+              </p>
+            </div>
           </article>
         ))
       }
     </div>
 
-    <section class="mt-14 border-t border-base-300 pt-8">
-      <h2 class="mb-3 text-xl font-bold">When a file stops being enough</h2>
-      <p class="mb-5 leading-relaxed text-base-content/80">
-        Both of these work right up until the job starts. Then the costs arrive
-        faster than you update rows, the checklist is on a wall you are not
-        standing at, and the photo that proves what was behind the wall was
-        never taken. Home Stories keeps the budget, the tasks and the dated
-        photos attached to the same project, on the phone that is already in
-        your pocket.
-      </p>
-      <a href="/" class="text-primary hover:underline">
-        See what the app does →
-      </a>
+    <section class="hs-grid mt-24 gap-y-6 md:mt-32">
+      <div class="col-span-12 md:col-span-6">
+        <h2 class="hs-title m-0">When a file stops being enough</h2>
+        <img
+          src="/stock/03.webp"
+          alt="A loose pile of receipts and invoices on a wooden table beside a phone and a pen."
+          width={900}
+          height={600}
+          loading="lazy"
+          class="mt-8 aspect-[3/2] w-full object-cover"
+        />
+      </div>
+      <div class="col-span-12 md:col-span-6 md:col-start-7">
+        <p class="m-0">
+          Both of these work right up until the job starts. Then the costs arrive
+          faster than you update rows, the checklist is on a wall you are not
+          standing at, and the photo that proves what was behind the wall was
+          never taken. Home Stories keeps the budget, the tasks and the dated
+          photos attached to the same project, on the phone that is already in
+          your pocket.
+        </p>
+        <p class="m-0 mt-5"><a href="/" class="hs-link">See what the app does</a></p>
+      </div>
     </section>
   </main>
 </BlogLayout>

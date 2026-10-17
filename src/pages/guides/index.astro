@@ -1,6 +1,13 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { guides } from "../../data/guides";
+import { getCollection } from "astro:content";
+
+// Each guide is shown with the cover of its pillar (first) article.
+const blog = await getCollection("blog");
+const covers: Record<string, string | undefined> = Object.fromEntries(
+  guides.map((g) => [g.slug, blog.find((p) => p.slug === g.posts[0])?.data.cover]),
+);
 
 const path = "/guides/";
 const title = "Home Renovation Guides by Topic";
@@ -54,44 +61,50 @@ const itemListSchema = {
   ]}
   hideAppBanner={true}
 >
-  <main class="mx-auto max-w-screen-lg px-4 py-12 md:py-20">
-    <nav aria-label="Breadcrumb" class="mb-8 text-sm text-base-content/60">
-      <a href="/" class="hover:text-primary">Home</a>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
       <span class="mx-1.5" aria-hidden="true">/</span>
-      <a href="/blog/" class="hover:text-primary">Blog</a>
+      <a href="/blog/" class="hover:underline">Blog</a>
     </nav>
 
-    <header class="mb-12 max-w-3xl">
-      <p class="tick-label m-0 flex items-center gap-3 text-base-content/50">
-        <span class="inline-block h-0.5 w-8 bg-accent"></span>
-        Guides
-      </p>
-      <h1 class="mb-5 mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tightest md:text-5xl">
-        Renovation guides, grouped by the job
+    <header class="hs-grid items-end gap-y-10">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 19" data-reveal>
+        <span class="block">Renovation guides,</span>
+        <span class="block">grouped by the job</span>
       </h1>
-      <p class="text-lg leading-relaxed text-base-content/80" data-speakable>
-        The articles are written to answer one question each. These four guides
-        pull the related ones together: the money, the contractor, the timeline,
-        and the tool you keep the record in.
-      </p>
+      <div class="col-span-12 md:col-span-6">
+        <p class="hs-lead m-0 mt-6 max-w-[38ch]" data-speakable data-reveal style="--d: 80ms">
+          The articles are written to answer one question each. These four guides
+          pull the related ones together: the money, the contractor, the timeline,
+          and the tool you keep the record in.
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src="/stock/09.webp"
+          alt="A renovation plan on the table: printed drawings, a notebook, a calculator and a tape measure."
+          width={1000}
+          height={750}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
     </header>
 
-    <ol class="m-0 grid list-none gap-4 p-0">
+    <ol class="m-0 mt-20 list-none space-y-3 p-0 md:mt-28">
       {
-        guides.map((guide, index) => (
-          <li class="m-0">
-            <a
-              href={`/guides/${guide.slug}/`}
-              class="group flex gap-4 rounded-box border border-base-300 bg-base-100 p-5 transition-colors hover:border-base-content/30 sm:p-6"
-            >
-              <span class="tick-label mt-1 w-8 shrink-0 text-base-content/40">{index + 1}</span>
-              <span>
-                <span class="block font-display text-xl font-bold leading-snug tracking-tight text-base-content group-hover:text-primary">
-                  {guide.h1}
+        guides.map((guide, i) => (
+          <li class="m-0" data-reveal style={`--d: ${i * 70}ms`}>
+            <a href={`/guides/${guide.slug}/`} class="hs-row hs-grid items-center gap-y-4 py-6">
+              {covers[guide.slug] && (
+                <span class="col-span-12 block overflow-hidden sm:col-span-4 md:col-span-3">
+                  <img src={covers[guide.slug]} alt="" width={640} height={400} loading="lazy" class="aspect-[16/10] w-full object-cover" />
                 </span>
-                <span class="mt-2 block text-base leading-relaxed text-base-content/70">
-                  {guide.metaDescription}
-                </span>
+              )}
+              <span class="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-7">
+                <span class="hs-lead block font-semibold">{guide.h1}</span>
+                <span class="mt-2 block">{guide.metaDescription}</span>
               </span>
             </a>
           </li>
@@ -99,9 +112,8 @@ const itemListSchema = {
       }
     </ol>
 
-    <p class="mt-10 text-base text-base-content/70">
-      Prefer the full list?
-      <a href="/blog/" class="font-semibold text-primary hover:underline">Every article, newest first</a>.
+    <p class="m-0 mt-14">
+      Prefer the full list? <a href="/blog/" class="hs-link">Every article, newest first</a>.
     </p>
   </main>
 </BlogLayout>
