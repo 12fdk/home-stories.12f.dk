@@ -19,7 +19,7 @@ function Capabilities() {
     <section id={capabilities.id} data-field="dark" className="hs-dark hs-section">
       <div className="hs-wrap hs-grid gap-y-16">
         <div className="col-span-12">
-          <h2 className="hs-head m-0 max-w-[22ch] md:indent-[3vw]" data-reveal>
+          <h2 className="hs-head m-0 max-w-[22ch]" data-reveal>
             {capabilities.title}
           </h2>
           {capabilities.subtitle && (

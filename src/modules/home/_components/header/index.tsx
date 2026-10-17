@@ -2,26 +2,21 @@ import { useContext, useMemo, useState, type CSSProperties } from "react";
 import { ConfigContext } from "../../../../utils/configContext";
 import { withBase } from "../../../../utils/basePath";
 import { appStoreClick } from "../../../../utils/tracking";
-import { longest, measure } from "../../../../utils/measure";
+import { longest } from "../../../../utils/measure";
 
 /**
- * The hero is the sample kitchen's running total, drawn as a level. Graphite
- * above, signal orange below, and the seam sits exactly where the spend sits
- * against the budget: $12,950 of $25,000 puts it at 52% of the screen. The
- * headline straddles the seam and changes ink where it crosses.
- *
- * The reader can log the next costs from the list beside it. Each one raises
- * the field; the last one takes the kitchen past its budget and the orange
- * fills the screen. The figures are the sample project in the app's own
- * screenshots, not a claim about anyone's spend.
+ * The hero: the claim on the left, the proof on the right. The proof is the
+ * app's own before/after slider wiping an old kitchen into the finished one
+ * (cut from demo-3.mp4), and under the claim the sample kitchen's running
+ * total, which the reader can push past its budget by logging the next costs.
+ * The figures are the sample project in the app's screenshots, not a claim
+ * about anyone's spend.
  */
 
 const format = (currency: string, n: number) =>
   `${currency}${Math.round(n).toLocaleString("en-US")}`;
 
-function fill(template: string, amount: string) {
-  return template.replace("{amount}", amount);
-}
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 function Header() {
   const {
@@ -38,152 +33,93 @@ function Header() {
     () => sample.spent + costs.reduce((sum, c, i) => sum + (logged[i] ? c : 0), 0),
     [logged, costs, sample.spent],
   );
-  const ratio = spent / sample.budget;
   const over = spent > sample.budget;
-  // The field is literal up to the budget; past it, the screen is all orange.
-  const level = Math.min(ratio, 1);
+  const money = (n: number) => format(sample.currency, n);
+  const status = over
+    ? ui.poster.over.replace("{amount}", money(spent - sample.budget))
+    : ui.poster.left.replace("{amount}", money(sample.budget - spent));
 
   const [line1, line2] = ui.poster.headline;
-  const chars = longest([measure(line1) + 4 > measure(line2) ? `${line1}xxxx` : line2]); // + the clip in line one
-  const money = (n: number) => format(sample.currency, n);
-
-  const status = over
-    ? fill(ui.poster.over, money(spent - sample.budget))
-    : fill(ui.poster.left, money(sample.budget - spent));
-
-  const heroStyle = {
-    "--level": level,
-    // Where the seam starts: the headline is placed on it once and stays put.
-    "--seam": Math.min(sample.spent / sample.budget, 1),
-    "--chars": chars,
-    "--chars-text": longest([line1, line2]),
-  } as CSSProperties;
-
-  // The same two lines, twice: the real h1 in mist on the graphite above the
-  // seam, and a painted copy in graphite on the orange below it. The copy's
-  // letters come from CSS (data-text), so it adds no second headline to the
-  // page for readers, crawlers or assistive tech.
-  const lines = (real: boolean) =>
-    [line1, line2].map((line, i) => (
-      <span key={i} className="hs-hero__line" data-text={real ? undefined : line}>
-        {real && line}
-        {i === 0 && (
-          <span className="hs-hero__clip" aria-hidden="true">
-            {real && (
-              <video
-                src={withBase("/videos/hero-reveal.mp4")}
-                poster={withBase("/videos/hero-reveal.webp")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              />
-            )}
-          </span>
-        )}
-      </span>
-    ));
 
   return (
-    <>
-      <section
-        id={header.id}
-        data-field={over ? "signal" : "dark"}
-        className="hs-hero hs-dark"
-        style={heroStyle}
-      >
-        <div aria-hidden="true" className="hs-hero__field" />
-
-        <div aria-hidden="true" className="hs-hero__type hs-hero__type--below">
-          <p className="hs-hero__h1 hs-display">{lines(false)}</p>
-        </div>
-        <div className="hs-hero__type hs-hero__type--above">
-          <h1 className="hs-hero__h1 hs-display">{lines(true)}</h1>
-        </div>
-
-        <div className="hs-hero__foot hs-wrap hs-grid">
-          <div className="col-span-12 md:col-span-4">
-            <p className="hs-lead hs-rise m-0 max-w-[20ch] font-medium">
-              {ui.header.eyebrow}.
-            </p>
-            {appStoreLink && (
-              <a
-                href={appStoreLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hs-badge hs-rise mt-5"
-                
-                style={{ "--d": "80ms" } as CSSProperties}
-                {...appStoreClick("hero")}
-              >
-                <img
-                  className="h-[52px]"
-                  alt="Download Home Stories on the App Store"
-                  src={withBase("/stores/app-store.svg")}
-                  width={156}
-                  height={52}
-                />
-              </a>
-            )}
-          </div>
-
-          <div className="hidden md:col-span-8 md:col-start-5 md:block lg:col-span-7 lg:col-start-6">
-            <LiveTotal
-              project={sample.project}
-              budget={money(sample.budget)}
-              spent={money(spent)}
-              percent={Math.round(ratio * 100)}
-              ofBudget={ui.header.ofBudget}
-              status={status}
-              tryIt={ui.poster.tryIt}
-              costs={costs.map((amount, i) => ({
-                name: ui.poster.costs[i] ?? "",
-                amount: `+${money(amount)}`,
-                logged: logged[i],
-              }))}
-              onToggle={(i) =>
-                setLogged((current) => current.map((v, j) => (j === i ? !v : v)))
-              }
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* The orange runs on past the fold, as if the spend kept rising */}
-      <div data-field="signal" className="hs-signal">
-        <div className="hs-wrap hs-grid gap-y-14 pb-20 pt-10 md:pb-28 md:pt-16">
-          <div className="col-span-12 md:hidden">
-            <LiveTotal
-              project={sample.project}
-              budget={money(sample.budget)}
-              spent={money(spent)}
-              percent={Math.round(ratio * 100)}
-              ofBudget={ui.header.ofBudget}
-              status={status}
-              tryIt={ui.poster.tryIt}
-              costs={costs.map((amount, i) => ({
-                name: ui.poster.costs[i] ?? "",
-                amount: `+${money(amount)}`,
-                logged: logged[i],
-              }))}
-              onToggle={(i) =>
-                setLogged((current) => current.map((v, j) => (j === i ? !v : v)))
-              }
-            />
-          </div>
-
-          <p
-            className="hs-lead col-span-12 m-0 max-w-[34ch] font-medium md:col-span-7"
-            data-reveal
+    <section id={header.id} data-field="dark" className="hs-dark overflow-hidden">
+      <div className="hs-wrap hs-grid gap-y-12 pb-16 pt-12 md:pb-24 md:pt-16">
+        <div className="col-span-12 flex flex-col md:col-span-6">
+          <h1
+            className="hs-display hs-display--half hs-rise m-0"
+            style={{ "--chars": longest([line1, line2]) } as CSSProperties}
           >
-            {header.subtitle}
+            <span className="block whitespace-nowrap">{line1}</span>
+            <span className="block whitespace-nowrap">{line2}</span>
+          </h1>
+
+          <p className="hs-lead hs-rise m-0 mt-8 max-w-[30ch]" style={d(80)}>
+            {ui.header.eyebrow}. {header.usersDescription}.
           </p>
 
-          <Facts />
+          {appStoreLink && (
+            <a
+              href={appStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hs-badge hs-rise mt-8 self-start"
+              style={d(140)}
+              {...appStoreClick("hero")}
+            >
+              <img
+                className="h-[54px]"
+                alt="Download Home Stories on the App Store"
+                src={withBase("/stores/app-store.svg")}
+                width={162}
+                height={54}
+              />
+            </a>
+          )}
+
+          <LiveTotal
+            project={sample.project}
+            budget={money(sample.budget)}
+            spent={money(spent)}
+            ratio={spent / sample.budget}
+            ofBudget={ui.header.ofBudget}
+            status={status}
+            over={over}
+            tryIt={ui.poster.tryIt}
+            costs={costs.map((amount, i) => ({
+              name: ui.poster.costs[i] ?? "",
+              amount: `+${money(amount)}`,
+              logged: logged[i],
+            }))}
+            onToggle={(i) =>
+              setLogged((current) => current.map((v, j) => (j === i ? !v : v)))
+            }
+          />
         </div>
+
+        {/* The proof: a real recording from the app, large */}
+        <figure className="hs-hero-media hs-rise col-span-12 m-0 md:col-span-6" style={d(60)}>
+          <video
+            src={withBase("/videos/hero-reveal.mp4")}
+            poster={withBase("/videos/hero-reveal.webp")}
+            aria-label="The Home Stories before and after slider wiping an old oak kitchen into the finished white one."
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            width={720}
+            height={900}
+          />
+        </figure>
       </div>
-    </>
+
+      <div className="hs-wrap hs-grid gap-y-10 pb-20 md:pb-28">
+        <p className="hs-lead col-span-12 m-0 max-w-[40ch] md:col-span-6" data-reveal>
+          {header.subtitle}
+        </p>
+        <Facts />
+      </div>
+    </section>
   );
 }
 
@@ -198,14 +134,10 @@ function Facts() {
   return (
     <dl
       aria-label={ui.sectionLabels.atAGlance}
-      className="col-span-12 m-0 grid grid-cols-2 gap-x-6 gap-y-5 self-end sm:grid-cols-3 md:col-span-5 md:col-start-8 md:grid-cols-2"
+      className="col-span-12 m-0 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3 md:col-span-6 md:grid-cols-3"
     >
       {facts.map(({ label, value }, i) => (
-        <div
-          key={label}
-          data-reveal
-          style={{ "--d": `${i * 70}ms` } as CSSProperties}
-        >
+        <div key={label} data-reveal style={d(i * 60)}>
           <dt className="hs-soft">{label}</dt>
           <dd className="hs-lead m-0 font-semibold">{value}</dd>
         </div>
@@ -218,46 +150,62 @@ interface LiveTotalProps {
   project: string;
   budget: string;
   spent: string;
-  percent: number;
+  ratio: number;
   ofBudget: string;
   status: string;
+  over: boolean;
   tryIt: string;
   costs: { name: string; amount: string; logged: boolean }[];
   onToggle: (index: number) => void;
 }
 
 /**
- * The app's running total, at true size. It is a real control: each cost is
- * a toggle button, and the figures and the hero's field follow it. With no
- * script it shows the sample as it stands, which is still true.
+ * The app's running total at true size, and a real control: each cost is a
+ * toggle button and the bar follows it. With no script it shows the sample as
+ * it stands, which is still true.
  */
 function LiveTotal({
   project,
   budget,
   spent,
-  percent,
+  ratio,
   ofBudget,
   status,
+  over,
   tryIt,
   costs,
   onToggle,
 }: LiveTotalProps) {
   return (
-    <div data-ui className="hs-live hs-rise" style={{ "--d": "220ms" } as CSSProperties}>
+    <div data-ui className="hs-live hs-rise mt-14 md:mt-auto md:pt-16" style={d(220)}>
       <div className="flex items-baseline justify-between gap-4">
-        <span className="font-medium">{project}</span>
+        <span className="font-semibold">{project}</span>
         <span className="tabular-nums">
-          {percent}% {ofBudget}
+          {Math.round(ratio * 100)}% {ofBudget}
         </span>
       </div>
-      <p className="m-0 mt-1 flex flex-wrap items-baseline gap-x-3">
+      <p className="m-0 mt-2 flex flex-wrap items-baseline gap-x-3">
         <span className="hs-head tabular-nums">{spent}</span>
-        <span className="hs-lead tabular-nums">/ {budget}</span>
-        <span className="ml-auto font-semibold" aria-live="polite">
-          {status}
-        </span>
+        <span className="hs-lead hs-soft tabular-nums">/ {budget}</span>
       </p>
-      <ul className="m-0 mt-4 flex list-none flex-wrap gap-2 p-0">
+
+      <div
+        className="hs-bar mt-4"
+        role="meter"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(ratio * 100)}
+        aria-label={`${project}: ${Math.round(ratio * 100)}% ${ofBudget}`}
+        style={{ "--fill": Math.min(ratio, 1) } as CSSProperties}
+        data-over={over || undefined}
+      >
+        <div className="hs-bar__fill" />
+      </div>
+      <p className={`m-0 mt-3 font-semibold ${over ? "hs-over" : ""}`} aria-live="polite">
+        {status}
+      </p>
+
+      <ul className="m-0 mt-6 flex list-none flex-wrap gap-2 p-0">
         {costs.map((cost, i) => (
           <li key={cost.name} className="m-0 p-0">
             <button
@@ -272,7 +220,7 @@ function LiveTotal({
           </li>
         ))}
       </ul>
-      <p className="hs-small m-0 mt-3">{tryIt}</p>
+      <p className="hs-soft m-0 mt-3">{tryIt}</p>
     </div>
   );
 }

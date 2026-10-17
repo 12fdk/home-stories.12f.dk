@@ -90,8 +90,9 @@
 @media (min-width: 768px) {
   :root {
     --hs-gutter: 28px;
-    --hs-section: 176px;
-    --display-max: min(9.5vw, 150px);
+    --hs-section: 144px;
+    /* Statements (the stat, the price, the close) share one size */
+    --display-max: min(7.6vw, 110px);
   }
 }
 
@@ -365,119 +366,56 @@ section[id] {
   }
 }
 
-/* ---- Hero: the running total as a level ------------------------------------ */
-.hs-hero {
-  position: relative;
-  overflow: hidden;
-  height: calc(100svh - 64px);
-  min-height: 600px;
-}
-
+/* ---- Hero ----------------------------------------------------------------- */
+/* The headline shares the screen with the picture, so it is sized to half. */
 @media (min-width: 768px) {
-  .hs-hero {
-    height: calc(100svh - 72px);
-    min-height: 720px;
+  .hs-display--half {
+    font-size: min(
+      8.5vw,
+      150px,
+      calc((50vw - 2 * var(--hs-gutter)) / (var(--chars, 10) * 0.58))
+    );
   }
 }
 
-.hs-hero__field {
-  position: absolute;
-  inset: 0;
-  background: var(--hs-signal);
-  transform-origin: bottom;
-  transform: scaleY(var(--level));
-  transition: transform 900ms var(--ease-out);
-}
-
-.hs-hero__type {
-  position: absolute;
-  inset: 0;
-  transition: clip-path 900ms var(--ease-out);
-}
-
-.hs-hero__type--above {
-  color: var(--hs-mist);
-  clip-path: inset(0 0 calc(var(--level) * 100%) 0);
-}
-
-.hs-hero__type--below {
-  color: var(--hs-graphite);
-  clip-path: inset(calc((1 - var(--level)) * 100%) 0 0 0);
-  pointer-events: none;
-}
-
-/* Line one stands above the seam; the seam cuts line two through its upper
-   third (0.9em of line one + 0.3em into line two). */
-.hs-hero__h1 {
-  position: absolute;
-  left: var(--hs-gutter);
-  right: var(--hs-gutter);
-  top: calc((1 - var(--seam)) * 100% - 1.2em);
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.hs-hero__line {
-  display: block;
-  white-space: nowrap;
-}
-
-.hs-hero__line[data-text]::before {
-  content: attr(data-text);
-}
-
-/* The clip inside the sentence: one line tall, the app's before/after
-   slider wiping an old kitchen into the finished one (cut from demo-3.mp4). */
-.hs-hero__clip {
-  display: inline-block;
-  width: 2.2em;
-  height: 0.7em;
-  margin-left: 0.2em;
+.hs-hero-media {
   overflow: hidden;
-  vertical-align: baseline;
+  background: var(--hs-graphite-2);
 }
 
-.hs-hero__clip video {
+.hs-hero-media video {
   display: block;
   width: 100%;
   height: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: 50% 50%;
 }
 
-.hs-hero__top {
-  position: absolute;
-  inset-inline: 0;
-  top: 28px;
-  color: var(--hs-mist);
-  transition: color 300ms var(--ease-out);
-}
-
-@media (max-width: 767px) {
-  .hs-hero .hs-display {
-    --chars: var(--chars-text);
-  }
-
-  .hs-hero__clip {
-    display: none;
+@media (min-width: 768px) {
+  .hs-hero-media {
+    min-height: min(calc(100svh - 72px - 64px), 900px);
+    margin-right: calc(-1 * var(--hs-gutter));
   }
 }
 
-.hs-hero__foot {
-  position: absolute;
-  inset-inline: 0;
-  bottom: 0;
-  padding-bottom: 36px;
-  color: var(--hs-graphite);
-  align-items: end;
+/* The budget bar: the app's running total against the budget */
+.hs-bar {
+  position: relative;
+  height: 14px;
+  background: #34363b;
+  overflow: hidden;
 }
 
-/* The live total's cost buttons: a tone step at rest, graphite once logged */
-.hs-live {
-  color: var(--hs-graphite);
+.hs-bar__fill {
+  height: 100%;
+  background: var(--hs-signal);
+  transform-origin: left;
+  transform: scaleX(var(--fill, 0));
+  transition: transform 700ms var(--ease-out);
+}
+
+.hs-over {
+  color: var(--hs-signal);
 }
 
 .hs-cost {
@@ -486,8 +424,8 @@ section[id] {
   align-items: center;
   gap: 0.6em;
   padding: 0 14px;
-  background: #ff6a45;
-  color: var(--hs-graphite);
+  background: #2c2e32;
+  color: var(--hs-mist);
   font-weight: 500;
   text-align: left;
   transition:
@@ -497,7 +435,7 @@ section[id] {
 }
 
 .hs-cost:hover {
-  background: #ff8462;
+  background: #3a3c41;
 }
 
 .hs-cost:active {
@@ -505,8 +443,37 @@ section[id] {
 }
 
 .hs-cost[aria-pressed="true"] {
+  background: var(--hs-mist);
+  color: var(--hs-graphite);
+}
+
+/* ---- Nav: the bar takes the field under it -------------------------------- */
+.hs-nav {
+  background: var(--hs-mist);
+  color: var(--hs-graphite);
+  transition:
+    background-color 300ms var(--ease-out),
+    color 300ms var(--ease-out);
+}
+
+.hs-nav a:not(.hs-btn),
+.hs-nav summary {
+  color: inherit;
+}
+
+.hs-nav[data-on="dark"] {
   background: var(--hs-graphite);
   color: var(--hs-mist);
+}
+
+.hs-nav[data-on="dark-2"] {
+  background: var(--hs-graphite-2);
+  color: var(--hs-mist);
+}
+
+.hs-nav[data-on="theme"] {
+  background: oklch(var(--b1));
+  color: oklch(var(--bc));
 }
 
 /* One slow move on a photograph: a drift in, held, and back */
@@ -691,7 +658,7 @@ blockquote .hs-spread + .hs-spread {
   line-height: 0.8;
   letter-spacing: -0.05em;
   white-space: nowrap;
-  transform: translateY(20%);
+  transform: translateY(12%);
   margin-bottom: -0.1em;
 }
 
@@ -802,5 +769,50 @@ blockquote .hs-spread + .hs-spread {
   from {
     opacity: 0;
     transform: translate3d(0, 20px, 0);
+  }
+}
+
+/* ---- Features: the app screen in front of the moment on site --------------- */
+.hs-scene {
+  position: relative;
+  overflow: hidden;
+}
+
+.hs-scene__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 900ms var(--ease-out);
+}
+
+.hs-scene:hover .hs-scene__photo {
+  transform: scale(1.03);
+}
+
+/* The phone screen rises from the bottom edge of the photo and is cut by it */
+.hs-scene__screen {
+  position: absolute;
+  right: 7%;
+  bottom: 0;
+  width: 40%;
+  height: 84%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hs-scene__screen--left {
+  right: auto;
+  left: 7%;
+}
+
+.hs-scene__screen img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hs-scene__screen {
+    width: 36%;
   }
 }

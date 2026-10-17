@@ -98,13 +98,13 @@ function HowItWorks() {
               onChange={(e) => setStage(Number(e.target.value))}
             />
           </div>
-          <ol className="m-0 mt-4 grid list-none grid-cols-2 gap-x-6 gap-y-2 p-0 md:grid-cols-4">
+          <ol className="m-0 mt-5 grid list-none grid-cols-2 gap-x-6 gap-y-3 p-0 md:grid-cols-4">
             {steps.map((step, i) => (
               <li key={step.title} className="m-0 p-0">
                 <button
                   type="button"
                   onClick={() => setStage(i)}
-                  className={`text-left transition-colors hover:text-[color:var(--ink)] ${i === stage ? "font-semibold" : "hs-soft"}`}
+                  className={`hs-lead text-left transition-colors hover:text-[color:var(--ink)] ${i === stage ? "font-semibold" : "hs-soft"}`}
                 >
                   {step.title}
                 </button>

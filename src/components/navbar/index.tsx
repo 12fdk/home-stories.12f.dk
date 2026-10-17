@@ -1,6 +1,5 @@
 import AnimatedList from "../../components/animatedList";
 import MenuToggle from "../../components/menuToggle";
-import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
 import { ConfigContext } from "../../utils/configContext";
@@ -9,16 +8,7 @@ import { appStoreClick } from "../../utils/tracking";
 import ThemeSwitcher from "./themeSwitcher";
 import LanguageSwitcher from "../languageSwitcher";
 
-type Field = "dark" | "dark-2" | "light" | "ply" | "signal";
-
-/** Field → the bar's own colours. Pages without fields keep the theme's. */
-const FIELD_CLASS: Record<Field, string> = {
-  dark: "bg-graphite text-mist",
-  "dark-2": "bg-graphite-2 text-mist",
-  light: "bg-mist text-graphite",
-  ply: "bg-ply text-graphite",
-  signal: "bg-signal text-graphite",
-};
+type Field = "dark" | "dark-2" | "light";
 
 /**
  * Colour by chapter. The homepage is a run of flat fields, each marked with
@@ -82,10 +72,8 @@ function Navbar() {
 
   return (
     <nav
-      className={clsx(
-        "sticky top-0 z-50 transition-colors duration-300",
-        field ? FIELD_CLASS[field] : "bg-base-100 text-base-content",
-      )}
+      className="hs-nav sticky top-0 z-50"
+      data-on={field ?? "theme"}
     >
       <div className="mx-auto flex h-16 max-w-[1600px] items-center px-5 md:h-[4.5rem] md:px-7">
         <a href={homeHref} className="flex items-center gap-2.5">
@@ -128,10 +116,7 @@ function Navbar() {
               href={appStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={clsx(
-                "hs-btn min-h-[44px] px-5 transition-colors duration-300",
-                field === "signal" && "!bg-graphite !text-mist",
-              )}
+              className="hs-btn min-h-[44px] px-5"
               {...appStoreClick("navbar")}
             >
               {topNavbar.cta}
