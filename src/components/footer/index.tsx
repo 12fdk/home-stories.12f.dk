@@ -5,6 +5,18 @@ import FacebookLogo from "./svgs/facebook";
 import TwitterLogo from "./svgs/twitter";
 
 /**
+ * Sister apps from the same developer, with descriptive anchors. Plain links
+ * in the static HTML of every page; the sister sites link back here. #151
+ * English on every locale: the names are proper nouns and the sister sites
+ * are English-only.
+ */
+const MORE_APPS = [
+  { title: "Event Stories – party planner app", href: "https://event-stories.12f.dk/" },
+  { title: "Travel Stories – trip planner & travel journal", href: "https://travel-stories.12f.dk/" },
+  { title: "Bike Stories – bike maintenance log", href: "https://bike-stories.12f.dk/" },
+];
+
+/**
  * The footer is a close, not a sitemap: the one-liner, the links in two short
  * columns, and the name across the bottom at a size the screen cannot hold,
  * cut by the bottom edge.
@@ -90,6 +102,19 @@ function Footer() {
             </div>
           )}
         </div>
+
+        <nav aria-label="More apps from 12f" className="col-span-12 md:col-span-4 md:col-start-9">
+          <p className="hs-soft m-0">More apps from 12f</p>
+          <ul className="m-0 mt-4 list-none space-y-2.5 p-0">
+            {MORE_APPS.map(({ title, href }) => (
+              <li key={href} className="m-0 p-0">
+                <a className={linkClass} href={href}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
 
       <div className="hs-wrap hs-soft hs-small mt-24 flex flex-wrap justify-between gap-x-6 gap-y-1 md:mt-36">
