@@ -3,13 +3,14 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { isPublished } from "../../utils/posts";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import TldrBox from "../../components/blog/TldrBox.astro";
-import InlineCTA from "../../components/blog/InlineCTA.astro";
+import AppCard from "../../components/blog/AppCard.astro";
 import FaqSection from "../../components/blog/FaqSection.astro";
 import RelatedPosts from "../../components/blog/RelatedPosts.astro";
 import AuthorBio from "../../components/blog/AuthorBio.astro";
 import { readingTime } from "../../utils/readingTime";
 import { TOPICS, topicFor } from "../../utils/blogCta.mjs";
 import { guidesForSlug } from "../../data/guides";
+import { fetchAppStoreData, fetchStorefrontPricing } from "../../utils/appStoreData";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => isPublished(data));
@@ -60,7 +61,18 @@ const siteUrl = Astro.site?.href ?? "https://home-stories.12f.dk";
 // End-of-post copy follows the post's topic instead of one budget sentence on
 // all 31 posts (a roof-timeline post was being sold "spent vs committed").
 // Deliberately different wording from the mid-article card (EDITORIAL_RULES §6).
-const topic = TOPICS[topicFor({ slug: post.slug, keyword: post.data.keyword, tags: post.data.tags })];
+const topicKey = topicFor({ slug: post.slug, keyword: post.data.keyword, tags: post.data.tags });
+const topic = TOPICS[topicKey];
+
+// The app card quotes the live US storefront price (the blog is English and the
+// country-neutral App Store link resolves to the US store by default) and the
+// rating only once it has as many ratings as the homepage schema needs. #150
+const MIN_RATING_COUNT = 5;
+const [pricing, storeData] = await Promise.all([fetchStorefrontPricing("us"), fetchAppStoreData()]);
+const rating =
+  storeData && storeData.userRatingCount >= MIN_RATING_COUNT && storeData.averageUserRating > 0
+    ? { value: storeData.averageUserRating, count: storeData.userRatingCount }
+    : null;
 
 // Explicit relatedSlugs win. The fallback used to take the first three posts in the
 // collection, which is arbitrary — it linked a roof-timeline post to whatever happened
@@ -202,11 +214,12 @@ const articleSchema = {
       <Content />
     </div>
 
-    <InlineCTA
-      heading="Ready to put this into practice?"
-      body={topic.end}
-      buttonText="Get Home Stories — Free on the App Store"
+    <AppCard
       slug={post.slug}
+      topic={topicKey}
+      body={topic.end}
+      proPrice={pricing?.proPrice}
+      rating={rating}
       {...transitional}
     />
 
