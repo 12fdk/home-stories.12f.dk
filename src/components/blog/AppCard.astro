@@ -1,0 +1,138 @@
+---
+import { APP_STORE_CLICK_EVENT, downloadClick } from "../../utils/tracking";
+import { END_SURFACE } from "../../utils/blogCta.mjs";
+import { appStoreUrl, blogCampaign } from "../../utils/appStoreLink.mjs";
+import {
+  APP_ICON,
+  APP_NAME,
+  APP_TAGLINE,
+  SCREEN_HEIGHT,
+  SCREEN_WIDTH,
+  TRUST_LINE,
+  priceLine,
+  screenFor,
+} from "../../utils/appCard.mjs";
+
+/**
+ * The app card at the end of every blog post. #150
+ *
+ * Replaces the old end-of-post box, which was text and a button and recorded
+ * no clicks. The card shows what the reader would get — the icon, a real
+ * screen, the price and the no-account promise — before it asks for the tap.
+ * Same content as the mobile card after the intro (rehype-inline-cta), from
+ * the same source (utils/appCard.mjs).
+ *
+ * Tracking is unchanged: one `appstore-click` with surface `blog-end-cta` and
+ * the post slug. There is exactly one App Store link in the card.
+ */
+interface Props {
+  slug: string;
+  /** Topic key from blogCta.mjs `topicFor` — picks the screenshot. */
+  topic: string;
+  /** The topic's closing sentence (TOPICS[topic].end). */
+  body: string;
+  /** Storefront-formatted Pro price; falls back to the US price. */
+  proPrice?: string;
+  /** Shown only from MIN_RATING_COUNT ratings up, as on the rest of the site. */
+  rating?: { value: number; count: number } | null;
+  /** The transitional download. `null` hides it. #117 #119 */
+  transitionalText?: string | null;
+  transitionalHref?: string;
+}
+
+const {
+  slug,
+  topic,
+  body,
+  proPrice,
+  rating = null,
+  transitionalText = "Not starting yet? Download the free phase checklist (PDF)",
+  transitionalHref = "/downloads/renovation-checklist.pdf",
+} = Astro.props;
+
+const screen = screenFor(topic);
+
+const track = {
+  "data-umami-event": APP_STORE_CLICK_EVENT,
+  // The end-of-post card. Was "blog-inline-cta" until 2026-10-06 (#130).
+  "data-umami-event-surface": END_SURFACE,
+  "data-umami-event-slug": slug,
+};
+
+const trackDownload = downloadClick(
+  "blog-transitional-cta",
+  transitionalHref.split("/").pop() ?? transitionalHref,
+  slug,
+);
+---
+
+<aside
+  class="hs-appcard hs-ply not-prose my-12"
+  data-cta-id={`blog-cta-end-${slug}`}
+  aria-label="Get the Home Stories app"
+>
+  <div class="hs-appcard__head">
+    <div class="hs-appcard__id">
+      <img
+        src={APP_ICON}
+        alt=""
+        width="52"
+        height="52"
+        loading="lazy"
+        decoding="async"
+        class="hs-appcard__icon"
+      />
+      <div class="min-w-0">
+        <p class="m-0 font-semibold leading-tight">{APP_NAME}</p>
+        <p class="hs-soft hs-small m-0">{APP_TAGLINE}</p>
+      </div>
+    </div>
+    <ul class="hs-appcard__facts">
+      {rating && (
+        <li>
+          <span aria-hidden="true">★</span> {rating.value.toFixed(1)} · {rating.count} ratings
+        </li>
+      )}
+      <li>{priceLine(proPrice)}</li>
+      <li>{TRUST_LINE}</li>
+    </ul>
+  </div>
+
+  <div class="hs-appcard__shot">
+    <img
+      src={screen.src}
+      alt={screen.alt}
+      width={SCREEN_WIDTH}
+      height={SCREEN_HEIGHT}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <div class="hs-appcard__body">
+    <p class="m-0 mb-6">{body}</p>
+    <a
+      href={appStoreUrl(blogCampaign(slug))}
+      target="_blank"
+      rel="noopener"
+      {...track}
+      class="hs-btn hs-appcard__btn"
+    >
+      Get it free on the App Store
+    </a>
+    {
+      transitionalText && (
+        <p class="mb-0 mt-4 text-sm">
+          <a
+            href={transitionalHref}
+            download=""
+            {...trackDownload}
+            class="underline underline-offset-4"
+          >
+            {transitionalText} ↓
+          </a>
+        </p>
+      )
+    }
+  </div>
+</aside>

@@ -33,8 +33,10 @@ export type AppStoreSurface =
   | "404"
   /** Mid-article card on a blog post (rehype-inline-cta). Carries `slug`. */
   | "blog-inline"
-  /** The "Ready to put this into practice?" box at the end of a post. */
+  /** The app card at the end of a post (components/blog/AppCard.astro). Carries `slug`. #150 */
   | "blog-end-cta"
+  /** The phone-only app card after a post's intro (rehype-inline-cta). Carries `slug`. #150 */
+  | "blog-intro-card"
   /** A plain App Store link inside post prose. Carries `slug`. */
   | "blog-prose"
   /** The /app redirect stub, which forwards straight to the store. */

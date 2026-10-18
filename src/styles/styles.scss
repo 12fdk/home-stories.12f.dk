@@ -816,3 +816,122 @@ blockquote .hs-spread + .hs-spread {
     width: 36%;
   }
 }
+
+/* ---- Blog app card (#150) -------------------------------------------------- */
+/* One card in two places: after the intro on phones, and at the end of every
+   post. A real app screen hangs from the top edge on a phone and rises from the
+   bottom edge on a wider screen, cut by the card like the homepage scenes. */
+.hs-appcard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 6.5rem;
+  column-gap: 1rem;
+  overflow: hidden;
+  padding-inline: 1.5rem;
+}
+
+.hs-appcard__head {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  padding-top: 1.5rem;
+}
+
+/* Icon above the name on a phone (the name gets the column's full width),
+   beside it from 640px up */
+.hs-appcard__id {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.hs-appcard__icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: 22.5%;
+  box-shadow: 0 0 0 1px rgb(24 25 27 / 0.12);
+}
+
+.hs-appcard__facts {
+  margin: 0.875rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--step-small);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.hs-appcard__facts li {
+  margin: 0;
+  padding: 0;
+}
+
+.hs-appcard__shot {
+  grid-column: 2;
+  grid-row: 1;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 0 0 14px 14px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgb(24 25 27 / 0.12);
+}
+
+.hs-appcard__shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hs-appcard__body {
+  grid-column: 1 / -1;
+  padding-block: 1.25rem 1.5rem;
+}
+
+/* Full width on a phone: one clear tap target under the thumb */
+.hs-appcard__btn {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hs-appcard {
+    grid-template-columns: minmax(0, 1fr) 12.5rem;
+    column-gap: 2.5rem;
+    padding-inline: 2.5rem;
+  }
+
+  .hs-appcard__head {
+    padding-top: 2.5rem;
+  }
+
+  .hs-appcard__id {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.875rem;
+  }
+
+  .hs-appcard__shot {
+    grid-row: 1 / span 2;
+    align-self: end;
+    height: 19rem;
+    margin-top: 2.5rem;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .hs-appcard__body {
+    grid-column: 1;
+    padding-block: 1.5rem 2.5rem;
+  }
+
+  .hs-appcard__btn {
+    width: auto;
+  }
+}
+
+/* The intro card is the phone's early ask; wider screens get the end card only */
+@media (min-width: 768px) {
+  .hs-appcard--phone {
+    display: none;
+  }
+}
