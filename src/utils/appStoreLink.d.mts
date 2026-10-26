@@ -1,8 +1,11 @@
 export const CT_MAX: number;
 export const APP_STORE_ID: string;
+export const PROVIDER_TOKEN: string;
 export const APP_STORE_URL: string;
 export const SITE_CAMPAIGN: string;
+export const BANNER_CAMPAIGN: string;
 export const LLMS_CAMPAIGN: string;
+export const SMART_BANNER_CONTENT: string;
 export function blogCampaign(slug: string): string;
 export function useCaseCampaign(slug: string): string;
 export function appStoreUrl(token: string): string;
