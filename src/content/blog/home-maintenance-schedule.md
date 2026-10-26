@@ -137,4 +137,4 @@ The same dated trail serves [documenting a renovation for insurance](/blog/docum
 
 This weekend, three small jobs: photograph three rating plates (heater, furnace, dryer), find the main water shutoff and check it turns (if it is stiff, leave it for a plumber), and put the next four checks in a calendar. The schedule is the list; the record is the thing that makes it work.
 
-If you want the log, the photos and the receipts in one place with a date on each, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-home-maintenance-schedule&mt=8) is a free app for iPhone and iPad that does it without an account.
+If you want the log, the photos and the receipts in one place with a date on each, [Home Stories](https://apps.apple.com/app/id6754754960?ct=blog-home-maintenance-schedule&pt=127521693&mt=8) is a free app for iPhone and iPad that does it without an account.

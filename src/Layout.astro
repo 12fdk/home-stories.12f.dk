@@ -3,6 +3,7 @@ import "@styles/styles.scss";
 import type { TemplateConfig } from "utils/configType";
 import { getLocale, DEFAULT_LOCALE } from "./i18n/locales";
 import RevealScript from "@components/RevealScript.astro";
+import { SMART_BANNER_CONTENT } from "utils/appStoreLink.mjs";
 
 const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appStore, noindex, locale, localeAlternates, home, isAppPage } =
   Astro.props as TemplateConfig & { noindex?: boolean; isAppPage?: boolean };
@@ -168,7 +169,7 @@ const aggregateRating = hasRealRatings
     <meta name="publisher" content="12f" />
 
     <!-- Apple App Store Smart Banner -->
-    <meta name="apple-itunes-app" content="app-id=6754754960" />
+    <meta name="apple-itunes-app" content={SMART_BANNER_CONTENT} />
     <meta name="apple-mobile-web-app-title" content="Home Stories" />
 
     <!-- Google Search Console Verification -->
@@ -481,6 +482,13 @@ const aggregateRating = hasRealRatings
       (function () {
         var H = "home-stories.12f.dk",
           d = document;
+        // ?umami=off on your own devices sets the tracker's opt-out flag, so
+        // internal visits stop inflating click rates; ?umami=on clears it.
+        try {
+          var u = new URLSearchParams(location.search).get("umami");
+          if (u === "off") localStorage.setItem("umami.disabled", "1");
+          if (u === "on") localStorage.removeItem("umami.disabled");
+        } catch (e) {}
         if (location.hostname === H || location.hostname === "www." + H) {
           var s = d.createElement("script");
           s.defer = true;

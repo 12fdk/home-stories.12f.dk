@@ -36,8 +36,8 @@ these too, not just hardcore renovators:
 Home Stories is a **free native app for iPhone and iPad (iOS 17+)**. There is
 no Android version. Made in Denmark by Robert Jensen. App Store — every link in
 this post uses this exact form, with this post's slug (`ct` is `blog-` plus the
-slug, truncated to 40 characters; never add `pt=`):
-`https://apps.apple.com/app/id6754754960?ct=blog-<slug>&mt=8`
+slug, truncated to 40 characters; `pt` is the 12f provider token):
+`https://apps.apple.com/app/id6754754960?ct=blog-<slug>&pt=127521693&mt=8`
 
 Free, and it stays free: projects with a budget and a running total; items with
 a price; payments logged with materials, labour and contractor kept apart;
