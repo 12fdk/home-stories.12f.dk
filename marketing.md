@@ -1,6 +1,6 @@
 # Home Stories — Marketing Plan (living doc)
 
-Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-10-28
+Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-10-29
 
 ## 1. What this is & how it's updated
 
@@ -337,7 +337,6 @@ or any statistic.
 | Week of | # | Format | Series | Feature / message | Hook (first 1–2 s) | Reel skin · music | Look / scene (start point; must differ from recent looks) | Status |
 |---|---|---|---|---|---|---|---|---|
 | Oct 19 | 1 | Carousel | In Order | Tasks per phase | "Guest bathroom done before Thanksgiving? The order the trades need." | — | 1950s bathroom stripped to the studs, tiles stacked by the door, overcast north-window light, cool greys | built 2026-10-15 6ad0ae0918e5f5564886 |
-| Nov 2 | 4 | Carousel | In Order | Tasks per phase | "Attic conversion: what has to happen before the insulation goes in." | — | bare attic rafters, a skylight shaft of light with dust in the air, pale pine | built 2026-10-28 6ae1832c157b8b29601b |
 | Nov 9 | 1 | Reel | Running Total | Running total | "Thanksgiving guests in under three weeks and the bathroom is $900 over. Where did it go?" | Blueprint · v4 d-major | half-fitted vanity, new tap still wrapped, warm wall-light glow at dusk | queued |
 | Nov 9 | 2 | Carousel | Price Tag | Items with a price and the shop | "Black Friday tool deals: put the price on the project before it goes in the cart." | — | garage pegboard with unbranded hand tools, cold fluorescent light, concrete floor | queued |
 | Nov 9 | 3 | Reel | Paper Trail | Quotes, contracts, notes | "Change order on the kitchen. Where is the original quote?" | Level · v2 g-min | kitchen worktop with papers (no legible text) and a pencil, rain on the window, grey-blue | queued |
