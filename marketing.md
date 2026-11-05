@@ -1,6 +1,6 @@
 # Home Stories — Marketing Plan (living doc)
 
-Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-11-04
+Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-11-05
 
 ## 1. What this is & how it's updated
 
@@ -337,7 +337,6 @@ or any statistic.
 | Week of | # | Format | Series | Feature / message | Hook (first 1–2 s) | Reel skin · music | Look / scene (start point; must differ from recent looks) | Status |
 |---|---|---|---|---|---|---|---|---|
 | Oct 19 | 1 | Carousel | In Order | Tasks per phase | "Guest bathroom done before Thanksgiving? The order the trades need." | — | 1950s bathroom stripped to the studs, tiles stacked by the door, overcast north-window light, cool greys | built 2026-10-15 6ad0ae0918e5f5564886 |
-| Nov 9 | 4 | Carousel | Spreadsheet vs | Why not a spreadsheet (site comparison) | "Kitchen renovation, week three: budget_v7_final_FINAL.xlsx." | — | kitchen table at night: folded printouts (no legible text), mug, a closed laptop, low tungsten lamp | built 2026-11-04 6aeabd58347d8f08f04f |
 | Nov 16 | 1 | Reel | Behind the Wall | Photo timeline | "Living-room floorboards up: shoot the joists before they disappear again." | Tape · v3 e-min | lifted floorboards, joists and cable runs, soft overcast light, pale wood, top-down | queued |
 | Nov 16 | 2 | Carousel | In Order | Tasks per phase | "Painting the living room before the holidays: the order that saves a second coat." | — | room taped and draped, fresh white primer, yellow masking-tape lines, flat white daylight | queued |
 | Nov 16 | 3 | Reel | Running Total | Time tracking + widgets | "Weekend deck rebuild: how many hours did it really take?" | Blueprint · v0 c-major | backyard deck half-laid, frost on the boards, low cold sun, a figure from behind kneeling | queued |
