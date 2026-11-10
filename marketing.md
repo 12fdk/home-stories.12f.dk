@@ -337,7 +337,6 @@ or any statistic.
 | Week of | # | Format | Series | Feature / message | Hook (first 1–2 s) | Reel skin · music | Look / scene (start point; must differ from recent looks) | Status |
 |---|---|---|---|---|---|---|---|---|
 | Oct 19 | 1 | Carousel | In Order | Tasks per phase | "Guest bathroom done before Thanksgiving? The order the trades need." | — | 1950s bathroom stripped to the studs, tiles stacked by the door, overcast north-window light, cool greys | built 2026-10-15 6ad0ae0918e5f5564886 |
-| Nov 16 | 1 | Reel | Behind the Wall | Photo timeline | "Living-room floorboards up: shoot the joists before they disappear again." | Tape · v3 e-min | lifted floorboards, joists and cable runs, soft overcast light, pale wood, top-down | built 2026-11-09 6af15ce4de6d168abb7e |
 | Nov 16 | 2 | Carousel | In Order | Tasks per phase | "Painting the living room before the holidays: the order that saves a second coat." | — | room taped and draped, fresh white primer, yellow masking-tape lines, flat white daylight | queued |
 | Nov 16 | 3 | Reel | Running Total | Time tracking + widgets | "Weekend deck rebuild: how many hours did it really take?" | Blueprint · v0 c-major | backyard deck half-laid, frost on the boards, low cold sun, a figure from behind kneeling | queued |
 | Nov 16 | 4 | Carousel | Running Total | Items with a price + running total | "Nursery before the baby arrives: the budget, item by item." | — | nursery with one wall half-painted sage, flat-packed cot box, soft pastel morning light | queued |
