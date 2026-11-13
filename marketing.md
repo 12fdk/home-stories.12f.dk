@@ -337,7 +337,6 @@ or any statistic.
 | Week of | # | Format | Series | Feature / message | Hook (first 1–2 s) | Reel skin · music | Look / scene (start point; must differ from recent looks) | Status |
 |---|---|---|---|---|---|---|---|---|
 | Oct 19 | 1 | Carousel | In Order | Tasks per phase | "Guest bathroom done before Thanksgiving? The order the trades need." | — | 1950s bathroom stripped to the studs, tiles stacked by the door, overcast north-window light, cool greys | built 2026-10-15 6ad0ae0918e5f5564886 |
-| Nov 16 | 4 | Carousel | Running Total | Items with a price + running total | "Nursery before the baby arrives: the budget, item by item." | — | nursery with one wall half-painted sage, flat-packed cot box, soft pastel morning light | built 2026-11-12 6af5457e8591bb4736b3 |
 | Nov 23 | 1 | Reel | Price Tag | Items add to the running total | "Black Friday: three tools in the cart. Each one belongs to a project total." | Level · v5 c-min | workbench with new tools in plain boxes, overhead garage strip light, sawdust | queued |
 | Nov 23 | 2 | Carousel | Before/After | Photo timeline + slideshow | "Guest room finished in time for Thanksgiving: the photo timeline, start to handover." | — | guest room finished, linen bedding, warm lamp at dusk, a bare autumn branch in a jug | queued |
 | Nov 23 | 3 | Carousel | Paper Trail | Receipts kept as documents | "Bought tiles on Black Friday? Keep the receipt with the project, not in a drawer." | — | tile samples and a folded receipt (no legible text) on an oak console, side light | queued |
