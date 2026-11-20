@@ -1,6 +1,6 @@
 # Home Stories — Marketing Plan (living doc)
 
-Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-11-19
+Owner: Robert · Maintained by: Hermes (social pipeline agent) · Last updated: 2026-11-20
 
 ## 1. What this is & how it's updated
 
@@ -337,7 +337,6 @@ or any statistic.
 | Week of | # | Format | Series | Feature / message | Hook (first 1–2 s) | Reel skin · music | Look / scene (start point; must differ from recent looks) | Status |
 |---|---|---|---|---|---|---|---|---|
 | Oct 19 | 1 | Carousel | In Order | Tasks per phase | "Guest bathroom done before Thanksgiving? The order the trades need." | — | 1950s bathroom stripped to the studs, tiles stacked by the door, overcast north-window light, cool greys | built 2026-10-15 6ad0ae0918e5f5564886 |
-| Nov 23 | 4 | Reel | In Order | Tasks per phase | "Bathroom gutted, plumber on Tuesday, tiler on Friday. Who goes first?" | Tape · v1 a-major | gutted bathroom with plumbing rough-in, work lamp mixed with cold daylight | built 2026-11-19 6afe87fb2ff778d15846 |
 | Nov 30 | 1 | Reel | Running Total | Running total | "Cyber Monday flooring order: will the hallway still come in on budget?" | Blueprint · v4 d-major | stacked flooring boxes (plain) in an empty hallway, winter-blue daylight | queued |
 | Nov 30 | 2 | Carousel | Season | Tasks (deadline list) | "Hosting Christmas with the kitchen half done: what has to work by Dec 24." | — | kitchen with a temporary plywood worktop, string lights, warm tungsten evening | queued |
 | Nov 30 | 3 | Reel | Paper Trail | PDF export (Pro) | "The contractor wants the plan by Monday. Hand over a PDF." | Level · v2 g-min | porch with a toolbox and work boots, frosty morning, cool steel tones | queued |
