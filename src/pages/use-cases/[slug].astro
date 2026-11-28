@@ -5,6 +5,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 import FaqSection from "../../components/blog/FaqSection.astro";
 import { useCases } from "../../data/useCases";
 import { appStoreUrl, useCaseCampaign } from "../../utils/appStoreLink.mjs";
+import { useCaseAlternates } from "../../i18n/useCases";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => isPublished(data));
@@ -79,6 +80,7 @@ const howToSchema = {
   title={useCase.metaTitle}
   description={useCase.metaDescription}
   canonicalPath={path}
+  alternates={useCaseAlternates(useCase.slug)}
   extraSchema={[pageSchema, howToSchema]}
   breadcrumbs={[
     { name: "Home", path: "/" },

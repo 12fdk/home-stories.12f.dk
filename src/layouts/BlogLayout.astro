@@ -11,6 +11,8 @@ import {
 import defaultTemplateConfig from "utils/config";
 import { fetchAppStoreData, fallbackAppStoreData, toAppStoreMetadata } from "utils/appStoreData";
 import type { TemplateConfig } from "utils/configType";
+import { DEFAULT_LOCALE, OG_LOCALES, getLocale } from "../i18n/locales";
+import { getLocalizedConfig } from "../i18n/getConfig";
 
 interface Props {
   title: string;
@@ -31,6 +33,12 @@ interface Props {
    * ("/guides/budgeting-a-renovation/"). Used by the topic hubs.
    */
   breadcrumbs?: { name: string; path: string }[];
+  /** Locale code of the page (src/i18n/locales.ts). English when omitted.
+   *  Sets <html lang>, og:locale and the language of the nav and footer. */
+  lang?: string;
+  /** hreflang alternates (absolute URLs, x-default included) for a page that
+   *  exists in more than one language. The language switcher follows them. */
+  alternates?: { hreflang: string; href: string }[];
 }
 
 const {
@@ -47,15 +55,25 @@ const {
   bodyClass = "",
   hideAppBanner = false,
   breadcrumbs,
+  lang = DEFAULT_LOCALE,
+  alternates = [],
 } = Astro.props;
 
 const appStoreData = await fetchAppStoreData() ?? fallbackAppStoreData;
-const config: TemplateConfig = {
+const baseConfig: TemplateConfig = {
   ...defaultTemplateConfig,
   // Self-hosted build-time copy of the App Store icon (see app-icon-512.jpg.ts). #74
   logo: "/app-icon-512.jpg",
   appStore: toAppStoreMetadata(appStoreData),
 };
+// English pages keep the base config untouched. A localized page (#164) gets
+// the translated nav and footer, and its own alternates for the switcher.
+const config: TemplateConfig =
+  lang === DEFAULT_LOCALE && alternates.length === 0
+    ? baseConfig
+    : { ...getLocalizedConfig(baseConfig, lang), localeAlternates: alternates };
+const htmlLang = getLocale(lang)?.hreflang ?? "en";
+const ogLocale = OG_LOCALES[lang] ?? htmlLang.replace("-", "_");
 
 const canonicalURL = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 const resolvedOgImage = ogImage
@@ -69,7 +87,7 @@ const websiteSchema = {
   name: config.name,
   url: siteUrl,
   description: config.seo.description,
-  inLanguage: "en",
+  inLanguage: htmlLang,
   publisher: {
     "@type": "Organization",
     name: "12f",
@@ -138,7 +156,7 @@ const speakableSchema = articleSchema
 ---
 
 <!doctype html>
-<html lang="en" data-theme={config.theme}>
+<html lang={htmlLang} data-theme={config.theme}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -154,6 +172,7 @@ const speakableSchema = articleSchema
     <link rel="dns-prefetch" href="https://apps.apple.com" />
 
     <link rel="canonical" href={canonicalURL} />
+    {alternates.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
     <link rel="alternate" type="application/rss+xml" title={`${config.name} Blog RSS`} href={new URL("/rss.xml", Astro.site).href} />
 
     <title>{title}</title>
@@ -187,7 +206,7 @@ const speakableSchema = articleSchema
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content={config.name} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={ogLocale} />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     {author && <meta property="article:author" content={author} />}

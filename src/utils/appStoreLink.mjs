@@ -39,8 +39,17 @@ export function useCaseCampaign(slug) {
   return `uc-${slug}`.slice(0, CT_MAX);
 }
 
-export function appStoreUrl(token) {
+/**
+ * `storefront` (ISO country, lower case: "dk", "de") opens that country's App
+ * Store page, for pages written for one market (the localized use cases, #164).
+ * Without it the neutral URL lets Apple pick the reader's own storefront.
+ */
+export function appStoreUrl(token, storefront) {
   const ct = String(token).slice(0, CT_MAX);
+  if (storefront) {
+    const country = String(storefront).toLowerCase();
+    return `https://apps.apple.com/${country}/app/id${APP_STORE_ID}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8`;
+  }
   return `${APP_STORE_URL}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8`;
 }
 
