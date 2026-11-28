@@ -17,7 +17,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan grab rails, a level shower, ramps and wider doors: the assessment, quotes, funding papers and measurements in one project on iPhone and iPad.",
     image: "/stock/uc-accessibility-aging-in-place.webp",
-    imageAlt: "A ground-floor bathroom adapted for access, with a level walk-in shower, a fold-down seat and grab rails, spare tiles still on the floor",
+    imageAlt: "A ground-floor bathroom adapted for access, with a level walk-in shower, a fold-down seat and grab rails on pale tiled walls",
     publishDate: "2026-12-19",
     related: ["bathroom-remodel", "working-with-a-contractor"],
     intro: [
@@ -102,7 +102,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Run the repair after a leak, flood, storm or fire: drying, strip-out and rebuild as tasks, each invoice as a document and dated photos of each stage.",
     image: "/stock/uc-damage-repair.webp",
-    imageAlt: "A living room after water damage, the lower wall plaster cut away to bare brick, a dehumidifier and a drying fan on the concrete floor",
+    imageAlt: "An emptied room after water damage, the lower wall plaster cut away to bare brick, a dehumidifier and a drying fan on the concrete floor",
     publishDate: "2026-12-20",
     related: ["insurance-documentation", "working-with-a-contractor"],
     intro: [
@@ -187,7 +187,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Live in the house while it is renovated: a phase plan by room, the days without water or power, the temporary kitchen and the dust zones, as tasks on iPhone.",
     image: "/stock/uc-renovating-while-living-in-it.webp",
-    imageAlt: "A temporary kitchen on a folding table in a dining room, a microwave, a kettle and a two-ring hob, a plastic dust sheet with a zip door behind",
+    imageAlt: "A temporary kitchen on a folding table in a dining room, a microwave, a kettle and a two-ring hob, a sheet hung across the doorway behind to keep the dust out",
     publishDate: "2026-12-21",
     related: ["fixer-upper", "kitchen-renovation"],
     intro: [
@@ -229,7 +229,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Run a renovation while you live elsewhere: photos from site, payments tied to stages, the contractor in a shared project (Pro), every decision in writing.",
     image: "/stock/uc-long-distance-renovation.webp",
-    imageAlt: "An empty house mid renovation, freshly plastered walls, a work lamp on a tripod, a stepladder and a parcel of tiles waiting on the floor",
+    imageAlt: "An empty room mid renovation seen through a wooden doorway, a work lamp standing on a stepladder",
     publishDate: "2026-12-21",
     related: ["working-with-a-contractor", "holiday-home", "renovating-with-a-partner"],
     intro: [
@@ -271,7 +271,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Renovate a house in another country: local quotes and permits as documents, the exchange rate on each payment, your own notes, the app in your language.",
     image: "/stock/uc-renovating-a-house-abroad.webp",
-    imageAlt: "An old stone farmhouse under renovation, whitewashed walls, stacked terracotta tiles and open shutters looking out to an olive grove",
+    imageAlt: "An unfinished room in an old house abroad, bricks stacked inside and an arched wooden door open to a cement mixer and trees",
     publishDate: "2026-12-22",
     related: ["holiday-home", "long-distance-renovation", "working-with-a-contractor"],
     intro: [
@@ -314,7 +314,7 @@ const entries: UseCase[] = [
     metaDescription:
       "A renter's record of the flat at move-in and move-out: dated photos of every room, meter readings, the inventory and the tenancy papers, kept in one place.",
     image: "/stock/uc-renter-condition-photos.webp",
-    imageAlt: "An empty rented flat on moving day, white walls, a light oak floor, keys on the kitchen counter and one cardboard box by the door",
+    imageAlt: "An empty rented flat on moving day, white walls, a light wood floor, a kitchen counter and two moving boxes",
     publishDate: "2026-12-22",
     related: ["rental-property", "home-repairs-and-maintenance"],
     intro: [
@@ -357,7 +357,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Your first house: where the stopcock and fuse box are, the boiler service, the seller's warranties, a maintenance schedule and the first jobs, in one record.",
     image: "/stock/uc-first-time-homeowner.webp",
-    imageAlt: "A utility cupboard in a newly bought house, a wall-mounted boiler, a water stopcock on copper pipes and an open fuse box",
+    imageAlt: "A utility alcove in a newly bought house, a wall-mounted boiler, copper pipes and an open fuse box",
     publishDate: "2026-12-23",
     related: ["fixer-upper", "home-repairs-and-maintenance"],
     intro: [
@@ -399,7 +399,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Clear and renovate a parent's or inherited home: what stays and goes, the shared costs, the documents, and a project the whole family can follow (Pro).",
     image: "/stock/uc-inherited-home.webp",
-    imageAlt: "A dated living room being cleared, 1970s wallpaper, a wooden sideboard, cardboard boxes on a patterned carpet and a painting leaning on the wall",
+    imageAlt: "A dated, sparsely furnished living room in an older family house, a wooden sideboard, a fireplace and a landscape painting",
     publishDate: "2026-12-23",
     related: ["selling-your-home", "renovating-with-a-partner", "fixer-upper"],
     intro: [
@@ -441,7 +441,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Get a house ready for sale photos: the touch-up jobs as tasks with a deadline, a small staging budget, before-and-after photos and a date for the photographer.",
     image: "/stock/uc-home-staging.webp",
-    imageAlt: "A staged living room ready for sale photos, light grey walls, a simple sofa, white flowers on a coffee table, a paint tin by the skirting",
+    imageAlt: "A bright living room staged for sale photos, a beige sofa, white flowers in a vase on a side table and pale floorboards",
     publishDate: "2026-12-24",
     related: ["selling-your-home", "flooring-and-decorating"],
     intro: [
@@ -483,7 +483,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Track a camper van build on iPhone: every part and its price, photos of the wiring and insulation before the panels go on, and the build steps as tasks.",
     image: "/stock/uc-van-conversion.webp",
-    imageAlt: "A camper van conversion in progress, insulation on the steel walls, a half-built plywood bed frame, loose cables and a battery box",
+    imageAlt: "Inside a van being converted into a camper, plywood lining fitted to the walls and the floor",
     publishDate: "2026-12-24",
     related: ["diy-projects"],
     intro: [
