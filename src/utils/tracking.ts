@@ -91,7 +91,10 @@ export type DownloadSurface =
    * itself rather than arriving at it from the bottom of an article, so its
    * rate is the honest read on whether these are wanted.
    */
-  | "downloads-page";
+  | "downloads-page"
+  /** The /templates/ hub and the /templates/<slug>/ pages. Carries `slug`. #163 */
+  | "templates-hub"
+  | "template-page";
 
 /** Attributes to spread onto an `<a download>` that serves a static file. */
 export function downloadClick(

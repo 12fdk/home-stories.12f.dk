@@ -1,0 +1,113 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { tools } from "../../data/tools";
+
+const path = "/tools/";
+const title = "Free Renovation Calculators: Budget, Paint, Tile";
+const description =
+  "Free renovation calculators: budget and contingency, paint, tiles and flooring. Metric or imperial, any currency, the formula shown, nothing saved or sent.";
+const url = new URL(path, Astro.site).href;
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Renovation calculators",
+  description,
+  url,
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  mainEntity: { "@id": `${url}#tools` },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${url}#tools`,
+  name: "Renovation calculators",
+  numberOfItems: tools.length,
+  itemListElement: tools.map((tool, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/tools/${tool.slug}/`, Astro.site).href,
+    name: tool.h1,
+  })),
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, itemListSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Calculators", path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+    </nav>
+
+    <header class="hs-grid items-end gap-y-10">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 12">
+        <span class="block">Measure it,</span>
+        <span class="block">then buy it</span>
+      </h1>
+      <div class="col-span-12 md:col-span-6">
+        <p class="hs-lead m-0 max-w-[40ch]" data-speakable>
+          Four free renovation calculators for the sums every job starts with: what the whole thing will cost with a
+          buffer on top, and how much paint, tile and flooring to buy. Each one shows its formula and lets you change
+          the assumptions behind it.
+        </p>
+        <p class="m-0 mt-4 max-w-[48ch]">
+          They work in metric or imperial units and in any currency, run in your browser, and keep nothing you type.
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6">
+        <img
+          src="/stock/tool-calculators.webp"
+          alt="A wooden ruler, a pencil and a notepad on a workbench in an empty room under renovation"
+          width={1024}
+          height={768}
+          loading="eager"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <ul class="hs-grid m-0 mt-20 list-none gap-y-12 p-0 md:mt-28">
+      {
+        tools.map((tool) => (
+          <li class="col-span-12 m-0 sm:col-span-6 lg:col-span-3">
+            <a href={`/tools/${tool.slug}/`} class="group block">
+              <span class="block overflow-hidden">
+                <img
+                  src={tool.image}
+                  alt=""
+                  width={640}
+                  height={480}
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </span>
+              <span class="hs-lead mt-4 block font-semibold group-hover:underline">{tool.label}</span>
+              <span class="mt-2 block">{tool.summary}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="m-0 mt-16 max-w-[60ch]">
+      Planning the money in more detail? Read the <a href="/guides/budgeting-a-renovation/" class="hs-link">renovation
+      budgeting guide</a>, or take the <a href="/downloads/" class="hs-link">free budget template</a>.
+    </p>
+  </main>
+</BlogLayout>

@@ -1,0 +1,167 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { templates, templateFiles } from "../../data/templates";
+import { appStoreUrl, templateCampaign } from "../../utils/appStoreLink.mjs";
+import { downloadClick } from "../../utils/tracking";
+
+const path = "/templates/";
+const title = "Printable Renovation Templates (Free PDFs)";
+const description =
+  "Free printable renovation templates: a budget sheet, a punch list, a room-by-room checklist and a contractor quote comparison. A4 and US Letter PDFs, no signup.";
+const url = new URL(path, Astro.site).href;
+const ctaUrl = appStoreUrl(templateCampaign("hub"));
+const labels = templates.map((t) => t.label.toLowerCase());
+const listed = labels.length > 1 ? `${labels.slice(0, -1).join(", ")} and ${labels.at(-1)}` : labels[0];
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "Home Stories", url: new URL("/", Astro.site).href },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "[data-speakable]"] },
+  mainEntity: { "@id": `${url}#templates` },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${url}#templates`,
+  name: "Printable renovation templates",
+  numberOfItems: templates.length,
+  itemListElement: templates.map((t, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/templates/${t.slug}/`, Astro.site).href,
+    name: t.h1,
+  })),
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, itemListSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Templates", path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>Templates</span>
+    </nav>
+
+    <header class="hs-grid items-end gap-y-10">
+      <div class="col-span-12 md:col-span-6">
+        <h1 class="hs-display m-0" style="--chars: 13" data-reveal>
+          <span class="block">Print it,</span>
+          <span class="block">fill it in</span>
+        </h1>
+        <p class="hs-lead m-0 mt-8 max-w-[40ch]" data-speakable data-reveal style="--d: 80ms">
+          Free printable renovation templates: the {listed}. Each one is a PDF in A4 and US Letter,
+          made to be filled in with a pen. No email, no signup.
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src="/stock/tpl-templates.webp"
+          alt="A clipboard with a blank sheet on a small wooden stand, a pencil and masking tape below it, in a room with unfinished walls"
+          width={1024}
+          height={768}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <ul class="m-0 mt-20 list-none space-y-4 p-0 md:mt-28">
+      {
+        templates.map((t, i) => {
+          const files = templateFiles(t);
+          const landscape = t.orientation === "landscape";
+          return (
+            <li class="m-0" data-reveal>
+              <article class="hs-grid items-center gap-y-8 bg-base-200 p-6 sm:p-10">
+                <a
+                  href={`/templates/${t.slug}/`}
+                  class={`col-span-12 block ${landscape ? "md:col-span-5" : "col-span-8 col-start-3 sm:col-span-6 sm:col-start-4 md:col-span-3 md:col-start-auto"}`}
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    src={files.preview}
+                    alt=""
+                    width={landscape ? 1287 : 910}
+                    height={landscape ? 910 : 1287}
+                    loading={i < 2 ? "eager" : "lazy"}
+                    decoding="async"
+                    class="tpl-paper w-full"
+                  />
+                </a>
+                <div class={`col-span-12 ${landscape ? "md:col-span-7" : "md:col-span-9"}`}>
+                  <h2 class="hs-head m-0 max-w-[22ch]">
+                    <a href={`/templates/${t.slug}/`} class="hover:underline">{t.label}</a>
+                  </h2>
+                  <p class="m-0 mt-4 max-w-[56ch]">{t.metaDescription}</p>
+                  <p class="hs-soft hs-small m-0 mt-3">
+                    {files.a4.pages} {files.a4.pages === 1 ? "page" : "pages"}, {t.orientation}
+                  </p>
+                  <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                    <a href={`/templates/${t.slug}/`} class="hs-btn">What is in it</a>
+                    <a href={files.a4.href} download class="hs-link" {...downloadClick("templates-hub", files.a4.href.split("/").pop()!, t.slug)}>A4 PDF ↓</a>
+                    <a href={files.letter.href} download class="hs-link" {...downloadClick("templates-hub", files.letter.href.split("/").pop()!, t.slug)}>Letter PDF ↓</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <section class="hs-grid mt-24 items-center gap-y-10 md:mt-32" aria-labelledby="also">
+      <div class="col-span-12 md:col-span-6">
+        <h2 id="also" class="hs-title m-0">Two more, with their guides</h2>
+        <p class="m-0 mt-6 max-w-[52ch]">
+          The <a href="/blog/renovation-budget-template/" class="hs-link">renovation budget template</a> is a
+          spreadsheet with the formulas built in, and the <a href="/blog/renovation-checklist-printable/" class="hs-link">renovation
+          phase checklist</a> puts every task in the order the trades work. Both are on the
+          <a href="/downloads/" class="hs-link">downloads page</a>. The sheets above are their paper companions:
+          use the spreadsheet to plan, the budget sheet to log, and the phase checklist for order with the
+          room pages for detail.
+        </p>
+      </div>
+      <aside class="hs-signal col-span-12 self-start p-7 sm:p-10 md:col-span-6">
+        <h2 class="hs-lead m-0 font-semibold">When paper stops being enough</h2>
+        <p class="m-0 mt-3 max-w-[52ch]">
+          A sheet on the wall is not in your pocket at the merchant. Home Stories keeps the budget, payments,
+          tasks, photos and documents for a project on your iPhone or iPad, free and with no account.
+        </p>
+        <a
+          href={ctaUrl}
+          class="hs-btn hs-btn--ink mt-6"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="templates-hub"
+        >
+          Get Home Stories — free
+        </a>
+      </aside>
+    </section>
+  </main>
+</BlogLayout>
+
+<style>
+  .tpl-paper {
+    background: #fff;
+    box-shadow:
+      0 0 0 1px rgb(24 25 27 / 0.12),
+      0 18px 40px -18px rgb(24 25 27 / 0.35);
+  }
+</style>

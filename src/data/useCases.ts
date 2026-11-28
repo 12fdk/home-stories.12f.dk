@@ -9,6 +9,11 @@
  * Only claim what the app does today (see the App Store description). Pro
  * features are marked "(Pro)" in the copy every time they are mentioned.
  * Post slugs must exist in src/content/blog — the page throws if one is missing.
+ *
+ * New entries go in their own file under src/data/useCases/ (default export:
+ * UseCase[]), picked up by import.meta.glob below, so parallel branches do not
+ * touch this file. Give them a publishDate: like blog posts, a page goes live on
+ * the first daily build (.github/workflows/deploy.yml) on or after that date.
  */
 export interface UseCase {
   slug: string;
@@ -34,9 +39,15 @@ export interface UseCase {
   faq: { q: string; a: string }[];
   /** Related published post slugs. */
   posts: string[];
+  /** Other use-case slugs this page builds on; shown as "See also" when live. */
+  related?: string[];
+  /** YYYY-MM-DD. The page is built from this date on. Omit for always live. */
+  publishDate?: string;
+  /** App Store custom product page id, sent as `ppid`. See docs/custom-product-pages.md. */
+  cppId?: string;
 }
 
-export const useCases: UseCase[] = [
+const baseUseCases: UseCase[] = [
   {
     slug: "kitchen-renovation",
     label: "Kitchen renovation",
@@ -828,3 +839,44 @@ export const useCases: UseCase[] = [
     ],
   },
 ];
+
+const extraFiles = import.meta.glob<{ default: UseCase[] }>("./useCases/*.ts", { eager: true });
+
+/** Every entry, live or scheduled. */
+export const allUseCases: UseCase[] = [
+  ...baseUseCases,
+  ...Object.keys(extraFiles).sort().flatMap((file) => extraFiles[file].default),
+];
+
+{
+  const seen = new Set<string>();
+  for (const { slug } of allUseCases) {
+    if (seen.has(slug)) throw new Error(`Duplicate use-case slug: ${slug}`);
+    seen.add(slug);
+  }
+  for (const { slug, related = [] } of allUseCases) {
+    const missing = related.filter((other) => !seen.has(other));
+    if (missing.length) throw new Error(`Use case "${slug}" relates to unknown use cases: ${missing.join(", ")}`);
+  }
+}
+
+export function isUseCaseLive(useCase: UseCase, now = new Date()): boolean {
+  return !useCase.publishDate || new Date(`${useCase.publishDate}T00:00:00Z`).valueOf() <= now.valueOf();
+}
+
+/** Live entries at build time. Pages, the hub, sitemaps and llms.txt use this. */
+export const useCases: UseCase[] = allUseCases.filter((useCase) => isUseCaseLive(useCase));
+
+/**
+ * Live use cases that list this post, for the "Use Home Stories for this" links
+ * on the post page (#158): use case → post via `posts`, post → use case here.
+ * A use case that lists the post earlier ranks first; on a tie, the newer entry.
+ */
+export function useCasesForPost(postSlug: string, limit = 3): UseCase[] {
+  return useCases
+    .map((useCase, order) => ({ useCase, order, rank: useCase.posts.indexOf(postSlug) }))
+    .filter(({ rank }) => rank >= 0)
+    .sort((a, b) => a.rank - b.rank || b.order - a.order)
+    .slice(0, limit)
+    .map(({ useCase }) => useCase);
+}

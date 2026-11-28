@@ -111,6 +111,8 @@ The point isn't that the tracker has more features than Notion — it deliberate
 
 Read down that table and the pattern is obvious: the two tools win in almost perfectly opposite columns. That's not a coincidence — it's the planning/execution split showing up feature by feature.
 
+For Notion's plans, free-plan limits and template gallery checked against its own pages, see [the Notion comparison page](/compare/home-stories-vs-notion/).
+
 ## The honest recommendation: most people want both
 
 This isn't a "switch to the app and delete Notion" post. The genuinely useful setup for most renovators is to let each tool do the half it's good at:

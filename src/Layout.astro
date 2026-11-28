@@ -1,7 +1,7 @@
 ---
 import "@styles/styles.scss";
 import type { TemplateConfig } from "utils/configType";
-import { getLocale, DEFAULT_LOCALE } from "./i18n/locales";
+import { getLocale, DEFAULT_LOCALE, OG_LOCALES } from "./i18n/locales";
 import RevealScript from "@components/RevealScript.astro";
 import { SMART_BANNER_CONTENT } from "utils/appStoreLink.mjs";
 
@@ -20,12 +20,7 @@ const { backgroundGrid, seo, logo, theme, forceTheme, appStoreLink, name, appSto
 // pass their code and a full set of hreflang alternates.
 const localeCode = locale ?? DEFAULT_LOCALE;
 const htmlLang = getLocale(localeCode)?.hreflang ?? "en";
-// og:locale wants ll_CC; map the ones we ship, fall back to the language tag.
-const OG_LOCALES: Record<string, string> = {
-  en: "en_US", da: "da_DK", de: "de_DE", fr: "fr_FR", es: "es_ES", it: "it_IT",
-  nl: "nl_NL", pt: "pt_PT", sv: "sv_SE", ja: "ja_JP", zh: "zh_CN", ko: "ko_KR",
-  pl: "pl_PL", tr: "tr_TR", ru: "ru_RU", nb: "nb_NO",
-};
+// og:locale wants ll_CC; OG_LOCALES maps the ones we ship.
 const ogLocale = OG_LOCALES[localeCode] ?? htmlLang.replace("-", "_");
 // Pages with hreflang alternates (the localized homepage surface) also
 // advertise their og:locale alternates for social/AI preview pickers.

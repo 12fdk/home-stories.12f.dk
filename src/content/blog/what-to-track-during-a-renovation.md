@@ -130,6 +130,8 @@ Once a week, for fifteen minutes:
 4. Update the snag list for rooms that are "almost done".
 5. Glance at contingency burn versus phase progress.
 
+If you run the job on a Trello board, the board covers the tasks but not the money; [the Trello comparison](/compare/home-stories-vs-trello/) shows where each one fits.
+
 If that review takes longer than fifteen minutes, your system is too heavy. The point of tracking during a renovation is not a perfect archive on day one — it is a habit light enough that you still do it in week twelve.
 
 

@@ -1,5 +1,6 @@
 import type { TemplateConfig, UiStrings } from "../utils/configType";
 import { localeHref, homepageAlternates, DEFAULT_LOCALE } from "./locales";
+import { useCaseHubHref, useCaseLocaleCodes } from "./useCases";
 
 /**
  * The full set of translatable strings for the homepage, in one flat shape.
@@ -168,6 +169,8 @@ function localizeHref(href: string, code: string): string {
   if (code === DEFAULT_LOCALE) return href;
   if (href === "/") return localeHref(code);
   if (href.startsWith("/#")) return `/${code}${href}`;
+  // The use-case hub exists in some locales (#164).
+  if (href === useCaseHubHref(DEFAULT_LOCALE) && useCaseLocaleCodes().includes(code)) return useCaseHubHref(code);
   return href;
 }
 

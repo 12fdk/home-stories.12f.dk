@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { useCases } from "../../data/useCases";
+import { useCaseHubAlternates } from "../../i18n/useCases";
 
 const path = "/use-cases/";
 const title = "What You Can Track with Home Stories";
@@ -47,6 +48,7 @@ const itemListSchema = {
   title={title}
   description={description}
   canonicalPath={path}
+  alternates={useCaseHubAlternates()}
   extraSchema={[collectionSchema, itemListSchema]}
   breadcrumbs={[
     { name: "Home", path: "/" },
@@ -109,6 +111,7 @@ const itemListSchema = {
 
     <p class="m-0 mt-16">
       Looking for advice rather than the app? <a href="/guides/" class="hs-link">Renovation guides by topic</a>.
+      What the app does, free and Pro: <a href="/features/" class="hs-link">Features</a>.
     </p>
   </main>
 </BlogLayout>

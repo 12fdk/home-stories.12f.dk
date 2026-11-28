@@ -2,6 +2,11 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { isPublished } from "../utils/posts";
 import { useCases } from "../data/useCases";
+import { features } from "../data/features";
+import { tools } from "../data/tools";
+import { templates, templateFiles } from "../data/templates";
+import { comparisons } from "../data/comparisons";
+import { localizedUseCases, useCaseHref, useCaseHubHref, useCaseLocaleCodes } from "../i18n/useCases";
 import preamble from "../data/llms-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -34,12 +39,43 @@ export const GET: APIRoute = async () => {
     `- Blog index: ${SITE}/blog/`,
     `- Guides: ${SITE}/guides/`,
     `- Use cases: ${SITE}/use-cases/`,
+    `- Features (free and Pro, with their limits): ${SITE}/features/`,
+    `- Comparisons: ${SITE}/compare/`,
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
+    `- Free calculators (budget and contingency, paint, tile, flooring): ${SITE}/tools/`,
+    `- Printable templates (PDF, A4 and US Letter, no signup): ${SITE}/templates/`,
     `- RSS feed: ${SITE}/rss.xml`,
+    "",
+    `### Calculators (${tools.length})`,
+    "",
+    ...tools.map((t) => `- [${t.label}](${SITE}/tools/${t.slug}/): ${t.metaDescription}`),
+    "",
+    `### Printable templates (${templates.length})`,
+    "",
+    ...templates.map((t) => {
+      const f = templateFiles(t);
+      return `- [${t.label}](${SITE}/templates/${t.slug}/): ${t.metaDescription} PDFs: ${SITE}${f.a4.href} (A4), ${SITE}${f.letter.href} (Letter)`;
+    }),
     "",
     `### Use cases (${useCases.length})`,
     "",
     ...useCases.map((u) => `- [${u.label}](${SITE}/use-cases/${u.slug}/): ${u.metaDescription}`),
+    ...useCaseLocaleCodes().flatMap((code) => [
+      "",
+      `#### Use cases in ${code} (${SITE}${useCaseHubHref(code)})`,
+      "",
+      ...localizedUseCases(code).map((u) => `- [${u.label}](${SITE}${useCaseHref(code, u.slug)}): ${u.metaDescription}`),
+    ]),
+    "",
+    `### Features (${features.length})`,
+    "",
+    ...features.map((f) => `- [${f.label}](${SITE}/features/${f.slug}/): ${f.metaDescription}`),
+    "",
+    `### Comparisons (${comparisons.length})`,
+    "",
+    "Home Stories next to other tools. Competitor facts are sourced and dated on each page.",
+    "",
+    ...comparisons.map((c) => `- [${c.label}](${SITE}/compare/${c.slug}/): ${c.metaDescription}`),
     "",
     `### All articles (${posts.length})`,
     "",

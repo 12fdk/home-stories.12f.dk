@@ -59,6 +59,7 @@ const VERIFIED_CITATIONS = new Set([
   // Named in the tool-comparison posts, which cannot be written without them.
   "https://www.homezada.com",
   "https://www.houzz.com/pro",
+  "https://www.houzz.com/houzz-pro/pricing", // #166, checked 2026-11-28
 ]);
 
 // Posts written before the validator existed. They are held to the ERROR rules

@@ -62,6 +62,8 @@ Either way, the starting point is the same: know what you actually use it for, b
 | Rating | 2.9 stars (44 ratings), October 2026 |
 | Web product | Still sold and maintained — [homezada.com](https://www.homezada.com) |
 
+For HomeZada's plans and prices row by row, with sources, see [the HomeZada comparison page](/compare/home-stories-vs-homezada/).
+
 The web product and the phone app have become two products with two different life cycles. If your renovation management happens on a laptop, the web dashboard is still alive and still worth a look. If the work is happening in a half-demolished room, the phone is the interface you will actually use — and on the phone, this product has been standing still since before many of the current round-ups were written.
 
 ## What HomeZada is still good at

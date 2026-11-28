@@ -10,6 +10,7 @@ import AuthorBio from "../../components/blog/AuthorBio.astro";
 import { readingTime } from "../../utils/readingTime";
 import { TOPICS, topicFor } from "../../utils/blogCta.mjs";
 import { guidesForSlug } from "../../data/guides";
+import { useCasesForPost } from "../../data/useCases";
 import { fetchAppStoreData, fetchStorefrontPricing } from "../../utils/appStoreData";
 
 export async function getStaticPaths() {
@@ -82,6 +83,8 @@ const byTag = (a: (typeof allPosts)[number]) =>
   a.data.tags.filter((t) => post.data.tags.includes(t)).length;
 
 const topicGuides = guidesForSlug(post.slug);
+// Use-case pages that cite this post, linked back from it (#158).
+const postUseCases = useCasesForPost(post.slug);
 
 const related = (
   post.data.relatedSlugs.length > 0
@@ -226,6 +229,21 @@ const articleSchema = {
     <FaqSection items={post.data.faq} />
 
     <AuthorBio name={post.data.author} />
+
+    {
+      postUseCases.length > 0 && (
+        <section class="not-prose mt-16" aria-labelledby="use-cases">
+          <h2 id="use-cases" class="mb-4 text-2xl font-bold sm:text-3xl">Use Home Stories for this</h2>
+          <ul class="m-0 list-none space-y-2.5 p-0">
+            {postUseCases.map((useCase) => (
+              <li class="m-0">
+                <a href={`/use-cases/${useCase.slug}/`} class="hs-link">{useCase.label}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <RelatedPosts posts={related} />
     </div>

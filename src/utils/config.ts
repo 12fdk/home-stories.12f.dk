@@ -87,13 +87,24 @@ const templateConfig: TemplateConfig = {
     },
     socials: {},
     links: [
-      { href: "/#features", title: "Features" },
+      // The footer's "Features" goes to the /features/ hub (#167); the navbar keeps
+      // the homepage anchor. Same index, so translations still map by position.
+      { href: "/features/", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
       { href: "/use-cases/", title: "Use cases" },
       { href: "/blog/", title: "Blog" },
       { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },
       { href: "/about/", title: "About" },
+      // Footer only, and last: translations map nav titles by index, so an
+      // entry past the nav's length keeps its English title. #162
+      { href: "/tools/", title: "Calculators" },
+      // Past the end of topNavbar.links on purpose: footer-only, so it has no
+      // t.nav.links entry and shows in English on every locale. #163
+      { href: "/templates/", title: "Printable templates" },
+      // Appended last: footer titles map by index to t.nav.links, which has no
+      // entry here, so it stays "Compare" (English-only pages) in every locale. #166
+      { href: "/compare/", title: "Compare" },
     ],
   },
   topNavbar: {

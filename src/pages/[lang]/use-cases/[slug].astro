@@ -1,0 +1,258 @@
+---
+// Localized use-case page, /<lang>/use-cases/<slug>/. Same layout as the
+// English src/pages/use-cases/[slug].astro; the copy comes from
+// src/i18n/useCases/<lang>.ts and the photos and related posts from the
+// English entry. #164
+import { getCollection } from "astro:content";
+import { isPublished } from "../../../utils/posts";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import FaqSection from "../../../components/blog/FaqSection.astro";
+import { getLocale, localeHref } from "../../../i18n/locales";
+import {
+  USE_CASE_LOCALES,
+  localizedUseCases,
+  useCaseAlternates,
+  useCaseHref,
+  useCaseHubHref,
+  type LocalizedUseCase,
+  type UseCaseUi,
+} from "../../../i18n/useCases";
+import { appStoreUrl, useCaseCampaign } from "../../../utils/appStoreLink.mjs";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => isPublished(data));
+  const bySlug = new Map(posts.map((post) => [post.slug, post]));
+
+  return USE_CASE_LOCALES.flatMap((file) => {
+    const entries = localizedUseCases(file.locale);
+    return entries.map((useCase) => ({
+      params: { lang: file.locale, slug: useCase.slug },
+      props: {
+        useCase,
+        siblings: entries.filter((item) => item.slug !== useCase.slug),
+        ui: file.ui,
+        // A post the English page links is checked there; drop any that is
+        // not live rather than fail twice.
+        posts: useCase.posts.map((slug) => bySlug.get(slug)).filter((post) => post !== undefined),
+      },
+    }));
+  });
+}
+
+interface Props {
+  useCase: LocalizedUseCase;
+  siblings: LocalizedUseCase[];
+  ui: UseCaseUi;
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
+}
+
+const { lang } = Astro.params as { lang: string };
+const { useCase, siblings, ui, posts } = Astro.props as Props;
+const locale = getLocale(lang)!;
+const path = useCaseHref(lang, useCase.slug);
+const hubPath = useCaseHubHref(lang);
+const url = new URL(path, Astro.site).href;
+const homePath = localeHref(lang);
+// The reader's language is the best guess at their country: send them to that
+// storefront, and tag the campaign with the language so App Store Connect can
+// tell the versions apart.
+const ctaUrl = appStoreUrl(useCaseCampaign(`${lang}-${useCase.slug}`), { storefront: locale.storefront });
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: useCase.h1,
+  description: useCase.metaDescription,
+  url,
+  inLanguage: locale.hreflang,
+  primaryImageOfPage: new URL(useCase.image, Astro.site).href,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL(homePath, Astro.site).href,
+  },
+  about: {
+    "@type": "MobileApplication",
+    name: "Home Stories: Renovation App",
+    operatingSystem: "iOS 17.0 or later",
+    applicationCategory: "LifestyleApplication",
+    url: new URL(homePath, Astro.site).href,
+    offers: { "@type": "Offer", price: "0", priceCurrency: locale.currency },
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "[data-speakable]"],
+  },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: useCase.howToName,
+  inLanguage: locale.hreflang,
+  step: useCase.steps.map((text, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    text,
+  })),
+};
+---
+
+<BlogLayout
+  title={useCase.metaTitle}
+  description={useCase.metaDescription}
+  canonicalPath={path}
+  lang={lang}
+  alternates={useCaseAlternates(useCase.slug)}
+  extraSchema={[pageSchema, howToSchema]}
+  breadcrumbs={[
+    { name: ui.home, path: homePath },
+    { name: ui.useCases, path: hubPath },
+    { name: useCase.label, path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href={homePath} class="hover:underline">{ui.home}</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <a href={hubPath} class="hover:underline">{ui.useCases}</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>{useCase.label}</span>
+    </nav>
+
+    <header class="hs-grid gap-y-8">
+      <h1 class="hs-title col-span-12 m-0 max-w-[34ch]" data-reveal>{useCase.h1}</h1>
+      <div class="col-span-12 md:col-span-6">
+        <div class="space-y-4" data-speakable data-reveal style="--d: 80ms">
+          {useCase.intro.map((paragraph, i) => <p class={`m-0 max-w-[52ch] ${i === 0 ? "hs-lead" : ""}`}>{paragraph}</p>)}
+        </div>
+        <a
+          href={ctaUrl}
+          class="hs-btn mt-8"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="use-case-hero"
+          data-umami-event-slug={useCase.slug}
+          data-umami-event-lang={lang}
+        >
+          {ui.heroCta}
+        </a>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src={useCase.image}
+          alt={useCase.imageAlt}
+          width={1024}
+          height={768}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <section class="mt-20 md:mt-28" aria-labelledby="track">
+      <h2 id="track" class="hs-lead m-0 font-semibold">{ui.trackHeading}</h2>
+      <ul class="hs-grid m-0 mt-8 list-none gap-y-8 p-0">
+        {
+          useCase.track.map((item, i) => (
+            <li class="col-span-12 m-0 sm:col-span-6 lg:col-span-4" data-reveal style={`--d: ${(i % 3) * 60}ms`}>
+              <h3 class="m-0 text-lg font-semibold">{item.title}</h3>
+              <p class="m-0 mt-2 max-w-[44ch]">{item.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="hs-grid mt-20 items-center gap-y-10 md:mt-28" aria-labelledby="steps">
+      <div class="col-span-12 md:col-span-7">
+        <h2 id="steps" class="hs-lead m-0 font-semibold">{ui.stepsHeading}</h2>
+        <ol class="m-0 mt-6 list-decimal space-y-3 pl-6">
+          {useCase.steps.map((step) => <li class="max-w-[52ch]">{step}</li>)}
+        </ol>
+        <p class="hs-soft m-0 mt-6 max-w-[52ch]">{ui.proNote}</p>
+      </div>
+      <figure class="col-span-8 col-start-3 m-0 sm:col-span-6 sm:col-start-4 md:col-span-4 md:col-start-9">
+        <img
+          src={useCase.screenshot.src}
+          alt={useCase.screenshot.alt}
+          width={1206}
+          height={2622}
+          loading="lazy"
+          decoding="async"
+          class="w-full"
+        />
+      </figure>
+    </section>
+
+    <div class="max-w-[72ch]">
+      <FaqSection heading={ui.faqHeading} items={useCase.faq.map(({ q, a }) => ({ question: q, answer: a }))} />
+    </div>
+
+    {
+      posts.length > 0 && (
+        <section class="mt-16" aria-labelledby="reading">
+          <h2 id="reading" class="hs-lead m-0 font-semibold">{ui.readingHeading}</h2>
+          <ol class="m-0 mt-6 list-none space-y-3 p-0">
+            {posts.map((post) => (
+              <li class="m-0">
+                <a href={`/blog/${post.slug}/`} hreflang="en" lang="en" class="hs-row hs-grid items-center gap-y-4 py-5">
+                  {post.data.cover && (
+                    <span class="col-span-12 block overflow-hidden sm:col-span-4 md:col-span-3">
+                      <img
+                        src={post.data.cover}
+                        alt=""
+                        width={640}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="aspect-[16/10] w-full object-cover"
+                      />
+                    </span>
+                  )}
+                  <span class="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-6">
+                    <span class="hs-lead block font-semibold">{post.data.title}</span>
+                    <span class="mt-2 block">{post.data.description}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
+    <div class="hs-grid mt-24 gap-y-12 md:mt-32">
+      <aside class="col-span-12 md:col-span-5">
+        <h2 class="hs-lead m-0 font-semibold">{ui.otherHeading}</h2>
+        <ul class="m-0 mt-4 list-none space-y-2.5 p-0">
+          {
+            siblings.map((item) => (
+              <li class="m-0">
+                <a href={useCaseHref(lang, item.slug)} class="hs-link">{item.label}</a>
+              </li>
+            ))
+          }
+          <li class="m-0">
+            <a href={useCaseHubHref("en")} hreflang="en" class="hs-link">{ui.moreInEnglish}</a>
+          </li>
+        </ul>
+      </aside>
+
+      <aside class="hs-signal col-span-12 self-start p-7 sm:p-10 md:col-span-7">
+        <h2 class="hs-lead m-0 font-semibold">{ui.footerHeading}</h2>
+        <p class="m-0 mt-3 max-w-[52ch]">{ui.footerBody}</p>
+        <a
+          href={ctaUrl}
+          class="hs-btn hs-btn--ink mt-6"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="use-case-footer"
+          data-umami-event-slug={useCase.slug}
+          data-umami-event-lang={lang}
+        >
+          {ui.footerCta}
+        </a>
+      </aside>
+    </div>
+  </main>
+</BlogLayout>

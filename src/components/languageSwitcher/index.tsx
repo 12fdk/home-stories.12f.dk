@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ConfigContext } from "../../utils/configContext";
-import { LOCALES, localeHref, DEFAULT_LOCALE } from "../../i18n/locales";
+import { LOCALES, localeHref, DEFAULT_LOCALE, SITE } from "../../i18n/locales";
 
 const GlobeIcon = () => (
   <svg
@@ -21,13 +21,18 @@ const GlobeIcon = () => (
 );
 
 /**
- * Jumps between the localized homepages. Only the homepage is translated, so
- * every option points at that locale's root; from any other page this returns
- * the reader to a homepage they can read.
+ * Jumps between languages. A page that exists in several languages (the use
+ * cases, #164) passes its hreflang alternates, and an option goes to that
+ * language's version of the page when there is one; otherwise it points at
+ * that locale's homepage, a page the reader can read.
  */
 function LanguageSwitcher() {
-  const { locale = DEFAULT_LOCALE, ui } = useContext(ConfigContext)!;
+  const { locale = DEFAULT_LOCALE, ui, localeAlternates = [] } = useContext(ConfigContext)!;
   const current = LOCALES.find((l) => l.code === locale) ?? LOCALES[0];
+  const hrefFor = (hreflang: string, code: string) => {
+    const alt = localeAlternates.find((a) => a.hreflang === hreflang)?.href;
+    return alt ? alt.replace(SITE, "") || "/" : localeHref(code);
+  };
 
   return (
     <details className="dropdown dropdown-end">
@@ -42,7 +47,7 @@ function LanguageSwitcher() {
         {LOCALES.map((l) => (
           <li key={l.code}>
             <a
-              href={localeHref(l.code)}
+              href={hrefFor(l.hreflang, l.code)}
               hrefLang={l.hreflang}
               lang={l.hreflang}
               aria-current={l.code === locale ? "true" : undefined}

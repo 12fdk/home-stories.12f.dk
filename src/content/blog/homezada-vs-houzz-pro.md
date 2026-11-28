@@ -8,7 +8,7 @@ keyword: "homezada vs houzz pro"
 cover: "/stock/14.webp"
 coverAlt: "A partly installed white subway-tile backsplash with a notched trowel and grout float resting on the worktop"
 publishDate: 2026-07-06
-updatedDate: 2026-10-06
+updatedDate: 2026-11-28
 author: "Robert Jensen"
 tags: ["comparison", "apps", "planning", "tools"]
 tldr:
@@ -135,7 +135,7 @@ Here's how the three stack up on the criteria that actually matter for a homeown
 | **Photo timeline** | Yes, room-based | Portfolio-focused | Yes, chronological |
 | **Task management** | Yes | Yes (for clients) | Yes (per room/phase) |
 | **PDF export** | Yes | Invoicing format | Yes, with Pro |
-| **Pricing** | ~$6/mo or ~$50/yr | Starts at ~$39.99/mo | Free (optional upgrade) |
+| **Pricing** | Premium $118/yr or $21.98/mo (checked 28 Nov 2026) | From $199/mo (checked 28 Nov 2026) | Free (optional upgrade) |
 | **iOS app** | Exists, no update since May 2022 | Yes, professional | Yes, phone-first design |
 | **Setup time** | 30–60 minutes | 15–30 minutes | Under 2 minutes |
 
@@ -172,7 +172,9 @@ If you want one tool from start to finish, and that tool needs to survive on-sit
 You can compare the full details on each product's website:
 
 - [HomeZada](https://www.homezada.com) — home management platform with renovation features
-- [Houzz Pro](https://www.houzz.com/pro) — contractor and designer business tools
+- [Houzz Pro](https://www.houzz.com/houzz-pro/pricing) — contractor and designer business tools
+
+Or read each one head to head against our app, with dated sources: [the HomeZada comparison](/compare/home-stories-vs-homezada/) and [the Houzz comparison](/compare/home-stories-vs-houzz/).
 - [App Store listing for a phone-first tracker](https://apps.apple.com/app/id6754754960?ct=blog-homezada-vs-houzz-pro&pt=127521693&mt=8) — free renovation tracking for iPhone and iPad
 
 The decision isn't about which app has the most features. It's about which tool you'll still be using in the third month of a renovation, when you're tired, the budget is tight, and you just need to log one more receipt before the invoice deadline.

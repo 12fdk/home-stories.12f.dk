@@ -39,9 +39,40 @@ export function useCaseCampaign(slug) {
   return `uc-${slug}`.slice(0, CT_MAX);
 }
 
-export function appStoreUrl(token) {
+/** `cmp-<slug>` for the /compare/ pages, truncated like `blogCampaign`. #166 */
+export function compareCampaign(slug) {
+  return `cmp-${slug}`.slice(0, CT_MAX);
+}
+
+/** `tpl-<slug>` for the /templates/ pages, truncated like `blogCampaign`. #163 */
+export function templateCampaign(slug) {
+  return `tpl-${slug}`.slice(0, CT_MAX);
+}
+
+/** App Store Connect custom product page ids are UUIDs. */
+export const CPP_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/**
+ * `options.ppid` opens a custom product page instead of the default one (#165).
+ * A malformed id throws, so a typo fails the build instead of shipping a link
+ * that silently shows the default page.
+ *
+ * `options.storefront` (ISO country, lower case: "dk", "de") opens that
+ * country's App Store page, for pages written for one market (#164). Without
+ * it the neutral URL lets Apple pick the reader's own storefront.
+ */
+export function appStoreUrl(token, { ppid, storefront } = {}) {
   const ct = String(token).slice(0, CT_MAX);
-  return `${APP_STORE_URL}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8`;
+  const base = storefront
+    ? `https://apps.apple.com/${String(storefront).toLowerCase()}/app/id${APP_STORE_ID}`
+    : APP_STORE_URL;
+  return `${base}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8${ppidParam(ppid)}`;
+}
+
+function ppidParam(ppid) {
+  if (ppid === undefined || ppid === null || ppid === "") return "";
+  if (!CPP_ID_PATTERN.test(ppid)) throw new Error(`Not a custom product page id: ${ppid}`);
+  return `&ppid=${ppid.toLowerCase()}`;
 }
 
 /** `content` of the `apple-itunes-app` meta tag (the Smart App Banner). */
