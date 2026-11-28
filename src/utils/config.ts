@@ -87,7 +87,9 @@ const templateConfig: TemplateConfig = {
     },
     socials: {},
     links: [
-      { href: "/#features", title: "Features" },
+      // The footer's "Features" goes to the /features/ hub (#167); the navbar keeps
+      // the homepage anchor. Same index, so translations still map by position.
+      { href: "/features/", title: "Features" },
       { href: "/#how-it-works", title: "How it works" },
       { href: "/use-cases/", title: "Use cases" },
       { href: "/blog/", title: "Blog" },
