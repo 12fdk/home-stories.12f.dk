@@ -61,6 +61,7 @@ Clusters of the published articles:
 - [Apps and tools for tracking a renovation](https://home-stories.12f.dk/guides/renovation-apps/)
 - [All guides](https://home-stories.12f.dk/guides/)
 - [Use cases — kitchen, bathroom, garage, garden, rental, house flipping and more](https://home-stories.12f.dk/use-cases/)
+- [Comparisons — Home Stories vs Houzz, HomeZada, Notion, Excel and Google Sheets, Trello, Buildertrend](https://home-stories.12f.dk/compare/)
 - [Free downloads — budget template and phase checklist, no signup](https://home-stories.12f.dk/downloads/)
 
 ## Citation guidance

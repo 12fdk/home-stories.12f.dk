@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { isPublished } from "../utils/posts";
 import { useCases } from "../data/useCases";
+import { comparisons } from "../data/comparisons";
 import preamble from "../data/llms-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -34,12 +35,19 @@ export const GET: APIRoute = async () => {
     `- Blog index: ${SITE}/blog/`,
     `- Guides: ${SITE}/guides/`,
     `- Use cases: ${SITE}/use-cases/`,
+    `- Comparisons: ${SITE}/compare/`,
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
     `- RSS feed: ${SITE}/rss.xml`,
     "",
     `### Use cases (${useCases.length})`,
     "",
     ...useCases.map((u) => `- [${u.label}](${SITE}/use-cases/${u.slug}/): ${u.metaDescription}`),
+    "",
+    `### Comparisons (${comparisons.length})`,
+    "",
+    "Home Stories next to other tools. Competitor facts are sourced and dated on each page.",
+    "",
+    ...comparisons.map((c) => `- [${c.label}](${SITE}/compare/${c.slug}/): ${c.metaDescription}`),
     "",
     `### All articles (${posts.length})`,
     "",

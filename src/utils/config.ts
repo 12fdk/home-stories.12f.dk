@@ -94,6 +94,9 @@ const templateConfig: TemplateConfig = {
       { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },
       { href: "/about/", title: "About" },
+      // Appended last: footer titles map by index to t.nav.links, which has no
+      // entry here, so it stays "Compare" (English-only pages) in every locale. #166
+      { href: "/compare/", title: "Compare" },
     ],
   },
   topNavbar: {
