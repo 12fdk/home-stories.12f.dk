@@ -39,3 +39,4 @@ seo-audit-*.pdf
 .cache/
 __pycache__/
 .taste-skill/
+.claude/worktrees/
