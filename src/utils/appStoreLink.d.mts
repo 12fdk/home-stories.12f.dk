@@ -8,5 +8,6 @@ export const LLMS_CAMPAIGN: string;
 export const SMART_BANNER_CONTENT: string;
 export function blogCampaign(slug: string): string;
 export function useCaseCampaign(slug: string): string;
+export function templateCampaign(slug: string): string;
 export const CPP_ID_PATTERN: RegExp;
 export function appStoreUrl(token: string, options?: { ppid?: string; storefront?: string }): string;

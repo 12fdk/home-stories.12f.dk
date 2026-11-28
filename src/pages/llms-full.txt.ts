@@ -5,6 +5,7 @@ import { isPublished } from "../utils/posts";
 import { useCases } from "../data/useCases";
 import { features } from "../data/features";
 import { tools } from "../data/tools";
+import { templates } from "../data/templates";
 import preamble from "../data/llms-full-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -76,6 +77,8 @@ export const GET: APIRoute = async () => {
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
     `- Free calculators: ${SITE}/tools/`,
     ...tools.map((t) => `- ${t.label}: ${SITE}/tools/${t.slug}/ — ${t.summary} Formula: ${t.formula.join("; ")}.`),
+    `- Printable templates (PDF, A4 and US Letter — no signup): ${SITE}/templates/`,
+    ...templates.map((t) => `- ${t.label} (printable): ${SITE}/templates/${t.slug}/`),
     `- RSS feed: ${SITE}/rss.xml`,
     `- Privacy Policy: ${SITE}/privacy-policy/`,
     `- Terms and Conditions: ${SITE}/terms-and-conditions/`,

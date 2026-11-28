@@ -39,6 +39,11 @@ export function useCaseCampaign(slug) {
   return `uc-${slug}`.slice(0, CT_MAX);
 }
 
+/** `tpl-<slug>` for the /templates/ pages, truncated like `blogCampaign`. #163 */
+export function templateCampaign(slug) {
+  return `tpl-${slug}`.slice(0, CT_MAX);
+}
+
 /** App Store Connect custom product page ids are UUIDs. */
 export const CPP_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 

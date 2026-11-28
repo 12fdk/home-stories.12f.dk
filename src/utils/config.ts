@@ -99,6 +99,9 @@ const templateConfig: TemplateConfig = {
       // Footer only, and last: translations map nav titles by index, so an
       // entry past the nav's length keeps its English title. #162
       { href: "/tools/", title: "Calculators" },
+      // Past the end of topNavbar.links on purpose: footer-only, so it has no
+      // t.nav.links entry and shows in English on every locale. #163
+      { href: "/templates/", title: "Printable templates" },
     ],
   },
   topNavbar: {

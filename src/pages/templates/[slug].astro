@@ -1,0 +1,262 @@
+---
+import { getCollection } from "astro:content";
+import { isPublished } from "../../utils/posts";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import FaqSection from "../../components/blog/FaqSection.astro";
+import { templates, templateFiles } from "../../data/templates";
+import { appStoreUrl, templateCampaign } from "../../utils/appStoreLink.mjs";
+import { downloadClick } from "../../utils/tracking";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => isPublished(data));
+  const bySlug = new Map(posts.map((post) => [post.slug, post]));
+
+  return templates.map((template) => {
+    const missing = template.posts.filter((slug) => !bySlug.has(slug));
+    if (missing.length) {
+      throw new Error(`Template "${template.slug}" links missing posts: ${missing.join(", ")}`);
+    }
+    return {
+      params: { slug: template.slug },
+      props: { template, posts: template.posts.map((slug) => bySlug.get(slug)!) },
+    };
+  });
+}
+
+interface Props {
+  template: (typeof templates)[number];
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
+}
+
+const { template, posts } = Astro.props as Props;
+const files = templateFiles(template);
+const path = `/templates/${template.slug}/`;
+const url = new URL(path, Astro.site).href;
+const siblings = templates.filter((t) => t.slug !== template.slug);
+const ctaUrl = appStoreUrl(templateCampaign(template.slug));
+const landscape = template.orientation === "landscape";
+const downloads = [
+  { paper: "A4", file: files.a4, primary: true },
+  { paper: "US Letter", file: files.letter, primary: false },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: template.h1,
+  description: template.metaDescription,
+  url,
+  inLanguage: "en",
+  primaryImageOfPage: new URL(files.preview, Astro.site).href,
+  isPartOf: { "@type": "WebSite", name: "Home Stories", url: new URL("/", Astro.site).href },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "[data-speakable]"] },
+  hasPart: downloads.map(({ paper, file }) => ({
+    "@type": "DigitalDocument",
+    name: `${template.label} (${paper} PDF)`,
+    url: new URL(file.href, Astro.site).href,
+    encodingFormat: "application/pdf",
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    numberOfPages: file.pages,
+  })),
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: `How to use the ${template.label.toLowerCase()}`,
+  tool: [{ "@type": "HowToTool", name: `${template.label} (printable PDF)` }],
+  step: template.steps.map((text, i) => ({ "@type": "HowToStep", position: i + 1, text })),
+};
+---
+
+<BlogLayout
+  title={template.metaTitle}
+  description={template.metaDescription}
+  canonicalPath={path}
+  ogImage={files.preview}
+  extraSchema={[pageSchema, howToSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Templates", path: "/templates/" },
+    { name: template.label, path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <a href="/templates/" class="hover:underline">Templates</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>{template.label}</span>
+    </nav>
+
+    <header class="hs-grid items-start gap-y-10">
+      <div class={`col-span-12 ${landscape ? "lg:col-span-5" : "md:col-span-7"}`}>
+        <h1 class="hs-title m-0 max-w-[24ch]" data-reveal>{template.h1}</h1>
+        <div class="mt-8 space-y-4" data-speakable data-reveal style="--d: 80ms">
+          {template.intro.map((paragraph, i) => <p class={`m-0 max-w-[52ch] ${i === 0 ? "hs-lead" : ""}`}>{paragraph}</p>)}
+        </div>
+        <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4" data-reveal style="--d: 120ms">
+          {
+            downloads.map(({ paper, file, primary }) => (
+              <a
+                href={file.href}
+                download
+                class={primary ? "hs-btn" : "hs-link"}
+                {...downloadClick("template-page", file.href.split("/").pop()!, template.slug)}
+              >
+                Download {paper} PDF ↓
+              </a>
+            ))
+          }
+        </div>
+        <p class="hs-soft hs-small m-0 mt-4">
+          {files.a4.pages} {files.a4.pages === 1 ? "page" : "pages"}, {template.orientation} · about {files.a4.kb} KB · free, no email or signup
+        </p>
+      </div>
+      <figure class={`col-span-12 m-0 ${landscape ? "lg:col-span-7" : "sm:col-span-8 sm:col-start-3 md:col-span-5 md:col-start-8"}`}>
+        <a href={files.a4.href} class="block" aria-label={`Open the ${template.label.toLowerCase()} PDF`}>
+          <img
+            src={files.preview}
+            alt={template.previewAlt}
+            width={landscape ? 1287 : 910}
+            height={landscape ? 910 : 1287}
+            loading="eager"
+            class="tpl-paper w-full"
+          />
+        </a>
+        <figcaption class="hs-soft hs-small mt-3">Page 1 of the A4 file.</figcaption>
+      </figure>
+    </header>
+
+    <section class="hs-grid mt-20 items-start gap-y-10 md:mt-28" aria-labelledby="contains">
+      <div class="col-span-12 md:col-span-6">
+        <h2 id="contains" class="hs-lead m-0 font-semibold">What is on the sheet</h2>
+        <ul class="m-0 mt-6 list-disc space-y-3 pl-5">
+          {template.contains.map((line) => <li class="max-w-[52ch]">{line}</li>)}
+        </ul>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6">
+        <img
+          src={template.image}
+          alt={template.imageAlt}
+          width={1024}
+          height={768}
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </section>
+
+    <section class="mt-20 md:mt-28" aria-labelledby="steps">
+      <h2 id="steps" class="hs-lead m-0 font-semibold">How to use it</h2>
+      <ol class="hs-grid m-0 mt-8 list-none gap-y-8 p-0">
+        {
+          template.steps.map((step, i) => (
+            <li class="col-span-12 m-0 sm:col-span-6 lg:col-span-4" data-reveal style={`--d: ${(i % 3) * 60}ms`}>
+              <span class="hs-soft hs-small block font-semibold tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+              <p class="m-0 mt-2 max-w-[44ch]">{step}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="hs-signal mt-20 p-7 sm:p-10 md:mt-28" aria-labelledby="app">
+      <div class="hs-grid gap-y-6">
+        <div class="col-span-12 md:col-span-7">
+          <h2 id="app" class="hs-lead m-0 font-semibold">{template.app.title}</h2>
+          {template.app.body.map((paragraph) => <p class="m-0 mt-4 max-w-[56ch]">{paragraph}</p>)}
+        </div>
+        <div class="col-span-12 self-end md:col-span-5">
+          <p class="m-0 max-w-[40ch]">
+            Home Stories is free on iPhone and iPad (iOS 17 or later), with no account. Pro is a one-time
+            purchase, not a subscription.
+          </p>
+          <a
+            href={ctaUrl}
+            class="hs-btn hs-btn--ink mt-6"
+            data-umami-event="appstore-click"
+            data-umami-event-surface="template-page"
+            data-umami-event-slug={template.slug}
+          >
+            Get Home Stories — free
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-[72ch]">
+      <FaqSection items={template.faq.map(({ q, a }) => ({ question: q, answer: a }))} />
+    </div>
+
+    <section class="mt-16" aria-labelledby="reading">
+      <h2 id="reading" class="hs-lead m-0 font-semibold">The guides behind it</h2>
+      <ol class="m-0 mt-6 list-none space-y-3 p-0">
+        {
+          posts.map((post) => (
+            <li class="m-0">
+              <a href={`/blog/${post.slug}/`} class="hs-row hs-grid items-center gap-y-4 py-5">
+                {post.data.cover && (
+                  <span class="col-span-12 block overflow-hidden sm:col-span-4 md:col-span-3">
+                    <img
+                      src={post.data.cover}
+                      alt=""
+                      width={640}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                      class="aspect-[16/10] w-full object-cover"
+                    />
+                  </span>
+                )}
+                <span class="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-6">
+                  <span class="hs-lead block font-semibold">{post.data.title}</span>
+                  <span class="mt-2 block">{post.data.description}</span>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <div class="hs-grid mt-20 gap-y-10 md:mt-28">
+      <aside class="col-span-12 md:col-span-6">
+        <h2 class="hs-lead m-0 font-semibold">Other printable templates</h2>
+        <ul class="m-0 mt-4 list-none space-y-2.5 p-0">
+          {
+            siblings.map((t) => (
+              <li class="m-0">
+                <a href={`/templates/${t.slug}/`} class="hs-link">{t.label}</a>
+              </li>
+            ))
+          }
+          <li class="m-0"><a href="/templates/" class="hs-link">All templates</a></li>
+        </ul>
+      </aside>
+      <aside class="col-span-12 md:col-span-6">
+        <h2 class="hs-lead m-0 font-semibold">Also free</h2>
+        <p class="m-0 mt-4 max-w-[48ch]">
+          The <a href="/blog/renovation-budget-template/" class="hs-link">renovation budget template</a> as a
+          spreadsheet, and the <a href="/blog/renovation-checklist-printable/" class="hs-link">phase-by-phase
+          renovation checklist</a> as a PDF, are on the <a href="/downloads/" class="hs-link">downloads page</a>.
+        </p>
+      </aside>
+    </div>
+  </main>
+</BlogLayout>
+
+<style>
+  /* A printed page, not a photo: a hairline edge and a soft drop, so the
+     white sheet reads against the mist ground in both themes. */
+  .tpl-paper {
+    background: #fff;
+    box-shadow:
+      0 0 0 1px rgb(24 25 27 / 0.12),
+      0 18px 40px -18px rgb(24 25 27 / 0.35);
+  }
+</style>
