@@ -39,6 +39,8 @@ export interface UseCase {
   faq: { q: string; a: string }[];
   /** Related published post slugs. */
   posts: string[];
+  /** Related use-case slugs, linked under "Related use cases". Scheduled ones show once live. */
+  related?: string[];
   /** YYYY-MM-DD. The page is built from this date on. Omit for always live. */
   publishDate?: string;
 }
@@ -849,6 +851,10 @@ export const allUseCases: UseCase[] = [
   for (const { slug } of allUseCases) {
     if (seen.has(slug)) throw new Error(`Duplicate use-case slug: ${slug}`);
     seen.add(slug);
+  }
+  for (const { slug, related = [] } of allUseCases) {
+    const missing = related.filter((other) => !seen.has(other));
+    if (missing.length) throw new Error(`Use case "${slug}" relates to unknown use cases: ${missing.join(", ")}`);
   }
 }
 

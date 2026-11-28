@@ -34,6 +34,9 @@ const { useCase, posts } = Astro.props as Props;
 const path = `/use-cases/${useCase.slug}/`;
 const url = new URL(path, Astro.site).href;
 const siblings = useCases.filter((item) => item.slug !== useCase.slug);
+const related = (useCase.related ?? [])
+  .map((slug) => useCases.find((item) => item.slug === slug))
+  .filter((item): item is (typeof useCases)[number] => Boolean(item));
 const ctaUrl = appStoreUrl(useCaseCampaign(useCase.slug));
 
 const pageSchema = {
@@ -165,6 +168,21 @@ const howToSchema = {
     <div class="max-w-[72ch]">
       <FaqSection items={useCase.faq.map(({ q, a }) => ({ question: q, answer: a }))} />
     </div>
+
+    {
+      related.length > 0 && (
+        <section class="mt-16" aria-labelledby="related">
+          <h2 id="related" class="hs-lead m-0 font-semibold">Related use cases</h2>
+          <ul class="m-0 mt-4 list-none space-y-2.5 p-0">
+            {related.map((item) => (
+              <li class="m-0">
+                <a href={`/use-cases/${item.slug}/`} class="hs-link">{item.h1}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <section class="mt-16" aria-labelledby="reading">
       <h2 id="reading" class="hs-lead m-0 font-semibold">Further reading</h2>
