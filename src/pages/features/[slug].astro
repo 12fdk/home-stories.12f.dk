@@ -61,6 +61,8 @@ const pageSchema = {
   speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "[data-speakable]"] },
 };
 
+// Four cards sit 2 by 2 on wide screens; other counts keep three columns.
+const cardSpan = feature.sections.length === 4 ? "lg:col-span-6" : "lg:col-span-4";
 const portrait = feature.screenshot.height / feature.screenshot.width > 1.6;
 ---
 
@@ -121,10 +123,10 @@ const portrait = feature.screenshot.height / feature.screenshot.width > 1.6;
 
     <section class="mt-20 md:mt-28" aria-labelledby="facts">
       <h2 id="facts" class="hs-lead m-0 font-semibold">The facts</h2>
-      <dl class="m-0 mt-6 max-w-[72ch] divide-y divide-current/10 border-y border-current/15">
+      <dl class="m-0 mt-6 max-w-[72ch] border-t" style="border-color: color-mix(in srgb, currentColor 18%, transparent)">
         {
           feature.facts.map((fact) => (
-            <div class="grid gap-1 py-3 sm:grid-cols-[14rem_1fr] sm:gap-6">
+            <div class="grid gap-1 border-b py-3 sm:grid-cols-[14rem_1fr] sm:gap-6" style="border-color: color-mix(in srgb, currentColor 18%, transparent)">
               <dt class="m-0 font-semibold">{fact.label}</dt>
               <dd class="m-0">{fact.value}</dd>
             </div>
@@ -138,7 +140,7 @@ const portrait = feature.screenshot.height / feature.screenshot.width > 1.6;
       <ul class="hs-grid m-0 mt-8 list-none gap-y-8 p-0">
         {
           feature.sections.map((item, i) => (
-            <li class="col-span-12 m-0 sm:col-span-6 lg:col-span-4" data-reveal style={`--d: ${(i % 3) * 60}ms`}>
+            <li class={`col-span-12 m-0 sm:col-span-6 ${cardSpan}`} data-reveal style={`--d: ${(i % 3) * 60}ms`}>
               <h3 class="m-0 text-lg font-semibold">{item.title}</h3>
               <p class="m-0 mt-2 max-w-[44ch]">{item.body}</p>
             </li>

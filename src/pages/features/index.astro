@@ -87,7 +87,7 @@ const faq = [
       <a href="/" class="hover:underline">Home</a>
     </nav>
 
-    <header class="hs-grid items-end gap-y-10">
+    <header class="hs-grid items-start gap-y-10">
       <h1 class="hs-display col-span-12 m-0" style="--chars: 16" data-reveal>
         <span class="block">What the app</span>
         <span class="block">does, exactly</span>
@@ -108,14 +108,25 @@ const faq = [
           Get Home Stories — free
         </a>
       </div>
+      <figure class="col-span-8 col-start-3 m-0 sm:col-span-6 sm:col-start-4 md:col-span-4 md:col-start-9" data-reveal style="--d: 140ms">
+        <img
+          src="/screenshots/feature-ipad-sidebar.webp"
+          alt="Home Stories on iPad: three renovation projects in the sidebar and an overview of the money spent, the tasks due next and recent photos"
+          width={1032}
+          height={1376}
+          loading="eager"
+          class="w-full"
+        />
+        <figcaption class="hs-soft hs-small mt-3">Home Stories on iPad, from the App Store screenshots.</figcaption>
+      </figure>
     </header>
 
     <section class="mt-20 md:mt-28" aria-labelledby="list">
       <h2 id="list" class="hs-lead m-0 font-semibold">Features and their limits</h2>
-      <ul class="m-0 mt-6 list-none border-t border-current/15 p-0">
+      <ul class="m-0 mt-6 list-none border-t p-0" style="border-color: color-mix(in srgb, currentColor 18%, transparent)">
         {
           allFeatures.map((feature) => (
-            <li class="hs-grid m-0 gap-y-1 border-b border-current/15 py-5">
+            <li class="hs-grid m-0 gap-y-1 border-b py-5" style="border-color: color-mix(in srgb, currentColor 18%, transparent)">
               <span class="col-span-12 font-semibold md:col-span-4">
                 {live.has(feature.slug) ? (
                   <a href={`/features/${feature.slug}/`} class="hs-link">{feature.label}</a>
