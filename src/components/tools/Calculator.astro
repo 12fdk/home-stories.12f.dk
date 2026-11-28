@@ -1,0 +1,505 @@
+---
+/**
+ * One calculator form, built from a Tool in src/data/tools.ts. The first
+ * result is computed here at build time with the same functions the browser
+ * uses, so the page shows real numbers before any script runs and nothing
+ * moves when it does. #162
+ */
+import type { Tool, ToolField } from "../../data/tools";
+import { CALCULATORS, UNITS } from "../../utils/calculators.mjs";
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props;
+const id = (name: string) => `${tool.calc}-${name}`;
+const fields: ToolField[] = tool.fieldsets.flatMap((set) => set.fields);
+const hasUnits = fields.some((f) => f.dim);
+
+// Build-time result, metric.
+const input: Record<string, unknown> = Object.fromEntries(
+  fields.map((f) => [f.name, f.checkbox ? Boolean(f.metric) : f.metric]),
+);
+if (tool.calc === "budget") {
+  input.lines = ["materials", "labour", "fees", "other"].map((k) => input[k]);
+}
+const result = (CALCULATORS as Record<string, (i: any) => Record<string, number> | null>)[tool.calc](input);
+
+const nf = (value: number, digits: number) =>
+  new Intl.NumberFormat("en-US", { maximumFractionDigits: digits }).format(value);
+const show = (name: string, dim?: string, count?: boolean) => {
+  const v = result?.[name];
+  if (typeof v !== "number") return "—";
+  if (count) return nf(v, 0);
+  if (dim) return `${nf(v, 2)} ${UNITS[dim as keyof typeof UNITS].metric}`;
+  return nf(v, 2);
+};
+const unitLabel = (f: ToolField) => (f.dim ? UNITS[f.dim].metric : f.suffix ?? "");
+---
+
+<form
+  class="hs-calc"
+  data-calc={tool.calc}
+  data-units-key="hs-tools-units"
+  aria-labelledby={id("title")}
+  novalidate
+>
+  <h2 id={id("title")} class="sr-only">{tool.label}</h2>
+
+  {
+    hasUnits && (
+      <fieldset class="hs-calc__units">
+        <legend class="hs-calc__legend">Units</legend>
+        <div class="hs-calc__seg">
+          <label>
+            <input type="radio" name="units" value="metric" checked />
+            <span>Metric (m, cm, L)</span>
+          </label>
+          <label>
+            <input type="radio" name="units" value="imperial" />
+            <span>Imperial (ft, in, US gal)</span>
+          </label>
+        </div>
+      </fieldset>
+    )
+  }
+
+  <div class="hs-calc__body">
+    <div class="hs-calc__inputs">
+      {
+        tool.fieldsets.map((set) => (
+          <fieldset class="hs-calc__set">
+            <legend class="hs-calc__legend">{set.legend}</legend>
+            {set.fields.map((f) =>
+              f.checkbox ? (
+                <label class="hs-calc__check" for={id(f.name)}>
+                  <input type="checkbox" id={id(f.name)} name={f.name} checked={Boolean(f.metric)} />
+                  <span>{f.label}</span>
+                </label>
+              ) : (
+                <div class="hs-calc__field">
+                  <label for={id(f.name)} class="hs-calc__label">
+                    {f.label}
+                  </label>
+                  <div class="hs-calc__control">
+                    <input
+                      type="number"
+                      inputmode="decimal"
+                      id={id(f.name)}
+                      name={f.name}
+                      value={f.metric}
+                      min="0"
+                      step={f.step ?? "any"}
+                      data-dim={f.dim}
+                      data-metric={f.metric}
+                      data-imperial={f.imperial ?? ""}
+                      aria-describedby={[f.hint ? id(`${f.name}-hint`) : "", f.dim || f.suffix ? id(`${f.name}-unit`) : ""]
+                        .filter(Boolean)
+                        .join(" ") || undefined}
+                    />
+                    {(f.dim || f.suffix) && (
+                      <span class="hs-calc__unit" id={id(`${f.name}-unit`)} data-unit-for={f.dim}>
+                        {unitLabel(f)}
+                      </span>
+                    )}
+                  </div>
+                  {f.hint && (
+                    <p class="hs-calc__hint" id={id(`${f.name}-hint`)}>
+                      {f.hint}
+                    </p>
+                  )}
+                  {f.presets && (
+                    <div class="hs-calc__presets" role="group" aria-label={`${f.label} presets`}>
+                      {f.presets.map((p) => (
+                        <button
+                          type="button"
+                          class="hs-calc__preset"
+                          data-preset-for={f.name}
+                          data-value={p.value}
+                          aria-pressed={p.value === f.metric ? "true" : "false"}
+                        >
+                          {p.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ),
+            )}
+          </fieldset>
+        ))
+      }
+    </div>
+
+    <section class="hs-calc__results" aria-labelledby={id("results")}>
+      <h3 id={id("results")} class="hs-calc__legend">Result</h3>
+      <dl class="m-0" aria-live="polite" aria-atomic="false">
+        {
+          tool.outputs.map((o) => (
+            <div class={`hs-calc__row ${o.main ? "hs-calc__row--main" : ""}`}>
+              <dt>{o.label}</dt>
+              <dd>
+                <output
+                  name={o.name}
+                  for={fields.map((f) => id(f.name)).join(" ")}
+                  data-dim={o.dim}
+                  data-count={o.count ? "1" : undefined}
+                >
+                  {show(o.name, o.dim, o.count)}
+                </output>
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="hs-calc__status" role="status" data-status></p>
+      <button type="reset" class="hs-calc__reset">Reset to the starting values</button>
+    </section>
+  </div>
+</form>
+
+<script>
+  import { CALCULATORS, UNITS, toMetric, fromMetric, round } from "../../utils/calculators.mjs";
+
+  type System = "metric" | "imperial";
+  type Dim = keyof typeof UNITS;
+
+  const fmt = (value: number, digits: number) =>
+    new Intl.NumberFormat(undefined, { maximumFractionDigits: digits }).format(value);
+
+  function preferredSystem(form: HTMLFormElement): System {
+    try {
+      const saved = localStorage.getItem(form.dataset.unitsKey!);
+      if (saved === "metric" || saved === "imperial") return saved;
+    } catch {
+      /* storage blocked: fall through to the browser language */
+    }
+    // The US, Liberia and Myanmar still buy paint by the gallon.
+    const lang = (navigator.languages?.[0] ?? navigator.language ?? "").toLowerCase();
+    return /-(us|lr|mm)$/.test(lang) ? "imperial" : "metric";
+  }
+
+  function setup(form: HTMLFormElement) {
+    const calc = CALCULATORS[form.dataset.calc as keyof typeof CALCULATORS];
+    const numbers = [...form.querySelectorAll<HTMLInputElement>('input[type="number"]')];
+    const checks = [...form.querySelectorAll<HTMLInputElement>('input[type="checkbox"]')];
+    const outputs = [...form.querySelectorAll<HTMLOutputElement>("output")];
+    const status = form.querySelector<HTMLElement>("[data-status]")!;
+    const presets = [...form.querySelectorAll<HTMLButtonElement>("[data-preset-for]")];
+    let system: System = "metric";
+
+    const unitOf = (dim: Dim) => UNITS[dim][system];
+    const digitsOf = (dim: Dim) => UNITS[dim].digits[system];
+
+    function startValue(input: HTMLInputElement, sys: System): number {
+      const metric = Number(input.dataset.metric);
+      const dim = input.dataset.dim as Dim | undefined;
+      if (sys === "metric" || !dim) return metric;
+      if (input.dataset.imperial) return Number(input.dataset.imperial);
+      return round(fromMetric(metric, dim, "imperial"), UNITS[dim].digits.imperial);
+    }
+
+    function labelUnits() {
+      form.querySelectorAll<HTMLElement>("[data-unit-for]").forEach((el) => {
+        const dim = el.dataset.unitFor as Dim | undefined;
+        if (dim) el.textContent = unitOf(dim);
+      });
+    }
+
+    function update() {
+      const values: Record<string, unknown> = {};
+      let bad = 0;
+      for (const input of numbers) {
+        const raw = input.value.trim();
+        const n = raw === "" ? NaN : Number(raw);
+        const invalid = !Number.isFinite(n) || n < 0;
+        input.setAttribute("aria-invalid", String(invalid));
+        if (invalid) bad++;
+        const dim = input.dataset.dim as Dim | undefined;
+        values[input.name] = dim ? toMetric(n, dim, system) : n;
+      }
+      for (const c of checks) values[c.name] = c.checked;
+      if (form.dataset.calc === "budget") {
+        values.lines = ["materials", "labour", "fees", "other"].map((k) => values[k]);
+      }
+      const result = bad ? null : (calc as (i: unknown) => Record<string, number> | null)(values);
+
+      for (const out of outputs) {
+        const v = result?.[out.name];
+        const dim = out.dataset.dim as Dim | undefined;
+        if (typeof v !== "number") out.textContent = "—";
+        else if (out.dataset.count) out.textContent = fmt(v, 0);
+        else if (dim) out.textContent = `${fmt(fromMetric(v, dim, system), 2)} ${unitOf(dim)}`;
+        else out.textContent = fmt(v, 2);
+      }
+      status.textContent = bad
+        ? "Enter a number of zero or more in every field."
+        : result
+          ? ""
+          : "Coverage, tile size, box size and pack size must be more than zero.";
+
+      for (const b of presets) {
+        const target = form.elements.namedItem(b.dataset.presetFor!) as HTMLInputElement;
+        b.setAttribute("aria-pressed", String(Number(target.value) === Number(b.dataset.value)));
+      }
+    }
+
+    function switchTo(next: System, convert: boolean) {
+      if (next === system) return;
+      for (const input of numbers) {
+        const dim = input.dataset.dim as Dim | undefined;
+        if (!dim) continue;
+        if (!convert) {
+          input.value = String(startValue(input, next));
+          continue;
+        }
+        const n = Number(input.value);
+        if (input.value.trim() === "" || !Number.isFinite(n)) continue;
+        const metric = toMetric(n, dim, system);
+        input.value = String(round(fromMetric(metric, dim, next), UNITS[dim].digits[next]));
+      }
+      system = next;
+      labelUnits();
+      update();
+    }
+
+    form.addEventListener("input", (e) => {
+      const t = e.target as HTMLInputElement;
+      if (t.name === "units") return;
+      update();
+    });
+    form.addEventListener("change", (e) => {
+      const t = e.target as HTMLInputElement;
+      if (t.name !== "units") return;
+      switchTo(t.value as System, true);
+      try {
+        localStorage.setItem(form.dataset.unitsKey!, system);
+      } catch {
+        /* not remembered, still works */
+      }
+    });
+    form.addEventListener("submit", (e) => e.preventDefault());
+    form.addEventListener("reset", (e) => {
+      e.preventDefault();
+      for (const input of numbers) input.value = String(startValue(input, system));
+      for (const c of checks) c.checked = c.defaultChecked;
+      update();
+    });
+    for (const b of presets) {
+      b.addEventListener("click", () => {
+        const target = form.elements.namedItem(b.dataset.presetFor!) as HTMLInputElement;
+        target.value = b.dataset.value!;
+        update();
+      });
+    }
+
+    const initial = preferredSystem(form);
+    const radio = form.querySelector<HTMLInputElement>(`input[name="units"][value="${initial}"]`);
+    if (radio) radio.checked = true;
+    if (radio) switchTo(initial, false);
+    update();
+  }
+
+  document.querySelectorAll<HTMLFormElement>("form[data-calc]").forEach(setup);
+</script>
+
+<style>
+  .hs-calc {
+    border: 2px solid currentColor;
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+  }
+  .hs-calc fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  .hs-calc__legend {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    font-size: var(--step-small);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .hs-calc__units {
+    margin-bottom: 1.75rem !important;
+  }
+  .hs-calc__seg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .hs-calc__seg label {
+    position: relative;
+    cursor: pointer;
+  }
+  .hs-calc__seg input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .hs-calc__seg span {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0 1em;
+    border: 2px solid currentColor;
+    font-weight: 500;
+  }
+  .hs-calc__seg input:checked + span {
+    background: var(--hs-signal);
+    border-color: var(--hs-signal);
+    color: var(--hs-graphite);
+  }
+  .hs-calc__seg input:focus-visible + span {
+    outline: 3px solid var(--hs-signal);
+    outline-offset: 3px;
+  }
+  .hs-calc__body {
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 900px) {
+    .hs-calc__body {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 3rem;
+    }
+  }
+  .hs-calc__inputs {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .hs-calc__set {
+    display: grid;
+    gap: 1.1rem;
+  }
+  .hs-calc__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+  .hs-calc__control {
+    display: flex;
+    align-items: stretch;
+    max-width: 22rem;
+  }
+  .hs-calc__control input {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0 0.75rem;
+    font: inherit;
+    font-variant-numeric: tabular-nums;
+    color: inherit;
+    background: oklch(var(--b1));
+    border: 2px solid currentColor;
+    border-radius: 0;
+  }
+  .hs-calc__control input[aria-invalid="true"] {
+    border-color: var(--hs-signal);
+    border-style: dashed;
+  }
+  .hs-calc__unit {
+    display: inline-flex;
+    align-items: center;
+    /* Wide enough for "sq ft/gal", so a unit switch does not move the input */
+    width: 6.5rem;
+    flex: none;
+    padding: 0 0.75rem;
+    border: 2px solid currentColor;
+    border-left: 0;
+    font-size: var(--step-small);
+    font-weight: 600;
+    background: oklch(var(--b2));
+  }
+  .hs-calc__hint {
+    margin: 0.35rem 0 0;
+    max-width: 44ch;
+    font-size: var(--step-small);
+    color: var(--soft, inherit);
+    opacity: 0.85;
+  }
+  .hs-calc__check {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 44px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .hs-calc__check input {
+    width: 1.35rem;
+    height: 1.35rem;
+    accent-color: var(--hs-signal);
+  }
+  .hs-calc__presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .hs-calc__preset {
+    min-height: 44px;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid currentColor;
+    font-size: var(--step-small);
+    font-weight: 500;
+    text-align: left;
+  }
+  .hs-calc__preset[aria-pressed="true"] {
+    background: var(--hs-signal);
+    border-color: var(--hs-signal);
+    color: var(--hs-graphite);
+  }
+  .hs-calc__results {
+    align-self: start;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    background: oklch(var(--b2));
+  }
+  @media (min-width: 900px) {
+    .hs-calc__results {
+      position: sticky;
+      top: 5.5rem;
+    }
+  }
+  .hs-calc__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid oklch(var(--bc) / 0.2);
+  }
+  .hs-calc__row dt {
+    margin: 0;
+  }
+  .hs-calc__row dd {
+    margin: 0;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .hs-calc__row--main dd {
+    font-size: var(--step-lead);
+    color: inherit;
+  }
+  .hs-calc__row--main {
+    border-bottom: 3px solid var(--hs-signal);
+  }
+  .hs-calc__status {
+    /* Room for the message is kept, so it appears without pushing anything */
+    min-height: 3em;
+    margin: 0.75rem 0 0;
+    font-size: var(--step-small);
+  }
+  .hs-calc__reset {
+    font-size: var(--step-small);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+    min-height: 44px;
+  }
+</style>

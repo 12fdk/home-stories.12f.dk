@@ -4,6 +4,7 @@ import { LLMS_CAMPAIGN, appStoreUrl } from "../utils/appStoreLink.mjs";
 import { isPublished } from "../utils/posts";
 import { useCases } from "../data/useCases";
 import { features } from "../data/features";
+import { tools } from "../data/tools";
 import preamble from "../data/llms-full-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -73,6 +74,8 @@ export const GET: APIRoute = async () => {
     `- Features: ${SITE}/features/`,
     ...features.map((f) => `- ${f.label}: ${SITE}/features/${f.slug}/`),
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
+    `- Free calculators: ${SITE}/tools/`,
+    ...tools.map((t) => `- ${t.label}: ${SITE}/tools/${t.slug}/ — ${t.summary} Formula: ${t.formula.join("; ")}.`),
     `- RSS feed: ${SITE}/rss.xml`,
     `- Privacy Policy: ${SITE}/privacy-policy/`,
     `- Terms and Conditions: ${SITE}/terms-and-conditions/`,

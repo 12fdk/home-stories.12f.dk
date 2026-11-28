@@ -1,0 +1,224 @@
+---
+import { getCollection } from "astro:content";
+import { isPublished } from "../../utils/posts";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import FaqSection from "../../components/blog/FaqSection.astro";
+import Calculator from "../../components/tools/Calculator.astro";
+import { tools, type Tool } from "../../data/tools";
+import { useCases } from "../../data/useCases";
+import { appStoreUrl } from "../../utils/appStoreLink.mjs";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => isPublished(data));
+  const bySlug = new Map(posts.map((post) => [post.slug, post]));
+  const caseBySlug = new Map(useCases.map((u) => [u.slug, u]));
+
+  return tools.map((tool) => {
+    const missingPosts = tool.posts.filter((slug) => !bySlug.has(slug));
+    const missingCases = tool.useCases.filter((slug) => !caseBySlug.has(slug));
+    if (missingPosts.length || missingCases.length) {
+      throw new Error(
+        `Tool "${tool.slug}" links missing pages: ${[...missingPosts, ...missingCases.map((s) => `use-case ${s}`)].join(", ")}`,
+      );
+    }
+    return {
+      params: { slug: tool.slug },
+      props: {
+        tool,
+        posts: tool.posts.map((slug) => bySlug.get(slug)!),
+        cases: tool.useCases.map((slug) => caseBySlug.get(slug)!),
+      },
+    };
+  });
+}
+
+interface Props {
+  tool: Tool;
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
+  cases: (typeof useCases)[number][];
+}
+
+const { tool, posts, cases } = Astro.props as Props;
+const path = `/tools/${tool.slug}/`;
+const url = new URL(path, Astro.site).href;
+const siblings = tools.filter((t) => t.slug !== tool.slug);
+const ctaUrl = appStoreUrl(`tool-${tool.calc}`);
+
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: tool.h1,
+  description: tool.metaDescription,
+  url,
+  image: new URL(tool.image, Astro.site).href,
+  inLanguage: "en",
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Any",
+  browserRequirements: "Requires JavaScript. Runs in the browser; nothing is sent to a server.",
+  isAccessibleForFree: true,
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  publisher: { "@type": "Organization", name: "12f", url: "https://www.12f.dk" },
+};
+---
+
+<BlogLayout
+  title={tool.metaTitle}
+  description={tool.metaDescription}
+  canonicalPath={path}
+  extraSchema={[appSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Calculators", path: "/tools/" },
+    { name: tool.label, path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <a href="/tools/" class="hover:underline">Calculators</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>{tool.label}</span>
+    </nav>
+
+    <header class="hs-grid gap-y-8">
+      <h1 class="hs-title col-span-12 m-0 max-w-[34ch]">{tool.h1}</h1>
+      <div class="col-span-12 space-y-4 md:col-span-6" data-speakable>
+        {tool.intro.map((paragraph, i) => <p class={`m-0 max-w-[52ch] ${i === 0 ? "hs-lead" : ""}`}>{paragraph}</p>)}
+        <p class="m-0 pt-2">
+          <a href="#calculator" class="hs-btn">Go to the calculator</a>
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6">
+        <img
+          src={tool.image}
+          alt={tool.imageAlt}
+          width={1024}
+          height={768}
+          loading="eager"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <section id="calculator" class="mt-14 scroll-mt-24 md:mt-20" aria-label={tool.label}>
+      <Calculator tool={tool} />
+    </section>
+
+    <div class="hs-grid mt-20 gap-y-14 md:mt-28">
+      <section class="col-span-12 md:col-span-6" aria-labelledby="formula">
+        <h2 id="formula" class="hs-lead m-0 font-semibold">The formula</h2>
+        <ol class="m-0 mt-6 list-none space-y-3 p-0">
+          {
+            tool.formula.map((line) => (
+              <li class="m-0">
+                <code class="block whitespace-normal bg-base-200 px-4 py-3 font-mono text-[0.95em]">{line}</code>
+              </li>
+            ))
+          }
+        </ol>
+        <p class="hs-soft m-0 mt-4 max-w-[52ch]">
+          The page runs these steps in your browser each time you change a number. Nothing you type is sent or saved.
+        </p>
+      </section>
+
+      <section class="col-span-12 md:col-span-6" aria-labelledby="assumptions">
+        <h2 id="assumptions" class="hs-lead m-0 font-semibold">Assumptions you can change</h2>
+        <ul class="m-0 mt-6 list-none space-y-5 p-0">
+          {
+            tool.assumptions.map((a) => (
+              <li class="m-0">
+                <h3 class="m-0 text-lg font-semibold">{a.title}</h3>
+                <p class="m-0 mt-1.5 max-w-[52ch]">{a.body}</p>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          tool.sources && (
+            <div class="mt-8">
+              <h3 class="m-0 text-lg font-semibold">Sources</h3>
+              <ul class="m-0 mt-2 list-disc space-y-1.5 pl-5">
+                {tool.sources.map((s) => (
+                  <li>
+                    <a href={s.url} class="hs-link" rel="noopener" target="_blank">
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+      </section>
+    </div>
+
+    <div class="max-w-[72ch]">
+      <FaqSection items={tool.faq.map(({ q, a }) => ({ question: q, answer: a }))} />
+    </div>
+
+    <section class="mt-16" aria-labelledby="reading">
+      <h2 id="reading" class="hs-lead m-0 font-semibold">Further reading</h2>
+      <ul class="m-0 mt-6 list-none space-y-4 p-0">
+        {
+          posts.map((post) => (
+            <li class="m-0 max-w-[72ch]">
+              <a href={`/blog/${post.slug}/`} class="hs-link">
+                {post.data.title}
+              </a>
+              <span class="mt-1 block">{post.data.description}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <div class="hs-grid mt-20 gap-y-12 md:mt-28">
+      <aside class="col-span-12 md:col-span-5">
+        <h2 class="hs-lead m-0 font-semibold">Projects this fits</h2>
+        <ul class="m-0 mt-4 list-none space-y-2.5 p-0">
+          {
+            cases.map((u) => (
+              <li class="m-0">
+                <a href={`/use-cases/${u.slug}/`} class="hs-link">{u.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <h2 class="hs-lead m-0 mt-10 font-semibold">Other calculators</h2>
+        <ul class="m-0 mt-4 list-none space-y-2.5 p-0">
+          {
+            siblings.map((t) => (
+              <li class="m-0">
+                <a href={`/tools/${t.slug}/`} class="hs-link">{t.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </aside>
+
+      <aside class="hs-signal col-span-12 self-start p-7 sm:p-10 md:col-span-7">
+        <h2 class="hs-lead m-0 font-semibold">Keep the numbers with the project</h2>
+        <p class="m-0 mt-3 max-w-[52ch]">{tool.appNote}</p>
+        <p class="m-0 mt-3 max-w-[52ch]">
+          Home Stories is free on iPhone and iPad, with no account. Pro is an optional one-time purchase.
+        </p>
+        <a
+          href={ctaUrl}
+          class="hs-btn hs-btn--ink mt-6"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="tool-footer"
+          data-umami-event-slug={tool.slug}
+        >
+          Get Home Stories — free on the App Store
+        </a>
+      </aside>
+    </div>
+  </main>
+</BlogLayout>
