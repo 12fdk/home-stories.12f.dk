@@ -14,7 +14,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a laundry or utility room: washer, dryer, sink and cabinets on one budget, photos of the pipes and the vent before the wall closes, and manuals kept.",
     image: "/stock/uc-laundry-and-utility-room.webp",
-    imageAlt: "A utility room under renovation, a washer and dryer stacked in a tall cabinet frame and water pipes visible in the open wall",
+    imageAlt: "A laundry room under renovation, a stacked washer and dryer beside a white cabinet and a farmhouse sink, copper water pipes still exposed on the wall",
     publishDate: "2026-12-13",
     intro: [
       "A laundry room is a small room with three services in it: a water supply, a drain and, for most dryers, a vent or a condensate outlet. Where those three go decides where the machines can stand, so plan them before you pick the cabinets.",
@@ -55,7 +55,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a living room makeover: room and doorway sizes, lighting, furniture with delivery dates and a wish list, on one budget with before-and-after photos.",
     image: "/stock/uc-living-room-makeover.webp",
-    imageAlt: "A living room mid-makeover, one wall painted deep green, the sofa under a dust sheet and a new pendant light hanging on loose wires",
+    imageAlt: "A living room being made over, a white sofa against a newly painted deep green wall and a pendant light by the window",
     publishDate: "2026-12-13",
     intro: [
       "A living room makeover is mostly a furniture and lighting job, and most of its cost comes from a few large pieces: the sofa, the rug, the storage and the lights. The common mistakes are a sofa that does not fit through the door and a ceiling light in the wrong place.",
@@ -96,7 +96,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a staircase renovation: treads, risers, spindles and handrail on one budget, sanding and finish coats as tasks with drying time, and photos of each stage.",
     image: "/stock/uc-staircase-renovation.webp",
-    imageAlt: "A wooden staircase being renovated, the carpet removed, half the treads sanded bare and new white spindles leaning against the wall",
+    imageAlt: "A staircase being renovated, bare light-wood treads, a new white newel post and a plywood sheet leaning against the stairwell wall",
     publishDate: "2026-12-14",
     intro: [
       "A staircase renovation is awkward because the stairs are the only way up. Stripping, sanding and two or three coats of finish each need drying time, so most people do the stairs in halves or plan around a weekend away.",
@@ -137,7 +137,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a walk-in closet or fitted wardrobes: wall measurements, every frame, rail and door as an item, and a carpenter's quote beside the flat-pack total.",
     image: "/stock/uc-walk-in-closet-and-wardrobes.webp",
-    imageAlt: "A spare room being fitted as a walk-in closet, white wardrobe frames along one wall and doors still stacked in their boxes",
+    imageAlt: "An unfinished built-in wardrobe with open shelves, drawers and two doors, loose door panels lying on the floor",
     publishDate: "2026-12-14",
     intro: [
       "A walk-in closet or a wall of built-in wardrobes is a measuring job first. The ceiling height, a skirting board, a sloping wall or a radiator decides which frames fit, and a wardrobe system is sold as many small parts: frames, rails, shelves, drawers, doors and hinges.",
@@ -177,7 +177,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a deck, patio or pergola: footings, frame and boards on one budget, photos of the joists before they are covered, and the yearly upkeep as tasks.",
     image: "/stock/uc-deck-patio-and-pergola.webp",
-    imageAlt: "A timber deck half built in a back garden, joists visible on one side and new boards on the other, under a wooden pergola frame",
+    imageAlt: "A timber deck and pergola being built in a back garden, a stack of boards and a drill on the new deck, a green hedge behind",
     publishDate: "2026-12-15",
     intro: [
       "A deck or a pergola is a small structure, and what holds it up is out of sight once the boards are on: the footings, the posts, the joists and the fixings. The record of that is what you need when a board goes soft or you sell the house.",
@@ -217,7 +217,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a fence or driveway: the boundary line and any neighbour agreement, quotes compared, drainage and sub-base photographed before they are buried.",
     image: "/stock/uc-fence-and-driveway.webp",
-    imageAlt: "A new driveway being laid in front of a house, a compacted gravel base, stacked paving blocks and a new timber fence along the side",
+    imageAlt: "A new driveway of light grey pavers in front of a brick house, with a timber fence and gravel beds along the side",
     publishDate: "2026-12-15",
     intro: [
       "A fence and a driveway both sit on the edge of your property, so the paperwork matters as much as the build. Where the boundary runs, what the neighbour agreed to and whether the driveway needs permission to meet the road are questions to answer before the first post goes in.",
@@ -258,7 +258,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a pool or hot tub install: the base, the electrician and the delivery on one budget, the manual and warranty kept, and water care as regular tasks.",
     image: "/stock/uc-pool-and-hot-tub.webp",
-    imageAlt: "A new wooden hot tub on a fresh concrete base in a back garden, an outdoor electrical isolator on a post beside it",
+    imageAlt: "A wooden hot tub with its cover closed on a paved patio, a wooden step beside it and an outdoor electrical unit on a post",
     publishDate: "2026-12-16",
     intro: [
       "The tub or the pool is only part of the cost. It needs a level base that can take its weight when full, a power supply put in by an electrician, a way in for the delivery, and chemicals and filters every month after that.",
@@ -299,7 +299,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a home sauna: heater, timber, vapour barrier and electrician on one budget, photos of the wall build-up before it is clad, and the heater manual kept.",
     image: "/stock/uc-sauna-build.webp",
-    imageAlt: "A home sauna being built in a basement corner, half clad in new spruce panels with the foil vapour barrier visible behind",
+    imageAlt: "A light wooden sauna cabin being built, its benches visible through the open door and silver foil insulation on the wall behind",
     publishDate: "2026-12-16",
     intro: [
       "A home sauna is a small room that gets very hot and humid, so the parts that matter are inside the walls: insulation, a foil vapour barrier, an air gap, then the timber cladding. The heater has to suit the room's size, and an electric heater needs its own supply put in by an electrician.",
@@ -340,7 +340,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a home cinema or media room: screen size and seating distance, speaker and cable runs photographed, equipment with model numbers and warranties.",
     image: "/stock/uc-home-cinema.webp",
-    imageAlt: "A basement room being turned into a home cinema, dark grey walls, acoustic panels leaning on the wall and speaker cables hanging from the ceiling",
+    imageAlt: "A room being fitted out as a home cinema, a projector screen and acoustic panels on a dark wall and a carpet roll on the floor",
     publishDate: "2026-12-17",
     intro: [
       "The order is the hard part of a home cinema. The speaker cables, the HDMI run to the projector and the power for it go into the walls and ceiling before the plasterboard. Once the room is finished, a cable you forgot means opening a wall or running it along the skirting.",
@@ -381,7 +381,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a workshop or hobby room: power, lighting, dust and benches on one budget, tools with receipts and warranties, and your own build hours tracked.",
     image: "/stock/uc-workshop-and-hobby-room.webp",
-    imageAlt: "An outbuilding fitted out as a workshop, a new wooden workbench along the wall, a pegboard of tools and sockets on surface conduit",
+    imageAlt: "A basement workshop being fitted out, raw wood workbenches along the stud walls, tools on racks and bright ceiling lights",
     publishDate: "2026-12-17",
     intro: [
       "A workshop or hobby room is two projects in one: the room and the tools. The room needs enough sockets on the right circuits, good light over the bench and a plan for dust or fumes. The tools come later, one at a time, and that is how the cost gets lost.",
@@ -422,7 +422,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a mudroom or entryway makeover: a hard-wearing floor, a bench with hooks and cubbies, door clearance measured, and costs and photos in one project.",
     image: "/stock/uc-mudroom-and-entryway.webp",
-    imageAlt: "An entryway being turned into a mudroom, a new built-in bench with cubbies and coat hooks and new slate tiles with spacers still in",
+    imageAlt: "An entryway with a new built-in bench, open cubbies, a row of coat hooks and shelves beside a glass door",
     publishDate: "2026-12-18",
     intro: [
       "A mudroom or a reworked entryway has to take wet boots, sports bags and coats every day. The decisions that matter are a floor that does not mind water and grit, storage at the right heights, and enough room for the front door to swing past a bench.",
@@ -462,7 +462,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Plan a smart home or security install: each device with its model number, where the cables run, the installer's work, and manuals and warranties kept.",
     image: "/stock/uc-smart-home-and-security.webp",
-    imageAlt: "A hallway during a smart home install, a video doorbell and a security camera with their boxes on a table and low-voltage cable showing in the wall",
+    imageAlt: "A hallway mid-renovation, smart home devices on a wooden console table and a ladder and paint tin on the floor",
     publishDate: "2026-12-18",
     intro: [
       "A smart home or security install is many small devices: a doorbell, cameras, sensors, smart switches, a thermostat, a lock. A year later the questions are where each one is, which model it is, when the warranty ends and where the cable to it runs.",
