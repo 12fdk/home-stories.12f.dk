@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { isPublished } from "../utils/posts";
 import { useCases } from "../data/useCases";
+import { tools } from "../data/tools";
 import preamble from "../data/llms-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -35,7 +36,12 @@ export const GET: APIRoute = async () => {
     `- Guides: ${SITE}/guides/`,
     `- Use cases: ${SITE}/use-cases/`,
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
+    `- Free calculators (budget and contingency, paint, tile, flooring): ${SITE}/tools/`,
     `- RSS feed: ${SITE}/rss.xml`,
+    "",
+    `### Calculators (${tools.length})`,
+    "",
+    ...tools.map((t) => `- [${t.label}](${SITE}/tools/${t.slug}/): ${t.metaDescription}`),
     "",
     `### Use cases (${useCases.length})`,
     "",
