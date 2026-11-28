@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { LLMS_CAMPAIGN, appStoreUrl } from "../utils/appStoreLink.mjs";
 import { isPublished } from "../utils/posts";
 import { useCases } from "../data/useCases";
+import { templates } from "../data/templates";
 import preamble from "../data/llms-full-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -70,6 +71,8 @@ export const GET: APIRoute = async () => {
     `- Use cases: ${SITE}/use-cases/`,
     ...useCases.map((u) => `- ${u.label}: ${SITE}/use-cases/${u.slug}/`),
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
+    `- Printable templates (PDF, A4 and US Letter — no signup): ${SITE}/templates/`,
+    ...templates.map((t) => `- ${t.label} (printable): ${SITE}/templates/${t.slug}/`),
     `- RSS feed: ${SITE}/rss.xml`,
     `- Privacy Policy: ${SITE}/privacy-policy/`,
     `- Terms and Conditions: ${SITE}/terms-and-conditions/`,

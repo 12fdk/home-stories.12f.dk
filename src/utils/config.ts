@@ -94,6 +94,9 @@ const templateConfig: TemplateConfig = {
       { href: "/downloads/", title: "Downloads" },
       { href: "/#faq", title: "FAQ" },
       { href: "/about/", title: "About" },
+      // Past the end of topNavbar.links on purpose: footer-only, so it has no
+      // t.nav.links entry and shows in English on every locale. #163
+      { href: "/templates/", title: "Printable templates" },
     ],
   },
   topNavbar: {
