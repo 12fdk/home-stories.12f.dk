@@ -41,7 +41,7 @@ def helper_const(name):
 
 class AppStoreLinkTests(unittest.TestCase):
     def test_generated_links_carry_campaign_and_provider_token(self):
-        template = re.search(r"return `(\$\{APP_STORE_URL\}[^`]+)`", helper()).group(1)
+        template = re.search(r"return `(\$\{(?:APP_STORE_URL|base)\}[^`]+)`", helper()).group(1)
         self.assertIn("ct=${ct}", template)
         self.assertIn("pt=${PROVIDER_TOKEN}", template)
         self.assertEqual(helper_const("PROVIDER_TOKEN"), PROVIDER_TOKEN)
