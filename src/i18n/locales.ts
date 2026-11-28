@@ -49,6 +49,13 @@ export const LOCALES: LocaleDef[] = [
   { code: "nb", label: "Norsk", hreflang: "nb", storefront: "no", currency: "NOK" },
 ];
 
+/** og:locale (ll_CC) for each locale code. */
+export const OG_LOCALES: Record<string, string> = {
+  en: "en_US", da: "da_DK", de: "de_DE", fr: "fr_FR", es: "es_ES", it: "it_IT",
+  nl: "nl_NL", pt: "pt_PT", sv: "sv_SE", ja: "ja_JP", zh: "zh_CN", ko: "ko_KR",
+  pl: "pl_PL", tr: "tr_TR", ru: "ru_RU", nb: "nb_NO",
+};
+
 /** Locales other than English — the ones that get a prefixed route. */
 export const NON_DEFAULT_LOCALES = LOCALES.filter((l) => l.code !== DEFAULT_LOCALE);
 

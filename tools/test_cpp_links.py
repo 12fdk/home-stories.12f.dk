@@ -40,23 +40,28 @@ def node_eval(expr):
 @unittest.skipUnless(shutil.which("node"), "node is not installed")
 class AppStoreUrlPpidTests(unittest.TestCase):
     def test_without_cpp_id_the_link_is_unchanged(self):
-        for arg in ["", ", undefined", ", null", ', ""']:
+        for arg in ["", ", undefined", ", {}", ", { ppid: null }", ', { ppid: "" }']:
             with self.subTest(arg=arg):
                 result = node_eval(f'h.appStoreUrl(h.useCaseCampaign("kitchen-renovation"){arg})')
                 self.assertEqual(result, {"ok": True, "value": DEFAULT})
 
     def test_cpp_id_is_appended_as_ppid_after_the_campaign_tokens(self):
-        result = node_eval(f'h.appStoreUrl("uc-kitchen-renovation", "{CPP_ID}")')
+        result = node_eval(f'h.appStoreUrl("uc-kitchen-renovation", {{ ppid: "{CPP_ID}" }})')
         self.assertEqual(result["value"], f"{DEFAULT}&ppid={CPP_ID}")
 
     def test_cpp_id_is_lowercased(self):
-        result = node_eval(f'h.appStoreUrl("uc-x", "{CPP_ID.upper()}")')
+        result = node_eval(f'h.appStoreUrl("uc-x", {{ ppid: "{CPP_ID.upper()}" }})')
+        self.assertTrue(result["value"].endswith(f"&ppid={CPP_ID}"))
+
+    def test_storefront_and_cpp_id_combine(self):
+        result = node_eval(f'h.appStoreUrl("uc-da-x", {{ storefront: "DK", ppid: "{CPP_ID}" }})')
+        self.assertTrue(result["value"].startswith("https://apps.apple.com/dk/app/id6754754960?ct=uc-da-x&"))
         self.assertTrue(result["value"].endswith(f"&ppid={CPP_ID}"))
 
     def test_malformed_cpp_id_throws(self):
         for bad in ["kitchen-en-us", CPP_ID + "&ct=x", CPP_ID[:-1], " " + CPP_ID]:
             with self.subTest(bad=bad):
-                result = node_eval(f"h.appStoreUrl('uc-x', {json.dumps(bad)})")
+                result = node_eval(f"h.appStoreUrl('uc-x', {{ ppid: {json.dumps(bad)} }})")
                 self.assertFalse(result["ok"])
                 self.assertIn("custom product page id", result["error"])
 
@@ -64,7 +69,7 @@ class AppStoreUrlPpidTests(unittest.TestCase):
 class UseCaseCppWiringTests(unittest.TestCase):
     def test_use_case_page_passes_cpp_id_to_the_helper(self):
         page = read("src/pages/use-cases/[slug].astro")
-        self.assertIn("appStoreUrl(useCaseCampaign(useCase.slug), useCase.cppId)", page)
+        self.assertIn("appStoreUrl(useCaseCampaign(useCase.slug), { ppid: useCase.cppId })", page)
 
     def test_use_case_interface_has_optional_cpp_id(self):
         self.assertRegex(read("src/data/useCases.ts"), r"\n  cppId\?: string;\n")

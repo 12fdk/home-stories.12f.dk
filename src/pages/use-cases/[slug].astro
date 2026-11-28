@@ -5,6 +5,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 import FaqSection from "../../components/blog/FaqSection.astro";
 import { useCases } from "../../data/useCases";
 import { appStoreUrl, useCaseCampaign } from "../../utils/appStoreLink.mjs";
+import { useCaseAlternates } from "../../i18n/useCases";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => isPublished(data));
@@ -34,7 +35,7 @@ const { useCase, posts } = Astro.props as Props;
 const path = `/use-cases/${useCase.slug}/`;
 const url = new URL(path, Astro.site).href;
 const siblings = useCases.filter((item) => item.slug !== useCase.slug);
-const ctaUrl = appStoreUrl(useCaseCampaign(useCase.slug), useCase.cppId);
+const ctaUrl = appStoreUrl(useCaseCampaign(useCase.slug), { ppid: useCase.cppId });
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -79,6 +80,7 @@ const howToSchema = {
   title={useCase.metaTitle}
   description={useCase.metaDescription}
   canonicalPath={path}
+  alternates={useCaseAlternates(useCase.slug)}
   extraSchema={[pageSchema, howToSchema]}
   breadcrumbs={[
     { name: "Home", path: "/" },

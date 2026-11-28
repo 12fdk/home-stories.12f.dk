@@ -43,13 +43,20 @@ export function useCaseCampaign(slug) {
 export const CPP_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 /**
- * `ppid` opens a custom product page instead of the default one (#165).
- * Leave it out for the default page. A malformed id throws, so a typo fails
- * the build instead of shipping a link that silently shows the default page.
+ * `options.ppid` opens a custom product page instead of the default one (#165).
+ * A malformed id throws, so a typo fails the build instead of shipping a link
+ * that silently shows the default page.
+ *
+ * `options.storefront` (ISO country, lower case: "dk", "de") opens that
+ * country's App Store page, for pages written for one market (#164). Without
+ * it the neutral URL lets Apple pick the reader's own storefront.
  */
-export function appStoreUrl(token, ppid) {
+export function appStoreUrl(token, { ppid, storefront } = {}) {
   const ct = String(token).slice(0, CT_MAX);
-  return `${APP_STORE_URL}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8${ppidParam(ppid)}`;
+  const base = storefront
+    ? `https://apps.apple.com/${String(storefront).toLowerCase()}/app/id${APP_STORE_ID}`
+    : APP_STORE_URL;
+  return `${base}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8${ppidParam(ppid)}`;
 }
 
 function ppidParam(ppid) {
