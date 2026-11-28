@@ -137,6 +137,8 @@ Three cases where I'd stick with a spreadsheet:
 
 For everything else — multi-week, multi-trade, mobile-life, on-site decisions — the app comparison wins on logging speed alone, and the cascade of consequences (current data, attached photos, easier handoff) compounds from there.
 
+If you are choosing between Excel, Google Sheets and an app, [the Excel and Google Sheets comparison](/compare/home-stories-vs-spreadsheets/) sets out what each costs, how offline works and when the spreadsheet is the better pick.
+
 
 ## What should a renovation spreadsheet alternative actually cover?
 

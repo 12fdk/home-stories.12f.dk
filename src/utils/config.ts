@@ -102,6 +102,9 @@ const templateConfig: TemplateConfig = {
       // Past the end of topNavbar.links on purpose: footer-only, so it has no
       // t.nav.links entry and shows in English on every locale. #163
       { href: "/templates/", title: "Printable templates" },
+      // Appended last: footer titles map by index to t.nav.links, which has no
+      // entry here, so it stays "Compare" (English-only pages) in every locale. #166
+      { href: "/compare/", title: "Compare" },
     ],
   },
   topNavbar: {

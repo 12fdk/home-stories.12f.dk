@@ -6,6 +6,7 @@ import { useCases } from "../data/useCases";
 import { features } from "../data/features";
 import { tools } from "../data/tools";
 import { templates } from "../data/templates";
+import { comparisons } from "../data/comparisons";
 import preamble from "../data/llms-full-preamble.md?raw";
 
 const SITE = "https://home-stories.12f.dk";
@@ -74,6 +75,8 @@ export const GET: APIRoute = async () => {
     ...useCases.map((u) => `- ${u.label}: ${SITE}/use-cases/${u.slug}/`),
     `- Features: ${SITE}/features/`,
     ...features.map((f) => `- ${f.label}: ${SITE}/features/${f.slug}/`),
+    `- Comparisons: ${SITE}/compare/`,
+    ...comparisons.map((c) => `- ${c.label}: ${SITE}/compare/${c.slug}/`),
     `- Free downloads (budget template, phase checklist — no signup): ${SITE}/downloads/`,
     `- Free calculators: ${SITE}/tools/`,
     ...tools.map((t) => `- ${t.label}: ${SITE}/tools/${t.slug}/ — ${t.summary} Formula: ${t.formula.join("; ")}.`),

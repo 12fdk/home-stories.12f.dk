@@ -69,7 +69,7 @@ Houzz is the giant, and it earns it. Twenty-five million-plus photos of real int
 
 **Where it stops being useful:** the day you hire someone. Houzz is an inspiration and marketplace product — it wants to show you ideas and sell you things. It is not a project tracker, and it makes no serious attempt to be one. Save your Ideabooks, hire your contractor, and expect to reach for something else.
 
-**Install it if:** you're at the "what do I even want" stage, or you still need to find a pro.
+**Install it if:** you're at the "what do I even want" stage, or you still need to find a pro. [The Houzz comparison](/compare/home-stories-vs-houzz/) covers where one stops and the other starts.
 
 ## 2. Polycam — for measuring, using the scanner already in your phone
 
@@ -117,7 +117,7 @@ Buildertrend is professional construction management — schedules, change order
 
 **Where it stops being useful:** and this is the important bit — **your contractor's system is not your record.** It's built around their invoices and their liability. It won't contain the tiles you bought yourself, the light fittings from the second-hand shop, the extra weekend at the builders' merchant, or the money you spent while they weren't on site. On a typical renovation those direct purchases are a large share of the total, and they are invisible to your builder's software. Relying on it for *your* budget is how people end up genuinely shocked at the end.
 
-**Install it if:** your contractor uses it. Ask for portal access on day one — most homeowners don't, and it's free to you.
+**Install it if:** your contractor uses it. Ask for portal access on day one — most homeowners don't, and it's free to you. [Buildertrend for homeowners](/compare/home-stories-vs-buildertrend/) goes through what the portal shows and what it leaves out.
 
 ## The one everybody recommends, that we can't
 
@@ -156,7 +156,7 @@ It deliberately does *less* than most apps here. It won't design your kitchen or
 Building your own tracker in a notes tool? Read [Notion for home renovation](/blog/notion-for-home-renovation/) before you invest a weekend in a template.
 
 
-Six apps is a list, not a recommendation. Here's the honest version:
+Six apps is a list, not a recommendation. For one tool at a time against ours, with dated sources, see [the comparisons](/compare/). Here's the honest version:
 
 | If you're… | Install |
 |---|---|

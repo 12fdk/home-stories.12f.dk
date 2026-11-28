@@ -1,0 +1,125 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { comparisons } from "../../data/comparisons";
+
+const path = "/compare/";
+const title = "Home Stories Compared: Houzz, HomeZada, Notion, Sheets";
+const description =
+  "Home Stories next to Houzz, HomeZada, Notion, Excel and Google Sheets, Trello and Buildertrend: sourced facts, and when the other tool is the better pick.";
+
+const url = new URL(path, Astro.site).href;
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url,
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "[data-speakable]"],
+  },
+  mainEntity: { "@id": `${url}#comparisons` },
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${url}#comparisons`,
+  name: "Home Stories comparisons",
+  numberOfItems: comparisons.length,
+  itemListElement: comparisons.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/compare/${c.slug}/`, Astro.site).href,
+    name: c.h1,
+  })),
+};
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, itemListSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Compare", path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+    </nav>
+
+    <header class="hs-grid items-end gap-y-10">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 17" data-reveal>
+        <span class="block">Home Stories</span>
+        <span class="block">and the others</span>
+      </h1>
+      <div class="col-span-12 md:col-span-6">
+        <div class="space-y-4" data-speakable data-reveal style="--d: 80ms">
+          <p class="hs-lead m-0 max-w-[38ch]">
+            Home Stories is a free iPhone and iPad app for one homeowner job: keeping a renovation's costs, tasks,
+            photos and papers in one project while the work happens.
+          </p>
+          <p class="m-0 max-w-[52ch]">
+            Most people weighing it up already use something else: an ideas app, a home-management site, a
+            spreadsheet, a board or their builder's portal. Each page below puts the two side by side and says
+            where the other tool is the better pick.
+          </p>
+        </div>
+        <p class="hs-soft m-0 mt-6 max-w-[52ch]">
+          We make Home Stories, so read these with that in mind. Every fact about another product links to the
+          page we read it on, with the date we read it.
+        </p>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src="/stock/cmp-hub.webp"
+          alt="An empty living room under renovation: a plywood board on two sawhorses with paint swatches and a tape measure, bare plaster walls, dust sheets on the floor"
+          width={1024}
+          height={768}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <ul class="hs-grid m-0 mt-20 list-none gap-y-12 p-0 md:mt-28">
+      {
+        comparisons.map((c, i) => (
+          <li class="col-span-12 m-0 sm:col-span-6 lg:col-span-4" data-reveal style={`--d: ${(i % 3) * 60}ms`}>
+            <a href={`/compare/${c.slug}/`} class="group block">
+              <span class="block overflow-hidden">
+                <img
+                  src={c.image}
+                  alt=""
+                  width={640}
+                  height={480}
+                  loading={i < 3 ? "eager" : "lazy"}
+                  decoding="async"
+                  class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </span>
+              <span class="hs-lead mt-4 block font-semibold group-hover:underline">{c.label}</span>
+              <span class="mt-2 block">{c.metaDescription}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="m-0 mt-16 max-w-[72ch]">
+      Want the wider field rather than one head-to-head? The <a href="/blog/best-home-improvement-apps/" class="hs-link">round-up of home improvement apps</a>
+      sorts them by the job each one does, and the <a href="/guides/renovation-apps/" class="hs-link">apps and tools guide</a> collects the rest.
+    </p>
+  </main>
+</BlogLayout>
