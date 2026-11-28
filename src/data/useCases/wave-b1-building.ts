@@ -78,7 +78,7 @@ const entries: UseCase[] = [
       "Log the deposit, then add fitting day and making good as tasks.",
       "Photograph each opening during fitting, before it is trimmed.",
     ],
-    screenshot: { src: "/screenshots/items.webp", alt: "Home Stories item list: each window and door with its price, adding up to the project total" },
+    screenshot: { src: "/screenshots/items.webp", alt: "Home Stories item list: each item with its price, adding up to the project total" },
     faq: [
       { q: "How do I keep track of many window sizes?", a: "Add each opening as an item named after its room and position, with the width, height, glazing and opening direction in the note. On the day the order confirmation arrives, you can check it line by line." },
       { q: "What should I keep after the windows are fitted?", a: "The order confirmation, the invoice, the warranty for the frames and glazing, and any certificate or compliance paper the fitter gives you. Keep them as documents in the project, so they are at hand when you sell." },
@@ -119,7 +119,7 @@ const entries: UseCase[] = [
       "Write the new circuit list in a note.",
       "Add the test certificate when the job is signed off, then the making-good tasks.",
     ],
-    screenshot: { src: "/screenshots/note-detail.webp", alt: "A Home Stories note holding project details, such as a circuit list" },
+    screenshot: { src: "/screenshots/photo-timeline.webp", alt: "Home Stories project screen with the photo timeline and time-tracked tasks" },
     faq: [
       { q: "Why photograph the walls during a rewire?", a: "Because a photo of the open wall shows where each cable runs. When you hang a shelf or put up a picture years later, you can check before you drill. Add a tape measure to the shot to show the height." },
       { q: "Where do I keep the electrical certificate?", a: "Add it as a document in the rewiring project. It sits beside the quote, the invoice and the photos, and full data export (free) lets you keep a copy outside the app." },
@@ -159,7 +159,7 @@ const entries: UseCase[] = [
       "Photograph the pipework and the plant room before boxing in.",
       "Add the commissioning papers and set the first service as a task.",
     ],
-    screenshot: { src: "/screenshots/tasks.webp", alt: "Home Stories task list with due dates, such as the first heating service" },
+    screenshot: { src: "/screenshots/tasks.webp", alt: "Home Stories task list with due dates and tracked time" },
     faq: [
       { q: "How do I compare heat pump quotes?", a: "List what each quote covers: the unit, any new radiators or cylinder, pipe changes, electrical work and removal of the old system. Keep each quote as a document and write the scope in a note, so two prices for different jobs do not look like a saving." },
       { q: "What papers should I keep after a new boiler or heat pump?", a: "The invoice, the commissioning record, the manual, the warranty registration and the service history. Keep them as documents in one project, with the model and serial number in a note." },
@@ -199,7 +199,7 @@ const entries: UseCase[] = [
       "Photograph the roof fixings and cable routes during the install.",
       "Add each warranty as a document and note its start date.",
     ],
-    screenshot: { src: "/screenshots/items.webp", alt: "Home Stories item list: each component with its price, adding up to the project total" },
+    screenshot: { src: "/screenshots/items.webp", alt: "Home Stories item list: each item with its price, adding up to the project total" },
     faq: [
       { q: "Should solar, battery and charger be one project or three?", a: "One project works well when they share an installer or a budget. The items keep each component apart, and the total shows the whole system. If you add the battery later, put it in the same project." },
       { q: "Where do I keep the serial numbers?", a: "In the note on each item. Take a photo of the rating plate as well, because the serial number on the label is what a warranty claim asks for." },
@@ -239,7 +239,7 @@ const entries: UseCase[] = [
       "Keep every receipt and any grant paperwork as documents.",
       "Photograph each measure with a tape measure before it is covered.",
     ],
-    screenshot: { src: "/screenshots/export-pdf.webp", alt: "Home Stories PDF report export (Pro), for sending receipts and photos together" },
+    screenshot: { src: "/screenshots/export-pdf.webp", alt: "Home Stories PDF report export (Pro)" },
     faq: [
       { q: "What receipts do I need for an energy grant?", a: "That depends on the scheme, so read its rules first. Most ask for itemised invoices and some for proof of the installer or product. Keep every receipt as a document in the project on the day you pay, and you will have what the scheme asks for." },
       { q: "How do I prove how much insulation was fitted?", a: "Take a photo with a tape measure against the insulation before it is covered, and keep the product data sheet with the invoice. The photo is dated on the project timeline." },
@@ -276,7 +276,7 @@ const entries: UseCase[] = [
       "Create a project for the house with a budget that includes a contingency.",
       "Add each phase as a task with a date.",
       "Photograph every room before the strip-out, for the before-and-after.",
-      "Log each payment as materials, labour or contractor.",
+      "Log every payment on the day, split into materials, labour and contractor.",
       "Photograph the structure, pipes and cables before plastering.",
       "Share the project (Pro) with your partner or the main contractor.",
     ],
@@ -320,7 +320,7 @@ const entries: UseCase[] = [
       "Add deliveries and noisy work as tasks with dates.",
       "Photograph shared pipes and walls before they are covered.",
     ],
-    screenshot: { src: "/screenshots/tasks.webp", alt: "Home Stories task list with due dates, such as deliveries and building approvals" },
+    screenshot: { src: "/screenshots/tasks.webp", alt: "Home Stories task list with due dates and tracked time" },
     faq: [
       { q: "Do I need approval to renovate my apartment?", a: "Often for some kinds of work, but it depends on your building and your country. Structural, plumbing and floor changes are the usual ones that need it. Check your building's rules and keep the approval as a document in the project." },
       { q: "How do I plan deliveries in an apartment building?", a: "Add each large delivery as a task with a date, and write the lift booking or the building's delivery times in the note. Share the project (Pro) with the contractor so they see the same dates." },
@@ -360,7 +360,7 @@ const entries: UseCase[] = [
       "Add the scaffold and each stage as tasks with dates.",
       "Photograph repairs before they are covered, then each elevation after.",
     ],
-    screenshot: { src: "/screenshots/photo-timeline.webp", alt: "Home Stories project screen with the photo timeline of each elevation" },
+    screenshot: { src: "/screenshots/items.webp", alt: "Home Stories item list: each item with its price, adding up to the project total" },
     faq: [
       { q: "Where do I keep the exterior paint colour code?", a: "In the note on the paint item, with the brand, colour code, finish and the number of tins. Add a photo of the tin label as well. You will need it for touch-ups and for the next repaint." },
       { q: "How do I track scaffold hire?", a: "Add scaffold up and scaffold down as tasks with dates, and log the hire as a payment. If the job runs long, the dates show the extra weeks the invoice charges for." },
@@ -440,7 +440,7 @@ const entries: UseCase[] = [
       "Set the agreed fix date as the due date on each snag.",
       "Add the handover documents and warranties to the project.",
     ],
-    screenshot: { src: "/screenshots/export-pdf.webp", alt: "Home Stories PDF report export (Pro), for sending a snagging list to the builder" },
+    screenshot: { src: "/screenshots/export-pdf.webp", alt: "Home Stories PDF report export (Pro)" },
     faq: [
       { q: "How do I make a snagging list on my iPhone?", a: "Create a project for the house and add each snag as a task, named by room and problem, with a photo. Add the date you reported it in the note and the agreed fix date as the due date. Tasks are free." },
       { q: "How do I send the snagging list to the builder?", a: "With Pro, export a PDF report of the tasks and photos, or share the project so the site manager sees the same list." },
