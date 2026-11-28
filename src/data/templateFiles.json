@@ -1,0 +1,80 @@
+{
+  "renovation-budget-sheet": {
+    "a4": {
+      "href": "/templates/renovation-budget-sheet-a4.pdf",
+      "pages": 2,
+      "kb": 45,
+      "categories": 8,
+      "paymentLines": 31
+    },
+    "preview": "/templates/renovation-budget-sheet-preview.webp",
+    "letter": {
+      "href": "/templates/renovation-budget-sheet-letter.pdf",
+      "pages": 2,
+      "kb": 45,
+      "categories": 8,
+      "paymentLines": 29
+    }
+  },
+  "renovation-punch-list": {
+    "a4": {
+      "href": "/templates/renovation-punch-list-a4.pdf",
+      "pages": 2,
+      "kb": 46,
+      "lines": 51
+    },
+    "preview": "/templates/renovation-punch-list-preview.webp",
+    "letter": {
+      "href": "/templates/renovation-punch-list-letter.pdf",
+      "pages": 2,
+      "kb": 46,
+      "lines": 47
+    }
+  },
+  "room-by-room-renovation-checklist": {
+    "a4": {
+      "href": "/templates/room-by-room-renovation-checklist-a4.pdf",
+      "pages": 6,
+      "kb": 58,
+      "rooms": [
+        "Kitchen",
+        "Bathroom",
+        "Bedroom",
+        "Living room",
+        "Hallway and stairs"
+      ],
+      "checksPerRoom": 6
+    },
+    "preview": "/templates/room-by-room-renovation-checklist-preview.webp",
+    "letter": {
+      "href": "/templates/room-by-room-renovation-checklist-letter.pdf",
+      "pages": 6,
+      "kb": 57,
+      "rooms": [
+        "Kitchen",
+        "Bathroom",
+        "Bedroom",
+        "Living room",
+        "Hallway and stairs"
+      ],
+      "checksPerRoom": 6
+    }
+  },
+  "contractor-quote-comparison": {
+    "a4": {
+      "href": "/templates/contractor-quote-comparison-a4.pdf",
+      "pages": 2,
+      "kb": 44,
+      "rows": 13,
+      "questions": 6
+    },
+    "preview": "/templates/contractor-quote-comparison-preview.webp",
+    "letter": {
+      "href": "/templates/contractor-quote-comparison-letter.pdf",
+      "pages": 2,
+      "kb": 44,
+      "rows": 13,
+      "questions": 6
+    }
+  }
+}
