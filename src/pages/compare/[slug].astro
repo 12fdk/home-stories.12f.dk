@@ -135,7 +135,7 @@ const pageSchema = {
     <section class="mt-20 md:mt-28" aria-labelledby="side-by-side">
       <h2 id="side-by-side" class="hs-lead m-0 font-semibold">Home Stories and {c.competitor}, side by side</h2>
       <div class="mt-6 overflow-x-auto">
-        <table class="hs-table w-full min-w-[40rem] border-collapse">
+        <table class="hs-table hs-cmp w-full border-collapse sm:min-w-[40rem]">
           <thead>
             <tr>
               <th scope="col" class="w-[22%]"></th>
@@ -148,8 +148,9 @@ const pageSchema = {
               c.rows.map((row) => (
                 <tr>
                   <th scope="row" class="font-semibold">{row.topic}</th>
-                  <td>{row.homeStories}</td>
+                  <td><span class="hs-cmp-label">Home Stories: </span>{row.homeStories}</td>
                   <td>
+                    <span class="hs-cmp-label">{c.competitor}: </span>
                     {row.them}
                     {sourcesOf(row.source).map((i, n, all) => (
                       <>
@@ -288,3 +289,35 @@ const pageSchema = {
     </div>
   </main>
 </BlogLayout>
+
+<style>
+  /* Phones: one row becomes a small block (topic, then each side, labelled),
+     so the table never needs a sideways scroll at 400px. */
+  .hs-cmp-label {
+    display: none;
+    font-weight: 600;
+  }
+  @media (max-width: 639px) {
+    .hs-cmp thead {
+      display: none;
+    }
+    .hs-cmp,
+    .hs-cmp tbody,
+    .hs-cmp tr,
+    .hs-cmp th,
+    .hs-cmp td {
+      display: block;
+      width: auto;
+    }
+    .hs-cmp tr {
+      padding-block: 14px;
+    }
+    .hs-cmp th,
+    .hs-cmp td {
+      padding: 4px 0;
+    }
+    .hs-cmp-label {
+      display: inline;
+    }
+  }
+</style>

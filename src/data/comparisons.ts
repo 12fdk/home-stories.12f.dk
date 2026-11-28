@@ -124,7 +124,7 @@ const allComparisons: Comparison[] = [
     metaDescription:
       "HomeZada manages a whole home; Home Stories tracks one renovation at a time. Plans, prices and apps side by side, with sources checked on 28 November 2026.",
     image: "/stock/cmp-homezada.webp",
-    imageAlt: "A hallway cupboard under renovation, a box of appliance manuals and warranty folders on the shelf",
+    imageAlt: "An open utility cupboard under renovation: a new water heater, copper pipes, and a box and folders on a wooden shelf",
     intro: [
       "HomeZada is home management software: an inventory of what you own, home documents, a maintenance schedule, remodel projects and home finances, on the web and in apps. Home Stories does one part of that. It tracks renovation projects, on iPhone and iPad.",
       "The price models differ. HomeZada's remodel projects sit in its Premium plan, a yearly or monthly subscription. Home Stories tracks projects for free, and its Pro upgrade is a single purchase.",
