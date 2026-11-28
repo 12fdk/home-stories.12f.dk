@@ -1,0 +1,143 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import FaqSection from "../../components/blog/FaqSection.astro";
+import { allFeatures, features } from "../../data/features";
+import { appStoreUrl } from "../../utils/appStoreLink.mjs";
+
+const path = "/features/";
+const title = "Home Stories Features: Free and Pro";
+const description =
+  "What the Home Stories renovation app does on iPhone and iPad: iPad layout, time tracking, widgets, offline with no account, and Pro sharing, sync and PDF export.";
+const url = new URL(path, Astro.site).href;
+const live = new Set(features.map((f) => f.slug));
+const ctaUrl = appStoreUrl("feat-hub");
+
+/**
+ * The hub lists every feature with its one-line limit, so it stands on its own
+ * before the scheduled pages are live. Only live pages are linked.
+ */
+const summary: Record<string, string> = {
+  "offline-no-account": "No sign-up. Works offline. Projects stay on the device unless you sync or share.",
+  ipad: "Projects in a sidebar, an inspector beside your work, drag and drop, keyboard and pointer.",
+  "project-sharing": "Invite a partner, family member or contractor into one project, kept in step through iCloud.",
+  "time-tracking": "A timer on the Lock Screen, and in the Dynamic Island on iPhone 14 Pro and later.",
+  "icloud-sync": "Your projects on your iPhone and iPad, through your own iCloud. Off until you switch it on.",
+  "home-screen-widgets": "Budget progress and the tasks due next, on the Home Screen.",
+  "pdf-export": "A report with a cover photo, for the whole project or the sections you pick.",
+};
+
+for (const f of allFeatures) {
+  if (!summary[f.slug]) throw new Error(`Feature hub: no summary line for "${f.slug}"`);
+}
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url,
+  inLanguage: "en",
+  isPartOf: { "@type": "WebSite", name: "Home Stories", url: new URL("/", Astro.site).href },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "[data-speakable]"] },
+};
+
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Home Stories: Renovation App",
+  operatingSystem: "iOS 17.0 or later, iPadOS 17.0 or later",
+  applicationCategory: "LifestyleApplication",
+  url: new URL("/", Astro.site).href,
+  installUrl: "https://apps.apple.com/app/id6754754960",
+  featureList: allFeatures.map((f) => f.label),
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+};
+
+const faq = [
+  {
+    question: "Which Home Stories features are free?",
+    answer:
+      "Unlimited projects, items, photos, notes, documents, time tracking, Home Screen widgets, local backups and full data export are free, and stay free. The iPad layout is free too.",
+  },
+  {
+    question: "What does Home Stories Pro add?",
+    answer:
+      "The budget-vs-actual chart, task reminders, PDF export, iCloud sync and project sharing. Pro is a single purchase with no subscription and nothing to cancel. Family Sharing is included.",
+  },
+  {
+    question: "Which devices does Home Stories run on?",
+    answer: "iPhone and iPad with iOS 17 or later. The same app has an iPhone layout and a full iPad layout.",
+  },
+];
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  extraSchema={[collectionSchema, appSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Features", path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+    </nav>
+
+    <header class="hs-grid items-end gap-y-10">
+      <h1 class="hs-display col-span-12 m-0" style="--chars: 16" data-reveal>
+        <span class="block">What the app</span>
+        <span class="block">does, exactly</span>
+      </h1>
+      <div class="col-span-12 md:col-span-7">
+        <p class="hs-lead m-0 mt-6 max-w-[44ch]" data-speakable data-reveal style="--d: 80ms">
+          Home Stories is a renovation tracker for iPhone and iPad. It needs no account and works offline.
+          Most of it is free. Pro is a one-time purchase that adds the budget chart, task reminders, PDF
+          export, iCloud sync and project sharing.
+        </p>
+        <a
+          href={ctaUrl}
+          class="hs-btn mt-8"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="feature-hub"
+          data-umami-event-slug="hub"
+        >
+          Get Home Stories — free
+        </a>
+      </div>
+    </header>
+
+    <section class="mt-20 md:mt-28" aria-labelledby="list">
+      <h2 id="list" class="hs-lead m-0 font-semibold">Features and their limits</h2>
+      <ul class="m-0 mt-6 list-none border-t border-current/15 p-0">
+        {
+          allFeatures.map((feature) => (
+            <li class="hs-grid m-0 gap-y-1 border-b border-current/15 py-5">
+              <span class="col-span-12 font-semibold md:col-span-4">
+                {live.has(feature.slug) ? (
+                  <a href={`/features/${feature.slug}/`} class="hs-link">{feature.label}</a>
+                ) : (
+                  feature.label
+                )}
+              </span>
+              <span class="col-span-12 md:col-span-2">{feature.pro ? "Pro" : "Free"}</span>
+              <span class="col-span-12 max-w-[52ch] md:col-span-6">{summary[feature.slug]}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <div class="max-w-[72ch]">
+      <FaqSection items={faq} />
+    </div>
+
+    <p class="m-0 mt-16">
+      Looking for the app for a specific job? <a href="/use-cases/" class="hs-link">Use cases</a>. Comparing
+      apps? <a href="/guides/renovation-apps/" class="hs-link">Apps and tools for tracking a renovation</a>.
+    </p>
+  </main>
+</BlogLayout>
