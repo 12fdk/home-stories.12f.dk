@@ -20,7 +20,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Track a renovation budget on your iPhone: set the total, add every item and payment as you go, and see what is spent, what is still to buy and what is left.",
     image: "/stock/uc-renovation-budget-tracker.webp",
-    imageAlt: "Tile samples, a tape measure and a notebook on a dining table in a house under renovation",
+    imageAlt: "A tape measure, a notebook, a pencil and a coffee mug on a wooden table in a room under renovation, a stepladder by the window",
     intro: [
       "A renovation budget tracker should answer one question at any moment: how much of the budget is left? Home Stories answers it by adding up every item and payment you save to the project, against the budget you set when you created it.",
       "The budget you write on day one is a guess. The tracker's job is to replace the guess with real numbers as they land: the tiles you bought, the deposit you paid, the plumber's invoice. It is free on iPhone and iPad, needs no account and works in your own currency.",
@@ -65,7 +65,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Take before, progress and after photos of a renovation on your iPhone, see them on a dated timeline, compare them side by side and play them as a slideshow.",
     image: "/stock/uc-before-and-after-photo-app.webp",
-    imageAlt: "A living room wall half stripped of old floral wallpaper and half freshly painted white",
+    imageAlt: "A wall half covered in old floral wallpaper and half stripped to bare plaster, a paint roller on the dust sheet below",
     intro: [
       "The best before-and-after renovation photos are taken from the same spot, at the same height, before anything is touched. Home Stories keeps them in the project with their date, puts them on a timeline, and shows the before and after side by side.",
       "Tag a photo \"Before\" or \"After\" when you add it and the comparison uses those photos. Untagged, it takes the earliest and the latest. The slideshow plays the whole project from the first photo to the last, which is the version friends and family actually want to see.",
@@ -109,7 +109,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Make a punch list (snag list) on your iPhone at the end of a renovation: one task per defect, a photo of each, who fixes it and by when, ticked off when done.",
     image: "/stock/uc-punch-list-app.webp",
-    imageAlt: "A newly renovated white room with small pieces of blue painter's tape marking defects on the wall and door frame",
+    imageAlt: "An empty renovated room with white walls and a light oak floor, small patches of blue painter's tape marking defects",
     intro: [
       "A punch list, or snag list, is the list of small defects left at the end of a job: a chipped tile, a door that sticks, paint on a socket. In Home Stories each snag is a task in the project, with a photo, a note of who fixes it and a due date, and you tick it off when it is done.",
       "Walk the finished rooms before the last payment, in daylight, with the contractor if you can. A list on your phone, with photos, is harder to argue with than a list from memory, and it stays in the project with the rest of the job.",
@@ -153,7 +153,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Log each renovation expense on your iPhone the day you pay it, keep the receipt with the cost, and split materials, labour and contractor payments.",
     image: "/stock/uc-renovation-expense-tracker.webp",
-    imageAlt: "A brown paper bag of paint rollers, screws and sandpaper on bare floorboards in a room being renovated",
+    imageAlt: "A brown paper bag, a box of screws, a caulk gun and a paint roller on a wooden floor, plasterboard sheets against the wall",
     intro: [
       "A renovation expense tracker is a record of what you paid, when, to whom and for what, with the receipt to prove it. In Home Stories you add the cost to the project the day you pay it and attach the receipt as a document: a PDF, or a photo of the paper slip.",
       "Expenses are not the same as the budget. The budget is the plan; expenses are what actually left your account. Logging them as payments, kept as materials, labour or contractor, means the total is real and the receipts are where you will look for them.",
@@ -197,7 +197,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Keep each appliance's receipt, warranty, manual and model number on your iPhone, next to what it cost, so a claim takes minutes, not a search of the house.",
     image: "/stock/uc-appliance-warranty-tracker.webp",
-    imageAlt: "A new washing machine and dryer stacked in a utility room beside a new wall-hung boiler, with packaging on the floor",
+    imageAlt: "A washer and dryer stacked in a new utility room, a wall-mounted water heater above an appliance box on the tiled floor",
     intro: [
       "When an appliance breaks under warranty, the manufacturer asks for three things: the model number, the serial number and proof of purchase. In Home Stories each appliance is an item, and the receipt, the warranty card and the manual are documents on that item.",
       "Do it the day the appliance arrives. The box is still there, the rating plate is easy to reach, and the receipt has not gone into a drawer. Two minutes then saves a search of the house when the dishwasher stops in three years' time.",
@@ -241,7 +241,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Keep a renovation diary on your iPhone: dated photos, notes on what was done and decided, and the hours worked, all on one timeline for each project.",
     image: "/stock/uc-renovation-photo-journal.webp",
-    imageAlt: "An old hallway mid-renovation with stripped floorboards, a freshly plastered wall and a sanded staircase",
+    imageAlt: "An old hallway mid-renovation, with pink plastered walls, worn floorboards and a white staircase by the front door",
     intro: [
       "A renovation diary is the day-by-day record of what was done, what was found and what was decided. In Home Stories the photos you take build a dated timeline on their own, and notes hold the words: the decision about the tiles, the rotten joist under the bath, the plumber's advice.",
       "Most people mean to keep a diary and stop in week two, because writing takes time on site. A photo takes five seconds. Take one at the end of each day, add a line when something was decided, and the diary is there when you need it.",
@@ -284,7 +284,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Share products from Safari, IKEA or Amazon into one shopping list on your iPhone, or snap them in the store, with the price, the shop and what they add up to.",
     image: "/stock/uc-interior-design-shopping-list.webp",
-    imageAlt: "A partly furnished living room with a sofa still in plastic wrap, a rolled rug, a floor lamp and flat-pack boxes",
+    imageAlt: "A sofa still in plastic wrap between two floor lamps, with a rolled-up rug and a cardboard box on the floor",
     intro: [
       "An interior design shopping list collects products from many shops in one place, with the price of each, so you can compare and see the total before you buy. In Home Stories you share a product page from Safari, IKEA or Amazon straight into a project, or photograph it in the store with the price and a note.",
       "Saving to a browser tab, a screenshot and a note app is how a room plan gets lost. One list per room, with the prices adding up, shows whether the sofa you love leaves room in the budget for the rug.",
@@ -328,7 +328,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Record the paint brand, colour, code and finish for each room on your iPhone, with the tiles, flooring and wallpaper, so touch-ups and repairs match.",
     image: "/stock/uc-paint-color-tracker.webp",
-    imageAlt: "Open paint tins in soft colours on a dust sheet in front of a wall with square test patches",
+    imageAlt: "Open paint tins on a tray on a dust sheet, with test patches in green, teal, terracotta and beige on the wall behind",
     intro: [
       "A paint and material log records what is on each wall and floor: the brand, the colour name and code, the finish, and where you bought it. Keep it in Home Stories as a note per room, with a photo of the tin lid, and you can buy a matching tin years later.",
       "Paint is the obvious one, but the same goes for tiles, grout, flooring, wallpaper and worktops. All of them get discontinued or change between batches. The day you need the name is the day you scuffed the wall or cracked a tile, and the tin has long gone to the tip.",
@@ -371,7 +371,7 @@ const entries: UseCase[] = [
     metaDescription:
       "A logbook of your home on your iPhone: every renovation, repair and service with its date, cost, photos and paperwork, ready for a buyer or an insurer.",
     image: "/stock/uc-house-logbook.webp",
-    imageAlt: "The front of an older brick terraced house with a newly painted front door and new sash windows",
+    imageAlt: "A row of brick terraced houses with sash windows, the middle one with a light blue front door, autumn leaves in the front gardens",
     intro: [
       "A house logbook is the history of everything done to a home: what was renovated, repaired or replaced, when, by whom and for how much. In Home Stories each job is a project with its own dates, costs, photos and documents, and the project list is the logbook.",
       "Most homes have this history in a drawer, an inbox and the previous owner's memory. A buyer, a surveyor or an insurer asks for it at the worst moment. Built up one job at a time, it costs nothing and it is ready when they ask.",
@@ -415,7 +415,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Furnish a new home room by room: a shopping list of what each room needs, the price of each piece, what you have bought and what the rest will cost.",
     image: "/stock/uc-furnishing-a-new-home.webp",
-    imageAlt: "An empty bright living room just moved into, with stacked cardboard boxes, one armchair and a bare light bulb",
+    imageAlt: "An empty living room just moved into: an armchair against a mattress, stacked moving boxes and a bare bulb",
     intro: [
       "Furnishing a new home is a long shopping list with a fixed budget: beds, a sofa, a table, curtains, lamps and a hundred small things, often all at once after a move. Home Stories keeps the list room by room, with the price of each piece, so you see what is bought, what is left and what it will cost.",
       "Most of the money goes in the first month, when every room is empty and every shop has a sale. A list with prices on it lets you buy what you need first, and wait for what you only want.",
@@ -458,7 +458,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Time your own DIY and renovation work on your iPhone, with a Lock Screen timer and the Dynamic Island, and see how many hours each job really took.",
     image: "/stock/uc-diy-time-tracker.webp",
-    imageAlt: "A garage workbench with hand tools and a drill, and an old wooden door half sanded on two trestles",
+    imageAlt: "A workshop with an old wooden door, half stripped to bare wood and half still green paint, between workbenches and sawhorses",
     intro: [
       "DIY saves money by spending your time, and most people have no idea how much time. Home Stories has a timer built into each project: start it when you pick up the tools, and it runs on the Lock Screen and in the Dynamic Island (iPhone 14 Pro and later) until you stop.",
       "The hours answer real questions. Was it worth doing the floor yourself? How many weekends will the next room take? How much of the project was your own work? The total for each project sits next to what it cost.",
@@ -502,7 +502,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Turn a renovation project into a PDF report (Pro) with a cover photo, the budget, items and purchases, tasks, hours, notes and photos, to share with anyone.",
     image: "/stock/uc-renovation-pdf-report.webp",
-    imageAlt: "A finished open-plan kitchen and dining room with a herringbone oak floor and a wooden table",
+    imageAlt: "A finished kitchen with white cabinets and a subway-tile backsplash, a wooden dining table and six chairs in front",
     intro: [
       "A renovation report shows what was done, what it cost and what it looks like now, in one document someone else can read. With Home Stories Pro you export a project as a PDF with a cover photo, and choose which sections go in: the budget overview, items and purchases, tasks, time tracking, notes and the photo gallery.",
       "Different readers want different parts. A buyer or an estate agent wants the photos and the list of work. A co-owner or a family member who paid part wants the costs. A lender or an insurer may ask for both. Ask them what they need, then leave out the rest.",
