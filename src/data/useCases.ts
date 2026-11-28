@@ -854,6 +854,10 @@ export const allUseCases: UseCase[] = [
     if (seen.has(slug)) throw new Error(`Duplicate use-case slug: ${slug}`);
     seen.add(slug);
   }
+  for (const { slug, related = [] } of allUseCases) {
+    const missing = related.filter((other) => !seen.has(other));
+    if (missing.length) throw new Error(`Use case "${slug}" relates to unknown use cases: ${missing.join(", ")}`);
+  }
 }
 
 export function isUseCaseLive(useCase: UseCase, now = new Date()): boolean {
