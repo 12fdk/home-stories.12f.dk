@@ -34,7 +34,7 @@ const { useCase, posts } = Astro.props as Props;
 const path = `/use-cases/${useCase.slug}/`;
 const url = new URL(path, Astro.site).href;
 const siblings = useCases.filter((item) => item.slug !== useCase.slug);
-const ctaUrl = appStoreUrl(useCaseCampaign(useCase.slug));
+const ctaUrl = appStoreUrl(useCaseCampaign(useCase.slug), useCase.cppId);
 
 const pageSchema = {
   "@context": "https://schema.org",

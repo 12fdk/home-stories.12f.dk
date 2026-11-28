@@ -41,6 +41,8 @@ export interface UseCase {
   posts: string[];
   /** YYYY-MM-DD. The page is built from this date on. Omit for always live. */
   publishDate?: string;
+  /** App Store custom product page id, sent as `ppid`. See docs/custom-product-pages.md. */
+  cppId?: string;
 }
 
 const baseUseCases: UseCase[] = [
