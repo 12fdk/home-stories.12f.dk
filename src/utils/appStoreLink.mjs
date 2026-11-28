@@ -39,6 +39,11 @@ export function useCaseCampaign(slug) {
   return `uc-${slug}`.slice(0, CT_MAX);
 }
 
+/** `tpl-<slug>` for the /templates/ pages, truncated like `blogCampaign`. #163 */
+export function templateCampaign(slug) {
+  return `tpl-${slug}`.slice(0, CT_MAX);
+}
+
 export function appStoreUrl(token) {
   const ct = String(token).slice(0, CT_MAX);
   return `${APP_STORE_URL}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8`;
