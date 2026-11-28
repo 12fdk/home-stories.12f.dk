@@ -39,6 +39,8 @@ export interface UseCase {
   faq: { q: string; a: string }[];
   /** Related published post slugs. */
   posts: string[];
+  /** Other use-case slugs this page builds on; shown as "See also" when live. */
+  related?: string[];
   /** YYYY-MM-DD. The page is built from this date on. Omit for always live. */
   publishDate?: string;
   /** App Store custom product page id, sent as `ppid`. See docs/custom-product-pages.md. */
