@@ -58,7 +58,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Replace windows and doors with one record: each opening's size and spec, the order and deposit, fitting photos before the reveals are closed, and the warranty papers.",
     image: "/stock/uc-window-and-door-replacement.webp",
-    imageAlt: "An empty window opening with a raw brick reveal and a new white window frame leaning against the wall",
+    imageAlt: "A window being replaced in a brick wall, the reveal exposed and the old and new frames leaning against the wall",
     intro: [
       "Windows and doors are bought opening by opening. Every frame has its own size, glazing, opening direction, handle and finish, and a single wrong measurement means a remake. Home Stories lets you add each opening as an item, with the spec in the note and the price on the total.",
       "The work itself has three parts: survey and order, fitting, and making good the reveals and sills afterwards. The making good is the part quotes often leave out, so it is worth its own line in the budget.",
@@ -139,8 +139,8 @@ const entries: UseCase[] = [
     metaTitle: "Heat Pump and Boiler Replacement Tracker App",
     metaDescription:
       "Track a heat pump or boiler replacement: compare quotes on the same scope, log the unit, radiators and electrical work, keep the commissioning papers and set the service date.",
-    image: "/stock/uc-heat-pump-replacement.webp",
-    imageAlt: "A new air-source heat pump on a concrete pad beside a brick wall, with the old boiler on a pallet nearby",
+    image: "/stock/uc-heat-pump-or-boiler-replacement.webp",
+    imageAlt: "A new air-source heat pump on a concrete pad against a brick house wall",
     intro: [
       "A new heating system is more than the unit on the wall or the box in the garden. A heat pump can also mean new radiators, a hot-water cylinder, pipe changes and electrical work. A boiler swap can mean a flue change and a system flush. Quotes differ most in which of these they include.",
       "Home Stories keeps each quote as a document and each part of the job as an item, so you see the whole cost, not only the unit. After the install, the commissioning papers, the warranty terms and the first service date are the things you will need again.",
@@ -219,7 +219,7 @@ const entries: UseCase[] = [
     metaTitle: "Insulation and Energy Retrofit Tracker App",
     metaDescription:
       "Track an insulation or energy retrofit: each measure with its cost, the receipts a grant or tax claim asks for, and photos of the insulation before it is covered.",
-    image: "/stock/uc-insulation-energy-retrofit.webp",
+    image: "/stock/uc-insulation-and-energy-retrofit.webp",
     imageAlt: "An attic floor between joists being filled with rolls of mineral wool insulation, a work lamp lighting the rafters",
     intro: [
       "An energy retrofit is a set of measures done over months or years: loft insulation, wall insulation, draught-proofing, new windows, a new heating system. When a grant, a rebate or a tax relief is involved, the paperwork matters as much as the work, and it is usually asked for long after the invoices were paid.",
@@ -340,8 +340,8 @@ const entries: UseCase[] = [
     metaTitle: "Exterior Painting and Facade Project Tracker",
     metaDescription:
       "Track exterior painting, siding or facade work: paint codes and quantities, scaffold dates, repairs found under the old finish and photos of each elevation before and after.",
-    image: "/stock/uc-exterior-painting-facade.webp",
-    imageAlt: "A two-storey facade with scaffolding, half the render freshly painted off-white and half still weathered",
+    image: "/stock/uc-exterior-painting-and-facade.webp",
+    imageAlt: "A two-storey house with scaffolding across the front, half the facade repainted and half still in the old colour",
     intro: [
       "Exterior work depends on the weather and on what is under the old finish. Paint and render need dry days, scaffold is paid by the week, and stripping old siding or render often shows rot or cracks that have to be fixed first.",
       "Home Stories keeps the paint codes, the scaffold dates and the repairs in one project. Write the exact colour code and finish in a note on the day you choose them. In five years, when one side needs a touch-up, that code is the thing you will look for.",
@@ -380,8 +380,8 @@ const entries: UseCase[] = [
     metaTitle: "Garden Room, Shed and ADU Build Tracker App",
     metaDescription:
       "Track a garden room, shed or ADU build: the base, frame, power and water as tasks, the kit or builder's quote, photos of the foundations and the paperwork for planning.",
-    image: "/stock/uc-garden-room-adu.webp",
-    imageAlt: "A new timber garden room with larch cladding and glazed doors at the end of a garden, the lawn around it still fresh soil",
+    image: "/stock/uc-garden-room-and-adu.webp",
+    imageAlt: "A new timber garden room with a gabled roof and large glazed doors opening onto a deck at the end of a garden",
     intro: [
       "A garden room, shed or accessory dwelling is a small building, with the same parts as a large one: a base, a frame, a roof, insulation, power and sometimes water and drainage. The kit or the builder's price rarely includes the base, the cable run from the house or the groundwork.",
       "Home Stories keeps the whole build in one project, so the extras land on the same total as the kit. Photograph the foundations, the cable trench and any pipe before they are buried. A permanent or lived-in building may need planning or building approval where you live, so check first and keep the answer as a document.",
@@ -421,7 +421,7 @@ const entries: UseCase[] = [
     metaDescription:
       "Use Home Stories as a new-build snagging list: one task per defect with a photo, a deadline for the builder, and the handover documents and warranties kept together.",
     image: "/stock/uc-new-build-snagging.webp",
-    imageAlt: "A newly built empty room at handover, with a paint scuff and a gap in the silicone along a skirting board",
+    imageAlt: "An empty newly built room at handover, with small pieces of blue tape on the walls marking snags to fix",
     intro: [
       "A new home is rarely finished on handover day. Paint scuffs, gaps in silicone, doors that stick, a missing socket cover: these are snags, and the builder fixes them faster when each one is written down with a photo and a date. Home Stories works as that snagging list, one task per snag.",
       "The handover also comes with a stack of documents: warranties, manuals, certificates, the as-built drawings. Keep them in the same project. If you are self-building, the same project holds the build itself: the stages, the trades and the costs.",
