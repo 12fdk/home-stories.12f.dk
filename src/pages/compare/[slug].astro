@@ -1,0 +1,290 @@
+---
+import { getCollection } from "astro:content";
+import { isPublished } from "../../utils/posts";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import FaqSection from "../../components/blog/FaqSection.astro";
+import { comparisons, type Comparison } from "../../data/comparisons";
+import { appStoreUrl, compareCampaign } from "../../utils/appStoreLink.mjs";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => isPublished(data));
+  const bySlug = new Map(posts.map((post) => [post.slug, post]));
+
+  return comparisons.map((comparison) => {
+    const slugs = [comparison.post, ...comparison.posts];
+    const missing = slugs.filter((slug) => !bySlug.has(slug));
+    if (missing.length) {
+      throw new Error(`Comparison "${comparison.slug}" links missing posts: ${missing.join(", ")}`);
+    }
+    return {
+      params: { slug: comparison.slug },
+      props: {
+        comparison,
+        post: bySlug.get(comparison.post)!,
+        posts: comparison.posts.map((slug) => bySlug.get(slug)!),
+      },
+    };
+  });
+}
+
+interface Props {
+  comparison: Comparison;
+  post: Awaited<ReturnType<typeof getCollection<"blog">>>[number];
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
+}
+
+const { comparison: c, post, posts } = Astro.props as Props;
+const path = `/compare/${c.slug}/`;
+const url = new URL(path, Astro.site).href;
+const siblings = comparisons.filter((item) => item.slug !== c.slug);
+const ctaUrl = appStoreUrl(compareCampaign(c.slug));
+const checked = new Date(`${c.checkedOn}T00:00:00Z`).toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+const sourcesOf = (s: number | number[] | undefined): number[] =>
+  s === undefined ? [] : Array.isArray(s) ? s : [s];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: c.h1,
+  description: c.metaDescription,
+  url,
+  inLanguage: "en",
+  dateModified: c.checkedOn,
+  primaryImageOfPage: new URL(c.image, Astro.site).href,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Home Stories",
+    url: new URL("/", Astro.site).href,
+  },
+  about: {
+    "@type": "MobileApplication",
+    name: "Home Stories: Renovation App",
+    operatingSystem: "iOS 17.0 or later",
+    applicationCategory: "LifestyleApplication",
+    url: new URL("/", Astro.site).href,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  },
+  citation: c.sources.map((s) => s.url),
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "[data-speakable]"],
+  },
+};
+---
+
+<BlogLayout
+  title={c.metaTitle}
+  description={c.metaDescription}
+  canonicalPath={path}
+  extraSchema={[pageSchema]}
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Compare", path: "/compare/" },
+    { name: c.label, path },
+  ]}
+  hideAppBanner={true}
+>
+  <main class="hs-wrap pb-24 pt-10 md:pb-36 md:pt-16">
+    <nav aria-label="Breadcrumb" class="hs-soft mb-10 md:mb-16">
+      <a href="/" class="hover:underline">Home</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <a href="/compare/" class="hover:underline">Compare</a>
+      <span class="mx-1.5" aria-hidden="true">/</span>
+      <span>{c.label}</span>
+    </nav>
+
+    <header class="hs-grid gap-y-8">
+      <h1 class="hs-title col-span-12 m-0 max-w-[34ch]" data-reveal>{c.h1}</h1>
+      <div class="col-span-12 md:col-span-6">
+        <div class="space-y-4" data-speakable data-reveal style="--d: 80ms">
+          {c.intro.map((paragraph, i) => <p class={`m-0 max-w-[52ch] ${i === 0 ? "hs-lead" : ""}`}>{paragraph}</p>)}
+        </div>
+        <p class="hs-soft m-0 mt-6 max-w-[52ch]">
+          Disclosure: we make Home Stories. Every fact about {c.competitor} below was read on its own pages on{" "}
+          <time datetime={c.checkedOn}>{checked}</time>, with the link next to it. Prices and plans change; check
+          them before you buy.
+        </p>
+        <a
+          href={ctaUrl}
+          class="hs-btn mt-8"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="compare-hero"
+          data-umami-event-slug={c.slug}
+        >
+          Get Home Stories — free
+        </a>
+      </div>
+      <figure class="col-span-12 m-0 overflow-hidden md:col-span-6" data-reveal style="--d: 140ms">
+        <img
+          src={c.image}
+          alt={c.imageAlt}
+          width={1024}
+          height={768}
+          loading="eager"
+          class="hs-drift aspect-[4/3] w-full object-cover"
+        />
+      </figure>
+    </header>
+
+    <section class="mt-20 md:mt-28" aria-labelledby="side-by-side">
+      <h2 id="side-by-side" class="hs-lead m-0 font-semibold">Home Stories and {c.competitor}, side by side</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="hs-table w-full min-w-[40rem] border-collapse">
+          <thead>
+            <tr>
+              <th scope="col" class="w-[22%]"></th>
+              <th scope="col" class="w-[39%]">Home Stories</th>
+              <th scope="col" class="w-[39%]">{c.competitor}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              c.rows.map((row) => (
+                <tr>
+                  <th scope="row" class="font-semibold">{row.topic}</th>
+                  <td>{row.homeStories}</td>
+                  <td>
+                    {row.them}
+                    {sourcesOf(row.source).map((i, n, all) => (
+                      <>
+                        {" "}
+                        <a
+                          href={c.sources[i].url}
+                          class="hs-link hs-soft whitespace-nowrap"
+                          rel="nofollow noopener"
+                          title={c.sources[i].label}
+                        >
+                          {all.length > 1 ? `Source ${n + 1}` : "Source"}
+                        </a>
+                      </>
+                    ))}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="hs-soft m-0 mt-4 max-w-[72ch]">
+        {c.competitor} facts as checked on <time datetime={c.checkedOn}>{checked}</time>. Home Stories facts from
+        the current App Store listing.
+      </p>
+    </section>
+
+    <section class="hs-grid mt-20 gap-y-12 md:mt-28" aria-label="Which to choose">
+      <div class="col-span-12 md:col-span-6">
+        <h2 class="hs-lead m-0 font-semibold">When {c.competitor} is the better choice</h2>
+        <ul class="m-0 mt-6 list-disc space-y-3 pl-6">
+          {c.chooseThem.map((item) => <li class="max-w-[52ch]">{item}</li>)}
+        </ul>
+      </div>
+      <div class="col-span-12 md:col-span-6">
+        <h2 class="hs-lead m-0 font-semibold">When Home Stories is the better choice</h2>
+        <ul class="m-0 mt-6 list-disc space-y-3 pl-6">
+          {c.chooseUs.map((item) => <li class="max-w-[52ch]">{item}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    {
+      c.together && (
+        <section class="mt-20 max-w-[72ch] md:mt-28" aria-labelledby="together">
+          <h2 id="together" class="hs-lead m-0 font-semibold">Using both</h2>
+          <div class="mt-6 space-y-4">
+            {c.together.map((p) => <p class="m-0">{p}</p>)}
+          </div>
+        </section>
+      )
+    }
+
+    <div class="max-w-[72ch]">
+      <FaqSection items={c.faq.map(({ q, a }) => ({ question: q, answer: a }))} />
+    </div>
+
+    <section class="mt-16 max-w-[72ch]" aria-labelledby="sources">
+      <h2 id="sources" class="hs-lead m-0 font-semibold">Sources</h2>
+      <p class="hs-soft m-0 mt-3">Read on <time datetime={c.checkedOn}>{checked}</time>.</p>
+      <ul class="m-0 mt-4 list-disc space-y-2 pl-6">
+        {
+          c.sources.map((s) => (
+            <li>
+              <a href={s.url} class="hs-link" rel="nofollow noopener">{s.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-16" aria-labelledby="reading">
+      <h2 id="reading" class="hs-lead m-0 font-semibold">Further reading</h2>
+      <ol class="m-0 mt-6 list-none space-y-3 p-0">
+        {
+          [post, ...posts].map((item) => (
+            <li class="m-0">
+              <a href={`/blog/${item.slug}/`} class="hs-row hs-grid items-center gap-y-4 py-5">
+                {item.data.cover && (
+                  <span class="col-span-12 block overflow-hidden sm:col-span-4 md:col-span-3">
+                    <img
+                      src={item.data.cover}
+                      alt=""
+                      width={640}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                      class="aspect-[16/10] w-full object-cover"
+                    />
+                  </span>
+                )}
+                <span class="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-6">
+                  <span class="hs-lead block font-semibold">{item.data.title}</span>
+                  <span class="mt-2 block">{item.data.description}</span>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <div class="hs-grid mt-24 gap-y-12 md:mt-32">
+      <aside class="col-span-12 md:col-span-5">
+        <h2 class="hs-lead m-0 font-semibold">Other comparisons</h2>
+        <ul class="m-0 mt-4 list-none space-y-2.5 p-0">
+          {
+            siblings.map((item) => (
+              <li class="m-0">
+                <a href={`/compare/${item.slug}/`} class="hs-link">{item.label}</a>
+              </li>
+            ))
+          }
+          <li class="m-0">
+            <a href="/compare/" class="hs-link">All comparisons</a>
+          </li>
+        </ul>
+      </aside>
+
+      <aside class="hs-signal col-span-12 self-start p-7 sm:p-10 md:col-span-7">
+        <h2 class="hs-lead m-0 font-semibold">Try it on your next project</h2>
+        <p class="m-0 mt-3 max-w-[52ch]">
+          Home Stories is free on iPhone and iPad (iOS 17 or later), with no account. Pro is an optional one-time
+          purchase for the budget-vs-actual chart, task reminders, PDF export, iCloud sync and project sharing.
+        </p>
+        <a
+          href={ctaUrl}
+          class="hs-btn hs-btn--ink mt-6"
+          data-umami-event="appstore-click"
+          data-umami-event-surface="compare-footer"
+          data-umami-event-slug={c.slug}
+        >
+          Get Home Stories — free on the App Store
+        </a>
+      </aside>
+    </div>
+  </main>
+</BlogLayout>

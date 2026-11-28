@@ -39,6 +39,11 @@ export function useCaseCampaign(slug) {
   return `uc-${slug}`.slice(0, CT_MAX);
 }
 
+/** `cmp-<slug>` for the /compare/ pages, truncated like `blogCampaign`. #166 */
+export function compareCampaign(slug) {
+  return `cmp-${slug}`.slice(0, CT_MAX);
+}
+
 export function appStoreUrl(token) {
   const ct = String(token).slice(0, CT_MAX);
   return `${APP_STORE_URL}?ct=${ct}&pt=${PROVIDER_TOKEN}&mt=8`;
