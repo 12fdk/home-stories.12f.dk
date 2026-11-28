@@ -860,3 +860,17 @@ export function isUseCaseLive(useCase: UseCase, now = new Date()): boolean {
 
 /** Live entries at build time. Pages, the hub, sitemaps and llms.txt use this. */
 export const useCases: UseCase[] = allUseCases.filter((useCase) => isUseCaseLive(useCase));
+
+/**
+ * Live use cases that list this post, for the "Use Home Stories for this" links
+ * on the post page (#158): use case → post via `posts`, post → use case here.
+ * A use case that lists the post earlier ranks first; on a tie, the newer entry.
+ */
+export function useCasesForPost(postSlug: string, limit = 3): UseCase[] {
+  return useCases
+    .map((useCase, order) => ({ useCase, order, rank: useCase.posts.indexOf(postSlug) }))
+    .filter(({ rank }) => rank >= 0)
+    .sort((a, b) => a.rank - b.rank || b.order - a.order)
+    .slice(0, limit)
+    .map(({ useCase }) => useCase);
+}
